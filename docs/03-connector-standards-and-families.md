@@ -1,7 +1,18 @@
+﻿---
+id: 03-connector-standards-and-families
+title: "3. Connector Standards and Families"
+slug: /03-connector-standards-and-families
+sidebar_label: Standards and Families
+sidebar_position: 3
+---
+
 # 3. Connector Standards and Families
 
-!!! note
-    Always verify against the *current* version of the applicable standard and the manufacturer's datasheet. Standards get revised; part-number schemas vary between manufacturers. What follows is a framework for thinking, not a substitute for the source document — when this guide and a manufacturer datasheet or standard disagree, the datasheet/standard wins. MIL-DTL-38999 covers miniature high-density environmental circular connectors with removable crimp or hermetic solder contacts; M12 connectors are covered by the IEC 61076-2-x family (e.g. 61076-2-101 for A/B/D codings, 61076-2-109 for X-coded, 61076-2-111 for power codings). <!-- TODO: source/verify exact IEC references and MIL-DTL scopes -->
+:::note
+
+Always verify against the *current* version of the applicable standard and the manufacturer's datasheet. Standards get revised; part-number schemas vary between manufacturers. What follows is a framework for thinking, not a substitute for the source document — when this guide and a manufacturer datasheet or standard disagree, the datasheet/standard wins. MIL-DTL-38999 covers miniature high-density environmental circular connectors with removable crimp or hermetic solder contacts; M12 connectors are covered by the IEC 61076-2-x family (e.g. 61076-2-101 for A/B/D codings, 61076-2-109 for X-coded, 61076-2-111 for power codings). <!-- TODO: source/verify exact IEC references and MIL-DTL scopes -->
+
+:::
 
 ## 3.1 At-a-glance family comparison
 

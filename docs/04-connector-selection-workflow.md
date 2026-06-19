@@ -1,3 +1,11 @@
+﻿---
+id: 04-connector-selection-workflow
+title: "4. Connector Selection — Think in This Order"
+slug: /04-connector-selection-workflow
+sidebar_label: Selection Workflow
+sidebar_position: 4
+---
+
 # 4. Connector Selection — Think in This Order
 
 Connector selection is multi-variable optimization. An excellent choice on most criteria that fails one critical criterion is still wrong. Work the steps in order — don't start from a connector you like.
@@ -21,11 +29,17 @@ Before picking a family, write down: What crosses this boundary (power / signal 
 | Shielding / EMI | 360° backshell shield termination vs. pigtail; per-group shields | Pigtail terminations; shield grounded one end only without reason |
 | Isolation | Segregate noisy motor/power lines from low-level analog/data | Routing PWM motor lines next to encoder feedback in one insert |
 
-!!! note "Spare capacity"
-    Add spare positions where feasible and justified. Unused cavities must still be sealed, documented, and configuration-controlled. Spare capacity is useful in expandable systems, but shell size, sealing plugs, weight, cost, panel space, and customer/program requirements may override it. <!-- engineering heuristic, not a hard rule -->
+:::note[Spare capacity]
 
-!!! note "Current rating is not one number"
-    It depends on contact size, number of loaded contacts, ambient temperature, wire gauge, enclosure heat, and acceptable temperature rise. Always consult the manufacturer's derating curve for a fully-loaded connector.
+Add spare positions where feasible and justified. Unused cavities must still be sealed, documented, and configuration-controlled. Spare capacity is useful in expandable systems, but shell size, sealing plugs, weight, cost, panel space, and customer/program requirements may override it. <!-- engineering heuristic, not a hard rule -->
+
+:::
+
+:::note[Current rating is not one number]
+
+It depends on contact size, number of loaded contacts, ambient temperature, wire gauge, enclosure heat, and acceptable temperature rise. Always consult the manufacturer's derating curve for a fully-loaded connector.
+
+:::
 
 ## Step 3: Mechanical / environmental requirements
 

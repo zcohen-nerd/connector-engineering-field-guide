@@ -1,3 +1,11 @@
+﻿---
+id: 05-connector-anatomy
+title: "5. Connector Anatomy"
+slug: /05-connector-anatomy
+sidebar_label: Connector Anatomy
+sidebar_position: 5
+---
+
 # 5. Connector Anatomy
 
 | Part | Purpose |
@@ -23,8 +31,11 @@
 | Dummy plug | Occupies unused ports to maintain sealing/configuration |
 | Gaskets / O-rings | Seal the panel interface and/or the mating interface |
 
-!!! note "Key distinction"
-    Pin/socket gender is *electrical*. Plug/receptacle is *mechanical*. Do not assume "plug = pins" or "receptacle = sockets." Verify the actual part number every time.
+:::note[Key distinction]
+
+Pin/socket gender is *electrical*. Plug/receptacle is *mechanical*. Do not assume "plug = pins" or "receptacle = sockets." Verify the actual part number every time.
+
+:::
 
 ## 5.1 Contact plating — the decision logic
 
@@ -59,13 +70,19 @@ Solder cups are often dismissed as "skill-dependent," but here's the actual deci
 - **What a good cup joint looks like:** wire fully bottomed in the cup, solder wetted to a concave fillet, no wicking up the stranding past the strip length, no cold/grainy surface, insulation clearance correct.
 - **Common defects:** cold joints from insufficient heat; solder wicking that stiffens the wire and moves the flex point to a stress riser; overheating that deforms the insert and shifts contact position; flux residue degrading insulation resistance.
 
-!!! warning
-    Solder cups have no built-in strain relief. The backshell cable clamp is doing all the mechanical work — a solder-cup assembly without a proper clamp will fatigue and crack at the cup.
+:::warning
+
+Solder cups have no built-in strain relief. The backshell cable clamp is doing all the mechanical work — a solder-cup assembly without a proper clamp will fatigue and crack at the cup.
+
+:::
 
 ## 5.5 Wire seals — the silent IP-rating killer
 
-!!! note "Often overlooked"
-    In sealed circular connectors, each contact cavity has a wire seal (grommet) sized for a specific wire-OD range. If your wire jacket OD is below the seal's range, the seal does not close around it — and the connector leaks at that cavity even though the shell, O-ring, and backshell are all perfect. Match wire OD to the seal range, and use sealing plugs in every unused cavity. An unused, unplugged cavity is an open hole into your sealed connector.
+:::note[Often overlooked]
+
+In sealed circular connectors, each contact cavity has a wire seal (grommet) sized for a specific wire-OD range. If your wire jacket OD is below the seal's range, the seal does not close around it — and the connector leaks at that cavity even though the shell, O-ring, and backshell are all perfect. Match wire OD to the seal range, and use sealing plugs in every unused cavity. An unused, unplugged cavity is an open hole into your sealed connector.
+
+:::
 
 ## 5.6 Mating sequence and blind mate
 

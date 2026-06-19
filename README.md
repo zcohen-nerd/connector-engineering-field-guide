@@ -14,7 +14,7 @@ When this guide conflicts with a datasheet, applicable standard, customer requir
 
 - `Source/connector-engineering-field-guide.md` is the current canonical guide source.
 - `Source/source-notes.md` is the source-verification backlog.
-- `docs/` contains the published MkDocs site content.
+- `docs/` contains the Docusaurus site content (one Markdown file per section).
 - `templates/` contains reusable engineering-document templates derived from the guide.
 - `examples/` contains placeholder working examples derived from the guide's exercises.
 
@@ -28,12 +28,11 @@ When this guide conflicts with a datasheet, applicable standard, customer requir
 ## Local preview
 
 ```bash
-pip install mkdocs-material
-mkdocs serve
-mkdocs build
+npm install
+npm run start    # dev server with hot reload at http://localhost:3000/connector-engineering-field-guide/
+npm run build    # production build into build/
+npm run serve    # serve the production build locally
 ```
-
-If you already have a virtual environment, install into that environment before running `mkdocs serve`.
 
 ## Contribution guidance
 

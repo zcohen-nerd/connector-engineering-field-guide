@@ -1,3 +1,11 @@
+﻿---
+id: 02-major-connector-categories
+title: "2. Major Connector Categories"
+slug: /02-major-connector-categories
+sidebar_label: Major Connector Categories
+sidebar_position: 2
+---
+
 # 2. Major Connector Categories
 
 Scope your search by category before diving into specific families. Each category optimizes for different axes.
@@ -14,7 +22,10 @@ Scope your search by category before diving into specific families. Each categor
 | Fiber / data | Long-distance data, EMI immunity, bandwidth | LC, ST, expanded-beam rugged fiber, M12 Ethernet | Dirty field environments without cleaning discipline |
 | Hybrid | Power + signal + data + coax/fiber/fluid in one | 38999 hybrid inserts, Han-Modular | Simple low-cost harnesses where separate connectors are cleaner |
 
-!!! note "Often overlooked"
-    Board-to-wire connectors like Molex Micro-Fit, Mini-Fit, Mega-Fit, and sealed Squba are not "hobby" parts. Professional versions have positive latches, polarization, secondary locks (TPA), defined current/voltage ratings, and sealed variants. The dividing line is the specific family and rating, not the brand.
+:::note[Often overlooked]
+
+Board-to-wire connectors like Molex Micro-Fit, Mini-Fit, Mega-Fit, and sealed Squba are not "hobby" parts. Professional versions have positive latches, polarization, secondary locks (TPA), defined current/voltage ratings, and sealed variants. The dividing line is the specific family and rating, not the brand.
+
+:::
 
 ---

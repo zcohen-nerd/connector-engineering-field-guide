@@ -1,3 +1,10 @@
+﻿---
+title: Source Notes
+slug: /appendix/source-notes
+sidebar_label: Source Notes
+sidebar_position: 2
+---
+
 # Source Notes — Connector Engineering Field Guide
 
 This file tracks claims that should be verified against a primary source (a current manufacturer datasheet, the applicable standard, or a QPL listing) **before public/open-source release** or before any of these values is used in released hardware.

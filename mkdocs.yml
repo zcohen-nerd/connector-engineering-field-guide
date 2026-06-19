@@ -5,6 +5,7 @@ repo_url: https://github.com/zcohen-nerd/connector-engineering-field-guide
 repo_name: zcohen-nerd/connector-engineering-field-guide
 theme:
   name: material
+  custom_dir: docs/overrides
 docs_dir: docs
 plugins:
   - search

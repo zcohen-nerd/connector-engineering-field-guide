@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this guide, please cite it using the metadata below."
+title: "Connector Engineering Field Guide"
+abstract: "Practical connector selection for rugged, industrial, military-style, and electromechanical systems."
+type: software
+authors:
+  - alias: zcohen-nerd
+repository-code: "https://github.com/zcohen-nerd/connector-engineering-field-guide"
+url: "https://zcohen-nerd.github.io/connector-engineering-field-guide/"
+version: "0.1"
+date-released: 2026-06-19
+license: "CC-BY-4.0"

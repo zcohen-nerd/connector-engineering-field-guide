@@ -1,38 +1,36 @@
-# Design Review Checklist - Connectors
+# Design Review Checklist
 
-## Readiness Checks
+Based on Sections 10 and 11 of the guide.
 
-- [ ] Interface boundary is clearly defined
-- [ ] Connector family matches electrical needs
-- [ ] Current, voltage, and wire-gauge assumptions are documented
-- [ ] Pinout includes spares and reserved positions intentionally
-- [ ] Keying prevents wrong mating where needed
-- [ ] Shielding and backshell strategy are defined
-- [ ] Strain relief and cable support are defined
-- [ ] Mated and unmated sealing are both considered
-- [ ] Tooling, inspection, and test plans exist
-- [ ] Lead time / sourcing risk reviewed
-- [ ] ICD, cable drawing, and BOM lines exist
+## Readiness checks
 
-## Red-Flag Scan
+- [ ] Interface definition is complete
+- [ ] Electrical limits are defined and sourced where required
+- [ ] Current derating and wire-gauge compatibility are reviewed
+- [ ] Locking, strain relief, and backshell strategy are defined
+- [ ] Sealing and unmated protection are addressed
+- [ ] Keying and mis-mate prevention are addressed
+- [ ] Tooling and assembly process are defined
+- [ ] Documentation package exists (BOM, pinout, cable drawing, ICD)
 
-| Check | Status | Notes |
+## Red-flag scan
+
+| Red flag | Status | Notes |
 | --- | --- | --- |
-| Pin-count-only selection avoided |  |  |
-| Power and signal segregation reviewed |  |  |
-| Backshell included where needed |  |  |
-| Correct crimp tooling identified |  |  |
-| Dust caps included where needed |  |  |
-| Torque requirements documented |  |  |
-| Wire seal sizing checked |  |  |
-| Mating connector included in BOM |  |  |
-| Service access reviewed |  |  |
-| Labeling / identification plan defined |  |  |
+| Pin-count-only selection avoided | TBD |  |
+| Power and signal segregation reviewed | TBD |  |
+| Backshells included where needed | TBD |  |
+| Tooling identified | TBD |  |
+| Dust caps / dummy plugs included where needed | TBD |  |
+| Torque specs documented | TBD |  |
+| Wire seal sizing checked | TBD |  |
+| Mating connector included in BOM | TBD |  |
+| Service access reviewed | TBD |  |
+| Cable labels / identification defined | TBD |  |
 
-## Risk Table
+## Risk summary
 
 | Connector / interface | Risk | Severity (H/M/L) | Corrective action |
 | --- | --- | --- | --- |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| TBD | TBD | TBD | TBD |
+| TBD | TBD | TBD | TBD |

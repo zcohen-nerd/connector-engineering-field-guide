@@ -1,57 +1,46 @@
 # Connector ICD Template
 
-## Interface Identification
+Based on Exercise 7.
+
+## Interface identification
 
 - Interface name:
 - System / subsystem boundary:
-- Document owner:
 - Revision:
+- Owner:
 
-## Mechanical Definition
+## Connector definition
 
 - Connector P/N:
 - Mating connector P/N:
-- Mounting style / location:
+- Contact P/Ns:
+- Backshell P/N:
+- Dust cap P/N:
 - Keying / polarization:
-- Backshell / strain relief:
-- Dust cap / dummy plug:
-- Torque requirement:
-
-## Electrical Definition
-
-- Working voltage:
-- Current per contact:
-- Contact size / wire gauge:
-- Signal classes carried:
-- Shield / ground strategy:
-- Mate/demate under power allowed:
-
-## Environmental / Service Assumptions
-
-- Internal or external:
-- Sealing target:
-- Vibration / shock environment:
-- Mating-cycle expectation:
-- Service-access expectations:
 
 ## Pinout
 
 | Pin | Signal | Source / load | Notes |
 | --- | --- | --- | --- |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| TBD | TBD | TBD | TBD |
+| TBD | TBD | TBD | TBD |
 
-## Cable Requirements
+## Electrical limits
 
-- Cable type / jacket:
+- Working voltage:
+- Current per contact:
+- Contact size / wire gauge:
 - Shielding:
-- Twisted pairs:
-- Length / routing constraints:
 
-## Assembly Notes
+## Environmental assumptions
 
-- Contact tooling:
-- Assembly instruction reference:
-- Inspection / test requirements:
-- Configuration-control notes:
+- Internal or external:
+- Sealing target:
+- Vibration / shock:
+- Mating cycles:
+
+## Assembly / cable requirements
+
+- Torque / assembly notes:
+- Cable requirements:
+- Test / inspection requirements:

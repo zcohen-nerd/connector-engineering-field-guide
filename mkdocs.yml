@@ -1,31 +1,44 @@
 site_name: Connector Engineering Field Guide
-site_description: Professional connector engineering reference for rugged, industrial, and military electromechanical systems
+site_description: Practical connector selection for rugged, industrial, military-style, and electromechanical systems.
 site_url: https://zcohen-nerd.github.io/connector-engineering-field-guide/
+repo_url: https://github.com/zcohen-nerd/connector-engineering-field-guide
+repo_name: zcohen-nerd/connector-engineering-field-guide
 theme:
   name: material
 docs_dir: docs
+plugins:
+  - search
 nav:
   - Home: index.md
-  - 01 What Connectors Do: 01-what-connectors-do.md
-  - 02 Connector Categories: 02-connector-categories.md
-  - 03 Standards and Families: 03-standards-and-families.md
-  - 04 Selection Workflow: 04-selection-workflow.md
-  - 05 Connector Anatomy: 05-connector-anatomy.md
-  - 06 Reading Datasheets: 06-reading-datasheets.md
-  - 07 MIL-DTL-38999: 07-mil-dtl-38999.md
-  - 08 M12: 08-m12.md
-  - 09 Decision Examples: 09-decision-examples.md
-  - 10 Selection Checklist: 10-selection-checklist.md
-  - 11 Red Flags: 11-red-flags.md
-  - 12 Hobby vs Rugged: 12-hobby-vs-rugged.md
-  - 13 Learning Exercises: 13-learning-exercises.md
-  - 14 Thirty-Day Plan: 14-thirty-day-plan.md
+  - Guide:
+      - What Connectors Actually Do: 01-what-connectors-do.md
+      - Major Connector Categories: 02-major-connector-categories.md
+      - Standards and Families: 03-connector-standards-and-families.md
+      - Selection Workflow: 04-connector-selection-workflow.md
+      - Connector Anatomy: 05-connector-anatomy.md
+      - Reading Datasheets: 06-reading-datasheets.md
+      - MIL-DTL-38999 Deep Dive: 07-mil-dtl-38999.md
+      - M12 Deep Dive: 08-m12.md
+      - Decision Examples: 09-decision-examples.md
+      - Practical Checklist: 10-selection-checklist.md
+      - Red Flags: 11-red-flags.md
+      - Consumer/Hobby/Prototype Connectors: 12-consumer-hobby-prototype-connectors.md
+      - Hands-On Exercises: 13-hands-on-exercises.md
+      - 30-Day Learning Plan: 14-thirty-day-learning-plan.md
   - Appendix:
-      - Quick Reference: appendix/quick-reference.md
-      - Glossary: appendix/glossary.md
+      - Quick Reference Tables: appendix/quick-reference-tables.md
       - Source Notes: appendix/source-notes.md
+  - Usage and Attribution: usage-and-attribution.md
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - tables
   - toc:
       permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true

@@ -1,59 +1,29 @@
 # Cable Drawing Template
 
-## Header
+Based on Exercise 6.
 
-- Assembly name:
-- Drawing number:
-- Revision:
-- Length and tolerance:
-- Cable jacket / construction:
-- Environmental assumptions:
+## Cable endpoints
 
-## End A
+- Connector A:
+- Connector B:
 
-- Connector A P/N:
-- Contact type / size:
-- Backshell / strain relief:
-- Keying / clocking:
+## Conductor schedule
 
-## End B
+| Wire | Color | Gauge | Twisted pair | Shield / drain treatment | End A | End B | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
 
-- Connector B P/N:
-- Contact type / size:
-- Backshell / strain relief:
-- Keying / clocking:
+## Cable construction
 
-## Conductor Schedule
+- Cable jacket:
+- Labels:
+- Length tolerance:
+- Notes:
 
-| Wire ID | Color | Gauge | Twisted pair / shield | End A pin | End B pin | Function |
-| --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |
+## Test requirements
 
-## Shield / Drain Treatment
-
-- Overall shield termination:
-- Pair shield termination:
-- Drain wire treatment:
-
-## Labels and Marking
-
-- Cable label text:
-- End A marker:
-- End B marker:
-
-## Test Requirements
-
-- [ ] Continuity
-- [ ] Pinout verification
-- [ ] Insulation resistance
-- [ ] Shield bond check
-- [ ] Pull-test requirement recorded
-- [ ] Torque / assembly verification recorded
-
-## Notes
-
-- Special routing or bend-radius notes:
-- Reserved conductors / spares:
-- Dust caps / protective hardware:
+- Continuity:
+- Pinout verification:
+- Shield / drain verification:
+- Additional test requirements:

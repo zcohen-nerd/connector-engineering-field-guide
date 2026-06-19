@@ -1,68 +1,54 @@
-# Connector Selection Checklist Template
+# Connector Selection Checklist
 
-- Project:
-- Assembly / interface name:
-- Revision:
-- Owner:
-- Review date:
+Based on Section 10 of the guide.
 
-## Interface Definition
+## Interface definition
 
-- [ ] Subsystem boundary identified
-- [ ] Internal or external interface stated
-- [ ] User-, technician-, or factory-access defined
-- [ ] Mate/demate under power decision recorded
-- [ ] Service-life mating-cycle estimate recorded
-- [ ] Wrong-mating hazard reviewed
+- [ ] What subsystem boundary is this?
+- [ ] Internal or external?
+- [ ] Technician-serviceable or factory-only?
+- [ ] Must it be disconnected under power?
+- [ ] How often mated/unmated over service life?
+- [ ] Is wrong mating dangerous?
 
 ## Electrical
 
-- [ ] Voltage rating plus transients/peak checked
+- [ ] Voltage rating + transients/peak checked
 - [ ] Current per contact at temperature checked
 - [ ] Bundle/thermal derating applied
-- [ ] Wire gauge matches contact barrel
-- [ ] Signal types identified
-- [ ] Shield/ground plan defined
-- [ ] Power and signal segregation reviewed
-- [ ] Spare-pin allocation documented
+- [ ] Wire gauge compatible with contact barrel
+- [ ] Signal type identified; high-speed/RF flagged
+- [ ] Shields/grounds assigned
+- [ ] Power and signal segregation considered
+- [ ] Spare positions added where feasible and justified
 
-## Mechanical / Environmental
+## Mechanical / environmental
 
-- [ ] Complete assembly IP target defined
-- [ ] Mated and unmated sealing considered
-- [ ] Vibration/shock requirement matched to locking method
-- [ ] Strain relief and backshell selected
-- [ ] Cable OD matches gland/clamp range
+- [ ] IP rating verified for the complete assembly
+- [ ] Mated and unmated (capped) sealing considered
+- [ ] Vibration/shock requirement and locking matched
+- [ ] Cable strain relief defined; backshell selected
+- [ ] Cable jacket OD compatible with gland/clamp
 - [ ] Wire seal range matches wire OD
-- [ ] Bend radius and exit angle checked
-- [ ] Panel cutout/thickness checked
-- [ ] Keying plan defined
-- [ ] Ground-first or sequencing need reviewed
-- [ ] Torque values captured
-- [ ] Dust caps / dummy plugs included where needed
+- [ ] Bend radius and cable exit angle checked
+- [ ] Panel thickness/cutout checked
+- [ ] Mating sequence considered for hybrids where available
+- [ ] Torque specs identified
+- [ ] Dust caps / dummy plugs on BOM
 
 ## Manufacturing
 
-- [ ] Contact P/Ns identified
-- [ ] Crimp tool / die / positioner identified
-- [ ] Insert/extract tools identified
-- [ ] Assembly instructions referenced
-- [ ] Inspection criteria defined
-- [ ] Pull-test / continuity plan defined
+- [ ] Crimp contacts and correct crimp tool identified
+- [ ] Positioner/die and insert/extract tools identified
+- [ ] Assembly instructions and inspection criteria defined
+- [ ] Pull-test / continuity test plan defined
 - [ ] Supplier availability and lead time checked
-- [ ] QPL / second-source strategy noted
+- [ ] Second source / QPL considered
 
-## Documentation / Configuration Control
+## Documentation / configuration control
 
-- [ ] Connector, mate, contact, backshell, cap, gasket P/Ns listed
-- [ ] Pinout table attached
-- [ ] Cable drawing attached
-- [ ] ICD entry attached
-- [ ] BOM line ownership defined
-- [ ] Labeling scheme defined
-
-## Notes
-
-- Decision summary:
-- Open risks:
-- Follow-up actions:
+- [ ] Connector, mate, contact, backshell, cap, gasket part numbers
+- [ ] Pinout table + cable drawing + harness drawing
+- [ ] ICD entry written
+- [ ] Key position unique across differing pinouts
+- [ ] Rev-controlled BOM + labeling scheme

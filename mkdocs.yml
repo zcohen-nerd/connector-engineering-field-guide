@@ -1,0 +1,30 @@
+site_name: Connector Engineering Field Guide
+site_description: Professional connector engineering reference for rugged, industrial, and military electromechanical systems
+theme:
+  name: material
+docs_dir: docs
+nav:
+  - Home: index.md
+  - 01 What Connectors Do: 01-what-connectors-do.md
+  - 02 Connector Categories: 02-connector-categories.md
+  - 03 Standards and Families: 03-standards-and-families.md
+  - 04 Selection Workflow: 04-selection-workflow.md
+  - 05 Connector Anatomy: 05-connector-anatomy.md
+  - 06 Reading Datasheets: 06-reading-datasheets.md
+  - 07 MIL-DTL-38999: 07-mil-dtl-38999.md
+  - 08 M12: 08-m12.md
+  - 09 Decision Examples: 09-decision-examples.md
+  - 10 Selection Checklist: 10-selection-checklist.md
+  - 11 Red Flags: 11-red-flags.md
+  - 12 Hobby vs Rugged: 12-hobby-vs-rugged.md
+  - 13 Learning Exercises: 13-learning-exercises.md
+  - 14 Thirty-Day Plan: 14-thirty-day-plan.md
+  - Appendix:
+      - Quick Reference: appendix/quick-reference.md
+      - Glossary: appendix/glossary.md
+      - Source Notes: appendix/source-notes.md
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true

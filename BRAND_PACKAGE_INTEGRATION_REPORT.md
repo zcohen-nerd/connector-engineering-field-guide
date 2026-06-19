@@ -151,3 +151,109 @@ The `data-theme="connectors"` attribute still requires a Root swizzle to be set 
 The `@zcohen-nerd/brand` package (Phase 1 + Phase 2) integrates successfully with the Professional Connector Guide. The `customFields.brand` configuration mechanism works correctly — project badge, ecosystem switcher, footer attribution, and connect links all render from config. CSS tokens flow through correctly.
 
 The one issue is a local-development workaround for the Windows junction peer-dep resolution bug. The recommended fix (updating the brand package to use `@docusaurus/useDocusaurusContext` instead of `@docusaurus/core`) is a small change that should be made before using the brand package with any other consumer.
+
+---
+
+## Phase 3 Retest
+
+**Date:** 2026-06-19
+**Test branch:** `test-shared-brand-package`
+**Prior branch state:** Workaround files already removed (commit `97a7338`)
+
+### Brand Package Commit Tested
+
+`c5c80a4 Make brand Navbar docs-site compatible`
+
+Phase 3 added to the brand package:
+- Mobile docs sidebar toggle (`useNavbarMobileSidebar` + `NavbarMobileSidebar`)
+- `headerLeft` wrapper grouping sidebar toggle + logo
+- `navbar-sidebar__backdrop` div for outside-tap dismiss
+- `aria-current="page"` on current project in Projects dropdown and mobile drawer
+- Shared `DEFAULT_BRAND` extracted to `src/data/defaultBrand.js`
+- README docs for sidebar toggle, project-mode setup, and `projectUrl` matching
+
+### Build Result
+
+```
+[INFO] [en] Creating an optimized production build...
+[SUCCESS] Generated static files in "build".
+```
+
+**Zero errors. Zero warnings.** 20 HTML pages generated (identical page count to Phase 2 retest).
+
+`npm install` reported `up to date` — no `package-lock.json` changes.
+
+### Navbar Result
+
+SSR output of `<header>` on both `index.html` and `01-what-connectors-do.html`:
+
+| Element | Result |
+|---|---|
+| `headerLeft` wrapper div | ✅ Present |
+| Logo links to `https://zcohen-nerd.github.io/` | ✅ Correct |
+| Logo image path `/connector-engineering-field-guide/img/zcohen-nerd-logo.png` | ✅ baseUrl-correct |
+| Project badge: `A zcohen-nerd technical guide` | ✅ Present |
+| Projects ▾ switcher button | ✅ Present |
+| Hub nav links (Work / Writing / About) | ✅ Absent (project mode correct) |
+| `menuToggle` (brand hamburger) | ✅ Present |
+| `navbar-sidebar__backdrop` div | ✅ Present (always rendered) |
+| Forbidden strings (`brand-docusaurus-compat`, `resolveBrandPeerDeps`) | ✅ 0 hits |
+| RSS link | ✅ Absent |
+
+Footer on `01-what-connectors-do.html`:
+
+| Element | Result |
+|---|---|
+| Wordmark: `zcohen-nerd` | ✅ |
+| Attribution: `A zcohen-nerd technical guide by Zac Cohen.` | ✅ |
+| Ecosystem: Portfolio, Literacy for Kids, Connector Guide (absolute URLs) | ✅ |
+| Connect: GitHub (project repo), zcohen-nerd (hub) | ✅ |
+| Copyright year: 2026 | ✅ |
+| "documented in public" signal dot | ✅ |
+| Appendix pages: `quick-reference-tables.html`, `source-notes.html` | ✅ |
+
+### Docs Sidebar / Mobile Result
+
+**SSR behavior (expected):**
+- `sidebarToggle` button is **not** in SSR HTML — correct. On SSR, `mobileSidebar.disabled = true` because `NavbarSecondaryMenuContent` hasn't been injected yet. The toggle renders after React hydration on docs pages.
+- `NavbarMobileSidebar` panel is **not** in SSR HTML — correct. `NavbarMobileSidebar` returns `null` when `shouldRender = false` (`!disabled && windowSize === 'mobile'`). It renders client-side only, after hydration, at mobile viewport width.
+- `navbar-sidebar__backdrop` IS in SSR HTML — backdrop is always rendered; CSS hides it when the sidebar is not open.
+- Docusaurus docs sidebar container (`theme-doc-sidebar-container`) IS in SSR HTML on docs pages ✅
+
+**Architecture confirmed correct:**
+- `NavbarProvider` (containing `NavbarMobileSidebarProvider`) is provided by `@theme/Layout/Provider`, which is above the brand Navbar in the React tree
+- `useNavbarMobileSidebar()` called in brand Navbar is safe — context is always available
+- `@docusaurus/theme-common/internal` sub-path resolves correctly via `exports` field — no junction resolution issue (unlike `@docusaurus/core` which had no exports)
+
+**Live interactive browser test:** Chrome extension was unavailable during this retest. Manual mobile validation is recommended: open http://localhost:3000/connector-engineering-field-guide/ at ≤720px width on a docs page and confirm the sidebar toggle appears left of the logo and opens the docs sidebar.
+
+### Link Safety Result
+
+| Check | Result |
+|---|---|
+| Doubled ecosystem paths (e.g. `/connector-engineering-field-guide/connectors`) | ✅ 0 hits |
+| All ecosystem links absolute (Portfolio, Literacy, Connector Guide) | ✅ Confirmed in footer SSR and JS bundles |
+| Hub URL `https://zcohen-nerd.github.io/` | ✅ Correct in logo link |
+| No `<Link to="/...">` (Docusaurus router) in brand output | ✅ None found |
+
+### Current Project Highlight Result
+
+- `aria-current` code is compiled into `main.ca69a167.js` ✅
+- `brand.projectUrl` in connector guide config: `https://zcohen-nerd.github.io/connector-engineering-field-guide/`
+- Matching entry in `projects.js` registry: `href: 'https://zcohen-nerd.github.io/connector-engineering-field-guide/'`
+- **Match is exact** — Connector Guide will receive `aria-current="page"` in the Projects ▾ dropdown and mobile drawer when JS hydrates
+- Live confirmation of CSS highlight (cyan + semibold) requires browser interaction (dropdown must be opened)
+
+### Remaining Issues
+
+1. **No live browser test.** Chrome extension was unavailable. Functional correctness of sidebar toggle, `aria-current` highlight, and mobile drawer has been validated via SSR HTML and bundle analysis, but not by direct browser interaction.
+2. **Local `file:` dependency only.** The connector guide uses `"@zcohen-nerd/brand": "file:../../brand/zcohen-nerd-brand"`. This is a local development dependency; standalone CI or GitHub Pages deployment cannot use it. Package distribution or workspace hoisting is required before production use.
+3. **Dark mode.** Brand Navbar and Footer do not implement `[data-theme='dark']` overrides. Dark mode CSS falls through to Infima defaults. Unchanged from Phase 2.
+4. **`data-theme="connectors"` not auto-applied.** The connector-family color overrides are still applied manually in `:root` via `custom.css`. A future Root swizzle would apply it automatically from `brand.projectFamily`. Unchanged from Phase 2.
+5. **Mobile sidebar toggle not verified live.** The `sidebarToggle` button appears only after React hydration at ≤720px. This is the main Phase 3 feature and could not be confirmed live in this retest.
+
+### Recommendation
+
+**Shared brand package is functionally ready; package distribution is now the main blocker.**
+
+The Phase 3 commit (`c5c80a4`) correctly adds docs sidebar support to the shared Navbar. The build is clean, the Navbar SSR output is correct, and the architecture for the mobile sidebar toggle is sound. All previously documented workarounds have been removed. The only blocker preventing production use is local `file:` dependency resolution — publish the package or set up npm workspaces to unblock deployment.

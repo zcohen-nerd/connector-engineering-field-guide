@@ -2,6 +2,8 @@
 
 Connector knowledge is built by doing. Each exercise produces a deliverable that demonstrates real competence.
 
+Use [How to Search for Connectors](00-how-to-search-for-connectors.md) as a starting point for Exercise 2 and Exercise 3 so your search terms and filters are deliberate before you start comparing families or decoding real parts.
+
 **Exercise 1 — Rugged control box connector set.** Design the external connector interface for a small sealed enclosure: 24 VDC input, Ethernet, CAN, four sensors, one motor output, one debug/service port. *Deliverable:* connector family selection table, pinout, cable list, backshell/cap list, and a justification column for every decision.
 
 **Exercise 2 — Connector comparison matrix.** Compare 38999 Series III, 26482, M12 A-coded, M12 X-coded, D-sub, Micro-D, an industrial rectangular/Han-style connector, and Molex Micro-Fit across: environment, pin count, current, sealing, tooling, cost, lead time, serviceability, common mistakes. *Deliverable:* a scored comparison matrix plus a recommendation paragraph for a stated application.

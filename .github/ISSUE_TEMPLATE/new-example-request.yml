@@ -1,0 +1,46 @@
+name: New example request
+description: Request a new connector-selection example or walkthrough.
+title: "[Example Request]: "
+labels:
+  - example request
+body:
+  - type: textarea
+    id: application
+    attributes:
+      label: Application
+      description: What system or interface are you trying to build?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Describe the environmental conditions and use context.
+    validations:
+      required: true
+  - type: textarea
+    id: signals_power_data
+    attributes:
+      label: Signals/power/data
+      description: What needs to cross the interface?
+    validations:
+      required: true
+  - type: textarea
+    id: service_model
+    attributes:
+      label: Service model
+      description: Who mates it, how often, and under what conditions?
+    validations:
+      required: true
+  - type: textarea
+    id: candidate_families
+    attributes:
+      label: Candidate connector families
+      description: List any families you are already considering.
+  - type: textarea
+    id: confusing_decision
+    attributes:
+      label: What decision is confusing
+      description: What are you stuck on?
+    validations:
+      required: true

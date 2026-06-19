@@ -2,6 +2,8 @@
 
 Consumer, hobby, and prototype connectors are not automatically "bad." They are optimized for cost, availability, and ease of use. The real question is whether a given connector is appropriate for the environment, mating-cycle requirement, strain relief, vibration profile, sealing requirement, configuration-control needs, and service model of your application. A connector that is perfect on a breadboard can be exactly wrong on the outside of a fielded enclosure — and the same part can be a sensible internal choice in a protected assembly. Know which world you're in.
 
+If your search starts with a vague label like `JST connector` or `aviation plug`, read [How to Search for Connectors](00-how-to-search-for-connectors.md) first and then come back to this page.
+
 | Prototype / consumer choice | Production / rugged equivalent | Why |
 |---|---|---|
 | Dupont jumpers | Keyed, latching, positively retained wire-to-board (Molex Micro-Fit/Nano-Fit, Harwin, Omnetics, or JST GH where appropriate) | Retention, polarization, repeatability |

@@ -1,0 +1,35 @@
+name: Source verification
+description: Verify a source-backed TODO claim in the guide.
+title: "[Source Verification]: "
+labels:
+  - source verification
+body:
+  - type: textarea
+    id: claim_to_verify
+    attributes:
+      label: Claim to verify
+      description: What exact claim or TODO are you checking?
+    validations:
+      required: true
+  - type: input
+    id: current_location
+    attributes:
+      label: Current guide location
+      description: Where does the claim appear today?
+      placeholder: docs/08-m12.md, Section 8.3
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_source
+    attributes:
+      label: Proposed primary source
+      description: Link or identify the datasheet, standard, catalog, or QPL source.
+    validations:
+      required: true
+  - type: textarea
+    id: verification_result
+    attributes:
+      label: Verification result
+      description: What did the source confirm, qualify, or contradict?
+    validations:
+      required: true

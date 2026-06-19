@@ -1,0 +1,42 @@
+name: Technical correction
+description: Submit a source-backed technical correction for the guide.
+title: "[Technical Correction]: "
+labels:
+  - technical correction
+body:
+  - type: input
+    id: page_section
+    attributes:
+      label: Page/section
+      description: Where in the guide is the issue?
+      placeholder: docs/07-mil-dtl-38999.md, Section 7.5
+    validations:
+      required: true
+  - type: textarea
+    id: current_text
+    attributes:
+      label: Current text
+      description: Paste the current wording or summarize the claim.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_correction
+    attributes:
+      label: Proposed correction
+      description: What should the guide say instead?
+    validations:
+      required: true
+  - type: textarea
+    id: source_link
+    attributes:
+      label: Source link / citation
+      description: Link the primary source or cite it clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: why_it_matters
+    attributes:
+      label: Why it matters
+      description: Explain the design, safety, manufacturability, or clarity impact.
+    validations:
+      required: true

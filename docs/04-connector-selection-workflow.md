@@ -2,6 +2,8 @@
 
 Connector selection is multi-variable optimization. An excellent choice on most criteria that fails one critical criterion is still wrong. Work the steps in order — don't start from a connector you like.
 
+If you are still trying to turn a vague need into useful search terms, start with [How to Search for Connectors](00-how-to-search-for-connectors.md) before you begin narrowing families.
+
 ## Step 1: Define the interface
 
 Before picking a family, write down: What crosses this boundary (power / signal / data / RF / fiber / fluid)? Internal or external? User-, technician-, or factory-accessible? Disconnected often? Safety-critical? Does it cross an environmental boundary? Must it be mated/unmated under power?

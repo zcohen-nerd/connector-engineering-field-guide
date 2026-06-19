@@ -10,6 +10,8 @@ plugins:
   - search
 nav:
   - Home: index.md
+  - Start Here:
+      - How to Search for Connectors: 00-how-to-search-for-connectors.md
   - Guide:
       - What Connectors Actually Do: 01-what-connectors-do.md
       - Major Connector Categories: 02-major-connector-categories.md

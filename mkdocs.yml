@@ -1,5 +1,6 @@
 site_name: Connector Engineering Field Guide
 site_description: Professional connector engineering reference for rugged, industrial, and military electromechanical systems
+site_url: https://zcohen-nerd.github.io/connector-engineering-field-guide/
 theme:
   name: material
 docs_dir: docs

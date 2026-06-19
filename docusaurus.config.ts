@@ -36,31 +36,6 @@ const config: Config = {
   // Reads customFields.brand below for project-aware configuration.
   themes: ['@zcohen-nerd/brand'],
 
-  // @docusaurus/core has no main/exports/index.js entry, so rspack cannot
-  // resolve bare `import {useDocusaurusContext} from '@docusaurus/core'` imports
-  // from the brand package's real disk path (Windows junction for file: dep).
-  // Alias @docusaurus/core to a local proxy that re-exports what the brand
-  // package needs via the already-Docusaurus-aliased @docusaurus/* paths.
-  // Remove this when @zcohen-nerd/brand is published or updated to use
-  // @docusaurus/useDocusaurusContext directly.
-  plugins: [
-    function resolveBrandPeerDeps() {
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
-      const path = require('path');
-      const compatFile = path.resolve(process.cwd(), 'src', 'brand-docusaurus-compat.js');
-      return {
-        name: 'resolve-brand-peer-deps',
-        configureWebpack() {
-          return {
-            resolve: {
-              alias: {'@docusaurus/core': compatFile},
-            },
-          };
-        },
-      };
-    },
-  ],
-
   customFields: {
     brand: {
       projectName: 'Professional Connector Guide',

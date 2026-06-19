@@ -257,3 +257,61 @@ Footer on `01-what-connectors-do.html`:
 **Shared brand package is functionally ready; package distribution is now the main blocker.**
 
 The Phase 3 commit (`c5c80a4`) correctly adds docs sidebar support to the shared Navbar. The build is clean, the Navbar SSR output is correct, and the architecture for the mobile sidebar toggle is sound. All previously documented workarounds have been removed. The only blocker preventing production use is local `file:` dependency resolution — publish the package or set up npm workspaces to unblock deployment.
+
+---
+
+## Published npm Package Retest
+
+**Brand package version tested:** `@zcohen-nerd/brand@1.0.2` (local tarball, pre-publication)
+**Date:** 2026-06-19
+**Branch:** `test-shared-brand-package`
+**Result:** ALL CHECKS PASS — 1.0.2 ready to publish; connector guide ready to commit after publication
+
+### Summary
+
+Switched connector guide from `file:../../brand/zcohen-nerd-brand` to `^1.0.2` (npm package). Discovered and fixed three blocking issues in the brand package during this retest, all resolved in `@zcohen-nerd/brand@1.0.2`:
+
+| Issue | Root Cause | Fix |
+|---|---|---|
+| JSX parse error from rspack | Brand package shipped JSX source; rspack excludes `node_modules` from JSX transforms | Added Babel build pipeline; `getThemePath()` now points to compiled `lib/components/` |
+| `useTOCHighlight` crash (`null.clientHeight`) | `useTOCHighlight.js` queries `document.querySelector('.navbar')` — brand `<header>` lacked this class | Added `navbar` as base class on `<header>` |
+| Mobile sidebar clamped to 59px | `backdrop-filter: blur(8px)` on `<header>` creates a CSS containing block for `position:fixed` children | Moved `<NavbarMobileSidebar>` and sidebar backdrop OUTSIDE `<header>` into a sibling wrapper `<div>` with `navbar-sidebar--show` |
+
+None of these issues were visible from the build alone — all require live browser execution.
+
+### Build validation
+
+- `npm run build` → zero errors, zero warnings, 20 pages ✅
+- Correct strings present in built HTML: `A zcohen-nerd technical guide`, `zcohen-nerd`, `documented in public`, `Connector Guide` ✅
+- Forbidden strings absent: `isHub`, `DEFAULT_BRAND`, hub `navLinks` (Work/Writing/About) ✅
+- No `file:` path in `package-lock.json` (resolved via local tarball until npm publish) ✅
+
+### Live browser validation (desktop, 1304×943)
+
+- Brand Navbar: ZCohen Nerd logo, badge "A zcohen-nerd technical guide", Projects ▾ button ✅
+- Projects dropdown: Portfolio, Literacy for Kids, Connector Guide ✅
+- `aria-current="page"` on Connector Guide dropdown item ✅
+- `navbar` class on `<header>` (TOC scroll-spy works) ✅
+- Footer: wordmark, attribution, Ecosystem column, Connect column, "documented in public" amber dot ✅
+- Docs sidebar: renders on left at desktop; all 20 pages navigable ✅
+- No React crash on any page ✅
+
+### Live browser validation (mobile, 390px width)
+
+- Left docs sidebar toggle (≡) visible at ≤720px ✅
+- Right brand hamburger (≡) visible ✅
+- Sidebar toggle click → docs sidebar opens at full viewport height (693px) ✅
+- Current page ("What Connectors Actually Do") highlighted in sidebar ✅
+- Sidebar backdrop present; outside-click closes sidebar ✅
+
+### Remaining issues
+
+1. **1.0.2 not yet published.** `package.json` references `^1.0.2`; `package-lock.json` currently resolves from a local tarball. After publishing 1.0.2 to npm, run `npm install` to get a clean lockfile from the registry, then commit.
+2. **Dark mode.** Brand Navbar/Footer do not implement `[data-theme='dark']` overrides. Unchanged from prior retests.
+3. **`data-theme="connectors"` not auto-applied.** Still applied manually via `custom.css :root`. A future Root swizzle would read `brand.projectFamily` automatically.
+
+### Recommended next steps
+
+1. Publish `@zcohen-nerd/brand@1.0.2` to npm (`npm publish --access public` from the brand package directory)
+2. In connector guide: `npm install` (cleans the lockfile from tarball → registry)
+3. Commit `package.json` + `package-lock.json` + `BRAND_PACKAGE_INTEGRATION_REPORT.md` with message `"Use published @zcohen-nerd/brand package"`

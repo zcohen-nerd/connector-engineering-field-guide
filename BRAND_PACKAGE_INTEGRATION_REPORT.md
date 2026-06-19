@@ -315,3 +315,108 @@ None of these issues were visible from the build alone — all require live brow
 1. Publish `@zcohen-nerd/brand@1.0.2` to npm (`npm publish --access public` from the brand package directory)
 2. In connector guide: `npm install` (cleans the lockfile from tarball → registry)
 3. Commit `package.json` + `package-lock.json` + `BRAND_PACKAGE_INTEGRATION_REPORT.md` with message `"Use published @zcohen-nerd/brand package"`
+
+---
+
+## Published npm Package 1.0.2 Registry Retest
+
+**Brand package version tested:** `@zcohen-nerd/brand@1.0.2` (published to npm registry)
+**Date:** 2026-06-19
+**Branch:** `test-shared-brand-package`
+**Result:** ALL CHECKS PASS — connector guide is ready to push for GitHub Actions validation
+
+### Package Tested
+
+```
+npm view @zcohen-nerd/brand version  → 1.0.2
+npm view @zcohen-nerd/brand versions → [ '1.0.0', '1.0.2' ]
+```
+
+`@zcohen-nerd/brand@1.0.2` confirmed published to the npm registry.
+
+### Dependency Change
+
+| Before | After |
+|---|---|
+| `"@zcohen-nerd/brand": "^1.0.2"` resolved from local tarball (`file:../../brand/.../1.0.2.tgz`) | `"@zcohen-nerd/brand": "^1.0.2"` resolved from `https://registry.npmjs.org/@zcohen-nerd/brand/-/brand-1.0.2.tgz` |
+
+`package.json` required no change — already `^1.0.2`. Removed the locally-installed copy from `node_modules/@zcohen-nerd` and ran `npm install @zcohen-nerd/brand@1.0.2` to force the registry fetch.
+
+### Build Result
+
+```
+[INFO] [en] Creating an optimized production build...
+[SUCCESS] Generated static files in "build".
+```
+
+Zero errors. Zero warnings. 20 pages generated.
+`npm ci` (from clean `node_modules`) also passes cleanly.
+
+### Lockfile Result
+
+| Check | Result |
+|---|---|
+| `file:` reference for `@zcohen-nerd/brand` | ✅ Absent |
+| Local `.tgz` tarball reference | ✅ Absent |
+| `resolved` URL for `@zcohen-nerd/brand` | `https://registry.npmjs.org/@zcohen-nerd/brand/-/brand-1.0.2.tgz` ✅ |
+| Installed version in `node_modules` | `1.0.2` ✅ |
+
+### Desktop Browser Result
+
+| Check | Result |
+|---|---|
+| Brand Navbar renders (ZCohen Nerd wordmark logo) | ✅ |
+| Project badge: `A zcohen-nerd technical guide` | ✅ |
+| Projects ▾ dropdown opens (3 items: Portfolio, Literacy for Kids, Connector Guide) | ✅ |
+| `aria-current="page"` on Connector Guide in Projects dropdown | ✅ |
+| `.navbar` class on `<header>` → TOC scroll-spy height = 59px (no crash) | ✅ |
+| Docs sidebar renders; current page highlighted | ✅ |
+| Tables render (3 tables on docs page) | ✅ |
+| Admonitions render (4 on docs page) | ✅ |
+| TOC renders (6 links on docs page) | ✅ |
+| Brand Footer renders (wordmark, Ecosystem, Connect columns) | ✅ |
+| Zero React console errors | ✅ (only React DevTools info message) |
+
+### Mobile Browser Result
+
+| Check | Result |
+|---|---|
+| Left docs sidebar toggle (≡) visible at 390px width | ✅ |
+| Right brand hamburger (≡) visible | ✅ |
+| Docs sidebar opens at full viewport height (693px = viewport height) | ✅ |
+| Sidebar `top: 0` (not clamped to header) | ✅ |
+| Sidebar backdrop present; wrapper `div` has `navbar-sidebar--show` class | ✅ |
+| Current page "What Connectors Actually Do" highlighted in sidebar | ✅ |
+| Brand drawer opens with badge + PROJECTS heading | ✅ |
+| `aria-current="page"` on Connector Guide in brand drawer | ✅ |
+| Zero console errors during mobile interaction | ✅ |
+
+### Link Safety Result
+
+| Check | Result |
+|---|---|
+| Hub nav links (Work / Writing / About) absent from rendered HTML | ✅ (0 hits in all 20 pages) |
+| Doubled ecosystem paths (e.g. `/connector-engineering-field-guide/connectors`) | ✅ 0 hits |
+| `file:` references in built output | ✅ 0 hits |
+| `brand-docusaurus-compat` / `resolveBrandPeerDeps` | ✅ 0 hits |
+| `/blog/rss.xml` | ✅ 0 hits |
+| `aria-current` present in built HTML | ✅ 19/20 pages |
+| `A zcohen-nerd technical guide` in built HTML | ✅ All 20 pages |
+| `zcohen-nerd-logo` in built HTML | ✅ All 20 pages |
+
+### Bugs Found in Earlier npm Retest
+
+- **JSX source was not transformed from `node_modules`** — rspack excludes `node_modules` from JSX transforms (only `@docusaurus/*` whitelisted); brand package shipped JSX source. Fixed in 1.0.2 by adding a Babel build pipeline; `getThemePath()` now points to compiled CommonJS in `lib/components/`.
+- **`.navbar` class was missing** — `useTOCHighlight.js:74` calls `document.querySelector('.navbar').clientHeight`; brand `<header>` lacked this class, crashing every docs page. Fixed in 1.0.2 by adding `navbar` as a base class on `<header>`.
+- **Mobile sidebar was clamped by header containing block** — `backdrop-filter: blur(8px)` on `<header>` creates a CSS containing block for `position:fixed` children; `<NavbarMobileSidebar>` and sidebar backdrop inside `<header>` were sized relative to the 59px header instead of the viewport. Fixed in 1.0.2 by moving sidebar and backdrop OUTSIDE `<header>` into a sibling wrapper `<div>` that receives `navbar-sidebar--show`.
+
+### Remaining Issues
+
+1. **Dark mode.** Brand Navbar/Footer do not implement `[data-theme='dark']` overrides. Dark mode CSS falls through to Infima defaults. Unchanged from prior retests.
+2. **`data-theme="connectors"` not auto-applied.** Connector-family color overrides still applied manually via `custom.css :root`. A future Root swizzle would read `brand.projectFamily` automatically.
+
+### Recommendation
+
+The connector guide is ready to push for GitHub Actions validation.
+
+`@zcohen-nerd/brand@1.0.2` is published to the npm registry. The connector guide `package.json` references `^1.0.2`; `package-lock.json` resolves exclusively from `registry.npmjs.org`. `npm ci` and production build both pass cleanly. All three bugs found during the prior local tarball retest are confirmed fixed in the published package. Desktop and mobile browser validation pass with zero errors.

@@ -1,14 +1,14 @@
 /* ============================================================================
    Professional Connector Guide — Docusaurus custom CSS
-   Imports brand tokens and Infima bridge from @zcohen-nerd/brand, then
-   applies the connectors-family theme override (mirrors [data-theme="connectors"]
-   in zcohen-nerd-tokens.css, applied to :root since we use Docusaurus native
-   nav rather than the brand theme plugin and cannot set data-theme on <html>
-   without a root swizzle).
+   Imports local copies of brand tokens and Infima bridge (sourced from
+   brand/zcohen-nerd-brand), then applies the connectors-family theme override
+   (mirrors [data-theme="connectors"] in zcohen-nerd-tokens.css, applied to
+   :root since we use Docusaurus native nav rather than the brand theme plugin
+   and cannot set data-theme on <html> without a root swizzle).
    ============================================================================ */
 
-@import '@zcohen-nerd/brand/tokens/zcohen-nerd-tokens.css';
-@import '@zcohen-nerd/brand/src/infima-bridge.css';
+@import './zcohen-nerd-tokens.css';
+@import './infima-bridge.css';
 
 /* ── Connectors family overrides ─────────────────────────────────────────── */
 /* Values from [data-theme="connectors"] in zcohen-nerd-tokens.css            */

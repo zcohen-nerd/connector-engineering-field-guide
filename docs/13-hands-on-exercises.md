@@ -1,3 +1,11 @@
+﻿---
+id: 13-hands-on-exercises
+title: "13. Hands-On Learning Exercises"
+slug: /13-hands-on-exercises
+sidebar_label: Hands-On Exercises
+sidebar_position: 13
+---
+
 # 13. Hands-On Learning Exercises
 
 Connector knowledge is built by doing. Each exercise produces a deliverable that demonstrates real competence.

@@ -1,3 +1,10 @@
+﻿---
+title: "Appendix: Quick-Reference Tables"
+slug: /appendix/quick-reference-tables
+sidebar_label: Quick Reference Tables
+sidebar_position: 1
+---
+
 # Appendix: Quick-Reference Tables
 
 ## A1. IP rating reference

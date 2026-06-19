@@ -1,19 +1,36 @@
+---
+id: index
+title: Professional Connector Guide
+slug: /
+sidebar_label: Home
+sidebar_position: 1
+---
+
 # Connector Engineering Field Guide
 
 *Practical connector selection for rugged, industrial, military-style, and electromechanical systems.*
 
-!!! note "v0.1 Public Review Draft"
-    Technical corrections welcome with sources.
+:::note[v0.1 Public Review Draft]
+
+Technical corrections welcome with sources.
+
+:::
 
 Picking connectors is harder than it should be. The information is scattered across datasheets, standards, catalogs, vendor naming systems, and tribal knowledge. This guide exists to help engineers who are not connector specialists figure out what connector family to start with, what specifications actually matter, what mistakes to avoid, and how to turn "I need a plug here" into a buildable, documented interface.
 
 The goal is not to make you a connector expert. The goal is to help you classify the interface, choose a sane connector family to investigate first, understand what specs matter, avoid common traps, and document the interface properly.
 
-!!! note "Core mental model"
-    A connector is a *controlled interface between subsystems*. It carries power, signals, and data; survives the environment; defines the service boundary; and becomes a configuration-controlled item in your released design baseline.
+:::note[Core mental model]
 
-!!! warning "Disclaimer"
-    This guide is educational and intended to teach engineering judgment. It is **not** a substitute for applicable standards, manufacturer datasheets, safety requirements, customer specifications, qualification requirements, or program-specific design rules. Exact connector ratings, part numbers, tooling, assembly instructions, and qualification status must be verified before use in released hardware. **When this guide conflicts with a datasheet, applicable standard, customer requirement, or qualified program requirement, the datasheet / standard / customer requirement wins.**
+A connector is a *controlled interface between subsystems*. It carries power, signals, and data; survives the environment; defines the service boundary; and becomes a configuration-controlled item in your released design baseline.
+
+:::
+
+:::warning[Disclaimer]
+
+This guide is educational and intended to teach engineering judgment. It is **not** a substitute for applicable standards, manufacturer datasheets, safety requirements, customer specifications, qualification requirements, or program-specific design rules. Exact connector ratings, part numbers, tooling, assembly instructions, and qualification status must be verified before use in released hardware. **When this guide conflicts with a datasheet, applicable standard, customer requirement, or qualified program requirement, the datasheet / standard / customer requirement wins.**
+
+:::
 
 ## Start Here: Pick a Connector
 

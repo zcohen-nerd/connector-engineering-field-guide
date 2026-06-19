@@ -1,3 +1,11 @@
+﻿---
+id: 09-decision-examples
+title: "9. Connector Decision Examples"
+slug: /09-decision-examples
+sidebar_label: Decision Examples
+sidebar_position: 9
+---
+
 # 9. Connector Decision Examples
 
 Scan the table for the quick map; the reasoning is what transfers to your own problems.

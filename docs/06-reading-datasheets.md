@@ -1,3 +1,11 @@
+﻿---
+id: 06-reading-datasheets
+title: "6. How to Read a Connector Datasheet"
+slug: /06-reading-datasheets
+sidebar_label: Reading Datasheets
+sidebar_position: 6
+---
+
 # 6. How to Read a Connector Datasheet
 
 Don't start with the glamour render. Start with the ordering information and the qualification/test data.

@@ -1,3 +1,11 @@
+﻿---
+id: 10-selection-checklist
+title: "10. Practical Selection Checklist"
+slug: /10-selection-checklist
+sidebar_label: Practical Checklist
+sidebar_position: 10
+---
+
 # 10. Practical Selection Checklist
 
 Use this at work. Adapt to your program; it is a working checklist, not a standard.

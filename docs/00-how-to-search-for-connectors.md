@@ -1,3 +1,11 @@
+﻿---
+id: 00-how-to-search-for-connectors
+title: How to Search for Connectors
+slug: /00-how-to-search-for-connectors
+sidebar_label: How to Search for Connectors
+sidebar_position: 1
+---
+
 # How to Search for Connectors
 
 Connector selection often goes wrong before the datasheet even opens. The search terms are too vague, too brand-specific, or too focused on shape instead of function. This page is about turning a loose need into useful search terms and filters.
@@ -42,8 +50,11 @@ Use search terms that combine the family, the use case, and one or two constrain
 - `Tag-Connect programming header footprint`
 - `coax SMA bulkhead connector impedance matched`
 
-!!! warning
-    Search terms are only a starting point. The datasheet, applicable standard, and manufacturer documentation still decide whether the part is suitable.
+:::warning
+
+Search terms are only a starting point. The datasheet, applicable standard, and manufacturer documentation still decide whether the part is suitable.
+
+:::
 
 ## Useful filters
 

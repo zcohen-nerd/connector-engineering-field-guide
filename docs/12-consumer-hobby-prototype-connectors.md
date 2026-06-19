@@ -1,3 +1,11 @@
+﻿---
+id: 12-consumer-hobby-prototype-connectors
+title: "12. Consumer, Hobby, and Prototype Connectors vs. Production/Rugged Use"
+slug: /12-consumer-hobby-prototype-connectors
+sidebar_label: Consumer/Hobby/Prototype Connectors
+sidebar_position: 12
+---
+
 # 12. Consumer, Hobby, and Prototype Connectors vs. Production/Rugged Use
 
 Consumer, hobby, and prototype connectors are not automatically "bad." They are optimized for cost, availability, and ease of use. The real question is whether a given connector is appropriate for the environment, mating-cycle requirement, strain relief, vibration profile, sealing requirement, configuration-control needs, and service model of your application. A connector that is perfect on a breadboard can be exactly wrong on the outside of a fielded enclosure — and the same part can be a sensible internal choice in a protected assembly. Know which world you're in.
@@ -54,8 +62,11 @@ If your search starts with a vague label like `JST connector` or `aviation plug`
 | Screw terminal block (PCB) | Wire clamped by a screw on the board edge | Can loosen under vibration if not designed, torqued, retained, or inspected appropriately. Use a proper latching connector or move clamping into an enclosure terminal block. |
 | Pluggable terminal block | Pluggable 2-part screw/spring terminal block, often Phoenix Contact / WAGO / Weidmüller style | Legitimate for panel/field wiring inside enclosures. Not automatically sealed or vibration-rated — house it appropriately. |
 
-!!! tip
-    Rule of thumb for the bench-to-product transition: when a connector leaves the lab, ask whether it latches, keys, retains its contacts, survives vibration, and seals to the environment it will live in. If any answer is "no" and the application needs it, upgrade the connector. And as always: the manufacturer datasheet and the applicable standard outrank anything in this guide.
+:::tip
+
+Rule of thumb for the bench-to-product transition: when a connector leaves the lab, ask whether it latches, keys, retains its contacts, survives vibration, and seals to the environment it will live in. If any answer is "no" and the application needs it, upgrade the connector. And as always: the manufacturer datasheet and the applicable standard outrank anything in this guide.
+
+:::
 
 ## 12.4 USB-C, HDMI, and other consumer I/O
 
@@ -65,8 +76,11 @@ USB-C has high mating-cycle expectations compared with many internal connectors,
 
 If you need consumer I/O on rugged equipment, place it behind a sealed cover, use an internal service hatch, choose a ruggedized variant, or replace it with a more appropriate sealed connector such as M12 Ethernet, sealed USB, or a qualified circular service connector.
 
-!!! warning "Practical warning"
-    A consumer connector can be fine inside the box and wrong on the outside of the box.
+:::warning[Practical warning]
+
+A consumer connector can be fine inside the box and wrong on the outside of the box.
+
+:::
 
 ## 12.5 RJ45 / 8P8C Ethernet
 

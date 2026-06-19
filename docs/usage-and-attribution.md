@@ -1,3 +1,10 @@
+﻿---
+id: usage-and-attribution
+title: Usage and Attribution
+slug: /usage-and-attribution
+sidebar_label: Usage and Attribution
+---
+
 # Usage and Attribution
 
 This guide is intended to be freely shareable as an educational field reference. A few ground rules keep it clean for open-source publication:

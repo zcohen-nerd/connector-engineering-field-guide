@@ -1,3 +1,11 @@
+﻿---
+id: 01-what-connectors-do
+title: "1. What Connectors Actually Do in a System"
+slug: /01-what-connectors-do
+sidebar_label: What Connectors Actually Do
+sidebar_position: 1
+---
+
 # 1. What Connectors Actually Do in a System
 
 A connector is never just a place where wires meet. Every connector in a professional system does at least six jobs at once. Ignore any one of them and you create a failure mode you'll trace back to the connector during an autopsy.
@@ -31,8 +39,11 @@ A connector can work perfectly on the bench and fail in the field because the ca
 
 For sealed systems, the connector is part of the enclosure wall. It must block water, dust, salt fog, fuel/oil/hydraulic fluid, pressure differential, humidity, EMI, and thermal cycling — as required.
 
-!!! warning
-    An IP-rated connector does not make a system IP-rated. The mating connector, O-ring, gasket, cable gland, mating torque, panel thickness, and installation procedure all have to be rated and correct. Partial sealing = not sealed.
+:::warning
+
+An IP-rated connector does not make a system IP-rated. The mating connector, O-ring, gasket, cable gland, mating torque, panel thickness, and installation procedure all have to be rated and correct. Partial sealing = not sealed.
+
+:::
 
 ## 1.4 Service / disconnect point
 

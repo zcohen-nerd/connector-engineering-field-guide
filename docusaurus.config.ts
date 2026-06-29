@@ -32,6 +32,34 @@ const config: Config = {
     locales: ['en'],
   },
 
+  // Shared brand package: provides @theme/Navbar and @theme/Footer.
+  // Reads customFields.brand below for project-aware configuration.
+  themes: ['@zcohen-nerd/brand'],
+
+  customFields: {
+    brand: {
+      projectName: 'Professional Connector Guide',
+      projectFamily: 'technical-guide',
+      projectBadge: 'A zcohen-nerd technical guide',
+      hubUrl: 'https://zcohen-nerd.github.io/',
+      projectUrl: 'https://zcohen-nerd.github.io/connector-engineering-field-guide/',
+      repoUrl: 'https://github.com/zcohen-nerd/connector-engineering-field-guide',
+      attribution: 'A zcohen-nerd technical guide by Zac Cohen.',
+      isHub: false,
+      navLinks: [],
+      connectLinks: [
+        {
+          label: 'GitHub',
+          href: 'https://github.com/zcohen-nerd/connector-engineering-field-guide',
+        },
+        {
+          label: 'zcohen-nerd',
+          href: 'https://zcohen-nerd.github.io/',
+        },
+      ],
+    },
+  },
+
   presets: [
     [
       'classic',
@@ -48,54 +76,12 @@ const config: Config = {
     ],
   ],
 
+  // themeConfig.navbar and themeConfig.footer are intentionally omitted:
+  // the @zcohen-nerd/brand theme provides @theme/Navbar and @theme/Footer
+  // and is configured via customFields.brand above.
   themeConfig: {
     colorMode: {
       respectPrefersColorScheme: true,
-    },
-    navbar: {
-      title: 'Professional Connector Guide',
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'guideSidebar',
-          position: 'left',
-          label: 'Guide',
-        },
-        {
-          href: 'https://zcohen-nerd.github.io/',
-          label: 'zcohen-nerd',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/zcohen-nerd/connector-engineering-field-guide',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Guide',
-          items: [
-            {label: 'Home', to: '/'},
-            {label: 'How to Search', to: '/00-how-to-search-for-connectors'},
-            {label: 'Selection Workflow', to: '/04-connector-selection-workflow'},
-            {label: 'MIL-DTL-38999', to: '/07-mil-dtl-38999'},
-            {label: 'M12 Deep Dive', to: '/08-m12'},
-            {label: 'Quick Reference', to: '/appendix/quick-reference-tables'},
-          ],
-        },
-        {
-          title: 'zcohen-nerd ecosystem',
-          items: [
-            {label: 'zcohen-nerd hub', href: 'https://zcohen-nerd.github.io/'},
-            {label: 'GitHub', href: 'https://github.com/zcohen-nerd'},
-          ],
-        },
-      ],
-      copyright: 'A <a href="https://zcohen-nerd.github.io/">zcohen-nerd</a> technical guide by Zac Cohen. Licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.',
     },
     prism: {
       theme: prismThemes.github,

@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Professional Connector Guide',
+  title: 'Connector Engineering Field Guide',
   tagline: 'Practical connector selection for rugged, industrial, military-style, and electromechanical systems.',
   favicon: 'img/favicon.ico',
 
@@ -38,7 +38,7 @@ const config: Config = {
 
   customFields: {
     brand: {
-      projectName: 'Professional Connector Guide',
+      projectName: 'Connector Engineering Field Guide',
       projectFamily: 'technical-guide',
       projectBadge: 'A zcohen-nerd technical guide',
       hubUrl: 'https://zcohen-nerd.github.io/',

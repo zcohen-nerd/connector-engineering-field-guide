@@ -1,6 +1,6 @@
 ---
 id: index
-title: Professional Connector Guide
+title: Connector Engineering Field Guide
 slug: /
 sidebar_label: Home
 sidebar_position: 1

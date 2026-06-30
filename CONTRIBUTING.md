@@ -33,9 +33,9 @@ Acceptable sources include:
 ## Development workflow
 
 ```bash
-pip install mkdocs-material
-mkdocs serve
-mkdocs build
+npm install
+npm run start    # dev server with hot reload
+npm run build    # production build into build/
 ```
 
-Use `mkdocs build` before opening a pull request so broken links and navigation issues are caught early.
+Use `npm run build` before opening a pull request so broken links and navigation issues are caught early.

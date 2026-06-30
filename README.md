@@ -43,3 +43,14 @@ npm run serve    # serve the production build locally
 - Preserve existing warnings, disclaimers, TODO comments, and source-verification notes.
 
 See `CONTRIBUTING.md` for the full source-discipline rules.
+
+## License
+
+This repository uses two licenses:
+
+- **Documentation and content** (everything under `docs/`, `Source/`, `templates/`, `examples/`, and the guide text itself) is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. See [`LICENSE`](LICENSE).
+- **Code and configuration** (the Docusaurus site code, build config, scripts, and similar non-content files) is licensed under the **MIT License**. See [`LICENSE-CODE`](LICENSE-CODE).
+
+When reusing material, give appropriate credit: *A zcohen-nerd technical guide by Zac Cohen.*
+
+> Note: GitHub may display a single license for the repository based on the `LICENSE` file. The dual-license split above is authoritative — content is CC BY 4.0, code is MIT.

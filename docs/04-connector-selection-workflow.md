@@ -20,7 +20,7 @@ Before picking a family, write down: What crosses this boundary (power / signal 
 
 | Criterion | What to evaluate | Common mistake |
 |---|---|---|
-| Voltage | Use the specified AC and DC working-voltage ratings; account for RMS/peak, transients, creepage/clearance, pollution degree, altitude, and the applicable safety standard | Using DC rating on an AC circuit; ignoring transients/peak |
+| Voltage | Use the specified AC and DC working-voltage ratings; account for RMS/peak, transients, creepage/clearance (creepage = shortest path along a surface between two conductors; clearance = shortest through-air gap), pollution degree, altitude, and the applicable safety standard | Using DC rating on an AC circuit; ignoring transients/peak |
 | Current | Per-contact rating *at temperature*, bundle-derated per the manufacturer's derating curve. Apply a conservative design margin. | Using max rating with no thermal/bundle derating |
 | Signal type | Discrete, analog, thermocouple, encoder, CAN, RS-485, Ethernet, RF — each has different needs | Mixing high-current power and mV analog in one insert |
 | Pin count | Required + shields + spares + growth (see spare-capacity note below) | Filling every contact, then re-engineering for one more pin |
@@ -41,6 +41,14 @@ It depends on contact size, number of loaded contacts, ambient temperature, wire
 
 :::
 
+### How to read a derating curve
+
+A contact-current derating curve plots the **allowable current per contact** (often as a percent of the single-contact rating) against the **number of energized contacts**, at a stated ambient temperature. To use it: find your loaded-contact count on the x-axis, read the allowable percentage (or current) for your ambient, apply it to every current-carrying contact, and keep a design margin below that.
+
+*Illustrative only — use the manufacturer's actual curve:* a contact good for its full rating with a single pin energized might be derated to roughly 70–80% in a fully-loaded insert, and lower again at elevated ambient.
+
+**Why fully-loaded is worse:** every energized contact dissipates I²R heat, and closely packed contacts warm each other (mutual heating), so the whole insert runs hotter and each contact must carry *less* to stay within its temperature limit. The falloff steepens as the loaded-contact count and ambient rise — which is exactly why "current rating is not one number."
+
 ## Step 3: Mechanical / environmental requirements
 
 | Criterion | Questions to answer |
@@ -60,6 +68,8 @@ It depends on contact size, number of loaded contacts, ambient temperature, wire
 ## Step 4: Production reality (the step beginners skip)
 
 This is where the technically perfect connector turns out to be dead on arrival. Ask: Who crimps it? What tool is required? Is the crimp tool calibrated? Are contacts removable? Insertion/extraction tools available? Spare contacts stocked? Mating caps stocked? QPL-qualified, COTS, or equivalent? Second source? Lead time vs. schedule? Strip length / crimp spec defined? Inspection / pull-test plan?
+
+Two procurement traps in particular: crimp contacts are often sold only in minimum order quantities (bags of ~100), and the connector, its contacts, the backshell, and the crimp tooling each carry *independent* lead times — order them together and early, not as an afterthought.
 
 The items that most often fall off the BOM or the drawing at this step are collected in [What People Forget](what-people-forget.md).
 

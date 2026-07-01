@@ -58,6 +58,8 @@ Pin/socket gender is *electrical*. Plug/receptacle is *mechanical*. Do not assum
 | PCB through-hole / SMT | Solder tail to board | Board-mount headers, edge connectors | Board-integrated; reflow/hand solder; no field repair |
 | Screw / cage clamp | Mechanical wire capture | Terminal blocks, panel wiring | Field-reworkable, no tooling; retention depends on the system (see Section 10) |
 
+**Front-release vs. rear-release** describes how a removable crimp contact is retained in the insert and which side the tool works from. *Rear-release* contacts (the common MIL-DTL-38999 arrangement) are held by a retention clip in the insert; the insertion/extraction tool enters from the **rear** (wire side), and the contact is installed and removed rearward — convenient for field repair without disturbing the mating face. *Front-release* contacts are unlatched by a tool entering the **mating face**, though the contact is still withdrawn out the rear. Match the tool to the retention type: the wrong tool, or working from the wrong end, bends the retention fingers, damages the insert, or leaves a contact unretained.
+
 ## 5.3 Jam nut vs. flange mount
 
 - **Jam nut:** single hex nut clamps from behind the panel. Compact, simplest install, but can rotate under coupling torque unless an anti-rotation pin/keyway is present. Common for circular connectors.
@@ -89,5 +91,15 @@ In sealed circular connectors, each contact cavity has a wire seal (grommet) siz
 
 - **Ground-first / power-last sequencing:** some connector families and contact systems support mating sequence through staggered (longer/shorter) contacts or specialized inserts, so that ground/chassis contacts mate first and break last, and power mates last (or signal before power, depending on architecture). This prevents the electronics from being powered before a ground reference exists, which can cause latch-up, ground bounce, or resets. Use it where the design requires it, but verify that staggered or sequenced contacts are actually available for your exact connector family, shell, and arrangement — it is not universal.
 - **Blind mate:** when a module plugs into a chassis without the operator seeing the connector, you need a lead-in chamfer, connector float (radial compliance so the connector self-aligns), and pin-length stagger so misalignment damages nothing. Flange mounts with float are preferred over jam nuts here.
+
+## 5.7 EMI, shielding, and bonding
+
+Connector shielding is a *system* property: it depends on maintaining a continuous, low-impedance path from cable shield → backshell → shell → mating shell → chassis. The pieces:
+
+- **Cable-shield termination:** a 360° circumferential termination (an EMI backshell with a conductive band or spring) keeps shield impedance low across frequency. A **pigtail** — the shield gathered into a short wire to a pin or lug — is the common failure.
+- **Shell-to-shell continuity:** the mated shells must actually conduct (grounding fingers/springs, clean conductive plating), or the shield path is broken at the interface.
+- **Backshell bonding & finishes:** the backshell must bond to the shell; conductive finishes and, where needed, EMI gaskets maintain continuity around the joint. A non-conductive finish (e.g. some anodize) breaks it.
+
+**Why a pigtail is bad:** it turns the shield connection into a small series **inductor**, and inductive impedance rises with frequency (Z ≈ 2πfL). A short pigtail is on the order of ~10 nH — negligible milliohms at DC, but ≈ 2 Ω at 30 MHz and tens of ohms by a few hundred MHz. That impedance lets shield current develop a voltage and re-radiate — the mechanism behind the guide's repeated "pigtails are inductive / pigtails radiate" caution.
 
 ---

@@ -31,7 +31,7 @@ IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure wa
 | 12 | 12 | 17 A | Higher-current power |
 | 8 / larger | per catalog | power contacts | High current; coax/twinax in size 8 |
 
-*Test currents from a manufacturer contact-performance spec; not a universal continuous rating. Size against the actual contact datasheet and derating curve.*[^glenaircontacts]
+*Test currents from a manufacturer contact-performance spec — a different, lower parameter than the contact's free-air current-carrying rating (e.g. size 16 ≈ 13 A carrying vs. 10 A test), and not a universal continuous rating. Size against the actual contact datasheet and derating curve.*[^glenaircontacts]
 
 ## A3. Family selection quick guide
 
@@ -42,11 +42,27 @@ IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure wa
 | Industrial Ethernet (GbE) | M12 X-coded | M12 D-coded, exposed RJ45 |
 | Machine umbilical (power+signal+data) | Industrial rectangular / Han-Modular | Many individual small connectors |
 | Serial/debug, benign environment | Micro-D, MIL-grade D-sub, keyed header | Bare headers, exposed USB |
-| High-current robot power (>20 A) | Anderson SB, Han-style power insert, 38999 size 8/larger or dedicated power contacts (HCP/RADSOK[^radsok]); size 12 only where derating supports it | M12 A-coded, XT60/90, 38999 size 16 for the full load |
+| High-current robot power (>20 A) | Anderson SB, Han-style power insert, 38999 size 8/larger or dedicated power contacts (HCP = high-current power, or RADSOK[^radsok]); size 12 only where derating supports it | M12 A-coded, XT60/90, 38999 size 16 for the full load |
 | Internal protected PCB harness | Molex Micro-Fit, TE, Harwin | Bare wire, 0.1" headers, screw terminals on PCB |
 | Fast quick-disconnect, moderate vibration | MIL-DTL-26482 bayonet (verify qualification for the vibration profile) | 38999 threaded (slower to mate) |
 | RF/antenna/GPS line | SMA/TNC/N-Type (impedance-matched) | Random circular signal contacts |
 | Hybrid power+RF+control to one payload | 38999 hybrid insert (coax + power + signal contacts) | Separate connectors if panel space is scarce |
+
+## A4. Typical mating-cycle life by family
+
+Rated mate/unmate cycles vary widely. Design with margin *below* the rated number for the service model (production-only, test, or field-service).
+
+| Family | Typical rated mating cycles |
+|---|---|
+| Molex Micro-Fit 3.0 | ~30 (up to ~250 with lubricated RMF terminals)[^microfitcyc] |
+| MIL-DTL-38999 / MIL-DTL-26482 | 500[^milcyc] |
+| Micro-D (MIL-DTL-83513) | 500[^milcyc] |
+| D-sub (MIL-DTL-24308) | 500[^milcyc] |
+| M12 (screw-lock) | ≥ 100 (per datasheet)[^m12cyc] |
+| Industrial rectangular / Han | ~500 standard; Han HMC (high mating cycle) far higher[^hancyc] |
+| USB-C | 10,000 (USB Type-C spec)[^usbccyc] |
+
+*Cycle life is a durability figure only — not a measure of sealing, vibration, or ruggedness. Verify against the exact part's datasheet.*
 
 ---
 
@@ -58,10 +74,20 @@ When this guide conflicts with a manufacturer datasheet, applicable standard, cu
 
 ## Sources
 
-[^glenaircontacts]: Glenair, *MIL-DTL-38999 Contact Performance Specifications* — Class H/N/Y contact-resistance **test currents**: size 12 → 17 A, 16 → 10 A, 20 → 5 A, 22D → 3 A (per MIL-C-39029 / AS39029). Test currents, not guaranteed continuous ratings. <https://www.glenair.com/mil-dtl-38999/pdf/contact-performance-spec.pdf>
+[^glenaircontacts]: Glenair, *MIL-DTL-38999 Contact Performance Specifications* — Class H/N/Y contact-resistance **test currents**: size 12 → 17 A, 16 → 10 A, 20 → 5 A, 22D → 3 A (per MIL-C-39029 / AS39029) — test currents, not guaranteed continuous ratings. The spec's separate current-rating (max amps, crimp) column is higher, e.g. size 16 → 13 A, size 12 → 23 A. <https://www.glenair.com/mil-dtl-38999/pdf/contact-performance-spec.pdf>
 
 [^radsok]: Amphenol Aerospace, *High-Power 38999 / RADSOK* — RADSOK high-current contacts are rated roughly 70–250 A per contact (≈240–1000 A per connector) and are used to add dedicated power paths on the MIL-DTL-38999 platform. Contact size alone does not set safe current; use the manufacturer derating data, and do not parallel contacts unless the manufacturer/application supports it and the design is reviewed. <https://www.amphenol-aerospace.com/products/high-power-38999>
 
 [^iec60529]: IEC 60529, *Degrees of protection provided by enclosures (IP Code)* — the international IP-rating standard: second numeral 7 = temporary immersion (tested at 1 m for 30 min), 8 = continuous immersion to a manufacturer-stated depth/duration. An IPx9 close-range high-pressure/high-temperature water-jet test was added in the 2013 edition. <https://webstore.iec.ch/publication/2452>
 
 [^iso20653]: ISO 20653:2013, *Road vehicles — Degrees of protection (IP code)* (formerly DIN 40050-9) — origin of the IP69K high-pressure/high-temperature washdown rating; the "K" designation comes from this standard, not IEC 60529. <https://www.iso.org/standard/58048.html>
+
+[^microfitcyc]: Molex, *Micro-Fit 3.0 Connector System Product Family* — durability typically 30 cycles (up to ~250 with factory-lubricated RMF terminals). <https://www.content.molex.com/dxdam/literature/987650-5984.pdf>
+
+[^milcyc]: 500-cycle durability is specified across the common mil-spec families — MIL-DTL-38999 (Amphenol/Glenair standard 500-cycle contacts), MIL-DTL-83513 Micro-D (Glenair performance spec §3.2.8), and MIL-DTL-24308 D-sub. <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>
+
+[^m12cyc]: Turck M12 cordset RK 4.5T-5 — mechanical life > 100 mating cycles. <https://www.turck.us/datasheet/_us/edb_U2188-94_eng_us.pdf>
+
+[^hancyc]: HARTING Han standard hoods/inserts are commonly rated ~500 cycles; the Han HMC (High Mating Cycle) series is rated far higher (up to ~10,000). <https://www.harting.com/>
+
+[^usbccyc]: USB Type-C Cable and Connector Specification (USB-IF) — 10,000-cycle durability minimum; manufacturer USB-C datasheets carry the same figure. <https://www.mouser.com/pdfDocs/USBCCADatasheet.pdf>

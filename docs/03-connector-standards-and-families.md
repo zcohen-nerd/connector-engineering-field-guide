@@ -49,10 +49,29 @@ Two specific clarifications worth internalizing:
 - **MIL-DTL-24308 D-subs in their standard form are non-environmental, polarized rack-and-panel connectors.**[^dsub] "Mil-spec" does not by itself mean "rugged outdoor / environmentally sealed" — read what the spec actually covers. Ruggedized/environmental D-sub variants exist and must be selected and verified intentionally. D-subs are perfectly appropriate for protected panels, racks, test gear, legacy interfaces, and internal equipment.
 - **Micro-D (MIL-DTL-83513)** is a fine-pitch (contacts on .050 in / 1.27 mm centers), high-density, lightweight, high-reliability family used where size and weight matter.[^microd] It carries lower current than larger connectors (≈ 3 A per contact) and has more assembly/tooling complexity. Exact contact arrangements vary by product — verify against the catalog. Treat it as an internal / protected high-reliability connector, not a high-current or dirty field-service connector.
 
+## 3.2 Sealed automotive connector families
+
+Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cost-effective, sealed, crimp-based ecosystem built for vehicles — often the right answer for makers and robotics teams going rugged on a budget. These are wire-to-wire / panel crimp systems; verify the exact series datasheet.
+
+| Family | Typical sealing | Typical current / contact | Notes |
+|---|---|---|---|
+| Deutsch DTM / DT / DTP | IP68[^deutsch] | ~7.5 A (DTM, size 20) / ~13 A (DT, size 16) / ~25 A (DTP, size 12)[^deutsch] | Genderless wedgelock housings; ubiquitous in off-road/automotive; hand-crimpable |
+| TE AMP Superseal 1.5 / AMPSEAL | IP67[^superseal] | ~14 A (Superseal 1.5)[^superseal] | Compact sealed inline; AMPSEAL for higher pin counts |
+| Molex MX150 / MX150L | ≥ IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
+| Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify) | Long-standing automotive terminal system |
+
+**Where they win:** IP67/IP68 sealing and vibration life far beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are the sweet spot for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required.
+
 ## Sources
 
 [^dsub]: MIL-DTL-24308G (DLA detail specification) — standard D-subminiature connectors are nonenvironmental, polarized-shell, rack-and-panel; ruggedized/environmental variants are separately specified. <https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7139/5831_mil-dtl-24308.pdf>
 
 [^microd]: Glenair, *Micro-D Performance Specifications* (MIL-DTL-83513) — contacts on .050 in (1.27 mm) centers, 3.0 A continuous per contact (−55 to +150 °C), 600 V rms at sea level. <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>
+
+[^deutsch]: TE Connectivity DEUTSCH DT / DTM / DTP series — sealed to IP68; continuous-current ratings ~7.5 A (DTM, size 20), ~13 A (DT, size 16), ~25 A (DTP, size 12). <https://www.te.com/en/products/connectors/automotive-connectors/intersection/deutsch-dtp-connectors.html>
+
+[^superseal]: TE Connectivity AMP SUPERSEAL 1.5 — sealed IP67 automotive/industrial connector; housings rated ~14 A. <https://www.te.com/en/products/connectors/automotive-connectors/intersection/amp-superseal-1-5.html>
+
+[^mx150]: Molex MX150 / MX150L sealed connector system — exceeds IEC IP67; MX150L supports up to ~40 A (8 AWG) and ~30 A (10–12 AWG). <https://www.mouser.com/pdfdocs/molexmx150sealedconnectorsystem.pdf>
 
 ---

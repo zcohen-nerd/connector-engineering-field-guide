@@ -26,7 +26,7 @@ If your search starts with a vague label like `JST connector` or `aviation plug`
 
 ## 12.1 "Dupont" connectors
 
-"Dupont" is the shop nickname for the 2.54 mm (0.1") pitch crimp-pin jumper connectors found on every breadboard and dev board. The name is historical and not a real product line; what people mean is a generic 0.1" pin-and-socket housing on individually crimped contacts. They exist because they mate with the universal 0.1" header — which is why they're everywhere in prototyping.
+"Dupont" is the shop nickname for the 2.54 mm (0.1") pitch crimp-pin jumper connectors found on every breadboard and dev board. The name is historical — the 0.1" crimp-jumper lineage traces back through Berg → DuPont → FCI → Amphenol, so it is no longer a distinct current product line, and not a specification you can order to; what people mean is a generic 0.1" pin-and-socket housing on individually crimped contacts. They exist because they mate with the universal 0.1" header — which is why they're everywhere in prototyping.
 
 | Property | Reality |
 |---|---|

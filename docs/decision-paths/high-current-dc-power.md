@@ -22,7 +22,7 @@ Motors, batteries, heaters, PDUs — connections where current, heat rise, and t
 
 ## Families to start with
 
-- **Anderson SB** for battery/robot power quick-disconnects.
+- **Anderson SB** for battery/robot power quick-disconnects — great current density, but unsealed, unshielded, and genderless; add a boot or choose a sealed family for external/environmental interfaces.
 - **Industrial rectangular / Han-style power** inserts.
 - **High-current circular** connectors.
 - **MIL-DTL-38999 size 12** *only where the derating supports the load*, or **size 8 / larger** and **dedicated power contacts** (e.g. HCP/RADSOK) for higher current.

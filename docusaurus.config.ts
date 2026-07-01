@@ -80,6 +80,7 @@ const config: Config = {
   // the @zcohen-nerd/brand theme provides @theme/Navbar and @theme/Footer
   // and is configured via customFields.brand above.
   themeConfig: {
+    image: 'img/og-card.png',
     colorMode: {
       respectPrefersColorScheme: true,
     },

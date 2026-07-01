@@ -34,19 +34,21 @@ This guide is educational and intended to teach engineering judgment. It is **no
 
 ## Start Here: Pick a Connector
 
-Use this table to get to a reasonable starting family before you disappear into catalogs and datasheets. If you are still trying to figure out how to search, start with [How to Search for Connectors](00-how-to-search-for-connectors.md).
+Use these cards to get to a reasonable starting family before you disappear into catalogs and datasheets. If you are still trying to figure out how to search, start with [How to Search for Connectors](00-how-to-search-for-connectors.md).
 
-| I need... | Start with... | Then check... |
-| --- | --- | --- |
-| A sealed industrial sensor cable | M8 or M12 A-coded | pinout, current, IP rating, torque, cable OD, vibration |
-| Rugged Ethernet outside an enclosure | M12 D-coded, M12 X-coded, or sealed/rugged RJ45 | data rate, shielding, cable category, sealing, latch protection |
-| Internal PCB power harness | Micro-Fit, Mini-Fit, Nano-Fit, TE/Harwin/JST family as appropriate | current, wire gauge, latch, TPA, tooling, vibration |
-| High-current DC power | Anderson SB, industrial rectangular power insert, high-current circular, 38999 power contacts where appropriate | derating, wire gauge, loaded contacts, heat rise, touch safety |
-| Defense/rugged external payload interface | MIL-DTL-38999, MIL-DTL-26482, or similar rugged circular | shell size, insert arrangement, contacts, backshell, keying, caps |
-| Compact high-reliability internal interface | Micro-D or other high-reliability compact connector | current, tooling, assembly process, service model |
-| Debug or service access | Protected USB-C, keyed shrouded header, Tag-Connect, Micro-D, D-sub, sealed service connector | access level, ESD, mating cycles, pin protection, documentation |
-| Removable machine module | Industrial rectangular / Han-style connector or 38999 hybrid | mixed power/signal/data, serviceability, keying, ground-first sequencing |
-| RF/GPS/radio path | SMA, TNC, N-Type, BNC, MCX, SMP/SMPM, or coax contacts in a hybrid connector | impedance, frequency, cable, torque, shielding |
+<div class="cn-card-grid">
+<div class="cn-card"><div class="cn-card-title">A sealed industrial sensor cable</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> M8 or M12 A-coded</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> pinout, current, IP rating, torque, cable OD, vibration</div></div>
+<div class="cn-card"><div class="cn-card-title">Rugged Ethernet outside an enclosure</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> M12 D-coded, M12 X-coded, or sealed/rugged RJ45</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> data rate, shielding, cable category, sealing, latch protection</div></div>
+<div class="cn-card"><div class="cn-card-title">Internal PCB power harness</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Micro-Fit, Mini-Fit, Nano-Fit, TE/Harwin/JST family as appropriate</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> current, wire gauge, latch, TPA, tooling, vibration</div></div>
+<div class="cn-card"><div class="cn-card-title">High-current DC power</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Anderson SB, industrial rectangular power insert, high-current circular, 38999 power contacts where appropriate</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> derating, wire gauge, loaded contacts, heat rise, touch safety</div></div>
+<div class="cn-card"><div class="cn-card-title">Defense/rugged external payload interface</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> MIL-DTL-38999, MIL-DTL-26482, or similar rugged circular</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> shell size, insert arrangement, contacts, backshell, keying, caps</div></div>
+<div class="cn-card"><div class="cn-card-title">Compact high-reliability internal interface</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Micro-D or other high-reliability compact connector</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> current, tooling, assembly process, service model</div></div>
+<div class="cn-card"><div class="cn-card-title">Debug or service access</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Protected USB-C, keyed shrouded header, Tag-Connect, Micro-D, D-sub, sealed service connector</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> access level, ESD, mating cycles, pin protection, documentation</div></div>
+<div class="cn-card"><div class="cn-card-title">Removable machine module</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Industrial rectangular / Han-style connector or 38999 hybrid</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> mixed power/signal/data, serviceability, keying, ground-first sequencing</div></div>
+<div class="cn-card"><div class="cn-card-title">RF/GPS/radio path</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> SMA, TNC, N-Type, BNC, MCX, SMP/SMPM, or coax contacts in a hybrid connector</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> impedance, frequency, cable, torque, shielding</div></div>
+</div>
+
+Want a step-by-step walkthrough for one of these? See the [Decision Paths](decision-paths/index.md).
 
 ## Who this is for
 
@@ -76,10 +78,13 @@ Use this table to get to a reasonable starting family before you disappear into 
 - [How to search for connectors](00-how-to-search-for-connectors.md)
 - [What connectors actually do](01-what-connectors-do.md)
 - [Connector selection workflow](04-connector-selection-workflow.md)
+- [Decision paths](decision-paths/index.md) — scenario-based starting points
 - [MIL-DTL-38999 deep dive](07-mil-dtl-38999.md)
 - [M12 deep dive](08-m12.md)
 - [Practical checklist](10-selection-checklist.md)
+- [What people forget](what-people-forget.md)
 - [Hands-on exercises](13-hands-on-exercises.md)
+- [Tools & templates](tools/index.md) and [worked examples](examples/index.md)
 
 ## Source discipline
 

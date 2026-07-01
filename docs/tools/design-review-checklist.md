@@ -1,6 +1,14 @@
+---
+id: design-review-checklist
+title: Design Review Checklist
+slug: /tools/design-review-checklist
+sidebar_label: Design Review Checklist
+sidebar_position: 5
+---
+
 # Design Review Checklist
 
-Based on Sections 10 and 11 of the guide.
+Based on [Sections 10](../10-selection-checklist.md) and [11](../11-red-flags.md) of the guide.
 
 ## Readiness checks
 

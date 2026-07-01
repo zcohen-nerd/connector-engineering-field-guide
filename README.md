@@ -14,9 +14,10 @@ When this guide conflicts with a datasheet, applicable standard, customer requir
 
 - `Source/connector-engineering-field-guide.md` is the current canonical guide source.
 - `Source/source-notes.md` is the source-verification backlog.
-- `docs/` contains the Docusaurus site content (one Markdown file per section).
-- `templates/` contains reusable engineering-document templates derived from the guide.
-- `examples/` contains placeholder working examples derived from the guide's exercises.
+- `docs/` contains the Docusaurus site content (one Markdown file per section), including:
+  - `docs/decision-paths/` — scenario-based connector-selection walkthroughs.
+  - `docs/tools/` — reusable engineering-document templates derived from the guide.
+  - `docs/examples/` — worked examples derived from the guide's exercises.
 
 ## What the guide helps with
 
@@ -48,7 +49,7 @@ See `CONTRIBUTING.md` for the full source-discipline rules.
 
 This repository uses two licenses:
 
-- **Documentation and content** (everything under `docs/`, `Source/`, `templates/`, `examples/`, and the guide text itself) is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. See [`LICENSE`](LICENSE).
+- **Documentation and content** (everything under `docs/` and `Source/`, including the templates and examples now under `docs/tools/` and `docs/examples/`, and the guide text itself) is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. See [`LICENSE`](LICENSE).
 - **Code and configuration** (the Docusaurus site code, build config, scripts, and similar non-content files) is licensed under the **MIT License**. See [`LICENSE-CODE`](LICENSE-CODE).
 
 When reusing material, give appropriate credit: *A zcohen-nerd technical guide by Zac Cohen.*

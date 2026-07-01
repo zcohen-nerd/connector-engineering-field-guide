@@ -7,7 +7,7 @@ sidebar_position: 2
 
 # Source Notes — Connector Engineering Field Guide
 
-This file tracks claims that should be verified against a primary source (a current manufacturer datasheet, the applicable standard, or a QPL listing) **before public/open-source release** or before any of these values is used in released hardware.
+This file tracks claims that should be verified against a primary source (a current manufacturer datasheet, the applicable standard, or a QPL listing) **before v1.0** — before relying on any of these values in released hardware. (The site is already public as a v0.1 review draft; these items gate the v1.0 "source verified" milestone, not initial publication.)
 
 Every item below also appears as a `<!-- TODO: source/verify -->` comment at the relevant location in the guide. Numbers in the guide are presented as *examples requiring verification*, not as universal ratings.
 
@@ -52,7 +52,7 @@ Every item below also appears as a `<!-- TODO: source/verify -->` comment at the
 - [ ] **IP67 ≈ 1 m / 30 min** — labeled "per standard test"; confirm exact test condition wording against IEC 60529.
 
 ### General
-- [ ] Any remaining current, voltage, mating-cycle, temperature, insulation-resistance, contact-resistance, wire-gauge, pitch, or contact-count number should be source-backed, labeled as an example, or replaced with cautious wording before release.
+- [ ] Any remaining current, voltage, mating-cycle, temperature, insulation-resistance, contact-resistance, wire-gauge, pitch, or contact-count number should be source-backed, labeled as an example, or replaced with cautious wording before v1.0.
 
 ## Intentional engineering heuristics (not hard facts)
 

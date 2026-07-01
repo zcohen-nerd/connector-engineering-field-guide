@@ -13,7 +13,7 @@ This guide is intended to be freely shareable as an educational field reference.
 - Do not copy proprietary catalog tables verbatim. Use public manufacturer datasheets and standards references for verification, and summarize in your own words.
 - Manufacturer names, standards, trademarks, and connector family names (Amphenol, Glenair, Souriau, ITT Cannon, TE, Molex, JST, Harting, Phoenix Contact, WAGO, Weidmüller, Anderson, Harwin, Omnetics, and others) remain the property of their respective owners and are used here only for identification and education.
 
-See [Source Notes](appendix/source-notes.md) for the list of claims that need source verification before public release.
+See [Source Notes](appendix/source-notes.md) for the list of claims that need source verification before v1.0 — before relying on these values in released hardware.
 
 ## License
 

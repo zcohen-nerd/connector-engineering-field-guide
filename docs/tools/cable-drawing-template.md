@@ -1,6 +1,14 @@
+---
+id: cable-drawing-template
+title: Cable Drawing Template
+slug: /tools/cable-drawing-template
+sidebar_label: Cable Drawing Template
+sidebar_position: 3
+---
+
 # Cable Drawing Template
 
-Based on Exercise 6.
+Based on [Exercise 6](../13-hands-on-exercises.md).
 
 ## Cable endpoints
 

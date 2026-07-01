@@ -33,4 +33,6 @@ sidebar_position: 11
 | No ground-first mating sequence where needed | Power-before-ground → latch-up, ground bounce, resets |
 | Substituting "equivalent" parts without qualification | Plating/insert/thread/geometry can differ; not drop-in |
 
+Many of these reduce to an item that fell off the BOM or the drawing — see [What People Forget](what-people-forget.md).
+
 ---

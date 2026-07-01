@@ -7,6 +7,8 @@ sidebar_position: 1
 
 # Appendix: Quick-Reference Tables
 
+These are deliberately kept as compact lookup tables — IP ratings (A1), 38999 contact sizes (A2), and a family-selection quick guide (A3). Use the contents panel to jump between them. Every value is an orientation aid to verify against the source, not a selection rule. For scenario-by-scenario reasoning, see the [Decision Paths](../decision-paths/index.md).
+
 ## A1. IP rating reference
 
 IP codes are commonly referenced from IEC 60529. The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529 — IEC 60529 expresses a close equivalent as IPx9. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system. <!-- TODO: source/verify IP rating definitions and IP69K / ISO 20653 distinction -->

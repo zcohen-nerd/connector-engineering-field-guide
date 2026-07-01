@@ -24,7 +24,7 @@ sidebar_position: 5
 | Backshell | Rear accessory: strain relief, shield termination, sealing, cable exit angle |
 | Strain relief | Transfers cable load to the connector body, not the contacts |
 | Sealing gland | Compresses around the cable jacket for environmental sealing |
-| Wire seal / grommet | Per-contact seal; *stops moisture tracking along the wire into the body* (see 5.5) |
+| Wire seal / grommet | Per-contact seal; *helps prevent moisture tracking along the wire into the body when correctly sized and assembled* (see 5.5) |
 | Keying / polarization | Prevents incorrect mating or rotational misalignment |
 | Shield termination | Bonds cable shield to shell/backshell, ideally 360° low-impedance |
 | Dust cap | Protects an unmated connector from dirt, water, and pin damage |
@@ -60,7 +60,7 @@ Pin/socket gender is *electrical*. Plug/receptacle is *mechanical*. Do not assum
 ## 5.3 Jam nut vs. flange mount
 
 - **Jam nut:** single hex nut clamps from behind the panel. Compact, simplest install, but can rotate under coupling torque unless an anti-rotation pin/keyway is present. Common for circular connectors.
-- **Flange mount:** bolts around the perimeter. Rigid, cannot rotate, excellent gasket sealing area, repeatable alignment (important for blind mate). Costs envelope.
+- **Flange mount:** bolts around the perimeter. Rigid, cannot rotate, excellent gasket sealing area, repeatable alignment (important for blind mate). Consumes more panel envelope.
 
 ## 5.4 Solder-cup quality — when it's right and how it fails
 

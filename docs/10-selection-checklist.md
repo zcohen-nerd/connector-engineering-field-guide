@@ -56,4 +56,6 @@ Use this at work. Adapt to your program; it is a working checklist, not a standa
 - [ ] Key position unique across differing pinouts
 - [ ] Rev-controlled BOM + labeling scheme
 
+Before sign-off, scan [What People Forget](what-people-forget.md) for the items most often left off.
+
 ---

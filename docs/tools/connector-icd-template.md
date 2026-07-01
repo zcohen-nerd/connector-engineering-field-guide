@@ -1,6 +1,14 @@
+---
+id: connector-icd-template
+title: Connector ICD Template
+slug: /tools/connector-icd-template
+sidebar_label: Connector ICD Template
+sidebar_position: 4
+---
+
 # Connector ICD Template
 
-Based on Exercise 7.
+Based on [Exercise 7](../13-hands-on-exercises.md).
 
 ## Interface identification
 

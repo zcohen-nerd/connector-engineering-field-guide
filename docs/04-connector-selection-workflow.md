@@ -61,4 +61,6 @@ It depends on contact size, number of loaded contacts, ambient temperature, wire
 
 This is where the technically perfect connector turns out to be dead on arrival. Ask: Who crimps it? What tool is required? Is the crimp tool calibrated? Are contacts removable? Insertion/extraction tools available? Spare contacts stocked? Mating caps stocked? QPL-qualified, COTS, or equivalent? Second source? Lead time vs. schedule? Strip length / crimp spec defined? Inspection / pull-test plan?
 
+The items that most often fall off the BOM or the drawing at this step are collected in [What People Forget](what-people-forget.md).
+
 ---

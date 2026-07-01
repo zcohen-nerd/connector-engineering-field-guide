@@ -11,6 +11,21 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Decision Paths',
+      link: {type: 'doc', id: 'decision-paths/decision-paths-index'},
+      collapsed: false,
+      items: [
+        'decision-paths/industrial-sensor',
+        'decision-paths/rugged-ethernet',
+        'decision-paths/internal-pcb-harnessing',
+        'decision-paths/high-current-dc-power',
+        'decision-paths/sealed-enclosure-feedthrough',
+        'decision-paths/debug-service-port',
+        'decision-paths/defense-rugged-external-io',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Guide',
       collapsed: false,
       items: [
@@ -29,6 +44,27 @@ const sidebars: SidebarsConfig = {
         '13-hands-on-exercises',
         '14-thirty-day-learning-plan',
       ],
+    },
+    'what-people-forget',
+    {
+      type: 'category',
+      label: 'Tools & Templates',
+      link: {type: 'doc', id: 'tools/tools-index'},
+      collapsed: true,
+      items: [
+        'tools/connector-selection-checklist',
+        'tools/connector-comparison-matrix',
+        'tools/cable-drawing-template',
+        'tools/connector-icd-template',
+        'tools/design-review-checklist',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Examples',
+      link: {type: 'doc', id: 'examples/examples-index'},
+      collapsed: true,
+      items: ['examples/rugged-control-box'],
     },
     {
       type: 'category',

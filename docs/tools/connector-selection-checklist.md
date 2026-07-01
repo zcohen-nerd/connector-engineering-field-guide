@@ -1,6 +1,14 @@
+---
+id: connector-selection-checklist
+title: Connector Selection Checklist
+slug: /tools/connector-selection-checklist
+sidebar_label: Selection Checklist
+sidebar_position: 1
+---
+
 # Connector Selection Checklist
 
-Based on Section 10 of the guide.
+Based on [Section 10 — Practical Selection Checklist](../10-selection-checklist.md).
 
 ## Interface definition
 

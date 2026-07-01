@@ -1,6 +1,14 @@
+---
+id: connector-comparison-matrix
+title: Connector Comparison Matrix
+slug: /tools/connector-comparison-matrix
+sidebar_label: Comparison Matrix
+sidebar_position: 2
+---
+
 # Connector Comparison Matrix
 
-Based on Exercise 2.
+Based on [Exercise 2](../13-hands-on-exercises.md).
 
 | Family | Environment | Pin count | Current | Sealing | Tooling | Cost | Lead time | Serviceability | Common mistakes | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

@@ -35,3 +35,45 @@ Based on [Exercise 6](../13-hands-on-exercises.md).
 - Pinout verification:
 - Shield / drain verification:
 - Additional test requirements:
+
+---
+
+## Worked example — M12 A-coded sensor cable
+
+A double-ended M12 A-coded sensor cordset. Family-level electrical, coding, and sealing values are sourced below; project- and vendor-specific fields (exact part number, length, cable OD) are marked *illustrative* — fill them from the parts you actually buy. See the matching [ICD worked example](connector-icd-template.md).
+
+### Cable endpoints
+
+- Connector A: M12 A-coded, 4-pin, **female** (socket), straight — to the sensor's device port
+- Connector B: M12 A-coded, 4-pin, **male** (pin), straight — to the panel receptacle
+
+### Conductor schedule
+
+| Wire | Color | Gauge | Twisted pair | Shield / drain | End A pin | End B pin | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | Brown (BN) | 22 AWG (0.34 mm²) | — | — | 1 | 1 | L+ (24 VDC nominal) |
+| 2 | White (WH) | 22 AWG (0.34 mm²) | — | — | 2 | 2 | Signal — per device datasheet |
+| 3 | Blue (BU) | 22 AWG (0.34 mm²) | — | — | 3 | 3 | L− (0 V) |
+| 4 | Black (BK) | 22 AWG (0.34 mm²) | — | — | 4 | 4 | Signal — per device datasheet |
+
+Wire colours follow the common A-coded 4-pin convention; confirm pin functions against the device datasheet and the cordset drawing.
+
+### Cable construction
+
+- Cable jacket: PUR, Ø ≈ 5–6 mm *(illustrative — must fall inside the gland/clamp range for a field-wireable connector)*
+- Labels: both ends, per drawing
+- Length tolerance: ±25 mm *(illustrative)*
+- Notes: A-coded is rated ≤ 4 A per contact and ≤ 250 V (IEC 61076-2-101);[^iec101] IP67 applies only when mated and correctly torqued[^m12seal]
+
+### Test requirements
+
+- Continuity: pin 1→1, 2→2, 3→3, 4→4
+- Pinout verification: against the schedule above
+- Shield / drain verification: n/a (unshielded); add if a shielded variant is used
+- Additional: insulation resistance; coupling-torque check[^m12seal]
+
+## Sources
+
+[^iec101]: IEC 61076-2-101 (M12 circular connectors with screw-locking, A/B/D coding) — 2- to 17-way; up to 250 V and up to 4 A per contact; data ≤ 100 MHz. <https://standards.globalspec.com/std/1519301/iec-61076-2-101>
+
+[^m12seal]: An M12 IP rating applies to the complete, correctly-mated and -torqued assembly (both ends), not the unmated connector. A common coupling torque is ~0.4–0.6 N·m, but treat that as an example only and use the manufacturer's specified value. See the [M12 Deep Dive §8.3](../08-m12.md).

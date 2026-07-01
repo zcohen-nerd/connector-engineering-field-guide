@@ -41,7 +41,7 @@ const config: Config = {
       projectName: 'Connector Engineering Field Guide',
       projectFamily: 'technical-guide',
       projectBadge: 'A zcohen-nerd technical guide',
-      hubUrl: 'https://zcohen-nerd.github.io/',
+      hubUrl: 'https://zcohen-nerd.github.io/Portfolio/',
       projectUrl: 'https://zcohen-nerd.github.io/connector-engineering-field-guide/',
       repoUrl: 'https://github.com/zcohen-nerd/connector-engineering-field-guide',
       attribution: 'A zcohen-nerd technical guide by Zac Cohen.',
@@ -54,7 +54,7 @@ const config: Config = {
         },
         {
           label: 'zcohen-nerd',
-          href: 'https://zcohen-nerd.github.io/',
+          href: 'https://zcohen-nerd.github.io/Portfolio/',
         },
       ],
     },

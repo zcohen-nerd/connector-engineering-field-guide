@@ -36,20 +36,20 @@ Every item below also appears as a `<!-- TODO: source/verify -->` comment at the
 ### M12 (IEC 61076-2-x)
 - [x] **Standards mapping** — **confirmed** via IEC listings: 61076-2-101 (A/B/D signal/data), 61076-2-109 (X- and H-coding, data ≤ 500 MHz), 61076-2-111 (power, codings E/F/K/L/M/S/T). Cited on the M12 deep dive; no IEC table text reproduced. (Issue #11)
 - [x] **A-coded "~4 A class"** — **confirmed**: IEC 61076-2-101 specifies up to 4 A per contact for M12 screw-locking signal/power connectors. Kept the caveat that exact current is connector/cable/temperature dependent. (Issue #12)
-- [ ] **D-coded vs X-coded Ethernet guidance** — confirm D-coded = 10/100BASE-TX, X-coded = GbE/10G-class against standards/manufacturer literature. D-coded is not obsolete; X-coded is not a blanket default.
-- [ ] **Common coupling torque (~0.4–0.6 N·m)** — labeled as an example; confirm against the specific connector's datasheet.
+- [x] **D-coded vs X-coded Ethernet guidance** — **confirmed**: X-coded per IEC 61076-2-109 (Cat 6A, up to 10 Gbit/s); D-coding is the 4-pin coding in IEC 61076-2-101 used for 10/100BASE-TX. D-coded is not obsolete; X-coded is not a blanket default. Cited on the M12 deep dive. (Issue #13)
+- [x] **Common coupling torque** — **confirmed/corrected**: Turck's M12 cordset datasheet (RK 4.5T-5, per IEC 61076-2-101) specifies **0.8–1.0 N·m**, higher than the guide's former "0.4–0.6 N·m." Reworded to say coupling torque is manufacturer-specific and varies, with Turck as the sourced example; the cable-drawing/ICD worked-example torque notes were updated to match. (Issue #14)
 
 ### JST
-- [ ] **Family pitch/current statements** (XH 2.5 mm, PH 2.0 mm, GH 1.25 mm, SH 1.0 mm, VH 3.96 mm, EH/ZH; VH "higher-current in some configurations") — confirm against JST datasheets for each series. "JST" alone is not a specification.
+- [x] **Family pitch/current statements** — **confirmed** against JST datasheets: XH = 2.5 mm / 3 A, VH = 3.96 mm / up to 10 A (AWG #16); other series per JST's published pitches (PH 2.0, GH 1.25, SH 1.0, EH 2.5, ZH 1.5 mm). Added the sourced VH current; kept the "JST alone is not a specification" framing. (Issue #15)
 
 ### Consumer I/O
-- [ ] **USB-C mating-cycle expectation** — if an exact cycle count (e.g. 10,000) is ever added, attach a source. Current guide states "high mating-cycle expectations" without a number and warns cycle life ≠ ruggedness.
+- [x] **USB-C mating-cycle expectation** — **confirmed**: the USB Type-C specification specifies 10,000-cycle durability (vs ~1,500 for USB Type-A). Added the sourced number, with the "cycle life ≠ ruggedness" warning preserved. (Issue #16)
 - [ ] **HDMI** — no cycle rating quoted; keep it that way unless sourced.
 
 ### IP ratings (IEC 60529 / ISO 20653)
-- [ ] **IP definitions table** (IP54/65/67/68/69K) — confirm wording against IEC 60529; do not reproduce the standard's table.
-- [ ] **IP69K → ISO 20653 (DIN 40050-9 lineage) distinction** — confirm the "K" suffix origin and the IPx9 relationship; keep IP69K out of "IEC 60529" attribution.
-- [ ] **IP67 ≈ 1 m / 30 min** — labeled "per standard test"; confirm exact test condition wording against IEC 60529.
+- [x] **IP definitions table** (IP54/65/67/68/69K) — **confirmed** against IEC 60529 (and ISO 20653 for IP69K); wording only, no standard table reproduced. (Issue #17)
+- [x] **IP69K → ISO 20653 (DIN 40050-9 lineage) distinction** — **confirmed**: IP69K originates from ISO 20653 (formerly DIN 40050-9); the "K" is not part of IEC 60529, which added the close IPx9 equivalent in its 2013 edition. (Issue #17)
+- [x] **IP67 ≈ 1 m / 30 min** — **confirmed** against IEC 60529 (second characteristic numeral 7 = temporary immersion, tested at 1 m depth for 30 min). (Issue #17)
 
 ### General
 - [ ] Any remaining current, voltage, mating-cycle, temperature, insulation-resistance, contact-resistance, wire-gauge, pitch, or contact-count number should be source-backed, labeled as an example, or replaced with cautious wording before v1.0.

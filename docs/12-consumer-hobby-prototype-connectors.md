@@ -42,14 +42,12 @@ If your search starts with a vague label like `JST connector` or `aviation plug`
 
 | Series | Pitch | Typical use | Notes for professional work |
 |---|---|---|---|
-| XH | 2.5 mm | Hobby battery balance leads, dev boards | Low-cost internal board-to-wire; friction lock (no positive latch). Common but not good for vibration or external service without an additional retention/environmental strategy. |
+| XH | 2.5 mm[^jst] | Hobby battery balance leads, dev boards | Low-cost internal board-to-wire; friction lock (no positive latch). Common but not good for vibration or external service without an additional retention/environmental strategy. |
 | PH | 2.0 mm | Small Li-ion packs, internal signal | Compact internal wire-to-board; useful but not rugged. Acceptable for low-stress internal wiring; not a sealed/rugged external connector. |
 | GH | 1.25 mm | Compact internal signal, sensors | Compact internal wire-to-board with a secure locking feature; useful where small size and retention matter. Not sealed/rugged external by default. |
 | SH | 1.0 mm | Very small board-to-wire (e.g. Qwiic-style) | Tiny, fragile, signal-only. Friction lock. Easy to damage during rework. |
-| VH | 3.96 mm | Internal power / power-supply wiring | Higher-current JST family than smaller series in some configurations; exact current depends on contact/wire/configuration and must be verified. Still internal/protected use unless the full assembly is designed for environment/vibration. |
+| VH | 3.96 mm[^jst] | Internal power / power-supply wiring | Higher-current JST family than the smaller series — rated up to ~10 A with AWG #16 per JST; exact current depends on contact/wire/configuration and must be verified. Still internal/protected use unless the full assembly is designed for environment/vibration. |
 | EH / ZH | 2.5 / 1.5 mm | General signal | Mid-tier signal series; check the datasheet for lock style and current. |
-
-<!-- TODO: source/verify JST family pitch and current statements -->
 
 **The professional read:** "JST" alone is not a connector specification, and it is not automatically hobby-grade — JST also makes genuinely rugged, sealed, locking automotive/industrial series. The dividing line is the specific series and whether it has a positive lock, keying, a verified crimp, and the current/seal rating your application needs.
 
@@ -72,7 +70,7 @@ Rule of thumb for the bench-to-product transition: when a connector leaves the l
 
 USB-C, HDMI, and similar consumer I/O connectors can be excellent in consumer electronics, lab equipment, internal service ports, and protected user interfaces. What they are not is automatically rugged, sealed, vibration-resistant, EMI-controlled at the enclosure boundary, or appropriate as exposed field connectors.
 
-USB-C has high mating-cycle expectations compared with many internal connectors, but mating-cycle life is not the same as environmental sealing, vibration survival, ESD strategy, strain relief, EMI control, or suitability as an exposed rugged service port. <!-- TODO: source/verify USB-C mating-cycle expectation if an exact number is later added --> HDMI is common and convenient but is usually a poor exposed-service connector in harsh electromechanical systems unless protected or ruggedized.
+USB-C has a high mating-cycle expectation — the USB Type-C specification calls for 10,000-cycle durability, versus roughly 1,500 for USB Type-A[^usbc] — but mating-cycle life is not the same as environmental sealing, vibration survival, ESD strategy, strain relief, EMI control, or suitability as an exposed rugged service port. HDMI is common and convenient but is usually a poor exposed-service connector in harsh electromechanical systems unless protected or ruggedized.
 
 If you need consumer I/O on rugged equipment, place it behind a sealed cover, use an internal service hatch, choose a ruggedized variant, or replace it with a more appropriate sealed connector such as M12 Ethernet, sealed USB, or a qualified circular service connector.
 
@@ -93,5 +91,11 @@ For industrial/rugged Ethernet, the common options are:
 - **Sealed/rugged RJ45** — may be appropriate where compatibility with standard patch cables matters.
 
 Whichever you choose, check shielding continuity, strain relief, latch protection, bend radius, mating cycles, and environmental rating. Avoid exposing a normal plastic 8P8C latch where it can snag, break, fill with dirt, or lose retention.
+
+## Sources
+
+[^jst]: JST product datasheets (jst-mfg.com). Verified directly from JST datasheets: **XH** = 2.5 mm pitch, 3 A, 250 V; **VH** = 3.96 mm pitch, up to 10 A (AWG #16), 250 V. Other series follow JST's published pitches — PH 2.0 mm, GH 1.25 mm, SH 1.0 mm, EH 2.5 mm, ZH 1.5 mm. Exact current depends on the contact, wire gauge, and configuration; "JST" alone is not a specification. XH: <https://www.jst-mfg.com/product/pdf/eng/eXH.pdf> — VH: <https://www.jst-mfg.com/product/pdf/eng/eVH.pdf>
+
+[^usbc]: The USB Type-C Cable and Connector Specification (USB-IF) specifies connector durability of 10,000 mating cycles (minimum), versus roughly 1,500 for USB Type-A/B. Manufacturer USB-C datasheets carry the same 10,000-cycle figure. Durability is a mating-cycle figure only — not a measure of sealing, vibration, or ruggedness. <https://www.mouser.com/pdfDocs/USBCCADatasheet.pdf>
 
 ---

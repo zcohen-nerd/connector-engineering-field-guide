@@ -11,7 +11,7 @@ These are deliberately kept as compact lookup tables — IP ratings (A1), 38999 
 
 ## A1. IP rating reference
 
-IP codes are commonly referenced from IEC 60529. The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529 — IEC 60529 expresses a close equivalent as IPx9. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system. <!-- TODO: source/verify IP rating definitions and IP69K / ISO 20653 distinction -->
+IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529[^iso20653] — IEC 60529 added a close equivalent, IPx9, in its 2013 edition. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system.
 
 | IP | Solid ingress | Liquid ingress | Typical application |
 |---|---|---|---|
@@ -61,3 +61,7 @@ When this guide conflicts with a manufacturer datasheet, applicable standard, cu
 [^glenaircontacts]: Glenair, *MIL-DTL-38999 Contact Performance Specifications* — Class H/N/Y contact-resistance **test currents**: size 12 → 17 A, 16 → 10 A, 20 → 5 A, 22D → 3 A (per MIL-C-39029 / AS39029). Test currents, not guaranteed continuous ratings. <https://www.glenair.com/mil-dtl-38999/pdf/contact-performance-spec.pdf>
 
 [^radsok]: Amphenol Aerospace, *High-Power 38999 / RADSOK* — RADSOK high-current contacts are rated roughly 70–250 A per contact (≈240–1000 A per connector) and are used to add dedicated power paths on the MIL-DTL-38999 platform. Contact size alone does not set safe current; use the manufacturer derating data, and do not parallel contacts unless the manufacturer/application supports it and the design is reviewed. <https://www.amphenol-aerospace.com/products/high-power-38999>
+
+[^iec60529]: IEC 60529, *Degrees of protection provided by enclosures (IP Code)* — the international IP-rating standard: second numeral 7 = temporary immersion (tested at 1 m for 30 min), 8 = continuous immersion to a manufacturer-stated depth/duration. An IPx9 close-range high-pressure/high-temperature water-jet test was added in the 2013 edition. <https://webstore.iec.ch/publication/2452>
+
+[^iso20653]: ISO 20653:2013, *Road vehicles — Degrees of protection (IP code)* (formerly DIN 40050-9) — origin of the IP69K high-pressure/high-temperature washdown rating; the "K" designation comes from this standard, not IEC 60529. <https://www.iso.org/standard/58048.html>

@@ -20,22 +20,22 @@ Every item below also appears as a `<!-- TODO: source/verify -->` comment at the
 ## Claims to verify
 
 ### MIL-DTL-38999
-- [ ] **Part-number decoder example (`D38999/26WE26PN`)** — confirm each field (`/26` straight plug, `W` finish class, `E` → shell size 17, `26` arrangement, `P` pin, `N` normal) against a specific manufacturer's published decoder (e.g. Amphenol Aerospace). Note explicitly that schemas differ between Amphenol / Glenair / Souriau / ITT Cannon / TE / Eaton.
-- [ ] **Series I/II/III/IV coupling descriptions** (bayonet / low-profile bayonet / Tri-Start triple-start thread / breech-lock) — confirm against the MIL-DTL-38999 spec and manufacturer literature.
-- [ ] **Shell sizes, approximate OD, and "typical contact range"** in Section 7.3 — approximate OD figures and contact-range orientation values need a manufacturer source; they are labeled as orientation aids, not selection rules.
-- [ ] **Contact-size / current example table** (Sections 7.5 and A2: 22D≈3 A, 20≈5 A, 16≈10 A, 12≈17 A) — these are example *test* currents from a manufacturer contact-performance spec, not continuous ratings. Confirm against the specific AS39029 contact datasheet for the contact P/N actually used.
-- [ ] **Keying positions (N, A, B, C, D, E)** — confirm against the manufacturer catalog for the specific connector.
-- [ ] **High-current guidance** (size 12 only where derating supports the load; size 8/larger or HCP/RADSOK for higher current) — confirm contact current curves and the no-paralleling-without-review caution against the manufacturer derating data.
+- [x] **Part-number decoder example (`D38999/26WE26PN`)** — **confirmed** against Amphenol's Series III "How to order" (catalog AC38907): `/26` = straight plug, `W` = olive-drab cadmium-plated aluminum, `E` = shell size 17, `P` = pin, `N` = normal; arrangement `17-26` exists. Retained the caveat that schemas differ between manufacturers. (Issue #3)
+- [x] **Series I/II/III/IV coupling descriptions** — Series III **confirmed** against the Amphenol Tri-Start Series III catalog (threaded Tri-Start / Acme, scoop-proof, self-locking / anti-decoupling). Series I/II (bayonet / low-profile bayonet) and IV (breech-lock) retained as the standard MIL-DTL-38999 definitions; Series III language kept conditional. (Issue #4)
+- [x] **Shell sizes, approximate OD, and "typical contact range"** in Section 7.3 — **confirmed/adjusted** against the Amphenol Series III dimensional tables: straight-plug coupling-nut OD runs ~22 mm (size 9) to ~48 mm (size 25) and is shell-style-dependent. Values kept as orientation aids; added a note that OD depends on shell style and the drawing controls. (Issue #5)
+- [x] **Contact-size / current example table** (Sections 7.5 and A2: 22D≈3 A, 20≈5 A, 16≈10 A, 12≈17 A) — **confirmed** against the Glenair *MIL-DTL-38999 Contact Performance Specifications* (Class H/N/Y test currents 22D=3 A, 20=5 A, 16=10 A, 12=17 A; also matches Amphenol's contact-rating table). Kept the "test current, not continuous rating" caveat. (Issue #6)
+- [x] **Keying positions (N, A, B, C, D, E)** — **confirmed** against the Amphenol Series III catalog: "Master Key/Keyway Position" table (p. 7) lists positions N, A, B, C, D, E, and the ordering page states "Use N for normal" (p. 31). (Issue #7)
+- [x] **High-current guidance** (size 12 only where derating supports the load; size 8/larger or HCP/RADSOK for higher current) — **confirmed** that Amphenol's High-Power 38999 / RADSOK contacts (~70–250 A per contact) provide dedicated high-current paths, and size 8/10-power contacts appear in the standard arrangement chart. The derating-aware and no-paralleling-without-review cautions are kept as engineering heuristics, not fixed ratings. (Issue #8)
 
 ### MIL-DTL-24308 (D-sub)
-- [ ] **"Standard D-sub is non-environmental"** statement — confirm against MIL-DTL-24308 scope. Note that ruggedized/environmental variants exist.
+- [x] **"Standard D-sub is non-environmental"** statement — **confirmed** against MIL-DTL-24308G (DLA): standard D-subs are nonenvironmental, polarized-shell, rack-and-panel; ruggedized/environmental variants are separately specified. (Issue #9)
 
 ### MIL-DTL-83513 (Micro-D)
-- [ ] **Pitch and contact-arrangement statements** — confirm fine-pitch and arrangement ranges against the spec / manufacturer catalog before stating any specific numbers. Current guide avoids exact contact counts pending verification.
+- [x] **Pitch and contact-arrangement statements** — **confirmed** against Glenair's MIL-DTL-83513 performance spec: contacts on .050 in (1.27 mm) centers, 3.0 A per contact. Pitch/current now stated with a source; exact contact arrangements still left to the catalog. (Issue #10)
 
 ### M12 (IEC 61076-2-x)
-- [ ] **Standards mapping** — confirm IEC 61076-2-101 (A/B/D), 61076-2-109 (X-coded), 61076-2-111 (S/T/K/L power) reference numbers and current editions. Do not reproduce IEC tables.
-- [ ] **A-coded "~4 A class"** — confirm the typical A-coded current class against catalog/standard scope; emphasize it is connector/cable/temperature dependent.
+- [x] **Standards mapping** — **confirmed** via IEC listings: 61076-2-101 (A/B/D signal/data), 61076-2-109 (X- and H-coding, data ≤ 500 MHz), 61076-2-111 (power, codings E/F/K/L/M/S/T). Cited on the M12 deep dive; no IEC table text reproduced. (Issue #11)
+- [x] **A-coded "~4 A class"** — **confirmed**: IEC 61076-2-101 specifies up to 4 A per contact for M12 screw-locking signal/power connectors. Kept the caveat that exact current is connector/cable/temperature dependent. (Issue #12)
 - [ ] **D-coded vs X-coded Ethernet guidance** — confirm D-coded = 10/100BASE-TX, X-coded = GbE/10G-class against standards/manufacturer literature. D-coded is not obsolete; X-coded is not a blanket default.
 - [ ] **Common coupling torque (~0.4–0.6 N·m)** — labeled as an example; confirm against the specific connector's datasheet.
 

@@ -10,7 +10,7 @@ sidebar_position: 3
 
 :::note
 
-Always verify against the *current* version of the applicable standard and the manufacturer's datasheet. Standards get revised; part-number schemas vary between manufacturers. What follows is a framework for thinking, not a substitute for the source document — when this guide and a manufacturer datasheet or standard disagree, the datasheet/standard wins. MIL-DTL-38999 covers miniature high-density environmental circular connectors with removable crimp or hermetic solder contacts; M12 connectors are covered by the IEC 61076-2-x family (e.g. 61076-2-101 for A/B/D codings, 61076-2-109 for X-coded, 61076-2-111 for power codings). <!-- TODO: source/verify exact IEC references and MIL-DTL scopes -->
+Always verify against the *current* version of the applicable standard and the manufacturer's datasheet. Standards get revised; part-number schemas vary between manufacturers. What follows is a framework for thinking, not a substitute for the source document — when this guide and a manufacturer datasheet or standard disagree, the datasheet/standard wins. MIL-DTL-38999 covers miniature high-density environmental circular connectors with removable crimp or hermetic solder contacts; M12 connectors are covered by the IEC 61076-2-x family (e.g. 61076-2-101 for A/B/D codings, 61076-2-109 for X-coded, 61076-2-111 for power codings — sourced on the [M12 deep dive](08-m12.md)); the MIL-DTL-38999 scope and part-number structure are sourced on the [MIL-DTL-38999 deep dive](07-mil-dtl-38999.md).
 
 :::
 
@@ -46,7 +46,13 @@ Always verify against the *current* version of the applicable standard and the m
 
 Two specific clarifications worth internalizing:
 
-- **MIL-DTL-24308 D-subs in their standard form are non-environmental, polarized rack-and-panel connectors.** "Mil-spec" does not by itself mean "rugged outdoor / environmentally sealed" — read what the spec actually covers. Ruggedized/environmental D-sub variants exist and must be selected and verified intentionally. D-subs are perfectly appropriate for protected panels, racks, test gear, legacy interfaces, and internal equipment. <!-- TODO: source/verify MIL-DTL-24308 non-environmental statement -->
-- **Micro-D (MIL-DTL-83513)** is a fine-pitch, high-density, lightweight, high-reliability family used where size and weight matter. It carries lower current than larger connectors and has more assembly/tooling complexity. Exact pitch and contact arrangements vary by product — verify against the catalog. <!-- TODO: source/verify Micro-D pitch and contact arrangement statements --> Treat it as an internal / protected high-reliability connector, not a high-current or dirty field-service connector.
+- **MIL-DTL-24308 D-subs in their standard form are non-environmental, polarized rack-and-panel connectors.**[^dsub] "Mil-spec" does not by itself mean "rugged outdoor / environmentally sealed" — read what the spec actually covers. Ruggedized/environmental D-sub variants exist and must be selected and verified intentionally. D-subs are perfectly appropriate for protected panels, racks, test gear, legacy interfaces, and internal equipment.
+- **Micro-D (MIL-DTL-83513)** is a fine-pitch (contacts on .050 in / 1.27 mm centers), high-density, lightweight, high-reliability family used where size and weight matter.[^microd] It carries lower current than larger connectors (≈ 3 A per contact) and has more assembly/tooling complexity. Exact contact arrangements vary by product — verify against the catalog. Treat it as an internal / protected high-reliability connector, not a high-current or dirty field-service connector.
+
+## Sources
+
+[^dsub]: MIL-DTL-24308G (DLA detail specification) — standard D-subminiature connectors are nonenvironmental, polarized-shell, rack-and-panel; ruggedized/environmental variants are separately specified. <https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7139/5831_mil-dtl-24308.pdf>
+
+[^microd]: Glenair, *Micro-D Performance Specifications* (MIL-DTL-83513) — contacts on .050 in (1.27 mm) centers, 3.0 A continuous per contact (−55 to +150 °C), 600 V rms at sea level. <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>
 
 ---

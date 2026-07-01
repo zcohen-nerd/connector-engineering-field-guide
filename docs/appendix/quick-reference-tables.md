@@ -31,7 +31,7 @@ IP codes are commonly referenced from IEC 60529. The high-pressure washdown rati
 | 12 | 12 | 17 A | Higher-current power |
 | 8 / larger | per catalog | power contacts | High current; coax/twinax in size 8 |
 
-*Test currents from a manufacturer contact-performance spec; not a universal continuous rating. Size against the actual contact datasheet and derating curve.* <!-- TODO: source/verify 38999 contact-size current example table -->
+*Test currents from a manufacturer contact-performance spec; not a universal continuous rating. Size against the actual contact datasheet and derating curve.*[^glenaircontacts]
 
 ## A3. Family selection quick guide
 
@@ -42,7 +42,7 @@ IP codes are commonly referenced from IEC 60529. The high-pressure washdown rati
 | Industrial Ethernet (GbE) | M12 X-coded | M12 D-coded, exposed RJ45 |
 | Machine umbilical (power+signal+data) | Industrial rectangular / Han-Modular | Many individual small connectors |
 | Serial/debug, benign environment | Micro-D, MIL-grade D-sub, keyed header | Bare headers, exposed USB |
-| High-current robot power (>20 A) | Anderson SB, Han-style power insert, 38999 size 8/larger or dedicated power contacts (HCP/RADSOK); size 12 only where derating supports it | M12 A-coded, XT60/90, 38999 size 16 for the full load |
+| High-current robot power (>20 A) | Anderson SB, Han-style power insert, 38999 size 8/larger or dedicated power contacts (HCP/RADSOK[^radsok]); size 12 only where derating supports it | M12 A-coded, XT60/90, 38999 size 16 for the full load |
 | Internal protected PCB harness | Molex Micro-Fit, TE, Harwin | Bare wire, 0.1" headers, screw terminals on PCB |
 | Fast quick-disconnect, moderate vibration | MIL-DTL-26482 bayonet (verify qualification for the vibration profile) | 38999 threaded (slower to mate) |
 | RF/antenna/GPS line | SMA/TNC/N-Type (impedance-matched) | Random circular signal contacts |
@@ -55,3 +55,9 @@ IP codes are commonly referenced from IEC 60529. The high-pressure washdown rati
 Every connector decision ripples outward — into the cable drawing, the ICD, the tooling budget, the assembly procedure, the maintenance manual, and the failure log. Engineers who treat connectors as commodities buy them on pin count and regret it. Engineers who treat them as system interfaces design reliable, serviceable, manufacturable hardware.
 
 When this guide conflicts with a manufacturer datasheet, applicable standard, customer requirement, or qualified program requirement, the datasheet / standard / customer requirement wins. This document is a framework for thinking, not a source of record.
+
+## Sources
+
+[^glenaircontacts]: Glenair, *MIL-DTL-38999 Contact Performance Specifications* — Class H/N/Y contact-resistance **test currents**: size 12 → 17 A, 16 → 10 A, 20 → 5 A, 22D → 3 A (per MIL-C-39029 / AS39029). Test currents, not guaranteed continuous ratings. <https://www.glenair.com/mil-dtl-38999/pdf/contact-performance-spec.pdf>
+
+[^radsok]: Amphenol Aerospace, *High-Power 38999 / RADSOK* — RADSOK high-current contacts are rated roughly 70–250 A per contact (≈240–1000 A per connector) and are used to add dedicated power paths on the MIL-DTL-38999 platform. Contact size alone does not set safe current; use the manufacturer derating data, and do not parallel contacts unless the manufacturer/application supports it and the design is reviewed. <https://www.amphenol-aerospace.com/products/high-power-38999>

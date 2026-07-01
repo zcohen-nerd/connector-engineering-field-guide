@@ -1,6 +1,7 @@
 ---
 id: decision-paths-index
 title: "Decision Paths"
+description: "Scenario-based decision paths that take a real interface problem and route you to a sane connector family to investigate first."
 slug: /decision-paths
 sidebar_label: Overview
 sidebar_position: 0

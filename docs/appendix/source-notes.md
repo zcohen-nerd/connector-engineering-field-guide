@@ -1,5 +1,6 @@
 ﻿---
 title: Source Notes
+description: "Source-verification notes and citations behind the guide's technical claims — the standards and datasheets each rests on."
 slug: /appendix/source-notes
 sidebar_label: Source Notes
 sidebar_position: 2

@@ -1,6 +1,7 @@
 ﻿---
 id: 05-connector-anatomy
 title: "5. Connector Anatomy"
+description: "The physical parts of a connector — shell, insert, contacts, backshell, seals, strain relief — and what each one actually does in a rugged interface."
 slug: /05-connector-anatomy
 sidebar_label: Connector Anatomy
 sidebar_position: 5

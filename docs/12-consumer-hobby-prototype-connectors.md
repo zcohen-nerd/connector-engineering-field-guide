@@ -1,6 +1,7 @@
 ﻿---
 id: 12-consumer-hobby-prototype-connectors
 title: "12. Consumer, Hobby, and Prototype Connectors vs. Production/Rugged Use"
+description: "When hobby and prototype connectors (Dupont, JST-XH, screw terminals) are acceptable, and when they fail in production or rugged service."
 slug: /12-consumer-hobby-prototype-connectors
 sidebar_label: Consumer/Hobby/Prototype Connectors
 sidebar_position: 12

@@ -50,7 +50,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Tools & Templates',
       link: {type: 'doc', id: 'tools/tools-index'},
-      collapsed: true,
+      collapsed: false,
       items: [
         'tools/connector-selection-checklist',
         'tools/connector-comparison-matrix',
@@ -63,7 +63,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Examples',
       link: {type: 'doc', id: 'examples/examples-index'},
-      collapsed: true,
+      collapsed: false,
       items: ['examples/rugged-control-box'],
     },
     {

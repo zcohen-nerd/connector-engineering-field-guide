@@ -1,0 +1,73 @@
+<svg viewBox="0 0 760 320" width="760" height="320" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Schematic M12 coding face views: A / B / D / X. Issue #44. -->
+  <rect x="0.5" y="0.5" width="759" height="319" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">M12 codings — schematic face views (codings cannot cross-mate)</text>
+
+  <!-- ============ A-coded (cx=110) ============ -->
+  <g transform="translate(110,140)">
+    <circle r="62" fill="#f4f7fb" stroke="#102040" stroke-width="2"/>
+    <circle r="44" fill="#ffffff" stroke="#9db0c7" stroke-width="1.5"/>
+    <rect x="-7" y="-52" width="14" height="12" fill="#f4f7fb" stroke="#102040" stroke-width="1.5"/>
+    <circle cy="-22" r="5" fill="#102040"/>
+    <circle cx="22" r="5" fill="#102040"/>
+    <circle cy="22" r="5" fill="#102040"/>
+    <circle cx="-22" r="5" fill="#102040"/>
+  </g>
+  <text x="110" y="242" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b7e96">A</text>
+  <text x="110" y="262" text-anchor="middle" font-size="13" fill="#3b4453">sensors, IO-Link, some CAN</text>
+  <text x="110" y="278" text-anchor="middle" font-size="13" fill="#3b4453">(3/4/5/8-pin; 4-pin shown)</text>
+
+  <!-- ============ B-coded (cx=290) ============ -->
+  <g transform="translate(290,140)">
+    <circle r="62" fill="#f4f7fb" stroke="#102040" stroke-width="2"/>
+    <circle r="44" fill="#ffffff" stroke="#9db0c7" stroke-width="1.5"/>
+    <rect x="-7" y="40" width="14" height="12" fill="#f4f7fb" stroke="#102040" stroke-width="1.5"/>
+    <circle cy="-22" r="5" fill="#102040"/>
+    <circle cx="22" r="5" fill="#102040"/>
+    <circle cy="22" r="5" fill="#102040"/>
+    <circle cx="-22" r="5" fill="#102040"/>
+    <circle r="5" fill="#102040"/>
+  </g>
+  <text x="290" y="242" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b7e96">B</text>
+  <text x="290" y="262" text-anchor="middle" font-size="13" fill="#3b4453">PROFIBUS and similar</text>
+  <text x="290" y="278" text-anchor="middle" font-size="13" fill="#3b4453">fieldbus (5-pin)</text>
+
+  <!-- ============ D-coded (cx=470) ============ -->
+  <g transform="translate(470,140)">
+    <circle r="62" fill="#f4f7fb" stroke="#102040" stroke-width="2"/>
+    <circle r="44" fill="#ffffff" stroke="#9db0c7" stroke-width="1.5"/>
+    <rect x="-7" y="-52" width="14" height="12" fill="#f4f7fb" stroke="#102040" stroke-width="1.5"/>
+    <path d="M -8 52 L 8 52 L 0 38 Z" fill="#f4f7fb" stroke="#102040" stroke-width="1.5"/>
+    <circle cx="-16" cy="-16" r="5" fill="#102040"/>
+    <circle cx="16" cy="-16" r="5" fill="#102040"/>
+    <circle cx="16" cy="16" r="5" fill="#102040"/>
+    <circle cx="-16" cy="16" r="5" fill="#102040"/>
+  </g>
+  <text x="470" y="242" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b7e96">D</text>
+  <text x="470" y="262" text-anchor="middle" font-size="13" fill="#3b4453">10/100BASE-TX industrial</text>
+  <text x="470" y="278" text-anchor="middle" font-size="13" fill="#3b4453">Ethernet (4-pin)</text>
+
+  <!-- ============ X-coded (cx=650) ============ -->
+  <g transform="translate(650,140)">
+    <circle r="62" fill="#f4f7fb" stroke="#102040" stroke-width="2"/>
+    <circle r="44" fill="#ffffff" stroke="#9db0c7" stroke-width="1.5"/>
+    <!-- signature cross-shaped shield divider -->
+    <g transform="rotate(45)">
+      <rect x="-4" y="-40" width="8" height="80" fill="#aebed1"/>
+      <rect x="-40" y="-4" width="80" height="8" fill="#aebed1"/>
+    </g>
+    <circle cx="-13" cy="-27" r="4.5" fill="#102040"/>
+    <circle cx="13" cy="-27" r="4.5" fill="#102040"/>
+    <circle cx="27" cy="-13" r="4.5" fill="#102040"/>
+    <circle cx="27" cy="13" r="4.5" fill="#102040"/>
+    <circle cx="13" cy="27" r="4.5" fill="#102040"/>
+    <circle cx="-13" cy="27" r="4.5" fill="#102040"/>
+    <circle cx="-27" cy="13" r="4.5" fill="#102040"/>
+    <circle cx="-27" cy="-13" r="4.5" fill="#102040"/>
+  </g>
+  <text x="650" y="242" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b7e96">X</text>
+  <text x="650" y="262" text-anchor="middle" font-size="13" fill="#3b4453">GbE/10G-class Ethernet</text>
+  <text x="650" y="278" text-anchor="middle" font-size="13" fill="#3b4453">(8-pin, shielded pairs)</text>
+
+  <text x="380" y="306" text-anchor="middle" font-size="13" font-style="italic" fill="#3b4453">Schematic only — exact keyway shapes/positions and pin geometry per IEC 61076-2-101 / -109 and the manufacturer drawing.</text>
+</svg>

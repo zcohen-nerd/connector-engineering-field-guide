@@ -1,0 +1,39 @@
+<svg viewBox="0 0 720 280" width="720" height="280" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Relative AS39029 contact mating-end sizes, 22D..8. Issue #47.
+       Circle proportions follow nominal published pin diameters; no absolute
+       dimensions asserted — orientation aid only. -->
+  <rect x="0.5" y="0.5" width="719" height="279" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="360" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">AS39029 contact sizes — relative mating-end size (smaller number = larger contact)</text>
+
+  <!-- 22D -->
+  <circle cx="90" cy="140" r="9" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="90" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b7e96">22D</text>
+  <text x="90" y="204" text-anchor="middle" font-size="13" fill="#3b4453">AWG 22</text>
+  <text x="90" y="221" text-anchor="middle" font-size="13" fill="#3b4453">3 A test</text>
+
+  <!-- 20 -->
+  <circle cx="200" cy="140" r="12" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="200" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b7e96">20</text>
+  <text x="200" y="204" text-anchor="middle" font-size="13" fill="#3b4453">AWG 20</text>
+  <text x="200" y="221" text-anchor="middle" font-size="13" fill="#3b4453">5 A test</text>
+
+  <!-- 16 -->
+  <circle cx="330" cy="140" r="19" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="330" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b7e96">16</text>
+  <text x="330" y="204" text-anchor="middle" font-size="13" fill="#3b4453">AWG 16</text>
+  <text x="330" y="221" text-anchor="middle" font-size="13" fill="#3b4453">10 A test</text>
+
+  <!-- 12 -->
+  <circle cx="480" cy="140" r="28" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="480" y="96" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b7e96">12</text>
+  <text x="480" y="204" text-anchor="middle" font-size="13" fill="#3b4453">AWG 12</text>
+  <text x="480" y="221" text-anchor="middle" font-size="13" fill="#3b4453">17 A test</text>
+
+  <!-- 8 -->
+  <circle cx="630" cy="140" r="43" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="630" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b7e96">8</text>
+  <text x="630" y="204" text-anchor="middle" font-size="13" fill="#3b4453">power / coax / twinax</text>
+  <text x="630" y="221" text-anchor="middle" font-size="13" fill="#3b4453">per catalog</text>
+
+  <text x="360" y="256" text-anchor="middle" font-size="13" font-style="italic" fill="#3b4453">Approximate relative sizes — orientation only; dimensions and ratings come from the AS39029 contact drawing and derating curve.</text>
+</svg>

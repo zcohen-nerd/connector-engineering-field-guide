@@ -1,0 +1,70 @@
+<svg viewBox="0 0 720 470" width="720" height="470" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Gender (pin/socket) x body style (plug/receptacle) 2x2 matrix. Issue #43. -->
+  <rect x="0.5" y="0.5" width="719" height="469" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="360" y="34" text-anchor="middle" font-size="17" font-weight="bold" fill="#102040">Pin/socket (gender) is independent of plug/receptacle (body style)</text>
+
+  <!-- column headers -->
+  <text x="290" y="66" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b7e96">Plug (body style)</text>
+  <text x="560" y="66" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b7e96">Receptacle (body style)</text>
+  <!-- row headers -->
+  <text x="20" y="146" font-size="15" font-weight="bold" fill="#0b7e96">Pin</text>
+  <text x="20" y="164" font-size="15" font-weight="bold" fill="#0b7e96">contacts</text>
+  <text x="20" y="312" font-size="15" font-weight="bold" fill="#0b7e96">Socket</text>
+  <text x="20" y="330" font-size="15" font-weight="bold" fill="#0b7e96">contacts</text>
+
+  <!-- light separators -->
+  <line x1="425" y1="78" x2="425" y2="402" stroke="#e3e8ee"/>
+  <line x1="140" y1="240" x2="706" y2="240" stroke="#e3e8ee"/>
+
+  <!-- ============ Plug with pins (290,150) ============ -->
+  <g stroke-width="2">
+    <rect x="318" y="143" width="54" height="14" rx="7" fill="#9db0c7"/>
+    <rect x="238" y="124" width="84" height="52" rx="6" fill="#e8edf4" stroke="#102040"/>
+    <line x1="252" y1="124" x2="252" y2="176" stroke="#9db0c7"/>
+    <line x1="264" y1="124" x2="264" y2="176" stroke="#9db0c7"/>
+    <rect x="210" y="134" width="28" height="32" fill="#e8edf4" stroke="#102040"/>
+    <line x1="210" y1="141" x2="194" y2="141" stroke="#102040" stroke-width="3"/>
+    <line x1="210" y1="150" x2="194" y2="150" stroke="#102040" stroke-width="3"/>
+    <line x1="210" y1="159" x2="194" y2="159" stroke="#102040" stroke-width="3"/>
+  </g>
+  <text x="290" y="205" text-anchor="middle" font-size="14" fill="#3b4453">Plug with pins</text>
+
+  <!-- ============ Receptacle with pins (560,150) ============ -->
+  <g stroke-width="2">
+    <rect x="594" y="108" width="10" height="84" fill="#d7dde6" stroke="#9db0c7"/>
+    <rect x="582" y="116" width="12" height="68" fill="#e8edf4" stroke="#102040"/>
+    <rect x="604" y="132" width="30" height="36" fill="#eef2f7" stroke="#9db0c7"/>
+    <rect x="494" y="130" width="88" height="40" rx="4" fill="#e8edf4" stroke="#102040"/>
+    <line x1="494" y1="141" x2="478" y2="141" stroke="#102040" stroke-width="3"/>
+    <line x1="494" y1="150" x2="478" y2="150" stroke="#102040" stroke-width="3"/>
+    <line x1="494" y1="159" x2="478" y2="159" stroke="#102040" stroke-width="3"/>
+  </g>
+  <text x="560" y="205" text-anchor="middle" font-size="14" fill="#3b4453">Receptacle with pins</text>
+
+  <!-- ============ Plug with sockets (290,318) ============ -->
+  <g stroke-width="2">
+    <rect x="318" y="311" width="54" height="14" rx="7" fill="#9db0c7"/>
+    <rect x="238" y="292" width="84" height="52" rx="6" fill="#e8edf4" stroke="#102040"/>
+    <line x1="252" y1="292" x2="252" y2="344" stroke="#9db0c7"/>
+    <line x1="264" y1="292" x2="264" y2="344" stroke="#9db0c7"/>
+    <rect x="210" y="302" width="28" height="32" fill="#e8edf4" stroke="#102040"/>
+    <rect x="212" y="306" width="12" height="6" fill="#ffffff" stroke="#102040" stroke-width="1.5"/>
+    <rect x="212" y="315" width="12" height="6" fill="#ffffff" stroke="#102040" stroke-width="1.5"/>
+    <rect x="212" y="324" width="12" height="6" fill="#ffffff" stroke="#102040" stroke-width="1.5"/>
+  </g>
+  <text x="290" y="373" text-anchor="middle" font-size="14" fill="#3b4453">Plug with sockets</text>
+
+  <!-- ============ Receptacle with sockets (560,318) ============ -->
+  <g stroke-width="2">
+    <rect x="594" y="276" width="10" height="84" fill="#d7dde6" stroke="#9db0c7"/>
+    <rect x="582" y="284" width="12" height="68" fill="#e8edf4" stroke="#102040"/>
+    <rect x="604" y="300" width="30" height="36" fill="#eef2f7" stroke="#9db0c7"/>
+    <rect x="494" y="298" width="88" height="40" rx="4" fill="#e8edf4" stroke="#102040"/>
+    <rect x="496" y="306" width="12" height="6" fill="#ffffff" stroke="#102040" stroke-width="1.5"/>
+    <rect x="496" y="315" width="12" height="6" fill="#ffffff" stroke="#102040" stroke-width="1.5"/>
+    <rect x="496" y="324" width="12" height="6" fill="#ffffff" stroke="#102040" stroke-width="1.5"/>
+  </g>
+  <text x="560" y="373" text-anchor="middle" font-size="14" fill="#3b4453">Receptacle with sockets</text>
+
+  <text x="360" y="440" text-anchor="middle" font-size="14" font-style="italic" fill="#3b4453">All four exist — &#8220;plug&#8221; does not mean &#8220;pins&#8221;. Check gender and body style separately on the part number.</text>
+</svg>

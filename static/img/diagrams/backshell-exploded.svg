@@ -1,0 +1,68 @@
+<svg viewBox="0 0 760 370" width="760" height="370" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Exploded backshell / strain-relief schematic with shield + load paths. Issue #46. -->
+  <rect x="0.5" y="0.5" width="759" height="369" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">Rear hardware, exploded — what the backshell actually does</text>
+
+  <defs>
+    <marker id="arrN" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9 Z" fill="#102040"/>
+    </marker>
+    <marker id="arrC" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9 Z" fill="#0b7e96"/>
+    </marker>
+  </defs>
+
+  <!-- exploded centerline -->
+  <line x1="30" y1="185" x2="730" y2="185" stroke="#e3e8ee" stroke-dasharray="5 5"/>
+
+  <!-- 1. Connector shell (with coupling nut) -->
+  <rect x="36" y="141" width="16" height="88" rx="3" fill="#d7dde6" stroke="#102040" stroke-width="2"/>
+  <rect x="52" y="150" width="86" height="70" rx="6" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="88" y="116" text-anchor="middle" font-size="12" fill="#3b4453">connector shell</text>
+  <text x="88" y="130" text-anchor="middle" font-size="12" fill="#3b4453">(+ coupling nut)</text>
+
+  <!-- 2. Rear grommet / seal -->
+  <rect x="166" y="160" width="24" height="50" rx="6" fill="#cdeef6" stroke="#0b7e96" stroke-width="2"/>
+  <text x="178" y="238" text-anchor="middle" font-size="12" fill="#3b4453">rear grommet</text>
+  <text x="178" y="252" text-anchor="middle" font-size="12" fill="#3b4453">/ wire seals</text>
+
+  <!-- 3. 360-degree shield termination band -->
+  <rect x="218" y="152" width="18" height="66" rx="4" fill="#0b7e96" stroke="#102040" stroke-width="1.5"/>
+  <text x="227" y="246" text-anchor="middle" font-size="12" fill="#3b4453">360&#176; shield</text>
+  <text x="227" y="260" text-anchor="middle" font-size="12" fill="#3b4453">band</text>
+
+  <!-- 4. Backshell body -->
+  <path d="M 264 150 L 380 150 L 404 168 L 404 202 L 380 220 L 264 220 Z" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="334" y="248" text-anchor="middle" font-size="12" fill="#3b4453">backshell body</text>
+  <text x="334" y="262" text-anchor="middle" font-size="12" fill="#3b4453">(bonds to shell)</text>
+
+  <!-- 5. Cable clamp (saddle bars + screws) -->
+  <rect x="432" y="146" width="52" height="16" rx="4" fill="#d7dde6" stroke="#102040" stroke-width="2"/>
+  <rect x="432" y="208" width="52" height="16" rx="4" fill="#d7dde6" stroke="#102040" stroke-width="2"/>
+  <circle cx="440" cy="154" r="3" fill="#102040"/>
+  <circle cx="476" cy="154" r="3" fill="#102040"/>
+  <circle cx="440" cy="216" r="3" fill="#102040"/>
+  <circle cx="476" cy="216" r="3" fill="#102040"/>
+  <text x="458" y="248" text-anchor="middle" font-size="12" fill="#3b4453">cable clamp</text>
+  <text x="458" y="262" text-anchor="middle" font-size="12" fill="#3b4453">(strain relief)</text>
+
+  <!-- 6. Boot -->
+  <path d="M 512 156 L 574 168 L 574 202 L 512 214 Z" fill="#9db0c7" stroke="#102040" stroke-width="2"/>
+  <text x="543" y="242" text-anchor="middle" font-size="12" fill="#3b4453">boot</text>
+
+  <!-- 7. Cable with exposed braid -->
+  <rect x="600" y="171" width="46" height="28" rx="4" fill="#ffffff" stroke="#0b7e96" stroke-width="2" stroke-dasharray="4 3"/>
+  <rect x="646" y="171" width="86" height="28" rx="12" fill="#6f8bb4" stroke="#102040" stroke-width="2"/>
+  <text x="666" y="228" text-anchor="middle" font-size="12" fill="#3b4453">cable (braid dressed</text>
+  <text x="666" y="242" text-anchor="middle" font-size="12" fill="#3b4453">under the band)</text>
+
+  <!-- shield path (cyan, dashed, above) -->
+  <polyline points="620,165 620,86 227,86 227,146" fill="none" stroke="#0b7e96" stroke-width="2.5" stroke-dasharray="7 4" marker-end="url(#arrC)"/>
+  <text x="424" y="76" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">shield path: braid &#8594; 360&#176; band &#8594; backshell &#8594; shell (no pigtail)</text>
+
+  <!-- mechanical load path (navy, solid, below) -->
+  <polyline points="686,205 686,314 88,314 88,235" fill="none" stroke="#102040" stroke-width="2.5" marker-end="url(#arrN)"/>
+  <text x="388" y="336" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">mechanical load path: cable &#8594; clamp &#8594; backshell &#8594; shell — the contacts carry no cable load</text>
+
+  <text x="380" y="358" text-anchor="middle" font-size="12" font-style="italic" fill="#6f8bb4">Schematic — part shapes and order vary by backshell family; assemble per the manufacturer instruction sheet.</text>
+</svg>

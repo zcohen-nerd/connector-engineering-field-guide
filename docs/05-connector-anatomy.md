@@ -38,6 +38,10 @@ Pin/socket gender is *electrical*. Plug/receptacle is *mechanical*. Do not assum
 
 :::
 
+![Four schematic connectors showing that pin or socket contacts can appear in either a plug or a receptacle body](/img/diagrams/pin-socket-plug-receptacle.svg)
+
+*All four combinations exist — gender and body style are independent selections on the part number.*
+
 ## 5.1 Contact plating — the decision logic
 
 | Plating | Application | Advantage | Limitation |
@@ -99,6 +103,10 @@ Connector shielding is a *system* property: it depends on maintaining a continuo
 - **Cable-shield termination:** a 360° circumferential termination (an EMI backshell with a conductive band or spring) keeps shield impedance low across frequency. A **pigtail** — the shield gathered into a short wire to a pin or lug — is the common failure.
 - **Shell-to-shell continuity:** the mated shells must actually conduct (grounding fingers/springs, clean conductive plating), or the shield path is broken at the interface.
 - **Backshell bonding & finishes:** the backshell must bond to the shell; conductive finishes and, where needed, EMI gaskets maintain continuity around the joint. A non-conductive finish (e.g. some anodize) breaks it.
+
+![Exploded view of connector shell, rear seal, 360-degree shield band, backshell, cable clamp, boot, and cable, annotated with the shield path and the mechanical load path](/img/diagrams/backshell-exploded.svg)
+
+*The rear hardware has two jobs: bond the shield 360° into the shell, and carry cable load through the clamp and backshell so the contacts never see it.*
 
 **Why a pigtail is bad:** it turns the shield connection into a small series **inductor**, and inductive impedance rises with frequency (Z ≈ 2πfL). A short pigtail is on the order of ~10 nH — negligible milliohms at DC, but ≈ 2 Ω at 30 MHz and tens of ohms by a few hundred MHz. That impedance lets shield current develop a voltage and re-radiate — the mechanism behind the guide's repeated "pigtails are inductive / pigtails radiate" caution.
 

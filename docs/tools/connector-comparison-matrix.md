@@ -4,7 +4,6 @@ title: Connector Comparison Matrix
 description: "A worked connector comparison matrix — 38999, 26482, M12, D-sub, Micro-D, Han, Micro-Fit — filled with sourced, representative figures for each family."
 slug: /tools/connector-comparison-matrix
 sidebar_label: Comparison Matrix
-sidebar_position: 2
 ---
 
 # Connector Comparison Matrix

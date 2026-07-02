@@ -1,9 +1,8 @@
-﻿---
+---
 title: "Appendix: Quick-Reference Tables"
 description: "Quick-reference tables: IP ratings, 38999 contact test currents, a family-selection quick guide, and typical mating-cycle life by connector family."
 slug: /appendix/quick-reference-tables
 sidebar_label: Quick Reference Tables
-sidebar_position: 1
 ---
 
 # Appendix: Quick-Reference Tables
@@ -12,7 +11,7 @@ These are deliberately kept as compact lookup tables — IP ratings (A1), 38999 
 
 ## A1. IP rating reference
 
-IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529[^iso20653] — IEC 60529 added a close equivalent, IPx9, in its 2013 edition. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system.
+IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529[^iso20653] — IEC 60529 added a close equivalent, IPx9, in its 2013 edition. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system. Note also that the immersion tests (IPx7/IPx8) and the jet tests (IPx5/IPx6/IPx9) are independent — passing immersion does not imply jet protection, which is why washdown parts are often dual-rated (e.g. "IP67/IP69K").
 
 | IP | Solid ingress | Liquid ingress | Typical application |
 |---|---|---|---|

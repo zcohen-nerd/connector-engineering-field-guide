@@ -4,7 +4,6 @@ title: "Pick a connector for rugged Ethernet"
 description: "Pick a connector for rugged Ethernet: M12 D-coded vs X-coded vs sealed RJ45, data-rate and shielding decisions, and the mis-coding traps that bite."
 slug: /decision-paths/rugged-ethernet
 sidebar_label: Rugged Ethernet
-sidebar_position: 2
 ---
 
 # Pick a connector for rugged Ethernet

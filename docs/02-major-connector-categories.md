@@ -1,10 +1,9 @@
-﻿---
+---
 id: 02-major-connector-categories
 title: "2. Major Connector Categories"
 description: "Circular, rectangular, board-to-wire, RF, power, fiber, and hybrid connector categories — what each one optimizes for, and when it is the wrong choice."
 slug: /02-major-connector-categories
 sidebar_label: Major Connector Categories
-sidebar_position: 2
 ---
 
 # 2. Major Connector Categories

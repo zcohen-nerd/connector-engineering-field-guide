@@ -4,7 +4,6 @@ title: "Pick a connector for a sealed enclosure feedthrough"
 description: "Pick a connector for a sealed enclosure feedthrough: 38999 jam-nut or flange, sealed M12 panel mounts — gaskets, panel thickness, torque, and IP traps."
 slug: /decision-paths/sealed-enclosure-feedthrough
 sidebar_label: Sealed enclosure feedthrough
-sidebar_position: 5
 ---
 
 # Pick a connector for a sealed enclosure feedthrough

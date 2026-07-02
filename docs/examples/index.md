@@ -4,7 +4,6 @@ title: "Examples"
 description: "Worked connector examples derived from the guide's hands-on exercises — structure-first design packages you can adapt to your own project interfaces."
 slug: /examples
 sidebar_label: Overview
-sidebar_position: 0
 ---
 
 # Examples

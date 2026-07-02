@@ -4,7 +4,6 @@ title: Connector Engineering Field Guide
 description: "Practical connector selection for rugged, industrial, and military-style systems — from picking a sane starting family to a fully documented interface."
 slug: /
 sidebar_label: Home
-sidebar_position: 1
 ---
 
 # Connector Engineering Field Guide

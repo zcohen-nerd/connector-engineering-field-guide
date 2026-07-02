@@ -1,10 +1,9 @@
-﻿---
+---
 id: 03-connector-standards-and-families
 title: "3. Connector Standards and Families"
 description: "At-a-glance comparison of connector families — 38999, 26482, M12, D-sub, Micro-D, Han, sealed automotive — with cost, strengths, and when to prefer another."
 slug: /03-connector-standards-and-families
 sidebar_label: Standards and Families
-sidebar_position: 3
 ---
 
 # 3. Connector Standards and Families

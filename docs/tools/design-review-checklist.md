@@ -4,7 +4,6 @@ title: Design Review Checklist
 description: "A connector design-review checklist: readiness checks, a red-flag scan table, and a risk summary format for catching connector problems before release."
 slug: /tools/design-review-checklist
 sidebar_label: Design Review Checklist
-sidebar_position: 5
 ---
 
 # Design Review Checklist

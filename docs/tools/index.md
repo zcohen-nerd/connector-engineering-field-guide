@@ -4,7 +4,6 @@ title: "Tools & Templates"
 description: "Reusable connector-engineering templates — selection checklist, comparison matrix, cable drawing, ICD, and design-review checklist — ready to copy and adapt."
 slug: /tools
 sidebar_label: Overview
-sidebar_position: 0
 ---
 
 # Tools & Templates

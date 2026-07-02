@@ -10,7 +10,7 @@ This repository is part of the zcohen-nerd ecosystem as a professional technical
 
 ### Implementation Rules
 
-- Use the workspace brand-system repo at `C:\Users\ZCohe\OneDrive\Documents\01 Programming\zcohen-nerd-workspace\brand\zcohen-nerd-brand` as the source of truth for brand-system work when available.
+- Use the zcohen-nerd-brand repo in the local zcohen-nerd workspace as the source of truth for brand-system work when available.
 - Do not invent a new visual identity for this repository.
 - Preserve existing content unless specifically asked to rewrite it.
 - Prefer small, reviewable changes.

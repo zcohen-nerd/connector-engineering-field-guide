@@ -4,7 +4,6 @@ title: "Pick a connector for an industrial sensor"
 description: "Pick a connector for an industrial sensor: M12 A-coded and M8 starting points, the specs that decide it, common traps, and the documentation bundle."
 slug: /decision-paths/industrial-sensor
 sidebar_label: Industrial sensor
-sidebar_position: 1
 ---
 
 # Pick a connector for an industrial sensor
@@ -26,7 +25,7 @@ A sealed cable to a DC sensor or actuator in factory or field automation — the
 ## Families to start with
 
 - **M12 A-coded** — 4-pin A-coded is extremely common for basic DC sensors; 3/4/5/8-pin variants cover most sensor/actuator/IO-Link needs.
-- **M8** — for small sensors where an M12 is physically too large (less current, fewer pins, smaller cable).
+- **M8** — for small sensors where an M12 is physically too large (less current, fewer pins, smaller cable). See [M8 — the smaller sibling](../08-m12.md#86-m8--the-smaller-sibling).
 
 See the [M12 deep dive](../08-m12.md) for coding and pinout detail.
 

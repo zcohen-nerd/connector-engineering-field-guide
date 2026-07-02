@@ -4,7 +4,6 @@ title: Cable Drawing Template
 description: "A cable drawing template with conductor schedule, shields, labels, and test requirements — plus a worked, sourced M12 A-coded sensor cable example."
 slug: /tools/cable-drawing-template
 sidebar_label: Cable Drawing Template
-sidebar_position: 3
 ---
 
 # Cable Drawing Template

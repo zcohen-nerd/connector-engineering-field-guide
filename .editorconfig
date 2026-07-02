@@ -1,0 +1,5 @@
+# Hold the line on encoding: no UTF-8 BOMs (charset = utf-8 means "UTF-8 without BOM").
+root = true
+
+[*]
+charset = utf-8

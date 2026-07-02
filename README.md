@@ -21,7 +21,7 @@ When this guide conflicts with a datasheet, applicable standard, customer requir
   - `docs/decision-paths/` — scenario-based connector-selection walkthroughs.
   - `docs/tools/` — reusable engineering-document templates derived from the guide.
   - `docs/examples/` — worked examples derived from the guide's exercises.
-  - `docs/what-people-forget.md` and the diagrams under `static/img/diagrams/`.
+  - `docs/what-people-forget.md`, `docs/glossary.md`, and the diagrams under `static/img/diagrams/`.
 
 ## What the guide helps with
 

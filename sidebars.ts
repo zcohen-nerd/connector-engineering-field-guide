@@ -46,6 +46,7 @@ const sidebars: SidebarsConfig = {
       ],
     },
     'what-people-forget',
+    'glossary',
     {
       type: 'category',
       label: 'Tools & Templates',

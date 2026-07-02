@@ -369,7 +369,7 @@ Don't start with the glamour render. Start with the ordering information and the
 
 Panel receptacle + cable plug + insert arrangement + pin/socket selection + crimp contacts + backshell + shield termination + strain relief + cable boot/gland + dust caps + gasket/O-ring + pinout drawing + torque and assembly procedure.
 
-Whether contacts are supplied with the connector or must be ordered separately depends on the exact part number and its suffix — some part numbers include contacts, while "less-contact" (contactless) versions ship the shell and insert without them. Verify for your specific part number whether contacts are included, omitted, or ordered as a separate line item, and order the matching AS39029 contacts and crimp tooling accordingly.
+Whether contacts are supplied with the connector or must be ordered separately depends on the exact part number and its suffix — some part numbers include contacts, while "less-contact" versions ship the shell and insert without them. Verify for your specific part number whether contacts are included, omitted, or ordered as a separate line item, and order the matching AS39029 contacts and crimp tooling accordingly.
 
 ### 7.2 Series — practical distinctions
 
@@ -485,7 +485,7 @@ Standardization improves cross-vendor interoperability, but it does not make it 
 | L | 4/5 | Higher-current DC power (e.g. PROFINET power) | Distributed I/O power; higher current than A |
 | T | 4/5 | DC power (dedicated) | Typically used for DC power (e.g. 24–48 V class); verify exact rating by catalog |
 | S | 4/5 | AC power | Application-specific; verify by catalog |
-| K | varies | AC power | Pin count varies by product/coding — verify catalog. Generally part of M12 power connector standards such as IEC 61076-2-111; verify exact standard, current, and voltage by catalog/application |
+| K | 4+PE | AC power | 4 power contacts + PE (protective earth) in the 630 V AC class, per IEC 61076-2-111[^m12k] — verify exact current, voltage, and pinout by catalog/application |
 
 > **M12 A-coded current.** Many A-coded M12 connectors are in the ~4 A class within common standard/catalog scopes,[^iec101] but exact current rating depends on the connector, cable assembly, wire gauge, number of contacts loaded, and temperature. Use L-coded, T-coded, or other power-coded variants where the exact datasheet supports the load.
 
@@ -520,6 +520,10 @@ M12 IP rating assumes the correct mating connector, proper torque, correct gaske
 ### 8.5 Fieldbus topology through M12
 
 > **Often overlooked.** The connector choice constrains your bus *physical* topology, and this bites people on CAN and PROFIBUS. A standard M12 sensor port is a single drop — you cannot simply T-tap a multi-drop bus off it. For CAN/CANopen/DeviceNet you either use connectors with integral T-couplers (dual-port "daisy-chain" connectors that pass the bus through), use a T-piece, or run a trunk-and-drop topology with proper drop-length limits. And the termination resistors must live at the two physical *ends* of the bus — frequently implemented as a terminating M12 plug. Plan termination and topology before you pick the connector, not after.
+
+### 8.6 M8 — the smaller sibling
+
+M8 is the compact sibling used where an M12 is physically too large — small proximity/photoelectric sensors, miniature actuators, tight brackets. It has its own detail specification, IEC 61076-2-104 (circular connectors with M8 screw-locking or snap-locking), which covers 3- to 5-way connectors;[^m8] 3- and 4-pin A-coded versions are the common sensor variants, and some vendors offer more positions — verify the catalog. The tradeoffs against M12: a lower current envelope, fewer positions, and a smaller cable/gland range — verify the exact connector and cordset datasheet. The selection logic mirrors M12: the same pinout/coding checks, the same complete-assembly IP caveats, and the same torque discipline at a smaller scale. If the sensor end needs M8 but the panel end doesn't, M8-to-M12 cordsets are a standard catalog item.
 
 ---
 
@@ -742,7 +746,7 @@ Goal by Day 30: not connector expert, but dangerous in the useful way — able t
 
 ### A1. IP rating reference
 
-IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529[^iso20653] — IEC 60529 added a close equivalent, IPx9, in its 2013 edition. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system.
+IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529[^iso20653] — IEC 60529 added a close equivalent, IPx9, in its 2013 edition. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system. Note also that the immersion tests (IPx7/IPx8) and the jet tests (IPx5/IPx6/IPx9) are independent — passing immersion does not imply jet protection, which is why washdown parts are often dual-rated (e.g. "IP67/IP69K").
 
 | IP | Solid ingress | Liquid ingress | Typical application |
 |---|---|---|---|
@@ -826,6 +830,10 @@ Consolidated citations for every sourced claim in this guide, referenced by labe
 [^iec109]: IEC 61076-2-109, *… Part 2-109: Circular connectors — Detail specification for connectors with M12 × 1 screw-locking, for data transmission frequencies up to 500 MHz* — covers the X- and H-coded variants; X-coding supports Cat 6A / up to 10 Gbit/s at IP65/IP67. <https://standards.globalspec.com/std/1681090/IEC%2061076-2-109>
 
 [^iec111]: IEC 61076-2-111, *Connectors for electrical and electronic equipment — Product requirements — Part 2-111: Circular connectors — Detail specification for power connectors with M12 screw-locking* — 4- to 6-way power codings (E/F/K/L/M/S/T); current up to 16 A; 63 V or 630 V. <https://standards.globalspec.com/std/10195509/iec-61076-2-111>
+
+[^m12k]: binder, *M12 K-coded* product family — "K-coded connectors with screw locking according to DIN EN 61076-2-111 are designed for AC applications and have 4+PE contacts" (630 V class; vendor current ratings vary, e.g. 12 A — verify the datasheet). <https://www.binder-usa.com/us-en/products/automation-technology-voltage-and-power-supply/m12-k>
+
+[^m8]: IEC 61076-2-104, *Connectors for electronic equipment — Product requirements — Part 2-104: Circular connectors — Detail specification for circular connectors with M8 screw-locking or snap-locking* — 3- to 5-way; typically used for industrial process measurement and control. <https://standards.globalspec.com/std/9866362/IEC%2061076-2-104>
 
 [^m12torque]: Coupling/tightening torque is manufacturer- and product-specific. Example: Turck M12 × 1 cordset RK 4.5T-5 (designed per IEC 61076-2-101) specifies a tightening torque of **0.8–1.0 N·m** ("note max. torque of mating connector"), with IP68/IP69K when coupled and 4 A / 250 V rating. Other families specify different values — always use the exact datasheet figure. <https://www.turck.us/datasheet/_us/edb_U2188-94_eng_us.pdf>
 

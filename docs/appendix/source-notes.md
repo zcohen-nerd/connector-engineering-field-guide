@@ -1,9 +1,8 @@
-﻿---
+---
 title: Source Notes
 description: "Source-verification notes and citations behind the guide's technical claims — the manufacturer datasheets and standards each one rests on, with status."
 slug: /appendix/source-notes
 sidebar_label: Source Notes
-sidebar_position: 2
 ---
 
 # Source Notes — Connector Engineering Field Guide

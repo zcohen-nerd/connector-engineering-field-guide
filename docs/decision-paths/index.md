@@ -4,7 +4,6 @@ title: "Decision Paths"
 description: "Scenario-based connector decision paths that take a real interface problem and route you to a sane starting family, key specs, and documentation bundle."
 slug: /decision-paths
 sidebar_label: Overview
-sidebar_position: 0
 ---
 
 # Decision Paths

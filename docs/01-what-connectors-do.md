@@ -1,10 +1,9 @@
-﻿---
+---
 id: 01-what-connectors-do
 title: "1. What Connectors Actually Do in a System"
 description: "The six jobs every connector does at once — electrical, mechanical, environmental, service, and configuration control — and the failure modes each creates."
 slug: /01-what-connectors-do
 sidebar_label: What Connectors Actually Do
-sidebar_position: 1
 ---
 
 # 1. What Connectors Actually Do in a System

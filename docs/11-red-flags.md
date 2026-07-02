@@ -1,10 +1,9 @@
-﻿---
+---
 id: 11-red-flags
 title: "11. Red Flags and Beginner Mistakes"
 description: "Connector-selection red flags and common beginner mistakes — from pin-count-only picks to missing torque specs — with the field failure mode each causes."
 slug: /11-red-flags
 sidebar_label: Red Flags
-sidebar_position: 11
 ---
 
 # 11. Red Flags and Beginner Mistakes

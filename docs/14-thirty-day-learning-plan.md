@@ -1,10 +1,9 @@
-﻿---
+---
 id: 14-thirty-day-learning-plan
 title: "14. 30-Day Learning Plan"
 description: "A 30-day plan to get dangerous with connectors — weekly focus areas, activities, and deliverables from anatomy basics to a complete mini design package."
 slug: /14-thirty-day-learning-plan
 sidebar_label: 30-Day Learning Plan
-sidebar_position: 14
 ---
 
 # 14. 30-Day Learning Plan
@@ -15,7 +14,7 @@ Goal by Day 30: not connector expert, but dangerous in the useful way — able t
 
 **Activities:** Read Sections 1–6. Read datasheets for one M12, one D-sub, one Micro-Fit, one 38999. Identify shell, contacts, termination, ratings, mating cycles, tooling. Take apart old cables and find the failure-prone regions.
 
-**Deliverable:** One-page connector anatomy cheat sheet + glossary of 30 terms.
+**Deliverable:** One-page connector anatomy cheat sheet + glossary of 30 terms (start from the site's [glossary](glossary.md), then rewrite the definitions in your own words).
 
 ## Week 2 (Days 8–14) — Industrial connectors
 

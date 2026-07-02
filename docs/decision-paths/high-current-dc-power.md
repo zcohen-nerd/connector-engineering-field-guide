@@ -4,7 +4,6 @@ title: "Pick a connector for high-current DC power"
 description: "Pick a connector for high-current DC power: Anderson SB, Han power inserts, 38999 power contacts — derating curves, touch safety, and paralleling cautions."
 slug: /decision-paths/high-current-dc-power
 sidebar_label: High-current DC power
-sidebar_position: 4
 ---
 
 # Pick a connector for high-current DC power

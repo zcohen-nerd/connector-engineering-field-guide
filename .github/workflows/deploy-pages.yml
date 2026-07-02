@@ -52,3 +52,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Pages deployments intermittently sit in deployment_queued on GitHub's
+          # side; the action's default 10-minute status timeout then aborts an
+          # otherwise-healthy deploy. Allow up to 30 minutes.
+          timeout: 1800000

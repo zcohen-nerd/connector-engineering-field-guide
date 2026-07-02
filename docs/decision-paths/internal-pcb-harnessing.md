@@ -1,6 +1,7 @@
 ---
 id: internal-pcb-harnessing
 title: "Pick a connector for internal PCB harnessing"
+description: "Pick a connector for internal PCB harnessing: Micro-Fit, JST-GH and kin — latches, TPA, crimp tooling, and keeping hobby parts inside their ratings."
 slug: /decision-paths/internal-pcb-harnessing
 sidebar_label: Internal PCB harnessing
 sidebar_position: 3

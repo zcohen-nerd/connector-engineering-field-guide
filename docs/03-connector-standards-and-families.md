@@ -1,6 +1,7 @@
 ﻿---
 id: 03-connector-standards-and-families
 title: "3. Connector Standards and Families"
+description: "At-a-glance comparison of connector families — 38999, 26482, M12, D-sub, Micro-D, Han, sealed automotive — with cost, strengths, and when to prefer another."
 slug: /03-connector-standards-and-families
 sidebar_label: Standards and Families
 sidebar_position: 3
@@ -58,7 +59,7 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 | Deutsch DTM / DT / DTP | IP68[^deutsch] | ~7.5 A (DTM, size 20) / ~13 A (DT, size 16) / ~25 A (DTP, size 12)[^deutsch] | Genderless wedgelock housings; ubiquitous in off-road/automotive; hand-crimpable |
 | TE AMP Superseal 1.5 / AMPSEAL | IP67[^superseal] | ~14 A (Superseal 1.5)[^superseal] | Compact sealed inline; AMPSEAL for higher pin counts |
 | Molex MX150 / MX150L | ≥ IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
-| Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify) | Long-standing automotive terminal system |
+| Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants[^metripack] | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify)[^metripack] | Long-standing automotive terminal system |
 
 **Where they win:** IP67/IP68 sealing and vibration life far beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are the sweet spot for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required.
 
@@ -73,5 +74,7 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 [^superseal]: TE Connectivity AMP SUPERSEAL 1.5 — sealed IP67 automotive/industrial connector; housings rated ~14 A. <https://www.te.com/en/products/connectors/automotive-connectors/intersection/amp-superseal-1-5.html>
 
 [^mx150]: Molex MX150 / MX150L sealed connector system — exceeds IEC IP67; MX150L supports up to ~40 A (8 AWG) and ~30 A (10–12 AWG). <https://www.mouser.com/pdfdocs/molexmx150sealedconnectorsystem.pdf>
+
+[^metripack]: Aptiv (formerly Delphi) *Metri-Pack Connection System* datasheet — the series are designated by nominal terminal blade size (150/280/480/630/800 class) and offered in sealed and unsealed variants, with per-series current envelopes stated in the datasheet. The figures in this row are deliberately kept qualitative — verify the exact series/terminal datasheet before use. <https://www.tti.com/content/dam/tti-commons/supplier/aptiv/doc/aptiv-metri-pack-connection-system-datasheet-specifications.pdf>
 
 ---

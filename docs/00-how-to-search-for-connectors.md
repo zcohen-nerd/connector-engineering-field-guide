@@ -1,6 +1,7 @@
 ﻿---
 id: 00-how-to-search-for-connectors
 title: How to Search for Connectors
+description: "How to turn a vague connector need into useful search terms and filters — family, coding, sealing, termination — plus the questions to ask a vendor or FAE."
 slug: /00-how-to-search-for-connectors
 sidebar_label: How to Search for Connectors
 sidebar_position: 1

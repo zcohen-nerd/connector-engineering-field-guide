@@ -1,6 +1,7 @@
 ﻿---
 id: 10-selection-checklist
 title: "10. Practical Selection Checklist"
+description: "A working connector-selection checklist: interface definition, electrical, mechanical and environmental, manufacturing, and documentation sign-off items."
 slug: /10-selection-checklist
 sidebar_label: Practical Checklist
 sidebar_position: 10

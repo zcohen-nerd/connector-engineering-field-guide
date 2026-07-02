@@ -1,6 +1,7 @@
 ---
 id: connector-icd-template
 title: Connector ICD Template
+description: "A connector ICD template capturing part numbers, pinout, electrical limits, environment, and assembly — with a worked, sourced M12 sensor-drop example."
 slug: /tools/connector-icd-template
 sidebar_label: Connector ICD Template
 sidebar_position: 4

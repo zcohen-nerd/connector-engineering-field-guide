@@ -1,6 +1,7 @@
 ﻿---
 id: usage-and-attribution
 title: Usage and Attribution
+description: "Usage and attribution ground rules for the guide — the documentation and code licenses, standards-table boundaries, and trademark acknowledgements."
 slug: /usage-and-attribution
 sidebar_label: Usage and Attribution
 ---

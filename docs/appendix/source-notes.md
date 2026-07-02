@@ -1,6 +1,6 @@
 ﻿---
 title: Source Notes
-description: "Source-verification notes and citations behind the guide's technical claims — the standards and datasheets each rests on."
+description: "Source-verification notes and citations behind the guide's technical claims — the manufacturer datasheets and standards each one rests on, with status."
 slug: /appendix/source-notes
 sidebar_label: Source Notes
 sidebar_position: 2
@@ -10,7 +10,7 @@ sidebar_position: 2
 
 This file tracks claims that should be verified against a primary source (a current manufacturer datasheet, the applicable standard, or a QPL listing) **before v1.0** — before relying on any of these values in released hardware. (The site is already public as a v0.1 review draft; these items gate the v1.0 "source verified" milestone, not initial publication.)
 
-Every item below also appears as a `<!-- TODO: source/verify -->` comment at the relevant location in the guide. Numbers in the guide are presented as *examples requiring verification*, not as universal ratings.
+Each item below originally corresponded to a `<!-- TODO: source/verify -->` marker in the guide; the markers were removed as items were verified and cited inline (the citations live in each page's Sources section, and in the `## Sources` section of the canonical `Source/connector-engineering-field-guide.md`). The two open items below remain unverified. Numbers in the guide are presented as *examples requiring verification*, not as universal ratings.
 
 ## Source discipline (publication rules)
 

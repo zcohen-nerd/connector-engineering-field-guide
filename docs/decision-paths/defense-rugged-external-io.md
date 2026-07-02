@@ -1,6 +1,7 @@
 ---
 id: defense-rugged-external-io
 title: "Pick a connector for defense/rugged external I/O"
+description: "Pick a connector for defense or rugged external I/O: MIL-DTL-38999 and 26482 starting points — insert arrangements, backshells, keying, and dust caps."
 slug: /decision-paths/defense-rugged-external-io
 sidebar_label: Defense / rugged external I/O
 sidebar_position: 7

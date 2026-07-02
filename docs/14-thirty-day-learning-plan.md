@@ -1,6 +1,7 @@
 ﻿---
 id: 14-thirty-day-learning-plan
 title: "14. 30-Day Learning Plan"
+description: "A 30-day plan to get dangerous with connectors — weekly focus areas, activities, and deliverables from anatomy basics to a complete mini design package."
 slug: /14-thirty-day-learning-plan
 sidebar_label: 30-Day Learning Plan
 sidebar_position: 14

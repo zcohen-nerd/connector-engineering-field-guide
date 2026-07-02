@@ -1,6 +1,7 @@
 ﻿---
 id: 06-reading-datasheets
 title: "6. How to Read a Connector Datasheet"
+description: "How to read a connector datasheet field by field — ratings, derating, tooling, sealing — and the accessories that quietly belong on your BOM from day one."
 slug: /06-reading-datasheets
 sidebar_label: Reading Datasheets
 sidebar_position: 6

@@ -1,7 +1,7 @@
 ---
 id: what-people-forget
 title: What People Forget
-description: "The connector details most often forgotten — mating connector, backshell, contacts, tooling, caps, sealing, keying, torque, and documentation — and why they bite later."
+description: "The connector details most often forgotten — mating connector, backshell, contacts, tooling, caps, keying, torque, documentation — and why they bite later."
 slug: /what-people-forget
 sidebar_label: What People Forget
 sidebar_position: 12

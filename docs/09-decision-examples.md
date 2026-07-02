@@ -1,6 +1,7 @@
 ---
 id: 09-decision-examples
 title: "9. Connector Decision Examples"
+description: "Ten worked connector decisions — robot sensors, motor power, CAN, rugged Ethernet, feedthroughs — with families, key specs, and rejects for each scenario."
 slug: /09-decision-examples
 sidebar_label: Decision Examples
 sidebar_position: 9

@@ -1,6 +1,7 @@
 ---
 id: connector-selection-checklist
 title: Connector Selection Checklist
+description: "A copy-ready connector selection checklist covering interface definition, electrical, mechanical and environmental, manufacturing, and documentation."
 slug: /tools/connector-selection-checklist
 sidebar_label: Selection Checklist
 sidebar_position: 1

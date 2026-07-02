@@ -1,6 +1,7 @@
 ---
 id: index
 title: Connector Engineering Field Guide
+description: "Practical connector selection for rugged, industrial, and military-style systems — from picking a sane starting family to a fully documented interface."
 slug: /
 sidebar_label: Home
 sidebar_position: 1
@@ -48,7 +49,7 @@ Use these cards to get to a reasonable starting family before you disappear into
 <div class="cn-card"><div class="cn-card-title">RF/GPS/radio path</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> SMA, TNC, N-Type, BNC, MCX, SMP/SMPM, or coax contacts in a hybrid connector</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> impedance, frequency, cable, torque, shielding</div></div>
 </div>
 
-Want a step-by-step walkthrough? Seven of these scenarios have a full [Decision Path](decision-paths/index.md). (The *compact high-reliability internal*, *removable machine module*, and *RF/GPS/radio* cards don't have a dedicated path yet — for those, use the deep-dive pages they name.)
+Want a step-by-step walkthrough? Seven of these scenarios have a full [Decision Path](decision-paths/index.md). (The *compact high-reliability internal* and *removable machine module* cards don't have a dedicated path yet — use the deep-dive pages they name; for the *RF/GPS/radio* card, start with the [RF orientation](02-major-connector-categories.md#rf-connectors--a-brief-orientation).)
 
 ## Who this is for
 

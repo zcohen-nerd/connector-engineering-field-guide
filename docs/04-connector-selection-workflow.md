@@ -1,6 +1,7 @@
 ﻿---
 id: 04-connector-selection-workflow
 title: "4. Connector Selection — Think in This Order"
+description: "The connector selection order that works: define the interface, then electrical requirements, mechanical and environmental limits, then production reality."
 slug: /04-connector-selection-workflow
 sidebar_label: Selection Workflow
 sidebar_position: 4

@@ -1,6 +1,7 @@
 ---
 id: debug-service-port
 title: "Pick a connector for a debug/service port"
+description: "Pick a connector for a debug or service port: protected USB-C, Tag-Connect, Micro-D, and sealed options — access level, ESD, mating cycles, and keying."
 slug: /decision-paths/debug-service-port
 sidebar_label: Debug / service port
 sidebar_position: 6

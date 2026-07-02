@@ -1,6 +1,7 @@
 ---
 id: connector-comparison-matrix
 title: Connector Comparison Matrix
+description: "A worked connector comparison matrix — 38999, 26482, M12, D-sub, Micro-D, Han, Micro-Fit — filled with sourced, representative figures for each family."
 slug: /tools/connector-comparison-matrix
 sidebar_label: Comparison Matrix
 sidebar_position: 2
@@ -25,7 +26,7 @@ Every figure below is a *typical or example* value for the **family**, pulled fr
 | **D-sub (MIL-DTL-24308)** | Non-environmental; racks, panels, test gear[^dsub] | 9/15/25/37/50; up to 104 (size 22D)[^dsub] | Size 20 & 22D contacts; low-current signal/control — verify[^dsub] | Non-environmental (standard); ruggedized variants exist[^dsub] | M39029 crimp or solder cup; insert/extract tools[^dsub] | Low–Med | Short | Removable-crimp variants; 500 cycles[^dsub] | Assuming "mil-spec" = sealed; jackscrews left loose | Polarized shell, rack & panel; −55 to +125 °C[^dsub] |
 | **Micro-D (MIL-DTL-83513)** | Compact high-reliability; internal / protected | 9 to 100 (standard layouts)[^microdlay] | 3.0 A[^microd] | Not sealed on its own (interfacial-seal option); treat as internal | twist-pin (or stamped-and-formed) crimp, or PCB/solder; assembly-intensive | High | Moderate–long | 500 cycles; delicate[^microd] | Using it for high current or dirty field service; handling damage | 600 V rms SL / 150 V at 70k ft; .050 in (1.27 mm) centers[^microd] |
 | **Industrial rectangular / Han-style** | Machinery, panels, removable modules | Modular inserts; Han E 6–48 contacts/insert[^hane] | 16 A (Han E); higher-current inserts available (e.g. Han HC)[^hane] | Hood-dependent (IP65–IP69K options) | Crimp or screw/cage-clamp; insert tooling | Med–High | Moderate | Modular, serviceable inserts; ≥ 500 cycles (Han HMC higher)[^hane] | Wrong insert/hood combination; sealing assumed without a rated hood | 500 V (Han E); mixed power/signal/data in one housing[^hane] |
-| **Molex Micro-Fit 3.0** | Internal, non-sealed; −40 to +105 °C[^microfit] | 2–24 circuits[^microfit] | ≤ 8.5 A (10 A with RMF terminal)[^microfit] | Non-sealed[^microfit] | Crimp terminals; hand or applicator tooling | Low | Short (COTS) | Crimp; ~30 cycles (250 with lubricated RMF)[^microfit] | Exceeding the rating; no TPA/keying in volume production | 3.00 mm pitch; 600 V; positive latch, TPA, polarization[^microfit] |
+| **Molex Micro-Fit 3.0** | Internal, non-sealed; −40 to +105 °C[^microfit] | 2–24 circuits[^microfit] | ≤ 8.5 A, terminal-dependent (a 10.0 A RMF terminal is offered — verify exact terminal P/N)[^microfit] | Non-sealed[^microfit] | Crimp terminals; hand or applicator tooling | Low | Short (COTS) | Crimp; ~30 cycles (250 with lubricated RMF)[^microfit] | Exceeding the rating; no TPA/keying in volume production | 3.00 mm pitch; 600 V; positive latch, TPA, polarization[^microfit] |
 
 Contact sizes, insert arrangements, and exact ratings vary by manufacturer and part number — always pull the specific datasheet and, where qualification matters, the QPL.
 
@@ -49,4 +50,4 @@ Contact sizes, insert arrangements, and exact ratings vary by manufacturer and p
 
 [^hane]: HARTING Han E insert (per IEC 61984) — 16 A, 500 V, ≥ 500 mating cycles, 6–48 contacts per insert. The Han family also offers higher-current inserts (e.g. Han HC) and high-mating-cycle variants (Han HMC). <https://www.tme.com/us/en-us/details/09330162601/harting-connectors/harting/>
 
-[^microfit]: Molex, *Micro-Fit 3.0 Connector System Product Family* (document 987650-5984) — 8.5 A max (10 A with the RMF terminal), 600 V, durability typically 30 cycles (up to 250 with factory-lubricated RMF terminals), 3.00 mm pitch, 2–24 circuits, −40 to +105 °C, non-sealed. <https://www.content.molex.com/dxdam/literature/987650-5984.pdf>
+[^microfit]: Molex, *Micro-Fit 3.0 Connector System Product Family* (document 987650-5984, Rev. 5) — states an "8.5A maximum current rating," with current "determined by terminal used" (600 V, 3.00 mm pitch, 2–24 circuits, −40 to +105 °C, non-sealed; durability typically 30 cycles, up to 250 with factory-applied lubricant on RMF terminals). The same document offers a "10.0A RMF terminal"; its ordering table lists RMF terminals in 20–30 AWG (series 46235) and 18 AWG (series 203951). RMF primarily means *Reduced Mating Force* — current is set by the exact terminal P/N and wire gauge, not by the RMF designation itself. <https://www.content.molex.com/dxdam/literature/987650-5984.pdf>

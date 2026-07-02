@@ -1,5 +1,6 @@
 ﻿---
 title: "Appendix: Quick-Reference Tables"
+description: "Quick-reference tables: IP ratings, 38999 contact test currents, a family-selection quick guide, and typical mating-cycle life by connector family."
 slug: /appendix/quick-reference-tables
 sidebar_label: Quick Reference Tables
 sidebar_position: 1
@@ -84,10 +85,10 @@ When this guide conflicts with a manufacturer datasheet, applicable standard, cu
 
 [^microfitcyc]: Molex, *Micro-Fit 3.0 Connector System Product Family* — durability typically 30 cycles (up to ~250 with factory-lubricated RMF terminals). <https://www.content.molex.com/dxdam/literature/987650-5984.pdf>
 
-[^milcyc]: 500-cycle durability is specified across the common mil-spec families — MIL-DTL-38999 (Amphenol/Glenair standard 500-cycle contacts), MIL-DTL-83513 Micro-D (Glenair performance spec §3.2.8), and MIL-DTL-24308 D-sub. <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>
+[^milcyc]: 500-cycle durability is specified per family: MIL-DTL-38999 — Amphenol Series III catalog lists "standard 500 cycle contacts" <https://amphenol-in.com/wp-content/uploads/2024/12/MIL-38999-Sr-III-AC38907-0317.pdf>; MIL-DTL-26482 Series 2 — ≥ 500 mating cycles per the Aero-Electric catalog <https://www.aero-electric.com/PDF/MIL-DTL-26482%20Series%202.pdf>; MIL-DTL-83513 Micro-D — 500 cycles per the Glenair performance spec §3.2.8 <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>; MIL-DTL-24308 D-sub — 500 mating/unmating cycles per MIL-DTL-24308G §4.5.18 <https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7139/5831_mil-dtl-24308.pdf>.
 
 [^m12cyc]: Turck M12 cordset RK 4.5T-5 — mechanical life > 100 mating cycles. <https://www.turck.us/datasheet/_us/edb_U2188-94_eng_us.pdf>
 
-[^hancyc]: HARTING Han standard hoods/inserts are commonly rated ~500 cycles; the Han HMC (High Mating Cycle) series is rated far higher (up to ~10,000). <https://www.harting.com/>
+[^hancyc]: HARTING Han E series inserts are rated ≥ 500 mating cycles (Han E insert listing/datasheet: <https://www.tme.com/us/en-us/details/09330162601/harting-connectors/harting/>). The Han HMC (High Mating Cycle) series is designed for 10,000+ mating cycles (HARTING Han HMC product page: <https://www.harting.com/US/en/markets/han%C2%AE-hmc-10000-times-reliably-connecting-testing-platform>).
 
 [^usbccyc]: USB Type-C Cable and Connector Specification (USB-IF) — 10,000-cycle durability minimum; manufacturer USB-C datasheets carry the same figure. <https://www.mouser.com/pdfDocs/USBCCADatasheet.pdf>

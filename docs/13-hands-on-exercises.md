@@ -1,6 +1,7 @@
 ---
 id: 13-hands-on-exercises
 title: "13. Hands-On Learning Exercises"
+description: "Eight hands-on connector exercises with real deliverables — selection tables, pinouts, part-number decoding, cable drawings, ICD entries, and risk reviews."
 slug: /13-hands-on-exercises
 sidebar_label: Hands-On Exercises
 sidebar_position: 13

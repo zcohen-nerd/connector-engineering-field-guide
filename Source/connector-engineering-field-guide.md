@@ -120,6 +120,17 @@ The category table lists fiber for completeness, but optical connectors are thei
 
 A full fiber deep-dive is **out of scope for v1** of this guide; treat this as a pointer and work from the connector/fiber manufacturer and the applicable standard.
 
+### 2.2 RF connectors — a brief orientation
+
+The category table lists RF/coax for completeness; like fiber, RF connectors are their own discipline, and this guide keeps them at orientation level:
+
+- **Impedance is a system property:** the connector, cable, and terminations form a controlled-impedance line — 50 Ω dominates RF/microwave, GPS, and comms; 75 Ω dominates video/broadcast. The two don't mix, and visually similar connectors (BNC exists in both) are not interchangeable.
+- **Families have frequency ceilings:** as a rough ordering, SMA-class connectors reach higher frequencies than N/TNC, which reach higher than BNC — but the exact ceiling is a datasheet parameter for the specific connector and cable, not a family constant.
+- **Mating torque is a specification, not a feel:** threaded RF interfaces (SMA and kin) specify a mating torque — use the torque wrench; over- or under-torquing degrades the match and damages mating interfaces.
+- **Protect high-cycle test ports:** use a sacrificial adapter (a "connector saver") on ports that see many mate cycles, so the wear lands on the cheap replaceable part.
+
+A full RF deep-dive is **out of scope for v1** of this guide; treat this as a pointer and work from the connector/cable manufacturer's data and your RF requirements.
+
 ---
 
 ## 3. Connector Standards and Families
@@ -170,7 +181,7 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 | Deutsch DTM / DT / DTP | IP68[^deutsch] | ~7.5 A (DTM, size 20) / ~13 A (DT, size 16) / ~25 A (DTP, size 12)[^deutsch] | Genderless wedgelock housings; ubiquitous in off-road/automotive; hand-crimpable |
 | TE AMP Superseal 1.5 / AMPSEAL | IP67[^superseal] | ~14 A (Superseal 1.5)[^superseal] | Compact sealed inline; AMPSEAL for higher pin counts |
 | Molex MX150 / MX150L | ≥ IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
-| Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify) | Long-standing automotive terminal system |
+| Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants[^metripack] | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify)[^metripack] | Long-standing automotive terminal system |
 
 **Where they win:** IP67/IP68 sealing and vibration life far beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are the sweet spot for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required.
 
@@ -264,7 +275,7 @@ Two procurement traps in particular: crimp contacts are often sold only in minim
 
 | Plating | Application | Advantage | Limitation |
 |---|---|---|---|
-| Gold (thicker, e.g. 50 µin class) | Low-current signals, mil-spec, dry circuits | Excellent oxidation resistance, low contact resistance | Cost; wears at very high cycle counts |
+| Gold (thicker, e.g. 50 µin class[^goldplate]) | Low-current signals, mil-spec, dry circuits | Excellent oxidation resistance, low contact resistance | Cost; wears at very high cycle counts |
 | Gold flash (thin) | Commercial, moderate signal | Lower cost; suitable for some commercial signal applications | Thin flash wears through with cycling; not equivalent to thicker gold for high-cycle or harsh-service dry-circuit applications |
 | Tin / tin-lead | Power / internal harness contacts | Inexpensive, good for larger current | Common for power/internal use but more vulnerable to fretting and oxidation in low-level/dry circuits. **Pure tin** can raise tin-whisker concerns in some applications; **tin-lead** and other finishes have different tradeoffs and may be restricted by environmental/regulatory requirements. Verify plating requirements for the program. |
 | Silver | High-current power, RF | Excellent conductivity | Can tarnish or form sulfide films that increase contact resistance depending on environment, contact force, and wiping action |
@@ -316,7 +327,7 @@ Connector shielding is a *system* property: it depends on maintaining a continuo
 
 The rear hardware has two jobs: bond the shield 360° into the shell, and carry cable load through the clamp and backshell so the contacts never see it.
 
-**Why a pigtail is bad:** it turns the shield connection into a small series **inductor**, and inductive impedance rises with frequency (Z ≈ 2πfL). A short pigtail is on the order of ~10 nH — negligible milliohms at DC, but ≈ 2 Ω at 30 MHz and tens of ohms by a few hundred MHz. That impedance lets shield current develop a voltage and re-radiate — the mechanism behind the guide's repeated "pigtails are inductive / pigtails radiate" caution.
+**Why a pigtail is bad:** it turns the shield connection into a small series **inductor**, and inductive impedance rises with frequency (Z ≈ 2πfL). The standard EMC rule of thumb is ~10 nH *per centimeter* of pigtail (see e.g. Ott, *Electromagnetic Compatibility Engineering*) — so even a 1 cm pigtail is ≈ 2 Ω at 30 MHz and tens of ohms by a few hundred MHz, and real pigtails are usually longer. That impedance lets shield current develop a voltage and re-radiate — the mechanism behind the guide's repeated "pigtails are inductive / pigtails radiate" caution.
 
 ---
 
@@ -371,7 +382,7 @@ Whether contacts are supplied with the connector or must be ordered separately d
 
 ### 7.3 Shell sizes
 
-Common 38999 shell sizes are odd-numbered: 9, 11, 13, 15, 17, 19, 21, 23, 25. Larger shell = more room for contacts, larger contacts, or hybrid layouts — at the cost of weight, panel space, and money. **The typical contact range below is a rough orientation aid, not a selection rule. Actual contact count and contact sizes are defined by the insert arrangement drawing.**[^amphenolcat]
+Common 38999 **Series I/III** shell sizes are odd-numbered: 9, 11, 13, 15, 17, 19, 21, 23, 25 (Series II uses its own even-numbered scheme, 8–24 — decode from the catalog). Larger shell = more room for contacts, larger contacts, or hybrid layouts — at the cost of weight, panel space, and money. **The typical contact range below is a rough orientation aid, not a selection rule. Actual contact count and contact sizes are defined by the insert arrangement drawing.**[^amphenolcat]
 
 | Shell size | Approx OD | Typical contact range (orientation only) | Notes |
 |---|---|---|---|
@@ -800,6 +811,10 @@ Consolidated citations for every sourced claim in this guide, referenced by labe
 
 [^mx150]: Molex MX150 / MX150L sealed connector system — exceeds IEC IP67; MX150L supports up to ~40 A (8 AWG) and ~30 A (10–12 AWG). <https://www.mouser.com/pdfdocs/molexmx150sealedconnectorsystem.pdf>
 
+[^metripack]: Aptiv (formerly Delphi) *Metri-Pack Connection System* datasheet — the series are designated by nominal terminal blade size (150/280/480/630/800 class) and offered in sealed and unsealed variants, with per-series current envelopes stated in the datasheet. The figures in this row are deliberately kept qualitative — verify the exact series/terminal datasheet before use. <https://www.tti.com/content/dam/tti-commons/supplier/aptiv/doc/aptiv-metri-pack-connection-system-datasheet-specifications.pdf>
+
+[^goldplate]: The "50 µin class" figure is the common mil-contact standard: Glenair's MIL-DTL-38999 contact materials specification lists pin/socket contacts as 50 microinches minimum gold per ASTM B488 over 50–100 µin nickel per QQ-N-290; Glenair's MIL-DTL-83513 Micro-D materials spec states the same 50 µin minimum gold over nickel underplate. <https://www.glenair.com/mil-dtl-38999/pdf/contact-performance-spec.pdf>
+
 [^amphenolcat]: Amphenol (Interconnect India), *MIL-DTL-38999 Series III* catalog (AC38907, Rev 03/17). "How to order" (p. 31): `D38999/` = Series III; shell style `26` = straight plug (`20` = wall-mount receptacle, `24` = jam-nut receptacle); service class `W` = corrosion-resistant olive-drab cadmium-plated aluminum; shell-size letters `A`=9 … `E`=17 … `J`=25; contact type `P` = pin, `S` = socket. Master key/keyway positions **N** (normal), A, B, C, D, E (p. 7). Series III uses the threaded Tri-Start (Acme), scoop-proof, self-locking / anti-decoupling coupling (pp. 4–5). Dimensional tables (pp. 12–15) show coupling-nut OD growing from ~22 mm (size 9) to ~48 mm (size 25). <https://amphenol-in.com/wp-content/uploads/2024/12/MIL-38999-Sr-III-AC38907-0317.pdf>
 
 [^glenaircontacts]: Glenair, *MIL-DTL-38999 Contact Performance Specifications* — Class H/N/Y contact-resistance **test currents**: size 12 → 17 A, size 16 → 10 A, size 20 → 5 A, size 22D → 3 A (per MIL-C-39029 / AS39029). These are test currents for the contact-resistance measurement, **not** guaranteed continuous ratings. The same spec's separate *current-rating* (maximum amps, crimp) column is higher — e.g. size 16 → 13 A, size 12 → 23 A — reflecting free-air current-carrying capacity rather than the resistance-test current. <https://www.glenair.com/mil-dtl-38999/pdf/contact-performance-spec.pdf>
@@ -824,11 +839,11 @@ Consolidated citations for every sourced claim in this guide, referenced by labe
 
 [^microfitcyc]: Molex, *Micro-Fit 3.0 Connector System Product Family* — durability typically 30 cycles (up to ~250 with factory-lubricated RMF terminals). <https://www.content.molex.com/dxdam/literature/987650-5984.pdf>
 
-[^milcyc]: 500-cycle durability is specified across the common mil-spec families — MIL-DTL-38999 (Amphenol/Glenair standard 500-cycle contacts), MIL-DTL-83513 Micro-D (Glenair performance spec §3.2.8), and MIL-DTL-24308 D-sub. <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>
+[^milcyc]: 500-cycle durability is specified per family: MIL-DTL-38999 — Amphenol Series III catalog lists "standard 500 cycle contacts" <https://amphenol-in.com/wp-content/uploads/2024/12/MIL-38999-Sr-III-AC38907-0317.pdf>; MIL-DTL-26482 Series 2 — ≥ 500 mating cycles per the Aero-Electric catalog <https://www.aero-electric.com/PDF/MIL-DTL-26482%20Series%202.pdf>; MIL-DTL-83513 Micro-D — 500 cycles per the Glenair performance spec §3.2.8 <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>; MIL-DTL-24308 D-sub — 500 mating/unmating cycles per MIL-DTL-24308G §4.5.18 <https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7139/5831_mil-dtl-24308.pdf>.
 
 [^m12cyc]: Turck M12 cordset RK 4.5T-5 — mechanical life > 100 mating cycles. <https://www.turck.us/datasheet/_us/edb_U2188-94_eng_us.pdf>
 
-[^hancyc]: HARTING Han standard hoods/inserts are commonly rated ~500 cycles; the Han HMC (High Mating Cycle) series is rated far higher (up to ~10,000). <https://www.harting.com/>
+[^hancyc]: HARTING Han E series inserts are rated ≥ 500 mating cycles (Han E insert listing/datasheet: <https://www.tme.com/us/en-us/details/09330162601/harting-connectors/harting/>). The Han HMC (High Mating Cycle) series is designed for 10,000+ mating cycles (HARTING Han HMC product page: <https://www.harting.com/US/en/markets/han%C2%AE-hmc-10000-times-reliably-connecting-testing-platform>).
 
 [^usbccyc]: USB Type-C Cable and Connector Specification (USB-IF) — 10,000-cycle durability minimum; manufacturer USB-C datasheets carry the same figure. <https://www.mouser.com/pdfDocs/USBCCADatasheet.pdf>
 

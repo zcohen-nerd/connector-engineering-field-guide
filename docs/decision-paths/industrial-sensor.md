@@ -1,6 +1,7 @@
 ---
 id: industrial-sensor
 title: "Pick a connector for an industrial sensor"
+description: "Pick a connector for an industrial sensor: M12 A-coded and M8 starting points, the specs that decide it, common traps, and the documentation bundle."
 slug: /decision-paths/industrial-sensor
 sidebar_label: Industrial sensor
 sidebar_position: 1

@@ -12,12 +12,16 @@ When this guide conflicts with a datasheet, applicable standard, customer requir
 
 ## Repository layout
 
-- `Source/connector-engineering-field-guide.md` is the current canonical guide source.
-- `Source/source-notes.md` is the source-verification backlog.
-- `docs/` contains the Docusaurus site content (one Markdown file per section), including:
+**Canonicality:** `Source/connector-engineering-field-guide.md` is the single, unambiguous source of truth for the guide's 14 numbered sections + appendix — every factual correction, citation, and source-verification update lands there first. `docs/` numbered pages (`00`–`14` + `appendix/`) are refreshed *from* `Source/`; if the two ever disagree on a factual claim, `Source/` is authoritative and `docs/` is stale and due for a refresh.
+
+- `Source/connector-engineering-field-guide.md` is the canonical guide source (14 sections + appendix).
+- `Source/source-notes.md` is the source-verification backlog for the canonical guide — 17 of 19 tracked claims verified as of 2026-07-02.
+- `docs/` contains the Docusaurus site content. The numbered guide pages (`docs/00-*.md` through `docs/14-*.md`, `docs/appendix/`) mirror `Source/`. The following are **site-only presentational material with no `Source/` equivalent** — useful additions, but not part of the canonical guide text, and not expected to stay in lockstep with `Source/`:
+  - `docs/index.md` — the site home page (cards, navigation).
   - `docs/decision-paths/` — scenario-based connector-selection walkthroughs.
   - `docs/tools/` — reusable engineering-document templates derived from the guide.
   - `docs/examples/` — worked examples derived from the guide's exercises.
+  - `docs/what-people-forget.md` and the diagrams under `static/img/diagrams/`.
 
 ## What the guide helps with
 

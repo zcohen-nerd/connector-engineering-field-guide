@@ -25,6 +25,7 @@
 13. [Hands-On Learning Exercises](#13-hands-on-learning-exercises)
 14. [30-Day Learning Plan](#14-30-day-learning-plan)
 - [Appendix: Quick-Reference Tables](#appendix-quick-reference-tables)
+- [Sources](#sources)
 - [Usage and Attribution](#usage-and-attribution)
 
 ---
@@ -107,13 +108,23 @@ Scope your search by category before diving into specific families. Each categor
 | Fiber / data | Long-distance data, EMI immunity, bandwidth | LC, ST, expanded-beam rugged fiber, M12 Ethernet | Dirty field environments without cleaning discipline |
 | Hybrid | Power + signal + data + coax/fiber/fluid in one | 38999 hybrid inserts, Han-Modular | Simple low-cost harnesses where separate connectors are cleaner |
 
-> **Often overlooked.** Board-to-wire connectors like Molex Micro-Fit, Mini-Fit, Mega-Fit, and sealed Squba are not "hobby" parts. Professional versions have positive latches, polarization, secondary locks (TPA), defined current/voltage ratings, and sealed variants. The dividing line is the specific family and rating, not the brand.
+> **Often overlooked.** Board-to-wire connectors like Molex Micro-Fit, Mini-Fit, Mega-Fit, and sealed Squba are not "hobby" parts. Professional versions have positive latches, polarization, secondary locks (TPA — Terminal Position Assurance, a secondary lock that confirms every contact is fully seated before the connector can mate), defined current/voltage ratings, and sealed variants. The dividing line is the specific family and rating, not the brand.
+
+### 2.1 Fiber connectors — a brief orientation
+
+The category table lists fiber for completeness, but optical connectors are their own discipline, and this guide keeps them at orientation level:
+
+- **Datacom / indoor:** LC and SC dominate structured cabling and equipment — ceramic ferrules, polished endfaces, clean-before-mate discipline.
+- **Rugged / military:** *expanded-beam* connectors (including expanded-beam MIL-DTL-38999 variants) tolerate dust and vibration better than physical-contact ferrules; **ARINC 801** termini and **MIL-DTL-38999 fiber slash sheets** place optical contacts into the same rugged circular shells used for copper.
+- **What drives selection:** endface cleanliness, alignment/insertion loss, bend radius, and single- vs. multi-mode — not the mechanical envelope.
+
+A full fiber deep-dive is **out of scope for v1** of this guide; treat this as a pointer and work from the connector/fiber manufacturer and the applicable standard.
 
 ---
 
 ## 3. Connector Standards and Families
 
-> **Note.** Always verify against the *current* version of the applicable standard and the manufacturer's datasheet. Standards get revised; part-number schemas vary between manufacturers. What follows is a framework for thinking, not a substitute for the source document — when this guide and a manufacturer datasheet or standard disagree, the datasheet/standard wins. MIL-DTL-38999 covers miniature high-density environmental circular connectors with removable crimp or hermetic solder contacts; M12 connectors are covered by the IEC 61076-2-x family (e.g. 61076-2-101 for A/B/D codings, 61076-2-109 for X-coded, 61076-2-111 for power codings). <!-- TODO: source/verify exact IEC references and MIL-DTL scopes -->
+> **Note.** Always verify against the *current* version of the applicable standard and the manufacturer's datasheet. Standards get revised; part-number schemas vary between manufacturers. What follows is a framework for thinking, not a substitute for the source document — when this guide and a manufacturer datasheet or standard disagree, the datasheet/standard wins. MIL-DTL-38999 covers miniature high-density environmental circular connectors with removable crimp or hermetic solder contacts; M12 connectors are covered by the IEC 61076-2-x family (e.g. 61076-2-101 for A/B/D codings, 61076-2-109 for X-coded, 61076-2-111 for power codings — sourced in Section 8); the MIL-DTL-38999 scope and part-number structure are sourced in Section 7.
 
 ### 3.1 At-a-glance family comparison
 
@@ -147,8 +158,21 @@ Scope your search by category before diving into specific families. Each categor
 
 Two specific clarifications worth internalizing:
 
-- **MIL-DTL-24308 D-subs in their standard form are non-environmental, polarized rack-and-panel connectors.** "Mil-spec" does not by itself mean "rugged outdoor / environmentally sealed" — read what the spec actually covers. Ruggedized/environmental D-sub variants exist and must be selected and verified intentionally. D-subs are perfectly appropriate for protected panels, racks, test gear, legacy interfaces, and internal equipment. <!-- TODO: source/verify MIL-DTL-24308 non-environmental statement -->
-- **Micro-D (MIL-DTL-83513)** is a fine-pitch, high-density, lightweight, high-reliability family used where size and weight matter. It carries lower current than larger connectors and has more assembly/tooling complexity. Exact pitch and contact arrangements vary by product — verify against the catalog. <!-- TODO: source/verify Micro-D pitch and contact arrangement statements --> Treat it as an internal / protected high-reliability connector, not a high-current or dirty field-service connector.
+- **MIL-DTL-24308 D-subs in their standard form are non-environmental, polarized rack-and-panel connectors.**[^dsub] "Mil-spec" does not by itself mean "rugged outdoor / environmentally sealed" — read what the spec actually covers. Ruggedized/environmental D-sub variants exist and must be selected and verified intentionally. D-subs are perfectly appropriate for protected panels, racks, test gear, legacy interfaces, and internal equipment.
+- **Micro-D (MIL-DTL-83513)** is a fine-pitch (contacts on .050 in / 1.27 mm centers), high-density, lightweight, high-reliability family used where size and weight matter.[^microd] It carries lower current than larger connectors (≈ 3 A per contact) and has more assembly/tooling complexity. Exact contact arrangements vary by product — verify against the catalog. Treat it as an internal / protected high-reliability connector, not a high-current or dirty field-service connector.
+
+### 3.2 Sealed automotive connector families
+
+Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cost-effective, sealed, crimp-based ecosystem built for vehicles — often the right answer for makers and robotics teams going rugged on a budget. These are wire-to-wire / panel crimp systems; verify the exact series datasheet.
+
+| Family | Typical sealing | Typical current / contact | Notes |
+|---|---|---|---|
+| Deutsch DTM / DT / DTP | IP68[^deutsch] | ~7.5 A (DTM, size 20) / ~13 A (DT, size 16) / ~25 A (DTP, size 12)[^deutsch] | Genderless wedgelock housings; ubiquitous in off-road/automotive; hand-crimpable |
+| TE AMP Superseal 1.5 / AMPSEAL | IP67[^superseal] | ~14 A (Superseal 1.5)[^superseal] | Compact sealed inline; AMPSEAL for higher pin counts |
+| Molex MX150 / MX150L | ≥ IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
+| Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify) | Long-standing automotive terminal system |
+
+**Where they win:** IP67/IP68 sealing and vibration life far beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are the sweet spot for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required.
 
 ---
 
@@ -164,7 +188,7 @@ Before picking a family, write down: What crosses this boundary (power / signal 
 
 | Criterion | What to evaluate | Common mistake |
 |---|---|---|
-| Voltage | Use the specified AC and DC working-voltage ratings; account for RMS/peak, transients, creepage/clearance, pollution degree, altitude, and the applicable safety standard | Using DC rating on an AC circuit; ignoring transients/peak |
+| Voltage | Use the specified AC and DC working-voltage ratings; account for RMS/peak, transients, creepage/clearance (creepage = shortest path along a surface between two conductors; clearance = shortest through-air gap), pollution degree, altitude, and the applicable safety standard | Using DC rating on an AC circuit; ignoring transients/peak |
 | Current | Per-contact rating *at temperature*, bundle-derated per the manufacturer's derating curve. Apply a conservative design margin. | Using max rating with no thermal/bundle derating |
 | Signal type | Discrete, analog, thermocouple, encoder, CAN, RS-485, Ethernet, RF — each has different needs | Mixing high-current power and mV analog in one insert |
 | Pin count | Required + shields + spares + growth (see spare-capacity note below) | Filling every contact, then re-engineering for one more pin |
@@ -176,6 +200,14 @@ Before picking a family, write down: What crosses this boundary (power / signal 
 > **Spare capacity.** Add spare positions where feasible and justified. Unused cavities must still be sealed, documented, and configuration-controlled. Spare capacity is useful in expandable systems, but shell size, sealing plugs, weight, cost, panel space, and customer/program requirements may override it. <!-- engineering heuristic, not a hard rule -->
 
 > **Current rating is not one number.** It depends on contact size, number of loaded contacts, ambient temperature, wire gauge, enclosure heat, and acceptable temperature rise. Always consult the manufacturer's derating curve for a fully-loaded connector.
+
+#### How to read a derating curve
+
+A contact-current derating curve plots the **allowable current per contact** (often as a percent of the single-contact rating) against the **number of energized contacts**, at a stated ambient temperature. To use it: find your loaded-contact count on the x-axis, read the allowable percentage (or current) for your ambient, apply it to every current-carrying contact, and keep a design margin below that.
+
+*Illustrative only — use the manufacturer's actual curve:* a contact good for its full rating with a single pin energized might be derated to roughly 70–80% in a fully-loaded insert, and lower again at elevated ambient.
+
+**Why fully-loaded is worse:** every energized contact dissipates I²R heat, and closely packed contacts warm each other (mutual heating), so the whole insert runs hotter and each contact must carry *less* to stay within its temperature limit. The falloff steepens as the loaded-contact count and ambient rise — which is exactly why "current rating is not one number."
 
 ### Step 3: Mechanical / environmental requirements
 
@@ -197,6 +229,8 @@ Before picking a family, write down: What crosses this boundary (power / signal 
 
 This is where the technically perfect connector turns out to be dead on arrival. Ask: Who crimps it? What tool is required? Is the crimp tool calibrated? Are contacts removable? Insertion/extraction tools available? Spare contacts stocked? Mating caps stocked? QPL-qualified, COTS, or equivalent? Second source? Lead time vs. schedule? Strip length / crimp spec defined? Inspection / pull-test plan?
 
+Two procurement traps in particular: crimp contacts are often sold only in minimum order quantities (bags of ~100), and the connector, its contacts, the backshell, and the crimp tooling each carry *independent* lead times — order them together and early, not as an afterthought.
+
 ---
 
 ## 5. Connector Anatomy
@@ -217,7 +251,7 @@ This is where the technically perfect connector turns out to be dead on arrival.
 | Backshell | Rear accessory: strain relief, shield termination, sealing, cable exit angle |
 | Strain relief | Transfers cable load to the connector body, not the contacts |
 | Sealing gland | Compresses around the cable jacket for environmental sealing |
-| Wire seal / grommet | Per-contact seal; *stops moisture tracking along the wire into the body* (see 5.5) |
+| Wire seal / grommet | Per-contact seal; *helps prevent moisture tracking along the wire into the body when correctly sized and assembled* (see 5.5) |
 | Keying / polarization | Prevents incorrect mating or rotational misalignment |
 | Shield termination | Bonds cable shield to shell/backshell, ideally 360° low-impedance |
 | Dust cap | Protects an unmated connector from dirt, water, and pin damage |
@@ -246,10 +280,12 @@ This is where the technically perfect connector turns out to be dead on arrival.
 | PCB through-hole / SMT | Solder tail to board | Board-mount headers, edge connectors | Board-integrated; reflow/hand solder; no field repair |
 | Screw / cage clamp | Mechanical wire capture | Terminal blocks, panel wiring | Field-reworkable, no tooling; retention depends on the system (see Section 10) |
 
+**Front-release vs. rear-release** describes how a removable crimp contact is retained in the insert and which side the tool works from. *Rear-release* contacts (the common MIL-DTL-38999 arrangement) are held by a retention clip in the insert; the insertion/extraction tool enters from the **rear** (wire side), and the contact is installed and removed rearward — convenient for field repair without disturbing the mating face. *Front-release* contacts are unlatched by a tool entering the **mating face**, though the contact is still withdrawn out the rear. Match the tool to the retention type: the wrong tool, or working from the wrong end, bends the retention fingers, damages the insert, or leaves a contact unretained.
+
 ### 5.3 Jam nut vs. flange mount
 
 - **Jam nut:** single hex nut clamps from behind the panel. Compact, simplest install, but can rotate under coupling torque unless an anti-rotation pin/keyway is present. Common for circular connectors.
-- **Flange mount:** bolts around the perimeter. Rigid, cannot rotate, excellent gasket sealing area, repeatable alignment (important for blind mate). Costs envelope.
+- **Flange mount:** bolts around the perimeter. Rigid, cannot rotate, excellent gasket sealing area, repeatable alignment (important for blind mate). Consumes more panel envelope.
 
 ### 5.4 Solder-cup quality — when it's right and how it fails
 
@@ -269,6 +305,18 @@ Solder cups are often dismissed as "skill-dependent," but here's the actual deci
 
 - **Ground-first / power-last sequencing:** some connector families and contact systems support mating sequence through staggered (longer/shorter) contacts or specialized inserts, so that ground/chassis contacts mate first and break last, and power mates last (or signal before power, depending on architecture). This prevents the electronics from being powered before a ground reference exists, which can cause latch-up, ground bounce, or resets. Use it where the design requires it, but verify that staggered or sequenced contacts are actually available for your exact connector family, shell, and arrangement — it is not universal.
 - **Blind mate:** when a module plugs into a chassis without the operator seeing the connector, you need a lead-in chamfer, connector float (radial compliance so the connector self-aligns), and pin-length stagger so misalignment damages nothing. Flange mounts with float are preferred over jam nuts here.
+
+### 5.7 EMI, shielding, and bonding
+
+Connector shielding is a *system* property: it depends on maintaining a continuous, low-impedance path from cable shield → backshell → shell → mating shell → chassis. The pieces:
+
+- **Cable-shield termination:** a 360° circumferential termination (an EMI backshell with a conductive band or spring) keeps shield impedance low across frequency. A **pigtail** — the shield gathered into a short wire to a pin or lug — is the common failure.
+- **Shell-to-shell continuity:** the mated shells must actually conduct (grounding fingers/springs, clean conductive plating), or the shield path is broken at the interface.
+- **Backshell bonding & finishes:** the backshell must bond to the shell; conductive finishes and, where needed, EMI gaskets maintain continuity around the joint. A non-conductive finish (e.g. some anodize) breaks it.
+
+The rear hardware has two jobs: bond the shield 360° into the shell, and carry cable load through the clamp and backshell so the contacts never see it.
+
+**Why a pigtail is bad:** it turns the shield connection into a small series **inductor**, and inductive impedance rises with frequency (Z ≈ 2πfL). A short pigtail is on the order of ~10 nH — negligible milliohms at DC, but ≈ 2 Ω at 30 MHz and tens of ohms by a few hundred MHz. That impedance lets shield current develop a voltage and re-radiate — the mechanism behind the guide's repeated "pigtails are inductive / pigtails radiate" caution.
 
 ---
 
@@ -318,14 +366,12 @@ Whether contacts are supplied with the connector or must be ordered separately d
 |---|---|---|
 | Series I | Bayonet | Rugged environmental circular; common historically in aero/defense |
 | Series II | Bayonet, low-profile / space-saving | Lower-height version where space/height matters |
-| Series III | Threaded (Tri-Start triple-start thread, self-locking / anti-decoupling features) | Often the default choice for new harsh-environment defense/aerospace designs unless size, mating speed, legacy compatibility, customer requirements, or program requirements drive another series. Scoop-proof. Requires correct coupling engagement and manufacturer-specified torque where applicable; do not rely on casual finger-tight assembly in vibration environments. |
+| Series III | Threaded (Tri-Start triple-start thread, self-locking / anti-decoupling features)[^amphenolcat] | Often the default choice for new harsh-environment defense/aerospace designs unless size, mating speed, legacy compatibility, customer requirements, or program requirements drive another series. Scoop-proof (the outer shell engages before the pins, so a misaligned plug can't scoop across and bend them). Requires correct coupling engagement and manufacturer-specified torque where applicable; do not rely on casual finger-tight assembly in vibration environments. |
 | Series IV | Breech-lock | Less common, specialized use |
-
-<!-- TODO: source/verify MIL-DTL-38999 Series I/II/III/IV coupling descriptions -->
 
 ### 7.3 Shell sizes
 
-Common 38999 shell sizes are odd-numbered: 9, 11, 13, 15, 17, 19, 21, 23, 25. Larger shell = more room for contacts, larger contacts, or hybrid layouts — at the cost of weight, panel space, and money. **The typical contact range below is a rough orientation aid, not a selection rule. Actual contact count and contact sizes are defined by the insert arrangement drawing.**
+Common 38999 shell sizes are odd-numbered: 9, 11, 13, 15, 17, 19, 21, 23, 25. Larger shell = more room for contacts, larger contacts, or hybrid layouts — at the cost of weight, panel space, and money. **The typical contact range below is a rough orientation aid, not a selection rule. Actual contact count and contact sizes are defined by the insert arrangement drawing.**[^amphenolcat]
 
 | Shell size | Approx OD | Typical contact range (orientation only) | Notes |
 |---|---|---|---|
@@ -338,7 +384,7 @@ Common 38999 shell sizes are odd-numbered: 9, 11, 13, 15, 17, 19, 21, 23, 25. La
 | 21 | ~44 mm | 30–60 | Heavy-duty harness |
 | 23 / 25 | ~48–52 mm | 50–128 | Max density; manage thermal derating carefully |
 
-> **Note.** Shell-size numbers are designations, not direct millimeter measurements. Verify dimensions against the specific manufacturer datasheet. <!-- TODO: source/verify approximate OD and contact-range figures -->
+> **Note.** Shell-size numbers are designations, not direct millimeter measurements. Approximate ODs are shell-style-dependent — for the Amphenol Series III straight plug, coupling-nut OD runs from ~22 mm (size 9) to ~48 mm (size 25), and receptacle/jam-nut styles are larger. Verify dimensions against the specific manufacturer datasheet.[^amphenolcat]
 
 ### 7.4 Insert arrangements
 
@@ -346,7 +392,7 @@ The insert arrangement defines contact count, sizes, positions, and any mixed po
 
 ### 7.5 Contact sizes and current
 
-MIL-DTL-38999 uses AS39029 (formerly M39029) crimp contacts in sizes such as 22D, 20, 16, 12, and 8, plus size 23 in high-density variants and special coax/twinax/quadrax/fiber contacts. The values below are contact-resistance *test* currents and matching wire size from a manufacturer contact-performance spec — they are useful for relative sizing, **not** a guaranteed continuous-current rating for your application.
+MIL-DTL-38999 uses AS39029 (formerly M39029) crimp contacts in sizes such as 22D, 20, 16, 12, and 8, plus size 23 in high-density variants and special coax/twinax/quadrax/fiber contacts. The values below are contact-resistance *test* currents and matching wire size from a manufacturer contact-performance spec — they are useful for relative sizing, **not** a guaranteed continuous-current rating for your application. This *test* current (for the contact-resistance check) is a different, lower parameter than the contact's free-air current-*carrying* rating — for size 16 that's roughly 13 A carrying vs. the 10 A test value. Neither is what you design to directly: the allowable current comes off the manufacturer's derating curve for your loaded-contact count and temperature.[^glenaircontacts]
 
 | Contact size | Matching wire (AWG) | Spec test current (example) | Typical role |
 |---|---|---|---|
@@ -357,7 +403,7 @@ MIL-DTL-38999 uses AS39029 (formerly M39029) crimp contacts in sizes such as 22D
 | 8 and larger | per catalog | higher (power contacts) | High-current power; also coax/twinax in size 8 |
 | 23 (HD) | per catalog | lower than 22D | High-density signal only; verify by exact P/N |
 
-> **Warning.** These are example test values from one manufacturer's contact spec, not a universal continuous rating. Actual allowable current depends on the exact contact P/N, wire gauge, insulation, number of loaded contacts (bundle derating), ambient temperature, and acceptable temperature rise. Always size against the specific manufacturer's derating curve and contact datasheet. Smaller size number = physically larger contact = more current. <!-- TODO: source/verify 38999 contact-size current example table -->
+> **Warning.** These are example test values from one manufacturer's contact spec, not a universal continuous rating. Actual allowable current depends on the exact contact P/N, wire gauge, insulation, number of loaded contacts (bundle derating), ambient temperature, and acceptable temperature rise. Always size against the specific manufacturer's derating curve and contact datasheet. Smaller size number = physically larger contact = more current.
 
 ### 7.6 Coax, twinax, and quadrax in a 38999
 
@@ -367,16 +413,16 @@ MIL-DTL-38999 uses AS39029 (formerly M39029) crimp contacts in sizes such as 22D
 
 Service class controls shell material, plating/finish, corrosion resistance, conductivity, and environmental capability (aluminum with cadmium/nickel, stainless, composite, zinc-nickel alternatives, firewall/hermetic, etc.). Verify against the manufacturer catalog and applicable slash sheet.
 
-D38999 Series III uses rotational keying (polarization) with positions commonly designated **N, A, B, C, D, and E** — N being normal — giving up to six clockings per shell size. Both halves must share the same position to mate; even identical connectors won't mate if keys differ. Use alternate keying when several same-shell-size connectors sit on one panel, when wrong mating could damage equipment, or when power and signal connectors could be confused. Document keying in the ICD — don't rely on technician memory. Verify the exact polarization options against the manufacturer's catalog for the specific connector.
+D38999 Series III uses rotational keying (polarization) with positions commonly designated **N, A, B, C, D, and E** — N being normal[^amphenolcat] — giving up to six clockings per shell size. Both halves must share the same position to mate; even identical connectors won't mate if keys differ. Use alternate keying when several same-shell-size connectors sit on one panel, when wrong mating could damage equipment, or when power and signal connectors could be confused. Document keying in the ICD — don't rely on technician memory. Verify the exact polarization options against the manufacturer's catalog for the specific connector.
 
 ### 7.8 Decoding a part number (worked example)
 
-A genuine MIL-DTL-38999 Series III part number uses the `D38999/...` base specification. Example: `D38999/26WE26PN` (a Series III straight plug in this manufacturer's decoder family).
+A genuine MIL-DTL-38999 Series III part number uses the `D38999/...` base specification. Example: `D38999/26WE26PN` (a Series III straight plug in this manufacturer's decoder family).[^amphenolcat]
 
 | Field | Value | Meaning |
 |---|---|---|
 | D38999/26 | `/26` | For this D38999 Series III decoder family, `/26` indicates a straight plug. Verify other shell-style numbers against the specific manufacturer catalog. |
-| W | `W` | Finish/material class (per the decoder table; example: aluminum, cadmium olive drab) |
+| W | `W` | Finish/material class. In Amphenol's decoder, `W` = corrosion-resistant olive-drab cadmium-plated aluminum. Finish letters vary by manufacturer. |
 | E | `E` | Shell-size letter. The shell-size letter must be mapped through the catalog. For this example, `E` maps to shell size 17. |
 | 26 | `26` | Insert arrangement code for that shell size. Read with the shell size, the full designation is **17-26** (shell size 17, arrangement 26). |
 | P | `P` | Contact type — P = pin, S = socket |
@@ -384,7 +430,7 @@ A genuine MIL-DTL-38999 Series III part number uses the `D38999/...` base specif
 
 Read it as linked fields: the letter (`E`) gives the shell size (17), and the trailing number (`26`) is the insert arrangement *within* that shell size. The `26` alone is not the full insert arrangement — the full designation is **17-26**. The same arrangement number means different things in different shell sizes, so always pair them.
 
-> **Warning.** D38999 part-number schemas vary by manufacturer (Amphenol, Glenair, Souriau, ITT Cannon, TE, Eaton). Finish letters, available arrangements, and accessory codes are not identical across vendors. Always decode against the *specific* manufacturer's catalog/decoder, and verify against the QPL when qualification matters. A conforming part number from two vendors is not automatically interchangeable — match series, shell size, insert arrangement, contact type, finish, and keying. <!-- TODO: source/verify D38999 part-number decoder example against a specific manufacturer catalog -->
+> **Warning.** D38999 part-number schemas vary by manufacturer (Amphenol, Glenair, Souriau, ITT Cannon, TE, Eaton). Finish letters, available arrangements, and accessory codes are not identical across vendors. Always decode against the *specific* manufacturer's catalog/decoder, and verify against the QPL when qualification matters. A conforming part number from two vendors is not automatically interchangeable — match series, shell size, insert arrangement, contact type, finish, and keying.
 
 ### 7.9 Common 38999 beginner mistakes
 
@@ -411,11 +457,9 @@ M12 is a workhorse of industrial automation — sensors, actuators, IO-Link, CAN
 
 Standards framing (verify the applicable standard for the exact connector/coding):
 
-- **IEC 61076-2-101** covers many common M12 A/B/D signal/data codings.
-- **IEC 61076-2-109** covers X-coded high-speed data applications.
-- **IEC 61076-2-111** covers M12 power codings such as S/T/K/L.
-
-<!-- TODO: source/verify exact IEC 61076-2-101 / -109 / -111 references; do not reproduce IEC tables -->
+- **IEC 61076-2-101** covers many common M12 A/B/D signal/data codings.[^iec101]
+- **IEC 61076-2-109** covers X- (and H-) coded high-speed data applications.[^iec109]
+- **IEC 61076-2-111** covers M12 power codings such as S/T/K/L.[^iec111]
 
 Standardization improves cross-vendor interoperability, but it does not make it automatic — exact code, pin count, gender, shielding, sealing, torque, and cable-assembly details still need verification against the specific part.
 
@@ -423,7 +467,7 @@ Standardization improves cross-vendor interoperability, but it does not make it 
 
 | Code | Pins | Primary use | Practical note |
 |---|---|---|---|
-| A | 3/4/5/8 | DC sensors, actuators, I/O, IO-Link, some CAN | 4-pin A-coded is extremely common for basic industrial sensors |
+| A | 3/4/5/8 | DC sensors, actuators, I/O, IO-Link, some CAN | 4-pin A-coded is extremely common for basic industrial sensors. IO-Link = a point-to-point digital sensor/actuator protocol carried over the same unshielded 3–4 wires. |
 | B | 5 | PROFIBUS and similar fieldbus | Less common in new systems; keyed differently from A |
 | D | 4 | 10/100BASE-TX industrial Ethernet | 4-pin; commonly used for 10/100 Mbps; not rated for GbE/10G |
 | X | 8 | Gigabit / 10G-class industrial Ethernet | 8-pin, shielded; used for GbE/10G applications |
@@ -432,9 +476,9 @@ Standardization improves cross-vendor interoperability, but it does not make it 
 | S | 4/5 | AC power | Application-specific; verify by catalog |
 | K | varies | AC power | Pin count varies by product/coding — verify catalog. Generally part of M12 power connector standards such as IEC 61076-2-111; verify exact standard, current, and voltage by catalog/application |
 
-> **M12 A-coded current.** Many A-coded M12 connectors are in the ~4 A class within common standard/catalog scopes, but exact current rating depends on the connector, cable assembly, wire gauge, number of contacts loaded, and temperature. Use L-coded, T-coded, or other power-coded variants where the exact datasheet supports the load. <!-- TODO: source/verify M12 A-coded ~4 A class statement -->
+> **M12 A-coded current.** Many A-coded M12 connectors are in the ~4 A class within common standard/catalog scopes,[^iec101] but exact current rating depends on the connector, cable assembly, wire gauge, number of contacts loaded, and temperature. Use L-coded, T-coded, or other power-coded variants where the exact datasheet supports the load.
 
-> **D-coded vs. X-coded — keep this straight.** D-coded is **not** obsolete: it is commonly used for 10/100BASE-TX industrial Ethernet. X-coded is used for GbE/10G-class industrial Ethernet. X-coded is **not** a blanket default for every Ethernet use — choose based on the data rate and verify exact cable category, shielding, pinout, and connector/cable-assembly rating.
+> **D-coded vs. X-coded — keep this straight.** D-coded is **not** obsolete: it is commonly used for 10/100BASE-TX industrial Ethernet.[^iec101] X-coded is used for GbE/10G-class industrial Ethernet.[^iec109] X-coded is **not** a blanket default for every Ethernet use — choose based on the data rate and verify exact cable category, shielding, pinout, and connector/cable-assembly rating.
 
 ### 8.2 Field-wireable vs. molded vs. panel-mount
 
@@ -447,7 +491,7 @@ Standardization improves cross-vendor interoperability, but it does not make it 
 
 ### 8.3 IP rating and sealing
 
-M12 IP rating assumes the correct mating connector, proper torque, correct gasket/O-ring, correct cable jacket OD, undamaged threads, and clean sealing faces. The mating-face O-ring does the work. Many M12 assemblies are IP67 or higher when properly mated and torqued, and IP68/IP69K variants exist — but the rating is a property of the *complete* assembly (both ends), so verify the exact connector and cable assembly. A common coupling torque is around 0.4–0.6 N·m, but treat that as an example only and use the manufacturer's specified value. <!-- TODO: source/verify common M12 torque figure -->
+M12 IP rating assumes the correct mating connector, proper torque, correct gasket/O-ring, correct cable jacket OD, undamaged threads, and clean sealing faces. The mating-face O-ring does the work. Many M12 assemblies are IP67 or higher when properly mated and torqued, and IP68/IP69K variants exist — but the rating is a property of the *complete* assembly (both ends), so verify the exact connector and cable assembly. Coupling torque is manufacturer-specified and varies (for example, Turck specifies 0.8–1.0 N·m for its M12 cordsets); treat any single figure as an example only and use the manufacturer's specified torque, applied with a torque tool.[^m12torque]
 
 > **Warning.** An unmated M12 panel connector is generally not sealed unless capped. Finger-tight is not a sealed mate. Use the manufacturer-specified torque and a torque tool.
 
@@ -585,7 +629,7 @@ Consumer, hobby, and prototype connectors are not automatically "bad." They are 
 
 ### 12.1 "Dupont" connectors
 
-"Dupont" is the shop nickname for the 2.54 mm (0.1") pitch crimp-pin jumper connectors found on every breadboard and dev board. The name is historical and not a real product line; what people mean is a generic 0.1" pin-and-socket housing on individually crimped contacts. They exist because they mate with the universal 0.1" header — which is why they're everywhere in prototyping.
+"Dupont" is the shop nickname for the 2.54 mm (0.1") pitch crimp-pin jumper connectors found on every breadboard and dev board. The name is historical — the 0.1" crimp-jumper lineage traces back through Berg → DuPont → FCI → Amphenol, so it is no longer a distinct current product line, and not a specification you can order to; what people mean is a generic 0.1" pin-and-socket housing on individually crimped contacts. They exist because they mate with the universal 0.1" header — which is why they're everywhere in prototyping.
 
 | Property | Reality |
 |---|---|
@@ -602,14 +646,12 @@ Consumer, hobby, and prototype connectors are not automatically "bad." They are 
 
 | Series | Pitch | Typical use | Notes for professional work |
 |---|---|---|---|
-| XH | 2.5 mm | Hobby battery balance leads, dev boards | Low-cost internal board-to-wire; friction lock (no positive latch). Common but not good for vibration or external service without an additional retention/environmental strategy. |
+| XH | 2.5 mm[^jst] | Hobby battery balance leads, dev boards | Low-cost internal board-to-wire; friction lock (no positive latch). Common but not good for vibration or external service without an additional retention/environmental strategy. |
 | PH | 2.0 mm | Small Li-ion packs, internal signal | Compact internal wire-to-board; useful but not rugged. Acceptable for low-stress internal wiring; not a sealed/rugged external connector. |
 | GH | 1.25 mm | Compact internal signal, sensors | Compact internal wire-to-board with a secure locking feature; useful where small size and retention matter. Not sealed/rugged external by default. |
 | SH | 1.0 mm | Very small board-to-wire (e.g. Qwiic-style) | Tiny, fragile, signal-only. Friction lock. Easy to damage during rework. |
-| VH | 3.96 mm | Internal power / power-supply wiring | Higher-current JST family than smaller series in some configurations; exact current depends on contact/wire/configuration and must be verified. Still internal/protected use unless the full assembly is designed for environment/vibration. |
+| VH | 3.96 mm[^jst] | Internal power / power-supply wiring | Higher-current JST family than the smaller series — rated up to ~10 A with AWG #16 per JST; exact current depends on contact/wire/configuration and must be verified. Still internal/protected use unless the full assembly is designed for environment/vibration. |
 | EH / ZH | 2.5 / 1.5 mm | General signal | Mid-tier signal series; check the datasheet for lock style and current. |
-
-<!-- TODO: source/verify JST family pitch and current statements -->
 
 **The professional read:** "JST" alone is not a connector specification, and it is not automatically hobby-grade — JST also makes genuinely rugged, sealed, locking automotive/industrial series. The dividing line is the specific series and whether it has a positive lock, keying, a verified crimp, and the current/seal rating your application needs.
 
@@ -628,7 +670,7 @@ Consumer, hobby, and prototype connectors are not automatically "bad." They are 
 
 USB-C, HDMI, and similar consumer I/O connectors can be excellent in consumer electronics, lab equipment, internal service ports, and protected user interfaces. What they are not is automatically rugged, sealed, vibration-resistant, EMI-controlled at the enclosure boundary, or appropriate as exposed field connectors.
 
-USB-C has high mating-cycle expectations compared with many internal connectors, but mating-cycle life is not the same as environmental sealing, vibration survival, ESD strategy, strain relief, EMI control, or suitability as an exposed rugged service port. <!-- TODO: source/verify USB-C mating-cycle expectation if an exact number is later added --> HDMI is common and convenient but is usually a poor exposed-service connector in harsh electromechanical systems unless protected or ruggedized.
+USB-C has a high mating-cycle expectation — the USB Type-C specification calls for 10,000-cycle durability, versus roughly 1,500 for USB Type-A[^usbc] — but mating-cycle life is not the same as environmental sealing, vibration survival, ESD strategy, strain relief, EMI control, or suitability as an exposed rugged service port. HDMI is common and convenient but is usually a poor exposed-service connector in harsh electromechanical systems unless protected or ruggedized.
 
 If you need consumer I/O on rugged equipment, place it behind a sealed cover, use an internal service hatch, choose a ruggedized variant, or replace it with a more appropriate sealed connector such as M12 Ethernet, sealed USB, or a qualified circular service connector.
 
@@ -689,7 +731,7 @@ Goal by Day 30: not connector expert, but dangerous in the useful way — able t
 
 ### A1. IP rating reference
 
-IP codes are commonly referenced from IEC 60529. The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529 — IEC 60529 expresses a close equivalent as IPx9. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system. <!-- TODO: source/verify IP rating definitions and IP69K / ISO 20653 distinction -->
+IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529[^iso20653] — IEC 60529 added a close equivalent, IPx9, in its 2013 edition. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system.
 
 | IP | Solid ingress | Liquid ingress | Typical application |
 |---|---|---|---|
@@ -709,7 +751,7 @@ IP codes are commonly referenced from IEC 60529. The high-pressure washdown rati
 | 12 | 12 | 17 A | Higher-current power |
 | 8 / larger | per catalog | power contacts | High current; coax/twinax in size 8 |
 
-*Test currents from a manufacturer contact-performance spec; not a universal continuous rating. Size against the actual contact datasheet and derating curve.* <!-- TODO: source/verify 38999 contact-size current example table -->
+*Test currents from a manufacturer contact-performance spec — a different, lower parameter than the contact's free-air current-carrying rating (e.g. size 16 ≈ 13 A carrying vs. 10 A test), and not a universal continuous rating. Size against the actual contact datasheet and derating curve.*[^glenaircontacts]
 
 ### A3. Family selection quick guide
 
@@ -720,11 +762,75 @@ IP codes are commonly referenced from IEC 60529. The high-pressure washdown rati
 | Industrial Ethernet (GbE) | M12 X-coded | M12 D-coded, exposed RJ45 |
 | Machine umbilical (power+signal+data) | Industrial rectangular / Han-Modular | Many individual small connectors |
 | Serial/debug, benign environment | Micro-D, MIL-grade D-sub, keyed header | Bare headers, exposed USB |
-| High-current robot power (>20 A) | Anderson SB, Han-style power insert, 38999 size 8/larger or dedicated power contacts (HCP/RADSOK); size 12 only where derating supports it | M12 A-coded, XT60/90, 38999 size 16 for the full load |
+| High-current robot power (>20 A) | Anderson SB, Han-style power insert, 38999 size 8/larger or dedicated power contacts (HCP = high-current power, or RADSOK[^radsok]); size 12 only where derating supports it | M12 A-coded, XT60/90, 38999 size 16 for the full load |
 | Internal protected PCB harness | Molex Micro-Fit, TE, Harwin | Bare wire, 0.1" headers, screw terminals on PCB |
 | Fast quick-disconnect, moderate vibration | MIL-DTL-26482 bayonet (verify qualification for the vibration profile) | 38999 threaded (slower to mate) |
 | RF/antenna/GPS line | SMA/TNC/N-Type (impedance-matched) | Random circular signal contacts |
 | Hybrid power+RF+control to one payload | 38999 hybrid insert (coax + power + signal contacts) | Separate connectors if panel space is scarce |
+
+### A4. Typical mating-cycle life by family
+
+Rated mate/unmate cycles vary widely. Design with margin *below* the rated number for the service model (production-only, test, or field-service).
+
+| Family | Typical rated mating cycles |
+|---|---|
+| Molex Micro-Fit 3.0 | ~30 (up to ~250 with lubricated RMF terminals)[^microfitcyc] |
+| MIL-DTL-38999 / MIL-DTL-26482 | 500[^milcyc] |
+| Micro-D (MIL-DTL-83513) | 500[^milcyc] |
+| D-sub (MIL-DTL-24308) | 500[^milcyc] |
+| M12 (screw-lock) | ≥ 100 (per datasheet)[^m12cyc] |
+| Industrial rectangular / Han | ~500 standard; Han HMC (high mating cycle) far higher[^hancyc] |
+| USB-C | 10,000 (USB Type-C spec)[^usbccyc] |
+
+*Cycle life is a durability figure only — not a measure of sealing, vibration, or ruggedness. Verify against the exact part's datasheet.*
+
+---
+
+## Sources
+
+Consolidated citations for every sourced claim in this guide, referenced by label from the body text above. See `source-notes.md` for the verification status of each claim.
+
+[^dsub]: MIL-DTL-24308G (DLA detail specification) — standard D-subminiature connectors are nonenvironmental, polarized-shell, rack-and-panel; ruggedized/environmental variants are separately specified. <https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7139/5831_mil-dtl-24308.pdf>
+
+[^microd]: Glenair, *Micro-D Performance Specifications* (MIL-DTL-83513) — contacts on .050 in (1.27 mm) centers, 3.0 A continuous per contact (−55 to +150 °C), 600 V rms at sea level. <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>
+
+[^deutsch]: TE Connectivity DEUTSCH DT / DTM / DTP series — sealed to IP68; continuous-current ratings ~7.5 A (DTM, size 20), ~13 A (DT, size 16), ~25 A (DTP, size 12). <https://www.te.com/en/products/connectors/automotive-connectors/intersection/deutsch-dtp-connectors.html>
+
+[^superseal]: TE Connectivity AMP SUPERSEAL 1.5 — sealed IP67 automotive/industrial connector; housings rated ~14 A. <https://www.te.com/en/products/connectors/automotive-connectors/intersection/amp-superseal-1-5.html>
+
+[^mx150]: Molex MX150 / MX150L sealed connector system — exceeds IEC IP67; MX150L supports up to ~40 A (8 AWG) and ~30 A (10–12 AWG). <https://www.mouser.com/pdfdocs/molexmx150sealedconnectorsystem.pdf>
+
+[^amphenolcat]: Amphenol (Interconnect India), *MIL-DTL-38999 Series III* catalog (AC38907, Rev 03/17). "How to order" (p. 31): `D38999/` = Series III; shell style `26` = straight plug (`20` = wall-mount receptacle, `24` = jam-nut receptacle); service class `W` = corrosion-resistant olive-drab cadmium-plated aluminum; shell-size letters `A`=9 … `E`=17 … `J`=25; contact type `P` = pin, `S` = socket. Master key/keyway positions **N** (normal), A, B, C, D, E (p. 7). Series III uses the threaded Tri-Start (Acme), scoop-proof, self-locking / anti-decoupling coupling (pp. 4–5). Dimensional tables (pp. 12–15) show coupling-nut OD growing from ~22 mm (size 9) to ~48 mm (size 25). <https://amphenol-in.com/wp-content/uploads/2024/12/MIL-38999-Sr-III-AC38907-0317.pdf>
+
+[^glenaircontacts]: Glenair, *MIL-DTL-38999 Contact Performance Specifications* — Class H/N/Y contact-resistance **test currents**: size 12 → 17 A, size 16 → 10 A, size 20 → 5 A, size 22D → 3 A (per MIL-C-39029 / AS39029). These are test currents for the contact-resistance measurement, **not** guaranteed continuous ratings. The same spec's separate *current-rating* (maximum amps, crimp) column is higher — e.g. size 16 → 13 A, size 12 → 23 A — reflecting free-air current-carrying capacity rather than the resistance-test current. <https://www.glenair.com/mil-dtl-38999/pdf/contact-performance-spec.pdf>
+
+[^radsok]: Amphenol Aerospace, *High-Power 38999 / RADSOK* — RADSOK high-current contacts are rated roughly 70–250 A per contact (≈240–1000 A per connector) and are used to add dedicated power paths on the MIL-DTL-38999 platform. Contact size alone does not set safe current; use the manufacturer derating data, and do not parallel contacts unless the manufacturer/application supports it and the design is reviewed. <https://www.amphenol-aerospace.com/products/high-power-38999>
+
+[^iec101]: IEC 61076-2-101, *Connectors for electronic equipment — Product requirements — Part 2-101: Circular connectors — Detail specification for M12 connectors with screw-locking* (A/B/D coding): 2- to 17-way; data transmission up to 100 MHz; signal and power up to 250 V and up to 4 A per contact. <https://standards.globalspec.com/std/1519301/iec-61076-2-101>
+
+[^iec109]: IEC 61076-2-109, *… Part 2-109: Circular connectors — Detail specification for connectors with M12 × 1 screw-locking, for data transmission frequencies up to 500 MHz* — covers the X- and H-coded variants; X-coding supports Cat 6A / up to 10 Gbit/s at IP65/IP67. <https://standards.globalspec.com/std/1681090/IEC%2061076-2-109>
+
+[^iec111]: IEC 61076-2-111, *Connectors for electrical and electronic equipment — Product requirements — Part 2-111: Circular connectors — Detail specification for power connectors with M12 screw-locking* — 4- to 6-way power codings (E/F/K/L/M/S/T); current up to 16 A; 63 V or 630 V. <https://standards.globalspec.com/std/10195509/iec-61076-2-111>
+
+[^m12torque]: Coupling/tightening torque is manufacturer- and product-specific. Example: Turck M12 × 1 cordset RK 4.5T-5 (designed per IEC 61076-2-101) specifies a tightening torque of **0.8–1.0 N·m** ("note max. torque of mating connector"), with IP68/IP69K when coupled and 4 A / 250 V rating. Other families specify different values — always use the exact datasheet figure. <https://www.turck.us/datasheet/_us/edb_U2188-94_eng_us.pdf>
+
+[^jst]: JST product datasheets (jst-mfg.com). Verified directly from JST datasheets: **XH** = 2.5 mm pitch, 3 A, 250 V; **VH** = 3.96 mm pitch, up to 10 A (AWG #16), 250 V. Other series follow JST's published pitches — PH 2.0 mm, GH 1.25 mm, SH 1.0 mm, EH 2.5 mm, ZH 1.5 mm. Exact current depends on the contact, wire gauge, and configuration; "JST" alone is not a specification. XH: <https://www.jst-mfg.com/product/pdf/eng/eXH.pdf> — VH: <https://www.jst-mfg.com/product/pdf/eng/eVH.pdf>
+
+[^usbc]: The USB Type-C Cable and Connector Specification (USB-IF) specifies connector durability of 10,000 mating cycles (minimum), versus roughly 1,500 for USB Type-A/B. Manufacturer USB-C datasheets carry the same 10,000-cycle figure. Durability is a mating-cycle figure only — not a measure of sealing, vibration, or ruggedness. <https://www.mouser.com/pdfDocs/USBCCADatasheet.pdf>
+
+[^iec60529]: IEC 60529, *Degrees of protection provided by enclosures (IP Code)* — the international IP-rating standard: second numeral 7 = temporary immersion (tested at 1 m for 30 min), 8 = continuous immersion to a manufacturer-stated depth/duration. An IPx9 close-range high-pressure/high-temperature water-jet test was added in the 2013 edition. <https://webstore.iec.ch/publication/2452>
+
+[^iso20653]: ISO 20653:2013, *Road vehicles — Degrees of protection (IP code)* (formerly DIN 40050-9) — origin of the IP69K high-pressure/high-temperature washdown rating; the "K" designation comes from this standard, not IEC 60529. <https://www.iso.org/standard/58048.html>
+
+[^microfitcyc]: Molex, *Micro-Fit 3.0 Connector System Product Family* — durability typically 30 cycles (up to ~250 with factory-lubricated RMF terminals). <https://www.content.molex.com/dxdam/literature/987650-5984.pdf>
+
+[^milcyc]: 500-cycle durability is specified across the common mil-spec families — MIL-DTL-38999 (Amphenol/Glenair standard 500-cycle contacts), MIL-DTL-83513 Micro-D (Glenair performance spec §3.2.8), and MIL-DTL-24308 D-sub. <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>
+
+[^m12cyc]: Turck M12 cordset RK 4.5T-5 — mechanical life > 100 mating cycles. <https://www.turck.us/datasheet/_us/edb_U2188-94_eng_us.pdf>
+
+[^hancyc]: HARTING Han standard hoods/inserts are commonly rated ~500 cycles; the Han HMC (High Mating Cycle) series is rated far higher (up to ~10,000). <https://www.harting.com/>
+
+[^usbccyc]: USB Type-C Cable and Connector Specification (USB-IF) — 10,000-cycle durability minimum; manufacturer USB-C datasheets carry the same figure. <https://www.mouser.com/pdfDocs/USBCCADatasheet.pdf>
 
 ---
 

@@ -24,10 +24,13 @@ These pages summarize and cross-link the rest of the guide; they do not replace 
 | Sealed sensor/actuator cable in factory or field automation | [Industrial sensor](industrial-sensor.md) |
 | Ethernet outside a protected enclosure | [Rugged Ethernet](rugged-ethernet.md) |
 | Board-to-wire wiring inside an enclosure | [Internal PCB harnessing](internal-pcb-harnessing.md) |
+| Better-than-hobby field wiring on a budget (makers going rugged) | [Rugged on a budget](rugged-on-a-budget.md) |
 | Motors, batteries, PDUs — real DC power | [High-current DC power](high-current-dc-power.md) |
 | Passing a circuit through a sealed enclosure wall | [Sealed enclosure feedthrough](sealed-enclosure-feedthrough.md) |
 | Occasional debug / programming / service access | [Debug / service port](debug-service-port.md) |
 | Harsh-environment external I/O on defense/aero hardware | [Defense / rugged external I/O](defense-rugged-external-io.md) |
+| Serviceable machine module — mixed power/signal/data | [Removable machine module](removable-machine-module.md) |
+| Antenna, GPS, radio, or coax path | [RF / GPS / radio](rf-gps-radio.md) |
 
 :::note
 

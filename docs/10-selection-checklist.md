@@ -56,6 +56,6 @@ Use this at work. Adapt to your program; it is a working checklist, not a standa
 - [ ] Key position unique across differing pinouts
 - [ ] Rev-controlled BOM + labeling scheme
 
-Before sign-off, scan [What People Forget](what-people-forget.md) for the items most often left off.
+Before sign-off, scan [What People Forget](what-people-forget.md) for the items most often left off. For a fully worked pass of this checklist against one interface, see the [Connector Selection Packet](examples/connector-selection-packet.md) example.
 
 ---

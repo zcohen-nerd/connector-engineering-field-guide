@@ -21,7 +21,7 @@ Always verify against the *current* version of the applicable standard and the m
 | Family | Used for | Strengths | Weaknesses |
 |---|---|---|---|
 | MIL-DTL-38999 | Aero/defense rugged external I/O | Sealing, density, keying, EMI backshell ecosystem, crimp contacts | Expensive, part-number traps, tooling-heavy |
-| MIL-DTL-26482 | Rugged circular mil/industrial I/O | Smaller/cheaper than 38999, fast bayonet, common; Series I/II variants vary by P/N | Less dense, fewer modern high-speed options than 38999 |
+| [MIL-DTL-26482](mil-dtl-26482.md) | Rugged circular mil/industrial I/O | Smaller/cheaper than 38999, fast bayonet, common; Series I/II variants vary by P/N | Less dense, fewer modern high-speed options than 38999 |
 | M12 | Industrial sensors, Ethernet, IO-Link, CAN | Standard ecosystem, molded cables, IP-rated options, easy sourcing | Coding/pinout confusion, limited pins/current |
 | M8 | Compact sensors, small actuators | Small, common sensor connector | Less current, fewer pins, smaller cable support |
 | D-sub / MIL-DTL-24308 | Rack/panel, test, legacy serial/control | Cheap, common, many accessories, good density | Standard versions non-environmental; screws can loosen |

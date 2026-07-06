@@ -1,8 +1,15 @@
 # Source Notes — Connector Engineering Field Guide
 
-This file tracks claims that should be verified against a primary source (a current manufacturer datasheet, the applicable standard, or a QPL listing) **before v1.0** — before relying on any of these values in released hardware. (This guide is already available for public review as v0.1; these items gate the v1.0 "source verified" milestone, not initial publication.)
+This file tracks claims that should be verified against a primary source (a current manufacturer datasheet, the applicable standard, or a QPL listing) **before v1.0** — before relying on any of these values in released hardware. (This guide is public as a v0.5 beta; these items gate the v1.0 "source verified" milestone, not initial publication.)
 
 Each item below originally corresponded to a `<!-- TODO: source/verify -->` marker in the guide text; markers were removed as items were verified and cited inline (see the `## Sources` section of `connector-engineering-field-guide.md`). The two open items below remain unverified and have no inline citation yet.
+
+## v0.5 content additions (2026-07-06)
+
+The v0.5 site release added three site-only decision paths (rugged-on-a-budget, removable machine module, RF/GPS/radio), a `docs/mil-dtl-26482.md` mini deep dive, and a worked Connector Selection Packet example. None of these are canonical numbered guide sections, so `Source/connector-engineering-field-guide.md` is unchanged by v0.5. Source discipline for the new material:
+
+- The decision paths and worked example are **intentionally qualitative** — no new exact ratings; they reuse the already-sourced §3 / comparison-matrix figures with caveats intact, or use clearly-labeled placeholder values.
+- The MIL-DTL-26482 mini deep dive reuses the Aero-Electric MIL-DTL-26482 Series 2 catalog figures already cited in §3 (3-point bayonet, ≥ 500 mating cycles, 600 V Class I / 1000 V Class II, sizes 20/16/12), plus a newly-cited Series 1 vs Series 2 termination distinction (ConnectorSupplier / Bishop & Associates). Temperature classes kept qualitative.
 
 ## Source discipline (publication rules)
 

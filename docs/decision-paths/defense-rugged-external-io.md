@@ -22,7 +22,7 @@ Harsh-environment external I/O on defense or aerospace hardware — vibration, s
 ## Families to start with
 
 - **MIL-DTL-38999** — Series III is often the default for new harsh-environment designs (threaded, scoop-proof, anti-decoupling), subject to size/mating-speed/legacy/customer/program requirements.
-- **MIL-DTL-26482** — smaller/cheaper rugged circular with a fast bayonet, where its ratings fit.
+- **MIL-DTL-26482** — smaller/cheaper rugged circular with a fast bayonet, where its ratings fit. See the [MIL-DTL-26482 mini deep dive](../mil-dtl-26482.md) for the Series 1/2 trap and when to prefer it.
 - **Micro-D** for compact high-reliability *internal* runs alongside the external circulars.
 
 See the [MIL-DTL-38999 deep dive](../07-mil-dtl-38999.md) and [Standards and Families](../03-connector-standards-and-families.md).

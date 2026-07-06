@@ -2,7 +2,7 @@
 
 Practical connector selection for rugged, industrial, military-style, and electromechanical systems.
 
-**Project status:** `v0.1 Public Review Draft`
+**Project status:** `v0.5 Public Beta`
 
 This project exists because connector selection is often harder than it should be. The information is fragmented across vendor catalogs, datasheets, standards, and tribal knowledge. The goal of this guide is to help non-specialists pick a reasonable connector family, understand what specs matter, avoid beginner mistakes, and document the interface properly.
 
@@ -22,6 +22,7 @@ When this guide conflicts with a datasheet, applicable standard, customer requir
   - `docs/tools/` — reusable engineering-document templates derived from the guide.
   - `docs/examples/` — worked examples derived from the guide's exercises.
   - `docs/what-people-forget.md`, `docs/glossary.md`, and the diagrams under `static/img/diagrams/`.
+  - `docs/mil-dtl-26482.md` — a supplemental "mini deep dive" (site-only; it reuses the sourced 26482 figures from `docs/03` rather than adding a 15th canonical section to `Source/`).
 
 ## What the guide helps with
 

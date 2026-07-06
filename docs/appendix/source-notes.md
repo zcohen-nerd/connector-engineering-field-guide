@@ -7,9 +7,17 @@ sidebar_label: Source Notes
 
 # Source Notes — Connector Engineering Field Guide
 
-This file tracks claims that should be verified against a primary source (a current manufacturer datasheet, the applicable standard, or a QPL listing) **before v1.0** — before relying on any of these values in released hardware. (The site is already public as a v0.1 review draft; these items gate the v1.0 "source verified" milestone, not initial publication.)
+This file tracks claims that should be verified against a primary source (a current manufacturer datasheet, the applicable standard, or a QPL listing) **before v1.0** — before relying on any of these values in released hardware. (The site is public as a v0.5 beta; these items gate the v1.0 "source verified" milestone, not initial publication.)
 
 Each item below originally corresponded to a `<!-- TODO: source/verify -->` marker in the guide; the markers were removed as items were verified and cited inline (the citations live in each page's Sources section, and in the `## Sources` section of the canonical `Source/connector-engineering-field-guide.md`). The two open items below remain unverified. Numbers in the guide are presented as *examples requiring verification*, not as universal ratings.
+
+## v0.5 content additions (2026-07-06)
+
+The v0.5 release added three decision paths (rugged-on-a-budget, removable machine module, RF/GPS/radio), a [MIL-DTL-26482 mini deep dive](../mil-dtl-26482.md), and a [worked Connector Selection Packet](../examples/connector-selection-packet.md). Source-discipline decisions for these:
+
+- **The decision paths and the worked example are site-only and intentionally qualitative.** They introduce **no new exact ratings**. Where a number matters they point to the already-sourced tables in [§3](../03-connector-standards-and-families.md) and the [comparison matrix](../tools/connector-comparison-matrix.md) with their caveats intact, or use placeholder values clearly labeled as examples.
+- **The MIL-DTL-26482 mini deep dive is supplemental site-only material, not a canonical numbered section**, so it has no `Source/` counterpart. Its family-level figures (3-point bayonet, ≥ 500 mating cycles, 600 V Class I / 1000 V Class II, contact sizes 20/16/12) reuse the Aero-Electric MIL-DTL-26482 Series 2 catalog already cited in §3 and the comparison matrix. The Series 1 vs Series 2 termination distinction (solder / front-release vs. rear-release crimp; contacts and tooling not interchangeable) is newly cited to ConnectorSupplier / Bishop & Associates. Temperature classes are kept qualitative.
+- **RF/GPS/radio** asserts no per-family frequency or power numbers; 50 Ω vs. 75 Ω is stated as an application convention, not a rating.
 
 ## Source discipline (publication rules)
 

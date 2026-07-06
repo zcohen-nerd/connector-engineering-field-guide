@@ -10,9 +10,9 @@ sidebar_label: Home
 
 *Practical connector selection for rugged, industrial, military-style, and electromechanical systems.*
 
-:::note[v0.1 Public Review Draft]
+:::note[v0.5 Public Beta]
 
-Technical corrections welcome with sources.
+Technical corrections welcome with sources. This guide is still educational and beta-status; verify all ratings, part numbers, tooling, qualification status, and assembly instructions against the applicable datasheet, standard, and program requirements.
 
 :::
 
@@ -37,18 +37,19 @@ This guide is educational and intended to teach engineering judgment. It is **no
 Use these cards to get to a reasonable starting family before you disappear into catalogs and datasheets. If you are still trying to figure out how to search, start with [How to Search for Connectors](00-how-to-search-for-connectors.md).
 
 <div class="cn-card-grid">
-<div class="cn-card"><div class="cn-card-title">A sealed industrial sensor cable</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> M8 or M12 A-coded</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> pinout, current, IP rating, torque, cable OD, vibration</div></div>
-<div class="cn-card"><div class="cn-card-title">Rugged Ethernet outside an enclosure</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> M12 D-coded, M12 X-coded, or sealed/rugged RJ45</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> data rate, shielding, cable category, sealing, latch protection</div></div>
-<div class="cn-card"><div class="cn-card-title">Internal PCB power harness</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Micro-Fit, Mini-Fit, Nano-Fit, TE/Harwin/JST family as appropriate</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> current, wire gauge, latch, TPA, tooling, vibration</div></div>
-<div class="cn-card"><div class="cn-card-title">High-current DC power</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Anderson SB, industrial rectangular power insert, high-current circular, 38999 power contacts where appropriate</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> derating, wire gauge, loaded contacts, heat rise, touch safety, sealing (Anderson SB is unsealed/genderless — add a boot outdoors)</div></div>
-<div class="cn-card"><div class="cn-card-title">Defense/rugged external payload interface</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> MIL-DTL-38999, MIL-DTL-26482, or similar rugged circular</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> shell size, insert arrangement, contacts, backshell, keying, caps</div></div>
-<div class="cn-card"><div class="cn-card-title">Compact high-reliability internal interface</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Micro-D or other high-reliability compact connector</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> current, tooling, assembly process, service model</div></div>
-<div class="cn-card"><div class="cn-card-title">Debug or service access</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Protected USB-C, keyed shrouded header, Tag-Connect, Micro-D, D-sub, sealed service connector</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> access level, ESD, mating cycles, pin protection, documentation</div></div>
-<div class="cn-card"><div class="cn-card-title">Removable machine module</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Industrial rectangular / Han-style connector or 38999 hybrid</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> mixed power/signal/data, serviceability, keying, ground-first sequencing</div></div>
-<div class="cn-card"><div class="cn-card-title">RF/GPS/radio path</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> SMA, TNC, N-Type, BNC, MCX, SMP/SMPM, or coax contacts in a hybrid connector</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> impedance, frequency, cable, torque, shielding</div></div>
+<div class="cn-card"><div class="cn-card-title">A sealed industrial sensor cable</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> M8 or M12 A-coded</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> pinout, current, IP rating, torque, cable OD, vibration</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/industrial-sensor">Industrial sensor</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Rugged Ethernet outside an enclosure</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> M12 D-coded, M12 X-coded, or sealed/rugged RJ45</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> data rate, shielding, cable category, sealing, latch protection</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/rugged-ethernet">Rugged Ethernet</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Internal PCB power harness</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Micro-Fit, Mini-Fit, Nano-Fit, TE/Harwin/JST family as appropriate</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> current, wire gauge, latch, TPA, tooling, vibration</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/internal-pcb-harnessing">Internal PCB harnessing</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Better-than-hobby field wiring on a budget</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Sealed automotive — Deutsch DT/DTM/DTP, Superseal, MX150, Metri-Pack</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> wire seal range, correct contact/crimp, cavity plugs, wedgelock/secondary lock</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/rugged-on-a-budget">Rugged on a budget</a></div></div>
+<div class="cn-card"><div class="cn-card-title">High-current DC power</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Anderson SB, industrial rectangular power insert, high-current circular, 38999 power contacts where appropriate</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> derating, wire gauge, loaded contacts, heat rise, touch safety, sealing (Anderson SB is unsealed/genderless — add a boot outdoors)</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/high-current-dc-power">High-current DC power</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Defense/rugged external payload interface</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> MIL-DTL-38999, MIL-DTL-26482, or similar rugged circular</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> shell size, insert arrangement, contacts, backshell, keying, caps</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/defense-rugged-external-io">Defense / rugged external I/O</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Compact high-reliability internal interface</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Micro-D or other high-reliability compact connector</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> current, tooling, assembly process, service model</div><div class="cn-card-row"><span class="cn-card-label">Deep dive</span> <a href="03-connector-standards-and-families">Micro-D in Standards &amp; Families</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Debug or service access</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Protected USB-C, keyed shrouded header, Tag-Connect, Micro-D, D-sub, sealed service connector</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> access level, ESD, mating cycles, pin protection, documentation</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/debug-service-port">Debug / service port</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Removable machine module</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Industrial rectangular / Han-style connector or 38999 hybrid</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> mixed power/signal/data, serviceability, keying, ground-first sequencing</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/removable-machine-module">Removable machine module</a></div></div>
+<div class="cn-card"><div class="cn-card-title">RF/GPS/radio path</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> SMA, TNC, N-Type, BNC, MCX, SMP/SMPM, or coax contacts in a hybrid connector</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> impedance, frequency, cable, torque, shielding</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/rf-gps-radio">RF / GPS / radio</a></div></div>
 </div>
 
-Want a step-by-step walkthrough? Seven of these scenarios have a full [Decision Path](decision-paths/index.md). (The *compact high-reliability internal* and *removable machine module* cards don't have a dedicated path yet — use the deep-dive pages they name; for the *RF/GPS/radio* card, start with the [RF orientation](02-major-connector-categories.md#rf-connectors--a-brief-orientation).)
+Want a step-by-step walkthrough? Most of these scenarios now have a full [Decision Path](decision-paths/index.md) — including the new [rugged-on-a-budget](decision-paths/rugged-on-a-budget.md), [removable machine module](decision-paths/removable-machine-module.md), and [RF/GPS/radio](decision-paths/rf-gps-radio.md) paths. (The *compact high-reliability internal* card is the one scenario without a dedicated path — start from the [Micro-D coverage in Standards and Families](03-connector-standards-and-families.md).)
 
 ## Who this is for
 
@@ -79,12 +80,12 @@ Want a step-by-step walkthrough? Seven of these scenarios have a full [Decision 
 - [What connectors actually do](01-what-connectors-do.md)
 - [Connector selection workflow](04-connector-selection-workflow.md)
 - [Decision paths](decision-paths/index.md) — scenario-based starting points
-- [MIL-DTL-38999 deep dive](07-mil-dtl-38999.md)
+- [MIL-DTL-38999 deep dive](07-mil-dtl-38999.md) and [MIL-DTL-26482 mini deep dive](mil-dtl-26482.md)
 - [M12 deep dive](08-m12.md)
 - [Practical checklist](10-selection-checklist.md)
 - [What people forget](what-people-forget.md)
 - [Hands-on exercises](13-hands-on-exercises.md)
-- [Tools & templates](tools/index.md) and [worked examples](examples/index.md)
+- [Tools & templates](tools/index.md) and worked examples: [Rugged Control Box](examples/rugged-control-box.md), [Connector Selection Packet](examples/connector-selection-packet.md)
 
 ## Source discipline
 

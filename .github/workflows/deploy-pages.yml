@@ -46,14 +46,21 @@ jobs:
 
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      # Wandalen/wretry.action doesn't pass the wrapped action's named outputs
+      # straight through — it bundles them into one JSON-string `outputs`
+      # output, so page_url has to be pulled back out with fromJSON().
+      url: ${{ fromJSON(steps.deployment.outputs.outputs).page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        # actions/deploy-pages@v4 hard-caps its own `timeout` input at 600000ms
+        # (10 min), so raising it doesn't help. The actual failure mode is
+        # transient GitHub Pages backend errors ("Deployment failed, try again
+        # later." or a stalled deployment_queued) — retrying the step is what
+        # GitHub's own error message recommends, so wrap it instead.
+        uses: Wandalen/wretry.action@v3.8.0
         with:
-          # Pages deployments intermittently sit in deployment_queued on GitHub's
-          # side; the action's default 10-minute status timeout then aborts an
-          # otherwise-healthy deploy. Allow up to 30 minutes.
-          timeout: 1800000
+          action: actions/deploy-pages@v4
+          attempt_limit: 3
+          attempt_delay: 20000

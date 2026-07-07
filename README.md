@@ -1,62 +1,55 @@
 # Connector Engineering Field Guide
 
-Practical connector selection for rugged, industrial, military-style, and electromechanical systems.
+**📖 Read the guide here → [zcohen-nerd.github.io/connector-engineering-field-guide](https://zcohen-nerd.github.io/connector-engineering-field-guide/)**
 
-**Project status:** `v0.5 Public Beta`
+Practical connector selection for rugged, industrial, military-style, and electromechanical systems — written for engineers who are **not** connector specialists.
 
-This project exists because connector selection is often harder than it should be. The information is fragmented across vendor catalogs, datasheets, standards, and tribal knowledge. The goal of this guide is to help non-specialists pick a reasonable connector family, understand what specs matter, avoid beginner mistakes, and document the interface properly.
+**Status:** v0.5 Public Beta · *A zcohen-nerd technical guide*
 
-This repository turns the canonical Connector Engineering Field Guide into a Markdown-first documentation website. The guide is educational and judgment-focused; it is not a replacement for manufacturer datasheets, applicable standards, customer requirements, qualification requirements, or program-specific design rules.
+## Why this exists
 
-When this guide conflicts with a datasheet, applicable standard, customer requirement, or qualified program requirement, the datasheet / standard / customer requirement wins.
+Picking a connector is harder than it should be. The information you need is scattered across vendor catalogs, datasheets, standards, and tribal knowledge — and the part that looks right on a shelf can still leak, fret loose, or stall your build because a wedgelock or crimp tool never made it onto the BOM.
 
-## Repository layout
+This guide's core idea: **a connector is a controlled interface between subsystems, not just "a plug with enough pins."** It helps you classify the interface, pick a sane family to investigate first, check the specs that actually matter, dodge the classic traps, and document the result so someone can actually build it.
 
-**Canonicality:** `Source/connector-engineering-field-guide.md` is the single, unambiguous source of truth for the guide's 14 numbered sections + appendix — every factual correction, citation, and source-verification update lands there first. `docs/` numbered pages (`00`–`14` + `appendix/`) are refreshed *from* `Source/`; if the two ever disagree on a factual claim, `Source/` is authoritative and `docs/` is stale and due for a refresh.
+## Who it's for
 
-- `Source/connector-engineering-field-guide.md` is the canonical guide source (14 sections + appendix).
-- `Source/source-notes.md` is the source-verification backlog for the canonical guide — 17 of 19 tracked claims verified as of 2026-07-02.
-- `docs/` contains the Docusaurus site content. The numbered guide pages (`docs/00-*.md` through `docs/14-*.md`, `docs/appendix/`) mirror `Source/`. The following are **site-only presentational material with no `Source/` equivalent** — useful additions, but not part of the canonical guide text, and not expected to stay in lockstep with `Source/`:
-  - `docs/index.md` — the site home page (cards, navigation).
-  - `docs/decision-paths/` — scenario-based connector-selection walkthroughs.
-  - `docs/tools/` — reusable engineering-document templates derived from the guide.
-  - `docs/examples/` — worked examples derived from the guide's exercises.
-  - `docs/what-people-forget.md`, `docs/glossary.md`, and the diagrams under `static/img/diagrams/`.
-  - `docs/mil-dtl-26482.md` — a supplemental "mini deep dive" (site-only; it reuses the sourced 26482 figures from `docs/03` rather than adding a 15th canonical section to `Source/`).
+- Mechanical engineering interns and junior electromechanical/mechatronics engineers
+- Robotics and controls engineers
+- Small hardware teams
+- Makers and student teams transitioning into professional hardware design
 
-## What the guide helps with
+## What's inside
 
-- Figuring out what connector family to start with
-- Understanding which specifications actually matter
-- Avoiding common connector-selection traps
-- Turning "I need a connector here" into a buildable, documented interface
+**🧭 [Decision Paths](https://zcohen-nerd.github.io/connector-engineering-field-guide/decision-paths)** — ten scenario walkthroughs that take "I need a plug here" to a documented choice: [industrial sensors](https://zcohen-nerd.github.io/connector-engineering-field-guide/decision-paths/industrial-sensor), [rugged Ethernet](https://zcohen-nerd.github.io/connector-engineering-field-guide/decision-paths/rugged-ethernet), [internal PCB harnessing](https://zcohen-nerd.github.io/connector-engineering-field-guide/decision-paths/internal-pcb-harnessing), [rugged on a budget](https://zcohen-nerd.github.io/connector-engineering-field-guide/decision-paths/rugged-on-a-budget), [high-current DC power](https://zcohen-nerd.github.io/connector-engineering-field-guide/decision-paths/high-current-dc-power), [sealed feedthroughs](https://zcohen-nerd.github.io/connector-engineering-field-guide/decision-paths/sealed-enclosure-feedthrough), [debug/service ports](https://zcohen-nerd.github.io/connector-engineering-field-guide/decision-paths/debug-service-port), [defense/rugged external I/O](https://zcohen-nerd.github.io/connector-engineering-field-guide/decision-paths/defense-rugged-external-io), [removable machine modules](https://zcohen-nerd.github.io/connector-engineering-field-guide/decision-paths/removable-machine-module), and [RF/GPS/radio paths](https://zcohen-nerd.github.io/connector-engineering-field-guide/decision-paths/rf-gps-radio).
 
-## Local preview
+**🔍 Deep dives** — [MIL-DTL-38999](https://zcohen-nerd.github.io/connector-engineering-field-guide/07-mil-dtl-38999), [MIL-DTL-26482](https://zcohen-nerd.github.io/connector-engineering-field-guide/mil-dtl-26482), and [M12/M8](https://zcohen-nerd.github.io/connector-engineering-field-guide/08-m12), plus a [14-section core guide](https://zcohen-nerd.github.io/connector-engineering-field-guide/01-what-connectors-do) covering what connectors actually do, anatomy, datasheet reading, selection workflow, and red flags.
 
-```bash
-npm install
-npm run start    # dev server with hot reload at http://localhost:3000/connector-engineering-field-guide/
-npm run build    # production build into build/
-npm run serve    # serve the production build locally
-```
+**🛠️ [Tools & Templates](https://zcohen-nerd.github.io/connector-engineering-field-guide/tools)** — a selection checklist, a [sourced comparison matrix](https://zcohen-nerd.github.io/connector-engineering-field-guide/tools/connector-comparison-matrix), cable drawing and ICD templates, and a design-review checklist, ready to copy into your own design package.
 
-## Contribution guidance
+**📦 [Worked examples](https://zcohen-nerd.github.io/connector-engineering-field-guide/examples)** — including a complete [Connector Selection Packet](https://zcohen-nerd.github.io/connector-engineering-field-guide/examples/connector-selection-packet): requirements → decision matrix → architecture → pinout → BOM → cable notes → ICD → review checklist for a rugged field-robot module.
 
-- Technical corrections require sources.
-- Do not copy paid standards tables.
-- Do not add exact ratings without sources.
-- Prefer practical engineering decision logic over vendor marketing.
-- Preserve existing warnings, disclaimers, TODO comments, and source-verification notes.
+**📚 Quick help** — [How to search for connectors](https://zcohen-nerd.github.io/connector-engineering-field-guide/00-how-to-search-for-connectors), [What People Forget](https://zcohen-nerd.github.io/connector-engineering-field-guide/what-people-forget), a [glossary](https://zcohen-nerd.github.io/connector-engineering-field-guide/glossary), and [quick-reference tables](https://zcohen-nerd.github.io/connector-engineering-field-guide/appendix/quick-reference-tables).
 
-See `CONTRIBUTING.md` for the full source-discipline rules.
+## The one rule the guide never breaks
+
+This guide is educational and judgment-focused. It is **not** a replacement for manufacturer datasheets, applicable standards, customer requirements, or qualification rules — and when it conflicts with any of those, **the datasheet / standard / customer requirement wins**. Ratings in the guide are cited, family-level orientation values, never a substitute for the exact part's datasheet.
+
+## Contributing
+
+Found an error or have a better source? Corrections are very welcome — [open an issue](https://github.com/zcohen-nerd/connector-engineering-field-guide/issues). Ground rules:
+
+- Technical corrections need sources (a public datasheet, standard summary, or equivalent).
+- No paid-standards tables, no verbatim catalog tables, no unsourced exact ratings.
+- Practical decision logic beats vendor marketing.
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full source-discipline rules. For contributors: `Source/connector-engineering-field-guide.md` is the canonical source of truth for the guide's 14 numbered sections and appendix — factual corrections land there first, and the matching `docs/` pages are refreshed from it. Decision paths, tools, examples, and the other site pages are site-only material under `docs/`.
 
 ## License
 
-This repository uses two licenses:
+- **Content** (the guide text, `docs/`, `Source/`, templates, examples): [CC BY 4.0](LICENSE)
+- **Code** (site configuration and build files): [MIT](LICENSE-CODE)
 
-- **Documentation and content** (everything under `docs/` and `Source/`, including the templates and examples now under `docs/tools/` and `docs/examples/`, and the guide text itself) is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. See [`LICENSE`](LICENSE).
-- **Code and configuration** (the Docusaurus site code, build config, scripts, and similar non-content files) is licensed under the **MIT License**. See [`LICENSE-CODE`](LICENSE-CODE).
+When reusing material, credit: *A zcohen-nerd technical guide by Zac Cohen.*
 
-When reusing material, give appropriate credit: *A zcohen-nerd technical guide by Zac Cohen.*
-
-> Note: GitHub may display a single license for the repository based on the `LICENSE` file. The dual-license split above is authoritative — content is CC BY 4.0, code is MIT.
+> GitHub may display a single license for the repository based on the `LICENSE` file. The dual-license split above is authoritative — content is CC BY 4.0, code is MIT.

@@ -40,6 +40,18 @@ Based on [Exercise 7](../13-hands-on-exercises.md).
 - Contact size / wire gauge:
 - Shielding:
 
+## Power / energized-work safety (for power-carrying interfaces)
+
+- Load-break / hot-plug rating: yes / no / explicitly prohibited / not specified
+- Mate/unmate under power allowed: yes / no / not specified
+- Touch-safe when unmated: yes / no / not specified
+- Fuse / overcurrent protection:
+- Available fault current:
+- Inrush / precharge requirement:
+- Ground/PE first-mate / last-break behavior (if applicable):
+- Arc/flash hazard note (if applicable):
+- Required warning labels / service procedure (if applicable):
+
 ## Environmental assumptions
 
 - Internal or external:
@@ -52,6 +64,7 @@ Based on [Exercise 7](../13-hands-on-exercises.md).
 - Torque / assembly notes:
 - Cable requirements:
 - Test / inspection requirements:
+- Workmanship / acceptance standard (e.g. IPC/WHMA-A-620 or program/customer equivalent):
 
 ---
 
@@ -93,6 +106,15 @@ Pin functions follow the device datasheet; colours per the common A-coded conven
 - Contact size / wire gauge: ≈ 22 AWG / 0.34 mm² *(illustrative)*
 - Shielding: unshielded (typical A-coded sensor); shielded variant if EMI requires
 
+### Power / energized-work safety
+
+- Load-break / hot-plug rating: not specified by the datasheet — treat as **not** load-break
+- Mate/unmate under power allowed: no — de-energize the 24 V feed before disconnect (service procedure)
+- Touch-safe when unmated: energized (source) side is the female/socket cordset — recessed contacts
+- Fuse / overcurrent protection: sensor branch fused upstream *(project value)*
+- Available fault current / inrush: low-power sensor circuit — record per project
+- Ground/PE first-mate: n/a (no PE contact in the 4-pin A-coded interface)
+
 ### Environmental assumptions
 
 - Internal or external: external field drop
@@ -105,6 +127,7 @@ Pin functions follow the device datasheet; colours per the common A-coded conven
 - Torque / assembly notes: coupling torque per datasheet (e.g. Turck specifies 0.8–1.0 N·m) — verify[^m12seal]
 - Cable requirements: PUR jacket, OD within the gland range; see the [cable drawing example](cable-drawing-template.md)
 - Test / inspection requirements: continuity, insulation resistance, coupling-torque check
+- Workmanship / acceptance: IPC/WHMA-A-620 or the program/customer equivalent; molded cordset — incoming inspection *(illustrative)*
 
 ## Sources
 

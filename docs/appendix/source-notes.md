@@ -1,74 +1,118 @@
 ---
 title: Source Notes
-description: "Source-verification notes and citations behind the guide's technical claims — the manufacturer datasheets and standards each one rests on, with status."
+description: "Source-status dashboard for the guide's technical claims — what is verified, what is engineering judgment, what is example-only, and what still needs sourcing."
 slug: /appendix/source-notes
 sidebar_label: Source Notes
 ---
 
-# Source Notes — Connector Engineering Field Guide
+# Source Notes — Source-Status Dashboard
 
-This file tracks claims that should be verified against a primary source (a current manufacturer datasheet, the applicable standard, or a QPL listing) **before v1.0** — before relying on any of these values in released hardware. (The site is public as a v0.5 beta; these items gate the v1.0 "source verified" milestone, not initial publication.)
+**Status: v0.6 Beta — Source Cleanup + Safety Pass**
 
-Each item below originally corresponded to a `<!-- TODO: source/verify -->` marker in the guide; the markers were removed as items were verified and cited inline (the citations live in each page's Sources section, and in the `## Sources` section of the canonical `Source/connector-engineering-field-guide.md`). The two open items below remain unverified. Numbers in the guide are presented as *examples requiring verification*, not as universal ratings.
+This page is the guide's transparency layer. Every technical statement in the guide falls into one of four buckets, and this page says which: **verified claims** (backed by a named public source), **engineering heuristics** (deliberate judgment, not specification), **example-only values** (teaching aids, never design authority), and an explicit **needs-source-before-v1.0 backlog**.
 
-## v0.5 content additions (2026-07-06)
+:::note
 
-The v0.5 release added three decision paths (rugged-on-a-budget, removable machine module, RF/GPS/radio), a [MIL-DTL-26482 mini deep dive](../mil-dtl-26482.md), and a [worked Connector Selection Packet](../examples/connector-selection-packet.md). Source-discipline decisions for these:
+This guide is an educational engineering reference. Always verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and program/customer requirements.
 
-- **The decision paths and the worked example are site-only and intentionally qualitative.** They introduce **no new exact ratings**. Where a number matters they point to the already-sourced tables in [§3](../03-connector-standards-and-families.md) and the [comparison matrix](../tools/connector-comparison-matrix.md) with their caveats intact, or use placeholder values clearly labeled as examples.
-- **The MIL-DTL-26482 mini deep dive is supplemental site-only material, not a canonical numbered section**, so it has no `Source/` counterpart. Its family-level figures (3-point bayonet, ≥ 500 mating cycles, 600 V Class I / 1000 V Class II, contact sizes 20/16/12) reuse the Aero-Electric MIL-DTL-26482 Series 2 catalog already cited in §3 and the comparison matrix. The Series 1 vs Series 2 termination distinction (solder / front-release vs. rear-release crimp; contacts and tooling not interchangeable) is newly cited to ConnectorSupplier / Bishop & Associates. Temperature classes are kept qualitative.
-- **RF/GPS/radio** asserts no per-family frequency or power numbers; 50 Ω vs. 75 Ω is stated as an application convention, not a rating.
+:::
+
+Release history lives in the repository `CHANGELOG.md`.
+
+## 1. Verified claims
+
+Statements backed by a credible public source. "Verified" means the claim matches the cited source as of the date checked — it does **not** mean the value applies to your exact part number, and sources get revised. Inline citations live in each page's Sources section.
+
+| Claim / content area | Source type | Source / reference | Used in | Notes |
+| --- | --- | --- | --- | --- |
+| 38999 part-number decoder example (`D38999/26WE26PN`) | Manufacturer catalog | Amphenol Series III (AC38907) | [38999 §7.8](../07-mil-dtl-38999.md) | Schemas differ between manufacturers |
+| 38999 Series III coupling (Tri-Start thread, scoop-proof, self-locking) | Manufacturer catalog | Amphenol Series III (AC38907) | [38999 §7.2](../07-mil-dtl-38999.md) | Series I/II/IV are the standard definitions |
+| 38999 shell sizes & approximate ODs | Manufacturer catalog | Amphenol dimensional tables | [38999 §7.3](../07-mil-dtl-38999.md) | Orientation aids; OD is shell-style-dependent |
+| 38999 contact *test* currents (22D≈3 A, 20≈5 A, 16≈10 A, 12≈17 A) and the separate free-air carrying rating | Manufacturer spec | Glenair MIL-DTL-38999 contact performance spec | [38999 §7.5](../07-mil-dtl-38999.md), [Quick-Ref A2](quick-reference-tables.md), [matrix](../tools/connector-comparison-matrix.md) | Test currents ≠ continuous ratings; derating curve controls |
+| 38999 keying positions (N, A–E) | Manufacturer catalog | Amphenol Series III (AC38907) | [38999 §7.7–7.8](../07-mil-dtl-38999.md) | |
+| High-power 38999 / RADSOK contacts (~70–250 A class) | Manufacturer page | Amphenol Aerospace | [Quick-Ref A3](quick-reference-tables.md), [high-current path](../decision-paths/high-current-dc-power.md) | Derating data still controls; no casual paralleling |
+| MIL-DTL-26482 Series 2 family (3-point bayonet, ≥500 cycles, 600 V Cl. I / 1000 V Cl. II, contacts 20/16/12) | Manufacturer catalog | Aero-Electric / Amphenol 26482 Series 2 | [26482 mini deep dive](../mil-dtl-26482.md), [§3](../03-connector-standards-and-families.md), [matrix](../tools/connector-comparison-matrix.md) | Family-level orientation only |
+| 26482 Series 1 vs Series 2 termination/tooling split | Industry reference | ConnectorSupplier / Bishop & Associates | [26482 mini deep dive](../mil-dtl-26482.md) | Temperature classes deliberately kept qualitative |
+| Standard D-sub is non-environmental rack-and-panel | Military spec | MIL-DTL-24308G (DLA) | [§3](../03-connector-standards-and-families.md), [matrix](../tools/connector-comparison-matrix.md) | Ruggedized variants separately specified |
+| Micro-D .050 in (1.27 mm) centers, 3 A per contact | Manufacturer spec | Glenair MIL-DTL-83513 performance spec | [§3](../03-connector-standards-and-families.md), [matrix](../tools/connector-comparison-matrix.md) | |
+| M12 standards mapping: IEC 61076-2-101 (A/B/D), -109 (X/H), -111 (power) | Standard listings | IEC via GlobalSpec | [M12 §8](../08-m12.md) | Edition-specific; record the edition checked |
+| M12 A-coded ≤4 A / ≤250 V class | Standard listing | IEC 61076-2-101 | [M12 §8.1](../08-m12.md), [tools](../tools/cable-drawing-template.md) | Exact rating is connector/cable/temperature dependent |
+| M12 D-coded (10/100) vs X-coded (GbE/10G) roles | Standard listings | IEC 61076-2-101 / -109 | [M12 §8.1](../08-m12.md), [Rugged Ethernet](../decision-paths/rugged-ethernet.md) | |
+| M12 coupling-torque example (0.8–1.0 N·m) | Manufacturer datasheet | Turck RK 4.5T-5 | [M12 §8.3](../08-m12.md), [tools](../tools/connector-icd-template.md) | Example only — torque is manufacturer-specified |
+| M12 K-coding = 4+PE, 630 V AC class configuration | Manufacturer page | binder M12 K-coded family | [M12 §8.1](../08-m12.md) | Example configuration per IEC 61076-2-111; current varies by vendor |
+| M8 detail spec is IEC 61076-2-104 (screw/snap locking) | Standard listing | IEC 61076-2-104 (Ed. 2.0, 2014 listing) | [M12 §8.6](../08-m12.md) | Scope details are edition-specific; standard under revision |
+| JST XH (2.5 mm, 3 A) and VH (3.96 mm, up to 10 A @ AWG 16) | Manufacturer datasheets | JST | [§12](../12-consumer-hobby-prototype-connectors.md) | "JST" alone is not a specification |
+| USB-C 10,000-cycle durability (vs ~1,500 USB-A) | Public standard | USB Type-C spec (USB-IF) | [§12](../12-consumer-hobby-prototype-connectors.md), [Quick-Ref A4](quick-reference-tables.md) | Cycle life ≠ ruggedness |
+| IP code definitions; IP67 = 1 m/30 min; IP69K origin in ISO 20653 | Standards | IEC 60529 / ISO 20653 | [Quick-Ref A1](quick-reference-tables.md) | Wording only; no standard tables reproduced |
+| Deutsch DT/DTM/DTP sealing (IP68) and current classes | Manufacturer pages | TE Connectivity | [§3.2](../03-connector-standards-and-families.md), [budget path](../decision-paths/rugged-on-a-budget.md) | Family-level; verify the exact series datasheet |
+| AMP Superseal 1.5 (IP67, ~14 A class) | Manufacturer page | TE Connectivity | [§3.2](../03-connector-standards-and-families.md) | |
+| Molex MX150/MX150L (≥IP67; up to ~30–40 A by gauge) | Manufacturer document | Molex | [§3.2](../03-connector-standards-and-families.md) | |
+| Metri-Pack series system (sealed & unsealed, series by blade size) | Manufacturer datasheet | Aptiv Metri-Pack Connection System | [§3.2](../03-connector-standards-and-families.md) | Figures deliberately qualitative |
+| Han E insert (16 A, 500 V, ≥500 cycles); Han HMC 10,000+ cycles | Manufacturer listing/page | TME listing / HARTING | [matrix](../tools/connector-comparison-matrix.md), [Quick-Ref A4](quick-reference-tables.md) | Insert/hood/assembly define the interface |
+| Micro-Fit 3.0: 8.5 A max "determined by terminal used"; 10.0 A RMF terminal offered | Manufacturer document | Molex 987650-5984 Rev. 5 | [matrix](../tools/connector-comparison-matrix.md) | RMF = Reduced Mating Force; terminal P/N sets current |
+| Mil-contact "50 µin class" gold plating | Manufacturer spec | Glenair contact materials spec | [§5.1](../05-connector-anatomy.md) | ASTM B488 over QQ-N-290 nickel |
+| 500-cycle durability across 38999 / 26482 / 83513 / 24308 | Specs/catalogs | Amphenol, Aero-Electric, Glenair, MIL-DTL-24308G | [Quick-Ref A4](quick-reference-tables.md) | Per-family documents cited on the page |
+| Shield-pigtail inductance ~10 nH per cm | Textbook rule of thumb | Ott, *Electromagnetic Compatibility Engineering* | [§5.7](../05-connector-anatomy.md) | Explicitly a rule of thumb |
+| IPC/WHMA-A-620, *Requirements and Acceptance for Cable and Wire Harness Assemblies*, as the general harness workmanship/acceptance reference | Industry standard | IPC/WHMA (Revision F, 2025, current as of this writing) | [Workflow §4](../04-connector-selection-workflow.md), [tools](../tools/cable-drawing-template.md) | Program/customer requirements and the manufacturer application spec control |
+
+## 2. Engineering heuristics
+
+Deliberate engineering judgment — orientation, not specification. These are *intentionally* not sourced to a standard, because they are how experienced engineers work, not what a document mandates:
+
+- **Do not choose by pin count first.** Classify the interface (boundary, environment, service model) before shopping. (§1, §4)
+- **Connector selection is system design.** A connector is a controlled interface between subsystems, not "a plug with enough pins." (§1)
+- **The connector is not just the shell.** Contacts, backshells, seals, cavity plugs, caps, strain relief, tooling, and drawings are all part of the interface. (§5, What People Forget)
+- **Exact datasheets and program requirements beat family expectations.** Family-level values orient your search; the released design uses the exact part's numbers. (throughout)
+- **Spare positions "where feasible and justified"** — not a fixed percentage; shell size, weight, sealing plugs, and program rules may override. (§4)
+- **Conservative current-derating margin** below the manufacturer curve — not a fixed percentage. (§4, §10)
+- **Service life with margin below rated mating cycles** — not a fixed multiplier. (§3, §6)
+- **Threaded/self-locking coupling is *often* preferred for severe vibration** — judgment; bayonet is not categorically rejected where qualified. (§4, 26482 page)
+- **38999 Series III as the *often*-default** for new harsh-environment designs — conditioned on size, mating speed, legacy, customer, and program requirements. (§7.2)
+- **Bench-to-product transition rule of thumb** — a judgment checklist, not a spec. (§12.3)
+- **Splitting power and signal connectors vs. one mixed connector** — a trade, argued per design. (Selection Packet example)
+
+## 3. Example-only values
+
+:::warning[Example values are not design ratings]
+
+Example values are included to teach selection logic. They are not design ratings. Verify exact values against the current manufacturer datasheet, application specification, governing standard, and program/customer requirement.
+
+:::
+
+The following are always example-only, even where the family figure is verified above:
+
+- Every number in the [comparison matrix](../tools/connector-comparison-matrix.md) and the [quick-reference tables](quick-reference-tables.md) (A1–A4) — representative family figures, never part ratings.
+- The 38999 contact-size table's test currents — relative sizing aids; the derating curve controls design current. (§7.5, A2)
+- The "70–80% at full load" derating illustration in [Workflow §2](../04-connector-selection-workflow.md) — a shape illustration, not a real curve.
+- All worked-example fields marked *illustrative* in the [cable drawing](../tools/cable-drawing-template.md) and [ICD](../tools/connector-icd-template.md) templates (part numbers, cable OD, lengths, revision letters).
+- Every placeholder (`J1`, `P1`, `CONTACT-SIZE16-SKT-EXAMPLE`) in the [Connector Selection Packet](../examples/connector-selection-packet.md) — reasoning scaffolding, not purchasable parts.
+- Example pinouts and wire colours (e.g. the A-coded brown/white/blue/black convention) — confirm against the device datasheet.
+- Voltage/current figures quoted from standard listings (4 A / 250 V A-coded, 16 A / 630 V power codings, 600/1000 V 26482 classes) — tied to the cited edition and configuration, not universal ratings.
+
+## 4. Needs source before v1.0
+
+The explicit backlog. These gate the v1.0 "source verified" milestone — they are the places where the guide currently relies on family-level sources, cautious wording, or no number at all, and where released-hardware use demands the exact document.
+
+| Priority | Item | Pages affected | Source needed | Risk if unsourced | Notes |
+| --- | --- | --- | --- | --- | --- |
+| High | Load-break / hot-plug / mate-under-load claims | [High-current DC](../decision-paths/high-current-dc-power.md), [Removable module](../decision-paths/removable-machine-module.md), §10, ICD template | Exact connector datasheet + governing standard statement per part | Arcing, shock, fire, destroyed contacts | New in v0.6: treat every connector as **not** load-break until the exact source says otherwise |
+| High | Current ratings and derating curves (per exact part) | §4, §7.5, matrix, A2/A3, high-current path | Manufacturer derating curve for the exact contact P/N and loading | Overheating, insulation damage | Family figures verified; per-part verification is inherently per-design |
+| High | IP67/IP68/IP69K sealing claims (per assembly) | §5.5, §8.3, A1, sealed-feedthrough & budget paths | Test condition + datasheet for the exact mated assembly | Water ingress in the field | IP definitions verified; per-assembly claims open |
+| High | Crimp inspection / workmanship criteria (per contact system) | §4, §5.2, cable-drawing/ICD/design-review templates | IPC/WHMA-A-620 class selection + the manufacturer application spec for each contact/tool system | Latent crimp failures passing visual inspection | A-620 now named as the general reference; per-system specs open |
+| Medium | Voltage ratings (incl. altitude/creepage effects) | §4, matrix, 26482 page | Exact datasheet + applicable safety standard | Insulation failure | Class figures are edition/configuration examples |
+| Medium | Mating-cycle ratings (per part) | A4, §6, matrix | Exact datasheet | Wear-out, rising contact resistance | Family figures verified |
+| Medium | Temperature ranges (per part/class) | matrix, §6, 26482 page | Exact datasheet / spec class | Derating and material errors | 26482 temp classes deliberately qualitative |
+| Medium | Wire-gauge compatibility per contact | §4, §5.2, templates | Contact datasheet / application spec | Bad crimps, failed wire seals | |
+| Medium | Contact-count / insert-arrangement examples | §7.3–7.4, matrix | Manufacturer insert-arrangement drawings | Mis-specified interfaces | Guide already says "always pull the drawing" |
+| Medium | MIL-DTL qualification / QPL status statements | §4, §7, 26482 page | QPL listing for the exact P/N | Non-compliant hardware | The guide asserts no QPL status today — keep it that way until verified |
+| Medium | M8/M12 IEC coding and standard references (current editions) | §8 | Current IEC edition text (61076-2-101/-104/-109/-111) | Stale scope claims | Listings verified; -104 known to be under revision — record edition/date checked |
+| Low | RF connector performance values (frequency/power per family) | [RF path](../decision-paths/rf-gps-radio.md), §2 | Exact part + cable datasheets | Degraded RF links | Intentionally number-free today |
+| Low | Automotive sealed-connector environmental claims beyond IP (temp/vibration/fluids) | §3.2, budget path | Series application specifications | Environmental field failures | Only sealing/current classes cited today |
+| Low | HDMI mating-cycle rating | §12 | Reputable public source | Minor | Intentionally unquoted; keep it that way unless sourced |
 
 ## Source discipline (publication rules)
 
 - Do **not** reproduce paid standards tables (the body text or tables of MIL-DTL or IEC documents) in this guide or derivatives. Reference and link instead.
 - Do **not** copy proprietary catalog tables verbatim. Verify against public manufacturer datasheets and summarize in your own words.
+- Standards change. Record the standard identifier, edition/date checked, and manufacturer datasheet revision used for the design.
 - Manufacturer, standard, trademark, and connector-family names remain property of their owners; used here for identification and education only.
-
-## Claims to verify
-
-### MIL-DTL-38999
-- [x] **Part-number decoder example (`D38999/26WE26PN`)** — **confirmed** against Amphenol's Series III "How to order" (catalog AC38907): `/26` = straight plug, `W` = olive-drab cadmium-plated aluminum, `E` = shell size 17, `P` = pin, `N` = normal; arrangement `17-26` exists. Retained the caveat that schemas differ between manufacturers. (Issue #3)
-- [x] **Series I/II/III/IV coupling descriptions** — Series III **confirmed** against the Amphenol Tri-Start Series III catalog (threaded Tri-Start / Acme, scoop-proof, self-locking / anti-decoupling). Series I/II (bayonet / low-profile bayonet) and IV (breech-lock) retained as the standard MIL-DTL-38999 definitions; Series III language kept conditional. (Issue #4)
-- [x] **Shell sizes, approximate OD, and "typical contact range"** in Section 7.3 — **confirmed/adjusted** against the Amphenol Series III dimensional tables: straight-plug coupling-nut OD runs ~22 mm (size 9) to ~48 mm (size 25) and is shell-style-dependent. Values kept as orientation aids; added a note that OD depends on shell style and the drawing controls. (Issue #5)
-- [x] **Contact-size / current example table** (Sections 7.5 and A2: 22D≈3 A, 20≈5 A, 16≈10 A, 12≈17 A) — **confirmed** against the Glenair *MIL-DTL-38999 Contact Performance Specifications* (Class H/N/Y test currents 22D=3 A, 20=5 A, 16=10 A, 12=17 A; also matches Amphenol's contact-rating table). Kept the "test current, not continuous rating" caveat. (Issue #6)
-- [x] **Keying positions (N, A, B, C, D, E)** — **confirmed** against the Amphenol Series III catalog: "Master Key/Keyway Position" table (p. 7) lists positions N, A, B, C, D, E, and the ordering page states "Use N for normal" (p. 31). (Issue #7)
-- [x] **High-current guidance** (size 12 only where derating supports the load; size 8/larger or HCP/RADSOK for higher current) — **confirmed** that Amphenol's High-Power 38999 / RADSOK contacts (~70–250 A per contact) provide dedicated high-current paths, and size 8/10-power contacts appear in the standard arrangement chart. The derating-aware and no-paralleling-without-review cautions are kept as engineering heuristics, not fixed ratings. (Issue #8)
-
-### MIL-DTL-24308 (D-sub)
-- [x] **"Standard D-sub is non-environmental"** statement — **confirmed** against MIL-DTL-24308G (DLA): standard D-subs are nonenvironmental, polarized-shell, rack-and-panel; ruggedized/environmental variants are separately specified. (Issue #9)
-
-### MIL-DTL-83513 (Micro-D)
-- [x] **Pitch and contact-arrangement statements** — **confirmed** against Glenair's MIL-DTL-83513 performance spec: contacts on .050 in (1.27 mm) centers, 3.0 A per contact. Pitch/current now stated with a source; exact contact arrangements still left to the catalog. (Issue #10)
-
-### M12 (IEC 61076-2-x)
-- [x] **Standards mapping** — **confirmed** via IEC listings: 61076-2-101 (A/B/D signal/data), 61076-2-109 (X- and H-coding, data ≤ 500 MHz), 61076-2-111 (power, codings E/F/K/L/M/S/T). Cited on the M12 deep dive; no IEC table text reproduced. (Issue #11)
-- [x] **A-coded "~4 A class"** — **confirmed**: IEC 61076-2-101 specifies up to 4 A per contact for M12 screw-locking signal/power connectors. Kept the caveat that exact current is connector/cable/temperature dependent. (Issue #12)
-- [x] **D-coded vs X-coded Ethernet guidance** — **confirmed**: X-coded per IEC 61076-2-109 (Cat 6A, up to 10 Gbit/s); D-coding is the 4-pin coding in IEC 61076-2-101 used for 10/100BASE-TX. D-coded is not obsolete; X-coded is not a blanket default. Cited on the M12 deep dive. (Issue #13)
-- [x] **Common coupling torque** — **confirmed/corrected**: Turck's M12 cordset datasheet (RK 4.5T-5, per IEC 61076-2-101) specifies **0.8–1.0 N·m**, higher than the guide's former "0.4–0.6 N·m." Reworded to say coupling torque is manufacturer-specific and varies, with Turck as the sourced example; the cable-drawing/ICD worked-example torque notes were updated to match. (Issue #14)
-
-### JST
-- [x] **Family pitch/current statements** — **confirmed** against JST datasheets: XH = 2.5 mm / 3 A, VH = 3.96 mm / up to 10 A (AWG #16); other series per JST's published pitches (PH 2.0, GH 1.25, SH 1.0, EH 2.5, ZH 1.5 mm). Added the sourced VH current; kept the "JST alone is not a specification" framing. (Issue #15)
-
-### Consumer I/O
-- [x] **USB-C mating-cycle expectation** — **confirmed**: the USB Type-C specification specifies 10,000-cycle durability (vs ~1,500 for USB Type-A). Added the sourced number, with the "cycle life ≠ ruggedness" warning preserved. (Issue #16)
-- [ ] **HDMI** — no cycle rating quoted; keep it that way unless sourced.
-
-### IP ratings (IEC 60529 / ISO 20653)
-- [x] **IP definitions table** (IP54/65/67/68/69K) — **confirmed** against IEC 60529 (and ISO 20653 for IP69K); wording only, no standard table reproduced. (Issue #17)
-- [x] **IP69K → ISO 20653 (DIN 40050-9 lineage) distinction** — **confirmed**: IP69K originates from ISO 20653 (formerly DIN 40050-9); the "K" is not part of IEC 60529, which added the close IPx9 equivalent in its 2013 edition. (Issue #17)
-- [x] **IP67 ≈ 1 m / 30 min** — **confirmed** against IEC 60529 (second characteristic numeral 7 = temporary immersion, tested at 1 m depth for 30 min). (Issue #17)
-
-### General
-- [ ] Any remaining current, voltage, mating-cycle, temperature, insulation-resistance, contact-resistance, wire-gauge, pitch, or contact-count number should be source-backed, labeled as an example, or replaced with cautious wording before v1.0.
-
-## Intentional engineering heuristics (not hard facts)
-
-These are deliberately presented as design heuristics / judgment, not as standards-backed rules:
-
-- **Spare-position guidance** (Section 4) — "add spares where feasible and justified" replaces any fixed percentage. Explicitly a heuristic; shell size, weight, cost, sealing plugs, and program requirements may override.
-- **Conservative current derating margin** (Sections 4 and 10) — "use a conservative margin and the manufacturer derating curve" rather than a fixed percentage.
-- **Mating-cycle service-life margin** (Sections 3/6) — "service life with margin below the rated cycles" rather than a fixed multiplier.
-- **Locking-mechanism preference** (Section 4) — "threaded/self-locking is *often* preferred for severe vibration" is judgment, not an absolute; bayonet is not categorically rejected.
-- **Series III as the *often*-default 38999 choice** (Section 7.2) — a common-practice heuristic, conditioned on size/mating-speed/legacy/customer/program requirements.
-- **Bench-to-product transition rule of thumb** (Section 12.3) — a judgment checklist, not a spec.

@@ -28,6 +28,8 @@ Based on [Section 10 — Practical Selection Checklist](../10-selection-checklis
 - [ ] Signal type identified; high-speed/RF flagged
 - [ ] Shields/grounds assigned
 - [ ] Power and signal segregation considered
+- [ ] Load-break / hot-plug / mate-under-power status recorded from the datasheet (yes / no / explicitly prohibited / not specified)
+- [ ] For power interfaces: touch safety when unmated, fuse/overcurrent protection, available fault current, and inrush/precharge documented
 - [ ] Spare positions added where feasible and justified
 
 ## Mechanical / environmental
@@ -48,7 +50,7 @@ Based on [Section 10 — Practical Selection Checklist](../10-selection-checklis
 
 - [ ] Crimp contacts and correct crimp tool identified
 - [ ] Positioner/die and insert/extract tools identified
-- [ ] Assembly instructions and inspection criteria defined
+- [ ] Assembly instructions and inspection criteria defined (acceptance per IPC/WHMA-A-620 or the program/customer equivalent)
 - [ ] Pull-test / continuity test plan defined
 - [ ] Supplier availability and lead time checked
 - [ ] Second source / QPL considered

@@ -56,6 +56,7 @@ Family-level sealing and current figures for these live in the sourced [sealed a
 - **Latch / wedgelock / secondary lock (TPA)** presence and positive engagement.
 - **Cavity count**, and whether every unused cavity has a **sealing plug**.
 - **Cable jacket** compatibility with the seal and any strain relief.
+- **Whether the connector will ever be unplugged under power** — battery-fed robots especially. These families are not load-break or hot-plug rated unless the exact datasheet says so; plan a de-energize step or an upstream disconnect. See the [energized-connector safety warning](high-current-dc-power.md).
 
 ## Parts people forget
 

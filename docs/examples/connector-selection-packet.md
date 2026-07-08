@@ -160,6 +160,8 @@ Use the [ICD template](../tools/connector-icd-template.md) for the full form.
 - [ ] **Mating connectors and dust caps** on the BOM
 - [ ] **Source-controlled pinout** exists and matches the harness
 - [ ] **Power/signal segregation** and **shield termination** reviewed
+- [ ] **Load-break / mate-under-power status** recorded from the datasheet — for this module: de-energize the 24 V feed before disconnect; sealed automotive families are not load-break rated unless the exact datasheet says so
+- [ ] **Workmanship/acceptance standard** named (IPC/WHMA-A-620 or the program/customer equivalent) along with the crimp tool and inspection criteria
 
 Run the full [design review checklist](../tools/design-review-checklist.md) before sign-off.
 

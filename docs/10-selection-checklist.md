@@ -26,6 +26,8 @@ Use this at work. Adapt to your program; it is a working checklist, not a standa
 - [ ] Signal type identified; high-speed/RF flagged
 - [ ] Shields/grounds assigned (360° where needed)
 - [ ] Power and signal segregation considered
+- [ ] Load-break / hot-plug / mate-under-power status recorded from the datasheet (yes / no / explicitly prohibited / not specified — never assumed)
+- [ ] For power interfaces: touch safety when unmated, fuse/overcurrent protection, available fault current, and inrush/precharge documented
 - [ ] Spare positions added where feasible and justified (and sealed/documented)
 
 **Mechanical / environmental**
@@ -44,7 +46,7 @@ Use this at work. Adapt to your program; it is a working checklist, not a standa
 **Manufacturing**
 - [ ] Crimp contacts and correct crimp tool identified
 - [ ] Positioner/die and insert/extract tools identified
-- [ ] Assembly instructions + inspection criteria defined
+- [ ] Assembly instructions + inspection criteria defined (acceptance per IPC/WHMA-A-620 or the program/customer equivalent)
 - [ ] Pull-test / continuity test plan defined
 - [ ] Supplier availability and lead time checked
 - [ ] Second source / QPL considered

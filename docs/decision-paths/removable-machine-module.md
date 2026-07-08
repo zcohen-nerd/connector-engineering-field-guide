@@ -51,6 +51,12 @@ Termination is available in **crimp, screw, or cage-clamp**; coupling is usually
 - **Current per contact at temperature**, and **segregation** if you mix power and low-level signal in one housing.
 - **Mating cycles** for the service model; high-mating-cycle variants exist where servicing is frequent (verify the exact figure against the datasheet).
 
+:::warning[Pulling a live module]
+
+A removable module invites technicians to unplug it without checking what's energized. A connector is not load-break, hot-plug, or safe to mate/unmate under power unless the datasheet or governing standard explicitly says so. Define the de-energize/service procedure, document whether mate/unmate under power is permitted, and label the module accordingly — see the [energized-connector safety warning](high-current-dc-power.md) on the high-current path.
+
+:::
+
 ## Parts people forget
 
 - The **hood *and* housing** (both ends), plus the **gasket** and **cable gland**.

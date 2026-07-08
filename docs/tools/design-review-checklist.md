@@ -18,7 +18,9 @@ Based on [Sections 10](../10-selection-checklist.md) and [11](../11-red-flags.md
 - [ ] Locking, strain relief, and backshell strategy are defined
 - [ ] Sealing and unmated protection are addressed
 - [ ] Keying and mis-mate prevention are addressed
+- [ ] Load-break / hot-plug / mate-under-power status recorded from the datasheet for every power-carrying interface (never assumed)
 - [ ] Tooling and assembly process are defined
+- [ ] Workmanship/acceptance standard identified (e.g. IPC/WHMA-A-620 or the program/customer equivalent)
 - [ ] Documentation package exists (BOM, pinout, cable drawing, ICD)
 
 ## Red-flag scan
@@ -33,6 +35,9 @@ Based on [Sections 10](../10-selection-checklist.md) and [11](../11-red-flags.md
 | Torque specs documented | TBD |  |
 | Wire seal sizing checked | TBD |  |
 | Mating connector included in BOM | TBD |  |
+| Load-break / mate-under-power status verified, not assumed | TBD |  |
+| Touch safety when unmated addressed for power paths | TBD |  |
+| Fusing / fault current / inrush documented for power paths | TBD |  |
 | Service access reviewed | TBD |  |
 | Cable labels / identification defined | TBD |  |
 

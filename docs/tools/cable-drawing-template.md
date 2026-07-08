@@ -34,6 +34,9 @@ Based on [Exercise 6](../13-hands-on-exercises.md).
 - Continuity:
 - Pinout verification:
 - Shield / drain verification:
+- Pull-test requirement:
+- Crimp spec / strip length reference (from the contact application spec):
+- Workmanship / acceptance standard (e.g. IPC/WHMA-A-620 class, or the program/customer equivalent):
 - Additional test requirements:
 
 ---
@@ -70,6 +73,7 @@ Wire colours follow the common A-coded 4-pin convention; confirm pin functions a
 - Continuity: pin 1→1, 2→2, 3→3, 4→4
 - Pinout verification: against the schedule above
 - Shield / drain verification: n/a (unshielded); add if a shielded variant is used
+- Workmanship / acceptance: IPC/WHMA-A-620 or the program/customer equivalent — molded cordset, incoming inspection *(illustrative)*
 - Additional: insulation resistance; coupling-torque check[^m12seal]
 
 ## Sources

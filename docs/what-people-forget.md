@@ -25,6 +25,7 @@ Everything here is covered in more depth elsewhere in the guide; this page just 
 - **Crimp tooling** — the right calibrated crimp tool and positioner/die for the exact contact. A crimp that passes visual with the wrong tool still fails in vibration. (See [Selection Workflow §4](04-connector-selection-workflow.md).)
 - **Insertion / extraction tools** — removable contacts need the matching insert/extract tool for build and repair. (See [Practical Checklist](10-selection-checklist.md).)
 - **Torque procedure** — coupling and jam-nut torque affect sealing and anti-vibration performance. Finger-tight is not a sealed, engaged mate. (See [M12 §8.3](08-m12.md).)
+- **Acceptance standard** — name the workmanship/acceptance criteria the harness will be built and inspected to (commonly IPC/WHMA-A-620, or the program/customer equivalent), alongside the manufacturer application spec for the exact contact system. (See [Selection Workflow §4](04-connector-selection-workflow.md).)
 
 ## Specs that decide whether it fits
 

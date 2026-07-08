@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.0] - 2026-07-08
+
+### v0.6 — Source Cleanup + Safety Pass
+
+- Aligned public version/status language across the guide (`v0.6 Beta — Source Cleanup + Safety Pass`), with a consistent educational/reference disclaimer on the homepage and Source Notes.
+- Reworked Source Notes into a source-status dashboard: verified claims, engineering heuristics, example-only values, and an explicit needs-source-before-v1.0 backlog.
+- Updated M8/M12 standards language: IEC 61076-2-104 scope no longer over-anchored on a single edition's contact-count summary; IEC 61076-2-111 power figures labeled as edition/configuration-specific examples; added a record-the-edition/datasheet-revision reminder.
+- Added explicit energized-connector / load-break / hot-plug safety warnings to the high-current DC path (and cross-references on the removable-module and rugged-on-a-budget paths), plus load-break/touch-safety/fault-current/inrush fields in the selection checklists, ICD template, design-review checklist, and worked selection packet.
+- Added IPC/WHMA-A-620 as the general cable and wire harness workmanship/acceptance reference (program/customer requirements still control) across the workflow, templates, and checklists.
+- Added source-verification reminders for ratings, tooling, qualification, and environmental limits.
+
 ## [0.5.0] - 2026-07-06
 
 ### Added

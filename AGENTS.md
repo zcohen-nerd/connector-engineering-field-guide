@@ -6,7 +6,7 @@
 **Project family:** Technical Guide
 **Required badge language:** A zcohen-nerd technical guide
 
-This repository is part of the zcohen-nerd ecosystem as a professional technical guide. Preserve technical accuracy, source-verification notes, engineering terminology, and documentation structure unless specifically asked to change them.
+This repository is part of the zcohen-nerd ecosystem as a two-track technical guide: a Hobby Connector Field Guide and a Professional / Industrial Connector Field Guide. Preserve technical accuracy, source-verification notes, engineering terminology, the two-track documentation structure, and the practical field-guide tone unless specifically asked to change them.
 
 ### Implementation Rules
 

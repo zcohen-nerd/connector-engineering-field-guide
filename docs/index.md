@@ -13,17 +13,19 @@ sidebar_label: All Guides
 Two guides, one site. Pick the track that matches your project — they cross-link where it matters, and both follow the same rule: **the datasheet, standard, and requirement always win over anything written here.**
 
 <div class="cn-card-grid">
-<div class="cn-card">
+<div class="cn-card cn-card--hobby">
+<div class="cn-card-kicker">Maker / Hobby</div>
 <div class="cn-card-title">Hobby Connector Field Guide</div>
 <div class="cn-card-row">For makers, students, Arduino/Raspberry Pi/ESP32/Pico projects, 3D printers, RC, LEDs, sensors, small robots, home automation, and prototype wiring.</div>
 <div class="cn-card-row"><span class="cn-card-label">Learn to</span> identify mystery connectors · untangle JST-family confusion · choose connectors for sensors, LEDs, batteries, servos, and dev boards · buy the right mating parts · crimp without losing your mind · know when hobby connectors are not enough</div>
-<div class="cn-card-row"><strong><a href="hobby">Enter the Hobby Connector Guide →</a></strong></div>
+<a class="cn-card-button" href="hobby">Enter the Hobby Guide →</a>
 </div>
-<div class="cn-card">
+<div class="cn-card cn-card--engineering">
+<div class="cn-card-kicker">Engineering / Production</div>
 <div class="cn-card-title">Professional / Industrial Connector Field Guide</div>
 <div class="cn-card-row">For electromechanical systems, industrial equipment, robotics platforms, sealed enclosures, released harnesses, design reviews, and production hardware.</div>
 <div class="cn-card-row"><span class="cn-card-label">Covers</span> requirements and ratings · environment and derating · standards and qualification · cable drawings and connector ICDs · tooling and workmanship · lifecycle and field-service risk</div>
-<div class="cn-card-row"><strong><a href="engineering">Enter the Engineering Connector Guide →</a></strong></div>
+<a class="cn-card-button" href="engineering">Enter the Engineering Guide →</a>
 </div>
 </div>
 

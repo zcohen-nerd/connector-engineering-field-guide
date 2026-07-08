@@ -86,3 +86,68 @@
   color: var(--ifm-color-primary);
   margin-right: 0.35rem;
 }
+
+/* ── Two-track landing cards (v0.9 polish) ───────────────────────────────── */
+/* Subtle accents + button CTAs using existing tokens only.                   */
+.cn-card--hobby {
+  border-left-color: var(--zc-color-link);
+}
+
+.cn-card--engineering {
+  border-left-color: var(--ifm-color-primary);
+}
+
+.cn-card:hover,
+.cn-card:focus-within {
+  border-color: var(--ifm-color-emphasis-400);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cn-card-kicker {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.4rem;
+}
+
+.cn-card-button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cn-card-button:hover {
+  background: var(--ifm-color-primary-dark);
+  color: #fff;
+  text-decoration: none;
+}
+
+.cn-card-button:focus-visible {
+  outline: 3px solid var(--ifm-color-primary-lightest);
+  outline-offset: 2px;
+}
+
+/* Dark mode: primary is a light orange — dark text keeps the button legible. */
+[data-theme='dark'] .cn-card-button,
+[data-theme='dark'] .cn-card-button:hover {
+  color: #1b1b1d;
+}
+
+@media (max-width: 600px) {
+  .cn-card {
+    padding: 0.9rem 1rem;
+  }
+
+  .cn-card-button {
+    display: block;
+    text-align: center;
+  }
+}

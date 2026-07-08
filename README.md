@@ -7,7 +7,7 @@ Two connector field guides, one site:
 - **[Professional / Industrial Connector Field Guide](https://zcohen-nerd.github.io/connector-engineering-field-guide/engineering)** — practical connector selection for rugged, industrial, military-style, and electromechanical systems, written for engineers who are **not** connector specialists.
 - **[Hobby Connector Field Guide](https://zcohen-nerd.github.io/connector-engineering-field-guide/hobby)** — a practical map through hobby connector chaos for makers, students, and dev-board projects: identify, choose, buy, crimp, and avoid the traps.
 
-**Status:** v0.8 Beta — Two-Track Guide Structure · *A zcohen-nerd technical guide*
+**Status:** v0.9 Beta — Hobby Guide Expansion + Two-Track Polish · *A zcohen-nerd technical guide*
 
 ## Why this exists
 

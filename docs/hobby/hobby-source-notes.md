@@ -14,9 +14,10 @@ The hobby track follows the same transparency rules as the rest of the site (see
 
 Only what is actually backed by sources present in this repo:
 
-- **JST series pitches** — XH 2.5 mm, PH 2.0 mm, SH 1.0 mm, GH 1.25 mm (also EH/ZH/VH) — per JST's published datasheets, cited on [JST Is Not One Connector](jst-is-not-one-connector.md) and in the engineering track's [§12](../12-consumer-hobby-prototype-connectors.md).
-- **JST XH ≈ 3 A class / VH up to ~10 A (AWG 16)** — per the JST datasheets cited in [§12](../12-consumer-hobby-prototype-connectors.md); series/contact/gauge caveats apply.
+- **JST XH, PH, SH, GH, SM, and RCY series** — pitch, connector type, and headline datasheet ratings (XH 2.5 / PH 2.0 / SH 1.0 / GH 1.25 / SM 2.5 / RCY 2.5 mm), each cited to its official JST series PDF on [JST Is Not One Connector](jst-is-not-one-connector.md). **Genuine-part figures only — clones and "compatible" parts are not covered by them.**
+- **JST VH** (3.96 mm, up to ~10 A @ AWG 16) — per the JST datasheet cited in the engineering track's [§12](../12-consumer-hobby-prototype-connectors.md).
 - **USB-C 10,000-cycle durability** — per the USB-IF Type-C specification, cited in [§12](../12-consumer-hobby-prototype-connectors.md).
+- **Qwiic / STEMMA QT connector conventions** — 4-pin 1.0 mm JST SH, polarized, cross-compatible ecosystems — per SparkFun's Qwiic documentation and Adafruit's STEMMA QT technical specs, cited on [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
 - **0.1 in = 2.54 mm** — definitional; the basis of the Dupont/header ecosystem discussion.
 
 ## Engineering heuristics (judgment, not specification)
@@ -34,9 +35,8 @@ Only what is actually backed by sources present in this repo:
 
 Typical hobby usage, not design ratings. Anywhere these appear they carry a *verify* hedge — verify exact pitch, current, voltage, wire gauge, and mating part against the manufacturer datasheet or supplier documentation:
 
-- JST-XH, JST-PH, JST-SH, JST-GH pitch/rating usage beyond the sourced pitches above
-- JST-SM pitch/rating examples (series values not yet sourced in this repo)
-- JST-RCY / BEC-style series identification and examples
+- Clone / "compatible" / "-style" versions of any JST series — the genuine-part datasheet figures above do not transfer to them
+- JST series usage beyond the sourced datasheet figures (derating, environment, cycles in *your* application)
 - XT30/XT60/XT90 current examples — the digits are not a rating
 - Servo connector/lead current examples
 - Dupont / 0.1 in header current assumptions
@@ -44,7 +44,7 @@ Typical hobby usage, not design ratings. Anywhere these appear they carry a *ver
 - Screw/spring terminal ratings and gauge ranges
 - LED connector current assumptions and power-injection sizing
 - Every marketplace kit claim (series, pitch, "waterproof," "high current")
-- The Qwiic / STEMMA QT ↔ JST SH ecosystem association (stated per vendor documentation, pending citation)
+- Grove ecosystem connector specifics (kept qualitative; Seeed documentation is the target)
 
 ## Needs source before hobby v1.0
 
@@ -52,14 +52,28 @@ Source targets, honestly unfilled — none of these citations exist in the repo 
 
 | Item | Source target |
 |---|---|
-| JST XH/PH/SH/GH/SM/RCY series details beyond pitch | Official JST product pages/datasheets per series (SM and RCY entirely unsourced today) |
-| Qwiic connector conventions | SparkFun Qwiic documentation |
-| STEMMA QT connector conventions | Adafruit STEMMA QT documentation |
+| JST EH/ZH (mentioned only as published-pitch examples) | Official JST datasheets per series, if those mentions are kept |
+| Grove ecosystem connector details | Seeed Grove documentation |
 | XT30/XT60/XT90 ratings | AMASS (or actual manufacturer) documentation |
 | Crimping tiny open-barrel terminals | Manufacturer application notes / crimp specifications |
 | LED power injection guidance (if expanded) | Reputable LED wiring/power-injection references |
 | USB connector guidance (if formalized) | USB-IF specifications (the 10k-cycle figure is already cited in §12) |
 | Barrel jacks, terminal blocks, Wago-style lever connectors, screw terminals | Relevant manufacturer documentation |
+
+## Recommended next deep pages
+
+The editorial roadmap for this track — what exists, what's next, and in what order. Nothing here is claimed complete or fully sourced; "initial page added" means exactly that.
+
+1. **JST-XH** — initial page added (v0.9); source hardening still needed
+2. **JST-PH** — initial page added (v0.9); source hardening still needed
+3. **JST-SH / Qwiic / STEMMA QT** — initial page added (v0.9); Qwiic/STEMMA QT conventions cited, Grove still qualitative
+4. **Dupont / 0.1 inch headers** — initial page added (v0.9); no governing spec exists, by nature
+5. **XT30 / XT60 / XT90** — initial page added (v0.9); manufacturer documentation still needed
+6. **Servo connectors** — capsule only; deep page not started
+7. **Screw/spring terminals and ferrules** — capsule only; deep page not started
+8. **USB-C power for hobby projects** — capsule only; deep page not started
+9. **Barrel jacks and polarity traps** — capsule only; deep page not started
+10. **Grove ecosystem** — mentioned only; deep page not started
 
 :::note
 

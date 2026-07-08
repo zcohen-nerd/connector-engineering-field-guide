@@ -1,12 +1,14 @@
 ---
 id: 12-consumer-hobby-prototype-connectors
-title: "12. Consumer, Hobby, and Prototype Connectors vs. Production/Rugged Use"
+title: "12. Consumer, Hobby, and Prototype Connectors at the Bench-to-Product Boundary"
 description: "When hobby and prototype connectors (Dupont, JST-XH, screw terminals, USB-C) are acceptable, and when they fail in production or rugged field service."
 slug: /12-consumer-hobby-prototype-connectors
 sidebar_label: Consumer/Hobby/Prototype Connectors
 ---
 
-# 12. Consumer, Hobby, and Prototype Connectors vs. Production/Rugged Use
+# 12. Consumer, Hobby, and Prototype Connectors at the Bench-to-Product Boundary
+
+This page is written from the professional/industrial side of the boundary. It is not the main hobby connector guide — for identifying JST-family parts, buying mating connectors, crimping small terminals, and navigating marketplace kits, use the [Hobby Connector Field Guide](hobby/index.md). What this page answers is the transition question: **when are hobby/prototype connectors acceptable, and when do they become inappropriate for engineered, fielded, or production hardware?**
 
 Consumer, hobby, and prototype connectors are not automatically "bad." They are optimized for cost, availability, and ease of use. The real question is whether a given connector is appropriate for the environment, mating-cycle requirement, strain relief, vibration profile, sealing requirement, configuration-control needs, and service model of your application. A connector that is perfect on a breadboard can be exactly wrong on the outside of a fielded enclosure — and the same part can be a sensible internal choice in a protected assembly. Know which world you're in.
 
@@ -100,7 +102,7 @@ Whichever you choose, check shielding continuity, strain relief, latch protectio
 
 ## Sources
 
-[^jst]: JST product datasheets (jst-mfg.com). Verified directly from JST datasheets: **XH** = 2.5 mm pitch, 3 A, 250 V; **VH** = 3.96 mm pitch, up to 10 A (AWG #16), 250 V. Other series follow JST's published pitches — PH 2.0 mm, GH 1.25 mm, SH 1.0 mm, EH 2.5 mm, ZH 1.5 mm. Exact current depends on the contact, wire gauge, and configuration; "JST" alone is not a specification. XH: <https://www.jst-mfg.com/product/pdf/eng/eXH.pdf> — VH: <https://www.jst-mfg.com/product/pdf/eng/eVH.pdf>
+[^jst]: JST product datasheets (jst-mfg.com). Verified directly from JST datasheets: **XH** = 2.5 mm pitch, 3 A, 250 V; **VH** = 3.96 mm pitch, up to 10 A (AWG #16), 250 V. Other series follow JST's published pitches — PH 2.0 mm, GH 1.25 mm, SH 1.0 mm, EH 2.5 mm, ZH 1.5 mm. Exact current depends on the contact, wire gauge, and configuration; "JST" alone is not a specification. Official series PDFs: XH <https://www.jst-mfg.com/product/pdf/eng/eXH.pdf> — VH <https://www.jst-mfg.com/product/pdf/eng/eVH.pdf> — PH <https://www.jst-mfg.com/product/pdf/eng/ePH.pdf> — SH <https://www.jst-mfg.com/product/pdf/eng/eSH.pdf> — GH <https://www.jst-mfg.com/product/pdf/eng/eGH.pdf> — SM <https://www.jst-mfg.com/product/pdf/eng/eSM.pdf> — RCY <https://www.jst-mfg.com/product/pdf/eng/eRCY.pdf> (SM and RCY are 2.5 mm wire-to-wire series)
 
 [^usbc]: The USB Type-C Cable and Connector Specification (USB-IF) specifies connector durability of 10,000 mating cycles (minimum), versus roughly 1,500 for USB Type-A/B. Manufacturer USB-C datasheets carry the same 10,000-cycle figure. Durability is a mating-cycle figure only — not a measure of sealing, vibration, or ruggedness. <https://www.mouser.com/pdfDocs/USBCCADatasheet.pdf>
 

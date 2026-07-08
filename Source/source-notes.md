@@ -1,12 +1,12 @@
 # Source Notes — Source-Status Dashboard
 
-**Status: v0.8 Beta — Two-Track Guide Structure**
+**Status: v0.9 Beta — Hobby Guide Expansion + Two-Track Polish**
 
 This file is the guide's transparency layer. Every technical statement falls into one of four buckets, and this file says which: **verified claims** (backed by a named public source), **engineering heuristics** (deliberate judgment, not specification), **example-only values** (teaching aids, never design authority), and an explicit **needs-source-before-v1.0 backlog**.
 
 > This guide is an educational engineering reference. Always verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and program/customer requirements.
 
-Release history lives in `CHANGELOG.md`. This file matches `docs/appendix/source-notes.md`; the docs copy adds site links. Inline citations live in the `## Sources` section of `connector-engineering-field-guide.md` and in each site page's Sources section. v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields. v0.8 split the site into hobby and professional tracks: the hobby track is **site-only material** with no `Source/` counterpart — `Source/connector-engineering-field-guide.md` remains the canonical source for the professional guide's 14 numbered sections + appendix only. The hobby track's source status lives in `docs/hobby/hobby-source-notes.md`; it reuses the JST/USB-IF citations already verified for §12 and marks everything else *source needed* (no new exact ratings introduced).
+Release history lives in `CHANGELOG.md`. This file matches `docs/appendix/source-notes.md`; the docs copy adds site links. Inline citations live in the `## Sources` section of `connector-engineering-field-guide.md` and in each site page's Sources section. v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields. v0.8 split the site into hobby and professional tracks: the hobby track is **site-only material** with no `Source/` counterpart — `Source/connector-engineering-field-guide.md` remains the canonical source for the professional guide's 14 numbered sections + appendix only. The hobby track's source status lives in `docs/hobby/hobby-source-notes.md`; as of v0.8.1 the six commonly-met JST series (XH/PH/SH/GH/SM/RCY) are cited series-by-series to official JST PDFs, and everything else is marked *source needed* (genuine-part figures never transfer to clones).
 
 ## Source hierarchy
 
@@ -42,7 +42,7 @@ Statements backed by a credible public source. "Verified" means the claim matche
 | M12 coupling-torque example (0.8–1.0 N·m) | Manufacturer datasheet | Turck RK 4.5T-5 | §8.3 | Example only — torque is manufacturer-specified |
 | M12 K-coding = 4+PE, 630 V AC class configuration | Manufacturer page | binder M12 K-coded family | §8.1 | Example configuration per IEC 61076-2-111; current varies by vendor |
 | M8 detail spec is IEC 61076-2-104 (screw/snap locking) | Standard listing | IEC 61076-2-104 (Ed. 2.0, 2014 listing) | §8.6 | Scope details are edition-specific; standard under revision |
-| JST XH (2.5 mm, 3 A) and VH (3.96 mm, up to 10 A @ AWG 16) | Manufacturer datasheets | JST | §12 | "JST" alone is not a specification |
+| JST series datasheets — XH, PH, SH, GH, SM, RCY (and VH): pitches + headline ratings | Manufacturer datasheets | Official JST series PDFs (jst-mfg.com) | §12, site hobby JST page | Genuine-part figures only; clones not covered; "JST" alone is not a specification |
 | USB-C 10,000-cycle durability (vs ~1,500 USB-A) | Public standard | USB Type-C spec (USB-IF) | §12, A4 | Cycle life ≠ ruggedness |
 | IP code definitions; IP67 = 1 m/30 min; IP69K origin in ISO 20653 | Standards | IEC 60529 / ISO 20653 | A1 | Wording only; no standard tables reproduced |
 | Deutsch DT/DTM/DTP sealing (IP68) and current classes | Manufacturer pages | TE Connectivity | §3.2 | Family-level; verify the exact series datasheet |
@@ -109,7 +109,7 @@ The explicit backlog. These gate the v1.0 "source verified" milestone — they a
 | Low | RF & fiber connector performance values (frequency/power/loss per family) | §2, site RF path | Exact part + cable/fiber datasheets | Degraded links | Intentionally number-free; v0.7 added decision-field tables instead of values |
 | Low | Automotive sealed-connector environmental claims beyond IP (temp/vibration/fluids) | §3.2 | Series application specifications | Environmental field failures | Only sealing/current classes cited today |
 | Low | HDMI mating-cycle rating | §12 | Reputable public source | Minor | Intentionally unquoted; keep it that way unless sourced |
-| Medium | Hobby-track source hardening (JST SM/RCY series, Qwiic/STEMMA QT conventions, XT ratings, crimp app notes, barrel/terminal docs) | site hobby track | Per the targets in `docs/hobby/hobby-source-notes.md` | Makers treating placeholders as ratings | All flagged *source needed* in-page; gates a hobby v1.0, not publication |
+| Medium | Hobby-track source hardening (Qwiic/STEMMA QT conventions, XT ratings, crimp app notes, barrel/terminal docs) | site hobby track | Per the targets in `docs/hobby/hobby-source-notes.md` | Makers treating placeholders as ratings | JST XH/PH/SH/GH/SM/RCY closed in v0.8.1 via official JST PDFs; the rest flagged *source needed* in-page |
 
 ## Source discipline (publication rules)
 

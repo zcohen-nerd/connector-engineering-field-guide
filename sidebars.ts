@@ -7,13 +7,21 @@ const sidebars: SidebarsConfig = {
     'hobby/big-idea',
     'hobby/identify-unknown-connector',
     'hobby/jst-is-not-one-connector',
+    'hobby/bad-listing-examples',
     'hobby/pitch',
     {
       type: 'category',
       label: 'Common Hobby Connector Families',
       link: {type: 'doc', id: 'hobby/families'},
       collapsed: false,
-      items: ['hobby/jst-sm-led-connectors'],
+      items: [
+        'hobby/dupont-headers',
+        'hobby/jst-xh',
+        'hobby/jst-ph',
+        'hobby/jst-sh-qwiic-stemma',
+        'hobby/jst-sm-led-connectors',
+        'hobby/xt-connectors',
+      ],
     },
     'hobby/power-vs-signal',
     'hobby/crimping',
@@ -23,15 +31,17 @@ const sidebars: SidebarsConfig = {
     'hobby-or-professional',
     'hobby/decision-guide',
     'hobby/hobby-source-notes',
+    // type:'ref' links to docs owned by guideSidebar without changing their
+    // sidebar association — and resolves baseUrl-safely, unlike raw hrefs.
     {
-      type: 'link',
+      type: 'ref',
+      id: 'glossary',
       label: 'Glossary (shared)',
-      href: '/connector-engineering-field-guide/glossary',
     },
     {
-      type: 'link',
+      type: 'ref',
+      id: 'connector-identification',
       label: 'Identification Workflow (shared)',
-      href: '/connector-engineering-field-guide/connector-identification',
     },
   ],
 

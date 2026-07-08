@@ -26,6 +26,10 @@ Measuring one gap between two small contacts multiplies your caliper error. Spre
 
 Example: for a 4-position connector, measure center-to-center from contact 1 to contact 4 and divide by 3. A first-to-last reading of 7.5 mm ÷ 3 = 2.5 mm pitch; 7.62 ÷ 3 = 2.54 mm. The full-row measurement is what separates those two cleanly.
 
+![Diagram: a four-position connector with a discouraged single-gap measurement above and the preferred full-row center-to-center measurement below, divided by N minus one](/img/diagrams/hobby-pitch-measurement.svg)
+
+*One gap hides caliper error inside a small number; the full row spreads it thin.*
+
 Practical tips:
 
 - Measure the **contacts or cavities**, not the housing edges.

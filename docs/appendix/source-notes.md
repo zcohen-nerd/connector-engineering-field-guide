@@ -7,7 +7,7 @@ sidebar_label: Source Notes
 
 # Source Notes — Source-Status Dashboard
 
-**Status: v0.8 Beta — Two-Track Guide Structure**
+**Status: v0.9 Beta — Hobby Guide Expansion + Two-Track Polish**
 
 This page is the guide's transparency layer. Every technical statement in the guide falls into one of four buckets, and this page says which: **verified claims** (backed by a named public source), **engineering heuristics** (deliberate judgment, not specification), **example-only values** (teaching aids, never design authority), and an explicit **needs-source-before-v1.0 backlog**.
 
@@ -21,7 +21,7 @@ Release history lives in the repository `CHANGELOG.md`. v0.7 added source hierar
 
 ## Hobby connector source status (v0.8)
 
-The new [Hobby Connector Field Guide](../hobby/index.md) is **site-only material** (no `Source/` counterpart) and carries its own detailed status page: [Hobby Source Notes](../hobby/source-notes). Summary: the JST series pitches (XH/PH/SH/GH) and the XH/VH current figures ride on the JST datasheet citations already verified for §12; the USB-C cycle figure is the §12 USB-IF citation; **everything else in the hobby track is deliberately qualitative** — JST-SM/RCY series details, XT-connector ratings, Qwiic/STEMMA QT ecosystem conventions, servo/Dupont/barrel/terminal values, and all marketplace-kit claims are marked *source needed* with named source targets. No new exact ratings were introduced.
+The new [Hobby Connector Field Guide](../hobby/index.md) is **site-only material** (no `Source/` counterpart) and carries its own detailed status page: [Hobby Source Notes](../hobby/source-notes). Summary: all six commonly-met JST series (XH/PH/SH/GH/SM/RCY) are cited series-by-series to official JST PDFs (v0.8.1), plus VH and the USB-C cycle figure via §12; **everything else in the hobby track is deliberately qualitative** — XT-connector ratings, Qwiic/STEMMA QT ecosystem conventions, servo/Dupont/barrel/terminal values, and all marketplace-kit claims are marked *source needed* with named source targets. Genuine-part figures never transfer to clones.
 
 ## Source hierarchy
 
@@ -57,7 +57,7 @@ Statements backed by a credible public source. "Verified" means the claim matche
 | M12 coupling-torque example (0.8–1.0 N·m) | Manufacturer datasheet | Turck RK 4.5T-5 | [M12 §8.3](../08-m12.md), [tools](../tools/connector-icd-template.md) | Example only — torque is manufacturer-specified |
 | M12 K-coding = 4+PE, 630 V AC class configuration | Manufacturer page | binder M12 K-coded family | [M12 §8.1](../08-m12.md) | Example configuration per IEC 61076-2-111; current varies by vendor |
 | M8 detail spec is IEC 61076-2-104 (screw/snap locking) | Standard listing | IEC 61076-2-104 (Ed. 2.0, 2014 listing) | [M12 §8.6](../08-m12.md) | Scope details are edition-specific; standard under revision |
-| JST XH (2.5 mm, 3 A) and VH (3.96 mm, up to 10 A @ AWG 16) | Manufacturer datasheets | JST | [§12](../12-consumer-hobby-prototype-connectors.md) | "JST" alone is not a specification |
+| JST series datasheets — XH, PH, SH, GH, SM, RCY (and VH): pitches + headline ratings | Manufacturer datasheets | Official JST series PDFs (jst-mfg.com) | [§12](../12-consumer-hobby-prototype-connectors.md), [hobby JST page](../hobby/jst-is-not-one-connector.md) | Genuine-part figures only; clones not covered; "JST" alone is not a specification |
 | USB-C 10,000-cycle durability (vs ~1,500 USB-A) | Public standard | USB Type-C spec (USB-IF) | [§12](../12-consumer-hobby-prototype-connectors.md), [Quick-Ref A4](quick-reference-tables.md) | Cycle life ≠ ruggedness |
 | IP code definitions; IP67 = 1 m/30 min; IP69K origin in ISO 20653 | Standards | IEC 60529 / ISO 20653 | [Quick-Ref A1](quick-reference-tables.md) | Wording only; no standard tables reproduced |
 | Deutsch DT/DTM/DTP sealing (IP68) and current classes | Manufacturer pages | TE Connectivity | [§3.2](../03-connector-standards-and-families.md), [budget path](../decision-paths/rugged-on-a-budget.md) | Family-level; verify the exact series datasheet |
@@ -129,7 +129,7 @@ The explicit backlog. These gate the v1.0 "source verified" milestone — they a
 | Low | RF & fiber connector performance values (frequency/power/loss per family) | [RF path](../decision-paths/rf-gps-radio.md), §2 | Exact part + cable/fiber datasheets | Degraded links | Intentionally number-free; v0.7 added decision-field tables instead of values |
 | Low | Automotive sealed-connector environmental claims beyond IP (temp/vibration/fluids) | §3.2, budget path | Series application specifications | Environmental field failures | Only sealing/current classes cited today |
 | Low | HDMI mating-cycle rating | §12 | Reputable public source | Minor | Intentionally unquoted; keep it that way unless sourced |
-| Medium | Hobby-track source hardening (JST SM/RCY series, Qwiic/STEMMA QT conventions, XT ratings, crimp app notes, barrel/terminal docs) | [Hobby track](../hobby/index.md) | Per the targets listed in [Hobby Source Notes](../hobby/source-notes) | Makers treating placeholders as ratings | All flagged *source needed* in-page; gates a hobby v1.0, not publication |
+| Medium | Hobby-track source hardening (Qwiic/STEMMA QT conventions, XT ratings, crimp app notes, barrel/terminal docs) | [Hobby track](../hobby/index.md) | Per the targets listed in [Hobby Source Notes](../hobby/source-notes) | Makers treating placeholders as ratings | JST XH/PH/SH/GH/SM/RCY closed in v0.8.1 via official JST PDFs; the rest flagged *source needed* in-page |
 
 ## Source discipline (publication rules)
 

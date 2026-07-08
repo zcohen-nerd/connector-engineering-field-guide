@@ -14,6 +14,8 @@ You've identified the connector. Now you need the *other half* — and this is w
 
 - **A connector is only half an interface — buy both halves deliberately.** The mating part is defined by the family drawing, not by whatever latches onto it.
 - **Housing and contacts are separate purchases** in most families. Order the housing *and* the matching terminals (and check the terminal's wire-gauge range against your wire) — a bag of housings alone builds nothing.
+
+  ![Diagram: an empty connector housing with cavities plus a separate open-barrel crimp contact on a wire, labeled as two separate part numbers that must match the same family](/img/diagrams/hobby-housing-vs-contact.svg)
 - **Sort out gender twice:** the housing style (plug/receptacle, header/housing) and the contact gender (pin/socket) are independent. Listings mix these up constantly — verify against the drawing's mating diagram.
 - **Match the series exactly.** XH mates XH; a 2.5 mm lookalike from another family is not "close enough." When in doubt, [measure](pitch.md) and [identify](identify-unknown-connector.md) first.
 - **Genuine parts are cheap insurance.** For JST, Molex, and similar families, genuine series parts from authorized distributors (Digi-Key, Mouser, LCSC, Farnell/Newark…) cost pennies to dimes more than clones and come with a real drawing and consistent mating. Use marketplace clones knowingly, not accidentally.

@@ -10,7 +10,7 @@ sidebar_label: Engineering Guide Home
 
 *Practical connector selection for rugged, industrial, military-style, and electromechanical systems.*
 
-:::note[v0.8 Beta — Two-Track Guide Structure]
+:::note[v0.9 Beta — Hobby Guide Expansion + Two-Track Polish]
 
 Technical corrections welcome with sources. This guide is an educational engineering reference. Always verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and program/customer requirements.
 

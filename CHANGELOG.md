@@ -2,18 +2,44 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.9.0] - 2026-07-08
+
+### v0.9 — Hobby Guide Expansion + Two-Track Polish
+
+- Added dedicated hobby family pages for the highest-value connector families: Dupont / 0.1-inch headers, JST-XH, JST-PH, JST-SH / Qwiic / STEMMA QT, and XT-class DC power connectors (JST-SM keeps its existing dedicated page).
+- Tightened or sourced remaining hobby-specific claims: Qwiic/STEMMA QT connector conventions now cited to SparkFun/Adafruit documentation; the XT "AMASS-designed" claim softened to a common-usage description pending manufacturer documentation; JR/Futaba servo wording replaced with cautious verify-the-documentation language; Grove kept qualitative with Seeed docs as the named target.
+- Reframed the professional §12 page as "Consumer, Hobby, and Prototype Connectors at the Bench-to-Product Boundary" — the transition-risk page, explicitly deferring identification/buying/crimping detail to the hobby track.
+- Added an editorial roadmap ("Recommended next deep pages") to Hobby Source Notes; new pages are marked initial, not complete.
+- Improved the two-track landing page: kicker labels, button-style CTAs with hover/focus states, subtle per-track accents, mobile spacing — existing tokens only, no brand changes.
+- Documented that top-level brand navLinks are unsupported in project mode (feature request against the brand package; TODO recorded in config) — no unsafe config added.
+- Flagged the OG/social card as stale for the two-track site in a new visual backlog (`internal/HOBBY_VISUAL_BACKLOG.md`); `themeConfig.image` unchanged and valid.
+- Added "Bad Connector Listings, Corrected" — five marketplace-description makeovers plus a reusable good-connector-description template.
+- Added two hobby diagrams (pitch measurement; housing vs contact) in the existing line-art style, plus the prioritized visual backlog.
+
+The hobby track remains initial/seeded — not complete or fully sourced.
+
+## [0.8.1] - 2026-07-08
+
+### Fixed
+
+- Corrected project navigation so the top-left brand/home link returns to the guide landing page instead of leaving the site.
+- Updated site and repo metadata from the old professional-only framing to the two-track Connector Field Guides framing (Docusaurus title/tagline/brand name, CITATION.cff, agent instructions, CONTRIBUTING).
+- Added CI validation (`.github/workflows/build.yml`) running typecheck and the Docusaurus build on pushes and pull requests.
+- Tightened hobby JST source-status language: all six commonly-met JST series (XH, PH, SH, GH, SM, RCY) are now cited series-by-series to official JST PDFs, with genuine-vs-clone caveats; only directly cited claims are marked verified.
+- Replaced hardcoded internal sidebar URLs with Docusaurus doc references.
+- Cleaned up the v0.8 changelog wording.
+
 ## [0.8.0] - 2026-07-08
 
 ### v0.8 — Two-Track Guide Structure
 
-- Added top-level routing between the Hobby Connector Field Guide and Professional / Industrial Connector Field Guide: the site root (`/`) is now a two-track landing page with a "Not sure?" audience-decision table.
-- Added a new Hobby Connector Field Guide landing page at `/hobby` (track under construction; family pages, identification workflow, and buying/crimping guides follow in later steps).
-- Preserved the existing professional guide content: every existing URL is unchanged; the former homepage content moved to `/engineering` as the professional guide's start page.
-- Added audience guidance and cross-links so readers can choose — and switch — tracks.
-- Seeded the hobby track (Step 2): Start Here workflow, The Big Idea, unknown-connector identification, JST Is Not One Connector, pitch measurement, 13-family field notes (JST-SM/LED strings as a dedicated page), power vs signal, crimping, marketplace kits, buying mating parts, graduation triggers, decision guide, and hobby source notes — with no unsourced exact ratings.
-- Added shared infrastructure (Step 3): the glossary extended with ~20 cross-track terms (pitch, housing, contact/terminal, plug/receptacle, male/female ambiguity, open-barrel crimp anatomy, genuine vs clone…), a shared Connector Identification Workflow page, a "Hobby or Professional?" boundary page, and bidirectional cross-links between tracks (§0/§4/§6/§12 and the internal-PCB path now point at the hobby track's tools where relevant).
-- Added hobby source-status notes and a source-needed backlog (Step 4): the hobby track's verified/heuristic/example-only/needs-source buckets live on Hobby Source Notes with named source targets (JST per-series datasheets, SparkFun/Adafruit ecosystem docs, AMASS XT documentation, crimp application notes…), and the main Source Notes dashboard gained a hobby section and backlog row. The hobby guide is not claimed complete or fully sourced.
-- Version/status aligned to `v0.8 Beta — Two-Track Guide Structure` (engineering home, README, Source Notes, package 0.8.0).
+- Added a top-level routing page between the Hobby Connector Field Guide and Professional / Industrial Connector Field Guide.
+- Preserved the existing professional guide content and moved its start page to `/engineering` while keeping existing professional URLs intact.
+- Added the initial Hobby Connector Field Guide at `/hobby`, including Start Here, The Big Idea, unknown-connector identification, JST Is Not One Connector, pitch measurement, Common Hobby Connector Families, JST-SM and LED string connectors, power vs signal, crimping, marketplace kits, buying mating parts, when hobby connectors are not enough, a hobby decision guide, and Hobby Source Notes.
+- Added shared cross-track infrastructure: Glossary, Connector Identification Workflow, and Hobby or Professional? boundary page.
+- Added bidirectional links between the hobby and professional tracks.
+- Added hobby source-status notes and a source-needed backlog. The hobby guide is initial/seeded, not complete or fully sourced.
+- Aligned README, engineering home, Source Notes, and package version to v0.8.
 
 ## [0.7.0] - 2026-07-08
 

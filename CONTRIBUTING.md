@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve the Connector Engineering Field Guide.
+Thanks for helping improve the Connector Field Guides — both the Hobby track and the Professional / Industrial track.
 
 ## Technical corrections require a source
 
@@ -13,6 +13,8 @@ Acceptable sources include:
 - QPL listing
 - Manufacturer application note
 - Program/customer requirement when applicable
+
+The hobby track follows the same source discipline as the professional track. Hobby-track corrections should distinguish official manufacturer datasheets, vendor ecosystem documentation (e.g. SparkFun/Adafruit), marketplace listings, and clone/"compatible" claims. Marketplace listings are useful evidence of common naming chaos, but they are not design authority for pitch, current, voltage, compatibility, crimp tooling, or safety limits.
 
 ## Source discipline rules
 

@@ -12,9 +12,9 @@ sidebar_label: Hobby Guide Home
 
 Hobby connector information is messy. Product listings misuse names, photos lie, clone parts blur family boundaries, and "JST" often means almost nothing by itself. This guide is a practical map for identifying, choosing, buying, and crimping connectors for maker, student, 3D printer, LED, RC, sensor, and small-robot projects.
 
-:::note[New track — v0.8]
+:::note[Introduced v0.8, expanded v0.9]
 
-This track is new and still growing — the core pages are in place; individual family deep-pages continue to expand. The [Professional / Industrial guide](../engineering-home.md) is complete through v0.7, and its foundational material (what connectors actually do, anatomy, crimping discipline) applies here too.
+This track is still growing — the core pages and the first family deep-pages are in place, and more are on the [roadmap](hobby-source-notes.md). The [Professional / Industrial guide](../engineering-home.md) is the longer-established track, and its foundational material (what connectors actually do, anatomy, crimping discipline) applies here too.
 
 :::
 

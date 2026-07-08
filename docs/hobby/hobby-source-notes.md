@@ -22,6 +22,7 @@ Only what is actually backed by sources present in this repo:
 - **Grove connector and port-type pinout variation** — 4-pin 2.0 mm connector; signal-pin function varies by port type (I2C/UART/digital/analog), per Seeed's Grove System documentation, cited on [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
 - **Plain STEMMA vs STEMMA QT** — plain STEMMA = JST PH 2.0 mm (4-pin I2C, 3-pin analog/digital/PWM, 3–5 V device power, Zener-protected 3-pin ports), distinct from the 1.0 mm SH-based STEMMA QT — per Adafruit's STEMMA documentation, cited on the [SH/Qwiic](jst-sh-qwiic-stemma.md) and [PH](jst-ph.md) pages.
 - **0.1 in = 2.54 mm** — definitional; the basis of the Dupont/header ecosystem discussion.
+- **"Dupont" name lineage** — the ancestor is Berg's Mini-PV 0.1 in crimp system (Berg → DuPont → FCI → Amphenol), and MiniPV® remains a current Amphenol 2.54 mm crimp family per Amphenol's FCI Basics portfolio PDF; the history per a community connector reference (attribution only, no ratings). Cited on [Dupont / 0.1 Inch Headers](dupont-headers.md).
 
 ## Engineering heuristics (judgment, not specification)
 
@@ -67,7 +68,7 @@ The editorial roadmap for this track — what exists, what's next, and in what o
 1. **JST-XH** — initial page added (v0.9); source hardening still needed
 2. **JST-PH** — initial page added (v0.9); source hardening still needed
 3. **JST-SH / Qwiic / STEMMA QT** — initial page added (v0.9); Qwiic/STEMMA QT conventions cited, Grove still qualitative
-4. **Dupont / 0.1 inch headers** — initial page added (v0.9); no governing spec exists, by nature
+4. **Dupont / 0.1 inch headers** — initial page added (v0.9); no governing spec exists, by nature; name lineage (Berg Mini-PV → DuPont → FCI → Amphenol) sourced (audit-2026-07)
 5. **XT30 / XT60 / XT90** — initial page added (v0.9); AMASS attribution and ratings sourced (audit-2026-07, distributor-hosted manufacturer PDFs); clone parts remain uncovered
 6. **Servo connectors** — capsule only; deep page not started
 7. **Screw/spring terminals and ferrules** — capsule only; deep page not started

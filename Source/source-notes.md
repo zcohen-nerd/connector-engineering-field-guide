@@ -50,7 +50,7 @@ Statements backed by a credible public source. "Verified" means the claim matche
 | AMP Superseal 1.5 (IP67, ~14 A class) | Manufacturer page | TE Connectivity | §3.2 | |
 | Molex MX150/MX150L (≥IP67; up to ~30–40 A by gauge) | Manufacturer document | Molex | §3.2 | |
 | Metri-Pack series system (sealed & unsealed, series by blade size) | Manufacturer datasheet | Aptiv Metri-Pack Connection System | §3.2 | Figures deliberately qualitative |
-| Han E insert (16 A, 500 V, 500 cycles); Han HMC 10,000+ cycles | Manufacturer product pages | HARTING b2b product page (Han E 09330162601) / HARTING (Han HMC) | A4, site matrix | Manufacturer-direct as of audit 2026-07; the 6–48 contacts-per-insert family span still traces to a distributor listing and is labeled as such. Insert/hood/assembly define the interface |
+| Han E insert (16 A, 500 V, 500 cycles); Han HMC 10,000+ cycles | Manufacturer product pages | HARTING product page (Han E 09330162601) / HARTING (Han HMC) | A4, site matrix | Manufacturer-direct as of audit 2026-07; the 6–48 contacts-per-insert family span still traces to a distributor listing and is labeled as such. Insert/hood/assembly define the interface |
 | Micro-Fit 3.0: 8.5 A max "determined by terminal used"; 10.0 A RMF terminal offered | Manufacturer document | Molex 987650-5984 Rev. 5 | site matrix | RMF = Reduced Mating Force; terminal P/N sets current |
 | Mil-contact "50 µin class" gold plating | Manufacturer spec | Glenair contact materials spec | §5.1 | ASTM B488 over QQ-N-290 nickel |
 | 500-cycle durability across 38999 / 26482 / 83513 / 24308 | Specs/catalogs | Amphenol, Aero-Electric, Glenair, MIL-DTL-24308G | A4 | Per-family documents cited inline |

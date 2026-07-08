@@ -906,7 +906,7 @@ Consolidated citations for every sourced claim in this guide, referenced by labe
 
 [^m12cyc]: Turck M12 cordset RK 4.5T-5 — mechanical life > 100 mating cycles. <https://www.turck.us/datasheet/_us/edb_U2188-94_eng_us.pdf>
 
-[^hancyc]: HARTING's own product page for the Han E 16-pole insert (09330162601) states 500 mating cycles (16 A, 500 V). <https://b2b.harting.com/ebusiness/en/09330162601> The Han HMC (High Mating Cycle) series is designed for 10,000+ mating cycles (HARTING Han HMC product page: <https://www.harting.com/en-US/s/han-hmc>).
+[^hancyc]: HARTING's own product page for the Han E 16-pole insert (09330162601) states 500 mating cycles (16 A, 500 V). <https://www.harting.com/en-US/p/Han-E-16-Pos-M-Insert-Screw-09330162601> The Han HMC (High Mating Cycle) series is designed for 10,000+ mating cycles (HARTING Han HMC product page: <https://www.harting.com/en-US/s/han-hmc>).
 
 [^usbccyc]: USB-IF, *USB Type-C Cable and Connector Specification* (Release 2.5, USB-IF document library) — 10,000-cycle durability minimum. <https://www.usb.org/document-library/usb-type-cr-cable-and-connector-specification-release-25> The same figure is reproduced in vendor datasheets (Mouser-hosted example: <https://www.mouser.com/pdfDocs/USBCCADatasheet.pdf>).
 

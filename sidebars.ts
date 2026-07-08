@@ -1,8 +1,45 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
 const sidebars: SidebarsConfig = {
+  // Hobby track — new in v0.8.
+  hobbySidebar: [
+    'hobby/hobby-index',
+    'hobby/big-idea',
+    'hobby/identify-unknown-connector',
+    'hobby/jst-is-not-one-connector',
+    'hobby/pitch',
+    {
+      type: 'category',
+      label: 'Common Hobby Connector Families',
+      link: {type: 'doc', id: 'hobby/families'},
+      collapsed: false,
+      items: ['hobby/jst-sm-led-connectors'],
+    },
+    'hobby/power-vs-signal',
+    'hobby/crimping',
+    'hobby/connector-kits',
+    'hobby/buying-mating-parts',
+    'hobby/when-hobby-is-not-enough',
+    'hobby-or-professional',
+    'hobby/decision-guide',
+    'hobby/hobby-source-notes',
+    {
+      type: 'link',
+      label: 'Glossary (shared)',
+      href: '/connector-engineering-field-guide/glossary',
+    },
+    {
+      type: 'link',
+      label: 'Identification Workflow (shared)',
+      href: '/connector-engineering-field-guide/connector-identification',
+    },
+  ],
+
+  // Professional / industrial track — the original guide, URLs unchanged.
+  // The site root (docs/index.md) is the two-track landing page and is
+  // intentionally in no sidebar.
   guideSidebar: [
-    'index',
+    'engineering-home',
     {
       type: 'category',
       label: 'Start Here',
@@ -50,6 +87,7 @@ const sidebars: SidebarsConfig = {
       ],
     },
     'what-people-forget',
+    'connector-identification',
     'glossary',
     {
       type: 'category',

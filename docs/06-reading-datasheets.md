@@ -34,6 +34,8 @@ Don't start with the glamour render. Start with the ordering information and the
 
 **Easy to forget (but on the BOM):** backshell, strain relief, cable clamp, gasket, dust cap, crimp tool, insertion/removal tools, spare contacts, sealing plugs, torque procedure, pinout drawing, and the mating connector.
 
+Datasheet vocabulary tripping you up — contact vs. terminal, plug vs. receptacle, the male/female ambiguity? The shared [Glossary](glossary.md) pins the terms down.
+
 ## 6.1 Where the numbers must come from (source hierarchy)
 
 Not every document that states a rating is design authority. When two sources disagree — or when you're deciding what to write in the ICD — work down this hierarchy:

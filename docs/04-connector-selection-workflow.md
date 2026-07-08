@@ -12,6 +12,12 @@ Connector selection is multi-variable optimization. An excellent choice on most 
 
 If you are still trying to turn a vague need into useful search terms, start with [How to Search for Connectors](00-how-to-search-for-connectors.md) before you begin narrowing families.
 
+:::tip[Unknown part in hand instead of a requirement?]
+
+If you're starting from a physical connector rather than a requirement, run the shared [Connector Identification Workflow](connector-identification.md) first, then come back here.
+
+:::
+
 ## Step 1: Define the interface
 
 Before picking a family, write down: What crosses this boundary (power / signal / data / RF / fiber / fluid)? Internal or external? User-, technician-, or factory-accessible? Disconnected often? Safety-critical? Does it cross an environmental boundary? Must it be mated/unmated under power?

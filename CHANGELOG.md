@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.0] - 2026-07-08
+
+### v0.8 — Two-Track Guide Structure
+
+- Added top-level routing between the Hobby Connector Field Guide and Professional / Industrial Connector Field Guide: the site root (`/`) is now a two-track landing page with a "Not sure?" audience-decision table.
+- Added a new Hobby Connector Field Guide landing page at `/hobby` (track under construction; family pages, identification workflow, and buying/crimping guides follow in later steps).
+- Preserved the existing professional guide content: every existing URL is unchanged; the former homepage content moved to `/engineering` as the professional guide's start page.
+- Added audience guidance and cross-links so readers can choose — and switch — tracks.
+- Seeded the hobby track (Step 2): Start Here workflow, The Big Idea, unknown-connector identification, JST Is Not One Connector, pitch measurement, 13-family field notes (JST-SM/LED strings as a dedicated page), power vs signal, crimping, marketplace kits, buying mating parts, graduation triggers, decision guide, and hobby source notes — with no unsourced exact ratings.
+- Added shared infrastructure (Step 3): the glossary extended with ~20 cross-track terms (pitch, housing, contact/terminal, plug/receptacle, male/female ambiguity, open-barrel crimp anatomy, genuine vs clone…), a shared Connector Identification Workflow page, a "Hobby or Professional?" boundary page, and bidirectional cross-links between tracks (§0/§4/§6/§12 and the internal-PCB path now point at the hobby track's tools where relevant).
+- Added hobby source-status notes and a source-needed backlog (Step 4): the hobby track's verified/heuristic/example-only/needs-source buckets live on Hobby Source Notes with named source targets (JST per-series datasheets, SparkFun/Adafruit ecosystem docs, AMASS XT documentation, crimp application notes…), and the main Source Notes dashboard gained a hobby section and backlog row. The hobby guide is not claimed complete or fully sourced.
+- Version/status aligned to `v0.8 Beta — Two-Track Guide Structure` (engineering home, README, Source Notes, package 0.8.0).
+
 ## [0.7.0] - 2026-07-08
 
 ### v0.7 — Reference Hardening + Design Nuance Pass

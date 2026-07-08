@@ -1,10 +1,13 @@
 # Connector Engineering Field Guide
 
-**📖 Read the guide here → [zcohen-nerd.github.io/connector-engineering-field-guide](https://zcohen-nerd.github.io/connector-engineering-field-guide/)**
+**📖 Read the guides here → [zcohen-nerd.github.io/connector-engineering-field-guide](https://zcohen-nerd.github.io/connector-engineering-field-guide/)**
 
-Practical connector selection for rugged, industrial, military-style, and electromechanical systems — written for engineers who are **not** connector specialists.
+Two connector field guides, one site:
 
-**Status:** v0.7 Beta — Reference Hardening + Design Nuance Pass · *A zcohen-nerd technical guide*
+- **[Professional / Industrial Connector Field Guide](https://zcohen-nerd.github.io/connector-engineering-field-guide/engineering)** — practical connector selection for rugged, industrial, military-style, and electromechanical systems, written for engineers who are **not** connector specialists.
+- **[Hobby Connector Field Guide](https://zcohen-nerd.github.io/connector-engineering-field-guide/hobby)** — a practical map through hobby connector chaos for makers, students, and dev-board projects: identify, choose, buy, crimp, and avoid the traps.
+
+**Status:** v0.8 Beta — Two-Track Guide Structure · *A zcohen-nerd technical guide*
 
 ## Why this exists
 
@@ -29,7 +32,9 @@ This guide's core idea: **a connector is a controlled interface between subsyste
 
 **📦 [Worked examples](https://zcohen-nerd.github.io/connector-engineering-field-guide/examples)** — including a complete [Connector Selection Packet](https://zcohen-nerd.github.io/connector-engineering-field-guide/examples/connector-selection-packet): requirements → decision matrix → architecture → pinout → BOM → cable notes → ICD → review checklist for a rugged field-robot module.
 
-**📚 Quick help** — [How to search for connectors](https://zcohen-nerd.github.io/connector-engineering-field-guide/00-how-to-search-for-connectors), [What People Forget](https://zcohen-nerd.github.io/connector-engineering-field-guide/what-people-forget), a [glossary](https://zcohen-nerd.github.io/connector-engineering-field-guide/glossary), and [quick-reference tables](https://zcohen-nerd.github.io/connector-engineering-field-guide/appendix/quick-reference-tables).
+**📚 Quick help** — [How to search for connectors](https://zcohen-nerd.github.io/connector-engineering-field-guide/00-how-to-search-for-connectors), [What People Forget](https://zcohen-nerd.github.io/connector-engineering-field-guide/what-people-forget), a shared [glossary](https://zcohen-nerd.github.io/connector-engineering-field-guide/glossary), and [quick-reference tables](https://zcohen-nerd.github.io/connector-engineering-field-guide/appendix/quick-reference-tables).
+
+**🔌 Hobby track** — [identifying mystery connectors](https://zcohen-nerd.github.io/connector-engineering-field-guide/hobby/identify-unknown-connector), [JST Is Not One Connector](https://zcohen-nerd.github.io/connector-engineering-field-guide/hobby/jst-is-not-one-connector), [JST-SM and LED strings](https://zcohen-nerd.github.io/connector-engineering-field-guide/hobby/jst-sm-led-connectors), [crimping](https://zcohen-nerd.github.io/connector-engineering-field-guide/hobby/crimping), [marketplace kits](https://zcohen-nerd.github.io/connector-engineering-field-guide/hobby/connector-kits), and [when hobby connectors are not enough](https://zcohen-nerd.github.io/connector-engineering-field-guide/hobby/when-hobby-is-not-enough).
 
 ## The one rule the guide never breaks
 
@@ -43,7 +48,7 @@ Found an error or have a better source? Corrections are very welcome — [open a
 - No paid-standards tables, no verbatim catalog tables, no unsourced exact ratings.
 - Practical decision logic beats vendor marketing.
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full source-discipline rules. For contributors: `Source/connector-engineering-field-guide.md` is the canonical source of truth for the guide's 14 numbered sections and appendix — factual corrections land there first, and the matching `docs/` pages are refreshed from it. Decision paths, tools, examples, and the other site pages are site-only material under `docs/`.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full source-discipline rules. For contributors: `Source/connector-engineering-field-guide.md` is the canonical source of truth for the **professional guide's** 14 numbered sections and appendix — factual corrections land there first, and the matching `docs/` pages are refreshed from it. Decision paths, tools, examples, the entire hobby track (`docs/hobby/`), and the other site pages are site-only material under `docs/`.
 
 ## License
 

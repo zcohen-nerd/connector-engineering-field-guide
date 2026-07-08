@@ -1,12 +1,12 @@
 # Source Notes — Source-Status Dashboard
 
-**Status: v0.7 Beta — Reference Hardening + Design Nuance Pass**
+**Status: v0.8 Beta — Two-Track Guide Structure**
 
 This file is the guide's transparency layer. Every technical statement falls into one of four buckets, and this file says which: **verified claims** (backed by a named public source), **engineering heuristics** (deliberate judgment, not specification), **example-only values** (teaching aids, never design authority), and an explicit **needs-source-before-v1.0 backlog**.
 
 > This guide is an educational engineering reference. Always verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and program/customer requirements.
 
-Release history lives in `CHANGELOG.md`. This file matches `docs/appendix/source-notes.md`; the docs copy adds site links. Inline citations live in the `## Sources` section of `connector-engineering-field-guide.md` and in each site page's Sources section. v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields.
+Release history lives in `CHANGELOG.md`. This file matches `docs/appendix/source-notes.md`; the docs copy adds site links. Inline citations live in the `## Sources` section of `connector-engineering-field-guide.md` and in each site page's Sources section. v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields. v0.8 split the site into hobby and professional tracks: the hobby track is **site-only material** with no `Source/` counterpart — `Source/connector-engineering-field-guide.md` remains the canonical source for the professional guide's 14 numbered sections + appendix only. The hobby track's source status lives in `docs/hobby/hobby-source-notes.md`; it reuses the JST/USB-IF citations already verified for §12 and marks everything else *source needed* (no new exact ratings introduced).
 
 ## Source hierarchy
 
@@ -109,6 +109,7 @@ The explicit backlog. These gate the v1.0 "source verified" milestone — they a
 | Low | RF & fiber connector performance values (frequency/power/loss per family) | §2, site RF path | Exact part + cable/fiber datasheets | Degraded links | Intentionally number-free; v0.7 added decision-field tables instead of values |
 | Low | Automotive sealed-connector environmental claims beyond IP (temp/vibration/fluids) | §3.2 | Series application specifications | Environmental field failures | Only sealing/current classes cited today |
 | Low | HDMI mating-cycle rating | §12 | Reputable public source | Minor | Intentionally unquoted; keep it that way unless sourced |
+| Medium | Hobby-track source hardening (JST SM/RCY series, Qwiic/STEMMA QT conventions, XT ratings, crimp app notes, barrel/terminal docs) | site hobby track | Per the targets in `docs/hobby/hobby-source-notes.md` | Makers treating placeholders as ratings | All flagged *source needed* in-page; gates a hobby v1.0, not publication |
 
 ## Source discipline (publication rules)
 

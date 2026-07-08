@@ -12,6 +12,12 @@ Consumer, hobby, and prototype connectors are not automatically "bad." They are 
 
 If your search starts with a vague label like `JST connector` or `aviation plug`, read [How to Search for Connectors](00-how-to-search-for-connectors.md) first and then come back to this page.
 
+:::tip[Working on the maker side of this line?]
+
+The [Hobby Connector Field Guide](hobby/index.md) covers this territory from the maker's seat — [identifying mystery connectors](hobby/identify-unknown-connector.md), [decoding the JST family mess](hobby/jst-is-not-one-connector.md), [marketplace kits](hobby/connector-kits.md), [pre-crimped leads](hobby/crimping.md), and dev-board ecosystems.
+
+:::
+
 | Prototype / consumer choice | Production / rugged equivalent | Why |
 |---|---|---|
 | Dupont jumpers | Keyed, latching, positively retained wire-to-board (Molex Micro-Fit/Nano-Fit, Harwin, Omnetics, or JST GH where appropriate) | Retention, polarization, repeatability |

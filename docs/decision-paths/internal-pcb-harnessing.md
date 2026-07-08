@@ -65,4 +65,4 @@ See [What People Forget](../what-people-forget.md).
 - A source-controlled **pinout** with keying noted.
 - A [cable drawing](../tools/cable-drawing-template.md) and, for a controlled internal interface, an [ICD entry](../tools/connector-icd-template.md).
 
-Related: [Decision Examples](../09-decision-examples.md) · [Consumer / Hobby / Prototype connectors](../12-consumer-hobby-prototype-connectors.md).
+Related: [Decision Examples](../09-decision-examples.md) · [Consumer / Hobby / Prototype connectors](../12-consumer-hobby-prototype-connectors.md) · for quick prototyping with pre-crimped leads and kit parts, the hobby track's [Crimping](../hobby/crimping.md) and [Marketplace Kits](../hobby/connector-kits.md) pages.

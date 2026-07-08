@@ -99,3 +99,7 @@ Search terms are only a starting point. The datasheet, applicable standard, and 
 - What is the qualification status?
 - Are there alternate keying/coding options?
 - Is there a second source or QPL listing?
+
+---
+
+Starting from a physical mystery part instead of a requirement? Use the shared [Connector Identification Workflow](connector-identification.md) — or, for marketplace/maker parts, the hobby track's [How to Identify an Unknown Connector](hobby/identify-unknown-connector.md).

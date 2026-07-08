@@ -19,9 +19,11 @@ This guide is an educational engineering reference. Always verify ratings, quali
 
 Release history lives in the repository `CHANGELOG.md`. v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields. v0.8 split the site into hobby and professional tracks.
 
-## Hobby connector source status (v0.8)
+## Hobby connector source status
 
-The new [Hobby Connector Field Guide](../hobby/index.md) is **site-only material** (no `Source/` counterpart) and carries its own detailed status page: [Hobby Source Notes](../hobby/source-notes). Summary: all six commonly-met JST series (XH/PH/SH/GH/SM/RCY) are cited series-by-series to official JST PDFs (v0.8.1), plus VH and the USB-C cycle figure via §12; **everything else in the hobby track is deliberately qualitative** — XT-connector ratings, Qwiic/STEMMA QT ecosystem conventions, servo/Dupont/barrel/terminal values, and all marketplace-kit claims are marked *source needed* with named source targets. Genuine-part figures never transfer to clones.
+<!-- Hobby per-topic status lives ONLY in hobby/source-notes. Do not duplicate here. -->
+
+The [Hobby Connector Field Guide](../hobby/index.md) (introduced v0.8, expanded v0.9) is **site-only material** with no `Source/` counterpart. Its per-topic source status — what is verified, what is example-only, and what still needs a source — is tracked in exactly one place: **[Hobby Source Notes](../hobby/source-notes)**, the authoritative tracker for that entire track. This dashboard intentionally carries no per-topic hobby detail; if a hobby claim's status matters to you, that page is the record.
 
 ## Source hierarchy
 
@@ -129,7 +131,7 @@ The explicit backlog. These gate the v1.0 "source verified" milestone — they a
 | Low | RF & fiber connector performance values (frequency/power/loss per family) | [RF path](../decision-paths/rf-gps-radio.md), §2 | Exact part + cable/fiber datasheets | Degraded links | Intentionally number-free; v0.7 added decision-field tables instead of values |
 | Low | Automotive sealed-connector environmental claims beyond IP (temp/vibration/fluids) | §3.2, budget path | Series application specifications | Environmental field failures | Only sealing/current classes cited today |
 | Low | HDMI mating-cycle rating | §12 | Reputable public source | Minor | Intentionally unquoted; keep it that way unless sourced |
-| Medium | Hobby-track source hardening (Qwiic/STEMMA QT conventions, XT ratings, crimp app notes, barrel/terminal docs) | [Hobby track](../hobby/index.md) | Per the targets listed in [Hobby Source Notes](../hobby/source-notes) | Makers treating placeholders as ratings | JST XH/PH/SH/GH/SM/RCY closed in v0.8.1 via official JST PDFs; the rest flagged *source needed* in-page |
+| Medium | Hobby-track source hardening | [Hobby track](../hobby/index.md) | Per the authoritative per-topic list in [Hobby Source Notes](../hobby/source-notes) | Makers treating placeholders as ratings | Per-topic status tracked only on that page |
 
 ## Source discipline (publication rules)
 

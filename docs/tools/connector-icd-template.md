@@ -154,6 +154,6 @@ Pin functions follow the device datasheet; colours per the common A-coded conven
 
 ## Sources
 
-[^iec101]: IEC 61076-2-101 (M12 circular connectors with screw-locking, A/B/D coding) — 2- to 17-way; up to 250 V and up to 4 A per contact; data ≤ 100 MHz. <https://standards.globalspec.com/std/1519301/iec-61076-2-101>
+[^iec101]: IEC 61076-2-101 (M12 circular connectors with screw-locking, A/B/D coding) — 2- to 17-way; up to 250 V and up to 4 A per contact; data ≤ 100 MHz. <https://webstore.iec.ch/en/publication/77773>
 
 [^m12seal]: An M12 IP rating applies to the complete, correctly-mated and -torqued assembly, not the unmated connector. Coupling torque is manufacturer-specified and varies (e.g. Turck specifies 0.8–1.0 N·m) — treat any single figure as an example and use the manufacturer's value with a torque tool. See the [M12 Deep Dive §8.3](../08-m12.md).

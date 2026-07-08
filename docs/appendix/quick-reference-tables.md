@@ -84,7 +84,7 @@ When this guide conflicts with a manufacturer datasheet, applicable standard, cu
 
 [^radsok]: Amphenol Aerospace, *High-Power 38999 / RADSOK* — RADSOK high-current contacts are rated roughly 70–250 A per contact (≈240–1000 A per connector) and are used to add dedicated power paths on the MIL-DTL-38999 platform. Contact size alone does not set safe current; use the manufacturer derating data, and do not parallel contacts unless the manufacturer/application supports it and the design is reviewed. <https://www.amphenol-aerospace.com/products/high-power-38999>
 
-[^iec60529]: IEC 60529, *Degrees of protection provided by enclosures (IP Code)* — the international IP-rating standard: second numeral 7 = temporary immersion (tested at 1 m for 30 min), 8 = continuous immersion to a manufacturer-stated depth/duration. An IPx9 close-range high-pressure/high-temperature water-jet test was added in the 2013 edition. <https://webstore.iec.ch/publication/2452>
+[^iec60529]: IEC 60529, *Degrees of protection provided by enclosures (IP Code)* — the international IP-rating standard: second numeral 7 = temporary immersion (tested at 1 m for 30 min), 8 = continuous immersion to a manufacturer-stated depth/duration. An IPx9 close-range high-pressure/high-temperature water-jet test was added in the 2013 edition. <https://webstore.iec.ch/en/publication/2452>
 
 [^iso20653]: ISO 20653:2013, *Road vehicles — Degrees of protection (IP code)* (formerly DIN 40050-9) — origin of the IP69K high-pressure/high-temperature washdown rating; the "K" designation comes from this standard, not IEC 60529. <https://www.iso.org/standard/58048.html>
 
@@ -94,6 +94,6 @@ When this guide conflicts with a manufacturer datasheet, applicable standard, cu
 
 [^m12cyc]: Turck M12 cordset RK 4.5T-5 — mechanical life > 100 mating cycles. <https://www.turck.us/datasheet/_us/edb_U2188-94_eng_us.pdf>
 
-[^hancyc]: HARTING Han E series inserts are rated ≥ 500 mating cycles (per a distributor listing — orientation only, verify against the HARTING datasheet before design release: <https://www.tme.com/us/en-us/details/09330162601/harting-connectors/harting/>). The Han HMC (High Mating Cycle) series is designed for 10,000+ mating cycles (HARTING Han HMC product page: <https://www.harting.com/US/en/markets/han%C2%AE-hmc-10000-times-reliably-connecting-testing-platform>).
+[^hancyc]: HARTING's own product page for the Han E 16-pole insert (09330162601) states 500 mating cycles (16 A, 500 V). <https://b2b.harting.com/ebusiness/en/09330162601> The Han HMC (High Mating Cycle) series is designed for 10,000+ mating cycles (HARTING Han HMC product page: <https://www.harting.com/en-US/s/han-hmc>).
 
-[^usbccyc]: USB Type-C Cable and Connector Specification (USB-IF) — 10,000-cycle durability minimum; manufacturer USB-C datasheets carry the same figure. <https://www.mouser.com/pdfDocs/USBCCADatasheet.pdf>
+[^usbccyc]: USB-IF, *USB Type-C Cable and Connector Specification* (Release 2.5, USB-IF document library) — 10,000-cycle durability minimum. <https://www.usb.org/document-library/usb-type-cr-cable-and-connector-specification-release-25> The same figure is reproduced in vendor datasheets (Mouser-hosted example: <https://www.mouser.com/pdfDocs/USBCCADatasheet.pdf>).

@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+### Audit 2026-07 — consistency + source-hardening fixes (T1–T10)
+
+- Hobby source status is now tracked in exactly one place (Hobby Source Notes); the appendix dashboard carries a track-level pointer instead of a duplicated per-topic summary (T1).
+- Hobby landing banner normalized to the canonical version story ("Introduced v0.8, expanded v0.9") (T2).
+- Hobby figures/diagrams verified rendering correctly with alt text — no change needed (T3).
+- XT30/XT60/XT90 page rewritten with sourced AMASS attribution and ratings (rated vs *momentary* current — the digits are the momentary figure), temperature-rise conditions, and genuine-vs-clone caveats (T4).
+- Grove ecosystem warning sourced to Seeed documentation: 4-pin 2.0 mm connector whose signal pinout varies by port type (T5).
+- Plain STEMMA (JST PH 2.0 mm) explicitly distinguished from STEMMA QT (JST SH 1.0 mm), sourced to Adafruit, cross-linked from the PH page (T6).
+- Citation-quality swaps: USB-C cycle figure now cited to the USB-IF document library (Mouser PDF relabeled vendor secondary); GlobalSpec standard listings replaced with direct IEC webstore links (with current-edition -111:2025 / -104:2026 scope figures); Han E figures now cited to HARTING's own product page instead of a distributor listing; stale redirect URLs refreshed (T7).
+- M12 coding table: L-coded corrected to 4+FE and T-coded to 4 contacts per DIN EN 61076-2-111, sourced to binder product documentation (T8).
+- Dupont page now names the sourced lineage: Berg's Mini-PV → DuPont → FCI → Amphenol, with MiniPV® confirmed as a current Amphenol 2.54 mm family (T9).
+- Roadmap ordering (servo above barrel jacks) verified already satisfied — no change needed (T10).
+
 ## [0.9.0] - 2026-07-08
 
 ### v0.9 — Hobby Guide Expansion + Two-Track Polish

@@ -18,7 +18,11 @@ Only what is actually backed by sources present in this repo:
 - **JST VH** (3.96 mm, up to ~10 A @ AWG 16) — per the JST datasheet cited in the engineering track's [§12](../12-consumer-hobby-prototype-connectors.md).
 - **USB-C 10,000-cycle durability** — per the USB-IF Type-C specification, cited in [§12](../12-consumer-hobby-prototype-connectors.md).
 - **Qwiic / STEMMA QT connector conventions** — 4-pin 1.0 mm JST SH, polarized, cross-compatible ecosystems — per SparkFun's Qwiic documentation and Adafruit's STEMMA QT technical specs, cited on [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
+- **XT30/XT60/XT90 attribution and ratings** — AMASS (Changzhou Amass Electronics) as XT-series originator per its manufacturer site; rated/momentary currents (XT30: 15/30 A, XT60: 30/60 A, XT90: 40/90 A), cable specs, and temperature-rise conditions per AMASS-authored documentation (distributor-hosted PDFs — AMASS publishes no spec tables on its own site). Genuine-part figures only; clones uncovered. Cited on [XT30, XT60, and XT90](xt-connectors.md).
+- **Grove connector and port-type pinout variation** — 4-pin 2.0 mm connector; signal-pin function varies by port type (I2C/UART/digital/analog), per Seeed's Grove System documentation, cited on [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
+- **Plain STEMMA vs STEMMA QT** — plain STEMMA = JST PH 2.0 mm (4-pin I2C, 3-pin analog/digital/PWM, 3–5 V device power, Zener-protected 3-pin ports), distinct from the 1.0 mm SH-based STEMMA QT — per Adafruit's STEMMA documentation, cited on the [SH/Qwiic](jst-sh-qwiic-stemma.md) and [PH](jst-ph.md) pages.
 - **0.1 in = 2.54 mm** — definitional; the basis of the Dupont/header ecosystem discussion.
+- **"Dupont" name lineage** — the ancestor is Berg's Mini-PV 0.1 in crimp system (Berg → DuPont → FCI → Amphenol), and MiniPV® remains a current Amphenol 2.54 mm crimp family per Amphenol's FCI Basics portfolio PDF; the history per a community connector reference (attribution only, no ratings). Cited on [Dupont / 0.1 Inch Headers](dupont-headers.md).
 
 ## Engineering heuristics (judgment, not specification)
 
@@ -35,16 +39,14 @@ Only what is actually backed by sources present in this repo:
 
 Typical hobby usage, not design ratings. Anywhere these appear they carry a *verify* hedge — verify exact pitch, current, voltage, wire gauge, and mating part against the manufacturer datasheet or supplier documentation:
 
-- Clone / "compatible" / "-style" versions of any JST series — the genuine-part datasheet figures above do not transfer to them
-- JST series usage beyond the sourced datasheet figures (derating, environment, cycles in *your* application)
-- XT30/XT60/XT90 current examples — the digits are not a rating
+- Clone / "compatible" / "-style" versions of any JST or XT series — the genuine-part figures above do not transfer to them
+- JST/XT series usage beyond the sourced figures (derating, environment, cycles in *your* application)
 - Servo connector/lead current examples
 - Dupont / 0.1 in header current assumptions
 - Barrel jack size and rating examples (5.5 × 2.1/2.5 mm named as *common sizes*, not a standard)
 - Screw/spring terminal ratings and gauge ranges
 - LED connector current assumptions and power-injection sizing
 - Every marketplace kit claim (series, pitch, "waterproof," "high current")
-- Grove ecosystem connector specifics (kept qualitative; Seeed documentation is the target)
 
 ## Needs source before hobby v1.0
 
@@ -53,8 +55,7 @@ Source targets, honestly unfilled — none of these citations exist in the repo 
 | Item | Source target |
 |---|---|
 | JST EH/ZH (mentioned only as published-pitch examples) | Official JST datasheets per series, if those mentions are kept |
-| Grove ecosystem connector details | Seeed Grove documentation |
-| XT30/XT60/XT90 ratings | AMASS (or actual manufacturer) documentation |
+| XT ratings from AMASS-direct hosting | Closed for values (audit-2026-07) via distributor-hosted AMASS PDFs; an AMASS-domain-hosted equivalent would still be an upgrade |
 | Crimping tiny open-barrel terminals | Manufacturer application notes / crimp specifications |
 | LED power injection guidance (if expanded) | Reputable LED wiring/power-injection references |
 | USB connector guidance (if formalized) | USB-IF specifications (the 10k-cycle figure is already cited in §12) |
@@ -66,14 +67,14 @@ The editorial roadmap for this track — what exists, what's next, and in what o
 
 1. **JST-XH** — initial page added (v0.9); source hardening still needed
 2. **JST-PH** — initial page added (v0.9); source hardening still needed
-3. **JST-SH / Qwiic / STEMMA QT** — initial page added (v0.9); Qwiic/STEMMA QT conventions cited, Grove still qualitative
-4. **Dupont / 0.1 inch headers** — initial page added (v0.9); no governing spec exists, by nature
-5. **XT30 / XT60 / XT90** — initial page added (v0.9); manufacturer documentation still needed
+3. **JST-SH / Qwiic / STEMMA QT** — initial page added (v0.9); Qwiic/STEMMA QT conventions cited; Grove and plain-STEMMA distinctions sourced (audit-2026-07)
+4. **Dupont / 0.1 inch headers** — initial page added (v0.9); no governing spec exists, by nature; name lineage (Berg Mini-PV → DuPont → FCI → Amphenol) sourced (audit-2026-07)
+5. **XT30 / XT60 / XT90** — initial page added (v0.9); AMASS attribution and ratings sourced (audit-2026-07, distributor-hosted manufacturer PDFs); clone parts remain uncovered
 6. **Servo connectors** — capsule only; deep page not started
 7. **Screw/spring terminals and ferrules** — capsule only; deep page not started
 8. **USB-C power for hobby projects** — capsule only; deep page not started
 9. **Barrel jacks and polarity traps** — capsule only; deep page not started
-10. **Grove ecosystem** — mentioned only; deep page not started
+10. **Grove ecosystem** — deep page not started; connector and pinout-varies-by-port-type facts sourced to Seeed docs (audit-2026-07)
 
 :::note
 

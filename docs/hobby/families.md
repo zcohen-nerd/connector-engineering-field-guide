@@ -35,7 +35,7 @@ Capsule field notes on the families hobby projects actually meet: what the marke
 
 - **Marketplace names:** SH, Qwiic cable, STEMMA QT cable, "1 mm JST."
 - **What it is:** 1.0 mm-pitch wire-to-board family. The Qwiic (SparkFun) and STEMMA QT (Adafruit) I2C ecosystems standardize on a 4-pin 1.0 mm JST SH connector so sensor boards daisy-chain with no soldering — per the vendors' own documentation, cited on the full page.
-- **Watch for:** SH contacts are tiny — buy pre-crimped cables rather than crimping; don't confuse with GH (1.25 mm, latched); Grove (Seeed) is a *different* ecosystem with a different, larger connector — verify the vendor pinout and connector documentation before mixing ecosystems.
+- **Watch for:** SH contacts are tiny — buy pre-crimped cables rather than crimping; don't confuse with GH (1.25 mm, latched); Grove (Seeed) is a *different*, larger 2.0 mm ecosystem whose pinout varies by port type — sourced detail on the [full page](jst-sh-qwiic-stemma.md).
 - **Full page:** [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
 
 ## JST-GH
@@ -64,7 +64,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 
 - **Marketplace names:** XT connectors, battery connectors.
 - **What it is:** a keyed, polarized DC power connector ecosystem commonly sold under XT30 / XT60 / XT90 names in RC and hobby battery wiring — sized XT30 → XT60 → XT90.
-- **Watch for:** the digits loosely track a current class in common usage but **are not a design rating** — exact manufacturer, genuine-vs-clone status, current rating, wire gauge, and temperature limits must be verified from the actual part documentation *(source needed)*; they are unsealed; and like all power connectors they are **not load-break devices** — see the [energized-connector warning](../decision-paths/high-current-dc-power.md).
+- **Watch for:** per AMASS's own documentation **the digits are the *momentary* current — continuous is half or less** (sourced table on the [full page](xt-connectors.md)); clone quality varies and genuine-part figures don't transfer; they are unsealed; and like all power connectors they are **not load-break devices** — see the [energized-connector warning](../decision-paths/high-current-dc-power.md).
 - **Full page:** [XT30, XT60, and XT90](xt-connectors.md).
 
 ## Screw terminals and spring terminals

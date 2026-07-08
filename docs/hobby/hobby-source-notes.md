@@ -67,7 +67,7 @@ The editorial roadmap for this track — what exists, what's next, and in what o
 
 1. **JST-XH** — initial page added (v0.9); source hardening still needed
 2. **JST-PH** — initial page added (v0.9); source hardening still needed
-3. **JST-SH / Qwiic / STEMMA QT** — initial page added (v0.9); Qwiic/STEMMA QT conventions cited, Grove still qualitative
+3. **JST-SH / Qwiic / STEMMA QT** — initial page added (v0.9); Qwiic/STEMMA QT conventions cited; Grove and plain-STEMMA distinctions sourced (audit-2026-07)
 4. **Dupont / 0.1 inch headers** — initial page added (v0.9); no governing spec exists, by nature; name lineage (Berg Mini-PV → DuPont → FCI → Amphenol) sourced (audit-2026-07)
 5. **XT30 / XT60 / XT90** — initial page added (v0.9); AMASS attribution and ratings sourced (audit-2026-07, distributor-hosted manufacturer PDFs); clone parts remain uncovered
 6. **Servo connectors** — capsule only; deep page not started

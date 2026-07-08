@@ -103,6 +103,8 @@ Connector shielding is a *system* property: it depends on maintaining a continuo
 - **Shell-to-shell continuity:** the mated shells must actually conduct (grounding fingers/springs, clean conductive plating), or the shield path is broken at the interface.
 - **Backshell bonding & finishes:** the backshell must bond to the shell; conductive finishes and, where needed, EMI gaskets maintain continuity around the joint. A non-conductive finish (e.g. some anodize) breaks it.
 
+**Termination strategy is system- and frequency-dependent.** Do not treat "ground one end only" or "ground both ends" as a universal rule. A single-point bond is a common tactic against low-frequency ground loops, while high-frequency shielding effectiveness commonly relies on bonding at both ends through 360° terminations (the classic EMC-textbook treatment — see Ott) — but the right answer depends on the noise problem being controlled, the frequency range of concern, and the chassis/reference structure. Document the shield strategy, the problem it controls, the frequency range, the reference structure, and the EMC requirement or test rationale — and verify the connector, backshell, cable braid, strain relief, and enclosure bond as one shielding system.
+
 ![Exploded view of connector shell, rear seal, 360-degree shield band, backshell, cable clamp, boot, and cable, annotated with the shield path and the mechanical load path](/img/diagrams/backshell-exploded.svg)
 
 *The rear hardware has two jobs: bond the shield 360° into the shell, and carry cable load through the clamp and backshell so the contacts never see it.*

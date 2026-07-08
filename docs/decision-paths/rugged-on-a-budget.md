@@ -8,11 +8,11 @@ sidebar_label: Rugged on a budget
 
 # Pick a connector for rugged-on-a-budget field wiring
 
-The gap between hobby connectors and mil-spec circulars is where most field-robotics wiring actually lives. Sealed automotive and off-road families give you real IP67/IP68 sealing and vibration life without the cost, tooling, and lead time of MIL-DTL-38999 — *as long as you treat them with the same discipline you would give any sealed connector.*
+The gap between hobby connectors and mil-spec circulars is where most field-robotics wiring actually lives. Sealed automotive and off-road families offer datasheet-rated sealing (IP67/IP68-class, family-dependent) and automotive-grade vibration performance without the cost, tooling, and lead time of MIL-DTL-38999 — *as long as you treat them with the same discipline you would give any sealed connector.*
 
 :::note
 
-These are not "toy" connectors. Deutsch, Superseal, MX150, and Metri-Pack are professional automotive/off-road/industrial families that survive mud, vibration, and weather on vehicles for years. For a robot or a field enclosure, they are usually a far better answer than reaching for the JST, Dupont, or XT parts already on the bench.
+These are not "toy" connectors. Sealed automotive connector families are often a strong middle ground for prototypes, field equipment, off-road systems, mobile robotics, and non-mission-critical outdoor hardware — much more robust than hobby JST/Dupont-style connectors, without the cost, size, and sourcing burden of full circular military/aerospace families. But do not treat "automotive sealed" as a universal environmental rating: verify the exact connector family, seal system, wire seal range, cavity plugs, temperature range, vibration suitability, fluid exposure, IP rating conditions, and assembly tooling against the manufacturer documentation.
 
 :::
 
@@ -51,7 +51,7 @@ Family-level sealing and current figures for these live in the sourced [sealed a
 ## Specs to check
 
 - **Wire seal range vs. your wire OD**, and the correct contact + crimp for that gauge. This is the single most common cause of a "sealed" connector that leaks.
-- **What the sealing claim covers** — mated vs. unmated, and the housing vs. the complete, correctly-assembled connection.
+- **What the sealing claim covers** — IP ratings are configuration- and test-condition-specific. Confirm whether the rating applies mated, unmated, capped, panel-mounted, torqued, strain-relieved, or with specific wire seals/cavity plugs installed — and whether it covers the housing or the complete, correctly-assembled connection.
 - **Current per contact** from the series datasheet *at your temperature and loaded-contact count* — not from a marketplace listing.
 - **Latch / wedgelock / secondary lock (TPA)** presence and positive engagement.
 - **Cavity count**, and whether every unused cavity has a **sealing plug**.

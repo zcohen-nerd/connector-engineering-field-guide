@@ -22,9 +22,11 @@ Use this at work. Adapt to your program; it is a working checklist, not a standa
 - [ ] Voltage rating + transients/peak checked
 - [ ] Current per contact *at temperature* checked
 - [ ] Bundle/thermal derating applied (use a conservative margin and the manufacturer derating curve)
+- [ ] Rating source (document + revision) recorded for the voltage/current values used
+- [ ] Loaded-contact count, ambient temperature, termination type, allowable temperature rise, and margin rationale documented
 - [ ] Wire gauge compatible with contact barrel
 - [ ] Signal type identified; high-speed/RF flagged
-- [ ] Shields/grounds assigned (360° where needed)
+- [ ] Shield strategy documented — type, termination points, and rationale (one-end vs. both-ends vs. 360° backshell is system- and frequency-dependent, not a universal rule)
 - [ ] Power and signal segregation considered
 - [ ] Load-break / hot-plug / mate-under-power status recorded from the datasheet (yes / no / explicitly prohibited / not specified — never assumed)
 - [ ] For power interfaces: touch safety when unmated, fuse/overcurrent protection, available fault current, and inrush/precharge documented

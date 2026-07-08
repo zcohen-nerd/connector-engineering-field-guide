@@ -34,4 +34,20 @@ Don't start with the glamour render. Start with the ordering information and the
 
 **Easy to forget (but on the BOM):** backshell, strain relief, cable clamp, gasket, dust cap, crimp tool, insertion/removal tools, spare contacts, sealing plugs, torque procedure, pinout drawing, and the mating connector.
 
+## 6.1 Where the numbers must come from (source hierarchy)
+
+Not every document that states a rating is design authority. When two sources disagree — or when you're deciding what to write in the ICD — work down this hierarchy:
+
+1. **Program / customer / contract requirement** — always controls.
+2. **Governing standard, current edition** — record the identifier and edition/date checked.
+3. **QPD/QPL listing**, where qualification matters — for the exact manufacturer, part number, and slash sheet.
+4. **Manufacturer documentation** — datasheet, catalog drawing, application specification, installation instruction — at a recorded revision.
+5. **Distributor pages** — for availability, pricing, lead time, packaging, and lifecycle hints only.
+
+:::note[Distributor pages are not design authority]
+
+Distributor pages are useful for discovery, pricing, lead time, packaging, and availability. They are not design authority for ratings, qualification, tooling, sealing, mating cycles, or safety limits. For engineering release, verify against the governing requirement, current standard, QPD/QPL listing where applicable, and the exact manufacturer documentation.
+
+:::
+
 ---

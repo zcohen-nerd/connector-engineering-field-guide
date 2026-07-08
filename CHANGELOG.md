@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.7.0] - 2026-07-08
+
+### v0.7 — Reference Hardening + Design Nuance Pass
+
+- Added source hierarchy guidance distinguishing program requirements, standards, QPD/QPL listings, manufacturer documentation, and distributor metadata (guide §6.1 + Source Notes); distributor-listing citations flagged as orientation-only.
+- Added "mil-spec style ≠ qualified" language: qualification requires the exact manufacturer, part number, slash sheet, and QPD/QPL status.
+- Added evidence/source-tracking fields (source document, revision/date, requirement type, verification status, verified by, risk-if-wrong; plus datasheet/drawing/application-spec revisions, QPD/QPL reference, and derating-curve check) to the selection checklist, cable drawing, ICD, comparison matrix, and design-review templates.
+- Tightened sealed automotive connector language ("strong middle ground," not guaranteed ruggedness) and made IP-rating cautions configuration/test-condition-specific.
+- Added "ratings are system-level / not a permission slip" warnings near the §3 tables, comparison matrix, and quick-reference appendix, with rating-context fields in the checklists.
+- Revised shield termination guidance: one-end vs. both-ends vs. 360° backshell is system- and frequency-dependent, documented per design with an EMC rationale — never a universal rule; shield-strategy fields added to templates.
+- Added minimum RF and fiber connector decision-field tables (orientation-level; no performance values asserted).
+- Updated Source Notes: v0.7 entry, source hierarchy, new heuristics, and backlog items for distributor-citation replacement and RF/fiber values.
+
 ## [0.6.0] - 2026-07-08
 
 ### v0.6 — Source Cleanup + Safety Pass

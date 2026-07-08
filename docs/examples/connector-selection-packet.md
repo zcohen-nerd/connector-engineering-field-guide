@@ -124,7 +124,7 @@ Every line is a real orderable item. Placeholders must become exact P/Ns.
 
 - **Wire gauge** — power conductors sized to the load *and* the contact derating curve; signal conductors per the contact and signal.
 - **Pair twisting** — CAN_H/CAN_L a maintained twisted pair end-to-end; do not split the pair through the connector transition.
-- **Shield termination** — bond the shield drain at the **chassis end only** (single-point) unless an EMC analysis calls for both ends; document which end. See [EMI, shielding, and bonding (§5.7)](../05-connector-anatomy.md#57-emi-shielding-and-bonding).
+- **Shield termination** — system- and frequency-dependent, not a default. This packet *assumes* a single-point chassis-end bond for the low-frequency CAN/discrete noise concern, and records the strategy, the frequency range of concern, and the rationale in the ICD. One-end vs. both-ends vs. 360° backshell is a per-design decision — see [EMI, shielding, and bonding (§5.7)](../05-connector-anatomy.md#57-emi-shielding-and-bonding).
 - **Cable OD** — must fall inside each connector's seal/gland range or the seal and strain relief do not work.
 - **Bend radius** — respect the cable's minimum bend radius at the connector exit; pick a straight vs. right-angle backshell/boot accordingly.
 - **Label scheme** — both ends of every wire and both connector shells (`J1`/`P1`, `J2`/`P2`).
@@ -141,10 +141,11 @@ The template for this is the [cable drawing template](../tools/cable-drawing-tem
 - **Pinout:** per §5 above (source-controlled)
 - **Voltage / current class:** 24 VDC nominal; per-contact current sized against the derating curve *(verify)*
 - **Signal definitions:** discrete I/O directions per pinout; CAN_H/CAN_L differential pair
-- **Shield / chassis treatment:** shield drain bonded at chassis end; module chassis-ground path defined
+- **Shield / chassis treatment:** single-point chassis-end drain bond (documented **assumption** for a low-frequency noise concern — strategy, frequency range, and rationale recorded here; revisit per §5.7 if the noise problem changes); module chassis-ground path defined
 - **Environmental assumptions:** sealed (target IP67-class) when mated and locked; unmated only when capped *(verify the exact family/assembly rating)*
 - **Service / cap note:** dust caps on both unmated receptacles; rear-release crimp for field repair
 - **Revision control:** this ICD and the pinout are rev-controlled; changes go through the interface owner
+- **Source / evidence tracking:** every rating in the released version cites its datasheet + revision, the derating basis, and — because this packet is a teaching example — every placeholder is marked **example-only** (verification status: example). Family-level figures trace to the sourced [§3.2 table](../03-connector-standards-and-families.md#32-sealed-automotive-connector-families); nothing here is a verified part rating
 
 Use the [ICD template](../tools/connector-icd-template.md) for the full form.
 

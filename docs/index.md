@@ -10,7 +10,7 @@ sidebar_label: Home
 
 *Practical connector selection for rugged, industrial, military-style, and electromechanical systems.*
 
-:::note[v0.6 Beta — Source Cleanup + Safety Pass]
+:::note[v0.7 Beta — Reference Hardening + Design Nuance Pass]
 
 Technical corrections welcome with sources. This guide is an educational engineering reference. Always verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and program/customer requirements.
 

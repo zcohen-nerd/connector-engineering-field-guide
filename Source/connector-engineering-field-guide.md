@@ -118,6 +118,29 @@ The category table lists fiber for completeness, but optical connectors are thei
 - **Rugged / military:** *expanded-beam* connectors (including expanded-beam MIL-DTL-38999 variants) tolerate dust and vibration better than physical-contact ferrules; **ARINC 801** termini and **MIL-DTL-38999 fiber slash sheets** place optical contacts into the same rugged circular shells used for copper.
 - **What drives selection:** endface cleanliness, alignment/insertion loss, bend radius, and single- vs. multi-mode — not the mechanical envelope.
 
+> **Caution.** Fiber connector performance depends heavily on cleanliness, inspection, polish/interface type, bend radius, transceiver requirements, and installation process. Do not select fiber connectors by shape alone.
+
+**Minimum fiber connector decision fields** — capture these before choosing (they are decision-support fields, not ratings):
+
+| Field | Record |
+|---|---|
+| Fiber type | single-mode / multimode |
+| Connector family | LC / SC / expanded-beam / MIL-DTL-38999 fiber termini / other |
+| Polish type (if physical-contact) | per the interface specification |
+| Insertion loss budget | dB, from the link budget |
+| Return loss requirement | dB, per interface/transceiver |
+| Wavelength | per transceiver |
+| Transceiver / interface | exact module and its connector requirement |
+| Cleaning / inspection requirement | process + scope/inspection equipment |
+| Dust cap requirement | caps on every unmated port |
+| Bend radius | cable and boot minimums |
+| Strain relief | boot/backshell strategy |
+| Environmental sealing | rating + test condition, if external |
+| Expanded-beam vs. physical-contact rationale | dust/vibration tolerance vs. loss trade |
+| Test method | how loss/return loss will be verified |
+| Fiber owner / reviewer | who signs off |
+| Source document / datasheet | identifier + revision/date |
+
 A full fiber deep-dive is **out of scope for v1** of this guide; treat this as a pointer and work from the connector/fiber manufacturer and the applicable standard.
 
 ### 2.2 RF connectors — a brief orientation
@@ -129,13 +152,17 @@ The category table lists RF/coax for completeness; like fiber, RF connectors are
 - **Mating torque is a specification, not a feel:** threaded RF interfaces (SMA and kin) specify a mating torque — use the torque wrench; over- or under-torquing degrades the match and damages mating interfaces.
 - **Protect high-cycle test ports:** use a sacrificial adapter (a "connector saver") on ports that see many mate cycles, so the wear lands on the cheap replaceable part.
 
+> **Caution.** RF connector selection is not only mechanical fit. Frequency range, impedance control, launch geometry, cable assembly quality, bend radius, torque, return loss, insertion loss, and environmental sealing can dominate performance.
+
+Before choosing, capture at minimum: signal/function, frequency range, characteristic impedance, connector family, cable type, insertion-loss budget, return-loss/VSWR requirement, power at frequency, environmental sealing, mate-cycle expectation, torque requirement, vibration/strain relief, whether a connector saver is required, the test-equipment interface, the RF owner/reviewer, and the source document/datasheet.
+
 A full RF deep-dive is **out of scope for v1** of this guide; treat this as a pointer and work from the connector/cable manufacturer's data and your RF requirements.
 
 ---
 
 ## 3. Connector Standards and Families
 
-> **Note.** Always verify against the *current* version of the applicable standard and the manufacturer's datasheet. Standards get revised; part-number schemas vary between manufacturers. What follows is a framework for thinking, not a substitute for the source document — when this guide and a manufacturer datasheet or standard disagree, the datasheet/standard wins. MIL-DTL-38999 covers miniature high-density environmental circular connectors with removable crimp or hermetic solder contacts; M12 connectors are covered by the IEC 61076-2-x family (e.g. 61076-2-101 for A/B/D codings, 61076-2-109 for X-coded, 61076-2-111 for power codings — sourced in Section 8); the MIL-DTL-38999 scope and part-number structure are sourced in Section 7.
+> **Note.** Always verify against the *current* version of the applicable standard and the manufacturer's datasheet. Standards get revised; part-number schemas vary between manufacturers. What follows is a framework for thinking, not a substitute for the source document — when this guide and a manufacturer datasheet or standard disagree, the datasheet/standard wins. A catalog rating is not a permission slip — treat every figure in these tables as a screening value, and use the exact datasheet, derating curve, application specification, and program/customer requirement for design release. MIL-DTL-38999 covers miniature high-density environmental circular connectors with removable crimp or hermetic solder contacts; M12 connectors are covered by the IEC 61076-2-x family (e.g. 61076-2-101 for A/B/D codings, 61076-2-109 for X-coded, 61076-2-111 for power codings — sourced in Section 8); the MIL-DTL-38999 scope and part-number structure are sourced in Section 7.
 
 ### 3.1 At-a-glance family comparison
 
@@ -183,7 +210,7 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 | Molex MX150 / MX150L | ≥ IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
 | Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants[^metripack] | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify)[^metripack] | Long-standing automotive terminal system |
 
-**Where they win:** IP67/IP68 sealing and vibration life far beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are the sweet spot for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required.
+**Where they win:** datasheet-rated sealing (IP67/IP68-class, by family) and vibration performance well beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are a strong middle ground for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required — and "automotive sealed" is not a universal environmental rating. Verify the seal system, wire-seal range, cavity plugs, temperature range, vibration suitability, fluid exposure, and IP test conditions against the family documentation.
 
 ---
 
@@ -327,6 +354,8 @@ Connector shielding is a *system* property: it depends on maintaining a continuo
 - **Shell-to-shell continuity:** the mated shells must actually conduct (grounding fingers/springs, clean conductive plating), or the shield path is broken at the interface.
 - **Backshell bonding & finishes:** the backshell must bond to the shell; conductive finishes and, where needed, EMI gaskets maintain continuity around the joint. A non-conductive finish (e.g. some anodize) breaks it.
 
+**Termination strategy is system- and frequency-dependent.** Do not treat "ground one end only" or "ground both ends" as a universal rule. A single-point bond is a common tactic against low-frequency ground loops, while high-frequency shielding effectiveness commonly relies on bonding at both ends through 360° terminations (the classic EMC-textbook treatment — see Ott) — but the right answer depends on the noise problem being controlled, the frequency range of concern, and the chassis/reference structure. Document the shield strategy, the problem it controls, the frequency range, the reference structure, and the EMC requirement or test rationale — and verify the connector, backshell, cable braid, strain relief, and enclosure bond as one shielding system.
+
 The rear hardware has two jobs: bond the shield 360° into the shell, and carry cable load through the clamp and backshell so the contacts never see it.
 
 **Why a pigtail is bad:** it turns the shield connection into a small series **inductor**, and inductive impedance rises with frequency (Z ≈ 2πfL). The standard EMC rule of thumb is ~10 nH *per centimeter* of pigtail (see e.g. Ott, *Electromagnetic Compatibility Engineering*) — so even a 1 cm pigtail is ≈ 2 Ω at 30 MHz and tens of ohms by a few hundred MHz, and real pigtails are usually longer. That impedance lets shield current develop a voltage and re-radiate — the mechanism behind the guide's repeated "pigtails are inductive / pigtails radiate" caution.
@@ -360,6 +389,18 @@ Don't start with the glamour render. Start with the ordering information and the
 | Accessories | Caps, gaskets, dummy contacts, sealing plugs | Budget into BOM from day one |
 
 **Easy to forget (but on the BOM):** backshell, strain relief, cable clamp, gasket, dust cap, crimp tool, insertion/removal tools, spare contacts, sealing plugs, torque procedure, pinout drawing, and the mating connector.
+
+### 6.1 Where the numbers must come from (source hierarchy)
+
+Not every document that states a rating is design authority. When two sources disagree — or when you're deciding what to write in the ICD — work down this hierarchy:
+
+1. **Program / customer / contract requirement** — always controls.
+2. **Governing standard, current edition** — record the identifier and edition/date checked.
+3. **QPD/QPL listing**, where qualification matters — for the exact manufacturer, part number, and slash sheet.
+4. **Manufacturer documentation** — datasheet, catalog drawing, application specification, installation instruction — at a recorded revision.
+5. **Distributor pages** — for availability, pricing, lead time, packaging, and lifecycle hints only.
+
+> **Note.** Distributor pages are useful for discovery, pricing, lead time, packaging, and availability. They are not design authority for ratings, qualification, tooling, sealing, mating cycles, or safety limits. For engineering release, verify against the governing requirement, current standard, QPD/QPL listing where applicable, and the exact manufacturer documentation.
 
 ---
 
@@ -443,7 +484,7 @@ A genuine MIL-DTL-38999 Series III part number uses the `D38999/...` base specif
 
 Read it as linked fields: the letter (`E`) gives the shell size (17), and the trailing number (`26`) is the insert arrangement *within* that shell size. The `26` alone is not the full insert arrangement — the full designation is **17-26**. The same arrangement number means different things in different shell sizes, so always pair them.
 
-> **Warning.** D38999 part-number schemas vary by manufacturer (Amphenol, Glenair, Souriau, ITT Cannon, TE, Eaton). Finish letters, available arrangements, and accessory codes are not identical across vendors. Always decode against the *specific* manufacturer's catalog/decoder, and verify against the QPL when qualification matters. A conforming part number from two vendors is not automatically interchangeable — match series, shell size, insert arrangement, contact type, finish, and keying.
+> **Warning.** D38999 part-number schemas vary by manufacturer (Amphenol, Glenair, Souriau, ITT Cannon, TE, Eaton). Finish letters, available arrangements, and accessory codes are not identical across vendors. Always decode against the *specific* manufacturer's catalog/decoder, and verify against the QPL when qualification matters. "Mil-spec style," "MIL-compatible," or "built to a military standard" does not automatically mean the exact part is qualified — when qualification matters, verify the exact manufacturer, part number, slash sheet, and status in the applicable QPD/QPL or program-approved source. A conforming part number from two vendors is not automatically interchangeable — match series, shell size, insert arrangement, contact type, finish, and keying.
 
 ### 7.9 Common 38999 beginner mistakes
 
@@ -564,9 +605,11 @@ Use this at work. Adapt to your program; it is a working checklist, not a standa
 - [ ] Voltage rating + transients/peak checked
 - [ ] Current per contact *at temperature* checked
 - [ ] Bundle/thermal derating applied (use a conservative margin and the manufacturer derating curve)
+- [ ] Rating source (document + revision) recorded for the voltage/current values used
+- [ ] Loaded-contact count, ambient temperature, termination type, allowable temperature rise, and margin rationale documented
 - [ ] Wire gauge compatible with contact barrel
 - [ ] Signal type identified; high-speed/RF flagged
-- [ ] Shields/grounds assigned (360° where needed)
+- [ ] Shield strategy documented — type, termination points, and rationale (one-end vs. both-ends vs. 360° backshell is system- and frequency-dependent, not a universal rule)
 - [ ] Power and signal segregation considered
 - [ ] Load-break / hot-plug / mate-under-power status recorded from the datasheet (yes / no / explicitly prohibited / not specified — never assumed)
 - [ ] For power interfaces: touch safety when unmated, fuse/overcurrent protection, available fault current, and inrush/precharge documented
@@ -748,9 +791,11 @@ Goal by Day 30: not connector expert, but dangerous in the useful way — able t
 
 ## Appendix: Quick-Reference Tables
 
+> **Ratings are system-level.** A catalog rating is not a permission slip. Current, voltage, temperature, sealing, and mating-cycle limits depend on the exact contact, wire gauge, number of loaded circuits, ambient temperature, enclosure heat, termination quality, assembly process, and allowable temperature rise. Use these tables as a screening tool first; use the exact datasheet, derating curve, application specification, and program/customer requirement for design release.
+
 ### A1. IP rating reference
 
-IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529[^iso20653] — IEC 60529 added a close equivalent, IPx9, in its 2013 edition. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system. Note also that the immersion tests (IPx7/IPx8) and the jet tests (IPx5/IPx6/IPx9) are independent — passing immersion does not imply jet protection, which is why washdown parts are often dual-rated (e.g. "IP67/IP69K").
+IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529[^iso20653] — IEC 60529 added a close equivalent, IPx9, in its 2013 edition. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system — confirm whether the rating applies mated, unmated, capped, panel-mounted, torqued, strain-relieved, or with specific wire seals/cavity plugs installed. Note also that the immersion tests (IPx7/IPx8) and the jet tests (IPx5/IPx6/IPx9) are independent — passing immersion does not imply jet protection, which is why washdown parts are often dual-rated (e.g. "IP67/IP69K").
 
 | IP | Solid ingress | Liquid ingress | Typical application |
 |---|---|---|---|
@@ -857,7 +902,7 @@ Consolidated citations for every sourced claim in this guide, referenced by labe
 
 [^m12cyc]: Turck M12 cordset RK 4.5T-5 — mechanical life > 100 mating cycles. <https://www.turck.us/datasheet/_us/edb_U2188-94_eng_us.pdf>
 
-[^hancyc]: HARTING Han E series inserts are rated ≥ 500 mating cycles (Han E insert listing/datasheet: <https://www.tme.com/us/en-us/details/09330162601/harting-connectors/harting/>). The Han HMC (High Mating Cycle) series is designed for 10,000+ mating cycles (HARTING Han HMC product page: <https://www.harting.com/US/en/markets/han%C2%AE-hmc-10000-times-reliably-connecting-testing-platform>).
+[^hancyc]: HARTING Han E series inserts are rated ≥ 500 mating cycles (per a distributor listing — orientation only, verify against the HARTING datasheet before design release: <https://www.tme.com/us/en-us/details/09330162601/harting-connectors/harting/>). The Han HMC (High Mating Cycle) series is designed for 10,000+ mating cycles (HARTING Han HMC product page: <https://www.harting.com/US/en/markets/han%C2%AE-hmc-10000-times-reliably-connecting-testing-platform>).
 
 [^usbccyc]: USB Type-C Cable and Connector Specification (USB-IF) — 10,000-cycle durability minimum; manufacturer USB-C datasheets carry the same figure. <https://www.mouser.com/pdfDocs/USBCCADatasheet.pdf>
 

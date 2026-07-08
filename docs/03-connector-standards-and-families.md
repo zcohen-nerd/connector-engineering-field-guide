@@ -10,7 +10,7 @@ sidebar_label: Standards and Families
 
 :::note
 
-Always verify against the *current* version of the applicable standard and the manufacturer's datasheet. Standards get revised; part-number schemas vary between manufacturers. What follows is a framework for thinking, not a substitute for the source document — when this guide and a manufacturer datasheet or standard disagree, the datasheet/standard wins. MIL-DTL-38999 covers miniature high-density environmental circular connectors with removable crimp or hermetic solder contacts; M12 connectors are covered by the IEC 61076-2-x family (e.g. 61076-2-101 for A/B/D codings, 61076-2-109 for X-coded, 61076-2-111 for power codings — sourced on the [M12 deep dive](08-m12.md)); the MIL-DTL-38999 scope and part-number structure are sourced on the [MIL-DTL-38999 deep dive](07-mil-dtl-38999.md).
+Always verify against the *current* version of the applicable standard and the manufacturer's datasheet. Standards get revised; part-number schemas vary between manufacturers. What follows is a framework for thinking, not a substitute for the source document — when this guide and a manufacturer datasheet or standard disagree, the datasheet/standard wins. A catalog rating is not a permission slip — treat every figure in these tables as a screening value, and use the exact datasheet, derating curve, application specification, and program/customer requirement for design release. MIL-DTL-38999 covers miniature high-density environmental circular connectors with removable crimp or hermetic solder contacts; M12 connectors are covered by the IEC 61076-2-x family (e.g. 61076-2-101 for A/B/D codings, 61076-2-109 for X-coded, 61076-2-111 for power codings — sourced on the [M12 deep dive](08-m12.md)); the MIL-DTL-38999 scope and part-number structure are sourced on the [MIL-DTL-38999 deep dive](07-mil-dtl-38999.md).
 
 :::
 
@@ -60,7 +60,7 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 | Molex MX150 / MX150L | ≥ IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
 | Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants[^metripack] | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify)[^metripack] | Long-standing automotive terminal system |
 
-**Where they win:** IP67/IP68 sealing and vibration life far beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are the sweet spot for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required.
+**Where they win:** datasheet-rated sealing (IP67/IP68-class, by family) and vibration performance well beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are a strong middle ground for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required — and "automotive sealed" is not a universal environmental rating. Verify the seal system, wire-seal range, cavity plugs, temperature range, vibration suitability, fluid exposure, and IP test conditions against the family documentation.
 
 ## Sources
 

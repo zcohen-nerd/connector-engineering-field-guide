@@ -1,12 +1,24 @@
 # Source Notes — Source-Status Dashboard
 
-**Status: v0.6 Beta — Source Cleanup + Safety Pass**
+**Status: v0.7 Beta — Reference Hardening + Design Nuance Pass**
 
 This file is the guide's transparency layer. Every technical statement falls into one of four buckets, and this file says which: **verified claims** (backed by a named public source), **engineering heuristics** (deliberate judgment, not specification), **example-only values** (teaching aids, never design authority), and an explicit **needs-source-before-v1.0 backlog**.
 
 > This guide is an educational engineering reference. Always verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and program/customer requirements.
 
-Release history lives in `CHANGELOG.md`. This file matches `docs/appendix/source-notes.md`; the docs copy adds site links. Inline citations live in the `## Sources` section of `connector-engineering-field-guide.md` and in each site page's Sources section.
+Release history lives in `CHANGELOG.md`. This file matches `docs/appendix/source-notes.md`; the docs copy adds site links. Inline citations live in the `## Sources` section of `connector-engineering-field-guide.md` and in each site page's Sources section. v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields.
+
+## Source hierarchy
+
+When two sources disagree — or when deciding what counts as design authority — work down this order (also in guide §6.1):
+
+1. **Program / customer / contract requirement**
+2. **Governing standard, current edition** (record the edition/date checked)
+3. **QPD/QPL listing**, where qualification matters (exact manufacturer, part number, slash sheet)
+4. **Manufacturer documentation** (datasheet, drawing, application spec, installation instruction — at a recorded revision)
+5. **Distributor pages** — availability, pricing, lead time, packaging, and lifecycle hints only
+
+Distributor pages are useful for discovery, pricing, lead time, packaging, and availability. They are not design authority for ratings, qualification, tooling, sealing, mating cycles, or safety limits. For engineering release, verify against the governing requirement, current standard, QPD/QPL listing where applicable, and the exact manufacturer documentation. Citations below that are distributor-hosted copies of manufacturer/DLA documents are noted as such; citations that are distributor *listings* are flagged for replacement in the backlog.
 
 ## 1. Verified claims
 
@@ -37,7 +49,7 @@ Statements backed by a credible public source. "Verified" means the claim matche
 | AMP Superseal 1.5 (IP67, ~14 A class) | Manufacturer page | TE Connectivity | §3.2 | |
 | Molex MX150/MX150L (≥IP67; up to ~30–40 A by gauge) | Manufacturer document | Molex | §3.2 | |
 | Metri-Pack series system (sealed & unsealed, series by blade size) | Manufacturer datasheet | Aptiv Metri-Pack Connection System | §3.2 | Figures deliberately qualitative |
-| Han E insert (16 A, 500 V, ≥500 cycles); Han HMC 10,000+ cycles | Manufacturer listing/page | TME listing / HARTING | A4, site matrix | Insert/hood/assembly define the interface |
+| Han E insert (16 A, 500 V, ≥500 cycles); Han HMC 10,000+ cycles | Distributor listing (Han E) / manufacturer page (Han HMC) | TME listing / HARTING | A4, site matrix | Han E figures are orientation-only until replaced with the HARTING datasheet (see backlog); insert/hood/assembly define the interface |
 | Micro-Fit 3.0: 8.5 A max "determined by terminal used"; 10.0 A RMF terminal offered | Manufacturer document | Molex 987650-5984 Rev. 5 | site matrix | RMF = Reduced Mating Force; terminal P/N sets current |
 | Mil-contact "50 µin class" gold plating | Manufacturer spec | Glenair contact materials spec | §5.1 | ASTM B488 over QQ-N-290 nickel |
 | 500-cycle durability across 38999 / 26482 / 83513 / 24308 | Specs/catalogs | Amphenol, Aero-Electric, Glenair, MIL-DTL-24308G | A4 | Per-family documents cited inline |
@@ -59,6 +71,8 @@ Deliberate engineering judgment — orientation, not specification. These are *i
 - **38999 Series III as the *often*-default** for new harsh-environment designs — conditioned on size, mating speed, legacy, customer, and program requirements. (§7.2)
 - **Bench-to-product transition rule of thumb** — a judgment checklist, not a spec. (§12.3)
 - **Splitting power and signal connectors vs. one mixed connector** — a trade, argued per design. (site Selection Packet example)
+- **Shield-termination strategy** — system- and frequency-dependent judgment: one-end vs. both-ends vs. 360° backshell is documented per design with an EMC rationale, never applied as a universal rule. (§5.7, site templates)
+- **Ratings as screening values** — catalog/family figures screen candidates; the exact datasheet, derating curve, application spec, and program requirement set release values. (§3, §6, appendix)
 
 ## 3. Example-only values
 
@@ -72,6 +86,7 @@ The following are always example-only, even where the family figure is verified 
 - All worked-example fields marked *illustrative* in the site templates (part numbers, cable OD, lengths, revision letters), and every placeholder in the site Selection Packet example.
 - Example pinouts and wire colours (e.g. the A-coded brown/white/blue/black convention) — confirm against the device datasheet.
 - Voltage/current figures quoted from standard listings (4 A / 250 V A-coded, 16 A / 630 V power codings, 600/1000 V 26482 classes) — tied to the cited edition and configuration, not universal ratings.
+- The RF and fiber minimum-decision-field tables (§2 and the site RF path) — process aids listing what to capture; they assert no performance values.
 
 ## 4. Needs source before v1.0
 
@@ -90,7 +105,8 @@ The explicit backlog. These gate the v1.0 "source verified" milestone — they a
 | Medium | Contact-count / insert-arrangement examples | §7.3–7.4 | Manufacturer insert-arrangement drawings | Mis-specified interfaces | Guide already says "always pull the drawing" |
 | Medium | MIL-DTL qualification / QPL status statements | §4, §7 | QPL listing for the exact P/N | Non-compliant hardware | The guide asserts no QPL status today — keep it that way until verified |
 | Medium | M8/M12 IEC coding and standard references (current editions) | §8 | Current IEC edition text (61076-2-101/-104/-109/-111) | Stale scope claims | Listings verified; -104 known to be under revision — record edition/date checked |
-| Low | RF connector performance values (frequency/power per family) | §2, site RF path | Exact part + cable datasheets | Degraded RF links | Intentionally number-free today |
+| Medium | Replace distributor-listing citations with manufacturer-direct documents | A4, site matrix (Han E) | HARTING Han E datasheet | Orientation figures drift from the controlling document | Distributor-hosted *copies* of manufacturer/DLA PDFs (Molex, Aptiv, MIL-DTL-24308G) are acceptable interim citations; swap to manufacturer/DLA-direct links where practical |
+| Low | RF & fiber connector performance values (frequency/power/loss per family) | §2, site RF path | Exact part + cable/fiber datasheets | Degraded links | Intentionally number-free; v0.7 added decision-field tables instead of values |
 | Low | Automotive sealed-connector environmental claims beyond IP (temp/vibration/fluids) | §3.2 | Series application specifications | Environmental field failures | Only sealing/current classes cited today |
 | Low | HDMI mating-cycle rating | §12 | Reputable public source | Minor | Intentionally unquoted; keep it that way unless sourced |
 

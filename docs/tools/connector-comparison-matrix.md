@@ -12,7 +12,7 @@ A worked version of the matrix from [Exercise 2](../13-hands-on-exercises.md), f
 
 :::warning[Read the numbers as orientation, not specification]
 
-Every figure below is a *typical or example* value for the **family**, pulled from the source footnoted in the cell — not a rating for any exact part. Current in particular depends on the specific contact, wire gauge, number of loaded contacts, temperature, and derating curve (see [Selection Workflow §2](../04-connector-selection-workflow.md)). Verify against the current datasheet, the applicable standard, and the QPL before relying on any value in released hardware. When this table and a datasheet disagree, the datasheet wins.
+Every figure below is a *typical or example* value for the **family**, pulled from the source footnoted in the cell — not a rating for any exact part. Current in particular depends on the specific contact, wire gauge, number of loaded contacts, temperature, and derating curve (see [Selection Workflow §2](../04-connector-selection-workflow.md)). Verify against the current datasheet, the applicable standard, and the QPL before relying on any value in released hardware. When this table and a datasheet disagree, the datasheet wins. A catalog rating is not a permission slip: use these figures as a screening tool, and the exact datasheet, derating curve, application specification, and program/customer requirement for design release.
 
 :::
 
@@ -28,6 +28,8 @@ Every figure below is a *typical or example* value for the **family**, pulled fr
 | **Molex Micro-Fit 3.0** | Internal, non-sealed; −40 to +105 °C[^microfit] | 2–24 circuits[^microfit] | ≤ 8.5 A, terminal-dependent (a 10.0 A RMF terminal is offered — verify exact terminal P/N)[^microfit] | Non-sealed[^microfit] | Crimp terminals; hand or applicator tooling | Low | Short (COTS) | Crimp; ~30 cycles (250 with lubricated RMF)[^microfit] | Exceeding the rating; no TPA/keying in volume production | 3.00 mm pitch; 600 V; positive latch, TPA, polarization[^microfit] |
 
 Contact sizes, insert arrangements, and exact ratings vary by manufacturer and part number — always pull the specific datasheet and, where qualification matters, the QPL.
+
+**When you reuse this matrix for your own trade study, add evidence columns** so it stays reviewable: *Rating source (document + rev/date)*, *Requirement type (customer / standard / manufacturer / internal / assumption)*, *Verification status (verified / assumed / example / TBD)*, and *Derating curve checked (yes / no / n-a)*. The rows above are **example-only** family orientation, sourced per the footnotes — not release values.
 
 ## Sources
 
@@ -47,6 +49,6 @@ Contact sizes, insert arrangements, and exact ratings vary by manufacturer and p
 
 [^microdlay]: Micro-D standard shell layouts (9, 15, 21, 25, 31, 37, 51, 100 contacts) — ConnectorSupplier / Bishop & Associates, "What are MIL-DTL-83513 connectors?" <https://connectorsupplier.com/what-are-mil-dtl-83513-connectors/>
 
-[^hane]: HARTING Han E insert (per IEC 61984) — 16 A, 500 V, ≥ 500 mating cycles, 6–48 contacts per insert. The Han family also offers higher-current inserts (e.g. Han HC) and high-mating-cycle variants (Han HMC). <https://www.tme.com/us/en-us/details/09330162601/harting-connectors/harting/>
+[^hane]: HARTING Han E insert (per IEC 61984) — 16 A, 500 V, ≥ 500 mating cycles, 6–48 contacts per insert. The Han family also offers higher-current inserts (e.g. Han HC) and high-mating-cycle variants (Han HMC). *Source is a distributor listing — fine for orientation and availability, not design authority; verify these figures against the HARTING datasheet before design release.* <https://www.tme.com/us/en-us/details/09330162601/harting-connectors/harting/>
 
 [^microfit]: Molex, *Micro-Fit 3.0 Connector System Product Family* (document 987650-5984, Rev. 5) — states an "8.5A maximum current rating," with current "determined by terminal used" (600 V, 3.00 mm pitch, 2–24 circuits, −40 to +105 °C, non-sealed; durability typically 30 cycles, up to 250 with factory-applied lubricant on RMF terminals). The same document offers a "10.0A RMF terminal"; its ordering table lists RMF terminals in 20–30 AWG (series 46235) and 18 AWG (series 203951). RMF primarily means *Reduced Mating Force* — current is set by the exact terminal P/N and wire gauge, not by the RMF designation itself. <https://www.content.molex.com/dxdam/literature/987650-5984.pdf>

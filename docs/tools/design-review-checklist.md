@@ -14,6 +14,8 @@ Based on [Sections 10](../10-selection-checklist.md) and [11](../11-red-flags.md
 
 - [ ] Interface definition is complete
 - [ ] Electrical limits are defined and sourced where required
+- [ ] Every rating/requirement is traced to a source document + revision, with verification status marked (verified / assumed / example / TBD)
+- [ ] Assumptions are explicitly listed with the risk if each is wrong
 - [ ] Current derating and wire-gauge compatibility are reviewed
 - [ ] Locking, strain relief, and backshell strategy are defined
 - [ ] Sealing and unmated protection are addressed
@@ -36,6 +38,8 @@ Based on [Sections 10](../10-selection-checklist.md) and [11](../11-red-flags.md
 | Wire seal sizing checked | TBD |  |
 | Mating connector included in BOM | TBD |  |
 | Load-break / mate-under-power status verified, not assumed | TBD |  |
+| Ratings traced to manufacturer/standard documents, not distributor listings | TBD |  |
+| Shield strategy documented with rationale (not a default) | TBD |  |
 | Touch safety when unmated addressed for power paths | TBD |  |
 | Fusing / fault current / inrush documented for power paths | TBD |  |
 | Service access reviewed | TBD |  |

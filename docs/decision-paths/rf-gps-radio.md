@@ -56,6 +56,35 @@ If the frequency, power, or environment is high enough to be risky — precision
 - **Mating torque** where the connector specifies one (common on threaded RF interfaces) — use a torque wrench.
 - **Environment** — weatherproofing, sealing, and caps for outdoor/panel use.
 
+## Minimum RF connector decision fields
+
+Capture these before you choose — they are decision-support fields, not ratings. If you can't fill a row, that's the row that bites later.
+
+:::caution
+
+RF connector selection is not only mechanical fit. Frequency range, impedance control, launch geometry, cable assembly quality, bend radius, torque, return loss, insertion loss, and environmental sealing can dominate performance.
+
+:::
+
+| Field | Record |
+|---|---|
+| Signal / function | GPS / antenna / radio TX/RX / timing / video / test |
+| Frequency range | per the link design |
+| Characteristic impedance | 50 Ω / 75 Ω — matched across connector, cable, termination |
+| Connector family | SMA / TNC / N / BNC / MCX/MMCX / SMP/SMPM / coax contact in a hybrid |
+| Cable type | the exact coax the connector is designed to terminate |
+| Insertion loss budget | dB at frequency, from the link budget |
+| Return loss / VSWR requirement | per system requirement |
+| Power at frequency | transmit paths — part-specific |
+| Environmental sealing | rating + test condition, if external |
+| Mate-cycle expectation | service model |
+| Torque requirement | value + torque wrench, per datasheet |
+| Vibration / strain relief | boot/backshell/support strategy |
+| Connector saver required | yes / no |
+| Test equipment interface | what the port must mate with in test |
+| RF owner / reviewer | who signs off |
+| Source document / datasheet | identifier + revision/date |
+
 ## Parts people forget
 
 - The **matching cable and the correct crimp/clamp tooling** for that exact coax.

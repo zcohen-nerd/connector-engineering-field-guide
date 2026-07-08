@@ -24,9 +24,11 @@ Based on [Section 10 — Practical Selection Checklist](../10-selection-checklis
 - [ ] Voltage rating + transients/peak checked
 - [ ] Current per contact at temperature checked
 - [ ] Bundle/thermal derating applied
+- [ ] Rating source (document + revision) recorded for the voltage/current values used
+- [ ] Loaded-contact count, ambient temperature, termination type, allowable temperature rise, and margin rationale documented
 - [ ] Wire gauge compatible with contact barrel
 - [ ] Signal type identified; high-speed/RF flagged
-- [ ] Shields/grounds assigned
+- [ ] Shield strategy documented — type, termination points, rationale (one-end vs. both-ends vs. 360° is system/frequency-dependent, not a universal rule)
 - [ ] Power and signal segregation considered
 - [ ] Load-break / hot-plug / mate-under-power status recorded from the datasheet (yes / no / explicitly prohibited / not specified)
 - [ ] For power interfaces: touch safety when unmated, fuse/overcurrent protection, available fault current, and inrush/precharge documented
@@ -62,3 +64,20 @@ Based on [Section 10 — Practical Selection Checklist](../10-selection-checklis
 - [ ] ICD entry written
 - [ ] Key position unique across differing pinouts
 - [ ] Rev-controlled BOM + labeling scheme
+
+## Source / evidence tracking
+
+Make the selection reviewable: every rating or requirement above should be traceable to a document, and assumptions should be visibly different from verified facts.
+
+- Datasheet revision/date:
+- Manufacturer drawing revision/date:
+- Application specification revision/date:
+- Qualified listing checked: yes / no / not applicable
+- QPD/QPL reference (if applicable):
+- Program/customer requirement reference:
+- Derating curve checked: yes / no / not applicable
+- Tooling/application spec checked: yes / no / not applicable
+
+| Claim / value relied on | Source document | Rev / date | Requirement type | Verification status | Verified by / date | Open questions / risk if wrong |
+| --- | --- | --- | --- | --- | --- | --- |
+| TBD | TBD | TBD | customer / standard / manufacturer / internal / assumption | verified / assumed / example / TBD | TBD | TBD |

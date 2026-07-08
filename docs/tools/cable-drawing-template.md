@@ -39,6 +39,22 @@ Based on [Exercise 6](../13-hands-on-exercises.md).
 - Workmanship / acceptance standard (e.g. IPC/WHMA-A-620 class, or the program/customer equivalent):
 - Additional test requirements:
 
+## Shield strategy (if shielded)
+
+- Shield required: yes / no
+- Shield type: braid / foil / drain / combination
+- Shield termination: one end / both ends / 360° backshell / capacitive / other
+- Connector shell bonded to chassis: yes / no / not applicable
+- EMC requirement or rationale (noise problem, frequency range of concern):
+- Test / verification method:
+- Grounding owner / reviewer:
+
+## Source / evidence tracking
+
+| Claim / value relied on | Source document | Rev / date | Requirement type | Verification status | Verified by / date | Open questions / risk if wrong |
+| --- | --- | --- | --- | --- | --- | --- |
+| TBD | TBD | TBD | customer / standard / manufacturer / internal / assumption | verified / assumed / example / TBD | TBD | TBD |
+
 ---
 
 ## Worked example — M12 A-coded sensor cable
@@ -75,6 +91,11 @@ Wire colours follow the common A-coded 4-pin convention; confirm pin functions a
 - Shield / drain verification: n/a (unshielded); add if a shielded variant is used
 - Workmanship / acceptance: IPC/WHMA-A-620 or the program/customer equivalent — molded cordset, incoming inspection *(illustrative)*
 - Additional: insulation resistance; coupling-torque check[^m12seal]
+
+### Shield strategy / evidence
+
+- Shield: none (unshielded A-coded sensor cordset); revisit with an EMC rationale if a shielded variant is used
+- Evidence: family electrical/coding/sealing values — IEC 61076-2-101 listing + M12 torque example, **verified** (Sources below); all fields marked *(illustrative)* — **example-only**, replace from the parts you actually buy
 
 ## Sources
 

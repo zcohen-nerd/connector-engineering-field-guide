@@ -36,6 +36,33 @@ The category table lists fiber for completeness, but optical connectors are thei
 - **Rugged / military:** *expanded-beam* connectors (including expanded-beam MIL-DTL-38999 variants) tolerate dust and vibration better than physical-contact ferrules; **ARINC 801** termini and **MIL-DTL-38999 fiber slash sheets** place optical contacts into the same rugged circular shells used for copper.
 - **What drives selection:** endface cleanliness, alignment/insertion loss, bend radius, and single- vs. multi-mode — not the mechanical envelope.
 
+:::caution
+
+Fiber connector performance depends heavily on cleanliness, inspection, polish/interface type, bend radius, transceiver requirements, and installation process. Do not select fiber connectors by shape alone.
+
+:::
+
+**Minimum fiber connector decision fields** — capture these before choosing (they are decision-support fields, not ratings):
+
+| Field | Record |
+|---|---|
+| Fiber type | single-mode / multimode |
+| Connector family | LC / SC / expanded-beam / MIL-DTL-38999 fiber termini / other |
+| Polish type (if physical-contact) | per the interface specification |
+| Insertion loss budget | dB, from the link budget |
+| Return loss requirement | dB, per interface/transceiver |
+| Wavelength | per transceiver |
+| Transceiver / interface | exact module and its connector requirement |
+| Cleaning / inspection requirement | process + scope/inspection equipment |
+| Dust cap requirement | caps on every unmated port |
+| Bend radius | cable and boot minimums |
+| Strain relief | boot/backshell strategy |
+| Environmental sealing | rating + test condition, if external |
+| Expanded-beam vs. physical-contact rationale | dust/vibration tolerance vs. loss trade |
+| Test method | how loss/return loss will be verified |
+| Fiber owner / reviewer | who signs off |
+| Source document / datasheet | identifier + revision/date |
+
 A full fiber deep-dive is **out of scope for v1** of this guide; treat this as a pointer and work from the connector/fiber manufacturer and the applicable standard.
 
 ## RF connectors — a brief orientation
@@ -46,6 +73,14 @@ The category table lists RF/coax for completeness; like fiber, RF connectors are
 - **Families have frequency ceilings:** as a rough ordering, SMA-class connectors reach higher frequencies than N/TNC, which reach higher than BNC — but the exact ceiling is a datasheet parameter for the specific connector and cable, not a family constant.
 - **Mating torque is a specification, not a feel:** threaded RF interfaces (SMA and kin) specify a mating torque — use the torque wrench; over- or under-torquing degrades the match and damages mating interfaces.
 - **Protect high-cycle test ports:** use a sacrificial adapter (a "connector saver") on ports that see many mate cycles, so the wear lands on the cheap replaceable part.
+
+:::caution
+
+RF connector selection is not only mechanical fit. Frequency range, impedance control, launch geometry, cable assembly quality, bend radius, torque, return loss, insertion loss, and environmental sealing can dominate performance.
+
+:::
+
+Before choosing, capture at minimum: signal/function, frequency range, characteristic impedance, connector family, cable type, insertion-loss budget, return-loss/VSWR requirement, power at frequency, environmental sealing, mate-cycle expectation, torque requirement, vibration/strain relief, whether a connector saver is required, the test-equipment interface, the RF owner/reviewer, and the source document/datasheet — the [RF decision path](decision-paths/rf-gps-radio.md#minimum-rf-connector-decision-fields) carries this as a fill-in table.
 
 A full RF deep-dive is **out of scope for v1** of this guide; treat this as a pointer and work from the connector/cable manufacturer's data and your RF requirements.
 

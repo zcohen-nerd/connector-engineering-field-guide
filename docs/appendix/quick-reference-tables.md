@@ -9,9 +9,15 @@ sidebar_label: Quick Reference Tables
 
 These are deliberately kept as compact lookup tables — IP ratings (A1), 38999 contact sizes (A2), and a family-selection quick guide (A3). Use the contents panel to jump between them. Every value is an orientation aid to verify against the source, not a selection rule. For scenario-by-scenario reasoning, see the [Decision Paths](../decision-paths/index.md).
 
+:::caution[Ratings are system-level]
+
+A catalog rating is not a permission slip. Current, voltage, temperature, sealing, and mating-cycle limits depend on the exact contact, wire gauge, number of loaded circuits, ambient temperature, enclosure heat, termination quality, assembly process, and allowable temperature rise. Use these tables as a screening tool first; use the exact datasheet, derating curve, application specification, and program/customer requirement for design release.
+
+:::
+
 ## A1. IP rating reference
 
-IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529[^iso20653] — IEC 60529 added a close equivalent, IPx9, in its 2013 edition. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system. Note also that the immersion tests (IPx7/IPx8) and the jet tests (IPx5/IPx6/IPx9) are independent — passing immersion does not imply jet protection, which is why washdown parts are often dual-rated (e.g. "IP67/IP69K").
+IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529[^iso20653] — IEC 60529 added a close equivalent, IPx9, in its 2013 edition. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system — confirm whether the rating applies mated, unmated, capped, panel-mounted, torqued, strain-relieved, or with specific wire seals/cavity plugs installed. Note also that the immersion tests (IPx7/IPx8) and the jet tests (IPx5/IPx6/IPx9) are independent — passing immersion does not imply jet protection, which is why washdown parts are often dual-rated (e.g. "IP67/IP69K").
 
 | IP | Solid ingress | Liquid ingress | Typical application |
 |---|---|---|---|
@@ -88,6 +94,6 @@ When this guide conflicts with a manufacturer datasheet, applicable standard, cu
 
 [^m12cyc]: Turck M12 cordset RK 4.5T-5 — mechanical life > 100 mating cycles. <https://www.turck.us/datasheet/_us/edb_U2188-94_eng_us.pdf>
 
-[^hancyc]: HARTING Han E series inserts are rated ≥ 500 mating cycles (Han E insert listing/datasheet: <https://www.tme.com/us/en-us/details/09330162601/harting-connectors/harting/>). The Han HMC (High Mating Cycle) series is designed for 10,000+ mating cycles (HARTING Han HMC product page: <https://www.harting.com/US/en/markets/han%C2%AE-hmc-10000-times-reliably-connecting-testing-platform>).
+[^hancyc]: HARTING Han E series inserts are rated ≥ 500 mating cycles (per a distributor listing — orientation only, verify against the HARTING datasheet before design release: <https://www.tme.com/us/en-us/details/09330162601/harting-connectors/harting/>). The Han HMC (High Mating Cycle) series is designed for 10,000+ mating cycles (HARTING Han HMC product page: <https://www.harting.com/US/en/markets/han%C2%AE-hmc-10000-times-reliably-connecting-testing-platform>).
 
 [^usbccyc]: USB Type-C Cable and Connector Specification (USB-IF) — 10,000-cycle durability minimum; manufacturer USB-C datasheets carry the same figure. <https://www.mouser.com/pdfDocs/USBCCADatasheet.pdf>

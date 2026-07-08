@@ -4,7 +4,7 @@
 
 Practical connector selection for rugged, industrial, military-style, and electromechanical systems — written for engineers who are **not** connector specialists.
 
-**Status:** v0.6 Beta — Source Cleanup + Safety Pass · *A zcohen-nerd technical guide*
+**Status:** v0.7 Beta — Reference Hardening + Design Nuance Pass · *A zcohen-nerd technical guide*
 
 ## Why this exists
 

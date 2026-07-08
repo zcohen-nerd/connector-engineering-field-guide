@@ -81,7 +81,7 @@ The biggest 26482 trap is treating "Series 1" and "Series 2" as interchangeable.
 
 ## 9. Sources / caveats
 
-The values here are **family-level orientation**, not ratings for any exact part. Voltage, current, temperature class, and sealing all depend on the specific service class, contact, and part number — size and specify against the datasheet and, where it matters, the QPL. This page reproduces no paid-standard or catalog tables; it summarizes publicly published characterizations.
+The values here are **family-level orientation**, not ratings for any exact part. Voltage, current, temperature class, and sealing all depend on the specific service class, contact, and part number — size and specify against the datasheet and, where it matters, the QPL. "Mil-spec style," "MIL-compatible," or "built to a military standard" does not automatically mean the exact part is qualified — when qualification matters, verify the exact manufacturer, part number, slash sheet, and status in the applicable QPD/QPL or program-approved source. This page reproduces no paid-standard or catalog tables; it summarizes publicly published characterizations.
 
 ## Sources
 

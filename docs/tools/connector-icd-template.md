@@ -37,8 +37,9 @@ Based on [Exercise 7](../13-hands-on-exercises.md).
 
 - Working voltage:
 - Current per contact:
+- Rating source (datasheet + revision) and derating basis (curve, loaded contacts, ambient, allowable temperature rise):
 - Contact size / wire gauge:
-- Shielding:
+- Shielding — type (braid/foil/drain), termination strategy (one end / both ends / 360° backshell), and EMC rationale:
 
 ## Power / energized-work safety (for power-carrying interfaces)
 
@@ -65,6 +66,21 @@ Based on [Exercise 7](../13-hands-on-exercises.md).
 - Cable requirements:
 - Test / inspection requirements:
 - Workmanship / acceptance standard (e.g. IPC/WHMA-A-620 or program/customer equivalent):
+
+## Source / evidence tracking
+
+- Datasheet revision/date:
+- Manufacturer drawing revision/date:
+- Application specification revision/date:
+- Qualified listing checked: yes / no / not applicable
+- QPD/QPL reference (if applicable):
+- Program/customer requirement reference:
+- Derating curve checked: yes / no / not applicable
+- Tooling/application spec checked: yes / no / not applicable
+
+| Claim / value relied on | Source document | Rev / date | Requirement type | Verification status | Verified by / date | Open questions / risk if wrong |
+| --- | --- | --- | --- | --- | --- | --- |
+| TBD | TBD | TBD | customer / standard / manufacturer / internal / assumption | verified / assumed / example / TBD | TBD | TBD |
 
 ---
 
@@ -128,6 +144,13 @@ Pin functions follow the device datasheet; colours per the common A-coded conven
 - Cable requirements: PUR jacket, OD within the gland range; see the [cable drawing example](cable-drawing-template.md)
 - Test / inspection requirements: continuity, insulation resistance, coupling-torque check
 - Workmanship / acceptance: IPC/WHMA-A-620 or the program/customer equivalent; molded cordset — incoming inspection *(illustrative)*
+
+### Source / evidence tracking
+
+- IEC 61076-2-101 listing (coding, ≤ 4 A / ≤ 250 V class) — **verified**, cited in Sources below; record the edition/date you check
+- Turck torque example (0.8–1.0 N·m) — **verified example**, manufacturer-specific; replace with your vendor's figure
+- Vendor P/N, cable OD, revision fields — **example-only** *(illustrative)*; qualified listing: not applicable for this commercial sensor interface
+- Derating curve checked: not applicable at sensor current — record it for anything approaching the contact rating
 
 ## Sources
 

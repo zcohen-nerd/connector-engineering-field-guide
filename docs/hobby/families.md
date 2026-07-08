@@ -64,7 +64,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 
 - **Marketplace names:** XT connectors, battery connectors.
 - **What it is:** a keyed, polarized DC power connector ecosystem commonly sold under XT30 / XT60 / XT90 names in RC and hobby battery wiring — sized XT30 → XT60 → XT90.
-- **Watch for:** the digits loosely track a current class in common usage but **are not a design rating** — exact manufacturer, genuine-vs-clone status, current rating, wire gauge, and temperature limits must be verified from the actual part documentation *(source needed)*; they are unsealed; and like all power connectors they are **not load-break devices** — see the [energized-connector warning](../decision-paths/high-current-dc-power.md).
+- **Watch for:** per AMASS's own documentation **the digits are the *momentary* current — continuous is half or less** (sourced table on the [full page](xt-connectors.md)); clone quality varies and genuine-part figures don't transfer; they are unsealed; and like all power connectors they are **not load-break devices** — see the [energized-connector warning](../decision-paths/high-current-dc-power.md).
 - **Full page:** [XT30, XT60, and XT90](xt-connectors.md).
 
 ## Screw terminals and spring terminals

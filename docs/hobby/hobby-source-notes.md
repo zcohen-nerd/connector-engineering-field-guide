@@ -20,6 +20,7 @@ Only what is actually backed by sources present in this repo:
 - **Qwiic / STEMMA QT connector conventions** — 4-pin 1.0 mm JST SH, polarized, cross-compatible ecosystems — per SparkFun's Qwiic documentation and Adafruit's STEMMA QT technical specs, cited on [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
 - **XT30/XT60/XT90 attribution and ratings** — AMASS (Changzhou Amass Electronics) as XT-series originator per its manufacturer site; rated/momentary currents (XT30: 15/30 A, XT60: 30/60 A, XT90: 40/90 A), cable specs, and temperature-rise conditions per AMASS-authored documentation (distributor-hosted PDFs — AMASS publishes no spec tables on its own site). Genuine-part figures only; clones uncovered. Cited on [XT30, XT60, and XT90](xt-connectors.md).
 - **Grove connector and port-type pinout variation** — 4-pin 2.0 mm connector; signal-pin function varies by port type (I2C/UART/digital/analog), per Seeed's Grove System documentation, cited on [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
+- **Plain STEMMA vs STEMMA QT** — plain STEMMA = JST PH 2.0 mm (4-pin I2C, 3-pin analog/digital/PWM, 3–5 V device power, Zener-protected 3-pin ports), distinct from the 1.0 mm SH-based STEMMA QT — per Adafruit's STEMMA documentation, cited on the [SH/Qwiic](jst-sh-qwiic-stemma.md) and [PH](jst-ph.md) pages.
 - **0.1 in = 2.54 mm** — definitional; the basis of the Dupont/header ecosystem discussion.
 
 ## Engineering heuristics (judgment, not specification)

@@ -18,7 +18,7 @@ The genuine JST **PH series**: 2.0 mm-pitch **wire-to-board** family, rated 2 A 
 
 ## Where it shows up
 
-Small 1S LiPo battery pigtails, dev-board battery ports (many Adafruit-style boards), small sensors, and compact internal harnesses.
+Small 1S LiPo battery pigtails, dev-board battery ports (many Adafruit-style boards), small sensors, and compact internal harnesses. PH is also the connector behind Adafruit's **plain-STEMMA** ports (4-pin I2C, 3-pin analog/digital/PWM)[^stemma-ph] — not to be confused with the smaller 1.0 mm STEMMA QT, which lives on the [SH/Qwiic/STEMMA QT page](jst-sh-qwiic-stemma.md).
 
 ## How to identify it
 
@@ -52,3 +52,5 @@ Battery interfaces that matter (capacity, current, or consequences), anything le
 ## Sources
 
 [^jst-ph]: JST PH series datasheet, official JST PDF — 2.0 mm pitch, wire-to-board; 2 A AC/DC (AWG #24), 100 V, 2–16 circuits, wire range AWG #32–24. Genuine-part figures only. <https://www.jst-mfg.com/product/pdf/eng/ePH.pdf>
+
+[^stemma-ph]: Adafruit, *STEMMA & STEMMA QT technical specs* — plain STEMMA uses "JST PH (2mm pitch)" connectors: 4-pin for I2C, "JST PH 2mm 3-Pin" for analog/digital/PWM. <https://learn.adafruit.com/introducing-adafruit-stemma-qt/technical-specs>

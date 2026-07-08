@@ -24,6 +24,10 @@ Tiny I2C sensor/driver boards, solder-free sensor chains on dev boards, and incr
 
 1.0 mm pitch — genuinely tiny; distinguish from **GH** (1.25 mm, has a positive latch arm; SH is friction-fit) and from Molex PicoBlade-style 1.25 mm lookalikes. Four positions + the ecosystem branding usually means Qwiic/STEMMA QT. **Grove (Seeed) is a different ecosystem** on its own larger 4-pin 2.0 mm connector — and, unlike Qwiic/STEMMA QT's single fixed I2C convention, **Grove's pinout varies by port type**: the two signal pins carry SCL/SDA on an I2C port, RX/TX on a UART port, and D0/D1 or A0/A1 on digital/analog ports, with power and ground fixed on the other two.[^grove] A cable moved between ecosystems — or between the wrong Grove port types — puts signals where the board doesn't expect them; verify the vendor pinout and connector documentation before mixing.
 
+## Plain STEMMA is not STEMMA QT
+
+Adafruit runs *two* connector conventions with confusingly similar names, and they sit exactly on this guide's favorite trap — the 2.0 mm vs 1.0 mm pitch split. **Plain STEMMA** uses the larger **JST PH (2.0 mm)**: 4-pin PH for I2C and 3-pin PH for analog/digital/PWM signals. **STEMMA QT** is the smaller **JST SH (1.0 mm)** 4-pin I2C convention this page is mostly about, created for boards where the larger PH connector won't fit.[^stemma] Both conventions specify 3–5 V device power, and Adafruit's 3-pin STEMMA ports add a protection circuit for 3.3 V controllers[^stemma] — but a PH cable will never mate an SH port, so [measure the pitch](pitch.md) first and trust the name second. Plain STEMMA's connector is the same JST PH covered on [its own page](jst-ph.md).
+
 ## What to buy
 
 **Pre-made cables, full stop.** SH contacts are the hardest common hobby crimp there is ([crimping](crimping.md)); Qwiic/STEMMA QT cables from the ecosystem vendors exist precisely so you never crimp one. Buy spares in the lengths you need.
@@ -50,5 +54,7 @@ When the "sensor chain" becomes a fielded instrument: vibration, sealing, or doc
 [^qwiic]: SparkFun, *Qwiic Connect System* — 4-pin 1 mm JST SH-based polarized I2C cabling (SHR-04V-S-class housing), 3.3 V ecosystem, fixed pinout per SparkFun's documentation. <https://www.sparkfun.com/qwiic>
 
 [^stemmaqt]: Adafruit, *STEMMA QT technical specs* — 4-pin JST SH 1.0 mm connectors for I2C; connector and pin ordering identical to Qwiic, cross-compatible with Qwiic devices. <https://learn.adafruit.com/introducing-adafruit-stemma-qt/technical-specs>
+
+[^stemma]: Adafruit, *STEMMA & STEMMA QT technical specs* — plain STEMMA: "JST PH (2mm pitch)" 4-pin for I2C and "JST PH 2mm 3-Pin" for analog/digital/PWM; V+ "can be anything from 3-5V DC" and devices "must accept 3-5V DC"; 3-pin ports include a "1K+3.6V Zener diode protection circuit" to protect 3.3 V controllers. STEMMA QT is the 1.0 mm JST SH variant for boards where the larger PH won't fit. <https://learn.adafruit.com/introducing-adafruit-stemma-qt/technical-specs> and <https://learn.adafruit.com/introducing-adafruit-stemma-qt/what-is-stemma>
 
 [^grove]: Seeed Studio, *Grove System* documentation — 4-pin 2.0 mm-pitch connector; the signal-pin function varies by module/port type ("Grove I2C: Pin 1 is the SCL signal and Pin 2 is the SDA signal"; UART: pin 1 RX, pin 2 TX; digital: D0/D1; analog: A0/A1), with power (pin 3) and ground (pin 4) fixed. <https://wiki.seeedstudio.com/Grove_System/>

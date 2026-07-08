@@ -19,6 +19,7 @@ Only what is actually backed by sources present in this repo:
 - **USB-C 10,000-cycle durability** — per the USB-IF Type-C specification, cited in [§12](../12-consumer-hobby-prototype-connectors.md).
 - **Qwiic / STEMMA QT connector conventions** — 4-pin 1.0 mm JST SH, polarized, cross-compatible ecosystems — per SparkFun's Qwiic documentation and Adafruit's STEMMA QT technical specs, cited on [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
 - **XT30/XT60/XT90 attribution and ratings** — AMASS (Changzhou Amass Electronics) as XT-series originator per its manufacturer site; rated/momentary currents (XT30: 15/30 A, XT60: 30/60 A, XT90: 40/90 A), cable specs, and temperature-rise conditions per AMASS-authored documentation (distributor-hosted PDFs — AMASS publishes no spec tables on its own site). Genuine-part figures only; clones uncovered. Cited on [XT30, XT60, and XT90](xt-connectors.md).
+- **Grove connector and port-type pinout variation** — 4-pin 2.0 mm connector; signal-pin function varies by port type (I2C/UART/digital/analog), per Seeed's Grove System documentation, cited on [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
 - **0.1 in = 2.54 mm** — definitional; the basis of the Dupont/header ecosystem discussion.
 
 ## Engineering heuristics (judgment, not specification)
@@ -44,7 +45,6 @@ Typical hobby usage, not design ratings. Anywhere these appear they carry a *ver
 - Screw/spring terminal ratings and gauge ranges
 - LED connector current assumptions and power-injection sizing
 - Every marketplace kit claim (series, pitch, "waterproof," "high current")
-- Grove ecosystem connector specifics (kept qualitative; Seeed documentation is the target)
 
 ## Needs source before hobby v1.0
 
@@ -53,7 +53,6 @@ Source targets, honestly unfilled — none of these citations exist in the repo 
 | Item | Source target |
 |---|---|
 | JST EH/ZH (mentioned only as published-pitch examples) | Official JST datasheets per series, if those mentions are kept |
-| Grove ecosystem connector details | Seeed Grove documentation |
 | XT ratings from AMASS-direct hosting | Closed for values (audit-2026-07) via distributor-hosted AMASS PDFs; an AMASS-domain-hosted equivalent would still be an upgrade |
 | Crimping tiny open-barrel terminals | Manufacturer application notes / crimp specifications |
 | LED power injection guidance (if expanded) | Reputable LED wiring/power-injection references |
@@ -73,7 +72,7 @@ The editorial roadmap for this track — what exists, what's next, and in what o
 7. **Screw/spring terminals and ferrules** — capsule only; deep page not started
 8. **USB-C power for hobby projects** — capsule only; deep page not started
 9. **Barrel jacks and polarity traps** — capsule only; deep page not started
-10. **Grove ecosystem** — mentioned only; deep page not started
+10. **Grove ecosystem** — deep page not started; connector and pinout-varies-by-port-type facts sourced to Seeed docs (audit-2026-07)
 
 :::note
 

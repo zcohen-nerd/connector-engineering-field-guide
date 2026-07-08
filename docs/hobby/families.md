@@ -35,7 +35,7 @@ Capsule field notes on the families hobby projects actually meet: what the marke
 
 - **Marketplace names:** SH, Qwiic cable, STEMMA QT cable, "1 mm JST."
 - **What it is:** 1.0 mm-pitch wire-to-board family. The Qwiic (SparkFun) and STEMMA QT (Adafruit) I2C ecosystems standardize on a 4-pin 1.0 mm JST SH connector so sensor boards daisy-chain with no soldering — per the vendors' own documentation, cited on the full page.
-- **Watch for:** SH contacts are tiny — buy pre-crimped cables rather than crimping; don't confuse with GH (1.25 mm, latched); Grove (Seeed) is a *different* ecosystem with a different, larger connector — verify the vendor pinout and connector documentation before mixing ecosystems.
+- **Watch for:** SH contacts are tiny — buy pre-crimped cables rather than crimping; don't confuse with GH (1.25 mm, latched); Grove (Seeed) is a *different*, larger 2.0 mm ecosystem whose pinout varies by port type — sourced detail on the [full page](jst-sh-qwiic-stemma.md).
 - **Full page:** [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
 
 ## JST-GH

@@ -22,7 +22,7 @@ Tiny I2C sensor/driver boards, solder-free sensor chains on dev boards, and incr
 
 ## How to identify it
 
-1.0 mm pitch — genuinely tiny; distinguish from **GH** (1.25 mm, has a positive latch arm; SH is friction-fit) and from Molex PicoBlade-style 1.25 mm lookalikes. Four positions + the ecosystem branding usually means Qwiic/STEMMA QT. **Grove (Seeed) is a different, larger ecosystem** with its own connector — Grove and Qwiic/STEMMA QT cables do not interchange; verify the vendor pinout and connector documentation before mixing ecosystems.
+1.0 mm pitch — genuinely tiny; distinguish from **GH** (1.25 mm, has a positive latch arm; SH is friction-fit) and from Molex PicoBlade-style 1.25 mm lookalikes. Four positions + the ecosystem branding usually means Qwiic/STEMMA QT. **Grove (Seeed) is a different ecosystem** on its own larger 4-pin 2.0 mm connector — and, unlike Qwiic/STEMMA QT's single fixed I2C convention, **Grove's pinout varies by port type**: the two signal pins carry SCL/SDA on an I2C port, RX/TX on a UART port, and D0/D1 or A0/A1 on digital/analog ports, with power and ground fixed on the other two.[^grove] A cable moved between ecosystems — or between the wrong Grove port types — puts signals where the board doesn't expect them; verify the vendor pinout and connector documentation before mixing.
 
 ## What to buy
 
@@ -50,3 +50,5 @@ When the "sensor chain" becomes a fielded instrument: vibration, sealing, or doc
 [^qwiic]: SparkFun, *Qwiic Connect System* — 4-pin 1 mm JST SH-based polarized I2C cabling (SHR-04V-S-class housing), 3.3 V ecosystem, fixed pinout per SparkFun's documentation. <https://www.sparkfun.com/qwiic>
 
 [^stemmaqt]: Adafruit, *STEMMA QT technical specs* — 4-pin JST SH 1.0 mm connectors for I2C; connector and pin ordering identical to Qwiic, cross-compatible with Qwiic devices. <https://learn.adafruit.com/introducing-adafruit-stemma-qt/technical-specs>
+
+[^grove]: Seeed Studio, *Grove System* documentation — 4-pin 2.0 mm-pitch connector; the signal-pin function varies by module/port type ("Grove I2C: Pin 1 is the SCL signal and Pin 2 is the SDA signal"; UART: pin 1 RX, pin 2 TX; digital: D0/D1; analog: A0/A1), with power (pin 3) and ground (pin 4) fixed. <https://wiki.seeedstudio.com/Grove_System/>

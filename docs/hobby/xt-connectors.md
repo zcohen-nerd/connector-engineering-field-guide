@@ -16,6 +16,10 @@ XT connectors, battery connectors, LiPo connectors, "the yellow ones."
 
 A **keyed, polarized DC power connector ecosystem** commonly sold under XT30 / XT60 / XT90 names in RC and hobby battery wiring — solder-cup bullet-style contacts in a keyed nylon shell, sized XT30 → XT60 → XT90. The originator is **Changzhou Amass Electronics (AMASS)**, which states on its manufacturer site that it is "the original creator of the XT series."[^amass] Marketplace parts may be genuine AMASS or clones of unknown quality — the ratings below describe **genuine AMASS parts only**.
 
+![The mating ends of a yellow XT60 pair, showing the keyed shell and two bullet contacts](/img/photos/xt60-mating-ends.jpg)
+
+*An XT60 pair, mating ends: keyed yellow nylon shell, two bullet contacts. Photo: [qvfp](https://www.flickr.com/photos/35167919@N07/12166785133), CC BY 2.0, via Flickr.*
+
 ## The sourced ratings — and the trap in the name
 
 Per AMASS's own documentation, **the digits in the name are the *momentary* current, not the continuous rating.** Continuous ("rated") current is half or less:
@@ -35,6 +39,10 @@ Battery packs, RC vehicles and drones, portable power, hobby robots, bench power
 ## How to identify it
 
 Keyed trapezoid-ish shell with two (or, in XT90 anti-spark variants, resistor-equipped) bullet contacts; size steps visibly between the three. Clones are everywhere; contact plating, shell material, and fit vary with them.
+
+![Line diagram of the XT connector face showing the keyed shell, polarity, and the XT30/60/90 size steps](/img/diagrams/hobby-xt-id.svg)
+
+*ID marks: keyed shell (can't reverse), two bullets, three visible size steps — and the digits-are-momentary trap.*
 
 ## What to buy
 

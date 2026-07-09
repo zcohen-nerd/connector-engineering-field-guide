@@ -20,9 +20,17 @@ The genuine JST **XH series**: 2.5 mm-pitch **wire-to-board** family — board h
 
 3D printers (endstops, thermistors, fans, steppers on many budget boards), LiPo **balance leads**, and low-cost wire-to-board harnesses across budget electronics.
 
+![Close-up of 4S, 5S, and 6S XH balance ports on a battery charger, showing the white shrouded headers and pins](/img/photos/jst-xh-balance-ports.jpg)
+
+*The XH you probably know: balance ports on a LiPo charger. Photo: [Laurenz Wagner](https://commons.wikimedia.org/wiki/File:Balancer_Buchse_XH.JPG), CC BY 3.0, via Wikimedia Commons.*
+
 ## How to identify it
 
 2.5 mm pitch ([measure across the row](pitch.md) — this is the classic 2.5-vs-2.54 trap), friction-lock shroud on the header (no positive latch arm like GH), white nylon housing. Distinguish from **PH** (2.0 mm, smaller), **VH** (3.96 mm, much larger power family), **EH** (also 2.5 mm but a different, slimmer family — check the drawing), and generic "JST 2.54" kit parts (a contradiction — [see the kit decoder](connector-kits.md)).
+
+![Line diagram of a JST XH shrouded header with pitch arrows and polarization-rib callouts](/img/diagrams/hobby-jst-xh-id.svg)
+
+*ID marks: 2.5 mm pitch, boxy open-top shroud, friction fit — no latch arm.*
 
 ## What to buy
 

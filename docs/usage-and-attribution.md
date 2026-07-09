@@ -16,6 +16,11 @@ This guide is intended to be freely shareable as an educational field reference.
 
 See [Source Notes](appendix/source-notes.md) for the list of claims that need source verification before v1.0 — before relying on these values in released hardware.
 
+## Photographs and diagrams
+
+- The **line-art diagrams** (`static/img/diagrams/`) are original to this project and carry the documentation license below.
+- The **connector photographs** (`static/img/photos/`) are third-party works used under their own Creative Commons licenses (CC BY / CC BY-SA, various versions), sourced from Wikimedia Commons and Flickr. Each photo is credited in its caption with the photographer and license, linked to the source page. Those photos are **not** relicensed by this project — if you reuse one, follow its own license and credit the original photographer. No manufacturer marketing photography is used.
+
 ## License
 
 This project is dual-licensed, matching the repository `LICENSE` files:

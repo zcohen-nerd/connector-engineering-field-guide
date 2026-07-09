@@ -20,9 +20,17 @@ Two things stacked: the genuine JST **SH series** — 1.0 mm-pitch crimp **wire-
 
 Tiny I2C sensor/driver boards, solder-free sensor chains on dev boards, and increasingly as the standard "just works" I2C port on hobby electronics.
 
+![A surface-mount 4-pin JST SH connector of the type used for Qwiic and STEMMA QT ports](/img/photos/qwiic-jst-sh-smd.jpg)
+
+*A 4-pin SMD JST SH — the Qwiic/STEMMA QT port itself. Photo: [SparkFun Electronics](https://commons.wikimedia.org/wiki/File:Qwiic_JST_Connector_-_SMD_4-pin_(36428734893).jpg), CC BY 2.0, via Wikimedia Commons.*
+
 ## How to identify it
 
 1.0 mm pitch — genuinely tiny; distinguish from **GH** (1.25 mm, has a positive latch arm; SH is friction-fit) and from Molex PicoBlade-style 1.25 mm lookalikes. Four positions + the ecosystem branding usually means Qwiic/STEMMA QT. **Grove (Seeed) is a different ecosystem** on its own larger 4-pin 2.0 mm connector — and, unlike Qwiic/STEMMA QT's single fixed I2C convention, **Grove's pinout varies by port type**: the two signal pins carry SCL/SDA on an I2C port, RX/TX on a UART port, and D0/D1 or A0/A1 on digital/analog ports, with power and ground fixed on the other two.[^grove] A cable moved between ecosystems — or between the wrong Grove port types — puts signals where the board doesn't expect them; verify the vendor pinout and connector documentation before mixing.
+
+![Line diagram of a JST SH side-entry SMD connector with pitch arrows and a true-size comparison bar](/img/diagrams/hobby-jst-sh-id.svg)
+
+*ID marks: 1.0 mm pitch, side-entry SMD, friction fit — note the true-size bar.*
 
 ## Plain STEMMA is not STEMMA QT
 

@@ -12,6 +12,10 @@ If you've bought an addressable LED string, LED pixels, a strip with a pigtail, 
 
 It deserves its own page because it is everywhere in LED work — and because almost everything about it, from the name to the rating, needs verification.
 
+![Line diagram of a JST SM wire-to-wire pair: plug with latch arm mating a receptacle with latch window](/img/diagrams/hobby-jst-sm-id.svg)
+
+*ID marks: an inline pair in the middle of a cable — 2.5 mm pitch, positive latch, no PCB side.*
+
 ## What you're actually looking at
 
 - **JST-SM is commonly seen as an inline wire-to-wire family/style** in hobby LED wiring — one half on the string, the pigtail half on your controller.

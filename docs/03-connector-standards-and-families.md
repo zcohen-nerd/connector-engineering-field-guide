@@ -49,6 +49,10 @@ Two specific clarifications worth internalizing:
 - **MIL-DTL-24308 D-subs in their standard form are non-environmental, polarized rack-and-panel connectors.**[^dsub] "Mil-spec" does not by itself mean "rugged outdoor / environmentally sealed" — read what the spec actually covers. Ruggedized/environmental D-sub variants exist and must be selected and verified intentionally. D-subs are perfectly appropriate for protected panels, racks, test gear, legacy interfaces, and internal equipment.
 - **Micro-D (MIL-DTL-83513)** is a fine-pitch (contacts on .050 in / 1.27 mm centers), high-density, lightweight, high-reliability family used where size and weight matter.[^microd] It carries lower current than larger connectors (≈ 3 A per contact) and has more assembly/tooling complexity. Exact contact arrangements vary by product — verify against the catalog. Treat it as an internal / protected high-reliability connector, not a high-current or dirty field-service connector.
 
+![A DE-9 female D-sub connector face with numbered solder-cup positions](/img/photos/dsub-de9-female.jpg)
+
+*The D-sub everyone has met: a DE-9 female, positions numbered. Polarized trapezoid shell, rack-and-panel — and non-environmental in standard form. Photo: [FireEmerald](https://commons.wikimedia.org/wiki/File:D-SUB_DE-9_FEMALE_SOLDER_CONNECTOR_NUMBERED.JPG), CC BY-SA 4.0, via Wikimedia Commons.*
+
 ## 3.2 Sealed automotive connector families
 
 Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cost-effective, sealed, crimp-based ecosystem built for vehicles — often the right answer for makers and robotics teams going rugged on a budget. These are wire-to-wire / panel crimp systems; verify the exact series datasheet.
@@ -59,6 +63,10 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 | TE AMP Superseal 1.5 / AMPSEAL | IP67[^superseal] | ~14 A (Superseal 1.5)[^superseal] | Compact sealed inline; AMPSEAL for higher pin counts |
 | Molex MX150 / MX150L | ≥ IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
 | Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants[^metripack] | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify)[^metripack] | Long-standing automotive terminal system |
+
+![A round Deutsch HD-style 9-pin J1939 diagnostic plug with threaded coupling on a black cable](/img/photos/deutsch-j1939-plug.jpg)
+
+*The sealed-automotive look: a Deutsch HD-style 9-pin plug (here a J1939 vehicle-diagnostic connector) — crimp contacts, wire seals, thumb-coupled shell. Photo: [Florian Schäffer](https://commons.wikimedia.org/wiki/File:J1939-Stecker.jpg), CC BY-SA 3.0, via Wikimedia Commons.*
 
 **Where they win:** datasheet-rated sealing (IP67/IP68-class, by family) and vibration performance well beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are a strong middle ground for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required — and "automotive sealed" is not a universal environmental rating. Verify the seal system, wire-seal range, cavity plugs, temperature range, vibration suitability, fluid exposure, and IP test conditions against the family documentation.
 

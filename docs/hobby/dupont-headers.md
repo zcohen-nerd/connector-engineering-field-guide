@@ -18,6 +18,10 @@ The generic **0.1 inch (2.54 mm)** pin-header ecosystem: square 0.025 in posts, 
 
 The name does have a real ancestor: Berg's **Mini-PV** crimp system, an early 0.1 in design of exactly this type. Berg spent years as a DuPont division — which is where the nickname comes from — then passed through FCI to Amphenol, which still produces MiniPV® as a current 2.54 mm crimp family.[^dupontname][^minipvcat] Marketplace "Dupont" kits are generic imitations of that system, not the genuine line.
 
+![A handful of 0.1-inch jumper wires: colored wires ending in individually crimped pins inside single-position black housings](/img/photos/dupont-jumper-wires.jpg)
+
+*The bench classic: crimped pins in single-position friction housings. Photo: [oomlout](https://commons.wikimedia.org/wiki/File:A_few_Jumper_Wires.jpg), CC BY-SA 2.0, via Wikimedia Commons.*
+
 ## Where it shows up
 
 Breadboards, Arduino-style headers, Raspberry Pi GPIO jumper wiring, dev-board experiments, bench prototypes, test leads — anywhere speed of rewiring beats permanence.
@@ -25,6 +29,10 @@ Breadboards, Arduino-style headers, Raspberry Pi GPIO jumper wiring, dev-board e
 ## How to identify it
 
 2.54 mm pitch ([measure it](pitch.md) — 2.5 mm lookalikes exist), square pins, rectangular black housings with removable crimp contacts. **Female socket jumpers** slide over pins; **male pin jumpers** plug into breadboards/sockets. **Single housings** carry one contact and can be re-shuffled freely; **multi-position housings** (1×N, 2×N) gang contacts but only fit matching header layouts — contacts can usually be extracted and re-housed.
+
+![Line diagram of a 0.1-inch jumper housing sliding over a square header post, with pitch and friction-only callouts](/img/diagrams/hobby-dupont-id.svg)
+
+*ID marks: 2.54 mm pitch, square posts, friction-only retention — no latch, no polarization.*
 
 ## What to buy
 

@@ -1,0 +1,48 @@
+<svg viewBox="0 0 760 300" width="760" height="300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- JST XH ID card. -->
+  <rect x="0.5" y="0.5" width="759" height="299" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">JST XH — ID marks</text>
+
+  <!-- Top-entry shrouded header, side/front view -->
+  <g stroke="#102040" stroke-width="2" fill="#f4f7fb">
+    <!-- base -->
+    <rect x="90" y="196" width="220" height="26" rx="3"/>
+    <!-- shroud walls -->
+    <path d="M98 196 v-70 h18 v52 M292 196 v-70 h-18 v52" fill="#f4f7fb"/>
+  </g>
+  <!-- pins inside shroud -->
+  <g stroke="#102040" stroke-width="1.5" fill="#ffffff">
+    <rect x="136" y="148" width="6" height="48"/>
+    <rect x="172" y="148" width="6" height="48"/>
+    <rect x="208" y="148" width="6" height="48"/>
+    <rect x="244" y="148" width="6" height="48"/>
+  </g>
+  <!-- PCB legs -->
+  <g stroke="#102040" stroke-width="1.5">
+    <line x1="139" y1="222" x2="139" y2="240"/>
+    <line x1="175" y1="222" x2="175" y2="240"/>
+    <line x1="211" y1="222" x2="211" y2="240"/>
+    <line x1="247" y1="222" x2="247" y2="240"/>
+  </g>
+
+  <!-- Pitch arrows -->
+  <line x1="139" y1="132" x2="175" y2="132" stroke="#9a3412" stroke-width="1.5"/>
+  <path d="M139 132 l7 -4 v8 z M175 132 l-7 -4 v8 z" fill="#9a3412"/>
+  <text x="157" y="122" text-anchor="middle" font-size="12" font-weight="bold" fill="#9a3412">2.5 mm</text>
+
+  <!-- polarization rib callout -->
+  <line x1="284" y1="160" x2="330" y2="128" stroke="#3d6094" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="336" y="124" font-size="12" fill="#3d6094">shroud walls + polarization ribs</text>
+
+  <text x="200" y="262" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">Boxy open-top shroud, friction fit</text>
+  <text x="200" y="280" text-anchor="middle" font-size="12" fill="#3d6094">wire-to-board; housing plugs straight down</text>
+
+  <!-- Callouts right column -->
+  <g font-size="12" fill="#3d6094">
+    <text x="440" y="168" font-weight="bold" fill="#102040">What gives it away</text>
+    <text x="440" y="192">&#8226; 2.5 mm pitch — the &#8220;big&#8221; hobby JST</text>
+    <text x="440" y="212">&#8226; friction lock: <tspan fill="#9a3412" font-weight="bold">no latch arm</tspan> (unlike SM/GH)</text>
+    <text x="440" y="232">&#8226; classic role: LiPo balance leads, dev boards</text>
+    <text x="440" y="252">&#8226; clones everywhere — verify genuine parts</text>
+  </g>
+</svg>

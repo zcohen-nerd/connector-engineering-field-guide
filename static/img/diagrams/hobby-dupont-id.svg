@@ -1,0 +1,47 @@
+<svg viewBox="0 0 760 300" width="760" height="300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Dupont / 0.1 inch jumper ID card. -->
+  <rect x="0.5" y="0.5" width="759" height="299" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">Dupont / 0.1&#8221; jumper — ID marks</text>
+
+  <!-- Header strip with square posts -->
+  <g stroke="#102040" stroke-width="2" fill="#f4f7fb">
+    <rect x="80" y="200" width="280" height="34" rx="3"/>
+  </g>
+  <g stroke="#102040" stroke-width="1.5" fill="#ffffff">
+    <rect x="104" y="160" width="9" height="40"/>
+    <rect x="152" y="160" width="9" height="40"/>
+    <rect x="200" y="160" width="9" height="40"/>
+    <rect x="248" y="160" width="9" height="40"/>
+    <rect x="296" y="160" width="9" height="40"/>
+  </g>
+
+  <!-- Pitch arrows between two posts -->
+  <line x1="108" y1="146" x2="157" y2="146" stroke="#9a3412" stroke-width="1.5"/>
+  <path d="M108 146 l7 -4 v8 z M157 146 l-7 -4 v8 z" fill="#9a3412"/>
+  <text x="133" y="136" text-anchor="middle" font-size="12" font-weight="bold" fill="#9a3412">2.54 mm (0.1 in)</text>
+
+  <!-- Female jumper housing above one post -->
+  <g stroke="#102040" stroke-width="2" fill="#ffffff">
+    <rect x="291" y="78" width="19" height="66" rx="2"/>
+  </g>
+  <!-- retention dimple -->
+  <rect x="296" y="96" width="9" height="8" fill="#f4f7fb" stroke="#102040" stroke-width="1"/>
+  <!-- wire out the top -->
+  <path d="M300 78 q0 -26 26 -30" stroke="#3d6094" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- drop arrow onto the post -->
+  <line x1="300" y1="150" x2="300" y2="158" stroke="#3d6094" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <text x="220" y="258" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">Slides over a square 0.1&#8221; post</text>
+  <text x="220" y="276" text-anchor="middle" font-size="12" fill="#3d6094">single-pin housings shuffle freely; multi-pin housings gang them</text>
+
+  <!-- Callouts right column -->
+  <g font-size="12" fill="#3d6094">
+    <text x="450" y="96" font-weight="bold" fill="#102040">What gives it away</text>
+    <text x="450" y="120">&#8226; rectangular black housings, removable crimp sockets</text>
+    <text x="450" y="140">&#8226; friction fit only — <tspan fill="#9a3412" font-weight="bold">no latch, no polarization</tspan></text>
+    <text x="450" y="160">&#8226; mates with the universal 0.1&#8221; header</text>
+    <text x="450" y="180">&#8226; 2.5 mm lookalikes exist — measure the pitch</text>
+    <text x="450" y="212" font-weight="bold" fill="#102040">Bench connector, not a retention strategy</text>
+    <text x="450" y="232">vibration walks it off; treat as signal-and-milliamps</text>
+  </g>
+</svg>

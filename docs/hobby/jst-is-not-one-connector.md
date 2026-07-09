@@ -18,6 +18,10 @@ A listing that says "JST connector" has not told you the connector series, pitch
 
 :::
 
+![A white 4-pin shrouded wire-to-board header of the kind marketplaces sell as simply a JST connector](/img/photos/jst-style-header.jpg)
+
+*Exhibit A: a "JST connector" as sold — white, shrouded, latchy-looking. The listing names no series; the drawing does. Photo: [oomlout](https://commons.wikimedia.org/wiki/File:JSTS-02-X-04PI-01.jpg), CC BY-SA 2.0, via Wikimedia Commons.*
+
 ## The series you'll actually meet
 
 Every pitch below is sourced from the official JST series datasheet footnoted on its row; the footnotes also carry each datasheet's headline rating. Two standing caveats: those figures describe **genuine JST parts assembled per the datasheet** — clone and "compatible" parts are not covered — and a headline current is still contact-, gauge-, and application-dependent ([power vs signal](power-vs-signal.md)).
@@ -36,6 +40,10 @@ Three practical consequences:
 - **2.5 mm (XH) and 2.0 mm (PH) look nearly identical in photos.** A PH battery pigtail will not mate an XH header, and forcing it damages both. [Measure the pitch](pitch.md).
 - **The housing and the contact are separate parts, per series.** An XH housing needs XH contacts — not PH contacts, not "Dupont" contacts, not whatever came in the kit drawer. See [Crimping](crimping.md).
 - **A "JST battery lead" from a marketplace could be PH, XH, RCY, SM, or a clone of any of them.** Identify before you order the mate — see [Buying the Right Mating Parts](buying-mating-parts.md).
+
+![A mating pair of red JST RCY connectors on red and black wires](/img/photos/jst-rcy-pair.jpg)
+
+*The red pair behind most "JST battery connector" listings is the RCY series (2.5 mm, wire-to-wire) — not SM, not PH, not XH. Photo: [Mike mahoney aus4810](https://commons.wikimedia.org/wiki/File:JST_RCY.JPG), CC BY-SA 4.0, via Wikimedia Commons.*
 
 The vocabulary doing the work here — *pitch*, *contact vs. terminal*, *housing*, the *male/female* ambiguity, *genuine vs. clone* — is pinned down in the shared [Glossary](../glossary.md).
 

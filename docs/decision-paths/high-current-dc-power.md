@@ -35,6 +35,10 @@ For high-energy systems — batteries, motor controllers, heaters, PDUs — docu
 - **High-current circular** connectors.
 - **MIL-DTL-38999 size 12** *only where the derating supports the load*, or **size 8 / larger** and **dedicated power contacts** (e.g. HCP/RADSOK) for higher current.
 
+![Anderson Powerpole housings and contacts on a workbench beside a wire spool and crimp tool](/img/photos/anderson-powerpole-bench.jpg)
+
+*Anderson Powerpole-style housings, loose contacts, wire, and the crimper — the genderless quick-disconnect workflow in one frame. Photo: [4dtext](https://commons.wikimedia.org/wiki/File:Powerpole_stuff.jpg), CC BY-SA 3.0, via Wikimedia Commons.*
+
 See [Quick-Reference A3](../appendix/quick-reference-tables.md) and [Decision Examples](../09-decision-examples.md).
 
 ## Search terms

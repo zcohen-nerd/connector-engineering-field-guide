@@ -1,0 +1,35 @@
+<svg viewBox="0 0 760 300" width="760" height="300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- XT30/60/90 ID card. -->
+  <rect x="0.5" y="0.5" width="759" height="299" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">XT30 / XT60 / XT90 — ID marks</text>
+
+  <!-- Face view: keyed trapezoid shell with two bullet cavities -->
+  <g stroke="#102040" stroke-width="2" fill="#f4f7fb">
+    <path d="M110 90 h100 q14 0 14 14 v60 q0 14 -14 14 h-100 l-22 -22 v-44 z"/>
+  </g>
+  <circle cx="146" cy="134" r="17" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <circle cx="196" cy="134" r="17" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <circle cx="146" cy="134" r="7" fill="#f4f7fb" stroke="#102040" stroke-width="1.5"/>
+  <circle cx="196" cy="134" r="7" fill="#f4f7fb" stroke="#102040" stroke-width="1.5"/>
+  <text x="146" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#9a3412">&#8722;</text>
+  <text x="196" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#9a3412">+</text>
+
+  <!-- keyed corner callout -->
+  <line x1="92" y1="164" x2="66" y2="196" stroke="#3d6094" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="60" y="214" font-size="12" fill="#3d6094">beveled corners — can&#8217;t plug reversed</text>
+
+  <!-- Size steps -->
+  <g stroke="#102040" stroke-width="1.5" fill="#f4f7fb">
+    <path d="M330 148 h36 q6 0 6 6 v22 q0 6 -6 6 h-36 l-8 -8 v-18 z"/>
+    <path d="M400 136 h52 q8 0 8 8 v30 q0 8 -8 8 h-52 l-12 -12 v-24 z"/>
+    <path d="M492 122 h70 q10 0 10 10 v40 q0 10 -10 10 h-70 l-16 -16 v-30 z"/>
+  </g>
+  <text x="350" y="200" text-anchor="middle" font-size="12" fill="#3d6094">XT30</text>
+  <text x="428" y="200" text-anchor="middle" font-size="12" fill="#3d6094">XT60</text>
+  <text x="530" y="200" text-anchor="middle" font-size="12" fill="#3d6094">XT90</text>
+  <text x="440" y="226" text-anchor="middle" font-size="12" fill="#102040" font-weight="bold">size steps visibly — usually yellow nylon, solder-cup bullets</text>
+
+  <!-- The trap -->
+  <text x="380" y="262" text-anchor="middle" font-size="13" font-weight="bold" fill="#9a3412">The digits are the momentary current, not the continuous rating</text>
+  <text x="380" y="280" text-anchor="middle" font-size="12" fill="#3d6094">per AMASS: XT30 = 15 A cont. / 30 A momentary &#183; XT60 = 30/60 &#183; XT90 = 40/90 — genuine parts only</text>
+</svg>

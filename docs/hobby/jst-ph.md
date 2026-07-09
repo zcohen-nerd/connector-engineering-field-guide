@@ -24,6 +24,10 @@ Small 1S LiPo battery pigtails, dev-board battery ports (many Adafruit-style boa
 
 2.0 mm pitch ([measure it](pitch.md) — visually near-identical to XH's 2.5 mm in photos), low-profile white housing, friction-fit shroud. Two-position PH is the archetypal small battery pigtail; don't confuse it with the slightly larger XH or with [RCY](families.md#jst-rcy--bec-style-battery-leads), the red 2.5 mm wire-to-wire battery pair.
 
+![Line diagram of a JST PH low-profile shrouded header with a dashed XH outline for size comparison](/img/diagrams/hobby-jst-ph-id.svg)
+
+*ID marks: 2.0 mm pitch, low shroud, friction fit — visibly smaller than XH.*
+
 ## What to buy
 
 **Pre-crimped PH leads are the sane default** — the contacts are tiny and hand-crimping them is genuinely hard ([crimping](crimping.md)). Otherwise: housing + PH contacts + board header as separate genuine line items ([buying mating parts](buying-mating-parts.md)).

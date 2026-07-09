@@ -1,0 +1,45 @@
+<svg viewBox="0 0 760 300" width="760" height="300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- MIL-DTL-26482 bayonet ID card. -->
+  <rect x="0.5" y="0.5" width="759" height="299" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">MIL-DTL-26482 — 3-point bayonet coupling</text>
+
+  <!-- Face view: shell with three bayonet studs at 120 degrees -->
+  <circle cx="180" cy="150" r="62" fill="#f4f7fb" stroke="#102040" stroke-width="2"/>
+  <circle cx="180" cy="150" r="40" fill="#ffffff" stroke="#102040" stroke-width="1.5"/>
+  <!-- pins -->
+  <g fill="#102040">
+    <circle cx="180" cy="136" r="3"/>
+    <circle cx="166" cy="158" r="3"/>
+    <circle cx="194" cy="158" r="3"/>
+    <circle cx="180" cy="172" r="3"/>
+    <circle cx="180" cy="150" r="3"/>
+  </g>
+  <!-- bayonet studs -->
+  <g fill="#9a3412">
+    <circle cx="180" cy="94" r="6"/>
+    <circle cx="131" cy="178" r="6"/>
+    <circle cx="229" cy="178" r="6"/>
+  </g>
+  <line x1="180" y1="88" x2="180" y2="64" stroke="#9a3412" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="190" y="60" font-size="12" fill="#9a3412" font-weight="bold">3 bayonet studs, 120&#176; apart</text>
+  <text x="180" y="240" text-anchor="middle" font-size="12" fill="#3d6094">mating face — studs ride ramps in the coupling ring</text>
+
+  <!-- Side: coupling ring with ramp slot -->
+  <g stroke="#102040" stroke-width="2" fill="#f4f7fb">
+    <rect x="330" y="118" width="120" height="64" rx="6"/>
+  </g>
+  <path d="M348 172 q30 -34 66 -40" stroke="#9a3412" stroke-width="2.5" fill="none"/>
+  <circle cx="348" cy="172" r="5" fill="#9a3412"/>
+  <text x="390" y="212" text-anchor="middle" font-size="12" fill="#3d6094">~&#8531;-turn twist, clicks home</text>
+
+  <!-- Callouts -->
+  <g font-size="12" fill="#3d6094">
+    <text x="500" y="112" font-weight="bold" fill="#102040">What gives it away</text>
+    <text x="500" y="136">&#8226; twist-lock, much faster than threading</text>
+    <text x="500" y="156">&#8226; audible/tactile click when fully coupled</text>
+    <text x="500" y="176">&#8226; miniature circular; crimp contacts 20/16/12</text>
+    <text x="500" y="196">&#8226; Series 1 (solder/front-release) vs</text>
+    <text x="508" y="214">Series 2 (crimp/rear-release) — check first</text>
+    <text x="500" y="242" font-weight="bold" fill="#9a3412">Verify qualification for your vibration profile</text>
+  </g>
+</svg>

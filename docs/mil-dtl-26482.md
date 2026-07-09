@@ -20,6 +20,10 @@ This page is orientation-level supplemental material, not one of the numbered ca
 
 A **bayonet-coupling rugged circular** connector family. The coupling is a fast **3-point bayonet** — a quarter-turn engage rather than a threaded coupling — which is quick and convenient in the field.[^m26482] It comes in a range of shell sizes and insert arrangements with crimp contacts commonly in **sizes 20, 16, and 12**, and is rated (depending on service class) to roughly **600 V (Class I) or 1000 V (Class II)**.[^m26482] Durability is commonly evaluated at **≥ 500 mating cycles**.[^m26482]
 
+![Line diagram of the 26482 mating face with three bayonet studs and the coupling-ring ramp](/img/diagrams/mil26482-bayonet.svg)
+
+*ID marks: three bayonet studs at 120°, a ~third-turn twist, and a click when fully coupled.*
+
 ## 2. When to consider it
 
 - **Rugged but not extreme** environments where a fast bayonet is welcome and the available contact arrangements fit.

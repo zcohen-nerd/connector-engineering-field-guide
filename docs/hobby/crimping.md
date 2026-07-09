@@ -23,6 +23,14 @@ Crimping is where hobby wiring either becomes reliable or becomes a lifetime sup
 - **Inspect every crimp:** conductor wings on bare strands, insulation wings on jacket, no stray strands, contact not deformed.
 - **Pull test gently** — a correct crimp survives a firm tug; a wrong one comes off now instead of in the field.
 
+![A ratcheting crimp tool with interchangeable die positions marked with AWG wire ranges](/img/photos/crimper-ratchet-awg.jpg)
+
+*A ratcheting crimper with die positions marked by wire range (here AWG 18–22 and 24–30). The ratchet forces a full stroke every time — the consistency cheap plier-style tools can't give you. The die profile still only approximates each family's spec. Photo: [Smial](https://commons.wikimedia.org/wiki/File:Crimpzange_awg_18-30_IMGP5361.jpg), CC BY-SA 2.0 DE, via Wikimedia Commons.*
+
+![A ferrule crimper beside assorted wire ferrules and a cable with ferrule-terminated conductors](/img/photos/ferrules-and-crimper.jpg)
+
+*The other hobby crimp: ferrules for stranded wire going into screw terminals — insulated and uninsulated ferrules, the crimper, and finished ends. Photo: [Simon A. Eugster](https://commons.wikimedia.org/wiki/File:Wire_ferrules_with_and_without_insulation.jpg), CC BY-SA 3.0, via Wikimedia Commons.*
+
 ## When to use pre-crimped leads
 
 Pre-crimped leads (factory-terminated wires you insert into housings yourself) are often the best hobby choice:

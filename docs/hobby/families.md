@@ -60,6 +60,10 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 - **What it is:** servo leads are commonly three-conductor signal / power / ground harnesses using 0.1-inch-class housings, but keying tabs, pin order, wire colors, and vendor conventions vary — verify the receiver/controller and servo documentation before powering.
 - **Watch for:** friction fit only — vibration protection is on you; check the servo's stall current against the lead and wire gauge, not just "it's a servo plug."
 
+![An SG90 micro servo with its three-wire lead ending in a 3-pin 0.1-inch-class servo plug](/img/photos/servo-sg90-lead.jpg)
+
+*The classic micro-servo lead: three conductors into a 0.1-inch-class housing — verify pin order against *your* receiver, not the wire colors. Photo: [Suyash Dwivedi](https://commons.wikimedia.org/wiki/File:Tower_Pro_SG90_micro_servo_motor.jpg), CC BY-SA 4.0, via Wikimedia Commons.*
+
 ## XT30, XT60, and XT90
 
 - **Marketplace names:** XT connectors, battery connectors.
@@ -72,10 +76,18 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 - **What it is:** terminal blocks (fixed or pluggable), spring/lever types (Wago-style) — field-wireable, no crimping, great for power distribution and things you'll re-wire.
 - **Watch for:** wire must match the terminal's gauge range; stranded wire in screw terminals wants ferrules; screws loosen under vibration — retorque or use spring types; these are not sealed and not strain-relieved by themselves.
 
+![A transparent WAGO 221 lever connector next to a stripped stranded wire](/img/photos/wago-221-lever.jpg)
+
+*A lever-type splicing connector — tool-free, re-wireable, and rated on its own datasheet (this one marks 20 A / 300 V on the housing). Photo: [Lucasbosch](https://commons.wikimedia.org/wiki/File:Wago_221-413_splicing_connector_with_stranded_wire.jpg), CC BY-SA 4.0, via Wikimedia Commons.*
+
 ## Barrel jacks
 
 - **What it is:** the classic DC power plug (e.g. 5.5 mm OD × 2.1 or 2.5 mm ID are common sizes — verify yours).
 - **Watch for:** multiple incompatible ID/OD combinations that all look alike; center-positive vs center-negative polarity conventions; low retention (they fall out); modest current capability — check the jack's rating, not the wall adapter's label.
+
+![A panel-mount barrel jack facing a 5.5 by 2.5 millimeter barrel plug, center pin visible](/img/photos/barrel-jack-pair.jpg)
+
+*A 5.5 × 2.5 mm pair face to face — the center pin diameter is exactly what the look-alikes get wrong. Photo: [Martin Meise](https://commons.wikimedia.org/wiki/File:Hohlstecker_und_Hohlbuchse_5,5x2,5.jpg), CC BY-SA 3.0, via Wikimedia Commons.*
 
 ## USB connectors
 
@@ -86,6 +98,10 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 
 - **What it is:** insulation-displacement connectors mass-terminating ribbon cable — the classic 2×N 0.1 in header on vintage computing, RepRap-era electronics, and parallel buses.
 - **Watch for:** pin-1 orientation (the red stripe convention), strain relief clips, one-shot termination (re-clamping the same spot is unreliable), and pitch variants (1.27 mm ribbon vs the connector's 2.54 mm grid is by design — but smaller IDC systems exist).
+
+![An open 10-position IDC ribbon connector showing the rows of insulation-displacement blade contacts](/img/photos/idc-10-ribbon.jpg)
+
+*Inside an IDC-10 before termination: the blade contacts pierce the ribbon's insulation in one clamping stroke — which is why re-clamping the same spot is unreliable. Photo: [Retired electrician](https://commons.wikimedia.org/wiki/File:IDC-10_female_connector_%2801%29.jpg), CC0, via Wikimedia Commons.*
 
 ---
 

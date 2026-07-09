@@ -26,6 +26,10 @@ Ethernet that has to leave a protected enclosure, run along a machine, or surviv
 - **M12 X-coded** — 8-pin, shielded; used for GbE/10G-class industrial Ethernet.
 - **Sealed / rugged RJ45** — only where it is genuinely protected and the connector system is rated for it.
 
+![An M12 X-coded plug next to a clear RJ45 plug on green industrial Ethernet cable](/img/photos/m12x-vs-rj45.webp)
+
+*The same cable, two worlds: M12 X-coded (left — note the X-shaped shield cross separating the four pairs) versus a standard 8P8C/RJ45 plug. Photo: [Anordal](https://commons.wikimedia.org/wiki/File:M12X_vs_8P8C_ethernet_connectors.webp), CC BY-SA 4.0, via Wikimedia Commons.*
+
 See the [M12 deep dive](../08-m12.md) for the D-coded vs. X-coded distinction.
 
 ## Search terms

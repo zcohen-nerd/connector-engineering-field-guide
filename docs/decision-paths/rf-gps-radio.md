@@ -38,6 +38,14 @@ If the frequency, power, or environment is high enough to be risky — precision
 - **SMP / SMPM** — board-to-board / blind-mate miniatures for dense, high-frequency assemblies.
 - **Coax contacts inside a MIL-DTL-38999 or other hybrid connector** — for a rugged payload, one coax contact in an existing hybrid insert may beat a separate coax bulkhead. See [38999 §7.6](../07-mil-dtl-38999.md#76-coax-twinax-and-quadrax-in-a-38999).
 
+![Two antenna connectors side by side, one with a center socket and one with a center pin, otherwise identical](/img/photos/sma-vs-rpsma.jpg)
+
+*The RP-SMA trap in one frame: standard SMA and reverse-polarity RP-SMA differ only in which side carries the center pin — the shells and threads look identical, and they do not mate. Photo: [Fckw kyle](https://commons.wikimedia.org/wiki/File:Sma_and_rp-sma.jpg), public domain, via Wikimedia Commons.*
+
+![A BNC male connector on a cable, showing the bayonet slots in the coupling ring](/img/photos/bnc-male.jpg)
+
+*BNC male: the bayonet slots in the coupling ring are the giveaway — quick quarter-turn mating, and remember 50 Ω and 75 Ω versions look alike. Photo: [Krzysztof Burghardt](https://commons.wikimedia.org/wiki/File:BNC_connector_%28male%29.jpg), CC BY-SA 3.0, via Wikimedia Commons.*
+
 ## Search terms
 
 - `SMA connector 50 ohm RG316 crimp bulkhead`

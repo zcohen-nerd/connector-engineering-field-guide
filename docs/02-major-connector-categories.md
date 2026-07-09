@@ -22,6 +22,10 @@ Scope your search by category before diving into specific families. Each categor
 | Fiber / data | Long-distance data, EMI immunity, bandwidth | LC, ST, expanded-beam rugged fiber, M12 Ethernet | Dirty field environments without cleaning discipline |
 | Hybrid | Power + signal + data + coax/fiber/fluid in one | 38999 hybrid inserts, Han-Modular | Simple low-cost harnesses where separate connectors are cleaner |
 
+![A high-pin-count rugged circular receptacle with gold pins beside its mating plug with coupling ring](/img/photos/rugged-circular-cir-pair.jpg)
+
+*The circular category in the flesh: a square-flange receptacle and its cable plug (ITT Cannon/VEAM CIR-series, 35-way) — gold crimp contacts, coupling ring, panel-mount flange. Photo: ITT Cannon, [public domain](https://commons.wikimedia.org/wiki/File:CIR_Connector.jpg), via Wikimedia Commons.*
+
 :::note[Often overlooked]
 
 Board-to-wire connectors like Molex Micro-Fit, Mini-Fit, Mega-Fit, and sealed Squba are not "hobby" parts. Professional versions have positive latches, polarization, secondary locks (TPA — Terminal Position Assurance, a secondary lock that confirms every contact is fully seated before the connector can mate), defined current/voltage ratings, and sealed variants. The dividing line is the specific family and rating, not the brand.

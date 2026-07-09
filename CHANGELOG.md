@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Images pass — a picture on every connector family page
+
+- Added licensed photographs (Wikimedia Commons / Flickr, CC BY / CC BY-SA, credited per-image in captions) to: Dupont headers, JST-XH, JST-SH/Qwiic/STEMMA QT, JST Is Not One Connector (generic "JST-style" header + the red RCY pair), XT connectors (XT60 mating ends), MIL-DTL-38999, M12, §3 (DE-9 D-sub + Deutsch-style J1939 plug), and the high-current DC decision path (Anderson Powerpole workbench). No manufacturer marketing photography used.
+- Added eight original line-art "ID card" diagrams in the existing house style: Dupont/0.1", JST-XH, JST-PH, JST-SH, JST-SM, XT30/60/90, 38999 Series III profile, and 26482 bayonet coupling.
+- Added a "Photographs and diagrams" licensing section to Usage and Attribution; photos remain under their own CC licenses and are not relicensed by the project.
+- Updated the hobby visual backlog: item 4 (JST-SM diagram) done; item 3 (JST size silhouettes) partly covered by the per-series ID cards.
+- Added `internal/PHOTO_BACKLOG.md` — full-site audit of where real photographs beat line art, with per-item sourcing status and a bench-photo shooting guide.
+- Commons harvest pass: ten more licensed photos wired in — ratcheting crimper + ferrule spread (crimping), SMA-vs-RP-SMA + BNC (RF path), M12-X vs RJ45 (rugged Ethernet), SG90 servo lead / WAGO 221 / barrel-jack pair / IDC-10 (family capsules), and a public-domain ITT Cannon CIR circular pair (§2 categories).
+
 ### Audit 2026-07 — consistency + source-hardening fixes (T1–T10)
 
 - Hobby source status is now tracked in exactly one place (Hobby Source Notes); the appendix dashboard carries a track-level pointer instead of a duplicated per-topic summary (T1).

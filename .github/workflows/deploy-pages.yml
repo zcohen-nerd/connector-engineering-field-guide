@@ -8,8 +8,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: github-pages
@@ -44,6 +42,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
 
+    # Scoped here rather than at the workflow level so the build job — which
+    # runs `npm ci` and therefore third-party package lifecycle scripts —
+    # never holds the Pages deployment or OIDC tokens.
+    permissions:
+      pages: write
+      id-token: write
+
     environment:
       name: github-pages
       # Wandalen/wretry.action doesn't pass the wrapped action's named outputs
@@ -59,7 +64,9 @@ jobs:
         # transient GitHub Pages backend errors ("Deployment failed, try again
         # later." or a stalled deployment_queued) — retrying the step is what
         # GitHub's own error message recommends, so wrap it instead.
-        uses: Wandalen/wretry.action@v3.8.0
+        # Pinned to an immutable commit SHA (tags are mutable, and this
+        # third-party action runs in the job holding the deployment token).
+        uses: Wandalen/wretry.action@e68c23e6309f2871ca8ae4763e7629b9c258e1ea # v3.8.0
         with:
           action: actions/deploy-pages@v4
           attempt_limit: 3

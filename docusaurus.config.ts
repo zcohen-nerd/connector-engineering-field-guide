@@ -64,7 +64,7 @@ const config: Config = {
         },
         {
           label: 'zcohen-nerd Portfolio',
-          href: 'https://zcohen-nerd.github.io/Portfolio/',
+          href: 'https://portfolio.zcohen-nerd.com/',
         },
       ],
     },

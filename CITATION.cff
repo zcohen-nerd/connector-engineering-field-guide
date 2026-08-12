@@ -7,6 +7,6 @@ authors:
   - alias: zcohen-nerd
 repository-code: "https://github.com/zcohen-nerd/connector-engineering-field-guide"
 url: "https://zcohen-nerd.github.io/connector-engineering-field-guide/"
-version: "0.8.1"
+version: "0.9.0"
 date-released: 2026-07-08
 license: "CC-BY-4.0"

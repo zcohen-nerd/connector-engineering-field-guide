@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-08-12
+
+### v0.10 — Audit Hardening + Release Tooling
+
+Everything from the 2026-07 consistency audit through the 2026-08 punch-list remediation and closeout: licensed photos and ID-card line art across the family pages, three new templates and a new decision path, the intern-onboarding guide, single-sourced version strings with a CI drift guard, and a validated two-PDF release pipeline.
+
 ### Audit 2026-08 — punch-list remediation
 
 - Verified the 2026-08-11 audit's footer-drift and stale-hobby-banner findings against the served live site: both were already fixed and deployed (the audit hit cached pages); no code change was needed.

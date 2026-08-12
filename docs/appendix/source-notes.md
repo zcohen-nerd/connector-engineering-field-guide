@@ -7,7 +7,7 @@ sidebar_label: Source Notes
 
 # Source Notes — Source-Status Dashboard
 
-**Status: v0.9 Beta — Hobby Guide Expansion + Two-Track Polish**
+**Status: v0.10 Beta — Audit Hardening + Release Tooling**
 
 This page is the guide's transparency layer. Every technical statement in the guide falls into one of four buckets, and this page says which: **verified claims** (backed by a named public source), **engineering heuristics** (deliberate judgment, not specification), **example-only values** (teaching aids, never design authority), and an explicit **needs-source-before-v1.0 backlog**.
 

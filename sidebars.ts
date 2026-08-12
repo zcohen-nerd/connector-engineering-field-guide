@@ -111,6 +111,7 @@ const sidebars: SidebarsConfig = {
         'tools/cable-drawing-template',
         'tools/connector-icd-template',
         'tools/design-review-checklist',
+        'tools/m12-coding-cheat-sheet',
       ],
     },
     {

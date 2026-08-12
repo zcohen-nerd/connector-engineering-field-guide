@@ -17,6 +17,7 @@ Reusable engineering-document templates derived from the guide. Copy them into y
 | [Cable Drawing Template](cable-drawing-template.md) | Turn a pinout into a buildable cable drawing | [Exercise 6](../13-hands-on-exercises.md) |
 | [Connector ICD Template](connector-icd-template.md) | Define an interface so procurement and manufacturing can build it | [Exercise 7](../13-hands-on-exercises.md) |
 | [Design Review Checklist](design-review-checklist.md) | Run a connector risk pass before a design review | [Sections 10–11](../11-red-flags.md) |
+| [M12 Coding Cheat Sheet](m12-coding-cheat-sheet.md) | Identify and pick M12 codings at a glance | [M12 deep dive §8.1](../08-m12.md) |
 
 :::note
 

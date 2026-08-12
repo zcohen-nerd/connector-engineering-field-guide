@@ -69,6 +69,7 @@ const sidebars: SidebarsConfig = {
         'decision-paths/high-current-dc-power',
         'decision-paths/sealed-enclosure-feedthrough',
         'decision-paths/debug-service-port',
+        'decision-paths/micro-d',
         'decision-paths/defense-rugged-external-io',
         'decision-paths/removable-machine-module',
         'decision-paths/rf-gps-radio',
@@ -110,6 +111,9 @@ const sidebars: SidebarsConfig = {
         'tools/cable-drawing-template',
         'tools/connector-icd-template',
         'tools/design-review-checklist',
+        'tools/m12-coding-cheat-sheet',
+        'tools/decode-38999-worksheet',
+        'tools/harness-inspection-checklist',
       ],
     },
     {
@@ -117,8 +121,13 @@ const sidebars: SidebarsConfig = {
       label: 'Examples',
       link: {type: 'doc', id: 'examples/examples-index'},
       collapsed: false,
-      items: ['examples/rugged-control-box', 'examples/connector-selection-packet'],
+      items: [
+        'examples/rugged-control-box',
+        'examples/connector-selection-packet',
+        'examples/m12-sensor-interface',
+      ],
     },
+    'using-this-guide-with-an-intern',
     {
       type: 'category',
       label: 'Appendix',

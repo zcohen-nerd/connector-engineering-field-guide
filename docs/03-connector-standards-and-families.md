@@ -61,7 +61,7 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 |---|---|---|---|
 | Deutsch DTM / DT / DTP | IP68[^deutsch] | ~7.5 A (DTM, size 20) / ~13 A (DT, size 16) / ~25 A (DTP, size 12)[^deutsch] | Genderless wedgelock housings; ubiquitous in off-road/automotive; hand-crimpable |
 | TE AMP Superseal 1.5 / AMPSEAL | IP67[^superseal] | ~14 A (Superseal 1.5)[^superseal] | Compact sealed inline; AMPSEAL for higher pin counts |
-| Molex MX150 / MX150L | ≥ IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
+| Molex MX150 / MX150L | IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
 | Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants[^metripack] | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify)[^metripack] | Long-standing automotive terminal system |
 
 ![A round Deutsch HD-style 9-pin J1939 diagnostic plug with threaded coupling on a black cable](/img/photos/deutsch-j1939-plug.jpg)
@@ -72,7 +72,7 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 
 ## Sources
 
-[^dsub]: MIL-DTL-24308G (DLA detail specification) — standard D-subminiature connectors are nonenvironmental, polarized-shell, rack-and-panel; ruggedized/environmental variants are separately specified. <https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7139/5831_mil-dtl-24308.pdf>
+[^dsub]: MIL-DTL-24308 (DLA detail specification) — standard D-subminiature connectors are nonenvironmental, polarized-shell, rack-and-panel; ruggedized/environmental variants are separately specified. Authoritative index: DLA ASSIST QuickSearch (current revision K w/Amendment 1, 2022, as of audit 2026-08) <https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=17161>; clause references on this site were checked against Revision G (distributor-hosted copy of the DLA document: <https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7139/5831_mil-dtl-24308.pdf>).
 
 [^microd]: Glenair, *Micro-D Performance Specifications* (MIL-DTL-83513) — contacts on .050 in (1.27 mm) centers, 3.0 A continuous per contact (−55 to +150 °C), 600 V rms at sea level. <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>
 
@@ -80,8 +80,8 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 
 [^superseal]: TE Connectivity AMP SUPERSEAL 1.5 — sealed IP67 automotive/industrial connector; housings rated ~14 A. <https://www.te.com/en/products/connectors/automotive-connectors/intersection/amp-superseal-1-5.html>
 
-[^mx150]: Molex MX150 / MX150L sealed connector system — exceeds IEC IP67; MX150L supports up to ~40 A (8 AWG) and ~30 A (10–12 AWG). <https://www.mouser.com/pdfdocs/molexmx150sealedconnectorsystem.pdf>
+[^mx150]: Molex, *MX150L Industrial Sealed Connector System* (Molex-hosted literature) — "IP67 rated and conforms to UL 1977"; environmentally sealed to IP67 (IEC 529); current ratings 8 AWG — 40.0 A, 10–12 AWG — 30.0 A. <https://www.content.molex.com/dxdam/literature/987650-2181.pdf> Replaces a distributor-hosted copy (audit 2026-08).
 
-[^metripack]: Aptiv (formerly Delphi) *Metri-Pack Connection System* datasheet — the series are designated by nominal terminal blade size (150/280/480/630/800 class) and offered in sealed and unsealed variants, with per-series current envelopes stated in the datasheet. The figures in this row are deliberately kept qualitative — verify the exact series/terminal datasheet before use. <https://www.tti.com/content/dam/tti-commons/supplier/aptiv/doc/aptiv-metri-pack-connection-system-datasheet-specifications.pdf>
+[^metripack]: Aptiv (formerly Delphi) *Metri-Pack Connection System* datasheet — the series are designated by nominal terminal blade size (150/280/480/630/800 class) and offered in sealed and unsealed variants, with per-series current envelopes stated in the datasheet. The figures in this row are deliberately kept qualitative — verify the exact series/terminal datasheet before use. <https://www.tti.com/content/dam/tti-commons/supplier/aptiv/doc/aptiv-metri-pack-connection-system-datasheet-specifications.pdf> Manufacturer-direct locator: Aptiv Connection Systems catalog <https://www.aptiv.com/en/solutions/connection-systems/catalog> — Aptiv serves per-series documents behind tokenized URLs, so this distributor-hosted copy of the Aptiv system datasheet remains the stable citation (checked audit 2026-08).
 
 ---

@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Audit 2026-08 — punch-list remediation
+
+- Verified the 2026-08-11 audit's footer-drift and stale-hobby-banner findings against the served live site: both were already fixed and deployed (the audit hit cached pages); no code change was needed.
+- Fixed `CITATION.cff` version drift (0.8.1 → 0.9.0) and added version single-sourcing: `scripts/bump-version.mjs` rewrites every version call site from one command, and CI now fails on drift (`--check` in `build.yml`).
+- Hobby landing "What this guide covers" no longer overpromises: dedicated-page topics and capsule-only topics (servo, screw/spring terminals, USB/barrel-jack power, Grove) are now listed separately, matching the Hobby Source Notes roadmap.
+- Engineering Start Here grid: added the missing Sealed Enclosure Feedthrough card, and gave the Micro-D card a real path — a new **Micro-D / compact high-rel decision path** built entirely from the already-sourced §3 material (Glenair MIL-DTL-83513 citation carried over). Every Start Here card now links a decision path.
+- Three new Tools & Templates pages, all derived from existing sourced content with citations carried over and zero new claims: **M12 Coding Cheat Sheet** (§8.1), **38999 Part-Number Decode Worksheet** (§7.8), and a deliberately criterion-free **Harness Inspection Checklist** (§4/§7.9/What People Forget; acceptance values stay with A-620 and the contact system's application spec).
+- New worked-example scaffold: **M12 Sensor Interface** — structure complete, with the sanitized real-world A-coded/X-coded selection narrative explicitly marked as pending rather than invented.
+- New shared page: **How to Use This Guide with an Intern** — a mentor's four-week overlay on the 30-day plan, exercises, decision paths, and templates, linked from the landing page and both track homes.
+- New `release-pdf.yml` workflow: builds two per-track PDF artifacts (hobby, engineering) by crawling each sidebar's pagination chain, on version tags and on demand.
+- Needs-source backlog clarified in both source-notes copies: rows are now explicitly **closable** vs **per-design — permanent**; hedge wording on all per-design-affected pages re-verified.
+- Distributor-citation pass: Molex MX150 now cites Molex-hosted MX150L literature (verified; sealing claim tightened to IP67); MIL-DTL-24308 citations gained the DLA ASSIST locator plus a revision-currency note (current is Rev K w/Amend 1; clause refs checked against Rev G); Aptiv Metri-Pack documented as having no stable manufacturer-hosted system datasheet (TTI-hosted copy retained per the acceptable-interim rule).
+- Usage and Attribution now states explicitly that the Tools & Templates pages are documentation content under CC BY 4.0.
+
 ### Images pass — a picture on every connector family page
 
 - Added licensed photographs (Wikimedia Commons / Flickr, CC BY / CC BY-SA, credited per-image in captions) to: Dupont headers, JST-XH, JST-SH/Qwiic/STEMMA QT, JST Is Not One Connector (generic "JST-style" header + the red RCY pair), XT connectors (XT60 mating ends), MIL-DTL-38999, M12, §3 (DE-9 D-sub + Deutsch-style J1939 plug), and the high-current DC decision path (Anderson Powerpole workbench). No manufacturer marketing photography used.

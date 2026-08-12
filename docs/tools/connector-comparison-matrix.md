@@ -43,7 +43,7 @@ Contact sizes, insert arrangements, and exact ratings vary by manufacturer and p
 
 [^m12x]: IEC 61076-2-109 (M12 X- and H-coding, data up to 500 MHz) and manufacturer datasheet — 8-way X-coded, up to 10 Gbit/s, Cat 6A, IP67 when mated. <https://media.metz-connect.com/files/171/Data_sheet_MNF881A315-0001.PDF>
 
-[^dsub]: *MIL-DTL-24308G* (DLA detail specification) — nonenvironmental, polarized-shell, rack-and-panel; −55 to +125 °C; 500 mating/unmating cycles (§4.5.18); contact sizes 20 (standard density) and 22D (high density); positions 9/15/25/37/50, up to 104 for size 22D. <https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7139/5831_mil-dtl-24308.pdf>
+[^dsub]: *MIL-DTL-24308G* (DLA detail specification) — nonenvironmental, polarized-shell, rack-and-panel; −55 to +125 °C; 500 mating/unmating cycles (§4.5.18); contact sizes 20 (standard density) and 22D (high density); positions 9/15/25/37/50, up to 104 for size 22D. Checked against Revision G (distributor-hosted copy of the DLA document: <https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7139/5831_mil-dtl-24308.pdf>); current revision K w/Amendment 1 per DLA ASSIST QuickSearch <https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=17161> — re-verify clause numbers against K before relying on them.
 
 [^microd]: Glenair, *Micro-D Performance Specifications* (MIL-DTL-83513) — 3.0 A continuous per contact from −55 to +150 °C, 600 V rms at sea level / 150 V at 70,000 ft, 500 mating cycles, .050 in (1.27 mm) contact centers. <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>
 

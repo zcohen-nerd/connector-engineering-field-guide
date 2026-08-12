@@ -49,16 +49,22 @@ A connector that fits is not automatically the right connector. Check pitch, fam
 
 ## What this guide covers
 
+Covered in dedicated pages:
+
 - JST-family and JST-style connectors — and why "JST" alone names a manufacturer's ecosystem, not one connector
 - Dupont / 0.1 inch headers
-- Qwiic, STEMMA QT, Grove, and dev-board ecosystems
+- Qwiic, STEMMA QT, and dev-board ecosystems
 - LED string and strip connectors, including JST-SM-style connectors
 - RC power connectors such as XT30, XT60, XT90
+- Crimping, pre-crimped leads, and connector kits
+- Identifying unknown connectors
+
+Capsule notes only, for now — short field notes in [Common Hobby Connector Families](families.md), with deep pages on the [roadmap](hobby-source-notes.md):
+
 - Servo connectors
 - Screw terminals and spring terminals
 - USB and barrel jack power
-- Crimping, pre-crimped leads, and connector kits
-- Identifying unknown connectors
+- The Grove ecosystem — its sourced connector facts live on the [Qwiic / STEMMA QT page](jst-sh-qwiic-stemma.md)
 
 ## What this guide does not do
 
@@ -77,3 +83,5 @@ Never trust a listing title or a photo. Verify **pitch, latch, housing, contact,
 ## Where the hobby and engineering tracks meet
 
 The core mental model is the same in both tracks: a connector is a *controlled interface*, not just "a plug with enough pins." When your project starts carrying real battery power, going outdoors, riding on a vehicle, or being built by someone else, that's your cue to graduate specific interfaces to the engineering track — start with [rugged on a budget](../decision-paths/rugged-on-a-budget.md) and the [energized-connector safety warning](../decision-paths/high-current-dc-power.md).
+
+Mentoring a student or intern who starts from maker experience? [How to Use This Guide with an Intern](../using-this-guide-with-an-intern.md) sequences both tracks into an onboarding program.

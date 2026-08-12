@@ -28,6 +28,7 @@ These pages summarize and cross-link the rest of the guide; they do not replace 
 | Motors, batteries, PDUs — real DC power | [High-current DC power](high-current-dc-power.md) |
 | Passing a circuit through a sealed enclosure wall | [Sealed enclosure feedthrough](sealed-enclosure-feedthrough.md) |
 | Occasional debug / programming / service access | [Debug / service port](debug-service-port.md) |
+| Compact, weight-critical high-reliability internal interface | [Micro-D / compact high-rel](micro-d.md) |
 | Harsh-environment external I/O on defense/aero hardware | [Defense / rugged external I/O](defense-rugged-external-io.md) |
 | Serviceable machine module — mixed power/signal/data | [Removable machine module](removable-machine-module.md) |
 | Antenna, GPS, radio, or coax path | [RF / GPS / radio](rf-gps-radio.md) |

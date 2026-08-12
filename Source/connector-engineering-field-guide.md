@@ -856,7 +856,7 @@ Rated mate/unmate cycles vary widely. Design with margin *below* the rated numbe
 
 Consolidated citations for every sourced claim in this guide, referenced by label from the body text above. See `source-notes.md` for the verification status of each claim.
 
-[^dsub]: MIL-DTL-24308 (DLA detail specification) — standard D-subminiature connectors are nonenvironmental, polarized-shell, rack-and-panel; ruggedized/environmental variants are separately specified. Authoritative index: DLA ASSIST QuickSearch (current revision K w/Amendment 1, 2022, as of audit 2026-08) <https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=17161>; clause references on this site were checked against Revision G (distributor-hosted copy of the DLA document: <https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7139/5831_mil-dtl-24308.pdf>).
+[^dsub]: MIL-DTL-24308K w/Amendment 1 (DLA detail specification, 5 December 2022) — "Connectors, Electric, Rectangular, Nonenvironmental, Miniature, Polarized Shell, Rack and Panel"; scope (§1.1) designates a −55 °C to +125 °C operating range; ruggedized/environmental variants are separately specified. Clauses verified against Rev K w/Amendment 1 via DLA ASSIST QuickSearch (audit 2026-08). <https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=17161>
 
 [^microd]: Glenair, *Micro-D Performance Specifications* (MIL-DTL-83513) — contacts on .050 in (1.27 mm) centers, 3.0 A continuous per contact (−55 to +150 °C), 600 V rms at sea level. <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>
 
@@ -902,7 +902,7 @@ Consolidated citations for every sourced claim in this guide, referenced by labe
 
 [^microfitcyc]: Molex, *Micro-Fit 3.0 Connector System Product Family* — durability typically 30 cycles (up to ~250 with factory-lubricated RMF terminals). <https://www.content.molex.com/dxdam/literature/987650-5984.pdf>
 
-[^milcyc]: 500-cycle durability is specified per family: MIL-DTL-38999 — Amphenol Series III catalog lists "standard 500 cycle contacts" <https://amphenol-in.com/wp-content/uploads/2024/12/MIL-38999-Sr-III-AC38907-0317.pdf>; MIL-DTL-26482 Series 2 — ≥ 500 mating cycles per the Aero-Electric catalog <https://www.aero-electric.com/PDF/MIL-DTL-26482%20Series%202.pdf>; MIL-DTL-83513 Micro-D — 500 cycles per the Glenair performance spec §3.2.8 <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>; MIL-DTL-24308 D-sub — 500 mating/unmating cycles per MIL-DTL-24308G §4.5.18 (Rev G copy: <https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7139/5831_mil-dtl-24308.pdf>; current revision is K w/Amend 1 — DLA ASSIST <https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=17161>).
+[^milcyc]: 500-cycle durability is specified per family: MIL-DTL-38999 — Amphenol Series III catalog lists "standard 500 cycle contacts" <https://amphenol-in.com/wp-content/uploads/2024/12/MIL-38999-Sr-III-AC38907-0317.pdf>; MIL-DTL-26482 Series 2 — ≥ 500 mating cycles per the Aero-Electric catalog <https://www.aero-electric.com/PDF/MIL-DTL-26482%20Series%202.pdf>; MIL-DTL-83513 Micro-D — 500 cycles per the Glenair performance spec §3.2.8 <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>; MIL-DTL-24308 D-sub — 500 mating/unmating cycles per MIL-DTL-24308K w/Amendment 1 (requirement §3.5.16, test §4.5.18; verified audit 2026-08) — DLA ASSIST <https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=17161>.
 
 [^m12cyc]: Turck M12 cordset RK 4.5T-5 — mechanical life > 100 mating cycles. <https://www.turck.us/datasheet/_us/edb_U2188-94_eng_us.pdf>
 

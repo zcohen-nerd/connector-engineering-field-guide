@@ -14,6 +14,7 @@ Worked examples that stay at the family-selection and documentation level; proje
 |---|---|---|
 | [Rugged Control Box](rugged-control-box.md) | Defining the full external connector set for a small sealed enclosure and its documentation package | [Exercise 1](../13-hands-on-exercises.md) |
 | [Connector Selection Packet](connector-selection-packet.md) | A full worked packet for one rugged field-robot module — requirements → decision matrix → architecture → pinout → BOM → cable → ICD → review | [Rugged-on-a-budget](../decision-paths/rugged-on-a-budget.md) |
+| [M12 Sensor Interface](m12-sensor-interface.md) | Selecting M12 codings for a sensor + industrial-Ethernet interface (structure in place; sanitized real-world narrative being added) | [Industrial sensor](../decision-paths/industrial-sensor.md) + [M12 deep dive](../08-m12.md) |
 
 :::note
 

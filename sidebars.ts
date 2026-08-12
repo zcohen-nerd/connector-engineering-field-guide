@@ -121,8 +121,13 @@ const sidebars: SidebarsConfig = {
       label: 'Examples',
       link: {type: 'doc', id: 'examples/examples-index'},
       collapsed: false,
-      items: ['examples/rugged-control-box', 'examples/connector-selection-packet'],
+      items: [
+        'examples/rugged-control-box',
+        'examples/connector-selection-packet',
+        'examples/m12-sensor-interface',
+      ],
     },
+    'using-this-guide-with-an-intern',
     {
       type: 'category',
       label: 'Appendix',

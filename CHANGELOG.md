@@ -18,6 +18,12 @@ All notable changes to this project will be documented in this file.
 - Distributor-citation pass: Molex MX150 now cites Molex-hosted MX150L literature (verified; sealing claim tightened to IP67); MIL-DTL-24308 citations gained the DLA ASSIST locator plus a revision-currency note (current is Rev K w/Amend 1; clause refs checked against Rev G); Aptiv Metri-Pack documented as having no stable manufacturer-hosted system datasheet (TTI-hosted copy retained per the acceptable-interim rule).
 - Usage and Attribution now states explicitly that the Tools & Templates pages are documentation content under CC BY 4.0.
 
+### Audit 2026-08 — closeout
+
+- PDF release pipeline validated end-to-end via manual dispatch: hobby PDF 75 pages, professional/industrial PDF 239 pages; track boundaries (hobby ends at Hobby Source Notes, engineering at Usage and Attribution), new-page coverage, and image embedding verified; no workflow fixes needed.
+- Every MIL-DTL-24308 claim verified against Revision K w/Amendment 1 (5 December 2022) retrieved directly from DLA ASSIST: all clause numbers and figures unchanged from what the site cited (durability requirement §3.5.16 / test §4.5.18, 500 cycles, −55 to +125 °C, sizes 20/22D, arrangements per Table A-I). Citations now name Rev K with the ASSIST locator; the distributor-hosted Rev G copy is dropped.
+- OG/social card regenerated for the two-track site with an editable in-repo source (`assets/og-card.svg`, rendered by `npm run og-card` via a new `sharp` devDependency); visual backlog item 0 closed.
+
 ### Images pass — a picture on every connector family page
 
 - Added licensed photographs (Wikimedia Commons / Flickr, CC BY / CC BY-SA, credited per-image in captions) to: Dupont headers, JST-XH, JST-SH/Qwiic/STEMMA QT, JST Is Not One Connector (generic "JST-style" header + the red RCY pair), XT connectors (XT60 mating ends), MIL-DTL-38999, M12, §3 (DE-9 D-sub + Deutsch-style J1939 plug), and the high-current DC decision path (Anderson Powerpole workbench). No manufacturer marketing photography used.

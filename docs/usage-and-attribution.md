@@ -25,7 +25,7 @@ See [Source Notes](appendix/source-notes.md) for the list of claims that need so
 
 This project is dual-licensed, matching the repository `LICENSE` files:
 
-- **Documentation and content** — Creative Commons Attribution 4.0 International (CC BY 4.0).
+- **Documentation and content** — Creative Commons Attribution 4.0 International (CC BY 4.0). This includes the [Tools & Templates](tools/index.md) pages: the templates are documentation content, so copy and adapt them freely with attribution under CC BY 4.0.
 - **Code and configuration** — MIT License.
 
 When reusing material, give appropriate credit: *A zcohen-nerd technical guide by Zac Cohen.*

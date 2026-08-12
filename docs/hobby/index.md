@@ -49,16 +49,22 @@ A connector that fits is not automatically the right connector. Check pitch, fam
 
 ## What this guide covers
 
+Covered in dedicated pages:
+
 - JST-family and JST-style connectors — and why "JST" alone names a manufacturer's ecosystem, not one connector
 - Dupont / 0.1 inch headers
-- Qwiic, STEMMA QT, Grove, and dev-board ecosystems
+- Qwiic, STEMMA QT, and dev-board ecosystems
 - LED string and strip connectors, including JST-SM-style connectors
 - RC power connectors such as XT30, XT60, XT90
+- Crimping, pre-crimped leads, and connector kits
+- Identifying unknown connectors
+
+Capsule notes only, for now — short field notes in [Common Hobby Connector Families](families.md), with deep pages on the [roadmap](hobby-source-notes.md):
+
 - Servo connectors
 - Screw terminals and spring terminals
 - USB and barrel jack power
-- Crimping, pre-crimped leads, and connector kits
-- Identifying unknown connectors
+- The Grove ecosystem — its sourced connector facts live on the [Qwiic / STEMMA QT page](jst-sh-qwiic-stemma.md)
 
 ## What this guide does not do
 

@@ -1,0 +1,85 @@
+name: release-pdf
+
+# Builds the two per-track PDF release artifacts by crawling the site's
+# pagination chain (docs-to-pdf, puppeteer-based). Verified chain bounds:
+#   hobby:       /hobby        -> ... -> /hobby/source-notes   (refs produce no next-link)
+#   engineering: /engineering  -> ... -> /usage-and-attribution
+# The two-track landing page is in no sidebar, so it appears in neither PDF.
+#
+# Runs on version tags (v*) and on demand. On a tag it attaches both PDFs
+# to the GitHub Release for that tag (creating the release if needed);
+# a manual run just uploads them as workflow artifacts for inspection.
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Serve built site
+        run: |
+          npx docusaurus serve --port 3000 --no-open &
+          for i in $(seq 1 30); do
+            curl -sf "http://localhost:3000/connector-engineering-field-guide/" >/dev/null && break
+            sleep 1
+          done
+
+      - name: Generate hobby-track PDF
+        run: |
+          npx docs-to-pdf docusaurus --version=3 \
+            --initialDocURLs="http://localhost:3000/connector-engineering-field-guide/hobby" \
+            --outputPDFFilename="hobby-connector-field-guide.pdf" \
+            --coverTitle="Hobby Connector Field Guide" \
+            --puppeteerArgs="--no-sandbox"
+
+      - name: Generate engineering-track PDF
+        run: |
+          npx docs-to-pdf docusaurus --version=3 \
+            --initialDocURLs="http://localhost:3000/connector-engineering-field-guide/engineering" \
+            --outputPDFFilename="professional-connector-field-guide.pdf" \
+            --coverTitle="Professional / Industrial Connector Field Guide" \
+            --puppeteerArgs="--no-sandbox"
+
+      - name: Upload PDFs as workflow artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: connector-field-guide-pdfs
+          path: |
+            hobby-connector-field-guide.pdf
+            professional-connector-field-guide.pdf
+
+      - name: Attach PDFs to the release (tag builds only)
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          gh release view "$TAG" >/dev/null 2>&1 || \
+            gh release create "$TAG" --title "$TAG" --notes "See CHANGELOG.md for this release."
+          gh release upload "$TAG" \
+            hobby-connector-field-guide.pdf \
+            professional-connector-field-guide.pdf \
+            --clobber

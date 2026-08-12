@@ -69,6 +69,7 @@ const sidebars: SidebarsConfig = {
         'decision-paths/high-current-dc-power',
         'decision-paths/sealed-enclosure-feedthrough',
         'decision-paths/debug-service-port',
+        'decision-paths/micro-d',
         'decision-paths/defense-rugged-external-io',
         'decision-paths/removable-machine-module',
         'decision-paths/rf-gps-radio',

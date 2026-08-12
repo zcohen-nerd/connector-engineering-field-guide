@@ -6,7 +6,7 @@ Prioritized visuals for the hobby track (and one shared item). Style: match the 
 
 | # | Visual | Status | Notes |
 |---|---|---|---|
-| 0 | **OG/social card update** (`static/img/og-card.png`) | **TODO — flagged v0.9** | Current PNG predates the two-track split and has no editable source in the repo. Needs a regenerated PNG (not SVG — social crawlers want raster) with: "Connector Field Guides" / "Hobby connectors + professional hardware interfaces" / small "zcohen-nerd technical guide". `themeConfig.image` stays pointing at the PNG meanwhile. |
+| 0 | **OG/social card update** (`static/img/og-card.png`) | **Done (audit-2026-08)** — source `assets/og-card.svg`, rendered via `npm run og-card` (`scripts/render-og-card.mjs`, sharp) | Two-track card: "Connector Field Guides" / "Hobby connectors + professional hardware interfaces." / "A zcohen-nerd technical guide" badge, brand tokens only. `themeConfig.image` unchanged; og:image meta verified in the built site. |
 | 1 | Pitch measurement diagram | **Done (v0.9)** — `hobby-pitch-measurement.svg` | Embedded in `docs/hobby/pitch.md` |
 | 2 | Housing vs contact diagram | **Done (v0.9)** — `hobby-housing-vs-contact.svg` | Embedded in `docs/hobby/buying-mating-parts.md` |
 | 3 | JST-XH vs PH vs SH vs GH comparison silhouettes | Partly covered (images pass, 2026-07) | Per-series ID cards now exist (`hobby-jst-xh-id.svg`, `-ph-`, `-sh-`, `-sm-`) with cross-size hints; a single to-scale side-by-side silhouette sheet is still worth doing |

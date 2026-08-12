@@ -8,11 +8,11 @@ sidebar_label: M12 Sensor Interface
 
 # Worked Example: M12 Sensor Interface
 
-One machine interface taken from "the sensors need to plug in somewhere" to a documented M12 architecture — the [Industrial sensor](../decision-paths/industrial-sensor.md) and [Rugged Ethernet](../decision-paths/rugged-ethernet.md) decision paths executed on a concrete (sanitized) system, with the [M12 deep dive](../08-m12.md) as the technical backbone.
+One machine interface taken from "the sensors need to plug in somewhere" to a documented M12 architecture — the [Industrial sensor](../decision-paths/industrial-sensor.md) and [Rugged Ethernet](../decision-paths/rugged-ethernet.md) decision paths executed on a concrete system, with the [M12 deep dive](../08-m12.md) as the technical backbone.
 
-:::info[Scaffold status — the reasoning narrative is being added]
+:::info[Draft narrative — illustrative composite]
 
-The *structure* of this packet is complete and usable now. The sections marked **\[narrative to come\]** will be filled from a sanitized real-world A-coded/X-coded selection; until then they hold placeholders, not invented details. Everything factual on this page is stated by reference to the deep dive and decision paths, which carry the sources.
+The scenario below is an illustrative composite drafted for review; it is being edited against a sanitized real-world A-coded/X-coded selection, and details may still change. The *reasoning* is the point either way, and every connector fact is stated by reference to the deep dive and decision paths, which carry the sources.
 
 :::
 
@@ -24,56 +24,67 @@ Like the [Selection Packet](connector-selection-packet.md), this example teaches
 
 ## Scenario
 
-**\[narrative to come\]** — the sanitized system description: what the machine is, where it lives (washdown? outdoor? vibration?), how many sensor circuits, what the Ethernet run feeds, and who services it.
+A small automated assembly-and-test cell on a factory floor: a machine frame carrying part-presence sensors (inductive proximity and photoelectric), one IO-Link distance sensor on the test station, and a machine-vision camera on the inspection station whose Ethernet run goes back to the cell controller. The cell sits near a washdown area — the frame sees splash and hose mist, not submersion — and it lives on casters: it gets rolled out for maintenance, which means cables get unplugged and replugged by whoever is on shift, not by the people who built the cell.
+
+That last sentence is most of the connector requirement. The sensors themselves are ordinary; what needs engineering is a *sealed, keyed, serviceable, documented* way for a rotating cast of technicians to disconnect and reconnect the cell without creating wiring faults.
 
 ## 1. Requirements summary
 
 | # | Requirement | Value | Source | Status |
 |---|---|---|---|---|
-| R1 | Environment (IP class, chemicals, temperature) | TBD | TBD | TBD |
-| R2 | Sensor circuits (count, signal type, IO-Link?) | TBD | TBD | TBD |
-| R3 | Data (rate, protocol, cable category) | TBD | TBD | TBD |
-| R4 | Power (per-circuit current, distribution) | TBD | TBD | TBD |
-| R5 | Service model (who unplugs what, how often) | TBD | TBD | TBD |
+| R1 | Environment | Splash/mist zone; target sealed-when-mated (IP class TBD from plant spec); indoor temperature range TBD | Plant washdown spec TBD | TBD |
+| R2 | Sensor circuits | *n* × discrete DC sensors (TBD count) + 1 × IO-Link device | Cell I/O list TBD | TBD |
+| R3 | Data | One Ethernet run, camera → controller; required rate TBD from camera datasheet (GigE-class assumed below) | Camera datasheet TBD | TBD |
+| R4 | Power | Sensor power over the sensor cordsets; per-circuit current TBD vs. exact part ratings | Device datasheets TBD | TBD |
+| R5 | Service model | Unplug-to-move by shift technicians; no tools at the interface; mis-mating must be physically prevented | Maintenance plan TBD | TBD |
 
 ## 2. Candidates considered
 
-The candidate set this example evaluates, per the decision paths' *families to start with*:
+**For the sensor circuits**, per the [Industrial sensor path's](../decision-paths/industrial-sensor.md) families-to-start-with:
 
-- **M12 A-coded** for the sensor/actuator circuits — the common industrial default the [Industrial sensor path](../decision-paths/industrial-sensor.md) starts from; codings and scope per [§8.1](../08-m12.md).
-- **M12 D-coded vs. X-coded** for the Ethernet run — the data-rate decision [§8.1's D-vs-X note](../08-m12.md) exists to keep straight.
-- **Rejected candidates and why** — **\[narrative to come\]**: what else was on the table (sealed RJ45? M8? hardwired glands?) and the concrete reasons each lost.
+- **M12 A-coded** — the common industrial default for DC sensors and I/O, and the IO-Link device rides the same connector family ([§8.1](../08-m12.md)). **Selected.**
+- **M8** — viable for the compact sensors, and worth considering where space is tight. Rejected here as a *standardization* decision, not a technical one: one shell size across the cell means one cordset inventory, one seal system, one torque procedure, and no size-guessing during a night-shift swap.
+- **Hardwired cable glands into a junction box** — cheapest on day one, rejected on the service model (R5): every sensor swap becomes a wiring job inside a sealed box, done by whoever is on shift. The [when-to-avoid logic in the path](../decision-paths/industrial-sensor.md) applies directly.
+- **Sealed automotive families (DT-style)** — good connectors in their own lane ([rugged on a budget](../decision-paths/rugged-on-a-budget.md)), rejected because the sensor ecosystem ships M12/M8 cordsets off the shelf; fighting the ecosystem means custom pigtails everywhere.
+
+**For the Ethernet run**, per the [Rugged Ethernet path](../decision-paths/rugged-ethernet.md):
+
+- **M12 X-coded** — matches a GigE-class camera requirement ([§8.1's D-vs-X note](../08-m12.md)). **Selected, pending R3 confirmation** — if the camera actually needs only 10/100, D-coded is the honest choice, not X "to be safe by default."
+- **M12 D-coded** — right answer for 10/100BASE-TX, rejected *only if* R3 confirms a GbE-class rate; this is exactly the decision [§8.1](../08-m12.md) exists to keep straight.
+- **Sealed/rugged RJ45** — workable, rejected on the path's own checklist concerns (latch protection and sealing at a frequently-unplugged interface) plus the standardization argument: the cell already speaks M12.
 
 ## 3. Decision matrix
 
-Structure per the [comparison matrix template](../tools/connector-comparison-matrix.md); scoring **\[narrative to come\]**.
+Structure per the [comparison matrix template](../tools/connector-comparison-matrix.md); scores are illustrative of the reasoning above, not measurements.
 
-| Criterion | M12 A-coded (sensors) | Alternative | Notes |
+| Criterion | M12 A-coded (sensors) | Hardwired glands | Notes |
 |---|---|---|---|
-| Environment / sealing | TBD | TBD | mated *and* unmated states |
-| Electrical fit | TBD | TBD | per-circuit current vs. exact part rating |
-| Ecosystem / sourcing | TBD | TBD | cordsets, second sources |
-| Service model | TBD | TBD | tool-free? torque-controlled? |
+| Environment / sealing | Sealed when mated and torqued — verify the exact assembly ([§8.3](../08-m12.md)) | Sealed but service-hostile | mated *and* unmated states both matter |
+| Electrical fit | Verify per-circuit current vs. exact part rating | n/a | family figures are not part ratings |
+| Ecosystem / sourcing | Off-the-shelf cordsets, multiple vendors | custom every time | R5 favors replaceable cordsets |
+| Service model | Unplug/replug, keyed, no tools at the interface | wiring job per swap | the deciding row |
 
 ## 4. Selected architecture
 
-**\[narrative to come\]** — the as-selected interface list. The shape it will take:
-
-| Ref | Interface | Family/coding | Why (link to reasoning) |
+| Ref | Interface | Family/coding | Why |
 |---|---|---|---|
-| J-1…J-*n* | Sensor circuits | M12 A-coded, TBD pins | [Industrial sensor path](../decision-paths/industrial-sensor.md) + R2 |
-| J-*x* | Ethernet | M12 D- **or** X-coded, TBD | data-rate decision per [§8.1](../08-m12.md) + R3 |
+| J-1…J-*n* | Discrete sensor circuits | M12 A-coded, 4-pin, panel receptacles on the frame's junction blocks | [Industrial sensor path](../decision-paths/industrial-sensor.md) + R2/R5 |
+| J-*io* | IO-Link distance sensor | M12 A-coded (IO-Link rides the same 3–4-wire connector — [§8.1](../08-m12.md)) | R2 |
+| J-*cam* | Camera Ethernet | M12 X-coded, 8-pin ([§8.1](../08-m12.md)), shielded run | R3 + [Rugged Ethernet path](../decision-paths/rugged-ethernet.md) |
+
+Count, placement, and panel-vs-inline decisions are recorded per run in the cable drawings (below).
 
 ## 5. Pinout and wiring discipline
 
-**\[narrative to come\]** for the actual assignments. Standing rules that will govern them, from the deep dive:
+Standing rules from the deep dive govern every assignment:
 
-- Pin assignments come from the device datasheet and the ICD — wire-color conventions (e.g. the common A-coded brown/white/blue/black scheme) are **example-only, never design authority** ([Source Notes](../appendix/source-notes.md)).
-- Every value verifies against the exact part per [§8](../08-m12.md); record standard edition and datasheet revision.
+- Pin assignments come from the device datasheet and go into the ICD — wire-color conventions (e.g. the common A-coded brown/white/blue/black scheme) are **example-only, never design authority** ([Source Notes](../appendix/source-notes.md)).
+- The X-coded run's cable category, shielding, and pairing follow the camera and cordset datasheets, verified per [§8.1](../08-m12.md) — not "it's X-coded so it's fine."
+- Every value verifies against the exact part per [§8](../08-m12.md); record standard edition and datasheet revision in the ICD.
 
 ## 6. Molded vs. field-wireable
 
-Decision **\[narrative to come\]**, made with [§8.2's table](../08-m12.md): molded cordsets for production sealing/reliability vs. field-wireable for repair and custom lengths — and what that means for spares.
+Decision made with [§8.2's table](../08-m12.md): **molded cordsets** for every production run — best sealing and repeatability, and the unplug-to-move service model consumes *cordsets*, not terminations. Stock the lengths the cell actually needs, plus spares. A small **field-wireable kit** lives in the maintenance crib for emergency repair only, with the explicit rule that any field-terminated cable is a temporary article: log it, and replace it with the molded part at the next planned stop.
 
 ## 7. Documentation bundle
 
@@ -88,9 +99,10 @@ What "done" looks like for this interface, tying the [templates](../tools/index.
 
 ## 8. What would change if…
 
-- **The Ethernet run needed GbE-class rates** — the D-vs-X decision flips; verify cable category and assembly rating per [§8.1](../08-m12.md).
+- **R3 comes back 10/100** — the camera run drops to D-coded; verify cable category and assembly rating per [§8.1](../08-m12.md). Do not keep X "because faster is safer" — match the requirement.
 - **A circuit outgrew the A-coded current class** — move that circuit to a power coding (L/T/S/K) per [§8.1](../08-m12.md), not to "probably fine."
-- **The interface left the protected zone** — re-run the [sealed enclosure feedthrough path](../decision-paths/sealed-enclosure-feedthrough.md) for the panel side.
+- **The cell moved into the direct washdown zone** — re-verify every mated *and unmated* rating against the plant spec ([§8.3](../08-m12.md)), add caps to every unmated receptacle, and re-run the [sealed enclosure feedthrough path](../decision-paths/sealed-enclosure-feedthrough.md) for the junction-block panels.
+- **Someone proposes "just use one big multipole"** — that's the [removable machine module path's](../decision-paths/removable-machine-module.md) problem statement; run it honestly before deciding.
 
 :::note
 

@@ -83,3 +83,5 @@ Never trust a listing title or a photo. Verify **pitch, latch, housing, contact,
 ## Where the hobby and engineering tracks meet
 
 The core mental model is the same in both tracks: a connector is a *controlled interface*, not just "a plug with enough pins." When your project starts carrying real battery power, going outdoors, riding on a vehicle, or being built by someone else, that's your cue to graduate specific interfaces to the engineering track — start with [rugged on a budget](../decision-paths/rugged-on-a-budget.md) and the [energized-connector safety warning](../decision-paths/high-current-dc-power.md).
+
+Mentoring a student or intern who starts from maker experience? [How to Use This Guide with an Intern](../using-this-guide-with-an-intern.md) sequences both tracks into an onboarding program.

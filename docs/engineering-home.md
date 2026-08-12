@@ -93,6 +93,7 @@ Breadboards, Arduino/Raspberry Pi/ESP32 wiring, 3D printers, LEDs, RC power, con
 - [What people forget](what-people-forget.md)
 - [Hands-on exercises](13-hands-on-exercises.md)
 - [Tools & templates](tools/index.md) and worked examples: [Rugged Control Box](examples/rugged-control-box.md), [Connector Selection Packet](examples/connector-selection-packet.md)
+- [Using this guide with an intern](using-this-guide-with-an-intern.md) — the mentor's sequencing of all of the above
 
 ## Source discipline
 

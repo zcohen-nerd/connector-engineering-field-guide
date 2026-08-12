@@ -44,3 +44,5 @@ Two guides, one site. Pick the track that matches your project — they cross-li
 Still torn? The longer answer is [Hobby or Professional?](hobby-or-professional.md) — the boundary is consequence of failure, environment, and documentation, not how fancy the connector is.
 
 Both tracks share the site's [Source Notes](appendix/source-notes.md) — the transparency dashboard for what is verified, what is judgment, and what is example-only — the [Glossary](glossary.md), and the [Connector Identification Workflow](connector-identification.md).
+
+Onboarding someone? [How to Use This Guide with an Intern](using-this-guide-with-an-intern.md) turns the reading order, exercises, and templates into a four-week mentoring program.

@@ -18,6 +18,7 @@ Reusable engineering-document templates derived from the guide. Copy them into y
 | [Connector ICD Template](connector-icd-template.md) | Define an interface so procurement and manufacturing can build it | [Exercise 7](../13-hands-on-exercises.md) |
 | [Design Review Checklist](design-review-checklist.md) | Run a connector risk pass before a design review | [Sections 10–11](../11-red-flags.md) |
 | [M12 Coding Cheat Sheet](m12-coding-cheat-sheet.md) | Identify and pick M12 codings at a glance | [M12 deep dive §8.1](../08-m12.md) |
+| [38999 Decode Worksheet](38999-decode-worksheet.md) | Decode a D38999 part number field by field against your vendor's catalog | [38999 deep dive §7.8](../07-mil-dtl-38999.md) |
 
 :::note
 

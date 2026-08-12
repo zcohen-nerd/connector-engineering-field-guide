@@ -112,6 +112,7 @@ const sidebars: SidebarsConfig = {
         'tools/connector-icd-template',
         'tools/design-review-checklist',
         'tools/m12-coding-cheat-sheet',
+        'tools/decode-38999-worksheet',
       ],
     },
     {

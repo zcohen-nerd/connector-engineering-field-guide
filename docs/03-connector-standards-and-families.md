@@ -72,7 +72,7 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 
 ## Sources
 
-[^dsub]: MIL-DTL-24308 (DLA detail specification) — standard D-subminiature connectors are nonenvironmental, polarized-shell, rack-and-panel; ruggedized/environmental variants are separately specified. Authoritative index: DLA ASSIST QuickSearch (current revision K w/Amendment 1, 2022, as of audit 2026-08) <https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=17161>; clause references on this site were checked against Revision G (distributor-hosted copy of the DLA document: <https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7139/5831_mil-dtl-24308.pdf>).
+[^dsub]: MIL-DTL-24308K w/Amendment 1 (DLA detail specification, 5 December 2022) — "Connectors, Electric, Rectangular, Nonenvironmental, Miniature, Polarized Shell, Rack and Panel"; scope (§1.1) designates a −55 °C to +125 °C operating range; ruggedized/environmental variants are separately specified. Clauses verified against Rev K w/Amendment 1 via DLA ASSIST QuickSearch (audit 2026-08). <https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=17161>
 
 [^microd]: Glenair, *Micro-D Performance Specifications* (MIL-DTL-83513) — contacts on .050 in (1.27 mm) centers, 3.0 A continuous per contact (−55 to +150 °C), 600 V rms at sea level. <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Editable source for static/img/og-card.png (the site's og:image).
+  Render with: npm run og-card  (scripts/render-og-card.mjs, sharp)
+  Colors are zcohen-nerd brand tokens (src/css/zcohen-nerd-tokens.css):
+  navy-900 #0a1428, navy-600 #1b3358, navy-200 #aebed1, cyan-500 #10b8d8, white.
+-->
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1428"/>
+      <stop offset="1" stop-color="#1b3358"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="14" height="630" fill="#10b8d8"/>
+
+  <text x="90" y="118" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" fill="#ffffff">zcohen-nerd</text>
+  <rect x="90" y="134" width="192" height="6" fill="#10b8d8"/>
+
+  <text x="90" y="192" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" letter-spacing="2" fill="#10b8d8">A ZCOHEN-NERD TECHNICAL GUIDE</text>
+
+  <text x="86" y="352" font-family="Arial, Helvetica, sans-serif" font-size="94" font-weight="bold" fill="#ffffff">Connector Field Guides</text>
+
+  <text x="90" y="462" font-family="Arial, Helvetica, sans-serif" font-size="40" fill="#aebed1">Hobby connectors + professional hardware interfaces.</text>
+</svg>

@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-08-12
+
+### v0.10 — Audit Hardening + Release Tooling
+
+Everything from the 2026-07 consistency audit through the 2026-08 punch-list remediation and closeout: licensed photos and ID-card line art across the family pages, three new templates and a new decision path, the intern-onboarding guide, single-sourced version strings with a CI drift guard, and a validated two-PDF release pipeline.
+
 ### Audit 2026-08 — punch-list remediation
 
 - Verified the 2026-08-11 audit's footer-drift and stale-hobby-banner findings against the served live site: both were already fixed and deployed (the audit hit cached pages); no code change was needed.
@@ -17,6 +23,12 @@ All notable changes to this project will be documented in this file.
 - Needs-source backlog clarified in both source-notes copies: rows are now explicitly **closable** vs **per-design — permanent**; hedge wording on all per-design-affected pages re-verified.
 - Distributor-citation pass: Molex MX150 now cites Molex-hosted MX150L literature (verified; sealing claim tightened to IP67); MIL-DTL-24308 citations gained the DLA ASSIST locator plus a revision-currency note (current is Rev K w/Amend 1; clause refs checked against Rev G); Aptiv Metri-Pack documented as having no stable manufacturer-hosted system datasheet (TTI-hosted copy retained per the acceptable-interim rule).
 - Usage and Attribution now states explicitly that the Tools & Templates pages are documentation content under CC BY 4.0.
+
+### Audit 2026-08 — closeout
+
+- PDF release pipeline validated end-to-end via manual dispatch: hobby PDF 75 pages, professional/industrial PDF 239 pages; track boundaries (hobby ends at Hobby Source Notes, engineering at Usage and Attribution), new-page coverage, and image embedding verified; no workflow fixes needed.
+- Every MIL-DTL-24308 claim verified against Revision K w/Amendment 1 (5 December 2022) retrieved directly from DLA ASSIST: all clause numbers and figures unchanged from what the site cited (durability requirement §3.5.16 / test §4.5.18, 500 cycles, −55 to +125 °C, sizes 20/22D, arrangements per Table A-I). Citations now name Rev K with the ASSIST locator; the distributor-hosted Rev G copy is dropped.
+- OG/social card regenerated for the two-track site with an editable in-repo source (`assets/og-card.svg`, rendered by `npm run og-card` via a new `sharp` devDependency); visual backlog item 0 closed.
 
 ### Images pass — a picture on every connector family page
 

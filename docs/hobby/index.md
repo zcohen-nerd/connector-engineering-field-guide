@@ -55,7 +55,7 @@ Covered in dedicated pages:
 - Dupont / 0.1 inch headers
 - Qwiic, STEMMA QT, and dev-board ecosystems
 - LED string and strip connectors, including JST-SM-style connectors
-- RC power connectors such as XT30, XT60, XT90
+- RC power connectors — the XT30/XT60/XT90 ecosystem, plus the wider battery-connector landscape (Deans, EC, Traxxas, Tamiya-style, bullets, Powerpole)
 - Crimping, pre-crimped leads, and connector kits
 - Identifying unknown connectors
 

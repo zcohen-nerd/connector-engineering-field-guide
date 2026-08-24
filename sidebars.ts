@@ -21,6 +21,7 @@ const sidebars: SidebarsConfig = {
         'hobby/jst-sh-qwiic-stemma',
         'hobby/jst-sm-led-connectors',
         'hobby/xt-connectors',
+        'hobby/rc-battery-connectors',
       ],
     },
     'hobby/power-vs-signal',

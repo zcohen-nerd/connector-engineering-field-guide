@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- **Aptiv Weather-Pack** joins the sealed-automotive family table (§3.2, synced in `Source/`) with distributor-cited family figures (1–6-way, triple-ribbed silicone seals, ~20 A class), a budget-path bullet and search term, and source-notes rows in both copies; §3.2 also gains the Amphenol Sine AT/ATM/ATP second-source note (synced), reconciling the family sets across §2, §3.2, and the DEUTSCH deep dive.
 - **DEUTSCH deep dive** (`docs/deutsch.md`) — a full 38999-style deep dive, supplemental and site-only (not a canonical numbered section), covering every size of the industrial DEUTSCH range: DTM / DT / DTP / DTHD, HD10 (including the SAE J1939-13 diagnostic connector), HD30 / HDP20, DRC, and the Autosport lines, plus the solid-vs-stamped contact-system trap, sealing/wedgelock discipline, keying, and a DT part-number decode. All figures are family-level and cited (TE pages and catalogs, with distributor/industry references labeled where a TE-hosted equivalent is pending). Two new house-style line-art diagrams (`deutsch-dt-exploded.svg`, `deutsch-contact-sizes.svg`); the §3.2 J1939 photo is reused in context. Cross-linked from §3.2, the rugged-on-a-budget path, the Connector Selection Packet, the 26482 page, the hobby track's graduation page, engineering home, and the README; new sourced DEUTSCH row in the comparison matrix; new **Wedgelock** glossary entry; source-notes rows added in both copies.
 
 ## [0.10.0] - 2026-08-12

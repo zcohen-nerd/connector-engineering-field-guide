@@ -19,7 +19,7 @@ A control box, machine section, test-cart module, or panelized subsystem that ge
 
 ## Avoid this when
 
-- **Weight and size are tightly constrained** — small aerospace payloads, handheld devices. See the compact circular families instead.
+- **Weight and size are tightly constrained** — small aerospace payloads, handheld devices. See the compact circular families ([M12](../08-m12.md), [MIL-DTL-26482](../mil-dtl-26482.md)) instead.
 - The interface needs **defense/aero qualification** or a **38999 ecosystem** — see [Defense / rugged external I/O](defense-rugged-external-io.md).
 - It is a **simple sensor cable** where an [M8/M12](industrial-sensor.md) is cleaner.
 - It is **internal PCB harnessing** — see [Internal PCB harnessing](internal-pcb-harnessing.md).

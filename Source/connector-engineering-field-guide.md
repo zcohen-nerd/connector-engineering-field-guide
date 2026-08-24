@@ -318,7 +318,7 @@ For production cable and wire harness workmanship, inspection, and acceptance cr
 | Solder cup | Solder joint in a cup behind the contact | Low-volume, lab, legacy mil, hermetic | Reworkable; skill-sensitive; thermal risk to insert |
 | IDC | Blade cuts through insulation | Mass-terminated ribbon, IDC D-sub | Fast, no strip; limited wire types/gauges |
 | PCB through-hole / SMT | Solder tail to board | Board-mount headers, edge connectors | Board-integrated; reflow/hand solder; no field repair |
-| Screw / cage clamp | Mechanical wire capture | Terminal blocks, panel wiring | Field-reworkable, no tooling; retention depends on the system (see Section 10) |
+| Screw / cage clamp | Mechanical wire capture | Terminal blocks, panel wiring | Field-reworkable, no tooling; retention depends on the system (see Section 12.3) |
 
 **Front-release vs. rear-release** describes how a removable crimp contact is retained in the insert and which side the tool works from. *Rear-release* contacts (the common MIL-DTL-38999 arrangement) are held by a retention clip in the insert; the insertion/extraction tool enters from the **rear** (wire side), and the contact is installed and removed rearward — convenient for field repair without disturbing the mating face. *Front-release* contacts are unlatched by a tool entering the **mating face**, though the contact is still withdrawn out the rear. Match the tool to the retention type: the wrong tool, or working from the wrong end, bends the retention fingers, damages the insert, or leaves a contact unretained.
 
@@ -816,6 +816,7 @@ IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure wa
 | 16 | 16 | 10 A | Moderate power |
 | 12 | 12 | 17 A | Higher-current power |
 | 8 / larger | per catalog | power contacts | High current; coax/twinax in size 8 |
+| 23 (HD) | per catalog | lower than 22D | High-density variants; signal only — verify by exact P/N |
 
 *Test currents from a manufacturer contact-performance spec — a different, lower parameter than the contact's free-air current-carrying rating (e.g. size 16 ≈ 13 A carrying vs. 10 A test), and not a universal continuous rating. Size against the actual contact datasheet and derating curve.*[^glenaircontacts]
 
@@ -831,6 +832,7 @@ IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure wa
 | High-current robot power (>20 A) | Anderson SB, Han-style power insert, 38999 size 8/larger or dedicated power contacts (HCP = high-current power, or RADSOK[^radsok]); size 12 only where derating supports it | M12 A-coded, XT60/90, 38999 size 16 for the full load |
 | Internal protected PCB harness | Molex Micro-Fit, TE, Harwin | Bare wire, 0.1" headers, screw terminals on PCB |
 | Fast quick-disconnect, moderate vibration | MIL-DTL-26482 bayonet (verify qualification for the vibration profile) | 38999 threaded (slower to mate) |
+| Rugged field wiring on a budget, no mil requirement | Sealed automotive (Deutsch DT/DTM/DTP class) | Hobby connectors outdoors; a mil circular nothing is requiring |
 | RF/antenna/GPS line | SMA/TNC/N-Type (impedance-matched) | Random circular signal contacts |
 | Hybrid power+RF+control to one payload | 38999 hybrid insert (coax + power + signal contacts) | Separate connectors if panel space is scarce |
 
@@ -845,6 +847,7 @@ Rated mate/unmate cycles vary widely. Design with margin *below* the rated numbe
 | Micro-D (MIL-DTL-83513) | 500[^milcyc] |
 | D-sub (MIL-DTL-24308) | 500[^milcyc] |
 | M12 (screw-lock) | ≥ 100 (per datasheet)[^m12cyc] |
+| DEUTSCH sealed automotive (DRC figure) | 100 (DRC) — field-service class; verify per series[^deutschcyc] |
 | Industrial rectangular / Han | ~500 standard; Han HMC (high mating cycle) far higher[^hancyc] |
 | USB-C | 10,000 (USB Type-C spec)[^usbccyc] |
 
@@ -905,6 +908,8 @@ Consolidated citations for every sourced claim in this guide, referenced by labe
 [^milcyc]: 500-cycle durability is specified per family: MIL-DTL-38999 — Amphenol Series III catalog lists "standard 500 cycle contacts" <https://amphenol-in.com/wp-content/uploads/2024/12/MIL-38999-Sr-III-AC38907-0317.pdf>; MIL-DTL-26482 Series 2 — ≥ 500 mating cycles per the Aero-Electric catalog <https://www.aero-electric.com/PDF/MIL-DTL-26482%20Series%202.pdf>; MIL-DTL-83513 Micro-D — 500 cycles per the Glenair performance spec §3.2.8 <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>; MIL-DTL-24308 D-sub — 500 mating/unmating cycles per MIL-DTL-24308K w/Amendment 1 (requirement §3.5.16, test §4.5.18; verified audit 2026-08) — DLA ASSIST <https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=17161>.
 
 [^m12cyc]: Turck M12 cordset RK 4.5T-5 — mechanical life > 100 mating cycles. <https://www.turck.us/datasheet/_us/edb_U2188-94_eng_us.pdf>
+
+[^deutschcyc]: DEUTSCH DRC series — durability evaluated at 100 cycles of engagement/disengagement. A family-level field-service figure, not a rating for other DEUTSCH series or exact parts; the contrast with the ≥ 500-cycle mil circulars is the point. TE DRC product page and distributor technical summary: <https://www.te.com/en/products/connectors/automotive-connectors/intersection/deutsch-drc-connectors.html>, <https://www.deutschconnectors.com.au/deutsch-connectors/deutsch-drc-series-connectors.html>
 
 [^hancyc]: HARTING's own product page for the Han E 16-pole insert (09330162601) states 500 mating cycles (16 A, 500 V). <https://www.harting.com/en-US/p/Han-E-16-Pos-M-Insert-Screw-09330162601> The Han HMC (High Mating Cycle) series is designed for 10,000+ mating cycles (HARTING Han HMC product page: <https://www.harting.com/en-US/s/han-hmc>).
 

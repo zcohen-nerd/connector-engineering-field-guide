@@ -12,7 +12,7 @@ Don't start with the glamour render. Start with the ordering information and the
 
 | Datasheet field | What it tells you | What to watch for |
 |---|---|---|
-| Series | Family/platform (e.g. 38999 Series III, M12 A-coded) | Decode against the manufacturer's part-number key |
+| Series | Family/platform (e.g. [38999 Series III](07-mil-dtl-38999.md), [M12 A-coded](08-m12.md)) | Decode against the manufacturer's part-number key |
 | Shell size | Physical body diameter/size | Larger = more/bigger contacts, but weight, space, cost |
 | Insert arrangement | Number, size, and layout of contacts | Pull the actual arrangement drawing — a pin count alone is not enough |
 | Contact type | Pin/socket; signal/power/coax/fiber | Verify gender and power-safety convention |

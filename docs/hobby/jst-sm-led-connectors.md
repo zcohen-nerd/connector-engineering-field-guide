@@ -22,7 +22,7 @@ It deserves its own page because it is everywhere in LED work — and because al
 - **The genuine JST SM series is documented:** 2.5 mm pitch, disconnectable crimp wire-to-wire, 3 A AC/DC max (2 A for the 18-circuit version), 250 V, wire range AWG #28–22, per the official JST datasheet.[^jst-sm] **But clone and "compatible-style" parts circulate freely in LED listings and are not covered by those numbers** — latch engagement, contact fit, and dimensions can differ. Verify **pitch, latch geometry, housing shape, contact style, wire gauge, and pin count** against a drawing, not the product title.
 - **Many LED pigtails are sold pre-crimped/prewired.** This is usually the sane choice — buying matching prewired pigtail pairs beats hand-crimping small wire-to-wire contacts. See [Crimping](crimping.md).
 - **Verify polarity and pinout every time.** LED conventions like power/data/ground are common, but **wire colors and pin order are not guaranteed** — red is not always positive, and data direction matters on addressable strings (they have an input end and an output end).
-- **Do not assume waterproofing.** An outdoor-rated LED product does not make its little inline connector sealed — many are open connectors heat-shrunk or left bare. Sealing, if any, has a stated condition.
+- **Do not assume waterproofing.** An outdoor-rated LED product does not make its little inline connector sealed — many are open connectors heat-shrunk or left bare. Sealing, if any, has a stated condition. Families that actually state one live in [rugged on a budget](../decision-paths/rugged-on-a-budget.md).
 - **Do not assume a current rating from appearance or product title.** "LED connector" is not a rating.
 
 :::warning[LED connector trap]

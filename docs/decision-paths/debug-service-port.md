@@ -22,8 +22,8 @@ Occasional programming, debug, or service access — used at a bench or in maint
 ## Families to start with
 
 - **Keyed shrouded header** or **Tag-Connect** for board-level programming/debug.
-- **Micro-D** or **MIL-grade D-sub** for a benign, protected service port.
-- **Sealed service M12** or a **38999 maintenance connector** if the port is external.
+- **[Micro-D](micro-d.md)** or **MIL-grade D-sub** for a benign, protected service port.
+- **[Sealed service M12](../08-m12.md)** or a **[38999 maintenance connector](../07-mil-dtl-38999.md)** if the port is external.
 - **USB-C only behind a cover**, never as a bare exposed panel port.
 
 See [Decision Examples](../09-decision-examples.md).

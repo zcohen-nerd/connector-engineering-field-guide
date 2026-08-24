@@ -33,8 +33,10 @@ These pages summarize and cross-link the rest of the guide; they do not replace 
 | Serviceable machine module — mixed power/signal/data | [Removable machine module](removable-machine-module.md) |
 | Antenna, GPS, radio, or coax path | [RF / GPS / radio](rf-gps-radio.md) |
 
+Family-level depth behind the paths lives in the deep dives: [MIL-DTL-38999](../07-mil-dtl-38999.md), [MIL-DTL-26482](../mil-dtl-26482.md), [M12/M8](../08-m12.md), and [DEUTSCH](../deutsch.md).
+
 :::note
 
-Still turning a vague need into search terms? Start with [How to Search for Connectors](../00-how-to-search-for-connectors.md), then come back here.
+Still turning a vague need into search terms? Start with [How to Search for Connectors](../00-how-to-search-for-connectors.md), then come back here. Matching or replacing a connector you already have? Use the [identification workflow](../connector-identification.md).
 
 :::

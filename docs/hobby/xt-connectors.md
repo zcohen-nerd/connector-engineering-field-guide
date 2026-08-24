@@ -69,7 +69,7 @@ Attribution and ratings are sourced: the originator claim from AMASS's manufactu
 
 ## When to move to the engineering track
 
-Higher-energy packs, fielded systems, or anything where the energized-connector questions (load-break, touch safety, fault current, inrush) need documented answers — go straight to the [high-current DC path](../decision-paths/high-current-dc-power.md) and its safety warning, and [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md).
+Higher-energy packs, fielded systems, or anything where the energized-connector questions (load-break, touch safety, fault current, inrush) need documented answers — go straight to the [high-current DC path](../decision-paths/high-current-dc-power.md) and its safety warning, and [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md). For sealed vehicle/field wiring one step up, see [rugged on a budget](../decision-paths/rugged-on-a-budget.md) and the [DEUTSCH deep dive](../deutsch.md).
 
 ## Sources
 

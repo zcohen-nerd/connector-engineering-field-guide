@@ -21,8 +21,9 @@ Passing power or signal through the wall of a sealed enclosure without breaking 
 
 ## Families to start with
 
-- **MIL-DTL-38999 jam-nut or flange** panel receptacles for rugged sealed I/O.
-- **Sealed M12 panel** receptacles for industrial sealed I/O.
+- **[MIL-DTL-38999](../07-mil-dtl-38999.md) jam-nut or flange** panel receptacles for rugged sealed I/O.
+- **[Sealed M12 panel](../08-m12.md)** receptacles for industrial sealed I/O.
+- **Sealed-automotive flange receptacles** — DEUTSCH DT flange / HD30 bulkhead class — where budget field wiring passes a wall and nothing requires mil hardware. See the [DEUTSCH deep dive](../deutsch.md).
 - **Hermetic / potted penetrator** where pressure or gas-tightness is required.
 
 See [Decision Examples](../09-decision-examples.md).

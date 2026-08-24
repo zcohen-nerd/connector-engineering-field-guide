@@ -17,7 +17,7 @@ Board-to-wire wiring inside an enclosure — power and signal from a PCB to othe
 
 ## Avoid this when
 
-- The interface is external, sealed, or rugged — treat it as a [sealed feedthrough](sealed-enclosure-feedthrough.md) or [defense/rugged I/O](defense-rugged-external-io.md) unless the family is specifically sealed, latched, or potted.
+- The interface is external, sealed, or rugged — treat it as a [sealed feedthrough](sealed-enclosure-feedthrough.md) or [defense/rugged I/O](defense-rugged-external-io.md) unless the family is specifically sealed, latched, or potted; for budget sealed field wiring, the middle ground is [rugged-on-a-budget](rugged-on-a-budget.md).
 
 ## Families to start with
 

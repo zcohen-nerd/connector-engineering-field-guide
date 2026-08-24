@@ -7,7 +7,7 @@ sidebar_label: Quick Reference Tables
 
 # Appendix: Quick-Reference Tables
 
-These are deliberately kept as compact lookup tables — IP ratings (A1), 38999 contact sizes (A2), and a family-selection quick guide (A3). Use the contents panel to jump between them. Every value is an orientation aid to verify against the source, not a selection rule. For scenario-by-scenario reasoning, see the [Decision Paths](../decision-paths/index.md).
+These are deliberately kept as compact lookup tables — IP ratings (A1), 38999 contact sizes (A2), a family-selection quick guide (A3), and mating-cycle life by family (A4). Use the contents panel to jump between them. Every value is an orientation aid to verify against the source, not a selection rule. For scenario-by-scenario reasoning, see the [Decision Paths](../decision-paths/index.md).
 
 :::caution[Ratings are system-level]
 
@@ -36,21 +36,23 @@ IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure wa
 | 16 | 16 | 10 A | Moderate power |
 | 12 | 12 | 17 A | Higher-current power |
 | 8 / larger | per catalog | power contacts | High current; coax/twinax in size 8 |
+| 23 (HD) | per catalog | lower than 22D | High-density variants; signal only — verify by exact P/N |
 
-*Test currents from a manufacturer contact-performance spec — a different, lower parameter than the contact's free-air current-carrying rating (e.g. size 16 ≈ 13 A carrying vs. 10 A test), and not a universal continuous rating. Size against the actual contact datasheet and derating curve.*[^glenaircontacts]
+*Test currents from a manufacturer contact-performance spec — a different, lower parameter than the contact's free-air current-carrying rating (e.g. size 16 ≈ 13 A carrying vs. 10 A test), and not a universal continuous rating. Size against the actual contact datasheet and derating curve. Full context in the [38999 deep dive §7.5](../07-mil-dtl-38999.md#75-contact-sizes-and-current).*[^glenaircontacts]
 
 ## A3. Family selection quick guide
 
 | Need | Consider | Prefer an alternative / avoid |
 |---|---|---|
-| Mil-spec flight/defense harness | MIL-DTL-38999 Series III | Commercial circular, M12 |
-| Industrial sensor connection | M12 A-coded | D-sub, hobby connectors |
-| Industrial Ethernet (GbE) | M12 X-coded | M12 D-coded, exposed RJ45 |
+| Mil-spec flight/defense harness | [MIL-DTL-38999 Series III](../07-mil-dtl-38999.md) | Commercial circular, M12 |
+| Industrial sensor connection | [M12 A-coded](../08-m12.md) | D-sub, hobby connectors |
+| Industrial Ethernet (GbE) | [M12 X-coded](../08-m12.md) | M12 D-coded, exposed RJ45 |
 | Machine umbilical (power+signal+data) | Industrial rectangular / Han-Modular | Many individual small connectors |
 | Serial/debug, benign environment | Micro-D, MIL-grade D-sub, keyed header | Bare headers, exposed USB |
 | High-current robot power (>20 A) | Anderson SB, Han-style power insert, 38999 size 8/larger or dedicated power contacts (HCP = high-current power, or RADSOK[^radsok]); size 12 only where derating supports it | M12 A-coded, XT60/90, 38999 size 16 for the full load |
 | Internal protected PCB harness | Molex Micro-Fit, TE, Harwin | Bare wire, 0.1" headers, screw terminals on PCB |
-| Fast quick-disconnect, moderate vibration | MIL-DTL-26482 bayonet (verify qualification for the vibration profile) | 38999 threaded (slower to mate) |
+| Fast quick-disconnect, moderate vibration | [MIL-DTL-26482](../mil-dtl-26482.md) bayonet (verify qualification for the vibration profile) | 38999 threaded (slower to mate) |
+| Rugged field wiring on a budget, no mil requirement | Sealed automotive — [DEUTSCH DT/DTM/DTP class](../deutsch.md) (see the [budget path](../decision-paths/rugged-on-a-budget.md)) | Hobby connectors outdoors; a mil circular nothing is requiring |
 | RF/antenna/GPS line | SMA/TNC/N-Type (impedance-matched) | Random circular signal contacts |
 | Hybrid power+RF+control to one payload | 38999 hybrid insert (coax + power + signal contacts) | Separate connectors if panel space is scarce |
 
@@ -61,10 +63,11 @@ Rated mate/unmate cycles vary widely. Design with margin *below* the rated numbe
 | Family | Typical rated mating cycles |
 |---|---|
 | Molex Micro-Fit 3.0 | ~30 (up to ~250 with lubricated RMF terminals)[^microfitcyc] |
-| MIL-DTL-38999 / MIL-DTL-26482 | 500[^milcyc] |
+| [MIL-DTL-38999](../07-mil-dtl-38999.md) / [MIL-DTL-26482](../mil-dtl-26482.md) | 500[^milcyc] |
 | Micro-D (MIL-DTL-83513) | 500[^milcyc] |
 | D-sub (MIL-DTL-24308) | 500[^milcyc] |
 | M12 (screw-lock) | ≥ 100 (per datasheet)[^m12cyc] |
+| DEUTSCH sealed automotive (DRC figure) | 100 (DRC) — field-service class; verify per series[^deutschcyc] |
 | Industrial rectangular / Han | ~500 standard; Han HMC (high mating cycle) far higher[^hancyc] |
 | USB-C | 10,000 (USB Type-C spec)[^usbccyc] |
 
@@ -93,6 +96,8 @@ When this guide conflicts with a manufacturer datasheet, applicable standard, cu
 [^milcyc]: 500-cycle durability is specified per family: MIL-DTL-38999 — Amphenol Series III catalog lists "standard 500 cycle contacts" <https://amphenol-in.com/wp-content/uploads/2024/12/MIL-38999-Sr-III-AC38907-0317.pdf>; MIL-DTL-26482 Series 2 — ≥ 500 mating cycles per the Aero-Electric catalog <https://www.aero-electric.com/PDF/MIL-DTL-26482%20Series%202.pdf>; MIL-DTL-83513 Micro-D — 500 cycles per the Glenair performance spec §3.2.8 <https://www.glenair.com/micro-d/pdf/micro-d-specifications.pdf>; MIL-DTL-24308 D-sub — 500 mating/unmating cycles per MIL-DTL-24308K w/Amendment 1 (requirement §3.5.16, test §4.5.18; verified audit 2026-08) — DLA ASSIST <https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=17161>.
 
 [^m12cyc]: Turck M12 cordset RK 4.5T-5 — mechanical life > 100 mating cycles. <https://www.turck.us/datasheet/_us/edb_U2188-94_eng_us.pdf>
+
+[^deutschcyc]: DEUTSCH DRC series — durability evaluated at 100 cycles of engagement/disengagement. A family-level field-service figure, not a rating for other DEUTSCH series or exact parts; the contrast with the ≥ 500-cycle mil circulars is the point. TE DRC product page and distributor technical summary: <https://www.te.com/en/products/connectors/automotive-connectors/intersection/deutsch-drc-connectors.html>, <https://www.deutschconnectors.com.au/deutsch-connectors/deutsch-drc-series-connectors.html>. See the [DEUTSCH deep dive](../deutsch.md).
 
 [^hancyc]: HARTING's own product page for the Han E 16-pole insert (09330162601) states 500 mating cycles (16 A, 500 V). <https://www.harting.com/en-US/p/Han-E-16-Pos-M-Insert-Screw-09330162601> The Han HMC (High Mating Cycle) series is designed for 10,000+ mating cycles (HARTING Han HMC product page: <https://www.harting.com/en-US/s/han-hmc>).
 

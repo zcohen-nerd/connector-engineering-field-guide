@@ -35,7 +35,7 @@ Always verify against the *current* version of the applicable standard and the m
 | Family | Cost | Consider when | Prefer an alternative when |
 |---|---|---|---|
 | MIL-DTL-38999 | High | Harsh environment, vibration, defense/aero, configuration control | Low-cost commercial gear, casual prototypes |
-| MIL-DTL-26482 | Med-High | Rugged but not extreme; legacy compatibility; moderate pins | Threaded/self-locking coupling, higher density, or the modern defense ecosystem is required |
+| [MIL-DTL-26482](mil-dtl-26482.md) | Med-High | Rugged but not extreme; legacy compatibility; moderate pins | Threaded/self-locking coupling, higher density, or the modern defense ecosystem is required |
 | M12 | Low-Med | Factory automation, sensors, field I/O | Mil-spec qualification, very high pin count, high power (unless correctly coded) |
 | M8 | Low-Med | Small sensors, limited current, tight space | Heavy cable, rugged power, severe vibration without verified support |
 | D-sub / MIL-DTL-24308 | Low-Med | Internal panels, lab gear, legacy interfaces | Wet/dirty external use without a ruggedized variant and strategy |

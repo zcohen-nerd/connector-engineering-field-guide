@@ -49,11 +49,11 @@ Adafruit runs *two* connector conventions with confusingly similar names, and th
 
 ## Source status
 
-SH series figures: official JST datasheet.[^jst-sh] Qwiic/STEMMA QT conventions: the vendors' own documentation.[^qwiic][^stemmaqt] Grove specifics remain qualitative here (verify Seeed's documentation). See [Hobby Source Notes](hobby-source-notes.md).
+SH series figures: official JST datasheet.[^jst-sh] Qwiic/STEMMA QT conventions: the vendors' own documentation.[^qwiic][^stemmaqt] Grove connector facts are sourced to Seeed's documentation (see the Grove section above). See [Hobby Source Notes](hobby-source-notes.md).
 
 ## When to move to the engineering track
 
-When the "sensor chain" becomes a fielded instrument: vibration, sealing, or documented harnesses — [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md) and the [industrial sensor path](../decision-paths/industrial-sensor.md) (where M8/M12 do this job with threads and seals).
+When the "sensor chain" becomes a fielded instrument: vibration, sealing, or documented harnesses — [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md) and the [industrial sensor path](../decision-paths/industrial-sensor.md) (where [M8/M12](../08-m12.md) do this job with threads and seals).
 
 ## Sources
 

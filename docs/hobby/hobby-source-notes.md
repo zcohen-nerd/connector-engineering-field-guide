@@ -75,6 +75,9 @@ The editorial roadmap for this track — what exists, what's next, and in what o
 8. **USB-C power for hobby projects** — capsule only; deep page not started
 9. **Barrel jacks and polarity traps** — capsule only; deep page not started
 10. **Grove ecosystem** — deep page not started; connector and pinout-varies-by-port-type facts sourced to Seeed docs (audit-2026-07)
+11. **JST-GH** — capsule only ([families](families.md)); datasheet-cited rows already exist in the confusion tables and §12.2; deep page not started
+12. **JST-RCY** — capsule only; the classic red 2-pin "battery pair" and a top confusion family; deep page not started
+13. **IDC ribbon connectors** — capsule only; deep page not started
 
 :::note
 

@@ -17,13 +17,13 @@ This guide is an educational engineering reference. Always verify ratings, quali
 
 :::
 
-Release history lives in the repository `CHANGELOG.md`. v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields. v0.8 split the site into hobby and professional tracks.
+Release history lives in the repository `CHANGELOG.md`. v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields. v0.8 split the site into hobby and professional tracks. v0.9 expanded the hobby track; v0.10 hardened sourcing and added release tooling.
 
 ## Hobby connector source status
 
 <!-- Hobby per-topic status lives ONLY in hobby/source-notes. Do not duplicate here. -->
 
-The [Hobby Connector Field Guide](../hobby/index.md) (introduced v0.8, expanded v0.9) is **site-only material** with no `Source/` counterpart. Its per-topic source status — what is verified, what is example-only, and what still needs a source — is tracked in exactly one place: **[Hobby Source Notes](../hobby/source-notes)**, the authoritative tracker for that entire track. This dashboard intentionally carries no per-topic hobby detail; if a hobby claim's status matters to you, that page is the record.
+The [Hobby Connector Field Guide](../hobby/index.md) (introduced v0.8, expanded v0.9) is **site-only material** with no `Source/` counterpart. Its per-topic source status — what is verified, what is example-only, and what still needs a source — is tracked in exactly one place: **[Hobby Source Notes](../hobby/hobby-source-notes.md)**, the authoritative tracker for that entire track. This dashboard intentionally carries no per-topic hobby detail; if a hobby claim's status matters to you, that page is the record.
 
 ## Source hierarchy
 
@@ -126,18 +126,18 @@ Two kinds of rows live here, and "done" means something different for each (clar
 | High | Current ratings and derating curves (per exact part) | §4, §7.5, matrix, A2/A3, high-current path | Manufacturer derating curve for the exact contact P/N and loading | Overheating, insulation damage | **Per-design — permanent.** Family figures verified; affected-page hedges re-verified audit-2026-08 |
 | High | IP67/IP68/IP69K sealing claims (per assembly) | §5.5, §8.3, A1, sealed-feedthrough & budget paths | Test condition + datasheet for the exact mated assembly | Water ingress in the field | **Per-design — permanent.** IP definitions verified; per-assembly hedges re-verified audit-2026-08 |
 | High | Crimp inspection / workmanship criteria (per contact system) | §4, §5.2, cable-drawing/ICD/design-review/[harness-inspection](../tools/harness-inspection-checklist.md) templates | IPC/WHMA-A-620 class selection + the manufacturer application spec for each contact/tool system | Latent crimp failures passing visual inspection | **Per-design — permanent.** A-620 named as the general reference; the harness-inspection template is deliberately criterion-free for this reason |
-| Medium | Voltage ratings (incl. altitude/creepage effects) | §4, matrix, 26482 page | Exact datasheet + applicable safety standard | Insulation failure | Class figures are edition/configuration examples |
+| Medium | Voltage ratings (incl. altitude/creepage effects) | §4, matrix, [26482 page](../mil-dtl-26482.md) | Exact datasheet + applicable safety standard | Insulation failure | Class figures are edition/configuration examples |
 | Medium | Mating-cycle ratings (per part) | A4, §6, matrix | Exact datasheet | Wear-out, rising contact resistance | Family figures verified |
-| Medium | Temperature ranges (per part/class) | matrix, §6, 26482 page | Exact datasheet / spec class | Derating and material errors | 26482 temp classes deliberately qualitative |
+| Medium | Temperature ranges (per part/class) | matrix, §6, [26482 page](../mil-dtl-26482.md) | Exact datasheet / spec class | Derating and material errors | 26482 temp classes deliberately qualitative |
 | Medium | Wire-gauge compatibility per contact | §4, §5.2, templates | Contact datasheet / application spec | Bad crimps, failed wire seals | |
 | Medium | Contact-count / insert-arrangement examples | §7.3–7.4, matrix | Manufacturer insert-arrangement drawings | Mis-specified interfaces | Guide already says "always pull the drawing" |
-| Medium | MIL-DTL qualification / QPL status statements | §4, §7, 26482 page | QPL listing for the exact P/N | Non-compliant hardware | The guide asserts no QPL status today — keep it that way until verified |
+| Medium | MIL-DTL qualification / QPL status statements | §4, §7, [26482 page](../mil-dtl-26482.md) | QPL listing for the exact P/N | Non-compliant hardware | The guide asserts no QPL status today — keep it that way until verified |
 | Medium | M8/M12 IEC coding and standard references (current editions) | §8 | Current IEC edition text (61076-2-101/-104/-109/-111) | Stale scope claims | Citations now point to IEC webstore current-edition listings (-111:2025, -104:2026) as of audit 2026-07 — record edition/date checked; full standard text remains unreviewed (abstracts only) |
 | Medium | Replace distributor-listing citations with manufacturer-direct documents | [matrix](../tools/connector-comparison-matrix.md), [Quick-Ref A4](quick-reference-tables.md) | Manufacturer/DLA-direct links | Orientation figures drift from the controlling document | Han E closed (audit 2026-07). Molex MX150 closed (audit 2026-08): now cites Molex-hosted MX150L literature. MIL-DTL-24308 closed (audit 2026-08): all clauses verified against Rev K w/Amendment 1 (2022-12-05) retrieved via DLA ASSIST; distributor-hosted Rev G copy dropped. Aptiv: no stable manufacturer-hosted system datasheet exists (tokenized URLs); TTI-hosted copy of the Aptiv document retained with the Aptiv catalog as locator (checked 2026-08) |
 | Low | RF & fiber connector performance values (frequency/power/loss per family) | [RF path](../decision-paths/rf-gps-radio.md), §2 | Exact part + cable/fiber datasheets | Degraded links | Intentionally number-free; v0.7 added decision-field tables instead of values |
 | Low | Automotive sealed-connector environmental claims beyond IP (temp/vibration/fluids) | §3.2, budget path | Series application specifications | Environmental field failures | Only sealing/current classes cited today |
 | Low | HDMI mating-cycle rating | §12 | Reputable public source | Minor | Intentionally unquoted; keep it that way unless sourced |
-| Medium | Hobby-track source hardening | [Hobby track](../hobby/index.md) | Per the authoritative per-topic list in [Hobby Source Notes](../hobby/source-notes) | Makers treating placeholders as ratings | Per-topic status tracked only on that page |
+| Medium | Hobby-track source hardening | [Hobby track](../hobby/index.md) | Per the authoritative per-topic list in [Hobby Source Notes](../hobby/hobby-source-notes.md) | Makers treating placeholders as ratings | Per-topic status tracked only on that page |
 
 ## Source discipline (publication rules)
 

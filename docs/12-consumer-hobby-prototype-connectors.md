@@ -22,18 +22,20 @@ The [Hobby Connector Field Guide](hobby/index.md) covers this territory from the
 
 | Prototype / consumer choice | Production / rugged equivalent | Why |
 |---|---|---|
-| Dupont jumpers | Keyed, latching, positively retained wire-to-board (Molex Micro-Fit/Nano-Fit, Harwin, Omnetics, or JST GH where appropriate) | Retention, polarization, repeatability |
-| JST-XH exposed externally | Sealed M8/M12, sealed circular, sealed wire-to-wire | Environmental protection |
-| USB-C exposed service port | Sealed service connector, internal USB behind cover, M12 Ethernet | Robustness and sealing (see 12.4) |
-| 8P8C / RJ45 exposed outdoors | M12 D/X-coded or sealed industrial RJ45 | Vibration / water protection (see 12.5) |
+| Dupont jumpers | Keyed, latching, positively retained wire-to-board (Molex Micro-Fit/Nano-Fit, Harwin, Omnetics, or JST GH where appropriate — see [internal PCB harnessing](decision-paths/internal-pcb-harnessing.md)) | Retention, polarization, repeatability |
+| JST-XH exposed externally | [Sealed M8/M12](08-m12.md), sealed circular, [sealed wire-to-wire](deutsch.md) | Environmental protection |
+| USB-C exposed service port | Sealed service connector, internal USB behind cover, [M12 Ethernet](08-m12.md) | Robustness and sealing (see 12.4) |
+| 8P8C / RJ45 exposed outdoors | [M12 D/X-coded](decision-paths/rugged-ethernet.md) or sealed industrial RJ45 | Vibration / water protection (see 12.5) |
 | Screw terminals on dangling wires | Terminal blocks inside an enclosure | Serviceability and safety |
 | Barrel jack | Locking power connector or sealed circular | Retention and current rating |
-| Header pins for debug | Keyed shrouded header, Tag-Connect, Micro-D, protected port | Misplug prevention and durability |
-| XT60/XT90 battery connectors | Anderson SB, high-current circular, 38999 power contacts | IP rating, cycle life, professional qualification |
+| Header pins for debug | Keyed shrouded header, Tag-Connect, Micro-D, protected port — see the [debug/service-port path](decision-paths/debug-service-port.md) | Misplug prevention and durability |
+| [XT60/XT90](hobby/xt-connectors.md) battery connectors | Anderson SB, high-current circular, 38999 power contacts — see the [high-current path](decision-paths/high-current-dc-power.md) | IP rating, cycle life, professional qualification |
+
+The sealed-automotive middle ground — the usual first landing spot for graduating field wiring — is walked in [rugged-on-a-budget](decision-paths/rugged-on-a-budget.md) and detailed family-by-family in the [DEUTSCH deep dive](deutsch.md).
 
 ## 12.1 "Dupont" connectors
 
-"Dupont" is the shop nickname for the 2.54 mm (0.1") pitch crimp-pin jumper connectors found on every breadboard and dev board. The name is historical — the 0.1" crimp-jumper lineage traces back through Berg → DuPont → FCI → Amphenol, so it is no longer a distinct current product line, and not a specification you can order to; what people mean is a generic 0.1" pin-and-socket housing on individually crimped contacts. They exist because they mate with the universal 0.1" header — which is why they're everywhere in prototyping.
+"Dupont" is the shop nickname for the 2.54 mm (0.1") pitch crimp-pin jumper connectors found on every breadboard and dev board. The name is historical — the 0.1" crimp-jumper lineage traces back through Berg → DuPont → FCI → Amphenol, so it is no longer a distinct current product line, and not a specification you can order to; what people mean is a generic 0.1" pin-and-socket housing on individually crimped contacts. They exist because they mate with the universal 0.1" header — which is why they're everywhere in prototyping. The hobby track's [Dupont page](hobby/dupont-headers.md) covers identification, buying, and crimping from the maker's seat.
 
 | Property | Reality |
 |---|---|
@@ -50,14 +52,14 @@ The [Hobby Connector Field Guide](hobby/index.md) covers this territory from the
 
 | Series | Pitch | Typical use | Notes for professional work |
 |---|---|---|---|
-| XH | 2.5 mm[^jst] | Hobby battery balance leads, dev boards | Low-cost internal board-to-wire; friction lock (no positive latch). Common but not good for vibration or external service without an additional retention/environmental strategy. |
-| PH | 2.0 mm | Small Li-ion packs, internal signal | Compact internal wire-to-board; useful but not rugged. Acceptable for low-stress internal wiring; not a sealed/rugged external connector. |
+| [XH](hobby/jst-xh.md) | 2.5 mm[^jst] | Hobby battery balance leads, dev boards | Low-cost internal board-to-wire; friction lock (no positive latch). Common but not good for vibration or external service without an additional retention/environmental strategy. |
+| [PH](hobby/jst-ph.md) | 2.0 mm | Small Li-ion packs, internal signal | Compact internal wire-to-board; useful but not rugged. Acceptable for low-stress internal wiring; not a sealed/rugged external connector. |
 | GH | 1.25 mm | Compact internal signal, sensors | Compact internal wire-to-board with a secure locking feature; useful where small size and retention matter. Not sealed/rugged external by default. |
-| SH | 1.0 mm | Very small board-to-wire (e.g. Qwiic-style) | Tiny, fragile, signal-only. Friction lock. Easy to damage during rework. |
+| [SH](hobby/jst-sh-qwiic-stemma.md) | 1.0 mm | Very small board-to-wire (e.g. Qwiic-style) | Tiny, fragile, signal-only. Friction lock. Easy to damage during rework. |
 | VH | 3.96 mm[^jst] | Internal power / power-supply wiring | Higher-current JST family than the smaller series — rated up to ~10 A with AWG #16 per JST; exact current depends on contact/wire/configuration and must be verified. Still internal/protected use unless the full assembly is designed for environment/vibration. |
 | EH / ZH | 2.5 / 1.5 mm | General signal | Mid-tier signal series; check the datasheet for lock style and current. |
 
-**The professional read:** "JST" alone is not a connector specification, and it is not automatically hobby-grade — JST also makes genuinely rugged, sealed, locking automotive/industrial series. The dividing line is the specific series and whether it has a positive lock, keying, a verified crimp, and the current/seal rating your application needs.
+**The professional read:** "JST" alone is not a connector specification, and it is not automatically hobby-grade — JST also makes genuinely rugged, sealed, locking automotive/industrial series (the same territory as the [sealed-automotive families in §3.2](03-connector-standards-and-families.md#32-sealed-automotive-connector-families)). The dividing line is the specific series and whether it has a positive lock, keying, a verified crimp, and the current/seal rating your application needs.
 
 ## 12.3 Other commonly-confused prototype connectors
 
@@ -94,11 +96,11 @@ What people casually call "RJ45 Ethernet" is usually an 8P8C modular connector �
 
 For industrial/rugged Ethernet, the common options are:
 
-- **M12 D-coded** — commonly used for 10/100BASE-TX.
-- **M12 X-coded** — used for GbE/10G-class industrial Ethernet.
+- **[M12 D-coded](08-m12.md)** — commonly used for 10/100BASE-TX.
+- **[M12 X-coded](08-m12.md)** — used for GbE/10G-class industrial Ethernet.
 - **Sealed/rugged RJ45** — may be appropriate where compatibility with standard patch cables matters.
 
-Whichever you choose, check shielding continuity, strain relief, latch protection, bend radius, mating cycles, and environmental rating. Avoid exposing a normal plastic 8P8C latch where it can snag, break, fill with dirt, or lose retention.
+Whichever you choose, check shielding continuity, strain relief, latch protection, bend radius, mating cycles, and environmental rating — the [rugged Ethernet decision path](decision-paths/rugged-ethernet.md) walks the choice. Avoid exposing a normal plastic 8P8C latch where it can snag, break, fill with dirt, or lose retention.
 
 ## Sources
 

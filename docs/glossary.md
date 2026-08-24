@@ -86,7 +86,7 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **Less-contact** — a connector part number shipped without contacts; contacts and tooling must be ordered separately. See [What a full 38999 interface includes](07-mil-dtl-38999.md).
 
-**Male / female** — ambiguous by itself: the *housing* and the *contacts* each have a gender, and they often don't match intuition (a "female" housing can hold pin contacts, and vice versa). Say which you mean — or use pin/socket for contacts and plug/receptacle for bodies. See the pin/socket entry below.
+**Male / female** — ambiguous by itself: the *housing* and the *contacts* each have a gender, and they often don't match intuition (a "female" housing can hold pin contacts, and vice versa). Say which you mean — or use pin/socket for contacts and plug/receptacle for bodies. See the pin/socket entry below and [Connector Anatomy](05-connector-anatomy.md).
 
 **Mating cycles** — the rated number of connect/disconnect cycles; design with margin below it, and remember it is not a ruggedness measure. See [Quick-Reference A4](appendix/quick-reference-tables.md).
 
@@ -102,9 +102,9 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **Pitch** — the center-to-center spacing between adjacent contacts; the most discriminating easy measurement on any connector. Measure across the whole row and divide by N−1. See [Pitch: The Number That Saves You](hobby/pitch.md).
 
-**Plug / receptacle** — body *styles* (roughly: the free/cable half vs. the fixed half), but vendors do not use the words consistently — verify against the drawing's mating diagram, not the terminology. Independent of contact gender.
+**Plug / receptacle** — body *styles* (roughly: the free/cable half vs. the fixed half), but vendors do not use the words consistently — verify against the drawing's mating diagram, not the terminology. Independent of contact gender. See [Connector Anatomy](05-connector-anatomy.md).
 
-**Position / circuit / pin count** — three names for the number of contact cavities in a housing, loaded or not. Count all of them when identifying a connector.
+**Position / circuit / pin count** — three names for the number of contact cavities in a housing, loaded or not. Count all of them when identifying a connector. See the [identification workflow](connector-identification.md).
 
 **Pre-crimped lead** — a factory-terminated wire you insert into a housing yourself; often the most reliable hobby choice for tiny contacts (SH/GH/PH class). See [Crimping](hobby/crimping.md).
 
@@ -130,12 +130,12 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **Temperature rise** — the heating above ambient a contact system is allowed at its rated current; the hidden variable behind every current rating and derating curve. See [How to read a derating curve](04-connector-selection-workflow.md).
 
-**Voltage rating** — a class figure tied to insulation, spacing, and test conditions; working voltage and withstand voltage (DWV) differ, and AC/DC/altitude assumptions matter. Verify the datasheet. See [Reading Datasheets](06-reading-datasheets.md).
-
-**Wire gauge (AWG / mm²)** — conductor size. Every contact supports a defined gauge range, and both the electrical load and the crimp quality depend on staying inside it. See [Crimping](hobby/crimping.md).
-
 **TPA** — Terminal Position Assurance; a secondary lock confirming every contact is fully seated before the connector can mate. See [Major Connector Categories](02-major-connector-categories.md).
 
+**Voltage rating** — a class figure tied to insulation, spacing, and test conditions; working voltage and withstand voltage (DWV) differ, and AC/DC/altitude assumptions matter. Verify the datasheet. See [Reading Datasheets](06-reading-datasheets.md).
+
 **Wedgelock** — the separate wedge (orange on gray DEUTSCH DT plugs, green on receptacles) that locks contacts into their cavities as the secondary retention; a DT-family connector without it has no retention system. Usually a separate line item. See [DEUTSCH Deep Dive](deutsch.md).
+
+**Wire gauge (AWG / mm²)** — conductor size. Every contact supports a defined gauge range, and both the electrical load and the crimp quality depend on staying inside it. See [Crimping](hobby/crimping.md).
 
 **Wire seal / grommet** — the per-contact seal sized for a specific wire-OD range; undersized wire defeats the whole connector's sealing. See [Wire seals](05-connector-anatomy.md).

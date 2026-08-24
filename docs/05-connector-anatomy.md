@@ -59,9 +59,9 @@ Pin/socket gender is *electrical*. Plug/receptacle is *mechanical*. Do not assum
 | Solder cup | Solder joint in a cup behind the contact | Low-volume, lab, legacy mil, hermetic | Reworkable; skill-sensitive; thermal risk to insert |
 | IDC | Blade cuts through insulation | Mass-terminated ribbon, IDC D-sub | Fast, no strip; limited wire types/gauges |
 | PCB through-hole / SMT | Solder tail to board | Board-mount headers, edge connectors | Board-integrated; reflow/hand solder; no field repair |
-| Screw / cage clamp | Mechanical wire capture | Terminal blocks, panel wiring | Field-reworkable, no tooling; retention depends on the system (see Section 10) |
+| Screw / cage clamp | Mechanical wire capture | Terminal blocks, panel wiring | Field-reworkable, no tooling; retention depends on the system (see [§12.3](12-consumer-hobby-prototype-connectors.md)) |
 
-**Front-release vs. rear-release** describes how a removable crimp contact is retained in the insert and which side the tool works from. *Rear-release* contacts (the common MIL-DTL-38999 arrangement) are held by a retention clip in the insert; the insertion/extraction tool enters from the **rear** (wire side), and the contact is installed and removed rearward — convenient for field repair without disturbing the mating face. *Front-release* contacts are unlatched by a tool entering the **mating face**, though the contact is still withdrawn out the rear. Match the tool to the retention type: the wrong tool, or working from the wrong end, bends the retention fingers, damages the insert, or leaves a contact unretained.
+**Front-release vs. rear-release** describes how a removable crimp contact is retained in the insert and which side the tool works from. *Rear-release* contacts (the common [MIL-DTL-38999](07-mil-dtl-38999.md) arrangement) are held by a retention clip in the insert; the insertion/extraction tool enters from the **rear** (wire side), and the contact is installed and removed rearward — convenient for field repair without disturbing the mating face. *Front-release* contacts are unlatched by a tool entering the **mating face**, though the contact is still withdrawn out the rear. Match the tool to the retention type: the wrong tool, or working from the wrong end, bends the retention fingers, damages the insert, or leaves a contact unretained.
 
 ## 5.3 Jam nut vs. flange mount
 
@@ -86,7 +86,7 @@ Solder cups have no built-in strain relief. The backshell cable clamp is doing a
 
 :::note[Often overlooked]
 
-In sealed circular connectors, each contact cavity has a wire seal (grommet) sized for a specific wire-OD range. If your wire jacket OD is below the seal's range, the seal does not close around it — and the connector leaks at that cavity even though the shell, O-ring, and backshell are all perfect. Match wire OD to the seal range, and use sealing plugs in every unused cavity. An unused, unplugged cavity is an open hole into your sealed connector.
+In sealed circular connectors, each contact cavity has a wire seal (grommet) sized for a specific wire-OD range. If your wire jacket OD is below the seal's range, the seal does not close around it — and the connector leaks at that cavity even though the shell, O-ring, and backshell are all perfect. Match wire OD to the seal range, and use sealing plugs in every unused cavity. An unused, unplugged cavity is an open hole into your sealed connector. For a family where this discipline is the whole game, see the [DEUTSCH deep dive](deutsch.md).
 
 :::
 

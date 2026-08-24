@@ -30,10 +30,11 @@ For high-energy systems — batteries, motor controllers, heaters, PDUs — docu
 
 ## Families to start with
 
-- **Anderson SB** for battery/robot power quick-disconnects — great current density, but unsealed, unshielded, and genderless; add a boot or choose a sealed family for external/environmental interfaces.
+- **Anderson SB** for battery/robot power quick-disconnects — great current density, but unsealed, unshielded, and genderless; add a boot or choose a sealed family for external/environmental interfaces. (The lighter-duty Powerpole line pictured below shares the genderless workflow.)
 - **Industrial rectangular / Han-style power** inserts.
 - **High-current circular** connectors.
-- **MIL-DTL-38999 size 12** *only where the derating supports the load*, or **size 8 / larger** and **dedicated power contacts** (e.g. HCP/RADSOK) for higher current.
+- **Sealed automotive power** — DEUTSCH DTP (~25 A contacts) and single-cavity DTHD (~25–100 A) class parts for budget sealed power runs. See the [DEUTSCH deep dive](../deutsch.md).
+- **[MIL-DTL-38999](../07-mil-dtl-38999.md) size 12** *only where the derating supports the load*, or **size 8 / larger** and **dedicated power contacts** (e.g. HCP/RADSOK) for higher current.
 
 ![Anderson Powerpole housings and contacts on a workbench beside a wire spool and crimp tool](/img/photos/anderson-powerpole-bench.jpg)
 
@@ -68,7 +69,7 @@ See [What People Forget](../what-people-forget.md).
 - **Assuming a power connector can interrupt load current.** Most are rated for current only when fully mated; opening one under load can arc, weld or destroy the contacts, and injure the technician. If service requires disconnect under power, that capability must come from the exact datasheet — or from an upstream disconnect/contactor instead.
 - **Paralleling contacts** to reach a current unless the manufacturer/application explicitly supports it and the design is reviewed.
 - Undersizing the contact, or judging safe current from **contact size alone**.
-- Treating a hobby power connector (XT60/90) as an IP-rated professional solution.
+- Treating a hobby power connector ([XT60/90](../hobby/xt-connectors.md)) as an IP-rated professional solution.
 
 ## Questions to ask a vendor/FAE
 

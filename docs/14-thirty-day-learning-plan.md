@@ -24,7 +24,7 @@ Goal by Day 30: not connector expert, but dangerous in the useful way — able t
 
 ## Week 3 (Days 15–21) — Military / rugged
 
-**Activities:** Read Section 7. Decode several real 38999 part numbers. Identify shell size, insert arrangement, gender, service class, keying. Select a backshell + dust cap for each. Compare 38999 vs. 26482 vs. Micro-D. Do Exercises 3–5.
+**Activities:** Read Section 7. Decode several real 38999 part numbers. Identify shell size, insert arrangement, gender, service class, keying. Select a backshell + dust cap for each. Compare 38999 vs. [26482](mil-dtl-26482.md) vs. Micro-D. Do Exercises 3–5.
 
 **Deliverable:** A full 38999 interface definition: connector, mate, contacts, backshell, cap, pinout.
 

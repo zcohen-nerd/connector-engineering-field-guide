@@ -136,4 +136,6 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **TPA** — Terminal Position Assurance; a secondary lock confirming every contact is fully seated before the connector can mate. See [Major Connector Categories](02-major-connector-categories.md).
 
+**Wedgelock** — the separate wedge (orange on gray DEUTSCH DT plugs, green on receptacles) that locks contacts into their cavities as the secondary retention; a DT-family connector without it has no retention system. Usually a separate line item. See [DEUTSCH Deep Dive](deutsch.md).
+
 **Wire seal / grommet** — the per-contact seal sized for a specific wire-OD range; undersized wire defeats the whole connector's sealing. See [Wire seals](05-connector-anatomy.md).

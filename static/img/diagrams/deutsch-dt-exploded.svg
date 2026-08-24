@@ -1,0 +1,68 @@
+<svg viewBox="0 0 760 370" width="760" height="370" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- DT-family anatomy schematic: wire + crimped contact, plug housing with
+       integral rear wire seal, separate wedgelocks, sealing plug, mating
+       receptacle. Shapes are schematic — no absolute dimensions asserted.
+       Orange/green wedge colors follow the gray-housing DT convention. -->
+  <rect x="0.5" y="0.5" width="759" height="369" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">DT-family anatomy — the loose parts that make it sealed and retained</text>
+
+  <defs>
+    <marker id="dtArr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9 Z" fill="#102040"/>
+    </marker>
+  </defs>
+
+  <!-- exploded centerline -->
+  <line x1="30" y1="175" x2="730" y2="175" stroke="#e3e8ee" stroke-dasharray="5 5"/>
+
+  <!-- 1. Wire + crimped socket contact -->
+  <rect x="42" y="164" width="58" height="22" rx="10" fill="#6f8bb4" stroke="#102040" stroke-width="2"/>
+  <rect x="100" y="167" width="34" height="16" rx="3" fill="#d7dde6" stroke="#102040" stroke-width="2"/>
+  <rect x="134" y="170" width="14" height="10" rx="5" fill="#d7dde6" stroke="#102040" stroke-width="2"/>
+  <text x="95" y="216" text-anchor="middle" font-size="12" fill="#3b4453">wire + crimped contact</text>
+  <text x="95" y="230" text-anchor="middle" font-size="12" fill="#3b4453">(solid or stamped line —</text>
+  <text x="95" y="244" text-anchor="middle" font-size="12" fill="#3b4453">tooling differs)</text>
+
+  <!-- insertion arrow into rear grommet -->
+  <line x1="156" y1="175" x2="188" y2="175" stroke="#102040" stroke-width="2" marker-end="url(#dtArr)"/>
+
+  <!-- 2. Plug housing with integral rear seal -->
+  <rect x="196" y="138" width="26" height="74" rx="6" fill="#cdeef6" stroke="#0b7e96" stroke-width="2"/>
+  <rect x="222" y="130" width="118" height="90" rx="8" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <rect x="340" y="140" width="16" height="70" rx="3" fill="#d7dde6" stroke="#102040" stroke-width="2"/>
+  <circle cx="348" cy="158" r="5" fill="#ffffff" stroke="#102040" stroke-width="1.5"/>
+  <circle cx="348" cy="175" r="5" fill="#ffffff" stroke="#102040" stroke-width="1.5"/>
+  <circle cx="348" cy="192" r="5" fill="#ffffff" stroke="#102040" stroke-width="1.5"/>
+  <text x="209" y="108" text-anchor="middle" font-size="12" fill="#0b7e96">integral rear wire seal —</text>
+  <text x="209" y="122" text-anchor="middle" font-size="12" fill="#0b7e96">seals on insulation OD</text>
+  <text x="281" y="248" text-anchor="middle" font-size="12" fill="#3b4453">plug housing (DT06 —</text>
+  <text x="281" y="262" text-anchor="middle" font-size="12" fill="#3b4453">takes socket contacts)</text>
+
+  <!-- 3. Wedgelock (orange, plug side) -->
+  <path d="M 392 156 L 424 156 L 424 170 L 416 170 L 416 182 L 424 182 L 424 194 L 392 194 L 392 182 L 400 182 L 400 170 L 392 170 Z" fill="#e8720c" stroke="#102040" stroke-width="2"/>
+  <line x1="386" y1="175" x2="362" y2="175" stroke="#102040" stroke-width="2" marker-end="url(#dtArr)"/>
+  <text x="408" y="220" text-anchor="middle" font-size="12" font-weight="bold" fill="#3b4453">wedgelock</text>
+  <text x="408" y="234" text-anchor="middle" font-size="12" fill="#3b4453">separate line item;</text>
+  <text x="408" y="248" text-anchor="middle" font-size="12" fill="#3b4453">orange = plug side</text>
+
+  <!-- 4. Sealing plug for unused cavity -->
+  <rect x="168" y="286" width="12" height="26" rx="5" fill="#cdeef6" stroke="#0b7e96" stroke-width="2"/>
+  <text x="130" y="299" text-anchor="end" font-size="12" fill="#0b7e96">sealing plug in every</text>
+  <text x="130" y="313" text-anchor="end" font-size="12" fill="#0b7e96">unused cavity</text>
+
+  <!-- 5. Mating receptacle with pins and green wedgelock -->
+  <path d="M 500 148 L 524 148 L 524 156 L 508 156 L 508 194 L 524 194 L 524 202 L 500 202 Z" fill="#3a8a4d" stroke="#102040" stroke-width="2"/>
+  <text x="512" y="230" text-anchor="middle" font-size="12" fill="#3b4453">green =</text>
+  <text x="512" y="244" text-anchor="middle" font-size="12" fill="#3b4453">receptacle side</text>
+  <rect x="548" y="130" width="128" height="90" rx="8" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <line x1="560" y1="158" x2="540" y2="158" stroke="#102040" stroke-width="2.5"/>
+  <line x1="560" y1="175" x2="540" y2="175" stroke="#102040" stroke-width="2.5"/>
+  <line x1="560" y1="192" x2="540" y2="192" stroke="#102040" stroke-width="2.5"/>
+  <rect x="676" y="120" width="14" height="110" rx="3" fill="#d7dde6" stroke="#102040" stroke-width="2"/>
+  <text x="616" y="248" text-anchor="middle" font-size="12" fill="#3b4453">receptacle (DT04 —</text>
+  <text x="616" y="262" text-anchor="middle" font-size="12" fill="#3b4453">takes pin contacts;</text>
+  <text x="616" y="276" text-anchor="middle" font-size="12" fill="#3b4453">flange option shown)</text>
+
+  <text x="380" y="332" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">plug/receptacle does not tell you pin/socket — the DT06 plug carries the sockets</text>
+  <text x="380" y="356" text-anchor="middle" font-size="12" font-style="italic" fill="#6f8bb4">Schematic — cavity counts, wedge shapes, and colors vary by series and housing variant; assemble per the TE instruction sheet.</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg viewBox="0 0 720 280" width="720" height="280" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Relative DEUTSCH contact mating-end sizes, 20..4. Circle proportions
+       follow nominal published pin diameters; no absolute dimensions
+       asserted — orientation aid only. Currents are family-level classes. -->
+  <rect x="0.5" y="0.5" width="719" height="279" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="360" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">DEUTSCH contact sizes — relative mating-end size (smaller number = larger contact)</text>
+
+  <!-- 20 -->
+  <circle cx="85" cy="140" r="8" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="85" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b7e96">20</text>
+  <text x="85" y="204" text-anchor="middle" font-size="13" fill="#3b4453">~7.5 A</text>
+  <text x="85" y="221" text-anchor="middle" font-size="13" fill="#3b4453">DTM &#183; DRC</text>
+
+  <!-- 16 -->
+  <circle cx="185" cy="140" r="13" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="185" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b7e96">16</text>
+  <text x="185" y="204" text-anchor="middle" font-size="13" fill="#3b4453">~13 A</text>
+  <text x="185" y="221" text-anchor="middle" font-size="13" fill="#3b4453">DT &#183; HD10</text>
+
+  <!-- 12 -->
+  <circle cx="300" cy="140" r="19" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="300" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b7e96">12</text>
+  <text x="300" y="204" text-anchor="middle" font-size="13" fill="#3b4453">~25 A</text>
+  <text x="300" y="221" text-anchor="middle" font-size="13" fill="#3b4453">DTP &#183; DTHD-12</text>
+
+  <!-- 8 -->
+  <circle cx="445" cy="140" r="29" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="445" y="96" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b7e96">8</text>
+  <text x="445" y="204" text-anchor="middle" font-size="13" fill="#3b4453">~60 A</text>
+  <text x="445" y="221" text-anchor="middle" font-size="13" fill="#3b4453">DTHD-8 &#183; HD30</text>
+
+  <!-- 4 -->
+  <circle cx="615" cy="140" r="46" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="615" y="78" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b7e96">4</text>
+  <text x="615" y="204" text-anchor="middle" font-size="13" fill="#3b4453">~100 A</text>
+  <text x="615" y="221" text-anchor="middle" font-size="13" fill="#3b4453">DTHD-4 &#183; HD30</text>
+
+  <text x="360" y="256" text-anchor="middle" font-size="12" font-style="italic" fill="#3b4453">Approximate relative sizes, orientation only — ratings come from the exact contact datasheet and derating data.</text>
+</svg>

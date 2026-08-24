@@ -27,7 +27,7 @@ Any one of these means at least *that interface* should graduate to the [Profess
 
 ## Where to land
 
-- **First stop for most graduating projects:** [Rugged on a budget](../decision-paths/rugged-on-a-budget.md) — sealed automotive families (Deutsch, Superseal, MX150, Metri-Pack) are the natural next step above hobby parts, without mil-spec cost.
+- **First stop for most graduating projects:** [Rugged on a budget](../decision-paths/rugged-on-a-budget.md) — sealed automotive families ([Deutsch](../deutsch.md), Superseal, MX150, Metri-Pack) are the natural next step above hobby parts, without mil-spec cost.
 - **The full method:** the [selection workflow](../04-connector-selection-workflow.md) and [practical checklist](../10-selection-checklist.md).
 - **The map:** the [engineering guide home](../engineering-home.md) and its scenario cards.
 

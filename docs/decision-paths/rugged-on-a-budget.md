@@ -32,7 +32,7 @@ These are not "toy" connectors. Sealed automotive connector families are often a
 
 ## Families to start with
 
-- **Deutsch DT / DTM / DTP** — genderless wedgelock housings, hand-crimpable, ubiquitous in off-road and automotive. Rough split: **DTM** for small signal, **DT** for mid-range, **DTP** for power.
+- **Deutsch DT / DTM / DTP** — genderless wedgelock housings, hand-crimpable, ubiquitous in off-road and automotive. Rough split: **DTM** for small signal, **DT** for mid-range, **DTP** for power. Full family detail — every series and size, contact lines, tooling, part-number decode — in the [DEUTSCH Deep Dive](../deutsch.md).
 - **TE AMP Superseal 1.5 / AMPSEAL** — compact sealed inline connectors; AMPSEAL covers higher pin counts.
 - **Molex MX150 / MX150L** — sealed signal-to-power system for industrial/automotive use.
 - **Aptiv (Delphi) Metri-Pack** — long-standing automotive terminal system in sealed and unsealed variants, sized by terminal series (150/280/480/630…).

@@ -22,6 +22,7 @@ These pages summarize and cross-link the rest of the guide; they do not replace 
 | Scenario | Start here |
 |---|---|
 | Sealed sensor/actuator cable in factory or field automation | [Industrial sensor](industrial-sensor.md) |
+| Servo/motor power + encoder feedback cabling | [Motor + feedback cable](motor-feedback-cable.md) |
 | Ethernet outside a protected enclosure | [Rugged Ethernet](rugged-ethernet.md) |
 | Board-to-wire wiring inside an enclosure | [Internal PCB harnessing](internal-pcb-harnessing.md) |
 | Two boards plugging directly into each other | [Board-to-board](board-to-board.md) |

@@ -178,6 +178,7 @@ A full RF deep-dive is **out of scope for v1** of this guide; treat this as a po
 | Micro-D / MIL-DTL-83513 | Space/aero, compact high-reliability | High density, light, rugged, fine pitch | Expensive, delicate, assembly complexity, lower current |
 | Terminal blocks | Control panels, DIN-rail, service wiring | Easy troubleshooting, modular, field-friendly | Fixed types are not quick-disconnects; need enclosure |
 | Board-to-board stacking | Daughtercards, mezzanine modules, backplanes | Matched-height pairs, high density, no harness to build | Low cycle counts; needs mechanical support; tolerance-stack sensitive |
+| M23-class servo circulars | Servo motor power + encoder feedback | Multi-vendor ecosystem, shielded, IP67-class mated, quick-lock options | The drive ecosystem's cordsets usually beat a custom build; cross-vendor intermating is a claim to verify |
 | Industrial rectangular / Han-style | Machinery, removable modules, mixed power/signal/data | Modular inserts, high current, robust housings | Large, many options; qualification varies |
 | RF / coax | Antennas, RF, GPS, radar, timing | Controlled impedance, shielding, frequency-rated | Must match cable/impedance/torque/frequency |
 
@@ -193,6 +194,7 @@ A full RF deep-dive is **out of scope for v1** of this guide; treat this as a po
 | Micro-D / MIL-DTL-83513 | High | Space/weight-constrained high-reliability systems | Field-serviceable dirty environments, high current |
 | Terminal blocks | Low-Med | Industrial panels, power distribution | External rugged harness disconnects |
 | Board-to-board stacking | Low-Med | Rigid parallel/perpendicular board joints inside an assembly | Boards move relative to each other, frequent mating, or an external/sealed interface |
+| M23-class servo circulars | Med | Servo/motor power + feedback where the motor's receptacles set the series | Small motors on M12-class ecosystems; terminal-box wiring; mil requirements |
 | Industrial rectangular / Han-style | Med-High | Machine sections, removable boxes, mixed interfaces | Small payloads, aero weight-sensitive systems |
 | RF / coax | Low-High | Any real RF path | Discrete wiring / uncontrolled impedance |
 
@@ -835,6 +837,7 @@ IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure wa
 | High-current robot power (>20 A) | Anderson SB, Han-style power insert, 38999 size 8/larger or dedicated power contacts (HCP = high-current power, or RADSOK[^radsok]); size 12 only where derating supports it | M12 A-coded, XT60/90, 38999 size 16 for the full load |
 | Internal protected PCB harness | Molex Micro-Fit, TE, Harwin | Bare wire, 0.1" headers, screw terminals on PCB |
 | Two boards plugging directly together | Stacking headers or a fine-pitch mezzanine pair — one family, matched mated height | The connector as the only mechanical support; frequent-mate service joints |
+| Servo motor power + feedback | The motor's own M23-class receptacle pair or the drive ecosystem's cordsets | Custom-built feedback cables; feedback routed with power; pigtailed shields |
 | Fast quick-disconnect, moderate vibration | MIL-DTL-26482 bayonet (verify qualification for the vibration profile) | 38999 threaded (slower to mate) |
 | Rugged field wiring on a budget, no mil requirement | Sealed automotive (Deutsch DT/DTM/DTP class) | Hobby connectors outdoors; a mil circular nothing is requiring |
 | RF/antenna/GPS line | SMA/TNC/N-Type (impedance-matched) | Random circular signal contacts |

@@ -47,7 +47,7 @@ A small outdoor field robot has a **removable sensor/control module**. When the 
 
 At least three families are worth a look before committing:
 
-- **Sealed automotive (Deutsch DT / DTM / DTP)** — sealed, hand-crimpable, cheap, ubiquitous. See [rugged-on-a-budget](../decision-paths/rugged-on-a-budget.md).
+- **Sealed automotive (Deutsch DT / DTM / DTP)** — sealed, hand-crimpable, cheap, ubiquitous. See [rugged-on-a-budget](../decision-paths/rugged-on-a-budget.md) and the [DEUTSCH Deep Dive](../deutsch.md).
 - **M12 (A-coded + a separate coded connector for CAN)** — clean COTS ecosystem, molded cordsets. See [industrial sensor](../decision-paths/industrial-sensor.md).
 - **MIL-DTL-38999** — rugged and configuration-controlled, but overkill here. See the [38999 deep dive](../07-mil-dtl-38999.md).
 - **Industrial rectangular / Han-style** — great for serviceable modules, but large for a small robot. See [removable machine module](../decision-paths/removable-machine-module.md).

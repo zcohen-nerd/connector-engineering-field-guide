@@ -40,7 +40,7 @@ A **bayonet-coupling rugged circular** connector family. The coupling is a fast 
 ## 4. When to prefer M12 / sealed automotive / industrial rectangular instead
 
 - **A simple sealed sensor/actuator cable** in factory or field automation → [M12/M8](decision-paths/industrial-sensor.md) is a cleaner, cheaper, COTS ecosystem.
-- **Better-than-hobby field wiring on a budget**, with no mil requirement → [sealed automotive families](decision-paths/rugged-on-a-budget.md) (Deutsch, Superseal, MX150) cost and tool a fraction of a mil circular.
+- **Better-than-hobby field wiring on a budget**, with no mil requirement → [sealed automotive families](decision-paths/rugged-on-a-budget.md) ([Deutsch](deutsch.md), Superseal, MX150) cost and tool a fraction of a mil circular.
 - **A serviceable machine module** with mixed power/signal/data and available panel space → [industrial rectangular / Han-style](decision-paths/removable-machine-module.md).
 
 ## 5. Series and termination traps

@@ -59,7 +59,7 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 
 | Family | Typical sealing | Typical current / contact | Notes |
 |---|---|---|---|
-| Deutsch DTM / DT / DTP | IP68[^deutsch] | ~7.5 A (DTM, size 20) / ~13 A (DT, size 16) / ~25 A (DTP, size 12)[^deutsch] | Genderless wedgelock housings; ubiquitous in off-road/automotive; hand-crimpable |
+| [Deutsch DTM / DT / DTP](deutsch.md) | IP68[^deutsch] | ~7.5 A (DTM, size 20) / ~13 A (DT, size 16) / ~25 A (DTP, size 12)[^deutsch] | Genderless wedgelock housings; ubiquitous in off-road/automotive; hand-crimpable |
 | TE AMP Superseal 1.5 / AMPSEAL | IP67[^superseal] | ~14 A (Superseal 1.5)[^superseal] | Compact sealed inline; AMPSEAL for higher pin counts |
 | Molex MX150 / MX150L | IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
 | Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants[^metripack] | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify)[^metripack] | Long-standing automotive terminal system |
@@ -68,7 +68,7 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 
 *The sealed-automotive look: a Deutsch HD-style 9-pin plug (here a J1939 vehicle-diagnostic connector) — crimp contacts, wire seals, thumb-coupled shell. Photo: [Florian Schäffer](https://commons.wikimedia.org/wiki/File:J1939-Stecker.jpg), CC BY-SA 3.0, via Wikimedia Commons.*
 
-**Where they win:** datasheet-rated sealing (IP67/IP68-class, by family) and vibration performance well beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are a strong middle ground for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required — and "automotive sealed" is not a universal environmental rating. Verify the seal system, wire-seal range, cavity plugs, temperature range, vibration suitability, fluid exposure, and IP test conditions against the family documentation.
+**Where they win:** datasheet-rated sealing (IP67/IP68-class, by family) and vibration performance well beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are a strong middle ground for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required — and "automotive sealed" is not a universal environmental rating. Verify the seal system, wire-seal range, cavity plugs, temperature range, vibration suitability, fluid exposure, and IP test conditions against the family documentation. For the full DEUTSCH range — every size from DTM through DTHD, the HD circulars, and DRC — see the [DEUTSCH Deep Dive](deutsch.md).
 
 ## Sources
 

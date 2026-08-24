@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- **DEUTSCH deep dive** (`docs/deutsch.md`) — a full 38999-style deep dive, supplemental and site-only (not a canonical numbered section), covering every size of the industrial DEUTSCH range: DTM / DT / DTP / DTHD, HD10 (including the SAE J1939-13 diagnostic connector), HD30 / HDP20, DRC, and the Autosport lines, plus the solid-vs-stamped contact-system trap, sealing/wedgelock discipline, keying, and a DT part-number decode. All figures are family-level and cited (TE pages and catalogs, with distributor/industry references labeled where a TE-hosted equivalent is pending). Two new house-style line-art diagrams (`deutsch-dt-exploded.svg`, `deutsch-contact-sizes.svg`); the §3.2 J1939 photo is reused in context. Cross-linked from §3.2, the rugged-on-a-budget path, the Connector Selection Packet, the 26482 page, the hobby track's graduation page, engineering home, and the README; new sourced DEUTSCH row in the comparison matrix; new **Wedgelock** glossary entry; source-notes rows added in both copies.
+
 ## [0.10.0] - 2026-08-12
 
 ### v0.10 — Audit Hardening + Release Tooling

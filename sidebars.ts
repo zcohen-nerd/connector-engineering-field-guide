@@ -89,6 +89,7 @@ const sidebars: SidebarsConfig = {
         '07-mil-dtl-38999',
         'mil-dtl-26482',
         '08-m12',
+        'deutsch',
         '09-decision-examples',
         '10-selection-checklist',
         '11-red-flags',

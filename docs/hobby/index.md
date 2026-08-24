@@ -55,7 +55,7 @@ Covered in dedicated pages:
 - Dupont / 0.1 inch headers
 - Qwiic, STEMMA QT, and dev-board ecosystems
 - LED string and strip connectors, including JST-SM-style connectors
-- RC power connectors such as XT30, XT60, XT90
+- RC power connectors — the XT30/XT60/XT90 ecosystem, plus the wider battery-connector landscape (Deans, EC, Traxxas, Tamiya-style, bullets, Powerpole)
 - Crimping, pre-crimped leads, and connector kits
 - Identifying unknown connectors
 
@@ -65,6 +65,8 @@ Capsule notes only, for now — short field notes in [Common Hobby Connector Fam
 - Screw terminals and spring terminals
 - USB and barrel jack power
 - IDC ribbon connectors
+- FFC/FPC flat-flex (ZIF) cables
+- GX/SP-style "aviation / waterproof" marketplace circulars
 - The Grove ecosystem — its sourced connector facts live on the [Qwiic / STEMMA QT page](jst-sh-qwiic-stemma.md)
 
 ## What this guide does not do

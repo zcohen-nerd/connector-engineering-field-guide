@@ -27,6 +27,7 @@ Always verify against the *current* version of the applicable standard and the m
 | D-sub / MIL-DTL-24308 | Rack/panel, test, legacy serial/control | Cheap, common, many accessories, good density | Standard versions non-environmental; screws can loosen |
 | Micro-D / MIL-DTL-83513 | Space/aero, compact high-reliability | High density, light, rugged, fine pitch | Expensive, delicate, assembly complexity, lower current |
 | Terminal blocks | Control panels, DIN-rail, service wiring | Easy troubleshooting, modular, field-friendly | Fixed types are not quick-disconnects; need enclosure |
+| [Board-to-board stacking](decision-paths/board-to-board.md) | Daughtercards, mezzanine modules, backplanes | Matched-height pairs, high density, no harness to build | Low cycle counts; needs mechanical support; tolerance-stack sensitive |
 | Industrial rectangular / Han-style | Machinery, removable modules, mixed power/signal/data | Modular inserts, high current, robust housings | Large, many options; qualification varies |
 | RF / coax | Antennas, RF, GPS, radar, timing | Controlled impedance, shielding, frequency-rated | Must match cable/impedance/torque/frequency |
 
@@ -41,6 +42,7 @@ Always verify against the *current* version of the applicable standard and the m
 | D-sub / MIL-DTL-24308 | Low-Med | Internal panels, lab gear, legacy interfaces | Wet/dirty external use without a ruggedized variant and strategy |
 | Micro-D / MIL-DTL-83513 | High | Space/weight-constrained high-reliability systems | Field-serviceable dirty environments, high current |
 | Terminal blocks | Low-Med | Industrial panels, power distribution | External rugged harness disconnects |
+| Board-to-board stacking | Low-Med | Rigid parallel/perpendicular board joints inside an assembly | Boards move relative to each other, frequent mating, or an external/sealed interface |
 | Industrial rectangular / Han-style | Med-High | Machine sections, removable boxes, mixed interfaces | Small payloads, aero weight-sensitive systems |
 | RF / coax | Low-High | Any real RF path | Discrete wiring / uncontrolled impedance |
 
@@ -63,12 +65,13 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 | TE AMP Superseal 1.5 / AMPSEAL | IP67[^superseal] | ~14 A (Superseal 1.5)[^superseal] | Compact sealed inline; AMPSEAL for higher pin counts |
 | Molex MX150 / MX150L | IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
 | Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants[^metripack] | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify)[^metripack] | Long-standing automotive terminal system |
+| Aptiv (Delphi) Weather-Pack | Sealed — triple-ribbed self-lubricating silicone connector and cavity seals[^weatherpack] | ~20 A max continuous class (verify per terminal/gauge)[^weatherpack] | 1–6-way towers/shrouds; the classic sealed under-hood system; tin-plated crimp terminals |
 
 ![A round Deutsch HD-style 9-pin J1939 diagnostic plug with threaded coupling on a black cable](/img/photos/deutsch-j1939-plug.jpg)
 
 *The sealed-automotive look: a Deutsch HD-style 9-pin plug (here a J1939 vehicle-diagnostic connector) — crimp contacts, wire seals, thumb-coupled shell. Photo: [Florian Schäffer](https://commons.wikimedia.org/wiki/File:J1939-Stecker.jpg), CC BY-SA 3.0, via Wikimedia Commons.*
 
-**Where they win:** datasheet-rated sealing (IP67/IP68-class, by family) and vibration performance well beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are a strong middle ground for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required — and "automotive sealed" is not a universal environmental rating. Verify the seal system, wire-seal range, cavity plugs, temperature range, vibration suitability, fluid exposure, and IP test conditions against the family documentation. For the full DEUTSCH range — every size from DTM through DTHD, the HD circulars, and DRC — see the [DEUTSCH Deep Dive](deutsch.md).
+**Where they win:** datasheet-rated sealing (IP67/IP68-class, by family) and vibration performance well beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are a strong middle ground for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required — and "automotive sealed" is not a universal environmental rating. Verify the seal system, wire-seal range, cavity plugs, temperature range, vibration suitability, fluid exposure, and IP test conditions against the family documentation. For the full DEUTSCH range — every size from DTM through DTHD, the HD circulars, and DRC — see the [DEUTSCH Deep Dive](deutsch.md). Second sources exist in this territory too: Amphenol Sine's AT / ATM / ATP lines are marketed as intermateable equivalents of DEUTSCH DT / DTM / DTP[^atseries] — a legitimate sourcing option, but treat cross-vendor interfaces as compatibility claims to verify, never folklore.
 
 ## Sources
 
@@ -81,6 +84,10 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 [^superseal]: TE Connectivity AMP SUPERSEAL 1.5 — sealed IP67 automotive/industrial connector; housings rated ~14 A. <https://www.te.com/en/products/connectors/automotive-connectors/intersection/amp-superseal-1-5.html>
 
 [^mx150]: Molex, *MX150L Industrial Sealed Connector System* (Molex-hosted literature) — "IP67 rated and conforms to UL 1977"; environmentally sealed to IP67 (IEC 529); current ratings 8 AWG — 40.0 A, 10–12 AWG — 30.0 A. <https://www.content.molex.com/dxdam/literature/987650-2181.pdf> Replaces a distributor-hosted copy (audit 2026-08).
+
+[^weatherpack]: Aptiv (formerly Delphi) Weather-Pack connection system — environmentally sealed 1–6-way system with triple-ribbed self-lubricating silicone connector/cavity seals; ~20 A continuous maximum class; −40 °C to +125 °C; tin-plated crimp terminals. Distributor catalog pages (TTI, Waytek), flagged as distributor listings pending a manufacturer-hosted system document — Aptiv serves per-series documents behind tokenized URLs (see the Metri-Pack note below). <https://www.tti.com/content/ttiinc/en/manufacturers/aptiv/products/weather-pack-connectors.html>, <https://www.waytekwire.com/catalog/connectors/aptiv-weather-pack-connectors>
+
+[^atseries]: Amphenol Sine Systems AT / ATM / ATP series — marketed as intermateable, interchangeable equivalents of DEUTSCH DT / DTM / DTP; verify contact, seal, and tooling compatibility for any mixed-vendor interface against both manufacturers' documentation. <https://www.amphenol-sine.com/atm-series>
 
 [^metripack]: Aptiv (formerly Delphi) *Metri-Pack Connection System* datasheet — the series are designated by nominal terminal blade size (150/280/480/630/800 class) and offered in sealed and unsealed variants, with per-series current envelopes stated in the datasheet. The figures in this row are deliberately kept qualitative — verify the exact series/terminal datasheet before use. <https://www.tti.com/content/dam/tti-commons/supplier/aptiv/doc/aptiv-metri-pack-connection-system-datasheet-specifications.pdf> Manufacturer-direct locator: Aptiv Connection Systems catalog <https://www.aptiv.com/en/solutions/connection-systems/catalog> — Aptiv serves per-series documents behind tokenized URLs, so this distributor-hosted copy of the Aptiv system datasheet remains the stable citation (checked audit 2026-08).
 

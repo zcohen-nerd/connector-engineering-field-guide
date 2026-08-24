@@ -28,7 +28,7 @@ A **bayonet-coupling rugged circular** connector family. The coupling is a fast 
 
 - **Rugged but not extreme** environments where a fast bayonet is welcome and the available contact arrangements fit.
 - **Moderate pin counts** and rugged I/O — sensors, power, and control on a vehicle, cabinet, or piece of equipment.
-- **Legacy compatibility** — a lot of existing hardware already uses 26482, and matching it is often the requirement.
+- **Legacy compatibility** — a lot of existing hardware already uses 26482, and matching it is often the requirement. Older still is the MIL-DTL-5015 / "MS-style" threaded-circular generation: recognize those large legacy shells on existing equipment, match them where the drawings require it, and prefer 26482/38999-class families for new design.
 - Where 38999's cost, size, and tooling are **more than the job needs**.
 
 ## 3. When to prefer 38999 instead

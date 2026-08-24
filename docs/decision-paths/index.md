@@ -24,6 +24,7 @@ These pages summarize and cross-link the rest of the guide; they do not replace 
 | Sealed sensor/actuator cable in factory or field automation | [Industrial sensor](industrial-sensor.md) |
 | Ethernet outside a protected enclosure | [Rugged Ethernet](rugged-ethernet.md) |
 | Board-to-wire wiring inside an enclosure | [Internal PCB harnessing](internal-pcb-harnessing.md) |
+| Two boards plugging directly into each other | [Board-to-board](board-to-board.md) |
 | Better-than-hobby field wiring on a budget (makers going rugged) | [Rugged on a budget](rugged-on-a-budget.md) |
 | Motors, batteries, PDUs — real DC power | [High-current DC power](high-current-dc-power.md) |
 | Passing a circuit through a sealed enclosure wall | [Sealed enclosure feedthrough](sealed-enclosure-feedthrough.md) |

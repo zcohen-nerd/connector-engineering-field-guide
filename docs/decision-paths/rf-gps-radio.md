@@ -35,6 +35,7 @@ If the frequency, power, or environment is high enough to be risky — precision
 - **N-type** — larger, rugged, weatherproof-capable; common on radios and base-station/antenna lines.
 - **BNC** — quick bayonet; common for test, video, and legacy RF. Exists in **both 50 Ω and 75 Ω** variants that look alike but are not interchangeable.
 - **MCX / MMCX** — snap-on miniatures for tight spaces (e.g. GPS modules).
+- **U.FL / IPEX-style (MHF-class)** — the tiny snap-on board micro-coax on dev boards, GPS/LoRa/Wi-Fi modules, and drone gear (50 Ω, GHz-class, ultra-fine ~0.8 mm cable). These are board-assembly parts, not service ports: removal wants the extraction tool, and mating-cycle ratings are low — check the spec before planning repeated disconnects, and bring the signal to a panel via a U.FL-to-SMA bulkhead pigtail instead of cycling the board connector. Naming chaos alert: "U.FL" is Hirose's genuine series, while "IPEX"/"IPX"/"MHF" listings may or may not be the same geometry and generation — verify the mate.
 - **SMP / SMPM** — board-to-board / blind-mate miniatures for dense, high-frequency assemblies.
 - **Coax contacts inside a MIL-DTL-38999 or other hybrid connector** — for a rugged payload, one coax contact in an existing hybrid insert may beat a separate coax bulkhead. See [38999 §7.6](../07-mil-dtl-38999.md#76-coax-twinax-and-quadrax-in-a-38999).
 
@@ -53,6 +54,7 @@ If the frequency, power, or environment is high enough to be risky — precision
 - `N-type bulkhead antenna connector weatherproof`
 - `BNC 50 ohm vs 75 ohm difference`
 - `MMCX GPS antenna connector`
+- `U.FL to SMA bulkhead antenna pigtail`
 - `MIL-DTL-38999 coax contact insert arrangement`
 
 ## Specs to check
@@ -79,7 +81,7 @@ RF connector selection is not only mechanical fit. Frequency range, impedance co
 | Signal / function | GPS / antenna / radio TX/RX / timing / video / test |
 | Frequency range | per the link design |
 | Characteristic impedance | 50 Ω / 75 Ω — matched across connector, cable, termination |
-| Connector family | SMA / TNC / N / BNC / MCX/MMCX / SMP/SMPM / coax contact in a hybrid |
+| Connector family | SMA / TNC / N / BNC / MCX/MMCX / U.FL-class / SMP/SMPM / coax contact in a hybrid |
 | Cable type | the exact coax the connector is designed to terminate |
 | Insertion loss budget | dB at frequency, from the link budget |
 | Return loss / VSWR requirement | per system requirement |

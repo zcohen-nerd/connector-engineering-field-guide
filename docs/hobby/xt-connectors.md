@@ -14,7 +14,7 @@ XT connectors, battery connectors, LiPo connectors, "the yellow ones."
 
 ## What it actually is
 
-A **keyed, polarized DC power connector ecosystem** commonly sold under XT30 / XT60 / XT90 names in RC and hobby battery wiring — solder-cup bullet-style contacts in a keyed nylon shell, sized XT30 → XT60 → XT90. The originator is **Changzhou Amass Electronics (AMASS)**, which states on its manufacturer site that it is "the original creator of the XT series."[^amass] Marketplace parts may be genuine AMASS or clones of unknown quality — the ratings below describe **genuine AMASS parts only**.
+A **keyed, polarized DC power connector ecosystem** commonly sold under XT30 / XT60 / XT90 names in RC and hobby battery wiring — solder-cup bullet-style contacts in a keyed nylon shell, sized XT30 → XT60 → XT90. (Holding something that isn't an XT? The [RC battery connector landscape](rc-battery-connectors.md) identifies the rest — Deans, EC, Traxxas, Tamiya-style, bullets, Powerpole.) The originator is **Changzhou Amass Electronics (AMASS)**, which states on its manufacturer site that it is "the original creator of the XT series."[^amass] Marketplace parts may be genuine AMASS or clones of unknown quality — the ratings below describe **genuine AMASS parts only**.
 
 ![The mating ends of a yellow XT60 pair, showing the keyed shell and two bullet contacts](/img/photos/xt60-mating-ends.jpg)
 

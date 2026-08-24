@@ -36,6 +36,7 @@ These are not "toy" connectors. Sealed automotive connector families are often a
 - **TE AMP Superseal 1.5 / AMPSEAL** — compact sealed inline connectors; AMPSEAL covers higher pin counts.
 - **Molex MX150 / MX150L** — sealed signal-to-power system for industrial/automotive use.
 - **Aptiv (Delphi) Metri-Pack** — long-standing automotive terminal system in sealed and unsealed variants, sized by terminal series (150/280/480/630…).
+- **Aptiv (Delphi) Weather-Pack** — the classic 1–6-way sealed under-hood system (triple-ribbed silicone seals, ~20 A class); very often the first "sealed automotive kit" a graduating maker meets. Family figures in [§3.2](../03-connector-standards-and-families.md#32-sealed-automotive-connector-families).
 
 Family-level sealing and current figures for these live in the sourced [sealed automotive table (§3.2)](../03-connector-standards-and-families.md#32-sealed-automotive-connector-families) — read them as orientation, then verify the exact series datasheet. Don't over-shop brands: pick one family that covers your current range and stock it.
 
@@ -47,6 +48,7 @@ Family-level sealing and current figures for these live in the sourced [sealed a
 - `AMP Superseal 1.5 sealed connector`
 - `Molex MX150L sealed power connector`
 - `Metri-Pack sealed connector`
+- `Weather-Pack sealed connector 2 way 4 way`
 
 ## Specs to check
 

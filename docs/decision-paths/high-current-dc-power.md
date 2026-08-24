@@ -34,6 +34,7 @@ For high-energy systems — batteries, motor controllers, heaters, PDUs — docu
 - **Industrial rectangular / Han-style power** inserts.
 - **High-current circular** connectors.
 - **Sealed automotive power** — DEUTSCH DTP (~25 A contacts) and single-cavity DTHD (~25–100 A) class parts for budget sealed power runs. See the [DEUTSCH deep dive](../deutsch.md).
+- **MC4-style PV connectors** — the solar-string standard, common on solar-charged robots and carts too. Touch-safe and keyed, but emphatically **not load-break** (PV DC arcs — de-energize before disconnect), and manufacturers warn against mixing brands: use matched pairs from one maker and treat any "MC4-compatible" cross-mating claim as unverified.
 - **[MIL-DTL-38999](../07-mil-dtl-38999.md) size 12** *only where the derating supports the load*, or **size 8 / larger** and **dedicated power contacts** (e.g. HCP/RADSOK) for higher current.
 
 ![Anderson Powerpole housings and contacts on a workbench beside a wire spool and crimp tool](/img/photos/anderson-powerpole-bench.jpg)

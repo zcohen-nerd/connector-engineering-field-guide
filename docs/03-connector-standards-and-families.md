@@ -27,6 +27,7 @@ Always verify against the *current* version of the applicable standard and the m
 | D-sub / MIL-DTL-24308 | Rack/panel, test, legacy serial/control | Cheap, common, many accessories, good density | Standard versions non-environmental; screws can loosen |
 | Micro-D / MIL-DTL-83513 | Space/aero, compact high-reliability | High density, light, rugged, fine pitch | Expensive, delicate, assembly complexity, lower current |
 | Terminal blocks | Control panels, DIN-rail, service wiring | Easy troubleshooting, modular, field-friendly | Fixed types are not quick-disconnects; need enclosure |
+| [Board-to-board stacking](decision-paths/board-to-board.md) | Daughtercards, mezzanine modules, backplanes | Matched-height pairs, high density, no harness to build | Low cycle counts; needs mechanical support; tolerance-stack sensitive |
 | Industrial rectangular / Han-style | Machinery, removable modules, mixed power/signal/data | Modular inserts, high current, robust housings | Large, many options; qualification varies |
 | RF / coax | Antennas, RF, GPS, radar, timing | Controlled impedance, shielding, frequency-rated | Must match cable/impedance/torque/frequency |
 
@@ -41,6 +42,7 @@ Always verify against the *current* version of the applicable standard and the m
 | D-sub / MIL-DTL-24308 | Low-Med | Internal panels, lab gear, legacy interfaces | Wet/dirty external use without a ruggedized variant and strategy |
 | Micro-D / MIL-DTL-83513 | High | Space/weight-constrained high-reliability systems | Field-serviceable dirty environments, high current |
 | Terminal blocks | Low-Med | Industrial panels, power distribution | External rugged harness disconnects |
+| Board-to-board stacking | Low-Med | Rigid parallel/perpendicular board joints inside an assembly | Boards move relative to each other, frequent mating, or an external/sealed interface |
 | Industrial rectangular / Han-style | Med-High | Machine sections, removable boxes, mixed interfaces | Small payloads, aero weight-sensitive systems |
 | RF / coax | Low-High | Any real RF path | Discrete wiring / uncontrolled impedance |
 

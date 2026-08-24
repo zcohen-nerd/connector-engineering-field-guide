@@ -14,7 +14,7 @@ Scope your search by category before diving into specific families. Each categor
 |---|---|---|---|
 | Circular | External harnesses, sensors, payloads, field I/O | [MIL-DTL-38999](07-mil-dtl-38999.md), [MIL-DTL-26482](mil-dtl-26482.md), [M12](08-m12.md), M8 | You need dense rectangular modularity or DIN-rail service |
 | Rectangular | Industrial machines, panels, removable modules | Industrial rectangular / Han-style, D-sub, Micro-D | You need cylindrical sealing or compact cable routing |
-| Board-to-board | PCB stacking, mezzanine, backplanes | Samtec, TE, Molex high-speed mezzanine | Vibration exists without mechanical support |
+| [Board-to-board](decision-paths/board-to-board.md) | PCB stacking, mezzanine, backplanes | Samtec, TE, Molex high-speed mezzanine | Vibration exists without mechanical support |
 | Board-to-wire | Internal PCB harnessing | Molex Micro-Fit / Mini-Fit / Nano-Fit, TE, Harwin, JST (various) | External rugged interface unless sealed / latched / potted |
 | Wire-to-wire | Internal splices, replaceable assemblies | Molex sealed families, [TE/Deutsch](deutsch.md), Amphenol AT/ATP | High-service external panel connection unless designed for it |
 | RF / coax | Antennas, GPS, radios, radar, video, test | SMA, TNC, N-Type, BNC, SMP/SMPM, MCX | Ordinary discrete wiring / uncontrolled impedance |

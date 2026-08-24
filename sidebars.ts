@@ -66,6 +66,7 @@ const sidebars: SidebarsConfig = {
         'decision-paths/industrial-sensor',
         'decision-paths/rugged-ethernet',
         'decision-paths/internal-pcb-harnessing',
+        'decision-paths/board-to-board',
         'decision-paths/rugged-on-a-budget',
         'decision-paths/high-current-dc-power',
         'decision-paths/sealed-enclosure-feedthrough',

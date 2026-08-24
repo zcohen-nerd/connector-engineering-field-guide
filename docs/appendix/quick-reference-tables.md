@@ -51,6 +51,7 @@ IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure wa
 | Serial/debug, benign environment | Micro-D, MIL-grade D-sub, keyed header | Bare headers, exposed USB |
 | High-current robot power (>20 A) | Anderson SB, Han-style power insert, 38999 size 8/larger or dedicated power contacts (HCP = high-current power, or RADSOK[^radsok]); size 12 only where derating supports it | M12 A-coded, XT60/90, 38999 size 16 for the full load |
 | Internal protected PCB harness | Molex Micro-Fit, TE, Harwin | Bare wire, 0.1" headers, screw terminals on PCB |
+| Two boards plugging directly together | Stacking headers or a [fine-pitch mezzanine pair](../decision-paths/board-to-board.md) — one family, matched mated height | The connector as the only mechanical support; frequent-mate service joints |
 | Fast quick-disconnect, moderate vibration | [MIL-DTL-26482](../mil-dtl-26482.md) bayonet (verify qualification for the vibration profile) | 38999 threaded (slower to mate) |
 | Rugged field wiring on a budget, no mil requirement | Sealed automotive — [DEUTSCH DT/DTM/DTP class](../deutsch.md) (see the [budget path](../decision-paths/rugged-on-a-budget.md)) | Hobby connectors outdoors; a mil circular nothing is requiring |
 | RF/antenna/GPS line | SMA/TNC/N-Type (impedance-matched) | Random circular signal contacts |

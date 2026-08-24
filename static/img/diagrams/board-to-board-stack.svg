@@ -1,0 +1,60 @@
+<svg viewBox="0 0 760 340" width="760" height="340" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Board-to-board stack schematic, side view: two PCBs, mezzanine pair,
+       standoffs carrying the load, mated stack height dimensioned.
+       Schematic only — no absolute dimensions asserted. -->
+  <rect x="0.5" y="0.5" width="759" height="339" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">Board-to-board stack, side view — what holds it and what defines it</text>
+
+  <defs>
+    <marker id="b2bArr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9 Z" fill="#102040"/>
+    </marker>
+    <marker id="b2bArrC" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9 Z" fill="#0b7e96"/>
+    </marker>
+  </defs>
+
+  <!-- top PCB -->
+  <rect x="120" y="96" width="440" height="16" rx="3" fill="#6f8bb4" stroke="#102040" stroke-width="2"/>
+  <text x="340" y="88" text-anchor="middle" font-size="12" fill="#3b4453">daughtercard / module PCB</text>
+
+  <!-- bottom PCB -->
+  <rect x="80" y="216" width="520" height="16" rx="3" fill="#6f8bb4" stroke="#102040" stroke-width="2"/>
+  <text x="340" y="252" text-anchor="middle" font-size="12" fill="#3b4453">carrier / main PCB</text>
+
+  <!-- mezzanine connector pair -->
+  <rect x="300" y="112" width="120" height="48" rx="4" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <rect x="308" y="160" width="104" height="56" rx="4" fill="#d7dde6" stroke="#102040" stroke-width="2"/>
+  <line x1="322" y1="128" x2="322" y2="200" stroke="#102040" stroke-width="1.5"/>
+  <line x1="346" y1="128" x2="346" y2="200" stroke="#102040" stroke-width="1.5"/>
+  <line x1="370" y1="128" x2="370" y2="200" stroke="#102040" stroke-width="1.5"/>
+  <line x1="394" y1="128" x2="394" y2="200" stroke="#102040" stroke-width="1.5"/>
+  <text x="360" y="290" text-anchor="middle" font-size="12" fill="#3b4453">mated connector pair — header + receptacle from</text>
+  <text x="360" y="304" text-anchor="middle" font-size="12" fill="#3b4453">one family, matched to the stack height</text>
+  <line x1="390" y1="278" x2="390" y2="222" stroke="#3b4453" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- standoffs -->
+  <rect x="152" y="112" width="26" height="104" rx="4" fill="#d7dde6" stroke="#102040" stroke-width="2"/>
+  <rect x="540" y="112" width="26" height="104" rx="4" fill="#d7dde6" stroke="#102040" stroke-width="2"/>
+  <circle cx="165" cy="104" r="5" fill="#102040"/>
+  <circle cx="553" cy="104" r="5" fill="#102040"/>
+  <circle cx="165" cy="224" r="5" fill="#102040"/>
+  <circle cx="553" cy="224" r="5" fill="#102040"/>
+  <text x="165" y="252" text-anchor="middle" font-size="12" fill="#3b4453">standoff</text>
+  <text x="553" y="252" text-anchor="middle" font-size="12" fill="#3b4453">standoff</text>
+
+  <!-- load path arrows through standoffs -->
+  <line x1="165" y1="60" x2="165" y2="92" stroke="#102040" stroke-width="2.5" marker-end="url(#b2bArr)"/>
+  <line x1="553" y1="60" x2="553" y2="92" stroke="#102040" stroke-width="2.5" marker-end="url(#b2bArr)"/>
+  <text x="359" y="56" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">mechanical load goes through the standoffs — the connector carries signals, not structure</text>
+
+  <!-- stack height dimension -->
+  <line x1="650" y1="112" x2="650" y2="216" stroke="#0b7e96" stroke-width="2" marker-start="url(#b2bArrC)" marker-end="url(#b2bArrC)"/>
+  <line x1="600" y1="112" x2="662" y2="112" stroke="#0b7e96" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="620" y1="216" x2="662" y2="216" stroke="#0b7e96" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="668" y="150" font-size="13" font-weight="bold" fill="#0b7e96">mated</text>
+  <text x="668" y="166" font-size="13" font-weight="bold" fill="#0b7e96">stack</text>
+  <text x="668" y="182" font-size="13" font-weight="bold" fill="#0b7e96">height</text>
+
+  <text x="380" y="328" text-anchor="middle" font-size="12" font-style="italic" fill="#6f8bb4">Schematic — heights, tolerances, and support requirements come from the family's mated-height table and datasheet.</text>
+</svg>

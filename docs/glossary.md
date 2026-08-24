@@ -92,6 +92,8 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **Mating pair** — the two halves designed to mate, defined by the family drawing. Buy both halves deliberately; never discover the mate by trial. See [Buying the Right Mating Parts](hobby/buying-mating-parts.md).
 
+**Mezzanine (board-to-board)** — a connector pair joining two parallel PCBs at a defined mated stack height; ordered as a matched header/receptacle pair from one family's height table. See [Board-to-board](decision-paths/board-to-board.md).
+
 **Open-barrel crimp** — the common stamped-terminal crimp style with two wing sets: **conductor wings** folded onto bare strands (the electrical joint) and **insulation wings** gripping the jacket (the strain relief). Both must be formed correctly. See [Crimping](hobby/crimping.md).
 
 **Panel mount** — a connector mounted through an enclosure wall (jam nut, flange, or snap-in), making the enclosure part of the interface — panel sealing and cutout included. See [Connector Anatomy](05-connector-anatomy.md).
@@ -125,6 +127,8 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 **Slash sheet** — the numbered detail sheet under a military specification (e.g. `D38999/26…`) that defines a specific connector style. See [Decoding a part number](07-mil-dtl-38999.md).
 
 **Solder cup** — a solder-terminated contact with a cup behind it; reworkable but skill-sensitive and strain-relief-dependent. See [Solder-cup quality](05-connector-anatomy.md).
+
+**Stack height (mated height)** — the board-to-board distance a mated connector pair sets between two PCBs; the defining board-to-board spec, offered in multiple heights under near-identical part numbers — order the matched pair to it. See [Board-to-board](decision-paths/board-to-board.md).
 
 **Strain relief** — the hardware that transfers cable load into the connector body so the contacts never carry it. See [Connector Anatomy](05-connector-anatomy.md).
 

@@ -114,6 +114,7 @@ const sidebars: SidebarsConfig = {
         'tools/design-review-checklist',
         'tools/m12-coding-cheat-sheet',
         'tools/decode-38999-worksheet',
+        'tools/deutsch-decode-worksheet',
         'tools/harness-inspection-checklist',
       ],
     },

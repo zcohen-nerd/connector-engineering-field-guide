@@ -131,6 +131,8 @@ Trailing codes (`-E008`, `-P006`, `-CE05`-style suffixes) are **housing modifica
 
 The heavy circulars follow their own prefix logic: **HD34** = HD30-series receptacle, **HD36** = HD30-series plug, **HDP24/HDP26** = the HDP20-series equivalents, followed by shell size and insert arrangement (e.g. an 18-shell 14-cavity arrangement reads `18-14`).[^hd30]
 
+To decode *your* part number against TE's literature — and pick the matching contact line and crimp tooling — use the fill-in [DEUTSCH Decode & Tooling Worksheet](tools/deutsch-decode-worksheet.md).
+
 :::warning
 
 Plug/receptacle does **not** tell you pin/socket — a DT06 *plug* carries *sockets*. Energized-side rules from the [38999 mistakes table](07-mil-dtl-38999.md#79-common-38999-beginner-mistakes) apply here too: put sockets on the live side, and verify both halves as a mated pair. Also verify vendor mixing deliberately: Amphenol Sine's AT/ATM/ATP/AHD lines are marketed as intermateable equivalents of DT/DTM/DTP/HD, and they are a legitimate second source — but treat cross-vendor interfaces like any compatibility claim and confirm contacts, seals, and tooling against both datasheets rather than folklore. Anonymous marketplace "Deutsch-style" kits are a different thing entirely — see the [kit warnings in the hobby track](hobby/connector-kits.md).[^atseries]

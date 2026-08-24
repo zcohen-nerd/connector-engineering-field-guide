@@ -25,6 +25,7 @@ A dense, lightweight, high-reliability connection inside protected hardware — 
 ## Families to start with
 
 - **Micro-D (MIL-DTL-83513)** — fine pitch (contacts on .050 in / 1.27 mm centers), lightweight, rugged, high-density; the family-level figures (≈3 A-class per contact, sea-level voltage rating) and their source live in [§3 Standards and Families](../03-connector-standards-and-families.md).[^microd]
+- **Nano-D (MIL-DTL-32139)** — Micro-D's even-finer-pitch sibling for extreme miniaturization: the same handling and assembly discipline, more so. This guide quotes no figures for it — size strictly against the exact spec and part datasheet.
 - **MIL-grade D-sub (MIL-DTL-24308)** where you have the panel space and want cheaper, more forgiving hardware — see the comparison in [§3](../03-connector-standards-and-families.md).
 - For an occasional-access programming/service flavor of this problem, see the [debug / service port path](debug-service-port.md) — Micro-D appears there too.
 

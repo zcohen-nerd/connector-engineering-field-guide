@@ -25,6 +25,8 @@ Occasional programming, debug, or service access — used at a bench or in maint
 - **[Micro-D](micro-d.md)** or **MIL-grade D-sub** for a benign, protected service port.
 - **[Sealed service M12](../08-m12.md)** or a **[38999 maintenance connector](../07-mil-dtl-38999.md)** if the port is external.
 - **USB-C only behind a cover**, never as a bare exposed panel port.
+- **Push-pull latching circulars (LEMO / ODU / Fischer class)** — the premium test/medical/broadcast quick-disconnect: self-latching, compact, high-cycle — at a price class of its own. Know them on sight, and specify them where cycle count and one-handed mating justify the cost.
+- **On vehicles, the diagnostic port is already standardized** — OBD-II / SAE J1962 on cars and light trucks, the 9-pin J1939 DEUTSCH HD10 on heavy equipment (see the [DEUTSCH deep dive](../deutsch.md)). Match the standard; don't invent a port.
 
 See [Decision Examples](../09-decision-examples.md).
 

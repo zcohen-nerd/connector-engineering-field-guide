@@ -26,6 +26,8 @@ A sealed cable to a DC sensor or actuator in factory or field automation — the
 
 - **M12 A-coded** — 4-pin A-coded is extremely common for basic DC sensors; 3/4/5/8-pin variants cover most sensor/actuator/IO-Link needs.
 - **M8** — for small sensors where an M12 is physically too large (less current, fewer pins, smaller cable). See [M8 — the smaller sibling](../08-m12.md#86-m8--the-smaller-sibling).
+- **7/8-inch "mini-change"** — the larger US-heritage circular for sensor/actuator *power* distribution; you'll meet it on splitter boxes and older North American plants.
+- **DIN 43650 valve connectors ("Form A/B/C")** — the standard rectangular interface on solenoid valves and pressure switches; frequently the *other* connector on the same machine as your M12s.
 
 See the [M12 deep dive](../08-m12.md) for coding and pinout detail.
 
@@ -33,6 +35,8 @@ See the [M12 deep dive](../08-m12.md) for coding and pinout detail.
 
 - `M12 A-coded 4-pin panel mount sealed sensor connector`
 - `M8 sensor connector molded cordset`
+- `7/8 inch mini-change power cordset`
+- `DIN 43650 form A solenoid valve connector`
 
 ## Specs to check
 

@@ -65,6 +65,8 @@ Capsule notes only, for now — short field notes in [Common Hobby Connector Fam
 - Screw terminals and spring terminals
 - USB and barrel jack power
 - IDC ribbon connectors
+- FFC/FPC flat-flex (ZIF) cables
+- GX/SP-style "aviation / waterproof" marketplace circulars
 - The Grove ecosystem — its sourced connector facts live on the [Qwiic / STEMMA QT page](jst-sh-qwiic-stemma.md)
 
 ## What this guide does not do

@@ -103,6 +103,20 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 
 *Inside an IDC-10 before termination: the blade contacts pierce the ribbon's insulation in one clamping stroke — which is why re-clamping the same spot is unreliable. Photo: [Retired electrician](https://commons.wikimedia.org/wiki/File:IDC-10_female_connector_%2801%29.jpg), CC0, via Wikimedia Commons.*
 
+## FFC / FPC flat-flex cables
+
+- **Marketplace names:** flat flex, FFC, FPC, ribbon cable (confusingly), "Pi camera cable," ZIF cable.
+- **What it is:** a flat flexible cable ending in bare printed contacts that clamp into a ZIF (zero-insertion-force) latched connector on the board — the Raspberry Pi camera/display interface and the inside of most consumer electronics. The cable end *is* the contact; 1.0 mm and 0.5 mm are the common pitch classes (measure, and verify against the connector drawing).
+- **Watch for:** contacts-up vs. contacts-down orientation (both cable types exist and the connector dictates which); same-end vs. opposite-end contact versions of "the same" cable; the fragile flip- or slide-style ZIF latch; low insertion-cycle expectations; and creasing — a sharp fold can crack conductors invisibly.
+- **Boards that mount rigidly to each other** may not need a cable at all — see the [board-to-board path](../decision-paths/board-to-board.md).
+
+## GX and SP-style "aviation / waterproof" circulars
+
+- **Marketplace names:** aviation plug, aviation connector, GX12 / GX16 / GX20, SP13 / SP17 / SP21 "waterproof connector."
+- **What it is:** inexpensive marketplace circulars — GX-style are small threaded metal-shell panel connectors (the number is the nominal shell diameter in mm); SP-style are plastic shells sold with IP claims. Genuinely useful for hobby panels and quick disconnects *when treated skeptically*.
+- **Watch for:** "aviation plug" is a naming trap, not a specification ([How to Search](../00-how-to-search-for-connectors.md) uses it as the canonical vague label); current and IP claims are listing-grade until proven; sealing, where real, is conditional on gaskets, panel torque, and cable fit; and with no controlling drawing, clone-to-clone mating is never guaranteed.
+- **If the "waterproof" actually matters,** graduate to a datasheet-rated family: [rugged on a budget](../decision-paths/rugged-on-a-budget.md) or [M12-class](../decision-paths/industrial-sensor.md).
+
 ---
 
 Every family above obeys the same rules: [identify it properly](identify-unknown-connector.md), [measure the pitch](pitch.md), match [housing + contact + tooling](crimping.md), and [buy the actual mating part](buying-mating-parts.md).

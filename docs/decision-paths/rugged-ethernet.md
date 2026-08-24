@@ -25,6 +25,7 @@ Ethernet that has to leave a protected enclosure, run along a machine, or surviv
 - **M12 D-coded** — commonly used for 10/100BASE-TX industrial Ethernet. Not obsolete; the right choice at 10/100.
 - **M12 X-coded** — 8-pin, shielded; used for GbE/10G-class industrial Ethernet.
 - **Sealed / rugged RJ45** — only where it is genuinely protected and the connector system is rated for it.
+- **On the horizon:** the compact **ix Industrial** interface (IEC 61076-3-124) and **Single Pair Ethernet** connectors (IEC 63171 family) are growing in new industrial equipment — verify ecosystem maturity, cordset availability, and your fleet's tooling before adopting either.
 
 ![An M12 X-coded plug next to a clear RJ45 plug on green industrial Ethernet cable](/img/photos/m12x-vs-rj45.webp)
 

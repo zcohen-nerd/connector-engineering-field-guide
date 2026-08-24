@@ -61,6 +61,7 @@ Source targets, honestly unfilled — none of these citations exist in the repo 
 | USB connector guidance (if formalized) | USB-IF specifications (the 10k-cycle figure is already cited in §12) |
 | Barrel jacks, terminal blocks, Wago-style lever connectors, screw terminals | Relevant manufacturer documentation |
 | Deans / EC3-EC5-IC / Traxxas / Tamiya-style / bullet ratings (RC battery landscape page is deliberately rating-free) | W.S. Deans, Horizon Hobby, and Traxxas documentation for genuine parts, if any figures are ever added |
+| FFC/FPC pitch classes and cycle expectations; GX/SP-style circular claims (capsules are identification-level) | Connector-manufacturer FFC/ZIF documentation; GX/SP clones have no governing spec — listings stay untrusted |
 
 ## Recommended next deep pages
 
@@ -80,6 +81,8 @@ The editorial roadmap for this track — what exists, what's next, and in what o
 12. **JST-RCY** — capsule only; the classic red 2-pin "battery pair" and a top confusion family; deep page not started
 13. **IDC ribbon connectors** — capsule only; deep page not started
 14. **RC battery-connector landscape** — initial page added; identification-level and deliberately rating-free except the cited Anderson Powerpole figures; per-family genuine-part ratings remain a needs-source item
+15. **FFC/FPC flat-flex** — capsule only ([families](families.md)); deep page not started
+16. **GX/SP-style "aviation / waterproof" circulars** — capsule only ([families](families.md)); identification and skepticism guidance; no ratings asserted
 
 :::note
 

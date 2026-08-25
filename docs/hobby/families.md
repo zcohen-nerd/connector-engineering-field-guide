@@ -17,6 +17,13 @@ Capsule field notes on the families hobby projects actually meet: what the marke
 - **Watch for:** no positive latch (vibration walks them off), no polarization unless you add it, contact retention varying kit to kit, and the temptation to run real power through them. Great for breadboards and bench prototypes; a liability on anything that moves.
 - **Full page:** [Dupont / 0.1 Inch Headers](dupont-headers.md).
 
+## Molex Micro-Fit 3.0 (and the Fit ladder)
+
+- **Marketplace names:** Micro-Fit, "micro fit 3," MicroFit 3.0 — and, unhelpfully, just "Molex connector."
+- **What it is:** the 3.0 mm-pitch **latching** crimp family that is the classic Dupont graduation: polarized housings, positive latch, TPA options, and one contact system serving wire-to-board, wire-to-wire, and panel-mount jobs. It sits on a ladder of lookalike siblings — Nano-Fit (2.5 mm), **Mini-Fit Jr. (4.2 mm — the ATX power connector)**, Mega-Fit (5.7 mm) — and none of them intermate.
+- **Watch for:** eyeballed pitch (3.0 vs 4.2 mm is invisible in photos — [measure](pitch.md)); "micro-fit style" clone kits inheriting nothing from genuine figures; current set by the **terminal P/N**, not the family name; and standard terminals rated around **30 mating cycles** — it's a configuration interface, not a quick-disconnect.
+- **Full page:** [Micro-Fit 3.0 deep dive](../micro-fit.md) (engineering track) — the Fit ladder, the terminal-set current story, the 30-cycle surprise, and TPA/keying discipline.
+
 ## JST-XH
 
 - **Marketplace names:** XH, "JST 2.5," balance connector.

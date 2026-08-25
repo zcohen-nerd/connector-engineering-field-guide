@@ -103,6 +103,7 @@ const sidebars: SidebarsConfig = {
         '10-selection-checklist',
         '11-red-flags',
         '12-consumer-hobby-prototype-connectors',
+        'micro-fit',
         '13-hands-on-exercises',
         '14-thirty-day-learning-plan',
       ],

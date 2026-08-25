@@ -22,7 +22,7 @@ The [Hobby Connector Field Guide](hobby/index.md) covers this territory from the
 
 | Prototype / consumer choice | Production / rugged equivalent | Why |
 |---|---|---|
-| Dupont jumpers | Keyed, latching, positively retained wire-to-board (Molex Micro-Fit/Nano-Fit, Harwin, Omnetics, or JST GH where appropriate — see [internal PCB harnessing](decision-paths/internal-pcb-harnessing.md)) | Retention, polarization, repeatability |
+| Dupont jumpers | Keyed, latching, positively retained wire-to-board ([Molex Micro-Fit](micro-fit.md)/Nano-Fit, Harwin, Omnetics, or JST GH where appropriate — see [internal PCB harnessing](decision-paths/internal-pcb-harnessing.md)) | Retention, polarization, repeatability |
 | JST-XH exposed externally | [Sealed M8/M12](08-m12.md), sealed circular, [sealed wire-to-wire](deutsch.md) | Environmental protection |
 | USB-C exposed service port | Sealed service connector, internal USB behind cover, [M12 Ethernet](08-m12.md) | Robustness and sealing (see 12.4) |
 | 8P8C / RJ45 exposed outdoors | [M12 D/X-coded](decision-paths/rugged-ethernet.md) or sealed industrial RJ45 | Vibration / water protection (see 12.5) |
@@ -44,7 +44,7 @@ The sealed-automotive middle ground — the usual first landing spot for graduat
 | Crimp quality | Inconsistent with cheap tools and loose tolerances; intermittent contacts are common. |
 | Current / environment | Low current, no sealing, no strain relief. Contacts back out of the housing over time. |
 
-**Use them for:** bench prototyping, throwaway test rigs, signals you can re-seat by hand. **Avoid for:** anything that ships, moves, vibrates, or needs to be reliable. Use a keyed, latching, positively retained wire-to-board family such as Molex Micro-Fit/Nano-Fit, Harwin, Omnetics, or [JST GH](hobby/jst-gh.md) where appropriate. JST PH can be acceptable for low-stress internal wiring, but it is not a rugged external connector.
+**Use them for:** bench prototyping, throwaway test rigs, signals you can re-seat by hand. **Avoid for:** anything that ships, moves, vibrates, or needs to be reliable. Use a keyed, latching, positively retained wire-to-board family such as [Molex Micro-Fit](micro-fit.md)/Nano-Fit, Harwin, Omnetics, or [JST GH](hobby/jst-gh.md) where appropriate. JST PH can be acceptable for low-stress internal wiring, but it is not a rugged external connector.
 
 ## 12.2 The JST series — not one connector
 

@@ -63,6 +63,7 @@ Covered in dedicated pages:
 - JST-GH — the drone world's locking standard
 - Barrel jacks and their polarity traps
 - Screw terminals, spring clamps, and ferrules
+- Molex Micro-Fit 3.0 and the Fit ladder — capsule here, with the [full deep dive on the engineering track](../micro-fit.md)
 - Crimping, pre-crimped leads, and connector kits
 - Identifying unknown connectors
 

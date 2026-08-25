@@ -21,7 +21,7 @@ For a step-by-step walkthrough of the most common scenarios, see the [Decision P
 | [CAN bus](#can-bus) | M12 A-coded (CAN pinout); 38999 in defense |
 | [Ethernet in a rugged enclosure](#ethernet-in-a-rugged-enclosure) | M12 D-coded (10/100), X-coded (GbE/10G); rugged RJ45 only if protected |
 | [External service port](#external-service-port) | Sealed service M12, Micro-D, 38999 maintenance; USB only behind a cover |
-| [Internal PCB harness](#internal-pcb-harness) | Molex Micro-Fit (power), PicoBlade/JST-GH (signal), TE, Harwin |
+| [Internal PCB harness](#internal-pcb-harness) | [Molex Micro-Fit](micro-fit.md) (power), PicoBlade/JST-GH (signal), TE, Harwin |
 | [Sealed enclosure feedthrough](#sealed-enclosure-feedthrough) | 38999 jam-nut/flange, sealed M12 panel, hermetic/potted penetrator |
 | [High-vibration military payload](#high-vibration-military-payload) | MIL-DTL-38999 Series III; Micro-D internal |
 | [Removable control box](#removable-control-box) | Industrial rectangular / Han-Modular; 38999 size-23 hybrid; M12 bundle |
@@ -74,7 +74,7 @@ For a step-by-step walkthrough of the most common scenarios, see the [Decision P
 
 ## Internal PCB harness
 
-- **Families to consider:** Molex Micro-Fit (power), PicoBlade/JST-GH (signal), TE, Harwin.
+- **Families to consider:** [Molex Micro-Fit](micro-fit.md) (power), PicoBlade/[JST-GH](hobby/jst-gh.md) (signal), TE, Harwin.
 - **Specs that matter most:** Current, latch, TPA, wire gauge, vibration, tooling.
 - **Reject / why:** Loose 0.1″ headers; bare solder joints.
 - **Mistakes to avoid:** Hobby connector beyond its rating; no keying in volume production.

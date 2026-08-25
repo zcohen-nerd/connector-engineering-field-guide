@@ -64,6 +64,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'decision-paths/industrial-sensor',
+        'decision-paths/motor-feedback-cable',
         'decision-paths/rugged-ethernet',
         'decision-paths/internal-pcb-harnessing',
         'decision-paths/board-to-board',

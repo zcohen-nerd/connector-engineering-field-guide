@@ -1,0 +1,48 @@
+<svg viewBox="0 0 760 340" width="760" height="340" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Servo motor-to-drive cabling schematic: separate shielded power and
+       feedback cables, 360-degree shield termination at both ends,
+       physical separation between runs. Schematic only. -->
+  <rect x="0.5" y="0.5" width="759" height="339" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">Motor power + feedback cabling — the layout that commissions quietly</text>
+
+  <!-- motor -->
+  <rect x="48" y="110" width="132" height="120" rx="10" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <circle cx="48" cy="170" r="16" fill="#d7dde6" stroke="#102040" stroke-width="2"/>
+  <text x="114" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">servo motor</text>
+  <text x="122" y="168" text-anchor="middle" font-size="12" fill="#3b4453">receptacles define</text>
+  <text x="122" y="182" text-anchor="middle" font-size="12" fill="#3b4453">the connector series</text>
+
+  <!-- drive -->
+  <rect x="600" y="86" width="116" height="168" rx="10" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="658" y="130" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">servo drive</text>
+  <text x="658" y="148" text-anchor="middle" font-size="12" fill="#3b4453">its manual sets</text>
+  <text x="658" y="162" text-anchor="middle" font-size="12" fill="#3b4453">the cable spec</text>
+
+  <!-- power cable (upper run) -->
+  <rect x="180" y="120" width="18" height="18" rx="3" fill="#0b7e96" stroke="#102040" stroke-width="1.5"/>
+  <rect x="582" y="120" width="18" height="18" rx="3" fill="#0b7e96" stroke="#102040" stroke-width="1.5"/>
+  <line x1="198" y1="129" x2="582" y2="129" stroke="#102040" stroke-width="6"/>
+  <line x1="198" y1="129" x2="582" y2="129" stroke="#e8edf4" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="390" y="112" text-anchor="middle" font-size="12" font-weight="bold" fill="#102040">power cable — switched PWM output (+ brake / thermal wires)</text>
+
+  <!-- feedback cable (lower run) -->
+  <rect x="180" y="204" width="18" height="18" rx="3" fill="#0b7e96" stroke="#102040" stroke-width="1.5"/>
+  <rect x="582" y="204" width="18" height="18" rx="3" fill="#0b7e96" stroke="#102040" stroke-width="1.5"/>
+  <path d="M 198 213 Q 230 205 262 213 T 326 213 T 390 213 T 454 213 T 518 213 T 582 213" fill="none" stroke="#102040" stroke-width="2.5"/>
+  <path d="M 198 213 Q 230 221 262 213 T 326 213 T 390 213 T 454 213 T 518 213 T 582 213" fill="none" stroke="#6f8bb4" stroke-width="2.5"/>
+  <text x="390" y="244" text-anchor="middle" font-size="12" font-weight="bold" fill="#102040">feedback cable — encoder / resolver pairs; the control loop lives here</text>
+
+  <!-- separation callout -->
+  <line x1="390" y1="140" x2="390" y2="202" stroke="#0b7e96" stroke-width="2" stroke-dasharray="6 4" marker-start="none"/>
+  <text x="402" y="168" font-size="12" font-weight="bold" fill="#0b7e96">keep the runs</text>
+  <text x="402" y="184" font-size="12" font-weight="bold" fill="#0b7e96">separated</text>
+
+  <!-- shield note -->
+  <text x="189" y="266" text-anchor="middle" font-size="11" fill="#0b7e96">360° shield</text>
+  <text x="189" y="280" text-anchor="middle" font-size="11" fill="#0b7e96">bond, both ends</text>
+  <text x="591" y="266" text-anchor="middle" font-size="11" fill="#0b7e96">360° shield</text>
+  <text x="591" y="280" text-anchor="middle" font-size="11" fill="#0b7e96">bond, both ends</text>
+
+  <text x="380" y="306" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">two cables, shields bonded 360° at both ends per the drive manual, runs physically separated</text>
+  <text x="380" y="328" text-anchor="middle" font-size="12" font-style="italic" fill="#6f8bb4">Schematic — connector series, shield method, separation distances, and cable limits come from the motor and drive documentation.</text>
+</svg>

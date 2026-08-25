@@ -43,7 +43,7 @@ For a step-by-step walkthrough of the most common scenarios, see the [Decision P
 - **Reject / why:** XT60/90 hobby — not IP/professional; small signal circular paralleled.
 - **Mistakes to avoid:** Paralleling contacts unless the manufacturer/application explicitly supports it and the design is reviewed; undersizing the contact.
 
-*See also: [High-current DC power decision path](decision-paths/high-current-dc-power.md).*
+*See also: [High-current DC power decision path](decision-paths/high-current-dc-power.md); for a servo axis, where the motor's receptacles set the series and feedback rides alongside, the [Motor + feedback cable path](decision-paths/motor-feedback-cable.md).*
 
 ## CAN bus
 

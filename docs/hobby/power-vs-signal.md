@@ -31,7 +31,7 @@ Exact current limits are deliberately absent here: they belong to the exact cont
 | Addressable LED data | small signal connector acceptable |
 | LED strip power injection | choose current-rated power wiring/connectors |
 | RC battery | XT30/XT60/XT90-class connector depending on current |
-| Servo | servo connector, but check current and wire gauge |
+| Servo | [servo connector](servo-connectors.md), but check current and wire gauge |
 | Heated bed / hotend | current/temperature-rated connector or terminal system |
 
 :::warning

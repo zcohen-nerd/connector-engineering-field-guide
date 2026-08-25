@@ -1,0 +1,50 @@
+<svg viewBox="0 0 760 330" width="760" height="330" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Terminal clamp mechanisms in cross-section: rising clamp, direct screw,
+       spring cage, plus a ferruled stranded wire end. Schematic only. -->
+  <rect x="0.5" y="0.5" width="759" height="329" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">Three clamp mechanisms — and the ferrule that makes stranded wire clampable</text>
+
+  <!-- 1. Rising clamp -->
+  <rect x="52" y="70" width="120" height="130" rx="8" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <rect x="94" y="58" width="14" height="40" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <line x1="94" y1="66" x2="108" y2="66" stroke="#102040" stroke-width="1.5"/>
+  <rect x="68" y="120" width="88" height="10" rx="2" fill="#9db0c7" stroke="#102040" stroke-width="1.5"/>
+  <circle cx="112" cy="152" r="13" fill="#6f8bb4" stroke="#102040" stroke-width="2"/>
+  <rect x="68" y="172" width="88" height="8" rx="2" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <line x1="101" y1="98" x2="101" y2="118" stroke="#0b7e96" stroke-width="2" marker-end="none"/>
+  <text x="112" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">rising clamp</text>
+  <text x="112" y="240" text-anchor="middle" font-size="12" fill="#3b4453">plate squeezes the wire;</text>
+  <text x="112" y="254" text-anchor="middle" font-size="12" fill="#3b4453">the screw never touches it</text>
+
+  <!-- 2. Direct screw -->
+  <rect x="240" y="70" width="120" height="130" rx="8" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <rect x="282" y="58" width="14" height="70" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <line x1="282" y1="66" x2="296" y2="66" stroke="#102040" stroke-width="1.5"/>
+  <circle cx="300" cy="152" r="13" fill="#6f8bb4" stroke="#102040" stroke-width="2"/>
+  <rect x="256" y="172" width="88" height="8" rx="2" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <line x1="289" y1="128" x2="296" y2="141" stroke="#0b7e96" stroke-width="2"/>
+  <text x="300" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">direct screw</text>
+  <text x="300" y="240" text-anchor="middle" font-size="12" fill="#3b4453">screw tip bears on strands —</text>
+  <text x="300" y="254" text-anchor="middle" font-size="12" fill="#3b4453">where ferrules earn their keep</text>
+
+  <!-- 3. Spring cage -->
+  <rect x="428" y="70" width="120" height="130" rx="8" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <path d="M 448 90 L 508 90 L 508 130 L 478 150 L 448 132 Z" fill="none" stroke="#102040" stroke-width="2.5"/>
+  <circle cx="488" cy="158" r="13" fill="#6f8bb4" stroke="#102040" stroke-width="2"/>
+  <rect x="444" y="176" width="88" height="8" rx="2" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <text x="488" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">spring / cage clamp</text>
+  <text x="488" y="240" text-anchor="middle" font-size="12" fill="#3b4453">constant spring force;</text>
+  <text x="488" y="254" text-anchor="middle" font-size="12" fill="#3b4453">vibration-tolerant, torque-free</text>
+
+  <!-- 4. Ferruled wire -->
+  <rect x="600" y="120" width="60" height="24" rx="10" fill="#6f8bb4" stroke="#102040" stroke-width="2"/>
+  <rect x="660" y="124" width="44" height="16" rx="2" fill="#d7dde6" stroke="#102040" stroke-width="2"/>
+  <line x1="666" y1="124" x2="666" y2="140" stroke="#102040" stroke-width="1"/>
+  <line x1="674" y1="124" x2="674" y2="140" stroke="#102040" stroke-width="1"/>
+  <text x="652" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">the ferrule</text>
+  <text x="652" y="240" text-anchor="middle" font-size="12" fill="#3b4453">strands crimped into one</text>
+  <text x="652" y="254" text-anchor="middle" font-size="12" fill="#3b4453">solid, square end</text>
+
+  <text x="380" y="290" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">never a soldered end under a clamp — solder cold-flows and the joint loosens into heat</text>
+  <text x="380" y="316" text-anchor="middle" font-size="12" font-style="italic" fill="#6f8bb4">Schematic — gauge range, strip length, and torque come from the exact block's datasheet.</text>
+</svg>

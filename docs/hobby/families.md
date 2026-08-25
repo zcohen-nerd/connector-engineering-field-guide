@@ -41,8 +41,9 @@ Capsule field notes on the families hobby projects actually meet: what the marke
 ## JST-GH
 
 - **Marketplace names:** GH, "Pixhawk connector," drone cable.
-- **What it is:** 1.25 mm-pitch wire-to-board family **with a positive latch** — common in drones/flight controllers and embedded gear that vibrates.
+- **What it is:** 1.25 mm-pitch wire-to-board family **with a positive latch** — common in drones/flight controllers and embedded gear that vibrates. It's the connector of the Pixhawk connector standard.
 - **Watch for:** confusion with SH (1.0 mm, no latch) and with generic 1.25 mm "Molex PicoBlade-style" connectors; they are different families.
+- **Full page:** [JST-GH](jst-gh.md) — the datasheet figures, the DF13-to-GH Pixhawk story, and the PicoBlade lookalike trap.
 
 ## JST-SM and LED string connectors
 
@@ -59,6 +60,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 - **Marketplace names:** servo plug, JR/Futaba-style, 3-pin Dupont.
 - **What it is:** servo leads are commonly three-conductor signal / power / ground harnesses using 0.1-inch-class housings, but keying tabs, pin order, wire colors, and vendor conventions vary — verify the receiver/controller and servo documentation before powering.
 - **Watch for:** friction fit only — vibration protection is on you; check the servo's stall current against the lead and wire gauge, not just "it's a servo plug."
+- **Full page:** [Servo Connectors](servo-connectors.md) — the center-positive pin order, JR vs Futaba housings, the old-Airtronics trap, and the stall-current math.
 
 ![An SG90 micro servo with its three-wire lead ending in a 3-pin 0.1-inch-class servo plug](/img/photos/servo-sg90-lead.jpg)
 
@@ -73,8 +75,9 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 
 ## Screw terminals and spring terminals
 
-- **What it is:** terminal blocks (fixed or pluggable), spring/lever types (Wago-style) — field-wireable, no crimping, great for power distribution and things you'll re-wire.
+- **What it is:** terminal blocks (fixed or pluggable), spring/lever types (Wago-style) — field-wireable, no crimping, great for power distribution and things you'll re-wire. A sourced anchor for the lever class: WAGO's own [221-series family page](https://www.wago.com/gb/products/electrical-interconnections/discover-installation-terminal-blocks-and-connectors/221) rates the 4 mm² class at 32 A / 450 V IEC (20 A / 600 V UL) — and a 6 mm², 41 A-class 221-6xx line exists for heavier work. Clone "Wago-style" levers inherit none of that; full detail on the [terminals page](screw-terminals.md).
 - **Watch for:** wire must match the terminal's gauge range; stranded wire in screw terminals wants ferrules; screws loosen under vibration — retorque or use spring types; these are not sealed and not strain-relieved by themselves.
+- **Full page:** [Screw Terminals, Spring Clamps, and Ferrules](screw-terminals.md) — the clamp-style map, torque and gauge-range discipline, and the never-tin rule.
 
 ![A transparent WAGO 221 lever connector next to a stripped stranded wire](/img/photos/wago-221-lever.jpg)
 
@@ -84,6 +87,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 
 - **What it is:** the classic DC power plug (e.g. 5.5 mm OD × 2.1 or 2.5 mm ID are common sizes — verify yours).
 - **Watch for:** multiple incompatible ID/OD combinations that all look alike; center-positive vs center-negative polarity conventions; low retention (they fall out); modest current capability — check the jack's rating, not the wall adapter's label.
+- **Full page:** [Barrel Jacks and Polarity Traps](barrel-jacks.md) — the size pairs, the polarity symbol decoded, the switched pin, and real ratings.
 
 ![A panel-mount barrel jack facing a 5.5 by 2.5 millimeter barrel plug, center pin visible](/img/photos/barrel-jack-pair.jpg)
 
@@ -93,6 +97,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 
 - **What it is:** USB-A/micro-B/USB-C as hobby power-and-data workhorses.
 - **Watch for:** cheap cables with undersized conductors that drop volts under load; USB-C requiring pull-down resistors (or a PD negotiation) to get power from a C-to-C source — a bare breakout may read 0 V; connector current limits per the USB spec and the part's datasheet, not vibes. See the engineering track's [§12 consumer I/O coverage](../12-consumer-hobby-prototype-connectors.md).
+- **Full page:** [USB-C Power for Hobby Projects](usb-c-power.md) — the 5.1 kΩ resistor rule, the source's advertisement, the PD ladder to 240 W, and the cable's role.
 
 ## IDC ribbon connectors
 
@@ -106,7 +111,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 ## FFC / FPC flat-flex cables
 
 - **Marketplace names:** flat flex, FFC, FPC, ribbon cable (confusingly), "Pi camera cable," ZIF cable.
-- **What it is:** a flat flexible cable ending in bare printed contacts that clamp into a ZIF (zero-insertion-force) latched connector on the board — the Raspberry Pi camera/display interface and the inside of most consumer electronics. The cable end *is* the contact; 1.0 mm and 0.5 mm are the common pitch classes (measure, and verify against the connector drawing).
+- **What it is:** a flat flexible cable ending in bare printed contacts that clamp into a ZIF (zero-insertion-force) latched connector on the board — the Raspberry Pi camera/display interface and the inside of most consumer electronics. The cable end *is* the contact; 1.0 mm and 0.5 mm are the common pitch classes per [Molex's Easy-On FFC/FPC family](https://www.molex.com/en-us/products/connectors/ffc-fpc-connectors) (4–80 circuits) — measure, and verify against the connector drawing.
 - **Watch for:** contacts-up vs. contacts-down orientation (both cable types exist and the connector dictates which); same-end vs. opposite-end contact versions of "the same" cable; the fragile flip- or slide-style ZIF latch; low insertion-cycle expectations; and creasing — a sharp fold can crack conductors invisibly.
 - **Boards that mount rigidly to each other** may not need a cable at all — see the [board-to-board path](../decision-paths/board-to-board.md).
 

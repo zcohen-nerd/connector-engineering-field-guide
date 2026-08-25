@@ -24,7 +24,7 @@ The name does have a real ancestor: Berg's **Mini-PV** crimp system, an early 0.
 
 ## Where it shows up
 
-Breadboards, Arduino-style headers, Raspberry Pi GPIO jumper wiring, dev-board experiments, bench prototypes, test leads — anywhere speed of rewiring beats permanence.
+Breadboards, Arduino-style headers, Raspberry Pi GPIO jumper wiring, dev-board experiments, bench prototypes, test leads — anywhere speed of rewiring beats permanence. Its most famous descendant interface is the three-pin **servo lead**, which carries enough conventions and traps of its own to earn [a dedicated page](servo-connectors.md).
 
 ## How to identify it
 

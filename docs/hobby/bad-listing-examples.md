@@ -44,7 +44,7 @@ The fastest way to learn the [identification method](identify-unknown-connector.
 
 ## Example 5 — "Servo plug"
 
-**Why it's not enough:** servo leads are three-conductor signal/power/ground harnesses in 0.1-inch-class housings, but pin order, wire colors, and keying conventions vary by vendor — and stall current is what actually sizes the wiring. It's also a friction fit.
+**Why it's not enough:** servo leads are three-conductor signal/power/ground harnesses in 0.1-inch-class housings, but pin order, wire colors, and keying conventions vary by vendor — and stall current is what actually sizes the wiring. It's also a friction fit. The conventions, the two housing styles, and the current math live on the [servo connectors page](servo-connectors.md).
 
 **Corrected:**
 

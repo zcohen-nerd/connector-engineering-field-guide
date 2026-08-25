@@ -1,0 +1,52 @@
+<svg viewBox="0 0 760 340" width="760" height="340" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Powerpole system schematic: exploded pole, dovetailed pinned pair,
+       ARES orientation with reversed-mate warning. Red/black are semantic
+       (the actual housing colors of the convention). Schematic only. -->
+  <rect x="0.5" y="0.5" width="759" height="339" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">The Powerpole system — click it, pin it, build every pair one way</text>
+
+  <defs>
+    <marker id="ppArr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9 Z" fill="#102040"/>
+    </marker>
+  </defs>
+
+  <!-- Panel 1: exploded pole -->
+  <rect x="42" y="118" width="52" height="20" rx="9" fill="#6f8bb4" stroke="#102040" stroke-width="2"/>
+  <rect x="94" y="121" width="30" height="14" rx="2" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <path d="M 124 121 L 148 121 L 148 128 L 132 128 L 132 135 L 124 135 Z" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <line x1="154" y1="128" x2="176" y2="128" stroke="#102040" stroke-width="2" marker-end="url(#ppArr)"/>
+  <rect x="184" y="98" width="60" height="60" rx="8" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <path d="M 184 118 Q 196 124 184 132" fill="none" stroke="#0b7e96" stroke-width="2"/>
+  <rect x="196" y="90" width="36" height="8" rx="3" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <text x="143" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">crimp, then click</text>
+  <text x="143" y="212" text-anchor="middle" font-size="12" fill="#3b4453">the detent spring clicks over</text>
+  <text x="143" y="226" text-anchor="middle" font-size="12" fill="#3b4453">the contact — tug-test it</text>
+
+  <!-- Panel 2: dovetailed pair with roll pin -->
+  <rect x="300" y="98" width="60" height="60" rx="6" fill="#3b4453" stroke="#102040" stroke-width="2"/>
+  <rect x="360" y="98" width="60" height="60" rx="6" fill="#b3402f" stroke="#102040" stroke-width="2"/>
+  <rect x="352" y="106" width="16" height="44" rx="2" fill="#e8edf4" stroke="#102040" stroke-width="1.5"/>
+  <circle cx="360" cy="128" r="6" fill="#d7dde6" stroke="#102040" stroke-width="2"/>
+  <rect x="312" y="90" width="36" height="8" rx="3" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <rect x="372" y="90" width="36" height="8" rx="3" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <text x="360" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">dovetail + roll pin</text>
+  <text x="360" y="212" text-anchor="middle" font-size="12" fill="#3b4453">the pin turns your convention</text>
+  <text x="360" y="226" text-anchor="middle" font-size="12" fill="#3b4453">into a mechanical fact</text>
+
+  <!-- Panel 3: ARES orientation, contact-side view -->
+  <text x="600" y="82" text-anchor="middle" font-size="12" fill="#3b4453">viewed from the contact side</text>
+  <rect x="540" y="98" width="56" height="56" rx="6" fill="#3b4453" stroke="#102040" stroke-width="2"/>
+  <rect x="604" y="98" width="56" height="56" rx="6" fill="#b3402f" stroke="#102040" stroke-width="2"/>
+  <rect x="550" y="90" width="36" height="8" rx="3" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <rect x="614" y="90" width="36" height="8" rx="3" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <text x="568" y="132" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">−</text>
+  <text x="632" y="132" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">+</text>
+  <text x="600" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">"Red Right, Tongue Top"</text>
+  <text x="600" y="212" text-anchor="middle" font-size="12" fill="#3b4453">the ARES/RACES standard —</text>
+  <text x="600" y="226" text-anchor="middle" font-size="12" fill="#3b4453">and the whole accessory ecosystem's assumption</text>
+
+  <text x="380" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">four ways to assemble a red/black pair: two won't mate with the standard — and one mates perfectly, reversed</text>
+  <text x="380" y="294" text-anchor="middle" font-size="13" font-weight="bold" fill="#b3402f">the wrong arrangement doesn't refuse to connect. it connects backwards.</text>
+  <text x="380" y="322" text-anchor="middle" font-size="12" font-style="italic" fill="#6f8bb4">Schematic — housing colors are identification only and every color mates every color; the convention is the polarity protection.</text>
+</svg>

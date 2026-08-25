@@ -20,7 +20,7 @@ Terminal blocks are the connector nobody thinks of as a connector — which is e
 | **Direct/plate screw** | Screw tip bears on the conductor | Cheap PCB blocks, barrier strips | Screw rotation can birdcage stranded wire; ferrules earn their keep here |
 | **Barrier strip** | Screw + captive wire or ring/spade lug | Older equipment, audio, mains-adjacent wiring | Really a lug interface — crimp rings/spades beat bare wire under a screw head |
 | **Push-in / cage-clamp spring** | Spring presses the conductor against a busbar | Modern DIN-rail and PCB blocks | Vibration-tolerant, torque-free — but stranded wire wants a ferrule to push in |
-| **Lever (Wago-style)** | Operator-actuated spring | Field splices, lighting | The sourced anchor for the class: WAGO's own 221 family page rates it 32 A / 450 V over 0.2–4 mm²[^wago221] — clone levers inherit none of that |
+| **Lever (Wago-style)** | Operator-actuated spring | Field splices, lighting, power distribution | The one clamp class with deep genuine-part documentation — the full story, both size classes and both rating systems, in [§3 below](#3-lever-connectors-for-real-power-work) |
 | **Pluggable two-part** | Any of the above, in a header-and-plug pair | Motor drivers, industrial PCBs | The unplug-to-service upgrade — and home of the pitch trap below |
 
 ![Line diagram comparing three terminal clamp mechanisms in cross-section — rising clamp, direct screw, and spring cage — plus a ferruled stranded wire](/img/diagrams/hobby-terminal-clamps.svg)
@@ -36,7 +36,27 @@ Terminal blocks are the connector nobody thinks of as a connector — which is e
 - **One conductor per clamp point** unless the datasheet explicitly rates two — and two-wire ratings usually require same gauge, same type.
 - **Vibration prefers springs.** Screws loosen under vibration unless retorqued or locked; spring and cage-clamp styles hold by design — the reason modern machine wiring went push-in.
 
-## 3. Ferrules — the missing part of every stranded-wire clamp
+## 3. Lever connectors for real power work
+
+The lever class is the one corner of this page with deep, genuine-part documentation — which is exactly why it's the field-splice workhorse. The details that matter when a lever connector carries real current, per WAGO's own documentation:[^wago221][^wago221-6]
+
+| | 221-4xx (4 mm² class) | 221-6xx (6 mm² class) |
+|---|---|---|
+| Conductors | 0.2–4 mm² solid/stranded, 0.14–4 mm² fine-stranded (24–12 AWG) | 0.5–6 mm², all conductor types (20–10 AWG) |
+| IEC rating | up to 32 A / 450 V | 41 A / 450 V |
+| UL rating — *same part* | 20 A / 600 V | 30 A / 600 V (UL 486C) |
+| Temperature class | 85 °C surrounding air | 85 °C surrounding air |
+
+Four things to internalize:
+
+- **The 6 mm² line exists.** Most people only know the 4 mm² connectors; the 221-6xx family is the same mechanism scaled to 10 AWG and a 41 A IEC class — the difference between a lighting splice and actual power distribution.
+- **The IEC and UL numbers differ on the identical part.** 32 A / 450 V and 20 A / 600 V describe the *same connector* under two certification regimes (EN 60664-based IEC characterization vs. the UL 486C listing). Design to the rating system your jurisdiction and inspection actually use — and check which system a listing is quoting before comparing parts.
+- **Fine-stranded without ferrules is the lever's superpower.** The lever clamp is specified for fine-stranded conductors directly — the practical selection line between levers and push-in spring connectors, which want solid wire or a ferruled end.
+- **Carriers make it an installation.** WAGO's mounting-carrier and strain-relief accessories fix 221s in an enclosure — the difference between a loose splice and a serviceable distribution point. A lever connector is still not a junction box: the moment it's mains, enclosure and local code govern.
+
+And once more for the back: these figures are for **genuine WAGO 221s** — marketplace "Wago-style" levers inherit none of them.
+
+## 4. Ferrules — the missing part of every stranded-wire clamp
 
 A ferrule (bootlace ferrule, per the DIN 46228 style system) is a crimped tin-plated sleeve that turns a bundle of strands into one solid, square-shouldered pin. That's what a clamp is designed to grip. Ferrules stop strand splay and whiskering, survive re-termination, and give spring/push-in blocks something to actually push against. Two disciplines:
 
@@ -47,11 +67,11 @@ A ferrule (bootlace ferrule, per the DIN 46228 style system) is a crimped tin-pl
 
 *The ferrule kit and its crimper — the stranded wire's ticket into any clamp. Photo: [Simon A. Eugster](https://commons.wikimedia.org/wiki/File:Wire_ferrules_with_and_without_insulation.jpg), CC BY-SA 3.0, via Wikimedia Commons.*
 
-## 4. The rule: never tin stranded wire before clamping
+## 5. The rule: never tin stranded wire before clamping
 
 Soldering the end of a stranded wire and putting it under a screw feels tidy and is a **long-established prohibition** in wiring practice: solder is soft and *cold-flows* under sustained clamp pressure, so the joint the screw made on day one slowly relaxes into a loose, high-resistance joint — the failure arrives months later, as heat, in the exact spot carrying your power. Bare stranded wire in a rising clamp, or a **crimped ferrule**, is the correct end. (Mechanism widely documented across wiring codes and manufacturer guidance; a first-party manufacturer citation is tracked as an open source target in [Hobby Source Notes](hobby-source-notes.md).)
 
-## 5. Traps
+## 6. Traps
 
 - **Tinned wire under a clamp** — see above; the tidy-looking one is the fire risk.
 - **Stray strands.** One whisker outside the clamp is a short waiting for a neighbor. Twist, ferrule, inspect.
@@ -61,14 +81,16 @@ Soldering the end of a stranded wire and putting it under a screw feels tidy and
 - **Re-stripping into the same clamp forever.** Clamps have finite re-termination cycles too; when the block's had a hard life, replace it.
 - **Mains voltage.** The moment a terminal block carries mains, you've left this guide's lane: enclosure, creepage, touch protection, and local electrical code govern — not hobby judgment.
 
-## 6. When to move to the engineering track
+## 7. When to move to the engineering track
 
 Field-serviceable distribution done right — DIN-rail terminal blocks in an enclosure with documented torque and wire prep — is the professional version of this page: see [§12.3](../12-consumer-hobby-prototype-connectors.md), [terminal blocks in the family map](../03-connector-standards-and-families.md), and, when the wiring leaves the bench, [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md).
 
 ## Source status
 
-Lever-class figures are cited to WAGO's own 221 family page.[^wago221] Clamp-style anatomy, strip-length/gauge-range/one-wire rules, and the pitch families are identification- and process-level, deferring numbers to the exact block's datasheet throughout. The never-tin rule is stated with its mechanism as established practice — a first-party manufacturer document remains an open source target, as do representative torque-class figures; both tracked in [Hobby Source Notes](hobby-source-notes.md). DIN 46228 is named as the ferrule style system without reproducing its tables.
+Lever-class figures — both size classes, both rating systems — are cited to WAGO's own family and product pages.[^wago221][^wago221-6] Clamp-style anatomy, strip-length/gauge-range/one-wire rules, and the pitch families are identification- and process-level, deferring numbers to the exact block's datasheet throughout. The never-tin rule is stated with its mechanism as established practice — a first-party manufacturer document remains an open source target, as do representative torque-class figures; both tracked in [Hobby Source Notes](hobby-source-notes.md). DIN 46228 is named as the ferrule style system without reproducing its tables.
 
 ## Sources
 
-[^wago221]: WAGO, *221 Series* installation connector family page — lever-actuated splicing connectors rated at a 32 A / 450 V class across 0.2–4 mm² solid and fine-stranded conductors (0.2–2.5 mm² stranded); tool-free lever operation. Genuine-family figures only; "Wago-style" clones are not covered. <https://www.wago.com/gb/products/electrical-interconnections/discover-installation-terminal-blocks-and-connectors/221>
+[^wago221]: WAGO, *221 Series* 4 mm² class (221-412 / -413 / -415) — lever splicing connectors for solid/stranded 0.2–4 mm² and fine-stranded 0.14–4 mm² conductors (24–12 AWG); IEC characterization up to 32 A / 450 V; UL rating 20 A / 600 V on the same parts; 85 °C surrounding-air class. Genuine-family figures only; "Wago-style" clones are not covered. Family pages: <https://www.wago.com/gb/products/electrical-interconnections/discover-installation-terminal-blocks-and-connectors/221>, <https://www.wago.com/us/splicing-connectors-221>
+
+[^wago221-6]: WAGO, *221 Series* 6 mm² class (221-612 / -613 / -615) — the same lever mechanism for all conductor types 0.5–6 mm² (20–10 AWG); 41 A / 450 V IEC, 30 A / 600 V per the UL 486C listing; 85 °C surrounding-air class. WAGO product page (figures mirrored across distributor spec listings): <https://www.wago.com/global/installation-terminal-blocks-and-connectors/splicing-connector-with-levers/p/221-612>

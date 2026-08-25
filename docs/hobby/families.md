@@ -75,6 +75,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 
 - **What it is:** terminal blocks (fixed or pluggable), spring/lever types (Wago-style) — field-wireable, no crimping, great for power distribution and things you'll re-wire. A sourced anchor for the lever class: WAGO's own [221-series family page](https://www.wago.com/gb/products/electrical-interconnections/discover-installation-terminal-blocks-and-connectors/221) rates it at a 32 A / 450 V class over 0.2–4 mm² conductors — clone "Wago-style" levers inherit none of that.
 - **Watch for:** wire must match the terminal's gauge range; stranded wire in screw terminals wants ferrules; screws loosen under vibration — retorque or use spring types; these are not sealed and not strain-relieved by themselves.
+- **Full page:** [Screw Terminals, Spring Clamps, and Ferrules](screw-terminals.md) — the clamp-style map, torque and gauge-range discipline, and the never-tin rule.
 
 ![A transparent WAGO 221 lever connector next to a stripped stranded wire](/img/photos/wago-221-lever.jpg)
 
@@ -84,6 +85,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 
 - **What it is:** the classic DC power plug (e.g. 5.5 mm OD × 2.1 or 2.5 mm ID are common sizes — verify yours).
 - **Watch for:** multiple incompatible ID/OD combinations that all look alike; center-positive vs center-negative polarity conventions; low retention (they fall out); modest current capability — check the jack's rating, not the wall adapter's label.
+- **Full page:** [Barrel Jacks and Polarity Traps](barrel-jacks.md) — the size pairs, the polarity symbol decoded, the switched pin, and real ratings.
 
 ![A panel-mount barrel jack facing a 5.5 by 2.5 millimeter barrel plug, center pin visible](/img/photos/barrel-jack-pair.jpg)
 

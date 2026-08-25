@@ -59,7 +59,7 @@ Source targets, honestly unfilled — none of these citations exist in the repo 
 | Crimping tiny open-barrel terminals | Manufacturer application notes / crimp specifications |
 | LED power injection guidance (if expanded) | Reputable LED wiring/power-injection references |
 | USB connector guidance (if formalized) | USB-IF specifications (the 10k-cycle figure is already cited in §12) |
-| Barrel jacks, terminal blocks, Wago-style lever connectors, screw terminals | Relevant manufacturer documentation. **Partially closed (audit 2026-08):** genuine WAGO 221 class figures now cited to WAGO's own family page in the families capsule; barrel jacks and screw terminals remain open |
+| Barrel jacks, terminal blocks, Wago-style lever connectors, screw terminals | Relevant manufacturer documentation. **Substantially closed (audit 2026-08):** WAGO 221 figures cited to WAGO's family page; barrel structure/polarity to Same Sky's selection guide with a representative rating from the PJ-102A datasheet. **Still open:** representative torque-class figures, a first-party never-tin-stranded-wire manufacturer document, EIAJ RC-5320A per-class voltage figures, and every clone-block rating |
 | Deans / EC3-EC5-IC / Traxxas / Tamiya-style / bullet ratings (RC battery landscape page is deliberately rating-free) | W.S. Deans, Horizon Hobby, and Traxxas documentation for genuine parts, if any figures are ever added. **Partially closed (audit 2026-08):** the Deans/T-plug originator claim is now cited to W.S. Deans' own site; ratings remain deliberately unasserted |
 | FFC/FPC pitch classes and cycle expectations; GX/SP-style circular claims (capsules are identification-level) | Connector-manufacturer FFC/ZIF documentation; GX/SP clones have no governing spec — listings stay untrusted. **Partially closed (audit 2026-08):** the 0.5/1.0 mm FFC pitch classes are now cited to Molex's Easy-On family page; cycle expectations and all GX/SP claims remain open |
 
@@ -73,9 +73,9 @@ The editorial roadmap for this track — what exists, what's next, and in what o
 4. **Dupont / 0.1 inch headers** — initial page added (v0.9); no governing spec exists, by nature; name lineage (Berg Mini-PV → DuPont → FCI → Amphenol) sourced (audit-2026-07)
 5. **XT30 / XT60 / XT90** — initial page added (v0.9); AMASS attribution and ratings sourced (audit-2026-07, distributor-hosted manufacturer PDFs); clone parts remain uncovered
 6. **Servo connectors** — capsule only; deep page not started
-7. **Screw/spring terminals and ferrules** — capsule only; deep page not started
+7. **Screw/spring terminals and ferrules** — initial page added (audit 2026-08); WAGO 221 lever-class figures cited; torque-class figures and a first-party never-tin-stranded-wire citation remain open
 8. **USB-C power for hobby projects** — capsule only; deep page not started
-9. **Barrel jacks and polarity traps** — capsule only; deep page not started
+9. **Barrel jacks and polarity traps** — initial page added (audit 2026-08); structure/polarity/switched-contact claims sourced to Same Sky's selection guide and the representative rating to the PJ-102A datasheet; EIAJ per-class figures deliberately unquoted
 10. **Grove ecosystem** — deep page not started; connector and pinout-varies-by-port-type facts sourced to Seeed docs (audit-2026-07)
 11. **JST-GH** — capsule only ([families](families.md)); datasheet-cited rows already exist in the confusion tables and §12.2; deep page not started
 12. **JST-RCY** — capsule only; the classic red 2-pin "battery pair" and a top confusion family; deep page not started

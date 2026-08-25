@@ -56,14 +56,15 @@ Covered in dedicated pages:
 - Qwiic, STEMMA QT, and dev-board ecosystems
 - LED string and strip connectors, including JST-SM-style connectors
 - RC power connectors — the XT30/XT60/XT90 ecosystem, plus the wider battery-connector landscape (Deans, EC, Traxxas, Tamiya-style, bullets, Powerpole)
+- Barrel jacks and their polarity traps
+- Screw terminals, spring clamps, and ferrules
 - Crimping, pre-crimped leads, and connector kits
 - Identifying unknown connectors
 
 Capsule notes only, for now — short field notes in [Common Hobby Connector Families](families.md), with deep pages on the [roadmap](hobby-source-notes.md):
 
 - Servo connectors
-- Screw terminals and spring terminals
-- USB and barrel jack power
+- USB power
 - IDC ribbon connectors
 - FFC/FPC flat-flex (ZIF) cables
 - GX/SP-style "aviation / waterproof" marketplace circulars

@@ -22,6 +22,8 @@ const sidebars: SidebarsConfig = {
         'hobby/jst-sm-led-connectors',
         'hobby/xt-connectors',
         'hobby/rc-battery-connectors',
+        'hobby/barrel-jacks',
+        'hobby/screw-terminals',
       ],
     },
     'hobby/power-vs-signal',

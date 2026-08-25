@@ -66,8 +66,8 @@ The sealed-automotive middle ground — the usual first landing spot for graduat
 | Connector | What it really is | Professional caution |
 |---|---|---|
 | IDC ribbon (2.54 mm) | Mass-terminated ribbon header (e.g. classic 10/16/40-pin) | Convenient internal use; no strain relief or sealing. Fine inside a box, but a poor choice as an external interface. |
-| Barrel jack (DC power) | Coaxial DC power plug | Mechanically keyed center/sleeve interface, but no universal polarity convention; center-positive vs. center-negative mistakes are common. Usually poor retention unless a locking type is used. |
-| Screw terminal block (PCB) | Wire clamped by a screw on the board edge | Can loosen under vibration if not designed, torqued, retained, or inspected appropriately. Use a proper latching connector or move clamping into an enclosure terminal block. |
+| [Barrel jack](hobby/barrel-jacks.md) (DC power) | Coaxial DC power plug | Mechanically keyed center/sleeve interface, but no universal polarity convention; center-positive vs. center-negative mistakes are common. Usually poor retention unless a locking type is used. |
+| [Screw terminal block](hobby/screw-terminals.md) (PCB) | Wire clamped by a screw on the board edge | Can loosen under vibration if not designed, torqued, retained, or inspected appropriately. Use a proper latching connector or move clamping into an enclosure terminal block. |
 | Pluggable terminal block | Pluggable 2-part screw/spring terminal block, often Phoenix Contact / WAGO / Weidmüller style | Legitimate for panel/field wiring inside enclosures. Not automatically sealed or vibration-rated — house it appropriately. |
 
 :::tip

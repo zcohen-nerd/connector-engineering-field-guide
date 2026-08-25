@@ -1,0 +1,34 @@
+<svg viewBox="0 0 720 260" width="720" height="260" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- DC barrel polarity symbol decoded: center-positive vs center-negative.
+       Schematic recreation of the standard adapter glyph; verify with a
+       meter is the teaching point. -->
+  <rect x="0.5" y="0.5" width="719" height="259" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="360" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">The polarity symbol, decoded — dot = pin, arc = sleeve</text>
+
+  <!-- Center-positive glyph -->
+  <text x="80" y="118" text-anchor="middle" font-size="26" font-weight="bold" fill="#102040">+</text>
+  <line x1="96" y1="110" x2="150" y2="110" stroke="#102040" stroke-width="2.5"/>
+  <circle cx="176" cy="110" r="22" fill="none" stroke="#102040" stroke-width="2.5"/>
+  <circle cx="176" cy="110" r="5.5" fill="#102040"/>
+  <path d="M 176 82 A 28 28 0 1 0 176 138" fill="none" stroke="#102040" stroke-width="2.5"/>
+  <line x1="176" y1="82" x2="176" y2="88" stroke="#ffffff" stroke-width="0"/>
+  <line x1="204" y1="110" x2="252" y2="110" stroke="#102040" stroke-width="2.5"/>
+  <text x="268" y="118" text-anchor="middle" font-size="26" font-weight="bold" fill="#102040">−</text>
+  <text x="176" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">center-positive</text>
+  <text x="176" y="188" text-anchor="middle" font-size="12" fill="#3b4453">the common convention —</text>
+  <text x="176" y="203" text-anchor="middle" font-size="12" fill="#3b4453">most wall adapters</text>
+
+  <!-- Center-negative glyph -->
+  <text x="452" y="118" text-anchor="middle" font-size="26" font-weight="bold" fill="#102040">−</text>
+  <line x1="468" y1="110" x2="522" y2="110" stroke="#102040" stroke-width="2.5"/>
+  <circle cx="548" cy="110" r="22" fill="none" stroke="#102040" stroke-width="2.5"/>
+  <circle cx="548" cy="110" r="5.5" fill="#102040"/>
+  <path d="M 548 82 A 28 28 0 1 0 548 138" fill="none" stroke="#102040" stroke-width="2.5"/>
+  <line x1="576" y1="110" x2="624" y2="110" stroke="#102040" stroke-width="2.5"/>
+  <text x="640" y="118" text-anchor="middle" font-size="26" font-weight="bold" fill="#102040">+</text>
+  <text x="548" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">center-negative</text>
+  <text x="548" y="188" text-anchor="middle" font-size="12" fill="#3b4453">the guitar-pedal world —</text>
+  <text x="548" y="203" text-anchor="middle" font-size="12" fill="#3b4453">identical plug, opposite wiring</text>
+
+  <text x="360" y="238" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">the symbol is the contract — the meter is the proof; verify before the plug touches anything you care about</text>
+</svg>

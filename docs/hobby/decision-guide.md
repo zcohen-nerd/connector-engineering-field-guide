@@ -20,8 +20,8 @@ Starting points, not verdicts — each row assumes you'll [identify properly](id
 | LED power injection | rated power wiring — terminals, ferrules, Wago-style, XT-class | calculate current first; not the data pigtail |
 | RC battery / high-current DC | XT30/XT60/XT90 class by calculated current ([identify what you're holding first](rc-battery-connectors.md)) | datasheet rating, genuine parts, no unplugging under load |
 | Servos | the servo-lead ecosystem | stall current, wire gauge, pin-order convention |
-| Field-serviceable power distribution | screw/spring (Wago-style) terminals | gauge range, ferrules on stranded wire, strain relief |
-| Wall-adapter power inlet | barrel jack or USB-C | barrel sizes/polarity vary; USB-C needs resistors/PD to deliver |
+| Field-serviceable power distribution | [screw/spring (Wago-style) terminals](screw-terminals.md) | gauge range, ferrules on stranded wire, strain relief |
+| Wall-adapter power inlet | [barrel jack](barrel-jacks.md) or USB-C | barrel sizes/polarity vary; USB-C needs resistors/PD to deliver |
 | Anything leaving the bench for the field | → [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md), then [rugged on a budget](../decision-paths/rugged-on-a-budget.md) | sealing, vibration, current, and other people |
 
 For the family-by-family detail behind every row: [Common Hobby Connector Families](families.md).

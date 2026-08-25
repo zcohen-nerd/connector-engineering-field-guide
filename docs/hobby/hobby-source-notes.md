@@ -83,6 +83,7 @@ The editorial roadmap for this track — what exists, what's next, and in what o
 14. **RC battery-connector landscape** — initial page added; identification-level and deliberately rating-free except the cited Anderson Powerpole figures; per-family genuine-part ratings remain a needs-source item
 15. **FFC/FPC flat-flex** — capsule only ([families](families.md)); deep page not started
 16. **GX/SP-style "aviation / waterproof" circulars** — capsule only ([families](families.md)); identification and skepticism guidance; no ratings asserted
+17. **Anderson Powerpole** — initial page added (audit 2026-08); PP15/45 figures and contact plating cited to Anderson's own datasheet/listings; PP75-class ladder figures partially distributor-listed (labeled) pending Anderson-hosted equivalents; the ARES/RACES orientation convention cited to emergency-service training references
 
 :::note
 

@@ -30,7 +30,7 @@ For high-energy systems — batteries, motor controllers, heaters, PDUs — docu
 
 ## Families to start with
 
-- **Anderson SB** for battery/robot power quick-disconnects — great current density, but unsealed, unshielded, and genderless; add a boot or choose a sealed family for external/environmental interfaces. (The lighter-duty Powerpole line pictured below shares the genderless workflow.)
+- **Anderson SB** for battery/robot power quick-disconnects — great current density, but unsealed, unshielded, and genderless; add a boot or choose a sealed family for external/environmental interfaces. (The lighter-duty Powerpole line pictured below shares the genderless workflow — the hobby track's [Powerpole deep dive](../hobby/anderson-powerpole.md) covers that system, its family ladder, and its orientation discipline.)
 - **Industrial rectangular / Han-style power** inserts.
 - **High-current circular** connectors.
 - **Sealed automotive power** — DEUTSCH DTP (~25 A contacts) and single-cavity DTHD (~25–100 A) class parts for budget sealed power runs. See the [DEUTSCH deep dive](../deutsch.md).

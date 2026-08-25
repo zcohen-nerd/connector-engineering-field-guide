@@ -54,14 +54,14 @@ Source targets, honestly unfilled — none of these citations exist in the repo 
 
 | Item | Source target |
 |---|---|
-| JST EH/ZH (mentioned only as published-pitch examples) | Official JST datasheets per series, if those mentions are kept |
+| JST EH/ZH (mentioned only as published-pitch examples) | **Closed (audit 2026-08):** EH cited to the official JST series PDF and ZH to JST's official product page; pitch and headline-rating figures now live in §12.2 and its `[^jst]` footnote |
 | XT ratings from AMASS-direct hosting | Closed for values (audit-2026-07) via distributor-hosted AMASS PDFs; an AMASS-domain-hosted equivalent would still be an upgrade |
 | Crimping tiny open-barrel terminals | Manufacturer application notes / crimp specifications |
 | LED power injection guidance (if expanded) | Reputable LED wiring/power-injection references |
 | USB connector guidance (if formalized) | USB-IF specifications (the 10k-cycle figure is already cited in §12) |
-| Barrel jacks, terminal blocks, Wago-style lever connectors, screw terminals | Relevant manufacturer documentation |
-| Deans / EC3-EC5-IC / Traxxas / Tamiya-style / bullet ratings (RC battery landscape page is deliberately rating-free) | W.S. Deans, Horizon Hobby, and Traxxas documentation for genuine parts, if any figures are ever added |
-| FFC/FPC pitch classes and cycle expectations; GX/SP-style circular claims (capsules are identification-level) | Connector-manufacturer FFC/ZIF documentation; GX/SP clones have no governing spec — listings stay untrusted |
+| Barrel jacks, terminal blocks, Wago-style lever connectors, screw terminals | Relevant manufacturer documentation. **Partially closed (audit 2026-08):** genuine WAGO 221 class figures now cited to WAGO's own family page in the families capsule; barrel jacks and screw terminals remain open |
+| Deans / EC3-EC5-IC / Traxxas / Tamiya-style / bullet ratings (RC battery landscape page is deliberately rating-free) | W.S. Deans, Horizon Hobby, and Traxxas documentation for genuine parts, if any figures are ever added. **Partially closed (audit 2026-08):** the Deans/T-plug originator claim is now cited to W.S. Deans' own site; ratings remain deliberately unasserted |
+| FFC/FPC pitch classes and cycle expectations; GX/SP-style circular claims (capsules are identification-level) | Connector-manufacturer FFC/ZIF documentation; GX/SP clones have no governing spec — listings stay untrusted. **Partially closed (audit 2026-08):** the 0.5/1.0 mm FFC pitch classes are now cited to Molex's Easy-On family page; cycle expectations and all GX/SP claims remain open |
 
 ## Recommended next deep pages
 

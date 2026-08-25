@@ -20,7 +20,7 @@ With one sourced exception (Anderson Powerpole, below), **no current ratings are
 
 | You're holding | ID marks | Where you meet it | Watch out |
 |---|---|---|---|
-| **Deans-style / "T-plug"** | Two flat blades in a T, red shell | Older LiPo packs, park flyers, the genuine article is the W.S. Deans "Ultra Plug" | "T-plug" listings are clones of varying blade thickness and spring force; a loose mate heats at max current |
+| **Deans-style / "T-plug"** | Two flat blades in a T, red shell | Older LiPo packs, park flyers; the genuine article is the W.S. Deans "Ultra Plug" — the original T-plug[^deans] | "T-plug" listings are clones of varying blade thickness and spring force; a loose mate heats at max current |
 | **EC3 / EC5 (and IC3 / IC5)** | Blue/black shell molded over 3.5 mm / 5 mm bullets | Horizon Hobby ecosystem (E-flite, Spektrum); IC-series are the newer Smart-telemetry versions marketed as EC-mateable | Shell is the polarization; the bullets inside are the contacts. Verify IC↔EC mating claims against Horizon's own documentation before mixing |
 | **Traxxas-style** | Flat high-current blades in a keyed shell with a latch tab | Traxxas vehicles and packs | Proprietary ecosystem; clone "Traxxas-compatible" quality varies widely |
 | **Tamiya-style** | White nylon 2-pin shell, one chamfered corner | Older NiMH packs, budget chargers, toy-grade vehicles | The classic upgrade-me connector: high-resistance reputation, loose fits, and polarity that must be verified per pack — the shell keying does not guarantee the wires inside |
@@ -52,10 +52,12 @@ Fielded vehicles, bigger packs, or anything where load-break, touch safety, and 
 
 ## Source status
 
-Anderson PP15/45 figures are cited to Anderson's own datasheet.[^pp1545] The MR/MT ecosystem attribution follows the AMASS sourcing on the [XT page](xt-connectors.md).[^amass] Everything else on this page is identification-level and deliberately rating-free — Deans (W.S. Deans), EC/IC (Horizon Hobby), and Traxxas publish limited public spec documentation, and clones dominate the market; source targets are tracked in [Hobby Source Notes](hobby-source-notes.md).
+Anderson PP15/45 figures are cited to Anderson's own datasheet,[^pp1545] the Deans/T-plug originator claim to W.S. Deans' own site,[^deans] and the MR/MT ecosystem attribution follows the AMASS sourcing on the [XT page](xt-connectors.md).[^amass] Everything else on this page is identification-level and deliberately rating-free — EC/IC (Horizon Hobby) and Traxxas publish limited public spec documentation, and clones dominate the market; source targets are tracked in [Hobby Source Notes](hobby-source-notes.md).
 
 ## Sources
 
 [^pp1545]: Anderson Power Products, *Powerpole® PP15/45 Series* datasheet — the smallest Powerpole housings; 15 A / 30 A / 45 A wire and PCB contacts share the same housings; wire sizes #20 AWG (0.5 mm²) through #10 AWG (6 mm²); rated up to 55 A per pole; genderless housings with dovetails for stacking multi-pole arrangements. <https://www.andersonpower.com/content/dam/app/ecommerce/product-pdfs/pp/ds-pp1545.pdf>
 
 [^amass]: Amass Connectors — official manufacturer site of Changzhou Amass Electronics (originator of the XT series; its catalog also covers the MR/MT motor-trio ecosystem). Ratings for genuine AMASS XT parts are sourced on the [XT page](xt-connectors.md). <https://www.amassconnectors.com/>
+
+[^deans]: W. S. Deans Company — official manufacturer site: "home to the Ultra Plug®, the original T Plug," low-resistance power connectors from 2- to 8-pin, in production since 1955. Attribution claim only; no ratings are quoted from it. <https://www.wsdeans.com/>

@@ -73,7 +73,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 
 ## Screw terminals and spring terminals
 
-- **What it is:** terminal blocks (fixed or pluggable), spring/lever types (Wago-style) — field-wireable, no crimping, great for power distribution and things you'll re-wire.
+- **What it is:** terminal blocks (fixed or pluggable), spring/lever types (Wago-style) — field-wireable, no crimping, great for power distribution and things you'll re-wire. A sourced anchor for the lever class: WAGO's own [221-series family page](https://www.wago.com/gb/products/electrical-interconnections/discover-installation-terminal-blocks-and-connectors/221) rates it at a 32 A / 450 V class over 0.2–4 mm² conductors — clone "Wago-style" levers inherit none of that.
 - **Watch for:** wire must match the terminal's gauge range; stranded wire in screw terminals wants ferrules; screws loosen under vibration — retorque or use spring types; these are not sealed and not strain-relieved by themselves.
 
 ![A transparent WAGO 221 lever connector next to a stripped stranded wire](/img/photos/wago-221-lever.jpg)
@@ -106,7 +106,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 ## FFC / FPC flat-flex cables
 
 - **Marketplace names:** flat flex, FFC, FPC, ribbon cable (confusingly), "Pi camera cable," ZIF cable.
-- **What it is:** a flat flexible cable ending in bare printed contacts that clamp into a ZIF (zero-insertion-force) latched connector on the board — the Raspberry Pi camera/display interface and the inside of most consumer electronics. The cable end *is* the contact; 1.0 mm and 0.5 mm are the common pitch classes (measure, and verify against the connector drawing).
+- **What it is:** a flat flexible cable ending in bare printed contacts that clamp into a ZIF (zero-insertion-force) latched connector on the board — the Raspberry Pi camera/display interface and the inside of most consumer electronics. The cable end *is* the contact; 1.0 mm and 0.5 mm are the common pitch classes per [Molex's Easy-On FFC/FPC family](https://www.molex.com/en-us/products/connectors/ffc-fpc-connectors) (4–80 circuits) — measure, and verify against the connector drawing.
 - **Watch for:** contacts-up vs. contacts-down orientation (both cable types exist and the connector dictates which); same-end vs. opposite-end contact versions of "the same" cable; the fragile flip- or slide-style ZIF latch; low insertion-cycle expectations; and creasing — a sharp fold can crack conductors invisibly.
 - **Boards that mount rigidly to each other** may not need a cable at all — see the [board-to-board path](../decision-paths/board-to-board.md).
 

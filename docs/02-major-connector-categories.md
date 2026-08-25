@@ -19,7 +19,7 @@ Scope your search by category before diving into specific families. Each categor
 | Wire-to-wire | Internal splices, replaceable assemblies | Molex sealed families, [TE/Deutsch](deutsch.md), Amphenol AT/ATP | High-service external panel connection unless designed for it |
 | RF / coax | Antennas, GPS, radios, radar, video, test | SMA, TNC, N-Type, BNC, SMP/SMPM, MCX | Ordinary discrete wiring / uncontrolled impedance |
 | High-current power | Motors, batteries, heaters, PDUs | Anderson SB, Amphenol/TE high-current, 38999 power inserts, Han-style power | Mixed low-level signals without isolation planning |
-| Fiber / data | Long-distance data, EMI immunity, bandwidth | LC, ST, expanded-beam rugged fiber, M12 Ethernet | Dirty field environments without cleaning discipline |
+| Fiber / data | Long-distance data, EMI immunity, bandwidth | LC, SC, expanded-beam rugged fiber, M12 Ethernet | Dirty field environments without cleaning discipline |
 | Hybrid | Power + signal + data + coax/fiber/fluid in one | 38999 hybrid inserts, Han-Modular | Simple low-cost harnesses where separate connectors are cleaner |
 
 ![A high-pin-count rugged circular receptacle with gold pins beside its mating plug with coupling ring](/img/photos/rugged-circular-cir-pair.jpg)

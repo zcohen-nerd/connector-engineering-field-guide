@@ -68,7 +68,7 @@ Rated mate/unmate cycles vary widely. Design with margin *below* the rated numbe
 | [MIL-DTL-38999](../07-mil-dtl-38999.md) / [MIL-DTL-26482](../mil-dtl-26482.md) | 500[^milcyc] |
 | Micro-D (MIL-DTL-83513) | 500[^milcyc] |
 | D-sub (MIL-DTL-24308) | 500[^milcyc] |
-| M12 (screw-lock) | ≥ 100 (per datasheet)[^m12cyc] |
+| M12 (screw-lock) | > 100 (per datasheet)[^m12cyc] |
 | DEUTSCH sealed automotive (DRC figure) | 100 (DRC) — field-service class; verify per series[^deutschcyc] |
 | Industrial rectangular / Han | ~500 standard; Han HMC (high mating cycle) far higher[^hancyc] |
 | USB-C | 10,000 (USB Type-C spec)[^usbccyc] |

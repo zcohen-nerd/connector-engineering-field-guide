@@ -34,22 +34,22 @@ Statements backed by a credible public source. "Verified" means the claim matche
 | High-power 38999 / RADSOK contacts (~70–250 A class) | Manufacturer page | Amphenol Aerospace | A3, site high-current path | Derating data still controls; no casual paralleling |
 | MIL-DTL-26482 Series 2 family (3-point bayonet, ≥500 cycles, 600 V Cl. I / 1000 V Cl. II, contacts 20/16/12) | Manufacturer catalog | Aero-Electric / Amphenol 26482 Series 2 | §3, site 26482 page, site matrix | Family-level orientation only |
 | 26482 Series 1 vs Series 2 termination/tooling split | Industry reference | ConnectorSupplier / Bishop & Associates | site 26482 page | Temperature classes deliberately kept qualitative |
-| Standard D-sub is non-environmental rack-and-panel | Military spec | MIL-DTL-24308K w/Amend 1 (DLA ASSIST) | §3 | Ruggedized variants separately specified |
-| Micro-D .050 in (1.27 mm) centers, 3 A per contact | Manufacturer spec | Glenair MIL-DTL-83513 performance spec | §3 | |
+| Standard D-sub is non-environmental rack-and-panel | Military spec | MIL-DTL-24308K w/Amend 1 (DLA ASSIST) | §3, site matrix | Ruggedized variants separately specified |
+| Micro-D .050 in (1.27 mm) centers, 3 A per contact | Manufacturer spec | Glenair MIL-DTL-83513 performance spec | §3, site matrix | |
 | M12 standards mapping: IEC 61076-2-101 (A/B/D), -109 (X/H), -111 (power) | Standard listings | IEC webstore (direct) | §8 | Edition-specific; record the edition checked. Citations moved from GlobalSpec to the IEC webstore (audit 2026-07); -111 scope figures verified against the 2025 edition abstract |
-| M12 A-coded ≤4 A / ≤250 V class | Standard listing | IEC 61076-2-101 | §8.1 | Exact rating is connector/cable/temperature dependent |
-| M12 D-coded (10/100) vs X-coded (GbE/10G) roles | Standard listings | IEC 61076-2-101 / -109 | §8.1 | |
-| M12 coupling-torque example (0.8–1.0 N·m) | Manufacturer datasheet | Turck RK 4.5T-5 | §8.3 | Example only — torque is manufacturer-specified |
+| M12 A-coded ≤4 A / ≤250 V class | Standard listing | IEC 61076-2-101 | §8.1, site templates | Exact rating is connector/cable/temperature dependent |
+| M12 D-coded (10/100) vs X-coded (GbE/10G) roles | Standard listings | IEC 61076-2-101 / -109 | §8.1, site Rugged Ethernet path | |
+| M12 coupling-torque example (0.8–1.0 N·m) | Manufacturer datasheet | Turck RK 4.5T-5 | §8.3, site templates | Example only — torque is manufacturer-specified |
 | M12 K-coding = 4+PE, 630 V AC class configuration | Manufacturer page | binder M12 K-coded family | §8.1 | Example configuration per IEC 61076-2-111; current varies by vendor |
 | M12 L-coding = 4+FE (12 A/16 A, 63 V DC class); T-coding = 4 contacts (12 A, 63 V DC class) | Manufacturer pages | binder M12 L-coded / T-coded families | §8.1 | Example configurations per DIN EN 61076-2-111 (audit 2026-07); verify the exact datasheet |
 | M8 detail spec is IEC 61076-2-104 (screw/snap locking) | Standard listing | IEC 61076-2-104:2026 (IEC webstore) | §8.6 | Scope details are edition-specific — the 2026 edition describes 3- to 12-way; the superseded 2014 edition characterized 3- to 5-way (audit 2026-07) |
 | JST series datasheets — XH, PH, SH, GH, SM, RCY, EH, ZH (and VH): pitches + headline ratings | Manufacturer datasheets/pages | Official JST series PDFs (jst-mfg.com) + JST ZH product page (jst.com) | §12, site hobby JST page | Genuine-part figures only; clones not covered; "JST" alone is not a specification. EH/ZH added audit 2026-08 |
 | USB-C 10,000-cycle durability (vs ~1,500 USB-A) | Public standard | USB Type-C spec Release 2.5 (USB-IF document library) | §12, A4 | Cycle life ≠ ruggedness. Citations now point to the USB-IF document library, with the Mouser-hosted datasheet relabeled as a vendor secondary (audit 2026-07) |
 | IP code definitions; IP67 = 1 m/30 min; IP69K origin in ISO 20653 | Standards | IEC 60529 / ISO 20653 | A1 | Wording only; no standard tables reproduced |
-| Deutsch DT/DTM/DTP sealing (IP68) and current classes | Manufacturer pages | TE Connectivity | §3.2 | Family-level; verify the exact series datasheet |
+| Deutsch DT/DTM/DTP sealing (IP68) and current classes | Manufacturer pages | TE Connectivity | §3.2, site budget path | Family-level; verify the exact series datasheet |
 | DEUTSCH range: DT cavities / IP6K9K / materials / keying; DTHD 25/60/100 A; HD30/HDP20 shells 18/24, 2–47 cavities, quarter-turn coupling, contacts 4–20; HD10 3–9 cavities + J1939-13 = HD10-9-1939; DRC 24–80 cavities, 100 cycles; Autosport shell styles/keyways, ASX size-24 | Manufacturer pages/catalogs + industry references | TE Connectivity (DT datasheet, HD30/HDP20 + HD10 catalogs, DTHD/DRC pages, Autosport catalog); CopperHill (J1939-13 designation only) | site DEUTSCH deep dive, site matrix | Family-level; DTHD and HD10 upgraded to TE-direct citations (audit 2026-08) |
 | DEUTSCH solid (0460/0462) vs stamped (1060/1062) contact lines; HDT-48-00 is solid-only (12–20 AWG, DT/DTM/DTP/DTHD) | TE-authored documents | TE Application Specification 114-151004 (te.com); TE HDT-48-00 instruction sheet (distributor-hosted copy) | site DEUTSCH deep dive, site decode worksheet | Closed to TE-authored documents (audit 2026-08) |
-| Amphenol Sine AT/ATM/ATP/AHD marketed as intermateable DT/DTM/DTP/HD equivalents | Manufacturer page + industry reference | Amphenol Sine; Chief Enterprises | site DEUTSCH deep dive | Interchange is a marketing claim — page flags it verify-before-mixing |
+| Amphenol Sine AT/ATM/ATP/AHD marketed as intermateable DT/DTM/DTP/HD equivalents | Manufacturer page + industry reference | Amphenol Sine; Chief Enterprises | §3.2, site DEUTSCH deep dive | Interchange is a marketing claim — pages flag it verify-before-mixing |
 | AMP Superseal 1.5 (IP67, ~14 A class) | Manufacturer page | TE Connectivity | §3.2 | |
 | Molex MX150/MX150L (≥IP67; up to ~30–40 A by gauge) | Manufacturer document | Molex | §3.2 | |
 | Metri-Pack series system (sealed & unsealed, series by blade size) | Manufacturer datasheet | Aptiv Metri-Pack Connection System | §3.2 | Figures deliberately qualitative |
@@ -69,17 +69,17 @@ Deliberate engineering judgment — orientation, not specification. These are *i
 
 - **Do not choose by pin count first.** Classify the interface (boundary, environment, service model) before shopping. (§1, §4)
 - **Connector selection is system design.** A connector is a controlled interface between subsystems, not "a plug with enough pins." (§1)
-- **The connector is not just the shell.** Contacts, backshells, seals, cavity plugs, caps, strain relief, tooling, and drawings are all part of the interface. (§5)
+- **The connector is not just the shell.** Contacts, backshells, seals, cavity plugs, caps, strain relief, tooling, and drawings are all part of the interface. (§5, site What People Forget)
 - **Exact datasheets and program requirements beat family expectations.** Family-level values orient your search; the released design uses the exact part's numbers. (throughout)
 - **Spare positions "where feasible and justified"** — not a fixed percentage; shell size, weight, sealing plugs, and program rules may override. (§4)
 - **Conservative current-derating margin** below the manufacturer curve — not a fixed percentage. (§4, §10)
 - **Service life with margin below rated mating cycles** — not a fixed multiplier. (§3, §6)
-- **Threaded/self-locking coupling is *often* preferred for severe vibration** — judgment; bayonet is not categorically rejected where qualified. (§4)
+- **Threaded/self-locking coupling is *often* preferred for severe vibration** — judgment; bayonet is not categorically rejected where qualified. (§4, site 26482 page)
 - **38999 Series III as the *often*-default** for new harsh-environment designs — conditioned on size, mating speed, legacy, customer, and program requirements. (§7.2)
 - **Bench-to-product transition rule of thumb** — a judgment checklist, not a spec. (§12.3)
 - **Splitting power and signal connectors vs. one mixed connector** — a trade, argued per design. (site Selection Packet example)
 - **Shield-termination strategy** — system- and frequency-dependent judgment: one-end vs. both-ends vs. 360° backshell is documented per design with an EMC rationale, never applied as a universal rule. (§5.7, site templates)
-- **Ratings as screening values** — catalog/family figures screen candidates; the exact datasheet, derating curve, application spec, and program requirement set release values. (§3, §6, appendix)
+- **Ratings as screening values** — catalog/family figures screen candidates; the exact datasheet, derating curve, application spec, and program requirement set release values. (§3, §6, appendix, site matrix)
 
 ## 3. Example-only values
 
@@ -104,19 +104,19 @@ Two kinds of rows live here, and "done" means something different for each (clar
 | Priority | Item | Pages affected | Source needed | Risk if unsourced | Notes |
 | --- | --- | --- | --- | --- | --- |
 | High | Load-break / hot-plug / mate-under-load claims | §10, site high-current & removable-module paths, site ICD template | Exact connector datasheet + governing standard statement per part | Arcing, shock, fire, destroyed contacts | **Per-design — permanent.** New in v0.6: treat every connector as **not** load-break until the exact source says otherwise |
-| High | Current ratings and derating curves (per exact part) | §4, §7.5, A2/A3, site matrix | Manufacturer derating curve for the exact contact P/N and loading | Overheating, insulation damage | **Per-design — permanent.** Family figures verified; affected-page hedges re-verified audit-2026-08 |
-| High | IP67/IP68/IP69K sealing claims (per assembly) | §5.5, §8.3, A1 | Test condition + datasheet for the exact mated assembly | Water ingress in the field | **Per-design — permanent.** IP definitions verified; per-assembly hedges re-verified audit-2026-08 |
+| High | Current ratings and derating curves (per exact part) | §4, §7.5, A2/A3, site matrix, site high-current path | Manufacturer derating curve for the exact contact P/N and loading | Overheating, insulation damage | **Per-design — permanent.** Family figures verified; affected-page hedges re-verified audit-2026-08 |
+| High | IP67/IP68/IP69K sealing claims (per assembly) | §5.5, §8.3, A1, site sealed-feedthrough & budget paths | Test condition + datasheet for the exact mated assembly | Water ingress in the field | **Per-design — permanent.** IP definitions verified; per-assembly hedges re-verified audit-2026-08 |
 | High | Crimp inspection / workmanship criteria (per contact system) | §4, §5.2, site templates (incl. harness-inspection checklist) | IPC/WHMA-A-620 class selection + the manufacturer application spec for each contact/tool system | Latent crimp failures passing visual inspection | **Per-design — permanent.** A-620 named as the general reference; the harness-inspection template is deliberately criterion-free for this reason |
-| Medium | Voltage ratings (incl. altitude/creepage effects) | §4 | Exact datasheet + applicable safety standard | Insulation failure | Class figures are edition/configuration examples |
-| Medium | Mating-cycle ratings (per part) | A4, §6 | Exact datasheet | Wear-out, rising contact resistance | Family figures verified |
-| Medium | Temperature ranges (per part/class) | §6 | Exact datasheet / spec class | Derating and material errors | 26482 temp classes deliberately qualitative |
-| Medium | Wire-gauge compatibility per contact | §4, §5.2 | Contact datasheet / application spec | Bad crimps, failed wire seals | |
-| Medium | Contact-count / insert-arrangement examples | §7.3–7.4 | Manufacturer insert-arrangement drawings | Mis-specified interfaces | Guide already says "always pull the drawing" |
-| Medium | MIL-DTL qualification / QPL status statements | §4, §7 | QPL listing for the exact P/N | Non-compliant hardware | The guide asserts no QPL status today — keep it that way until verified |
+| Medium | Voltage ratings (incl. altitude/creepage effects) | §4, site matrix, site 26482 page | Exact datasheet + applicable safety standard | Insulation failure | Class figures are edition/configuration examples |
+| Medium | Mating-cycle ratings (per part) | A4, §6, site matrix | Exact datasheet | Wear-out, rising contact resistance | Family figures verified |
+| Medium | Temperature ranges (per part/class) | §6, site matrix, site 26482 page | Exact datasheet / spec class | Derating and material errors | 26482 temp classes deliberately qualitative |
+| Medium | Wire-gauge compatibility per contact | §4, §5.2, site templates | Contact datasheet / application spec | Bad crimps, failed wire seals | |
+| Medium | Contact-count / insert-arrangement examples | §7.3–7.4, site matrix | Manufacturer insert-arrangement drawings | Mis-specified interfaces | Guide already says "always pull the drawing" |
+| Medium | MIL-DTL qualification / QPL status statements | §4, §7, site 26482 page | QPL listing for the exact P/N | Non-compliant hardware | The guide asserts no QPL status today — keep it that way until verified |
 | Medium | M8/M12 IEC coding and standard references (current editions) | §8 | Current IEC edition text (61076-2-101/-104/-109/-111) | Stale scope claims | Citations now point to IEC webstore current-edition listings (-111:2025, -104:2026) as of audit 2026-07 — record edition/date checked; full standard text remains unreviewed (abstracts only) |
 | Medium | Replace distributor-listing citations with manufacturer-direct documents | A4, site matrix | Manufacturer/DLA-direct links | Orientation figures drift from the controlling document | Han E closed (audit 2026-07). Molex MX150 closed (audit 2026-08): now cites Molex-hosted MX150L literature. MIL-DTL-24308 closed (audit 2026-08): all clauses verified against Rev K w/Amendment 1 (2022-12-05) retrieved via DLA ASSIST; distributor-hosted Rev G copy dropped. Aptiv: no stable manufacturer-hosted system datasheet exists (tokenized URLs); TTI-hosted copy of the Aptiv document retained with the Aptiv catalog as locator (checked 2026-08). Sourcing-hardening pass (audit 2026-08): DEUTSCH DTHD and HD10 upgraded to TE-direct pages/catalogs; DEUTSCH tooling closed to TE-authored documents (114-151004 + HDT-48-00 instruction sheet); Weather-Pack and the Han E 6–48 span remain distributor-hosted (no manufacturer-hosted equivalents found on search); the Autosport catalog remains a TE-authored document hosted by a distributor |
 | Low | RF & fiber connector performance values (frequency/power/loss per family) | §2, site RF path | Exact part + cable/fiber datasheets | Degraded links | Intentionally number-free; v0.7 added decision-field tables instead of values |
-| Low | Automotive sealed-connector environmental claims beyond IP (temp/vibration/fluids) | §3.2 | Series application specifications | Environmental field failures | Only sealing/current classes cited today |
+| Low | Automotive sealed-connector environmental claims beyond IP (temp/vibration/fluids) | §3.2, site budget path | Series application specifications | Environmental field failures | Only sealing/current classes cited today |
 | Low | HDMI mating-cycle rating | §12 | Reputable public source | Minor | Intentionally unquoted; keep it that way unless sourced |
 | Medium | Hobby-track source hardening | site hobby track | Per the authoritative per-topic list in `docs/hobby/hobby-source-notes.md` | Makers treating placeholders as ratings | Per-topic status tracked only on that page |
 

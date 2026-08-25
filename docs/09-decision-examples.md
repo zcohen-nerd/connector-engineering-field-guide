@@ -19,8 +19,8 @@ For a step-by-step walkthrough of the most common scenarios, see the [Decision P
 | [Sensor cable on a robot](#sensor-cable-on-a-robot) | M12 A-coded; M8 for small sensors |
 | [Motor power](#motor-power) | M12 L/T-coded, industrial rectangular, high-current circular, Anderson SB, 38999 (sized/derated) |
 | [CAN bus](#can-bus) | M12 A-coded (CAN pinout); 38999 in defense |
-| [Ethernet in a rugged enclosure](#ethernet-in-a-rugged-enclosure) | M12 D-coded (10/100), X-coded (GbE/10G); rugged RJ45 if protected |
-| [External service port](#external-service-port) | Sealed service M12, Micro-D, 38999 maintenance; USB behind a cover |
+| [Ethernet in a rugged enclosure](#ethernet-in-a-rugged-enclosure) | M12 D-coded (10/100), X-coded (GbE/10G); rugged RJ45 only if protected |
+| [External service port](#external-service-port) | Sealed service M12, Micro-D, 38999 maintenance; USB only behind a cover |
 | [Internal PCB harness](#internal-pcb-harness) | Molex Micro-Fit (power), PicoBlade/JST-GH (signal), TE, Harwin |
 | [Sealed enclosure feedthrough](#sealed-enclosure-feedthrough) | 38999 jam-nut/flange, sealed M12 panel, hermetic/potted penetrator |
 | [High-vibration military payload](#high-vibration-military-payload) | MIL-DTL-38999 Series III; Micro-D internal |

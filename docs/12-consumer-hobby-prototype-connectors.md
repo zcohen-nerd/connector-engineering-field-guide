@@ -44,7 +44,7 @@ The sealed-automotive middle ground — the usual first landing spot for graduat
 | Crimp quality | Inconsistent with cheap tools and loose tolerances; intermittent contacts are common. |
 | Current / environment | Low current, no sealing, no strain relief. Contacts back out of the housing over time. |
 
-**Use them for:** bench prototyping, throwaway test rigs, signals you can re-seat by hand. **Avoid for:** anything that ships, moves, vibrates, or needs to be reliable. Use a keyed, latching, positively retained wire-to-board family such as Molex Micro-Fit/Nano-Fit, Harwin, Omnetics, or JST GH where appropriate. JST PH can be acceptable for low-stress internal wiring, but it is not a rugged external connector.
+**Use them for:** bench prototyping, throwaway test rigs, signals you can re-seat by hand. **Avoid for:** anything that ships, moves, vibrates, or needs to be reliable. Use a keyed, latching, positively retained wire-to-board family such as Molex Micro-Fit/Nano-Fit, Harwin, Omnetics, or [JST GH](hobby/jst-gh.md) where appropriate. JST PH can be acceptable for low-stress internal wiring, but it is not a rugged external connector.
 
 ## 12.2 The JST series — not one connector
 
@@ -54,7 +54,7 @@ The sealed-automotive middle ground — the usual first landing spot for graduat
 |---|---|---|---|
 | [XH](hobby/jst-xh.md) | 2.5 mm[^jst] | Hobby battery balance leads, dev boards | Low-cost internal board-to-wire; friction lock (no positive latch). Common but not good for vibration or external service without an additional retention/environmental strategy. |
 | [PH](hobby/jst-ph.md) | 2.0 mm | Small Li-ion packs, internal signal | Compact internal wire-to-board; useful but not rugged. Acceptable for low-stress internal wiring; not a sealed/rugged external connector. |
-| GH | 1.25 mm | Compact internal signal, sensors | Compact internal wire-to-board with a secure locking feature; useful where small size and retention matter. Not sealed/rugged external by default. |
+| [GH](hobby/jst-gh.md) | 1.25 mm | Compact internal signal, sensors | Compact internal wire-to-board with a secure locking feature; useful where small size and retention matter. Not sealed/rugged external by default. |
 | [SH](hobby/jst-sh-qwiic-stemma.md) | 1.0 mm | Very small board-to-wire (e.g. Qwiic-style) | Tiny, fragile, signal-only. Friction lock. Easy to damage during rework. |
 | VH | 3.96 mm[^jst] | Internal power / power-supply wiring | Higher-current JST family than the smaller series — rated up to ~10 A with AWG #16 per JST; exact current depends on contact/wire/configuration and must be verified. Still internal/protected use unless the full assembly is designed for environment/vibration. |
 | EH / ZH | 2.5 / 1.5 mm[^jst] | General signal | Mid-tier signal series — EH is a 3 A / 250 V class (AWG #22), ZH a 1 A / 50 V class (AWG #26–32) per JST; check the datasheet for lock style and exact rating. |

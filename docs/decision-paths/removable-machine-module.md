@@ -23,7 +23,7 @@ A control box, machine section, test-cart module, or panelized subsystem that ge
 - The interface needs **defense/aero qualification** or a **38999 ecosystem** — see [Defense / rugged external I/O](defense-rugged-external-io.md).
 - It is a **simple sensor cable** where an [M8/M12](industrial-sensor.md) is cleaner.
 - It is **internal PCB harnessing** — see [Internal PCB harnessing](internal-pcb-harnessing.md).
-- It needs **RF/coax/fiber** discipline the selected insert can't support — see the [RF/GPS/radio path](rf-gps-radio.md).
+- It needs **RF/coax/fiber** discipline the selected insert can't support — see the [RF/GPS/radio path](rf-gps-radio.md) and, for fiber, [§2's orientation](../02-major-connector-categories.md#fiber-connectors--a-brief-orientation).
 
 ## Families to start with
 

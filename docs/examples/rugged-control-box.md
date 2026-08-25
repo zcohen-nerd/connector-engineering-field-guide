@@ -1,7 +1,7 @@
 ---
 id: rugged-control-box
 title: "Example: Rugged Control Box"
-description: "A worked rugged control box example: selecting and documenting power, Ethernet, CAN, sensor, motor, and service-port connectors for a sealed enclosure."
+description: "A structure-first skeleton for a rugged control box: the full documentation-package shape — requirements, selection, pinout, cable drawing, ICD, risks — ready to fill in from Exercise 1."
 slug: /examples/rugged-control-box
 sidebar_label: Rugged Control Box
 ---

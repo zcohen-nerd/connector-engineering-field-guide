@@ -21,7 +21,7 @@ Always verify against the *current* version of the applicable standard and the m
 | Family | Used for | Strengths | Weaknesses |
 |---|---|---|---|
 | MIL-DTL-38999 | Aero/defense rugged external I/O | Sealing, density, keying, EMI backshell ecosystem, crimp contacts | Expensive, part-number traps, tooling-heavy |
-| [MIL-DTL-26482](mil-dtl-26482.md) | Rugged circular mil/industrial I/O | Smaller/cheaper than 38999, fast bayonet, common; Series I/II variants vary by P/N | Less dense, fewer modern high-speed options than 38999 |
+| [MIL-DTL-26482](mil-dtl-26482.md) | Rugged circular mil/industrial I/O | Smaller/cheaper than 38999, fast bayonet, common; Series 1/2 variants vary by P/N | Less dense, fewer modern high-speed options than 38999 |
 | M12 | Industrial sensors, Ethernet, IO-Link, CAN | Standard ecosystem, molded cables, IP-rated options, easy sourcing | Coding/pinout confusion, limited pins/current |
 | M8 | Compact sensors, small actuators | Small, common sensor connector | Less current, fewer pins, smaller cable support |
 | D-sub / MIL-DTL-24308 | Rack/panel, test, legacy serial/control | Cheap, common, many accessories, good density | Standard versions non-environmental; screws can loosen |
@@ -66,7 +66,7 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 | [Deutsch DTM / DT / DTP](deutsch.md) | IP68[^deutsch] | ~7.5 A (DTM, size 20) / ~13 A (DT, size 16) / ~25 A (DTP, size 12)[^deutsch] | Genderless wedgelock housings; ubiquitous in off-road/automotive; hand-crimpable |
 | TE AMP Superseal 1.5 / AMPSEAL | IP67[^superseal] | ~14 A (Superseal 1.5)[^superseal] | Compact sealed inline; AMPSEAL for higher pin counts |
 | Molex MX150 / MX150L | IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
-| Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants[^metripack] | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify)[^metripack] | Long-standing automotive terminal system |
+| Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants[^metripack] | 150 / 280 / 480 / 630 / 800 series — a few A up to tens of A by series (verify)[^metripack] | Long-standing automotive terminal system |
 | Aptiv (Delphi) Weather-Pack | Sealed — triple-ribbed self-lubricating silicone connector and cavity seals[^weatherpack] | ~20 A max continuous class (verify per terminal/gauge)[^weatherpack] | 1–6-way towers/shrouds; the classic sealed under-hood system; tin-plated crimp terminals |
 
 ![A round Deutsch HD-style 9-pin J1939 diagnostic plug with threaded coupling on a black cable](/img/photos/deutsch-j1939-plug.jpg)

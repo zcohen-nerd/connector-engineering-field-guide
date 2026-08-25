@@ -23,6 +23,11 @@ Only what is actually backed by sources present in this repo:
 - **Qwiic / STEMMA QT connector conventions** — 4-pin 1.0 mm JST SH, polarized, cross-compatible ecosystems — per SparkFun's Qwiic documentation and Adafruit's STEMMA QT technical specs, cited on [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
 - **XT30/XT60/XT90 attribution and ratings** — AMASS (Changzhou Amass Electronics) as XT-series originator per its manufacturer site; rated/momentary currents (XT30: 15/30 A, XT60: 30/60 A, XT90: 40/90 A), cable specs, and temperature-rise conditions per AMASS-authored documentation (distributor-hosted PDFs — AMASS publishes no spec tables on its own site). Genuine-part figures only; clones uncovered. Cited on [XT30, XT60, and XT90](xt-connectors.md).
 - **Servo-lead conventions and figures** — the red-center-positive pin order and darkest-negative/lightest-signal color rule per a servo manufacturer's documentation (Kpower) and a hobby-industry reference (Flite Test); JR-universal vs Futaba J housing geometry (bevel, keyed tab, shave-to-universal) per vendor documentation (Hansen Hobbies, Pololu); the old-Airtronics polarity difference per conversion-adapter documentation; the 0.1-inch contact-class current (~3.5 A continuous / 5 A intermittent) per servo maker ProModeler's engineering note quoting pin-manufacturer ratings; stall currents per Savox's published specifications; and the 26/22/20 AWG servo-wire ladder per vendor documentation. **No governing spec exists for this family — nothing transfers to clone leads or kit terminals.** Cited on [Servo Connectors](servo-connectors.md).
+- **WAGO 221 lever-connector figures** — both size classes (4 mm² and the 6 mm² / 41 A-class 221-6xx line) and both rating systems on the identical parts (IEC 32/41 A @ 450 V; UL 20/30 A @ 600 V per the UL 486C listing), per WAGO's own family and product pages. Genuine WAGO only — clone "Wago-style" levers inherit nothing. Cited on [the terminals page](screw-terminals.md) and the [families capsule](families.md).
+- **Anderson Powerpole PP15/45 and family-ladder figures** — 15/30/45 A contacts sharing one housing, #20–#10 AWG, up to 55 A/pole, 600 V (UL), 10,000 no-load mating cycles, low-detent and finger-proof variants per Anderson's own datasheet; silver contact plating per Anderson listings; PP75/PP180 ladder per Anderson pages and an Anderson-hosted PP180 datasheet (one distributor-hosted item labeled as such); the ARES/RACES orientation convention per emergency-service training references (convention, not ratings). Cited on [Anderson Powerpole](anderson-powerpole.md).
+- **Barrel-jack structure, polarity-is-convention, and the switched contact** — per Same Sky's (CUI's) own selection guide, with a representative 2.5 A rating from the PJ-102A datasheet (that part only). Cited on [Barrel Jacks](barrel-jacks.md).
+- **Deans/T-plug originator attribution** — per W.S. Deans' own site (attribution only; ratings deliberately unasserted). Cited on the [RC battery landscape](rc-battery-connectors.md).
+- **FFC 0.5/1.0 mm pitch classes** — per Molex's Easy-On family page. Cited on the [families capsule](families.md).
 - **Grove connector and port-type pinout variation** — 4-pin 2.0 mm connector; signal-pin function varies by port type (I2C/UART/digital/analog), per Seeed's Grove System documentation, cited on [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
 - **Plain STEMMA vs STEMMA QT** — plain STEMMA = JST PH 2.0 mm (4-pin I2C, 3-pin analog/digital/PWM, 3–5 V device power, Zener-protected 3-pin ports), distinct from the 1.0 mm SH-based STEMMA QT — per Adafruit's STEMMA documentation, cited on the [SH/Qwiic](jst-sh-qwiic-stemma.md) and [PH](jst-ph.md) pages.
 - **0.1 in = 2.54 mm** — definitional; the basis of the Dupont/header ecosystem discussion.
@@ -47,18 +52,18 @@ Typical hobby usage, not design ratings. Anywhere these appear they carry a *ver
 - JST/XT series usage beyond the sourced figures (derating, environment, cycles in *your* application)
 - Servo connector/lead current examples beyond the class figures and Savox stall currents cited on [Servo Connectors](servo-connectors.md) — *your* servo's stall figure and *your* terminal's rating still decide
 - Dupont / 0.1 in header current assumptions
-- Barrel jack size and rating examples (5.5 × 2.1/2.5 mm named as *common sizes*, not a standard)
-- Screw/spring terminal ratings and gauge ranges
+- Barrel jack size and rating examples beyond the figures cited on [Barrel Jacks](barrel-jacks.md) (5.5 × 2.1/2.5 mm remain *common sizes*, not a standard; the PJ-102A 2.5 A rating covers that part only)
+- Screw/spring terminal ratings and gauge ranges beyond the WAGO 221 figures cited on [the terminals page](screw-terminals.md) — clone blocks and torque-class figures stay unsourced
 - LED connector current assumptions and power-injection sizing
 - Every marketplace kit claim (series, pitch, "waterproof," "high current")
 
 ## Needs source before hobby v1.0
 
-Source targets, honestly unfilled — none of these citations exist in the repo yet:
+Source targets tracked to closure. Rows marked **Closed** are done — the citations now exist in the repo at the locations named; everything else remains honestly open:
 
 | Item | Source target |
 |---|---|
-| JST EH/ZH pitch and headline ratings | **Closed (audit 2026-08):** EH cited to the official JST series PDF and ZH to JST's official product page; pitch and headline-rating figures now live in §12.2 and its `[^jst]` footnote |
+| JST EH/ZH pitch and headline ratings | **Closed (audit 2026-08):** EH cited to the official JST series PDF and ZH to JST's official product page; figures live in §12.2 (its `[^jst]` footnote) and, since the fix batch, as sourced rows on [JST Is Not One Connector](jst-is-not-one-connector.md) |
 | XT ratings from AMASS-direct hosting | Closed for values (audit-2026-07) via distributor-hosted AMASS PDFs; an AMASS-domain-hosted equivalent would still be an upgrade |
 | Crimping tiny open-barrel terminals | Manufacturer application notes / crimp specifications |
 | LED power injection guidance (if expanded) | Reputable LED wiring/power-injection references |
@@ -72,7 +77,7 @@ Source targets, honestly unfilled — none of these citations exist in the repo 
 The editorial roadmap for this track — what exists, what's next, and in what order. Nothing here is claimed complete or fully sourced; "initial page added" means exactly that.
 
 1. **JST-XH** — initial page added (v0.9); deepened (audit 2026-08) with datasheet-level detail (positions, both crimp contacts' wire ranges, header orientations) and the balance-lead convention, cited to the official JST datasheet and labeled vendor convention documentation
-2. **JST-PH** — initial page added (v0.9); source hardening still needed
+2. **JST-PH** — initial page added (v0.9); figures already datasheet-cited — the remaining depth work is an XH-style "in detail" table (positions, contact part numbers, header orientations)
 3. **JST-SH / Qwiic / STEMMA QT** — initial page added (v0.9); Qwiic/STEMMA QT conventions cited; Grove and plain-STEMMA distinctions sourced (audit-2026-07)
 4. **Dupont / 0.1 inch headers** — initial page added (v0.9); no governing spec exists, by nature; name lineage (Berg Mini-PV → DuPont → FCI → Amphenol) sourced (audit-2026-07)
 5. **XT30 / XT60 / XT90** — initial page added (v0.9); AMASS attribution and ratings sourced (audit-2026-07, distributor-hosted manufacturer PDFs); clone parts remain uncovered

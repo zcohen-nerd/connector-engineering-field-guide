@@ -71,6 +71,8 @@ This path covers the *basic* board-to-board decision — hobby stacking through 
 - **Board keep-outs and land patterns** per the manufacturer drawing — including keep-outs under the mated connector on both boards.
 - **Spares for fine-pitch parts during development** — rework kills them faster than service does.
 
+See [What People Forget](../what-people-forget.md).
+
 ## Common traps
 
 - **The connector as the only mechanical support.** It will work on the bench and fret, fatigue, or crack solder joints in the field. Standoffs first, connector second.

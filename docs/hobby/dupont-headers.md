@@ -36,7 +36,7 @@ Breadboards, Arduino-style headers, Raspberry Pi GPIO jumper wiring, dev-board e
 
 ## What to buy
 
-For bench use: pre-made jumper assortments (M-M, M-F, F-F) from a reputable supplier beat crimping your own. For semi-permanent internal wiring, step up to a latched family instead ([internal PCB harnessing](../decision-paths/internal-pcb-harnessing.md)). If you do crimp: housings and contacts are separate purchases, and [the crimping rules](crimping.md) apply.
+For bench use: pre-made jumper assortments (M-M, M-F, F-F) from a reputable supplier beat crimping your own. For semi-permanent internal wiring, step up to a latched family instead — the classic destination is [Molex Micro-Fit 3.0](../micro-fit.md), and the [internal PCB harnessing path](../decision-paths/internal-pcb-harnessing.md) maps the alternatives. If you do crimp: housings and contacts are separate purchases, and [the crimping rules](crimping.md) apply.
 
 :::warning[Dupont is a bench connector, not a retention strategy]
 

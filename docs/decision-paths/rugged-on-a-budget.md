@@ -26,7 +26,7 @@ These are not "toy" connectors. Sealed automotive connector families are often a
 ## Avoid this when
 
 - A customer or program **specifically requires MIL-DTL / QPL** hardware, EMI backshell continuity, 360° shield termination, high-density mixed inserts, or coax/twinax/fiber contacts — see [Defense / rugged external I/O](defense-rugged-external-io.md).
-- You need **Ethernet** ([Rugged Ethernet](rugged-ethernet.md)), an **[RF/GPS/radio path](rf-gps-radio.md)**, or fiber.
+- You need **Ethernet** ([Rugged Ethernet](rugged-ethernet.md)), an **[RF/GPS/radio path](rf-gps-radio.md)**, or [fiber](../02-major-connector-categories.md#fiber-connectors--a-brief-orientation).
 - The interface is **internal and protected** and does not need sealing — see [Internal PCB harnessing](internal-pcb-harnessing.md).
 - You need a panel-mounted, mixed-signal, high-density, configuration-controlled **defense/aero external interface**.
 

@@ -105,7 +105,7 @@ Scope your search by category before diving into specific families. Each categor
 | Wire-to-wire | Internal splices, replaceable assemblies | Molex sealed families, TE/Deutsch, Amphenol AT/ATP | High-service external panel connection unless designed for it |
 | RF / coax | Antennas, GPS, radios, radar, video, test | SMA, TNC, N-Type, BNC, SMP/SMPM, MCX | Ordinary discrete wiring / uncontrolled impedance |
 | High-current power | Motors, batteries, heaters, PDUs | Anderson SB, Amphenol/TE high-current, 38999 power inserts, Han-style power | Mixed low-level signals without isolation planning |
-| Fiber / data | Long-distance data, EMI immunity, bandwidth | LC, ST, expanded-beam rugged fiber, M12 Ethernet | Dirty field environments without cleaning discipline |
+| Fiber / data | Long-distance data, EMI immunity, bandwidth | LC, SC, expanded-beam rugged fiber, M12 Ethernet | Dirty field environments without cleaning discipline |
 | Hybrid | Power + signal + data + coax/fiber/fluid in one | 38999 hybrid inserts, Han-Modular | Simple low-cost harnesses where separate connectors are cleaner |
 
 > **Often overlooked.** Board-to-wire connectors like Molex Micro-Fit, Mini-Fit, Mega-Fit, and sealed Squba are not "hobby" parts. Professional versions have positive latches, polarization, secondary locks (TPA — Terminal Position Assurance, a secondary lock that confirms every contact is fully seated before the connector can mate), defined current/voltage ratings, and sealed variants. The dividing line is the specific family and rating, not the brand.
@@ -171,7 +171,7 @@ A full RF deep-dive is **out of scope for v1** of this guide; treat this as a po
 | Family | Used for | Strengths | Weaknesses |
 |---|---|---|---|
 | MIL-DTL-38999 | Aero/defense rugged external I/O | Sealing, density, keying, EMI backshell ecosystem, crimp contacts | Expensive, part-number traps, tooling-heavy |
-| MIL-DTL-26482 | Rugged circular mil/industrial I/O | Smaller/cheaper than 38999, fast bayonet, common; Series I/II variants vary by P/N | Less dense, fewer modern high-speed options than 38999 |
+| MIL-DTL-26482 | Rugged circular mil/industrial I/O | Smaller/cheaper than 38999, fast bayonet, common; Series 1/2 variants vary by P/N | Less dense, fewer modern high-speed options than 38999 |
 | M12 | Industrial sensors, Ethernet, IO-Link, CAN | Standard ecosystem, molded cables, IP-rated options, easy sourcing | Coding/pinout confusion, limited pins/current |
 | M8 | Compact sensors, small actuators | Small, common sensor connector | Less current, fewer pins, smaller cable support |
 | D-sub / MIL-DTL-24308 | Rack/panel, test, legacy serial/control | Cheap, common, many accessories, good density | Standard versions non-environmental; screws can loosen |
@@ -212,7 +212,7 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 | Deutsch DTM / DT / DTP | IP68[^deutsch] | ~7.5 A (DTM, size 20) / ~13 A (DT, size 16) / ~25 A (DTP, size 12)[^deutsch] | Genderless wedgelock housings; ubiquitous in off-road/automotive; hand-crimpable |
 | TE AMP Superseal 1.5 / AMPSEAL | IP67[^superseal] | ~14 A (Superseal 1.5)[^superseal] | Compact sealed inline; AMPSEAL for higher pin counts |
 | Molex MX150 / MX150L | IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
-| Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants[^metripack] | 150 / 280 / 480 / 630 series — a few A up to tens of A by series (verify)[^metripack] | Long-standing automotive terminal system |
+| Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants[^metripack] | 150 / 280 / 480 / 630 / 800 series — a few A up to tens of A by series (verify)[^metripack] | Long-standing automotive terminal system |
 | Aptiv (Delphi) Weather-Pack | Sealed — triple-ribbed self-lubricating silicone connector and cavity seals[^weatherpack] | ~20 A max continuous class (verify per terminal/gauge)[^weatherpack] | 1–6-way towers/shrouds; the classic sealed under-hood system; tin-plated crimp terminals |
 
 **Where they win:** datasheet-rated sealing (IP67/IP68-class, by family) and vibration performance well beyond hobby connectors, at a fraction of the cost, tooling, and lead time of mil-spec circulars — cheap hand crimp tools, no QPL overhead. They are a strong middle ground for rugged-on-a-budget field wiring; they are *not* a substitute for MIL-DTL-38999 where qualification, EMI backshells, or extreme environments are required — and "automotive sealed" is not a universal environmental rating. Verify the seal system, wire-seal range, cavity plugs, temperature range, vibration suitability, fluid exposure, and IP test conditions against the family documentation. Second sources exist in this territory too: Amphenol Sine's AT / ATM / ATP lines are marketed as intermateable equivalents of DEUTSCH DT / DTM / DTP[^atseries] — a legitimate sourcing option, but treat cross-vendor interfaces as compatibility claims to verify, never folklore.
@@ -765,7 +765,7 @@ Connector knowledge is built by doing. Each exercise produces a deliverable that
 
 **Exercise 1 — Rugged control box connector set.** Design the external connector interface for a small sealed enclosure: 24 VDC input, Ethernet, CAN, four sensors, one motor output, one debug/service port. *Deliverable:* connector family selection table, pinout, cable list, backshell/cap list, and a justification column for every decision.
 
-**Exercise 2 — Connector comparison matrix.** Compare 38999 Series III, 26482, M12 A-coded, M12 X-coded, D-sub, Micro-D, an industrial rectangular/Han-style connector, and Molex Micro-Fit across: environment, pin count, current, sealing, tooling, cost, lead time, serviceability, common mistakes. *Deliverable:* a scored comparison matrix plus a recommendation paragraph for a stated application.
+**Exercise 2 — Connector comparison matrix.** Compare 38999 Series III, 26482, M12 A-coded, M12 X-coded, D-sub, Micro-D, an industrial rectangular/Han-style connector, Molex Micro-Fit, and a DEUTSCH DT-family option across: environment, pin count, current, sealing, tooling, cost, lead time, serviceability, common mistakes. *Deliverable:* a scored comparison matrix plus a recommendation paragraph for a stated application.
 
 **Exercise 3 — Decode three real 38999 part numbers.** Pull three real manufacturer part numbers and decode series, shell style, service class, shell size, insert arrangement, contact gender, keying, termination, and compatible backshell. Verify against the catalog. *Deliverable:* a decoded part-number table (all fields resolved) + a short BOM for one complete assembly.
 
@@ -853,7 +853,7 @@ Rated mate/unmate cycles vary widely. Design with margin *below* the rated numbe
 | MIL-DTL-38999 / MIL-DTL-26482 | 500[^milcyc] |
 | Micro-D (MIL-DTL-83513) | 500[^milcyc] |
 | D-sub (MIL-DTL-24308) | 500[^milcyc] |
-| M12 (screw-lock) | ≥ 100 (per datasheet)[^m12cyc] |
+| M12 (screw-lock) | > 100 (per datasheet)[^m12cyc] |
 | DEUTSCH sealed automotive (DRC figure) | 100 (DRC) — field-service class; verify per series[^deutschcyc] |
 | Industrial rectangular / Han | ~500 standard; Han HMC (high mating cycle) far higher[^hancyc] |
 | USB-C | 10,000 (USB Type-C spec)[^usbccyc] |

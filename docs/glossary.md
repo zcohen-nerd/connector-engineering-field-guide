@@ -112,7 +112,7 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **QPL** — Qualified Products List; the register of parts qualified to a military specification. Required when qualification matters, and a second-source consideration always. See [Production reality](04-connector-selection-workflow.md).
 
-**RMF** — Molex's Reduced Mating Force Micro-Fit terminals; a mating-force feature, with current still set by the exact terminal P/N. See [Comparison Matrix](tools/connector-comparison-matrix.md).
+**RMF** — Molex's Reduced Mating Force Micro-Fit terminals; a mating-force feature, with current still set by the exact terminal P/N. See [Micro-Fit deep dive](micro-fit.md), [Comparison Matrix](tools/connector-comparison-matrix.md).
 
 **Scoop-proof** — shell geometry where the outer shell engages before the pins, so a misaligned plug can't scoop across and bend them. See [38999 series distinctions](07-mil-dtl-38999.md).
 

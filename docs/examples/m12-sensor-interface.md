@@ -10,9 +10,9 @@ sidebar_label: M12 Sensor Interface
 
 One machine interface taken from "the sensors need to plug in somewhere" to a documented M12 architecture — the [Industrial sensor](../decision-paths/industrial-sensor.md) and [Rugged Ethernet](../decision-paths/rugged-ethernet.md) decision paths executed on a concrete system, with the [M12 deep dive](../08-m12.md) as the technical backbone.
 
-:::info[Draft narrative — illustrative composite]
+:::info[Illustrative composite — not a case report]
 
-The scenario below is an illustrative composite drafted for review; it is being edited against a sanitized real-world A-coded/X-coded selection, and details may still change. The *reasoning* is the point either way, and every connector fact is stated by reference to the deep dive and decision paths, which carry the sources.
+The scenario below is an illustrative composite, informed by a sanitized real-world A-coded/X-coded selection but not a report of any single project. The *reasoning* is the point, and every connector fact is stated by reference to the deep dive and decision paths, which carry the sources.
 
 :::
 

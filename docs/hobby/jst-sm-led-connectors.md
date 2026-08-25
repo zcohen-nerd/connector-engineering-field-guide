@@ -33,7 +33,7 @@ The small inline connector that came on an LED string may be fine for that strin
 
 ## Power injection is a different job
 
-Addressable LED runs of any length need power injected in parallel — and that current does **not** belong on the little data-string connector. For power injection and supply wiring, use appropriately rated hardware chosen on purpose: rated power connectors, distribution blocks, ferrules into screw terminals, Wago-style lever connectors, or [XT-class connectors](families.md#xt30-xt60-and-xt90) as appropriate — sized against the *calculated* LED current and verified against the part's documentation, not its title. The engineering track's [power vs signal thinking](power-vs-signal.md) and [high-current DC path](../decision-paths/high-current-dc-power.md) apply the moment real amps show up.
+Addressable LED runs of any length need power injected in parallel — and that current does **not** belong on the little data-string connector. For power injection and supply wiring, use appropriately rated hardware chosen on purpose: rated power connectors, distribution blocks, ferrules into screw terminals, Wago-style lever connectors, or [XT-class connectors](xt-connectors.md) as appropriate — sized against the *calculated* LED current and verified against the part's documentation, not its title. The engineering track's [power vs signal thinking](power-vs-signal.md) and [high-current DC path](../decision-paths/high-current-dc-power.md) apply the moment real amps show up.
 
 ## Before using JST-SM-style connectors in an LED project
 

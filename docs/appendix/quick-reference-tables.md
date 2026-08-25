@@ -50,7 +50,7 @@ IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure wa
 | Machine umbilical (power+signal+data) | Industrial rectangular / Han-Modular | Many individual small connectors |
 | Serial/debug, benign environment | Micro-D, MIL-grade D-sub, keyed header | Bare headers, exposed USB |
 | High-current robot power (>20 A) | Anderson SB, Han-style power insert, 38999 size 8/larger or dedicated power contacts (HCP = high-current power, or RADSOK[^radsok]); size 12 only where derating supports it | M12 A-coded, XT60/90, 38999 size 16 for the full load |
-| Internal protected PCB harness | Molex Micro-Fit, TE, Harwin | Bare wire, 0.1" headers, screw terminals on PCB |
+| Internal protected PCB harness | [Molex Micro-Fit](../micro-fit.md), TE, Harwin | Bare wire, 0.1" headers, screw terminals on PCB |
 | Two boards plugging directly together | Stacking headers or a [fine-pitch mezzanine pair](../decision-paths/board-to-board.md) — one family, matched mated height | The connector as the only mechanical support; frequent-mate service joints |
 | Servo motor power + feedback | The motor's own [M23-class receptacle pair](../decision-paths/motor-feedback-cable.md) or the drive ecosystem's cordsets | Custom-built feedback cables; feedback routed with power; pigtailed shields |
 | Fast quick-disconnect, moderate vibration | [MIL-DTL-26482](../mil-dtl-26482.md) bayonet (verify qualification for the vibration profile) | 38999 threaded (slower to mate) |
@@ -68,7 +68,7 @@ Rated mate/unmate cycles vary widely. Design with margin *below* the rated numbe
 | [MIL-DTL-38999](../07-mil-dtl-38999.md) / [MIL-DTL-26482](../mil-dtl-26482.md) | 500[^milcyc] |
 | Micro-D (MIL-DTL-83513) | 500[^milcyc] |
 | D-sub (MIL-DTL-24308) | 500[^milcyc] |
-| M12 (screw-lock) | ≥ 100 (per datasheet)[^m12cyc] |
+| M12 (screw-lock) | > 100 (per datasheet)[^m12cyc] |
 | DEUTSCH sealed automotive (DRC figure) | 100 (DRC) — field-service class; verify per series[^deutschcyc] |
 | Industrial rectangular / Han | ~500 standard; Han HMC (high mating cycle) far higher[^hancyc] |
 | USB-C | 10,000 (USB Type-C spec)[^usbccyc] |

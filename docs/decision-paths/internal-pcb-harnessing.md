@@ -22,8 +22,8 @@ Board-to-wire wiring inside an enclosure — power and signal from a PCB to othe
 
 ## Families to start with
 
-- **Molex Micro-Fit** (and Mini-Fit / Nano-Fit) for internal power.
-- **PicoBlade / JST-GH** and similar for signal.
+- **[Molex Micro-Fit](../micro-fit.md)** (and Mini-Fit / Nano-Fit) for internal power — the [deep dive](../micro-fit.md) covers the Fit ladder, the terminal-set current, and the 30-cycle gotcha.
+- **PicoBlade / [JST-GH](../hobby/jst-gh.md)** and similar for signal — and note they are *different* 1.25 mm families that do not intermate; the GH page carries the lookalike table.
 - **TE** and **Harwin** families where their ratings and latches fit.
 
 These are not "hobby" parts — professional versions have latches, polarization, secondary locks (TPA), and defined ratings. The dividing line is the specific family and rating, not the brand (see [Major Connector Categories](../02-major-connector-categories.md)).

@@ -12,7 +12,7 @@ sidebar_label: Hobby Guide Home
 
 Hobby connector information is messy. Product listings misuse names, photos lie, clone parts blur family boundaries, and "JST" often means almost nothing by itself. This guide is a practical map for identifying, choosing, buying, and crimping connectors for maker, student, 3D printer, LED, RC, sensor, and small-robot projects.
 
-:::note[Introduced v0.8, expanded v0.9]
+:::note[Introduced v0.8 — growing every release since]
 
 This track is still growing — the core pages and the first family deep-pages are in place, and more are on the [roadmap](hobby-source-notes.md). The [Professional / Industrial guide](../engineering-home.md) is the longer-established track, and its foundational material (what connectors actually do, anatomy, crimping discipline) applies here too.
 
@@ -45,6 +45,7 @@ A connector that fits is not automatically the right connector. Check pitch, fam
 - [Common Hobby Connector Families](families.md) — including [JST-SM and LED string connectors](jst-sm-led-connectors.md)
 - [Power vs Signal Connectors](power-vs-signal.md) and [Crimping Without Losing Your Mind](crimping.md)
 - [Amazon/eBay/AliExpress Connector Kits](connector-kits.md) and [Buying the Right Mating Parts](buying-mating-parts.md)
+- [The Hobby Decision Guide](decision-guide.md) — the scannable project-to-family starting table
 - [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md)
 
 ## What this guide covers
@@ -62,11 +63,13 @@ Covered in dedicated pages:
 - JST-GH — the drone world's locking standard
 - Barrel jacks and their polarity traps
 - Screw terminals, spring clamps, and ferrules
+- Molex Micro-Fit 3.0 and the Fit ladder — capsule here, with the [full deep dive on the engineering track](../micro-fit.md)
 - Crimping, pre-crimped leads, and connector kits
 - Identifying unknown connectors
 
 Capsule notes only, for now — short field notes in [Common Hobby Connector Families](families.md), with deep pages on the [roadmap](hobby-source-notes.md):
 
+- JST-RCY battery pairs
 - IDC ribbon connectors
 - FFC/FPC flat-flex (ZIF) cables
 - GX/SP-style "aviation / waterproof" marketplace circulars

@@ -8,7 +8,7 @@ sidebar_label: Overview
 
 # Common Hobby Connector Families
 
-Capsule field notes on the families hobby projects actually meet: what the marketplace calls them, what they really are, and what bites. Pitches cited on [JST Is Not One Connector](jst-is-not-one-connector.md) carry sources; everything else here is orientation — **verify the exact part's drawing/datasheet before relying on it**, and treat all current capability as *source needed* unless you're holding the datasheet ([power vs signal](power-vs-signal.md)).
+Capsule field notes on the families hobby projects actually meet: what the marketplace calls them, what they really are, and what bites. Pitches cited on [JST Is Not One Connector](jst-is-not-one-connector.md) carry sources, and a few capsules below carry their own datasheet-level citations (WAGO's 221 ratings, Molex's FFC pitch classes); everything else here is orientation — **verify the exact part's drawing/datasheet before relying on it**, and treat all current capability as *source needed* unless you're holding the datasheet ([power vs signal](power-vs-signal.md)).
 
 ## Dupont / 0.1 inch headers
 
@@ -16,6 +16,13 @@ Capsule field notes on the families hobby projects actually meet: what the marke
 - **What it is:** the generic 0.1 in (2.54 mm) pin-header ecosystem — square pins, friction-fit crimp sockets in snap-together housings. "Dupont" is a folk name, not a current manufacturer designation; quality varies wildly between suppliers.
 - **Watch for:** no positive latch (vibration walks them off), no polarization unless you add it, contact retention varying kit to kit, and the temptation to run real power through them. Great for breadboards and bench prototypes; a liability on anything that moves.
 - **Full page:** [Dupont / 0.1 Inch Headers](dupont-headers.md).
+
+## Molex Micro-Fit 3.0 (and the Fit ladder)
+
+- **Marketplace names:** Micro-Fit, "micro fit 3," MicroFit 3.0 — and, unhelpfully, just "Molex connector."
+- **What it is:** the 3.0 mm-pitch **latching** crimp family that is the classic Dupont graduation: polarized housings, positive latch, TPA options, and one contact system serving wire-to-board, wire-to-wire, and panel-mount jobs. It sits on a ladder of lookalike siblings — Nano-Fit (2.5 mm), **Mini-Fit Jr. (4.2 mm — the ATX power connector)**, Mega-Fit (5.7 mm) — and none of them intermate.
+- **Watch for:** eyeballed pitch (3.0 vs 4.2 mm is invisible in photos — [measure](pitch.md)); "micro-fit style" clone kits inheriting nothing from genuine figures; current set by the **terminal P/N**, not the family name; and standard terminals rated around **30 mating cycles** — it's a configuration interface, not a quick-disconnect.
+- **Full page:** [Micro-Fit 3.0 deep dive](../micro-fit.md) (engineering track) — the Fit ladder, the terminal-set current story, the 30-cycle surprise, and TPA/keying discipline.
 
 ## JST-XH
 
@@ -58,7 +65,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 ## Servo connectors
 
 - **Marketplace names:** servo plug, JR/Futaba-style, 3-pin Dupont.
-- **What it is:** servo leads are commonly three-conductor signal / power / ground harnesses using 0.1-inch-class housings, but keying tabs, pin order, wire colors, and vendor conventions vary — verify the receiver/controller and servo documentation before powering.
+- **What it is:** servo leads are three-conductor signal / power / ground harnesses in 0.1-inch-class housings with one de-facto pin order — **positive always on the center pin** — while keying tabs and wire colors vary by vendor. Verify the order at both ends against documentation before powering anyway: vintage-Airtronics leads and miswired no-name leads are the exceptions that burn.
 - **Watch for:** friction fit only — vibration protection is on you; check the servo's stall current against the lead and wire gauge, not just "it's a servo plug."
 - **Full page:** [Servo Connectors](servo-connectors.md) — the center-positive pin order, JR vs Futaba housings, the old-Airtronics trap, and the stall-current math.
 
@@ -73,6 +80,13 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 - **Watch for:** per AMASS's own documentation **the digits are the *momentary* current — continuous is half or less** (sourced table on the [full page](xt-connectors.md)); clone quality varies and genuine-part figures don't transfer; they are unsealed; and like all power connectors they are **not load-break devices** — see the [energized-connector warning](../decision-paths/high-current-dc-power.md).
 - **Full page:** [XT30, XT60, and XT90](xt-connectors.md). For everything else on a battery — Deans/T-plug, EC3/EC5, Traxxas-style, Tamiya-style, bullets, Powerpole — see the [RC battery connector landscape](rc-battery-connectors.md).
 
+## Anderson Powerpole
+
+- **Marketplace names:** Powerpole, Anderson connectors, PP15/45, "Anderson-style."
+- **What it is:** a **genderless** single-pole DC power system — one PP15/45 housing accepts 15/30/45 A contacts, and poles dovetail into whatever multi-pole blocks you need. The ham-radio, robotics, and DC-distribution standard.
+- **Watch for:** housing color is identification only (every color mates with every color), so **your assembly convention is the only polarity protection** — build every pair one way and pin it; unsealed; not load-break; clones get the contact spring wrong.
+- **Full page:** [Anderson Powerpole](anderson-powerpole.md) — the PP15/45 datasheet numbers, the family ladder to 350 A-class, the ARES "Red Right, Tongue Top" standard, and why it's the wrong answer for signal.
+
 ## Screw terminals and spring terminals
 
 - **What it is:** terminal blocks (fixed or pluggable), spring/lever types (Wago-style) — field-wireable, no crimping, great for power distribution and things you'll re-wire. A sourced anchor for the lever class: WAGO's own [221-series family page](https://www.wago.com/gb/products/electrical-interconnections/discover-installation-terminal-blocks-and-connectors/221) rates the 4 mm² class at 32 A / 450 V IEC (20 A / 600 V UL) — and a 6 mm², 41 A-class 221-6xx line exists for heavier work. Clone "Wago-style" levers inherit none of that; full detail on the [terminals page](screw-terminals.md).
@@ -81,7 +95,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 
 ![A transparent WAGO 221 lever connector next to a stripped stranded wire](/img/photos/wago-221-lever.jpg)
 
-*A lever-type splicing connector — tool-free, re-wireable, and rated on its own datasheet (this one marks 20 A / 300 V on the housing). Photo: [Lucasbosch](https://commons.wikimedia.org/wiki/File:Wago_221-413_splicing_connector_with_stranded_wire.jpg), CC BY-SA 4.0, via Wikimedia Commons.*
+*A lever-type splicing connector — tool-free, re-wireable, and rated on its own datasheet. This one marks 20 A / 300 V on the housing: its Japanese JET listing, a third rating system alongside the IEC and UL figures above — same part, three certification regimes. Photo: [Lucasbosch](https://commons.wikimedia.org/wiki/File:Wago_221-413_splicing_connector_with_stranded_wire.jpg), CC BY-SA 4.0, via Wikimedia Commons.*
 
 ## Barrel jacks
 

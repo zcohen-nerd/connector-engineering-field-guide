@@ -22,7 +22,7 @@ Use [How to Search for Connectors](00-how-to-search-for-connectors.md) as a star
 
 ## Exercise 2 — Connector comparison matrix
 
-**Scenario:** Compare [38999 Series III](07-mil-dtl-38999.md), [26482](mil-dtl-26482.md), [M12 A-coded, M12 X-coded](08-m12.md), D-sub, Micro-D, an industrial rectangular/Han-style connector, and Molex Micro-Fit across: environment, pin count, current, sealing, tooling, cost, lead time, serviceability, common mistakes.
+**Scenario:** Compare [38999 Series III](07-mil-dtl-38999.md), [26482](mil-dtl-26482.md), [M12 A-coded, M12 X-coded](08-m12.md), D-sub, Micro-D, an industrial rectangular/Han-style connector, [Molex Micro-Fit](micro-fit.md), and a [DEUTSCH DT-family option](deutsch.md) across: environment, pin count, current, sealing, tooling, cost, lead time, serviceability, common mistakes.
 
 **Deliverable:** a scored comparison matrix plus a recommendation paragraph for a stated application.
 

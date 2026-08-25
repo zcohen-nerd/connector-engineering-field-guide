@@ -62,7 +62,7 @@ There is no such thing as "a 5.5 × 2.1 is good for X amps." Current and voltage
 
 ## 6. When a barrel jack is enough — and when it isn't
 
-Enough: bench gear, wall-powered projects that live indoors, anything where a pulled plug is an inconvenience. Not enough: vibration, outdoor exposure, real current, or a plug-cycle-heavy service point — graduate to a locking/keyed power family ([XT-class](xt-connectors.md), [Powerpole](rc-battery-connectors.md)) or, leaving the bench entirely, [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md) and the [budget path](../decision-paths/rugged-on-a-budget.md).
+Enough: bench gear, wall-powered projects that live indoors, anything where a pulled plug is an inconvenience. Not enough: vibration, outdoor exposure, real current, or a plug-cycle-heavy service point — graduate to a locking/keyed power family ([XT-class](xt-connectors.md), [Powerpole](anderson-powerpole.md)) or, leaving the bench entirely, [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md) and the [budget path](../decision-paths/rugged-on-a-budget.md).
 
 ## Source status
 

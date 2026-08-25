@@ -1,7 +1,7 @@
 ---
 id: jst-is-not-one-connector
 title: "JST Is Not One Connector"
-description: "JST is a manufacturer with dozens of connector series, not one connector. How XH, PH, SH, GH, SM, and RCY differ, and why listings that say JST mean little."
+description: "JST is a manufacturer with dozens of connector series, not one connector. How XH, PH, SH, GH, EH, ZH, SM, and RCY differ, and why listings that say JST mean little."
 slug: /hobby/jst-is-not-one-connector
 sidebar_label: JST Is Not One Connector
 ---
@@ -24,14 +24,16 @@ A listing that says "JST connector" has not told you the connector series, pitch
 
 ## The series you'll actually meet
 
-Every pitch below is sourced from the official JST series datasheet footnoted on its row; the footnotes also carry each datasheet's headline rating. Two standing caveats: those figures describe **genuine JST parts assembled per the datasheet** — clone and "compatible" parts are not covered — and a headline current is still contact-, gauge-, and application-dependent ([power vs signal](power-vs-signal.md)).
+Every pitch below is sourced from the official JST series datasheet (or JST's official product page) footnoted on its row; the footnotes also carry each series' headline rating. Two standing caveats: those figures describe **genuine JST parts assembled per the datasheet** — clone and "compatible" parts are not covered — and a headline current is still contact-, gauge-, and application-dependent ([power vs signal](power-vs-signal.md)).
 
 | Common name | Typical pitch | Common use | Connector type | Common confusion |
 |---|---|---|---|---|
 | JST-XH | 2.5 mm[^jst-xh] | 3D printers, balance leads, low-cost wire-to-board | wire-to-board | confused with PH/VH/KF-style terminal blocks |
 | JST-PH | 2.0 mm[^jst-ph] | small batteries, sensors, small boards | wire-to-board | confused with XH or generic battery connectors |
+| JST-EH | 2.5 mm[^jst-eh] | printers, appliances, general internal signal | wire-to-board | same 2.5 mm pitch as XH but a slimmer, different family — housings and contacts don't interchange |
 | JST-SH | 1.0 mm[^jst-sh] | Qwiic/STEMMA QT-style tiny I2C boards | wire-to-board | confused with GH or other 1 mm-ish connectors |
 | [JST-GH](jst-gh.md) | 1.25 mm[^jst-gh] | compact locking harnesses, drones, embedded systems | wire-to-board | confused with SH due to size |
+| JST-ZH | 1.5 mm[^jst-zh] | compact sensor and camera leads | wire-to-board | the in-between size — bigger than GH (1.25), smaller than PH (2.0), and routinely misnamed as both |
 | JST-SM | 2.5 mm[^jst-sm] | LED strings/strips, low-voltage wire-to-wire harnesses | wire-to-wire | often sold as generic LED connectors or "JST-SM-style" — see [JST-SM and LED string connectors](jst-sm-led-connectors.md) |
 | JST-RCY / BEC style | 2.5 mm[^jst-rcy] | small battery leads, RC-ish power | wire-to-wire | often called a "JST battery connector," which names nothing |
 
@@ -54,6 +56,10 @@ All figures are for genuine JST parts assembled per the datasheet; clones and "c
 [^jst-xh]: JST XH series datasheet, official JST PDF — 2.5 mm pitch, wire-to-board; 3 A current class (contact/gauge-dependent), 250 V. <https://www.jst-mfg.com/product/pdf/eng/eXH.pdf>
 
 [^jst-ph]: JST PH series datasheet, official JST PDF — 2.0 mm pitch, wire-to-board; 2 A AC/DC (AWG #24), 100 V, 2–16 circuits, wire range AWG #32–24. <https://www.jst-mfg.com/product/pdf/eng/ePH.pdf>
+
+[^jst-eh]: JST EH series datasheet, official JST PDF — 2.5 mm pitch, wire-to-board; 3 A AC/DC (AWG #22), 250 V. <https://www.jst-mfg.com/product/pdf/eng/eEH.pdf>
+
+[^jst-zh]: JST ZH series, official JST product page — 1.5 mm pitch, wire-to-board; 1 A (AWG #26–32), 50 V. <https://www.jst.com/products/crimp-style-connectors-wire-to-board-type/zh-connector/>
 
 [^jst-sh]: JST SH series datasheet, official JST PDF — 1.0 mm pitch, crimp wire-to-board; 1.0 A AC/DC (AWG #28), 50 V, wire range AWG #32–28. <https://www.jst-mfg.com/product/pdf/eng/eSH.pdf>
 

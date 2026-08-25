@@ -1,0 +1,65 @@
+<svg viewBox="0 0 760 340" width="760" height="340" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- USB-C power schematic: sink Rd resistors, source Rp advertisement,
+       PD voltage ladder. Electrical story only — no absolute dimensions
+       asserted; resistor values per silicon-vendor documentation. -->
+  <rect x="0.5" y="0.5" width="759" height="339" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">USB-C power — the board must ask, the source advertises, PD negotiates</text>
+
+  <!-- Panel 1: sink-side Rd -->
+  <text x="135" y="66" text-anchor="middle" font-size="12" fill="#3b4453">to be powered, a sink presents:</text>
+  <rect x="95" y="76" width="80" height="22" rx="11" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="135" y="91" text-anchor="middle" font-size="11" fill="#3b4453">USB-C port</text>
+  <line x1="115" y1="98" x2="115" y2="126" stroke="#102040" stroke-width="1.5"/>
+  <line x1="155" y1="98" x2="155" y2="126" stroke="#102040" stroke-width="1.5"/>
+  <text x="107" y="116" text-anchor="end" font-size="10" fill="#3b4453">CC1</text>
+  <text x="163" y="116" font-size="10" fill="#3b4453">CC2</text>
+  <rect x="103" y="126" width="24" height="14" fill="#ffffff" stroke="#0b7e96" stroke-width="2"/>
+  <rect x="143" y="126" width="24" height="14" fill="#ffffff" stroke="#0b7e96" stroke-width="2"/>
+  <text x="115" y="136" text-anchor="middle" font-size="9" fill="#0b7e96">5.1k</text>
+  <text x="155" y="136" text-anchor="middle" font-size="9" fill="#0b7e96">5.1k</text>
+  <line x1="115" y1="140" x2="115" y2="152" stroke="#102040" stroke-width="1.5"/>
+  <line x1="155" y1="140" x2="155" y2="152" stroke="#102040" stroke-width="1.5"/>
+  <line x1="115" y1="152" x2="155" y2="152" stroke="#102040" stroke-width="1.5"/>
+  <line x1="135" y1="152" x2="135" y2="160" stroke="#102040" stroke-width="1.5"/>
+  <line x1="126" y1="160" x2="144" y2="160" stroke="#102040" stroke-width="2"/>
+  <line x1="130" y1="165" x2="140" y2="165" stroke="#102040" stroke-width="2"/>
+  <line x1="133" y1="170" x2="137" y2="170" stroke="#102040" stroke-width="2"/>
+  <text x="135" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">one 5.1 k&#937; per CC pin</text>
+  <text x="135" y="212" text-anchor="middle" font-size="12" fill="#3b4453">none = 0 V from C-to-C;</text>
+  <text x="135" y="226" text-anchor="middle" font-size="12" fill="#3b4453">shared = the Pi 4 bug</text>
+
+  <!-- Panel 2: source-side Rp advertisement -->
+  <text x="380" y="66" text-anchor="middle" font-size="12" fill="#3b4453">the source's Rp advertises:</text>
+  <text x="380" y="100" text-anchor="middle" font-size="13" fill="#3b4453">56 k&#937; &#8594; default USB current</text>
+  <text x="380" y="126" text-anchor="middle" font-size="13" fill="#3b4453">22 k&#937; &#8594; 1.5 A @ 5 V</text>
+  <text x="380" y="152" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">10 k&#937; &#8594; 3 A @ 5 V</text>
+  <text x="380" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">a USB-C jack promises nothing</text>
+  <text x="380" y="212" text-anchor="middle" font-size="12" fill="#3b4453">read what the port advertises —</text>
+  <text x="380" y="226" text-anchor="middle" font-size="12" fill="#3b4453">don't assume 3 A</text>
+
+  <!-- Panel 3: PD ladder -->
+  <text x="615" y="66" text-anchor="middle" font-size="12" fill="#3b4453">the PD ladder (volts):</text>
+  <line x1="585" y1="76" x2="645" y2="76" stroke="#6f8bb4" stroke-width="3" stroke-dasharray="6 4"/>
+  <line x1="585" y1="90" x2="645" y2="90" stroke="#6f8bb4" stroke-width="3" stroke-dasharray="6 4"/>
+  <line x1="585" y1="104" x2="645" y2="104" stroke="#6f8bb4" stroke-width="3" stroke-dasharray="6 4"/>
+  <line x1="585" y1="118" x2="645" y2="118" stroke="#0b7e96" stroke-width="3"/>
+  <line x1="585" y1="132" x2="645" y2="132" stroke="#0b7e96" stroke-width="3"/>
+  <line x1="585" y1="146" x2="645" y2="146" stroke="#0b7e96" stroke-width="3"/>
+  <line x1="585" y1="160" x2="645" y2="160" stroke="#0b7e96" stroke-width="3"/>
+  <text x="578" y="80" text-anchor="end" font-size="10" fill="#6f8bb4">48</text>
+  <text x="578" y="94" text-anchor="end" font-size="10" fill="#6f8bb4">36</text>
+  <text x="578" y="108" text-anchor="end" font-size="10" fill="#6f8bb4">28</text>
+  <text x="578" y="122" text-anchor="end" font-size="10" fill="#3b4453">20</text>
+  <text x="578" y="136" text-anchor="end" font-size="10" fill="#3b4453">15</text>
+  <text x="578" y="150" text-anchor="end" font-size="10" fill="#3b4453">9</text>
+  <text x="578" y="164" text-anchor="end" font-size="10" fill="#3b4453">5</text>
+  <text x="652" y="80" font-size="10" font-style="italic" fill="#6f8bb4">EPR &#8594; 240 W</text>
+  <text x="652" y="122" font-size="10" fill="#3b4453">100 W = 20 V &#215; 5 A</text>
+  <text x="615" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">above 5 V only by negotiation</text>
+  <text x="615" y="212" text-anchor="middle" font-size="12" fill="#3b4453">&gt; 3 A needs an e-marked cable;</text>
+  <text x="615" y="226" text-anchor="middle" font-size="12" fill="#3b4453">EPR rungs need an EPR cable</text>
+
+  <text x="380" y="268" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">VBUS above 5 V exists only after a digital conversation — no compliant charger "just outputs" 20 V</text>
+  <text x="380" y="292" text-anchor="middle" font-size="13" font-weight="bold" fill="#b3402f">the cable is a rated component: 3 A basic, 5 A e-marked, EPR-rated for the 240 W class</text>
+  <text x="380" y="322" text-anchor="middle" font-size="12" font-style="italic" fill="#6f8bb4">Schematic — electrical story only; resistor tolerances, PDO tables, and pinouts per the USB-IF specifications.</text>
+</svg>

@@ -31,7 +31,7 @@ Every pitch below is sourced from the official JST series datasheet footnoted on
 | JST-XH | 2.5 mm[^jst-xh] | 3D printers, balance leads, low-cost wire-to-board | wire-to-board | confused with PH/VH/KF-style terminal blocks |
 | JST-PH | 2.0 mm[^jst-ph] | small batteries, sensors, small boards | wire-to-board | confused with XH or generic battery connectors |
 | JST-SH | 1.0 mm[^jst-sh] | Qwiic/STEMMA QT-style tiny I2C boards | wire-to-board | confused with GH or other 1 mm-ish connectors |
-| JST-GH | 1.25 mm[^jst-gh] | compact locking harnesses, drones, embedded systems | wire-to-board | confused with SH due to size |
+| [JST-GH](jst-gh.md) | 1.25 mm[^jst-gh] | compact locking harnesses, drones, embedded systems | wire-to-board | confused with SH due to size |
 | JST-SM | 2.5 mm[^jst-sm] | LED strings/strips, low-voltage wire-to-wire harnesses | wire-to-wire | often sold as generic LED connectors or "JST-SM-style" — see [JST-SM and LED string connectors](jst-sm-led-connectors.md) |
 | JST-RCY / BEC style | 2.5 mm[^jst-rcy] | small battery leads, RC-ish power | wire-to-wire | often called a "JST battery connector," which names nothing |
 

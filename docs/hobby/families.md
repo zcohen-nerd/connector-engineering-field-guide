@@ -41,8 +41,9 @@ Capsule field notes on the families hobby projects actually meet: what the marke
 ## JST-GH
 
 - **Marketplace names:** GH, "Pixhawk connector," drone cable.
-- **What it is:** 1.25 mm-pitch wire-to-board family **with a positive latch** — common in drones/flight controllers and embedded gear that vibrates.
+- **What it is:** 1.25 mm-pitch wire-to-board family **with a positive latch** — common in drones/flight controllers and embedded gear that vibrates. It's the connector of the Pixhawk connector standard.
 - **Watch for:** confusion with SH (1.0 mm, no latch) and with generic 1.25 mm "Molex PicoBlade-style" connectors; they are different families.
+- **Full page:** [JST-GH](jst-gh.md) — the datasheet figures, the DF13-to-GH Pixhawk story, and the PicoBlade lookalike trap.
 
 ## JST-SM and LED string connectors
 
@@ -96,6 +97,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 
 - **What it is:** USB-A/micro-B/USB-C as hobby power-and-data workhorses.
 - **Watch for:** cheap cables with undersized conductors that drop volts under load; USB-C requiring pull-down resistors (or a PD negotiation) to get power from a C-to-C source — a bare breakout may read 0 V; connector current limits per the USB spec and the part's datasheet, not vibes. See the engineering track's [§12 consumer I/O coverage](../12-consumer-hobby-prototype-connectors.md).
+- **Full page:** [USB-C Power for Hobby Projects](usb-c-power.md) — the 5.1 kΩ resistor rule, the source's advertisement, the PD ladder to 240 W, and the cable's role.
 
 ## IDC ribbon connectors
 

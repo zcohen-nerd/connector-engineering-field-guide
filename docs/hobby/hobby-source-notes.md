@@ -54,7 +54,7 @@ Source targets, honestly unfilled — none of these citations exist in the repo 
 
 | Item | Source target |
 |---|---|
-| JST EH/ZH (mentioned only as published-pitch examples) | **Closed (audit 2026-08):** EH cited to the official JST series PDF and ZH to JST's official product page; pitch and headline-rating figures now live in §12.2 and its `[^jst]` footnote |
+| JST EH/ZH pitch and headline ratings | **Closed (audit 2026-08):** EH cited to the official JST series PDF and ZH to JST's official product page; pitch and headline-rating figures now live in §12.2 and its `[^jst]` footnote |
 | XT ratings from AMASS-direct hosting | Closed for values (audit-2026-07) via distributor-hosted AMASS PDFs; an AMASS-domain-hosted equivalent would still be an upgrade |
 | Crimping tiny open-barrel terminals | Manufacturer application notes / crimp specifications |
 | LED power injection guidance (if expanded) | Reputable LED wiring/power-injection references |

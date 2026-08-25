@@ -94,7 +94,7 @@ Breadboards, Arduino/Raspberry Pi/ESP32 wiring, 3D printers, LEDs, RC power, con
 - [Practical checklist](10-selection-checklist.md)
 - [What people forget](what-people-forget.md)
 - [Hands-on exercises](13-hands-on-exercises.md)
-- [Tools & templates](tools/index.md) and worked examples: [Connector Selection Packet](examples/connector-selection-packet.md), [M12 Sensor Interface](examples/m12-sensor-interface.md) — plus the [Rugged Control Box](examples/rugged-control-box.md) fill-in skeleton for Exercise 1
+- [Tools & templates](tools/index.md) and worked examples: [Rugged Control Box](examples/rugged-control-box.md), [Connector Selection Packet](examples/connector-selection-packet.md), [M12 Sensor Interface](examples/m12-sensor-interface.md)
 - [Using this guide with an intern](using-this-guide-with-an-intern.md) — the mentor's sequencing of all of the above
 
 ## Source discipline

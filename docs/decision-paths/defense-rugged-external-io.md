@@ -67,4 +67,4 @@ See [What People Forget](../what-people-forget.md).
 - A source-controlled **pinout** with keying documented in the [ICD](../tools/connector-icd-template.md).
 - A [cable drawing](../tools/cable-drawing-template.md) and a torque/assembly note.
 
-Related: [MIL-DTL-38999 deep dive](../07-mil-dtl-38999.md) · [Decision Examples](../09-decision-examples.md) · [Rugged Control Box skeleton](../examples/rugged-control-box.md) (a fill-in documentation structure, not a worked selection).
+Related: [MIL-DTL-38999 deep dive](../07-mil-dtl-38999.md) · [Decision Examples](../09-decision-examples.md) · [Rugged Control Box worked example](../examples/rugged-control-box.md).

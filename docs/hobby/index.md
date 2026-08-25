@@ -57,6 +57,7 @@ Covered in dedicated pages:
 - LED string and strip connectors, including JST-SM-style connectors
 - RC power connectors — the XT30/XT60/XT90 ecosystem, plus the wider battery-connector landscape (Deans, EC, Traxxas, Tamiya-style, bullets, Powerpole)
 - The Anderson Powerpole system
+- Servo connectors — one pin order, two housings, and the stall-current reality
 - Barrel jacks and their polarity traps
 - Screw terminals, spring clamps, and ferrules
 - Crimping, pre-crimped leads, and connector kits
@@ -64,7 +65,6 @@ Covered in dedicated pages:
 
 Capsule notes only, for now — short field notes in [Common Hobby Connector Families](families.md), with deep pages on the [roadmap](hobby-source-notes.md):
 
-- Servo connectors
 - USB power
 - IDC ribbon connectors
 - FFC/FPC flat-flex (ZIF) cables

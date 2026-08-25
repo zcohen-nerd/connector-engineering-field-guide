@@ -16,6 +16,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'hobby/dupont-headers',
+        'hobby/servo-connectors',
         'hobby/jst-xh',
         'hobby/jst-ph',
         'hobby/jst-sh-qwiic-stemma',

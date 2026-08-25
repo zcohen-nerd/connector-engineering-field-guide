@@ -19,6 +19,7 @@ Only what is actually backed by sources present in this repo:
 - **USB-C 10,000-cycle durability** — per the USB-IF Type-C specification, cited in [§12](../12-consumer-hobby-prototype-connectors.md).
 - **Qwiic / STEMMA QT connector conventions** — 4-pin 1.0 mm JST SH, polarized, cross-compatible ecosystems — per SparkFun's Qwiic documentation and Adafruit's STEMMA QT technical specs, cited on [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
 - **XT30/XT60/XT90 attribution and ratings** — AMASS (Changzhou Amass Electronics) as XT-series originator per its manufacturer site; rated/momentary currents (XT30: 15/30 A, XT60: 30/60 A, XT90: 40/90 A), cable specs, and temperature-rise conditions per AMASS-authored documentation (distributor-hosted PDFs — AMASS publishes no spec tables on its own site). Genuine-part figures only; clones uncovered. Cited on [XT30, XT60, and XT90](xt-connectors.md).
+- **Servo-lead conventions and figures** — the red-center-positive pin order and darkest-negative/lightest-signal color rule per a servo manufacturer's documentation (Kpower) and a hobby-industry reference (Flite Test); JR-universal vs Futaba J housing geometry (bevel, keyed tab, shave-to-universal) per vendor documentation (Hansen Hobbies, Pololu); the old-Airtronics polarity difference per conversion-adapter documentation; the 0.1-inch contact-class current (~3.5 A continuous / 5 A intermittent) per servo maker ProModeler's engineering note quoting pin-manufacturer ratings; stall currents per Savox's published specifications; and the 26/22/20 AWG servo-wire ladder per vendor documentation. **No governing spec exists for this family — nothing transfers to clone leads or kit terminals.** Cited on [Servo Connectors](servo-connectors.md).
 - **Grove connector and port-type pinout variation** — 4-pin 2.0 mm connector; signal-pin function varies by port type (I2C/UART/digital/analog), per Seeed's Grove System documentation, cited on [JST-SH, Qwiic, and STEMMA QT](jst-sh-qwiic-stemma.md).
 - **Plain STEMMA vs STEMMA QT** — plain STEMMA = JST PH 2.0 mm (4-pin I2C, 3-pin analog/digital/PWM, 3–5 V device power, Zener-protected 3-pin ports), distinct from the 1.0 mm SH-based STEMMA QT — per Adafruit's STEMMA documentation, cited on the [SH/Qwiic](jst-sh-qwiic-stemma.md) and [PH](jst-ph.md) pages.
 - **0.1 in = 2.54 mm** — definitional; the basis of the Dupont/header ecosystem discussion.
@@ -41,7 +42,7 @@ Typical hobby usage, not design ratings. Anywhere these appear they carry a *ver
 
 - Clone / "compatible" / "-style" versions of any JST or XT series — the genuine-part figures above do not transfer to them
 - JST/XT series usage beyond the sourced figures (derating, environment, cycles in *your* application)
-- Servo connector/lead current examples
+- Servo connector/lead current examples beyond the class figures and Savox stall currents cited on [Servo Connectors](servo-connectors.md) — *your* servo's stall figure and *your* terminal's rating still decide
 - Dupont / 0.1 in header current assumptions
 - Barrel jack size and rating examples (5.5 × 2.1/2.5 mm named as *common sizes*, not a standard)
 - Screw/spring terminal ratings and gauge ranges
@@ -72,7 +73,7 @@ The editorial roadmap for this track — what exists, what's next, and in what o
 3. **JST-SH / Qwiic / STEMMA QT** — initial page added (v0.9); Qwiic/STEMMA QT conventions cited; Grove and plain-STEMMA distinctions sourced (audit-2026-07)
 4. **Dupont / 0.1 inch headers** — initial page added (v0.9); no governing spec exists, by nature; name lineage (Berg Mini-PV → DuPont → FCI → Amphenol) sourced (audit-2026-07)
 5. **XT30 / XT60 / XT90** — initial page added (v0.9); AMASS attribution and ratings sourced (audit-2026-07, distributor-hosted manufacturer PDFs); clone parts remain uncovered
-6. **Servo connectors** — capsule only; deep page not started
+6. **Servo connectors** — initial page added (audit 2026-08); pin-order/color conventions, housing geometry, contact-class current, stall figures, and the wire ladder all cited to vendor/industry references honestly labeled as such — no governing spec exists for the family; clone leads and kit terminals uncovered
 7. **Screw/spring terminals and ferrules** — initial page added (audit 2026-08); WAGO 221 figures cited at datasheet level for both size classes and both rating systems (IEC + UL, incl. the 6 mm²/41 A class); torque-class figures and a first-party never-tin-stranded-wire citation remain open
 8. **USB-C power for hobby projects** — capsule only; deep page not started
 9. **Barrel jacks and polarity traps** — initial page added (audit 2026-08); structure/polarity/switched-contact claims sourced to Same Sky's selection guide and the representative rating to the PJ-102A datasheet; EIAJ per-class figures deliberately unquoted

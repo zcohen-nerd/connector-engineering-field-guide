@@ -1,0 +1,60 @@
+<svg viewBox="0 0 760 340" width="760" height="340" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Servo connector schematic: pin order with center-positive, JR/universal vs
+       Futaba J housing geometry, bare-header off-by-one hazard. Red/dark/light
+       wire colors are semantic (the actual convention). Schematic only —
+       no absolute dimensions asserted. -->
+  <rect x="0.5" y="0.5" width="759" height="339" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">The servo connector — one pin order, two housings, zero keying on a bare header</text>
+
+  <!-- Panel 1: pin order, face view -->
+  <text x="103" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#3b4453">S</text>
+  <text x="136" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#b3402f">+</text>
+  <text x="169" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#3b4453">&#8722;</text>
+  <rect x="80" y="96" width="112" height="52" rx="6" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <rect x="96" y="108" width="14" height="14" fill="#ffffff" stroke="#102040" stroke-width="1.5"/>
+  <rect x="129" y="108" width="14" height="14" fill="#f6d9d3" stroke="#b3402f" stroke-width="2"/>
+  <rect x="162" y="108" width="14" height="14" fill="#ffffff" stroke="#102040" stroke-width="1.5"/>
+  <line x1="103" y1="148" x2="103" y2="172" stroke="#c9d3df" stroke-width="4"/>
+  <line x1="136" y1="148" x2="136" y2="172" stroke="#b3402f" stroke-width="4"/>
+  <line x1="169" y1="148" x2="169" y2="172" stroke="#3b4453" stroke-width="4"/>
+  <text x="136" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">+ is always the center pin</text>
+  <text x="136" y="212" text-anchor="middle" font-size="12" fill="#3b4453">reversed = S and &#8722; swapped:</text>
+  <text x="136" y="226" text-anchor="middle" font-size="12" fill="#3b4453">it won't run &#8212; nothing burns</text>
+
+  <!-- Panel 2: universal/JR vs Futaba J housing profiles -->
+  <text x="328" y="88" text-anchor="middle" font-size="12" fill="#3b4453">universal / JR</text>
+  <path d="M 300 158 L 300 112 L 308 98 L 348 98 L 356 112 L 356 158 Z" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="444" y="88" text-anchor="middle" font-size="12" fill="#3b4453">Futaba J</text>
+  <path d="M 416 158 L 416 112 L 424 98 L 464 98 L 472 112 L 472 158 Z" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <rect x="404" y="116" width="12" height="24" rx="2" fill="#d7dde6" stroke="#0b7e96" stroke-width="2"/>
+  <text x="398" y="131" text-anchor="end" font-size="11" fill="#0b7e96">tab</text>
+  <text x="386" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">same pins &#8212; one extra tab</text>
+  <text x="386" y="212" text-anchor="middle" font-size="12" fill="#3b4453">the J's tab keys Futaba gear;</text>
+  <text x="386" y="226" text-anchor="middle" font-size="12" fill="#3b4453">shaved off, it's a universal</text>
+
+  <!-- Panel 3: bare header row, correct vs off-by-one -->
+  <text x="608" y="88" text-anchor="middle" font-size="12" fill="#3b4453">on a bare 0.1-inch header row</text>
+  <rect x="542" y="96" width="60" height="24" rx="4" fill="none" stroke="#0b7e96" stroke-width="2"/>
+  <rect x="548" y="104" width="8" height="8" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <rect x="568" y="104" width="8" height="8" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <rect x="588" y="104" width="8" height="8" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <rect x="608" y="104" width="8" height="8" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <rect x="628" y="104" width="8" height="8" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <rect x="648" y="104" width="8" height="8" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <text x="674" y="113" font-size="14" font-weight="bold" fill="#0b7e96">&#10003;</text>
+  <rect x="562" y="142" width="60" height="24" rx="4" fill="none" stroke="#b3402f" stroke-width="2" stroke-dasharray="5 4"/>
+  <rect x="548" y="150" width="8" height="8" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <rect x="568" y="150" width="8" height="8" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <rect x="588" y="150" width="8" height="8" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <rect x="608" y="150" width="8" height="8" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <rect x="628" y="150" width="8" height="8" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <rect x="648" y="150" width="8" height="8" fill="#d7dde6" stroke="#102040" stroke-width="1.5"/>
+  <text x="674" y="159" font-size="14" font-weight="bold" fill="#b3402f">&#10007;</text>
+  <text x="608" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">bare rows have no keying</text>
+  <text x="608" y="212" text-anchor="middle" font-size="12" fill="#3b4453">shifted or reversed still fits &#8212;</text>
+  <text x="608" y="226" text-anchor="middle" font-size="12" fill="#3b4453">count pins, then look again</text>
+
+  <text x="380" y="268" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">wire colors are the maker's choice &#8212; pin order is the standard: verify order at both ends, not hue</text>
+  <text x="380" y="292" text-anchor="middle" font-size="13" font-weight="bold" fill="#b3402f">one + and one &#8722; contact carry the whole stall current &#8212; the plug is part of the power budget</text>
+  <text x="380" y="322" text-anchor="middle" font-size="12" font-style="italic" fill="#6f8bb4">Schematic &#8212; a de-facto standard with no governing spec; housings, colors, and ratings vary by maker.</text>
+</svg>

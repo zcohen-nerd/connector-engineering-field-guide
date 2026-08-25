@@ -27,7 +27,7 @@ Pin counts, currents, and voltage classes below are family-level orientation; ev
 - The motor is small enough that the ecosystem uses **M12-class connectors** for both power and feedback — see the [industrial sensor path](industrial-sensor.md) and [M12 deep dive](../08-m12.md); the same discipline applies at smaller scale.
 - The motor wires into a **terminal box** with glands and no disconnect — that's a wiring-practice problem, not a connector selection.
 - A program requires **mil-spec hardware** — see [defense/rugged external I/O](defense-rugged-external-io.md).
-- It's a hobby servo lead — [hobby track, servo capsule](../hobby/families.md).
+- It's a hobby servo lead — [hobby track, servo connectors](../hobby/servo-connectors.md).
 
 ## Families to start with
 

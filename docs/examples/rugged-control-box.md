@@ -55,7 +55,7 @@ The quiet headline decision: **every interface below lands on one circular famil
 
 | Interface | Rejected option | Why rejected |
 | --- | --- | --- |
-| 24 VDC input | Cable gland + hardwired tail | Fails the service model — every box swap becomes a wiring job, done by whoever is on shift; a gland is the right answer only for a run that never unplugs, and this one does |
+| 24 VDC input | Cable gland + hardwired tail | Fails the service model — every box swap becomes a wiring job, done by whoever is on shift; a gland is the right answer only for a run that never unplugs, and this run *does* unplug during service |
 | 24 VDC input | [MIL-DTL-38999](../07-mil-dtl-38999.md) | No program requirement to justify the cost/lead-time class ([defense path](../decision-paths/defense-rugged-external-io.md) logic in reverse) |
 | 24 VDC / motor | M12 K-coded | AC power coding ([§8.1](../08-m12.md)) — wrong lane for a 24 VDC system |
 | 24 VDC / motor | A-coded pins doing power duty | The ~4 A-class note in [§8.1](../08-m12.md) exists for exactly this temptation — power belongs on a power coding the datasheet supports |

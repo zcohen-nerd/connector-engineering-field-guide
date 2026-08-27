@@ -64,7 +64,7 @@ Rated mate/unmate cycles vary widely. Design with margin *below* the rated numbe
 
 | Family | Typical rated mating cycles |
 |---|---|
-| Molex Micro-Fit 3.0 | ~30 (up to ~250 with lubricated RMF terminals)[^microfitcyc] |
+| [Molex Micro-Fit 3.0](../micro-fit.md) | ~30 (up to ~250 with lubricated RMF terminals)[^microfitcyc] |
 | [MIL-DTL-38999](../07-mil-dtl-38999.md) / [MIL-DTL-26482](../mil-dtl-26482.md) | 500[^milcyc] |
 | Micro-D (MIL-DTL-83513) | 500[^milcyc] |
 | D-sub (MIL-DTL-24308) | 500[^milcyc] |

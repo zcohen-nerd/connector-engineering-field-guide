@@ -28,7 +28,7 @@ Scope your search by category before diving into specific families. Each categor
 
 :::note[Often overlooked]
 
-Board-to-wire connectors like [Molex Micro-Fit](micro-fit.md), Mini-Fit, Mega-Fit, and sealed Squba are not "hobby" parts. Professional versions have positive latches, polarization, secondary locks (TPA — Terminal Position Assurance, a secondary lock that confirms every contact is fully seated before the connector can mate), defined current/voltage ratings, and sealed variants. The dividing line is the specific family and rating, not the brand.
+Board-to-wire connectors like [Molex Micro-Fit](micro-fit.md), Mini-Fit, Mega-Fit, and sealed Squba are not "hobby" parts. Professional versions have positive latches, polarization, secondary locks (TPA — Terminal Position Assurance, a secondary lock that confirms every contact is fully seated before the connector can mate), and defined current/voltage ratings — and some family members (like sealed Squba) add environmental sealing while their siblings (like Micro-Fit itself) have none. The dividing line is the specific family and rating, not the brand.
 
 :::
 

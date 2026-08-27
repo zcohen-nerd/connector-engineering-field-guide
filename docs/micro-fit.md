@@ -18,7 +18,7 @@ The genuine Molex **Micro-Fit 3.0** system: **3.00 mm pitch**, crimp wire termin
 
 - **Receptacle housings** (the 43025 class) carry female crimp terminals (the 43030 class); **headers and plug housings** (43045 and kin) complete the pair. Housing, terminal, and header are always separate line items — the same [housing-and-contact discipline](hobby/buying-mating-parts.md) as every crimp family.
 - A full **product specification** governs the system — mating forces, current/temperature behavior, crimp requirements — and it, not the family name, is the release authority for a design.[^microfitps]
-- The family has grown extensions: blind-mate versions with press-fit tails (BMI) for rack-in modules, and a newer **Micro-Fit+** line — treat each as its own series with its own documents.[^microfit]
+- The family has grown extensions: blind-mate versions with press-fit tails (BMI) for rack-in modules,[^microfit] and Molex also markets a newer **Micro-Fit+** line — a separate series this page deliberately doesn't characterize; its own documents govern it.
 
 ## 2. One contact system, three jobs
 
@@ -54,7 +54,7 @@ Two practical consequences. First, the marketplace sells "Molex connector" the w
 The "8.5 A" headline is real and almost always misread. What the family literature actually says:[^microfit]
 
 - **The terminal P/N sets the current.** Standard 43030-class female terminals come in plating and wire-range variants — roughly the **30–20 AWG** span across the lineup[^microfitterm] — and the achievable current tracks the terminal-plus-wire pair, not the housing.
-- **The 10.0 A option is a different terminal.** Molex's **RMF** (Reduced Mating Force) terminals carry the family's top rating — a deliberate order-time choice, not a property your kit-drawer contacts inherit (see the [glossary entry](glossary.md)).
+- **The 10.0 A option is a different terminal.** The family's top rating is offered on specific **RMF** (Reduced Mating Force) terminals — and RMF itself names a mating-force feature, not a current class: the exact terminal P/N still sets the current (see the [glossary entry](glossary.md)). Either way it's a deliberate order-time choice, not a property your kit-drawer contacts inherit.
 - **Loaded circuits derate.** A 24-circuit housing full of worked contacts does not deliver 24 × the single-circuit figure; the product spec's current-vs-temperature behavior governs, and [§4's derating discipline](04-connector-selection-workflow.md) applies unchanged.
 - The wire-and-barrel match is the same [crimp-integrity story](05-connector-anatomy.md) as everywhere: an undersized wire in an oversized barrel is a bad crimp first and an overheated contact second.
 
@@ -72,8 +72,8 @@ Design consequences worth writing down:
 
 ## 6. TPA, keying, and assembly discipline
 
-- **TPA versions exist — use them in production.** The secondary lock that confirms every terminal is seated is the difference between a latch that holds and a harness that passes test with one contact riding half-out ([§5's anatomy](05-connector-anatomy.md); the [audit-grade checklist](tools/design-review-checklist.md) already asks).
-- **Polarization is built in; keying is an option.** Housings only mate one way, and the ordering picture includes keying arrangements so two same-circuit-count connectors in one box can't swap — assign them deliberately when two interfaces look alike ([What People Forget](what-people-forget.md)).
+- **TPA versions exist — use them in production.** The secondary lock that confirms every terminal is seated ([§2 defines TPA](02-major-connector-categories.md)) is the difference between a latch that holds and a harness that passes test with one contact riding half-out — put a terminal-seating check on your [design-review checklist](tools/design-review-checklist.md) alongside its locking row.
+- **Polarization is built in; distinguishing lookalikes is on you.** Housings only mate one way — but when two same-circuit-count connectors share a box, check the Molex catalog for keying/polarization ordering options for the exact series, and back them with labels either way ([What People Forget](what-people-forget.md)).
 - **Crimp per the application spec.** Terminal, tool, and wire are qualified together in Molex's documents;[^microfitps] the [crimping rules](hobby/crimping.md) — right tool, tug test, no soldering crimp terminals — apply at full strength.
 - **The clone problem is real.** "Micro-fit style" kits saturate the 3D-printer and marketplace world; the genuine figures above cover none of them, and the terminal spring is exactly what clones get wrong. [Authorized distributors](hobby/buying-mating-parts.md), genuine Molex, matched series.
 
@@ -100,7 +100,7 @@ Family figures — pitch, circuit span, configurations (wire-to-board / wire-to-
 
 ## Sources
 
-[^microfit]: Molex, *Micro-Fit 3.0 Connector System Product Family* (987650-5984) — 3.00 mm pitch; single- and dual-row housings, 2–24 circuits; wire-to-board, wire-to-wire, and panel-mount configurations with blind-mate (BMI, press-fit) extensions; current up to 8.5 A "determined by terminal used," with a 10.0 A RMF (Reduced Mating Force) terminal offered; 600 V; −40 to +105 °C; durability typically 30 mating cycles, up to ~250 with factory-lubricated RMF terminals; positive latch, polarized housings, TPA options; no environmental sealing. <https://www.content.molex.com/dxdam/literature/987650-5984.pdf>
+[^microfit]: Molex, *Micro-Fit 3.0 Connector System Product Family* (987650-5984 Rev. 5) — 3.00 mm pitch; single- and dual-row housings, 2–24 circuits; wire-to-board, wire-to-wire, and panel-mount configurations with blind-mate (BMI, press-fit) extensions; current up to 8.5 A "determined by terminal used," with a 10.0 A RMF (Reduced Mating Force) terminal offered; 600 V; −40 to +105 °C; durability typically 30 mating cycles, up to ~250 with factory-lubricated RMF terminals; positive latch, polarized housings, TPA options; no environmental sealing. <https://www.content.molex.com/dxdam/literature/987650-5984.pdf>
 
 [^microfitps]: Molex, *Product Specification PS-43045-001* — the governing specification for the Micro-Fit 3.0 system (43045 headers, 43025 receptacle housings, 43030/43031 terminals): mating forces, electrical performance, and the crimp/termination requirements a design releases against. <https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/430/43045/PS-43045-001.pdf>
 

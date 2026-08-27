@@ -14,7 +14,7 @@ The hobby track follows the same transparency rules as the rest of the site (see
 
 Only what is actually backed by sources present in this repo:
 
-- **JST XH, PH, SH, GH, SM, and RCY series** — pitch, connector type, and headline datasheet ratings (XH 2.5 / PH 2.0 / SH 1.0 / GH 1.25 / SM 2.5 / RCY 2.5 mm), each cited to its official JST series PDF on [JST Is Not One Connector](jst-is-not-one-connector.md). **Genuine-part figures only — clones and "compatible" parts are not covered by them.**
+- **JST XH, PH, EH, SH, GH, ZH, SM, and RCY series** — pitch, connector type, and headline datasheet ratings (XH 2.5 / PH 2.0 / EH 2.5 / SH 1.0 / GH 1.25 / ZH 1.5 / SM 2.5 / RCY 2.5 mm), each cited to its official JST series PDF (ZH to JST's official product page) on [JST Is Not One Connector](jst-is-not-one-connector.md). **Genuine-part figures only — clones and "compatible" parts are not covered by them.**
 - **JST VH** (3.96 mm, up to ~10 A @ AWG 16) — per the JST datasheet cited in the engineering track's [§12](../12-consumer-hobby-prototype-connectors.md).
 - **USB-C 10,000-cycle durability** — per the USB-IF Type-C specification, cited in [§12](../12-consumer-hobby-prototype-connectors.md).
 - **USB-C power mechanics** — the sink-side 5.1 kΩ-per-CC-pin rule and the source's Rp current-advertisement levels per silicon-vendor engineering documentation (Infineon, Renesas); the PD fixed-voltage rungs (5/9/15/20 V, plus 28/36/48 V EPR), the 100 W / 240 W ceilings, and the e-marked/EPR cable requirements per USB-IF's own publications; the Raspberry Pi 4 shared-CC-resistor case study per engineering-press coverage carrying Raspberry Pi's own confirmation (labeled as such). Cited on [USB-C Power for Hobby Projects](usb-c-power.md).
@@ -93,6 +93,7 @@ The editorial roadmap for this track — what exists, what's next, and in what o
 15. **FFC/FPC flat-flex** — capsule only ([families](families.md)); deep page not started
 16. **GX/SP-style "aviation / waterproof" circulars** — capsule only ([families](families.md)); identification and skepticism guidance; no ratings asserted
 17. **Anderson Powerpole** — initial page added (audit 2026-08); PP15/45 figures and contact plating cited to Anderson's own datasheet/listings; PP75-class ladder figures partially distributor-listed (labeled) pending Anderson-hosted equivalents; the ARES/RACES orientation convention cited to emergency-service training references
+18. **JST-SM and LED string connectors** — full page since v0.8 ([JST-SM and LED Strings](jst-sm-led-connectors.md)); SM figures datasheet-cited on the JST hub; LED power-injection guidance remains a needs-source row. *Listed out of order — the page predates this roadmap; recorded so every existing deep page has a status row*
 
 :::note
 

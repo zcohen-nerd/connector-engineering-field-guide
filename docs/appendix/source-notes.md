@@ -23,7 +23,7 @@ Release history lives in the repository `CHANGELOG.md`. v0.7 added source hierar
 
 <!-- Hobby per-topic status lives ONLY in hobby/source-notes. Do not duplicate here. -->
 
-The [Hobby Connector Field Guide](../hobby/index.md) (introduced v0.8, expanded v0.9) is **site-only material** with no `Source/` counterpart. Its per-topic source status — what is verified, what is example-only, and what still needs a source — is tracked in exactly one place: **[Hobby Source Notes](../hobby/hobby-source-notes.md)**, the authoritative tracker for that entire track. This dashboard intentionally carries no per-topic hobby detail; if a hobby claim's status matters to you, that page is the record.
+The [Hobby Connector Field Guide](../hobby/index.md) (introduced v0.8, growing every release since) is **site-only material** with no `Source/` counterpart. Its per-topic source status — what is verified, what is example-only, and what still needs a source — is tracked in exactly one place: **[Hobby Source Notes](../hobby/hobby-source-notes.md)**, the authoritative tracker for that entire track. This dashboard intentionally carries no per-topic hobby detail; if a hobby claim's status matters to you, that page is the record.
 
 ## Source hierarchy
 

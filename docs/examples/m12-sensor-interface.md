@@ -44,7 +44,7 @@ That last sentence is most of the connector requirement. The sensors themselves 
 
 - **M12 A-coded** — the common industrial default for DC sensors and I/O, and the IO-Link device rides the same connector family ([§8.1](../08-m12.md)). **Selected.**
 - **M8** — viable for the compact sensors, and worth considering where space is tight. Rejected here as a *standardization* decision, not a technical one: one shell size across the cell means one cordset inventory, one seal system, one torque procedure, and no size-guessing during a night-shift swap.
-- **Hardwired cable glands into a junction box** — cheapest on day one, rejected on the service model (R5): every sensor swap becomes a wiring job inside a sealed box, done by whoever is on shift. The [when-to-avoid logic in the path](../decision-paths/industrial-sensor.md) applies directly.
+- **Hardwired cable glands into a junction box** — cheapest on day one, rejected on the service model (R5): every sensor swap becomes a wiring job inside a sealed box, done by whoever is on shift — the unplug-to-service model the [Industrial sensor path](../decision-paths/industrial-sensor.md) is built around, inverted.
 - **Sealed automotive families ([DT-style](../deutsch.md))** — good connectors in their own lane ([rugged on a budget](../decision-paths/rugged-on-a-budget.md)), rejected because the sensor ecosystem ships M12/M8 cordsets off the shelf; fighting the ecosystem means custom pigtails everywhere.
 
 **For the Ethernet run**, per the [Rugged Ethernet path](../decision-paths/rugged-ethernet.md):

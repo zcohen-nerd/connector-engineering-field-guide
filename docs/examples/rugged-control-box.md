@@ -26,7 +26,7 @@ Like the [Selection Packet](connector-selection-packet.md) and the [M12 example]
 
 A shoebox-class sealed controller mounted on a machine frame in a light-industrial bay: splash and dust, occasional washdown mist nearby, no submersion. It powers from the plant's 24 VDC supply, talks Ethernet to the line controller, sits on a small CAN segment with two other nodes, reads four DC sensors on the frame, drives one small 24 VDC gearmotor, and needs a service port a technician can reach without opening the enclosure. Cables are unplugged whenever the frame section is serviced — by whoever is on shift.
 
-The quiet headline decision: **every interface below lands on one circular family (M12-class), on purpose.** One shell size, one seal system, one torque procedure, one cordset supplier list — the same standardization logic the [M12 example](m12-sensor-interface.md) uses, extended to a whole box. The engineering effort then goes where it belongs: keying, labeling, and documentation so that six same-size connectors can never be confused.
+The quiet headline decision: **every interface below lands on one circular family (M12-class), on purpose.** One shell size, one seal system, one torque procedure, one cordset supplier list — the same standardization logic the [M12 example](m12-sensor-interface.md) uses, extended to a whole box. The engineering effort then goes where it belongs: keying, labeling, and documentation so that nine same-size connectors across six interface types can never be confused.
 
 ## Requirements
 
@@ -55,17 +55,17 @@ The quiet headline decision: **every interface below lands on one circular famil
 
 | Interface | Rejected option | Why rejected |
 | --- | --- | --- |
-| 24 VDC input | Cable gland + hardwired tail | Fails the service model — every box swap becomes a wiring job; the [budget path](../decision-paths/rugged-on-a-budget.md) tolerates glands only where unplugging is never required |
+| 24 VDC input | Cable gland + hardwired tail | Fails the service model — every box swap becomes a wiring job, done by whoever is on shift; a gland is the right answer only for a run that never unplugs, and this run *does* unplug during service |
 | 24 VDC input | [MIL-DTL-38999](../07-mil-dtl-38999.md) | No program requirement to justify the cost/lead-time class ([defense path](../decision-paths/defense-rugged-external-io.md) logic in reverse) |
 | 24 VDC / motor | M12 K-coded | AC power coding ([§8.1](../08-m12.md)) — wrong lane for a 24 VDC system |
 | 24 VDC / motor | A-coded pins doing power duty | The ~4 A-class note in [§8.1](../08-m12.md) exists for exactly this temptation — power belongs on a power coding the datasheet supports |
 | Ethernet | M12 X-coded "to be safe" | X is for GbE/10G-class; D-coded is the honest 10/100 answer, and [§8.1](../08-m12.md) says don't default to X — revisit only if the rate requirement changes |
 | Ethernet | Sealed/rugged RJ45 | Workable, but breaks the one-family standardization and adds a second seal/latch system to maintain ([Rugged Ethernet path](../decision-paths/rugged-ethernet.md) checklist concerns) |
 | Sensors | M8 | Viable technically; rejected as a standardization decision — one shell size across the box (same reasoning as the [M12 example](m12-sensor-interface.md)) |
-| Sensors | Glands into a junction box | Service model again — sensor swaps become enclosure work ([Industrial sensor path](../decision-paths/industrial-sensor.md) when-to-avoid) |
+| Sensors | Glands into a junction box | Service model again — sensor swaps become enclosure work inside a sealed box; the [M12 example](m12-sensor-interface.md) rejects glands on the same grounds |
 | Motor output | [M23-class](../decision-paths/motor-feedback-cable.md) | Right family for a real servo axis with feedback; oversized for one small DC gearmotor — becomes the answer if the motor grows (see "What would change") |
 | All sealed runs | [DT-style sealed automotive](../deutsch.md) | Good parts in their lane ([budget path](../decision-paths/rugged-on-a-budget.md)); rejected because the industrial cordset ecosystem here is M12 — fighting the ecosystem means custom pigtails |
-| Debug/service | Bare USB-C on the panel | The [debug path](../decision-paths/debug-service-port.md) allows USB-C *only behind a cover*; a bare consumer port on a washdown-adjacent panel fails §12.4's boundary |
+| Debug/service | Bare USB-C on the panel | The [debug path](../decision-paths/debug-service-port.md) allows USB-C *only behind a cover*; a bare consumer port on a washdown-adjacent panel fails [§12.4's boundary](../12-consumer-hobby-prototype-connectors.md) |
 
 ## Pinout
 
@@ -131,7 +131,7 @@ One worked entry (J2) in the [ICD template's](../tools/connector-icd-template.md
 
 | Risk | Mitigation |
 | --- | --- |
-| Six same-size circular connectors on one small box — wrong-port mating attempts | Codings differ where it matters most (power vs. D vs. A); among the A-coded ports, position counts differ (4/5/8) — and **verify cross-mating behavior between position counts against the manufacturer rather than assuming**; add color bands + J-labels at both ends; photograph the panel in the service manual |
+| Nine same-size circular connectors (six interface types) on one small box — wrong-port mating attempts | Codings differ where it matters most (power vs. D vs. A); among the A-coded ports, position counts differ (4/5/8) — and **verify cross-mating behavior between position counts against the manufacturer rather than assuming**; add color bands + J-labels at both ends; photograph the panel in the service manual |
 | A-coded pins drafted into power duty during a "quick fix" | The rejected-connectors table records *why* power lives on the power coding; the ICD's electrical-limits line makes the boundary auditable ([§8.1](../08-m12.md)) |
 | CAN termination forgotten or duplicated | Terminating plugs are BOM line items with J-numbers, not accessories; topology drawing in the package ([§8.5](../08-m12.md)) |
 | Receptacles left uncapped after service | Chained caps; capped-state photo in the close-out checklist; the service port's cap logged like a tool |
@@ -145,7 +145,7 @@ One worked entry (J2) in the [ICD template's](../tools/connector-icd-template.md
 - **The motor becomes a servo axis** — feedback appears, and the whole J8 question transfers to the [motor + feedback cable path](../decision-paths/motor-feedback-cable.md): drive-ecosystem cordsets, M23-class connectors, and the EMC discipline that comes with them.
 - **The box moves into direct washdown** — re-verify every mated *and unmated* rating against the plant spec ([§8.3](../08-m12.md)) and re-run the [sealed enclosure feedthrough path](../decision-paths/sealed-enclosure-feedthrough.md) for the panel itself.
 - **A defense/aero customer appears** — the requirement set, not preference, moves the external interfaces toward [38999-class](../decision-paths/defense-rugged-external-io.md) hardware, and the [Selection Packet](connector-selection-packet.md) shows what that documentation grade looks like.
-- **Someone proposes one big multipole for everything** — that's the [removable machine module path's](../decision-paths/removable-machine-module.md) problem statement; run it honestly (blind-mate, float, service reality) before deciding.
+- **Someone proposes one big multipole for everything** — that's the [removable machine module path's](../decision-paths/removable-machine-module.md) problem statement; run it honestly before deciding: use the path for the service reality, and [§5's anatomy](../05-connector-anatomy.md) for the blind-mate and float mechanics a docking interface leans on.
 
 ## Documentation bundle
 

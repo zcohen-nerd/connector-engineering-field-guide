@@ -10,7 +10,7 @@ sidebar_label: Decision Examples
 
 The reasoning is what transfers to your own problems. Use the quick map to jump to a scenario, then read the detail — families, the specs that decide it, what to reject and why, and the mistakes to avoid.
 
-For a step-by-step walkthrough of the most common scenarios, see the [Decision Paths](decision-paths/index.md). Family-level depth behind these choices lives in the deep dives: [MIL-DTL-38999](07-mil-dtl-38999.md), [MIL-DTL-26482](mil-dtl-26482.md), [M12/M8](08-m12.md), and [DEUTSCH](deutsch.md).
+For a step-by-step walkthrough of the most common scenarios, see the [Decision Paths](decision-paths/index.md). Family-level depth behind these choices lives in the deep dives: [MIL-DTL-38999](07-mil-dtl-38999.md), [MIL-DTL-26482](mil-dtl-26482.md), [M12/M8](08-m12.md), [DEUTSCH](deutsch.md), and [Molex Micro-Fit 3.0](micro-fit.md).
 
 ## Quick map
 

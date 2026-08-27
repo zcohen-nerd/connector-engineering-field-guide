@@ -67,9 +67,9 @@ Pin counts, currents, and voltage classes below are family-level orientation; ev
 - **Drag-chain-rated cable** where the axis moves — standard cable fails in weeks.
 - **The 360° backshell/gland hardware** that the shield spec assumes.
 - **Dust caps** for open receptacles during machine build.
+- **Spare cordsets** for the maintenance stock — motors outlive cables in drag chains.
 
 See [What People Forget](../what-people-forget.md).
-- **Spare cordsets** for the maintenance stock — motors outlive cables in drag chains.
 
 ## Common traps
 

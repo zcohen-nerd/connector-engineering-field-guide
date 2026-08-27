@@ -145,7 +145,7 @@ One worked entry (J2) in the [ICD template's](../tools/connector-icd-template.md
 - **The motor becomes a servo axis** — feedback appears, and the whole J8 question transfers to the [motor + feedback cable path](../decision-paths/motor-feedback-cable.md): drive-ecosystem cordsets, M23-class connectors, and the EMC discipline that comes with them.
 - **The box moves into direct washdown** — re-verify every mated *and unmated* rating against the plant spec ([§8.3](../08-m12.md)) and re-run the [sealed enclosure feedthrough path](../decision-paths/sealed-enclosure-feedthrough.md) for the panel itself.
 - **A defense/aero customer appears** — the requirement set, not preference, moves the external interfaces toward [38999-class](../decision-paths/defense-rugged-external-io.md) hardware, and the [Selection Packet](connector-selection-packet.md) shows what that documentation grade looks like.
-- **Someone proposes one big multipole for everything** — that's the [removable machine module path's](../decision-paths/removable-machine-module.md) problem statement; run it honestly before deciding — the path for the service reality, [§5's anatomy](../05-connector-anatomy.md) for the blind-mate and float mechanics such a docking interface leans on.
+- **Someone proposes one big multipole for everything** — that's the [removable machine module path's](../decision-paths/removable-machine-module.md) problem statement; run it honestly before deciding: use the path for the service reality, and [§5's anatomy](../05-connector-anatomy.md) for the blind-mate and float mechanics a docking interface leans on.
 
 ## Documentation bundle
 

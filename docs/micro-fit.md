@@ -72,7 +72,7 @@ Design consequences worth writing down:
 
 ## 6. TPA, keying, and assembly discipline
 
-- **TPA versions exist — use them in production.** The secondary lock that confirms every terminal is seated ([§2 defines TPA](02-major-connector-categories.md)) is the difference between a latch that holds and a harness that passes test with one contact riding half-out — put a terminal-seating check on your [design-review checklist](tools/design-review-checklist.md) alongside its locking row.
+- **TPA versions exist — use them in production.** The secondary lock that confirms every terminal is seated ([§2 defines TPA](02-major-connector-categories.md)) is the difference between a latch that holds and a harness that passes test with one contact riding half-out — add an explicit terminal-seating check to your [design-review checklist](tools/design-review-checklist.md) near its locking/strain-relief readiness check.
 - **Polarization is built in; distinguishing lookalikes is on you.** Housings only mate one way — but when two same-circuit-count connectors share a box, check the Molex catalog for keying/polarization ordering options for the exact series, and back them with labels either way ([What People Forget](what-people-forget.md)).
 - **Crimp per the application spec.** Terminal, tool, and wire are qualified together in Molex's documents;[^microfitps] the [crimping rules](hobby/crimping.md) — right tool, tug test, no soldering crimp terminals — apply at full strength.
 - **The clone problem is real.** "Micro-fit style" kits saturate the 3D-printer and marketplace world; the genuine figures above cover none of them, and the terminal spring is exactly what clones get wrong. [Authorized distributors](hobby/buying-mating-parts.md), genuine Molex, matched series.

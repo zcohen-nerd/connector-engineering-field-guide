@@ -1,8 +1,9 @@
-<svg viewBox="0 0 760 440" width="760" height="440" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
-  <!-- Hobby: open-barrel crimp, good vs. the three classic wrongs.
+<svg viewBox="0 0 760 560" width="760" height="560" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Hobby: open-barrel crimp, good vs. the four classic wrongs (strip too
+       long, strip too short, stray strand, two wires in a one-wire barrel).
        Schematic geometry only - the family's contact drawing and matched
        die define the real crimp form. -->
-  <rect x="0.5" y="0.5" width="759" height="439" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <rect x="0.5" y="0.5" width="759" height="559" rx="10" fill="#ffffff" stroke="#d0d7de"/>
   <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">Open-barrel crimp — what right and wrong look like</text>
 
   <!-- ===== good crimp panel ===== -->
@@ -39,50 +40,65 @@
   <text x="420" y="182" text-anchor="middle" font-size="11.5" fill="#3d6094">insulation wings on jacket</text>
   <text x="420" y="195" text-anchor="middle" font-size="11" fill="#3d6094">— the strain relief</text>
 
-  <text x="590" y="118" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#102040">✓ both wing sets formed:</text>
-  <text x="590" y="134" text-anchor="middle" font-size="12" fill="#102040">joint carries current,</text>
-  <text x="590" y="149" text-anchor="middle" font-size="12" fill="#102040">wings carry the tugs</text>
+  <text x="590" y="112" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#102040">✓ one wire, both wing sets formed:</text>
+  <text x="590" y="130" text-anchor="middle" font-size="12" fill="#102040">joint carries current,</text>
+  <text x="590" y="146" text-anchor="middle" font-size="12" fill="#102040">wings carry the tugs</text>
 
-  <!-- ===== the three wrongs ===== -->
+  <!-- ===== the four wrongs, 2 x 2 ===== -->
   <!-- panel 1: strip too long -->
-  <rect x="24" y="212" width="222" height="176" rx="8" fill="#ffffff" stroke="#d0d7de"/>
-  <text x="135" y="234" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b3402f">✗ strip too long</text>
-  <rect x="48" y="262" width="56" height="22" rx="3" fill="#ffffff" stroke="#102040" stroke-width="2"/>
-  <line x1="56" y1="270" x2="160" y2="270" stroke="#9a3412" stroke-width="1.5"/>
-  <line x1="56" y1="274" x2="160" y2="274" stroke="#9a3412" stroke-width="1.5"/>
-  <rect x="112" y="261" width="36" height="20" rx="7" fill="#ffffff" stroke="#102040" stroke-width="2"/>
-  <line x1="162" y1="272" x2="212" y2="272" stroke="#3d6094" stroke-width="7" stroke-linecap="round"/>
-  <rect x="156" y="257" width="32" height="30" rx="8" fill="#ffffff" stroke="#102040" stroke-width="2"/>
-  <ellipse cx="76" cy="272" rx="24" ry="16" fill="none" stroke="#b3402f" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <text x="135" y="322" text-anchor="middle" font-size="11.5" fill="#b3402f">bare strands reach the</text>
-  <text x="135" y="336" text-anchor="middle" font-size="11.5" fill="#b3402f">mating area — a short</text>
-  <text x="135" y="350" text-anchor="middle" font-size="11.5" fill="#b3402f">waiting inside the housing</text>
+  <rect x="24" y="212" width="352" height="136" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="200" y="234" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b3402f">✗ strip too long</text>
+  <rect x="110" y="259" width="56" height="22" rx="3" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <line x1="118" y1="267" x2="222" y2="267" stroke="#9a3412" stroke-width="1.5"/>
+  <line x1="118" y1="271" x2="222" y2="271" stroke="#9a3412" stroke-width="1.5"/>
+  <rect x="174" y="258" width="36" height="20" rx="7" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <line x1="224" y1="269" x2="276" y2="269" stroke="#3d6094" stroke-width="7" stroke-linecap="round"/>
+  <rect x="218" y="254" width="32" height="30" rx="8" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <ellipse cx="138" cy="269" rx="24" ry="15" fill="none" stroke="#b3402f" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="200" y="316" text-anchor="middle" font-size="11.5" fill="#b3402f">bare strands reach the mating area —</text>
+  <text x="200" y="330" text-anchor="middle" font-size="11.5" fill="#b3402f">a short waiting inside the housing</text>
 
-  <!-- panel 2: wings on insulation -->
-  <rect x="269" y="212" width="222" height="176" rx="8" fill="#ffffff" stroke="#d0d7de"/>
-  <text x="380" y="234" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b3402f">✗ strip too short</text>
-  <rect x="293" y="262" width="56" height="22" rx="3" fill="#ffffff" stroke="#102040" stroke-width="2"/>
-  <line x1="360" y1="272" x2="457" y2="272" stroke="#3d6094" stroke-width="7" stroke-linecap="round"/>
-  <rect x="357" y="261" width="36" height="20" rx="7" fill="#ffffff" stroke="#102040" stroke-width="2"/>
-  <rect x="401" y="257" width="32" height="30" rx="8" fill="#ffffff" stroke="#102040" stroke-width="2"/>
-  <text x="380" y="322" text-anchor="middle" font-size="11.5" fill="#b3402f">conductor wings closed on</text>
-  <text x="380" y="336" text-anchor="middle" font-size="11.5" fill="#b3402f">jacket — no electrical joint;</text>
-  <text x="380" y="350" text-anchor="middle" font-size="11.5" fill="#b3402f">reads as "works, sometimes"</text>
+  <!-- panel 2: strip too short -->
+  <rect x="384" y="212" width="352" height="136" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="560" y="234" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b3402f">✗ strip too short</text>
+  <rect x="470" y="259" width="56" height="22" rx="3" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <line x1="537" y1="269" x2="634" y2="269" stroke="#3d6094" stroke-width="7" stroke-linecap="round"/>
+  <rect x="534" y="258" width="36" height="20" rx="7" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <rect x="578" y="254" width="32" height="30" rx="8" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <text x="560" y="316" text-anchor="middle" font-size="11.5" fill="#b3402f">conductor wings closed on jacket — no</text>
+  <text x="560" y="330" text-anchor="middle" font-size="11.5" fill="#b3402f">electrical joint; reads as "works, sometimes"</text>
 
   <!-- panel 3: stray strand -->
-  <rect x="514" y="212" width="222" height="176" rx="8" fill="#ffffff" stroke="#d0d7de"/>
-  <text x="625" y="234" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b3402f">✗ stray strand</text>
-  <rect x="538" y="262" width="56" height="22" rx="3" fill="#ffffff" stroke="#102040" stroke-width="2"/>
-  <line x1="596" y1="270" x2="652" y2="270" stroke="#9a3412" stroke-width="1.5"/>
-  <line x1="596" y1="274" x2="652" y2="274" stroke="#9a3412" stroke-width="1.5"/>
-  <rect x="602" y="261" width="36" height="20" rx="7" fill="#ffffff" stroke="#102040" stroke-width="2"/>
-  <path d="M604 262 q-14 -14 -26 -18" fill="none" stroke="#b3402f" stroke-width="1.8"/>
-  <line x1="654" y1="272" x2="702" y2="272" stroke="#3d6094" stroke-width="7" stroke-linecap="round"/>
-  <rect x="646" y="257" width="32" height="30" rx="8" fill="#ffffff" stroke="#102040" stroke-width="2"/>
-  <text x="625" y="322" text-anchor="middle" font-size="11.5" fill="#b3402f">a strand escaped the wings —</text>
-  <text x="625" y="336" text-anchor="middle" font-size="11.5" fill="#b3402f">short risk outside, weakened</text>
-  <text x="625" y="350" text-anchor="middle" font-size="11.5" fill="#b3402f">joint inside</text>
+  <rect x="24" y="356" width="352" height="136" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="200" y="378" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b3402f">✗ stray strand</text>
+  <rect x="110" y="403" width="56" height="22" rx="3" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <line x1="168" y1="411" x2="224" y2="411" stroke="#9a3412" stroke-width="1.5"/>
+  <line x1="168" y1="415" x2="224" y2="415" stroke="#9a3412" stroke-width="1.5"/>
+  <rect x="174" y="402" width="36" height="20" rx="7" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <path d="M176 403 q-14 -14 -26 -18" fill="none" stroke="#b3402f" stroke-width="1.8"/>
+  <line x1="226" y1="413" x2="276" y2="413" stroke="#3d6094" stroke-width="7" stroke-linecap="round"/>
+  <rect x="218" y="398" width="32" height="30" rx="8" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <text x="200" y="460" text-anchor="middle" font-size="11.5" fill="#b3402f">a strand escaped the wings — short risk</text>
+  <text x="200" y="474" text-anchor="middle" font-size="11.5" fill="#b3402f">outside, weakened joint inside</text>
 
-  <text x="380" y="412" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">inspect every crimp, then pull-test gently — a wrong one comes off now, not in the field</text>
-  <text x="380" y="430" text-anchor="middle" font-size="12" font-style="italic" fill="#6f8bb4">Schematic geometry only — each family's contact drawing and matched die define the real crimp form; see this page's tooling rules.</text>
+  <!-- panel 4: two wires, one barrel -->
+  <rect x="384" y="356" width="352" height="136" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="560" y="378" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b3402f">✗ two wires, one barrel</text>
+  <rect x="470" y="403" width="56" height="22" rx="3" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <!-- two strand bundles into one overstuffed barrel -->
+  <line x1="528" y1="408" x2="586" y2="408" stroke="#9a3412" stroke-width="1.5"/>
+  <line x1="528" y1="411" x2="586" y2="411" stroke="#9a3412" stroke-width="1.5"/>
+  <line x1="530" y1="418" x2="586" y2="418" stroke="#9a3412" stroke-width="1.5"/>
+  <line x1="530" y1="421" x2="592" y2="424" stroke="#b3402f" stroke-width="1.8"/>
+  <rect x="534" y="400" width="36" height="26" rx="7" fill="none" stroke="#102040" stroke-width="2"/>
+  <!-- two jackets from the right -->
+  <line x1="588" y1="407" x2="648" y2="404" stroke="#3d6094" stroke-width="7" stroke-linecap="round"/>
+  <line x1="592" y1="422" x2="648" y2="428" stroke="#3d6094" stroke-width="7" stroke-linecap="round"/>
+  <line x1="566" y1="428" x2="596" y2="446" stroke="#b3402f" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="626" y="452" text-anchor="middle" font-size="10.5" fill="#b3402f">one bundle stays loose</text>
+  <text x="560" y="472" text-anchor="middle" font-size="11.5" fill="#b3402f">the fill is unqualified — never gas-tight;</text>
+  <text x="560" y="486" text-anchor="middle" font-size="11.5" fill="#b3402f">use a splice or a terminal rated for two wires</text>
+
+  <text x="380" y="522" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">inspect every crimp, then pull-test gently — a wrong one comes off now, not in the field</text>
+  <text x="380" y="546" text-anchor="middle" font-size="12" font-style="italic" fill="#6f8bb4">Schematic geometry only — each family's contact drawing and matched die define the real crimp form; see this page's tooling rules.</text>
 </svg>

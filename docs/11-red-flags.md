@@ -30,6 +30,7 @@ sidebar_label: Red Flags
 | No torque spec | Sealing and anti-vibration features compromised |
 | Confusing IP67 with IP68 | IP67 ≈ 1 m / 30 min; IP68 = stated depth/duration — not interchangeable |
 | Undersized wire in wire seal | Cavity leaks; whole connector seal defeated |
+| Two wires doubled into a one-wire crimp barrel | Unqualified fill never forms the gas-tight joint; one wire loose, wire seal defeated — use a splice or a dual-wire-rated terminal ([crimping](hobby/crimping.md)) |
 | No ground-first mating sequence where needed | Power-before-ground → latch-up, ground bounce, resets |
 | Substituting "equivalent" parts without qualification | Plating/insert/thread/geometry can differ; not drop-in |
 | Gold contacts mated to tin contacts | The mixed interface fretts and builds tin oxide on the gold half — one plating class per mated pair ([low-level deep dive](low-level-signal-contacts.md)) |

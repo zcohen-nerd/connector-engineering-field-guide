@@ -32,6 +32,7 @@ Per the crimp design package §4 says the drawing should carry:
 
 - [ ] The **exact contact P/N** used matches the drawing (not "equivalent-looking" — [hobby crimping](../hobby/crimping.md) explains why families don't transfer)
 - [ ] **Wire gauge and insulation range** match what the contact and wire seal were specified for — undersized wire in a wire seal defeats the seal ([§7.9](../07-mil-dtl-38999.md))
+- [ ] **One wire per crimp barrel** — a doubled-in second wire is an unqualified termination (and a defeated wire seal) unless the drawing cites the contact's own dual-wire specification; branches belong in splices or multi-wire-rated terminals ([crimping](../hobby/crimping.md), [§5.2](../05-connector-anatomy.md))
 - [ ] The **approved crimp tool / positioner / die** was used and is in calibration ([§4](../04-connector-selection-workflow.md))
 - [ ] **Visual inspection** performed per the named acceptance standard/class — remembering the trap: a crimp can pass visual and still fail in vibration ([§7.9](../07-mil-dtl-38999.md)); the application spec's inspection/pull-test requirement decides, not appearance
 - [ ] **Pull-test or equivalent verification** performed if and as the drawing/application spec requires, and recorded

@@ -26,6 +26,7 @@ Everything here is covered in more depth elsewhere in the guide; this page just 
 - **Insertion / extraction tools** — removable contacts need the matching insert/extract tool for build and repair. (See [Practical Checklist](10-selection-checklist.md).)
 - **Torque procedure** — coupling and jam-nut torque affect sealing and anti-vibration performance. Finger-tight is not a sealed, engaged mate. (See [M12 §8.3](08-m12.md).)
 - **Acceptance standard** — name the workmanship/acceptance criteria the harness will be built and inspected to (commonly IPC/WHMA-A-620, or the program/customer equivalent), alongside the manufacturer application spec for the exact contact system. (See [Selection Workflow §4](04-connector-selection-workflow.md).)
+- **Branch points** — a Y in the harness is designed as a proper splice or a dual-wire-rated terminal, decided on the drawing. Leave it undecided and the shop improvises the classic wrong answer: two wires doubled into one crimp barrel. (See [§5.2](05-connector-anatomy.md) and [Crimping](hobby/crimping.md).)
 
 ## Specs that decide whether it fits
 

@@ -14,9 +14,9 @@ Prioritized visuals for the hobby track (and one shared item). Style: match the 
 | 5 | Good vs bad open-barrel crimp diagram | TODO | Conductor/insulation wings right vs. wrong; pairs with `crimping.md` |
 | 6 | Power vs signal connector decision sketch | TODO | Current path vs. signal path visual for `power-vs-signal.md` |
 | 7 | LED power injection connector warning diagram | TODO | Data pigtail vs. injection wiring; pairs with `jst-sm-led-connectors.md` |
-| 8 | Contact-interface film sketch (shared item, engineering track) | TODO | Two cross-sections: tin contact with oxide film / fretting debris in the contact zone vs. gold-to-gold metal contact; pairs with `docs/low-level-signal-contacts.md` §1/§5 |
-| 9 | Qualification-sequence flow sketch (engineering track) | TODO | Sample groups flowing through exposure→re-measure sequences (baseline → exposure group → re-measure), with the "order comes from the governing spec" caption; pairs with `docs/tools/connector-qualification-template.md` §3/§5 |
-| 10 | Lifecycle-state flow sketch (engineering track) | TODO | Active → NRND → EOL/LTB window → obsolete, annotated with the decision each state forces (record alternates / stop new designs / bridge-buy-or-redesign / broker-scrutiny); pairs with `docs/lifecycle-and-procurement.md` §1 |
+| 8 | Contact-interface film sketch (shared item, engineering track) | **Done (2026-08)** — `contact-interface-films.svg` | Two contact cross-sections: tin with oxide film + fretting debris vs. gold metal-to-metal a-spots, with the never-mate-gold-to-tin footer; embedded in `docs/low-level-signal-contacts.md` §1 |
+| 9 | Qualification-sequence flow sketch (engineering track) | **Done (2026-08)** — `qualification-sequence.svg` | Config+FAI → baseline electricals → parallel example groups → re-measure → evidence record, with the "shape only — the governing spec's tables set the real sequences" footer; embedded in `docs/tools/connector-qualification-template.md` §5 |
+| 10 | Lifecycle-state flow sketch (engineering track) | **Done (2026-08)** — `lifecycle-states.svg` | Active → NRND → EOL/LTB → obsolete with the forced decision under each state, the customers-of-record callout, and a time axis; embedded in `docs/lifecycle-and-procurement.md` §1 |
 
 ## Images pass (2026-07)
 

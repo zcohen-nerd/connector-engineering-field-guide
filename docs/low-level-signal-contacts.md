@@ -20,6 +20,10 @@ At power levels, the circuit helps: enough voltage and current will break down a
 
 This is why the failure signature is so characteristic: the interface "works when freshly plugged" (mating wipe scrapes a clean spot), then drifts intermittent over weeks or months as films and debris re-form — and often "fixes itself" when someone re-mates the connector, which just wipes a new spot and restarts the clock.
 
+![Two schematic contact cross-sections: a tin-class interface with an insulating oxide film and fretting debris in the contact zone that millivolt signals cannot break through, beside a gold-class interface with clean metal-to-metal contact spots that conduct at any signal level](/img/diagrams/contact-interface-films.svg)
+
+*Same force, same geometry — the film decides. On tin the signal lives with whatever the oxide and debris allow; on gold, metal touches metal and stays that way.*
+
 ## 2. "Dry circuit," defined
 
 A **dry circuit** is one whose voltage and current are too low to alter the contact surface — too low to break down films electrically. The connector industry's standard measurement embodies the idea: the low-level contact resistance (LLCR) method, **EIA-364-23**, deliberately caps the measurement at approximately 20 mV open-circuit and 100 mA precisely so the *measurement itself* cannot break down films — it measures the interface as your signal will actually experience it, not as a power circuit would.[^eia36423][^llcr]

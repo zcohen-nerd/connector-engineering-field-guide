@@ -21,6 +21,10 @@ Connector products move through a lifecycle, whether or not anyone tells you:
 | **EOL / discontinuance announced** | A last-time-buy (LTB) window with final-order and final-ship dates — the decision point for a bridge buy, an alternate, or a redesign |
 | **Obsolete** | The authorized channel dries up; whatever you buy now needs the scrutiny of [§4](#4-authorized-distribution-and-counterfeit-avoidance) |
 
+![Flow schematic of connector lifecycle states — active, NRND, EOL announced with its last-time-buy window, and obsolete — each annotated with the decision it forces, from recording alternates calmly through bridge-buy-or-redesign to per-lot broker scrutiny](/img/diagrams/lifecycle-states.svg)
+
+*Each state forces a decision, and the cheap ones come early. The LTB window is the last point where the choice is yours rather than the broker market's.*
+
 Two places the state shows up, in [source-hierarchy](06-reading-datasheets.md) order: the **manufacturer's notice** is the record; **distributor lifecycle flags** are useful early hints and nothing more — the same rule as every other distributor-page datum. A released design should also record *when* its datasheets were last checked: a part can go NRND under a design that nobody is watching.
 
 ## 2. PCN and EOL notices

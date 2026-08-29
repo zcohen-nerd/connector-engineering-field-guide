@@ -72,6 +72,10 @@ Before performance data means anything, verify that the articles being tested **
 
 One row per requested proof. **Common method family** names the EIA-364-series procedure the industry typically uses,[^eia364] so you can recognize it in product specs and quote requests — the governing spec decides what actually applies. Every electrical row assumes a recorded **baseline before exposure** and re-measurement **after** each exposure group: cycles, vibration, and immersion prove nothing until you re-measure what they changed.
 
+![Flow schematic: configuration record and first article feed a baseline electrical measurement, which fans out to parallel example sample groups (durability, vibration monitored live, sealing), each followed by a re-measurement of the baseline set, all converging into the evidence record](/img/diagrams/qualification-sequence.svg)
+
+*The shape, not a sequence: groups run exposures in parallel and every exposure ends in a re-measurement. The governing spec's qualification tables set the real order, groups, and criteria.*
+
 | Test | What it proves | Common method family | Record |
 |---|---|---|---|
 | Continuity / wiring correctness | Every path lands per the pinout; the baseline for everything after | Point-to-point verification per the drawing's stated method | Method, instrument, per-path results |

@@ -104,7 +104,7 @@ The film/dry-circuit/fretting mechanisms and the gold-vs-tin logic are cited to 
 
 ## Sources
 
-[^eia36423]: EIA-364-23, *Low Level Contact Resistance Test Procedure for Electrical Connectors and Sockets* — the connector industry's standard LLCR method, adopted for use by the U.S. Department of Defense (DLA-hosted adoption notice: <https://landandmaritimeapps.dla.mil/Downloads/MilSpec/Docs/EIA/eia364-23.pdf>). Current edition E (2024-08) listing: <https://www.dinmedia.de/en/standard/eia-364-23e/383800335>. Record the edition your program requires.
+[^eia36423]: EIA-364-23, *Low Level Contact Resistance Test Procedure for Electrical Connectors and Sockets* — the connector industry's standard LLCR method, adopted for use by the U.S. Department of Defense (DLA-hosted adoption notice: <https://weaponssupportapps.dla.mil/Downloads/MilSpec/Docs/EIA/eia364-23.pdf> — the DLA MilSpec portal migrated to this hostname from landandmaritimeapps.dla.mil in August 2026). Current edition E (2024-08) listing: <https://www.dinmedia.de/en/standard/eia-364-23e/383800335>. Record the edition your program requires.
 
 [^llcr]: Samtec, "Understanding Low Level Contact Resistance (LLCR)" — manufacturer engineering explainer describing the LLCR measurement's limits of ~20 mV / 100 mA and why the levels are kept below film-breakdown. <https://blog.samtec.com/post/understanding-low-level-contact-resistance-llcr/>
 

@@ -65,7 +65,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 ## Servo connectors
 
 - **Marketplace names:** servo plug, JR/Futaba-style, 3-pin Dupont.
-- **What it is:** servo leads are three-conductor signal / power / ground harnesses in 0.1-inch-class housings with one de-facto pin order — **positive always on the center pin** — while keying tabs and wire colors vary by vendor. Verify the order at both ends against documentation before powering anyway: vintage-Airtronics leads and miswired no-name leads are the exceptions that burn.
+- **What it is:** servo leads are three-conductor signal / power / ground harnesses in 0.1-inch-class housings with one de-facto pin order — **positive always on the center pin** — while keying tabs and wire colors vary by vendor. Center-positive prevents a direct +/− swap under reversal, but a backwards plug still swaps signal and ground and can damage the servo or controller. Verify the order at both ends against documentation before powering: vintage-Airtronics leads and miswired no-name leads add still more polarity risk.
 - **Watch for:** friction fit only — vibration protection is on you; check the servo's stall current against the lead and wire gauge, not just "it's a servo plug."
 - **Full page:** [Servo Connectors](servo-connectors.md) — the center-positive pin order, JR vs Futaba housings, the old-Airtronics trap, and the stall-current math.
 
@@ -90,7 +90,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 ## Screw terminals and spring terminals
 
 - **What it is:** terminal blocks (fixed or pluggable), spring/lever types (Wago-style) — field-wireable, no crimping, great for power distribution and things you'll re-wire. A sourced anchor for the lever class: WAGO's own [221-series family page](https://www.wago.com/gb/products/electrical-interconnections/discover-installation-terminal-blocks-and-connectors/221) rates the 4 mm² class at 32 A / 450 V IEC (20 A / 600 V UL) — and a 6 mm², 41 A-class 221-6xx line exists for heavier work. Clone "Wago-style" levers inherit none of that; full detail on the [terminals page](screw-terminals.md).
-- **Watch for:** wire must match the terminal's gauge range; stranded wire in screw terminals wants ferrules; screws loosen under vibration — retorque or use spring types; these are not sealed and not strain-relieved by themselves.
+- **Watch for:** wire must match the terminal's gauge range and preparation rules; stranded wire often wants a ferrule, but the exact terminal decides. Installation torque, vibration suitability, and any inspection or re-tightening schedule are product-specific — some self-locking screw designs are maintenance-free. These interfaces are not sealed or strain-relieved by themselves.
 - **Full page:** [Screw Terminals, Spring Clamps, and Ferrules](screw-terminals.md) — the clamp-style map, torque and gauge-range discipline, and the never-tin rule.
 
 ![A transparent WAGO 221 lever connector next to a stripped stranded wire](/img/photos/wago-221-lever.jpg)

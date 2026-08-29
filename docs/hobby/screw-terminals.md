@@ -32,9 +32,9 @@ Terminal blocks are the connector nobody thinks of as a connector — which is e
 - **Pitch, again.** PCB terminal blocks and pluggable headers come in pitch families — 5.08 mm (0.2"), 5.0 mm, 3.81 mm, 3.5 mm, 2.54 mm — and pitch tracks the voltage class: wider spacing, more creepage, higher rating. The [measure-don't-eyeball rule](pitch.md) applies with teeth here, because **5.0 mm and 5.08 mm pluggable halves will visually "fit" and bind or mis-seat across enough positions** — the classic lookalike trap at power level.
 - **The gauge range is a range** — a minimum *and* a maximum, and often different for solid, stranded, and fine-stranded wire classes. A 24 AWG signal wire in a clamp sized for 12 AWG is retention theater.
 - **Strip length is printed on the block** (or its datasheet) for a reason: too short clamps insulation, too long leaves bare wire exposed above the clamp.
-- **Torque is a specification, not a feeling.** Real terminal blocks publish a tightening torque; under-torqued joints heat, over-torqued ones damage strands or the block. Industrial practice re-torques power terminals after the first thermal cycles — screws relax as conductors creep. Get the number from the exact datasheet.
+- **Torque is a specification, not a feeling.** Real terminal blocks publish a tightening torque; under-torqued joints heat, over-torqued ones damage strands or the block. Whether a connection needs scheduled inspection or re-tightening is also product-specific: some conventional screw connections require it, while self-locking designs are explicitly sold as maintenance-free.[^screw-maintenance] Get both the installation torque and the maintenance instruction from the exact manufacturer's documentation — never impose a generic re-torque schedule.
 - **One conductor per clamp point** unless the datasheet explicitly rates two — and two-wire ratings usually require same gauge, same type.
-- **Vibration prefers springs.** Screws loosen under vibration unless retorqued or locked; spring and cage-clamp styles hold by design — the reason modern machine wiring went push-in.
+- **Vibration often favors springs, but mechanism beats category.** Spring and cage-clamp styles maintain force as conductors move, while ordinary screw connections may relax. Some self-locking screw-terminal designs are also qualified for vibration and maintenance-free service.[^screw-maintenance] Select from the exact terminal's vibration data and maintenance instructions, not "spring good, screw bad" folklore.
 
 ## 3. Lever connectors for real power work
 
@@ -69,7 +69,7 @@ A ferrule (bootlace ferrule, per the DIN 46228 style system) is a crimped tin-pl
 
 ## 5. The rule: never tin stranded wire before clamping
 
-Soldering the end of a stranded wire and putting it under a screw feels tidy and is a **long-established prohibition** in wiring practice: solder is soft and *cold-flows* under sustained clamp pressure, so the joint the screw made on day one slowly relaxes into a loose, high-resistance joint — the failure arrives months later, as heat, in the exact spot carrying your power. Bare stranded wire in a rising clamp, or a **crimped ferrule**, is the correct end. (Mechanism widely documented across wiring codes and manufacturer guidance; a first-party manufacturer citation is tracked as an open source target in [Hobby Source Notes](hobby-source-notes.md).)
+Soldering the end of a stranded wire and putting it under a screw feels tidy, but Phoenix Contact documents why it can loosen: the compressed solder/tin mass can fracture and change shape, and copper and solder expand differently during thermal cycling until the conductor is no longer clamped correctly.[^tinned-wire] The failure arrives later as a loose, high-resistance power joint. Use the conductor preparation the exact terminal permits — commonly bare stranded wire in a suitable rising clamp or a **properly crimped ferrule** — and tighten to the published specification.
 
 ## 6. Traps
 
@@ -87,10 +87,14 @@ Field-serviceable distribution done right — DIN-rail terminal blocks in an enc
 
 ## Source status
 
-Lever-class figures — both size classes, both rating systems — are cited to WAGO's own family and product pages.[^wago221][^wago221-6] Clamp-style anatomy, strip-length/gauge-range/one-wire rules, and the pitch families are identification- and process-level, deferring numbers to the exact block's datasheet throughout. The never-tin rule is stated with its mechanism as established practice — a first-party manufacturer document remains an open source target, as do representative torque-class figures; both tracked in [Hobby Source Notes](hobby-source-notes.md). DIN 46228 is named as the ferrule style system without reproducing its tables.
+Lever-class figures — both size classes, both rating systems — are cited to WAGO's own family and product pages.[^wago221][^wago221-6] The maintenance-free screw-design counterexample and the tinned-wire loosening mechanism are cited to Phoenix Contact.[^screw-maintenance][^tinned-wire] Clamp-style anatomy, strip-length/gauge-range/one-wire rules, and the pitch families are identification- and process-level, deferring numbers to the exact block's datasheet throughout. Representative torque-class figures remain an open source target in [Hobby Source Notes](hobby-source-notes.md). DIN 46228 is named as the ferrule style system without reproducing its tables.
 
 ## Sources
 
 [^wago221]: WAGO, *221 Series* 4 mm² class (221-412 / -413 / -415) — lever splicing connectors for solid/stranded 0.2–4 mm² and fine-stranded 0.14–4 mm² conductors (24–12 AWG); IEC characterization up to 32 A / 450 V; UL rating 20 A / 600 V on the same parts; 85 °C surrounding-air class. Genuine-family figures only; "Wago-style" clones are not covered. Family pages: <https://www.wago.com/gb/products/electrical-interconnections/discover-installation-terminal-blocks-and-connectors/221>, <https://www.wago.com/us/splicing-connectors-221>
 
 [^wago221-6]: WAGO, *221 Series* 6 mm² class (221-612 / -613 / -615) — the same lever mechanism for all conductor types 0.5–6 mm² (20–10 AWG); 41 A / 450 V IEC, 30 A / 600 V per the UL 486C listing; 85 °C surrounding-air class. WAGO product page (figures mirrored across distributor spec listings): <https://www.wago.com/global/installation-terminal-blocks-and-connectors/splicing-connector-with-levers/p/221-612>
+
+[^screw-maintenance]: Phoenix Contact, *Terminal Blocks* — its Reakdyn screw-locking principle is described as maintenance-free and vibration-resistant, demonstrating why re-tightening requirements cannot be generalized across all screw terminals. Follow the exact terminal's installation and maintenance documentation. <https://www.phoenixcontact.com/en-us/products/terminal-blocks>
+
+[^tinned-wire]: Phoenix Contact, *The Problems with Tinning Wires* — explains how compressed tin/solder can fracture and how differential thermal expansion can leave a tinned conductor loose in a screw-style terminal block; recommends ferrules and the proper screw specification as the alternative. <https://assets.phoenixcontact.com/file/a819277e-2077-48d0-a5c2-0e7183fef5d9/media/original?The_problems_with_tinning_wires_U004008A.pdf=>

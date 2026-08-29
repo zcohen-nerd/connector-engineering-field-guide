@@ -56,7 +56,7 @@ Anderson PP15/45 figures are cited to Anderson's own product specifications,[^pp
 
 ## Sources
 
-[^pp1545]: Anderson Power Products, *Powerpole® PP15/45 Series* product specification — the smallest Powerpole housings; 15 A / 30 A / 45 A wire and PCB contacts share the same housings; wire sizes #20 AWG (0.5 mm²) through #10 AWG (6 mm²); rated up to 55 A per pole; genderless housings with dovetails for stacking multi-pole arrangements. <https://www.andersonpower.com/product/powerpole-15-45-tin-plated-power-contacts-20-16-awg-low-mating-force/>
+[^pp1545]: Anderson Power Products, *Powerpole® PP15/45 Series* product specification — the smallest Powerpole housings; 15 A / 30 A / 45 A wire and PCB contacts share the same housings; wire sizes #20 through #10 AWG; rated up to 55 A per pole; genderless housings with dovetails for stacking multi-pole arrangements. Contact plating and mating-cycle ratings are configuration-specific; see the [Powerpole deep dive](anderson-powerpole.md). <https://p1.aprimocdn.net/idealindustries/5d665ad6-38c3-4088-98b6-b3f0007370ef/ap-web_product-assets_default_data-sheets_DS-PP1545_Original%20file.pdf>
 
 [^amass]: Amass Connectors — official manufacturer site of Changzhou Amass Electronics (originator of the XT series; its catalog also covers the MR/MT motor-trio ecosystem). Ratings for genuine AMASS XT parts are sourced on the [XT page](xt-connectors.md). <https://www.amassconnectors.com/>
 

@@ -1,7 +1,7 @@
 ---
 id: servo-connectors
 title: "Servo Connectors: One Pin Order, Two Housings, No Standard"
-description: "The servo-lead deep dive: JR vs Futaba housings, why center-positive saves you, the old-Airtronics trap, the 'it's just Dupont' truth, and the stall-current math that makes three pins a power problem."
+description: "The servo-lead deep dive: JR vs Futaba housings, what center-positive does and does not protect, the old-Airtronics trap, the 'it's just Dupont' truth, and the stall-current math that makes three pins a power problem."
 slug: /hobby/servo-connectors
 sidebar_label: Servo Connectors
 ---
@@ -14,7 +14,7 @@ The three-pin servo lead may be the most-manufactured connector interface in hob
 
 *The classic micro-servo lead: three conductors into a 0.1-inch-class housing — verify pin order against *your* receiver, not the wire colors. Photo: [Suyash Dwivedi](https://commons.wikimedia.org/wiki/File:Tower_Pro_SG90_micro_servo_motor.jpg), CC BY-SA 4.0, via Wikimedia Commons.*
 
-## 1. The system: three pins, 0.1-inch pitch, one saving grace
+## 1. The system: three pins, 0.1-inch pitch, one partial safeguard
 
 A servo lead is a 3-position, 0.1-inch (2.54 mm) pitch, single-row crimp housing: three sockets that slide over standard square posts — receiver pin banks, flight-controller rails, bare headers. Friction fit, no latch. The order is **signal / positive / negative, with positive always on the center pin**, and the color convention follows one rule: **red is the center positive, the darkest wire is negative, and the lightest wire is signal**.[^svorder]
 
@@ -24,7 +24,7 @@ A servo lead is a 3-position, 0.1-inch (2.54 mm) pitch, single-row crimp housing
 | **JR-style / Spektrum** | brown | red | orange (yellow on some JR-era leads) | universal (bevel, no tab) |
 | **Hitec** | black | red | yellow | universal |
 
-Center-positive is the design's one mercy, and it's pure geometry: flip the plug 180° and the center pin stays put — only signal and ground trade places. A reversed servo just sits there refusing to run; power never lands on the signal pin from mere reversal. The swaps that actually burn things require a lead that was *wired* wrong (or a ghost from §3) — which is why the discipline is **verify pin order at both ends before power**, not "match the colors."
+Center-positive limits one common failure mode, but it is **not reverse-insertion protection**. Flip the plug 180° and the center positive pin stays put, while signal and ground trade places. Some servo/controller combinations may simply refuse to run, but others can be damaged because the servo's power return is now connected to the controller's signal output; vendor guidance explicitly warns that plugging a servo in backwards can break the servo or the device driving it.[^svreverse] Treat reversal as an electrical fault, not a supported state: **verify pin order at both ends before power**, not "match the colors."
 
 The signal pin itself carries a logic-level pulse train from the receiver or controller — it is a *signal*, with everything the [power vs signal](power-vs-signal.md) page says that implies: the power pins do the heavy lifting, and the signal pin must never be asked to.
 
@@ -41,7 +41,7 @@ Marketplace decoder: "servo plug," "S connector," "JR-style," "Futaba-style," "u
 
 ![Line diagram of the servo connector system: face view showing signal/positive/negative pin order with center positive, universal-JR vs Futaba J housing profiles with the index tab, and a bare 0.1-inch header row showing a correct and an off-by-one plug position](/img/diagrams/hobby-servo-connector.svg)
 
-*The system in one card: + holds the center under any insertion, the J housing is a universal plus a tab — and a bare header row will happily accept a shifted or reversed plug.*
+*The system in one card: + holds the center under reversal, but signal and ground still swap; the J housing is a universal plus a tab — and a bare header row will happily accept a shifted or reversed plug.*
 
 ## 3. The ghost in the drawer: old Airtronics
 
@@ -97,11 +97,13 @@ The per-servo math has a system-level sequel: **every servo's current arrives th
 
 ## Source status
 
-No governing specification exists for this family — that fact organizes the whole page. Pin-order and color conventions are cited to a servo manufacturer's documentation and a hobby-industry reference;[^svorder] housing geometry (bevel, J tab, shave-to-universal) to vendor documentation of the de-facto standard;[^svhouse] the old-Airtronics polarity difference to conversion-adapter documentation;[^airtronics] the contact-class current to a servo manufacturer's engineering note quoting pin-manufacturer ratings;[^svcurrent] stall currents to Savox's published specifications;[^svstall] and the wire-gauge ladder to vendor documentation.[^svwire] None of it transfers to clone leads or kit terminals, and the exact servo's manual plus the exact terminal's spec always decide. Tracked in [Hobby Source Notes](hobby-source-notes.md).
+No governing specification exists for this family — that fact organizes the whole page. Pin-order and color conventions are cited to a servo manufacturer's documentation and a hobby-industry reference;[^svorder] the reverse-insertion damage warning to Pololu's servo guidance;[^svreverse] housing geometry (bevel, J tab, shave-to-universal) to vendor documentation of the de-facto standard;[^svhouse] the old-Airtronics polarity difference to conversion-adapter documentation;[^airtronics] the contact-class current to a servo manufacturer's engineering note quoting pin-manufacturer ratings;[^svcurrent] stall currents to Savox's published specifications;[^svstall] and the wire-gauge ladder to vendor documentation.[^svwire] None of it transfers to clone leads or kit terminals, and the exact servo's manual plus the exact terminal's spec always decide. Tracked in [Hobby Source Notes](hobby-source-notes.md).
 
 ## Sources
 
 [^svorder]: Pin-order and color conventions (convention documentation — no governing spec exists): Kpower (servo manufacturer), *How to distinguish the positive and negative poles of the servo cable* — red in the middle is positive, the darker outer wires are ground/negative, signal outboard. <https://www.kpower.com/insight_driver/6894.html>; Flite Test, *Choosing the right servo Extension* — Futaba black/red/white vs JR brown/red/yellow-orange schemes, the lightest-is-signal / darkest-is-negative rule, JR "safe connect" chamfers, and safety locks for mated pairs. <https://www.flitetest.com/articles/choosing-the-right-servo-extension>
+
+[^svreverse]: Pololu, *GWS NARO PRO Sub-Micro Servo — FAQ* — identifies the standard ground/power/signal wires and warns that plugging a servo in backwards could break the servo or the connected device. The warning is interface-level guidance; the behavior of an exact servo/controller pair depends on its protection circuitry. <https://www.pololu.com/product/521/faqs>
 
 [^svhouse]: Housing geometry (vendor documentation of a de-facto standard): Hansen Hobbies, *Universal/JR Servo Connectors* — universal housings carry an orientation bevel; the Futaba J is the same housing with a keyed edge, and shaving the key leaves a usable universal housing. <https://hansenhobbies.com/products/connectors/servoconnectors/>; Pololu, *Futaba J Connector Pack* product documentation — the keyed-edge J housing as a distinct purchasable type. <https://www.pololu.com/product/1927>
 

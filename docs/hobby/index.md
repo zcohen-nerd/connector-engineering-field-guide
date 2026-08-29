@@ -14,7 +14,7 @@ Hobby connector information is messy. Product listings misuse names, photos lie,
 
 :::note[Introduced v0.8 — growing every release since]
 
-This track is still growing — the core pages and the first family deep-pages are in place, and more are on the [roadmap](hobby-source-notes.md). The [Professional / Industrial guide](../engineering-home.md) is the longer-established track, and its foundational material (what connectors actually do, anatomy, crimping discipline) applies here too.
+This track is still growing — its core workflow and a substantial set of family deep-pages are now in place, with the remaining capsule topics and depth work tracked on the [content roadmap](hobby-source-notes.md). The [Professional / Industrial guide](../engineering-home.md) is the longer-established track, and its foundational material (what connectors actually do, anatomy, crimping discipline) applies here too.
 
 :::
 

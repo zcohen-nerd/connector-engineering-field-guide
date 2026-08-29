@@ -33,7 +33,9 @@ The small inline connector that came on an LED string may be fine for that strin
 
 ## Power injection is a different job
 
-Addressable LED runs of any length need power injected in parallel — and that current does **not** belong on the little data-string connector. For power injection and supply wiring, use appropriately rated hardware chosen on purpose: rated power connectors, distribution blocks, ferrules into screw terminals, Wago-style lever connectors, or [XT-class connectors](xt-connectors.md) as appropriate — sized against the *calculated* LED current and verified against the part's documentation, not its title. The [power vs signal thinking](power-vs-signal.md) and the engineering track's [high-current DC path](../decision-paths/high-current-dc-power.md) apply the moment real amps show up.
+Short LED runs can be powered from one point. Longer, higher-current, or lower-voltage runs may need **distributed power feeds** when the calculated worst-case current and round-trip conductor resistance create unacceptable voltage drop or visible color shift.[^led-power] Decide the number and placement of feeds from that calculation — not from a universal length rule — and do not assume the little data-string connector is adequate for the resulting current.
+
+For distribution wiring, use deliberately rated power connectors, distribution blocks, ferrules into screw terminals, Wago-style lever connectors, or [XT-class connectors](xt-connectors.md) as appropriate. Size every conductor, connector, and protective device for its branch current. With one supply, protect the source and branches so a short cannot turn small-gauge wire into a fuse. With multiple supplies, keep the LED sections' positive feeds separate so the supplies cannot back-feed each other, while maintaining the common ground/reference required by the data signal.[^led-power] The [power vs signal thinking](power-vs-signal.md) and the engineering track's [high-current DC path](../decision-paths/high-current-dc-power.md) apply the moment real amps show up.
 
 ## Before using JST-SM-style connectors in an LED project
 
@@ -43,6 +45,9 @@ Addressable LED runs of any length need power injected in parallel — and that 
 - [ ] Wire gauge
 - [ ] Current per pin (genuine JST SM: per the datasheet[^jst-sm]; unknown/clone parts: treat as unrated until verified)
 - [ ] Total LED current (calculated, worst-case white)
+- [ ] Worst-case voltage drop to the farthest LED
+- [ ] Feed-point locations and branch protection
+- [ ] If using multiple supplies: common reference verified, positive outputs not paralleled
 - [ ] Voltage
 - [ ] Polarity (verified against the controller, not wire color)
 - [ ] Data direction, if addressable LEDs
@@ -58,3 +63,5 @@ Related: [JST Is Not One Connector](jst-is-not-one-connector.md) · [Power vs Si
 ## Sources
 
 [^jst-sm]: JST SM series datasheet, official JST PDF — 2.5 mm pitch, disconnectable crimp wire-to-wire; 3 A AC/DC max (2 A for the 18-circuit version), 250 V, wire range AWG #28–22. Figures apply to genuine JST parts assembled per the datasheet — not to clones or "compatible" parts. <https://www.jst-mfg.com/product/pdf/eng/eSM.pdf>
+
+[^led-power]: Adafruit, *Powering NeoPixels* — short runs can use a single supply point; larger installations distribute power according to current and voltage drop, with roughly 1 m or less from a pixel to a power connection offered as a color-consistency target rather than a universal requirement. For multiple supplies, grounds remain common while each supply's positive output feeds only its assigned LED section to prevent back-feeding. <https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels>

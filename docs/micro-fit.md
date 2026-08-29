@@ -66,7 +66,7 @@ The least-known number in the family: **standard Micro-Fit terminals are durabil
 
 Design consequences worth writing down:
 
-- **Micro-Fit is not a quick-disconnect.** A test point cycled every bench session, a battery swapped daily, a module unplugged each shift — those interfaces outrun 30 cycles in a month. Give them a family rated for the duty ([Anderson's 10,000-cycle Powerpole class](hobby/anderson-powerpole.md) for hobby power, a [proper service-port family](decision-paths/debug-service-port.md) for debug).
+- **Micro-Fit is not a quick-disconnect.** A test point cycled every bench session, a battery swapped daily, a module unplugged each shift — those interfaces outrun 30 cycles in a month. Give them a family rated for the duty ([Anderson's silver-contact PP15/45 configuration, rated to 10,000 no-load wire-to-wire cycles](hobby/anderson-powerpole.md), for hobby power; a [proper service-port family](decision-paths/debug-service-port.md) for debug). Tin-contact PP15/45 configurations are a different, lower cycle class.
 - **Development churn counts.** Twenty rework cycles during bring-up spends most of a standard terminal's life before the product ships — spec RMF terminals, or budget replacement housings/terminals for the build phase.
 - **A4 context:** the [durability table](appendix/quick-reference-tables.md) puts this side by side with the 500-cycle mil circulars and USB-C's 10,000 — the spread across "connector" is two-and-a-half orders of magnitude, and Micro-Fit anchors the low end on purpose.
 

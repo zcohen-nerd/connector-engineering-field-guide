@@ -8,6 +8,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+_Nothing yet._
+
+## [1.0.0] - 2026-08-29
+
+### v1.0 — Source-Verified Release
+
+The Beta label comes off. What "1.0" means here, per the milestone [Source Notes](../appendix/source-notes.md) defined for itself: **every closable needs-source row is closed, resolved as standing policy, or explicitly deferred by owner decision** — clause-level verifications landed against the actual texts of J-STD-046A (PCN silence-is-acceptance, §4.2.3.1/§4.2.3.2) and NASA-STD-8739.4 (§12.3.3 contact-conductor combinations), the EIA-364 anchor situation was checked against the live DLA portal (and its August 2026 hostname migration absorbed), the IEC full-text and hobby-track rows carry recorded decisions instead of open promises, and the per-design permanent rows stand as the standing warnings they were always meant to be. The release also completes the lifecycle/qualification/low-level content plan: three topic deep dives (Low-Level Signals and Contact Design; the Connector Qualification Plan Template; Lifecycle and Procurement Integrity), six new house-style diagrams closing the visual backlog's line-art list, and the one-wire-per-crimp-barrel rule documented across both tracks. Details in the entries below.
+
 ### Removed
 
 - Removed the obsolete PDF release workflow. The guide is published as a Docusaurus site; releases no longer build or attach per-track PDF artifacts.

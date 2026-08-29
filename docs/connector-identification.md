@@ -22,6 +22,10 @@ The short, shared version of the skill both tracks depend on. Whether the part c
 10. **Verify with the datasheet drawing or standard** — dimensions against your calipers, not photos against your memory.
 11. **Buy samples or test-fit before committing** — before the bulk order on the hobby side, before release on the engineering side.
 
+![Diagram of a four-position connector with the preferred full-row center-to-center pitch measurement divided by the number of intervals](/img/diagrams/hobby-pitch-measurement.svg)
+
+*Measure across several contact centers, then divide by the number of intervals. This averages the measurement error that makes adjacent-pair caliper readings misleading.*
+
 :::note[Going deeper]
 
 - **Hobby track:** the full [How to Identify an Unknown Connector](hobby/identify-unknown-connector.md) — photos, molded markings, search-query patterns, and marketplace skepticism.

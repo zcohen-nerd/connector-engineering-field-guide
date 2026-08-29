@@ -40,6 +40,10 @@ The category table lists fiber for completeness, but optical connectors are thei
 - **Rugged / military:** *expanded-beam* connectors (including expanded-beam MIL-DTL-38999 variants) tolerate dust and vibration better than physical-contact ferrules; **ARINC 801** termini and **MIL-DTL-38999 fiber slash sheets** place optical contacts into the same rugged circular shells used for copper.
 - **What drives selection:** endface cleanliness, alignment/insertion loss, bend radius, and single- vs. multi-mode — not the mechanical envelope.
 
+![Two narrow LC fiber-optic connectors beside two larger square SC fiber-optic connectors, all with protective ferrule caps installed](/img/photos/lc-sc-fiber-connectors.jpg)
+
+*Datacom fiber families at recognizable scale: duplex LC on the left and SC on the right. The white caps protect the polished ferrule endfaces—the surface whose cleanliness and condition directly affect the optical link. Photo: [Poil](https://commons.wikimedia.org/wiki/File:Lc-sc-fiber-connectors.jpg), CC BY-SA 3.0, via Wikimedia Commons.*
+
 :::caution
 
 Fiber connector performance depends heavily on cleanliness, inspection, polish/interface type, bend radius, transceiver requirements, and installation process. Do not select fiber connectors by shape alone.

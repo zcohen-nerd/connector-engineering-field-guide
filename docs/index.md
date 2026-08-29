@@ -12,6 +12,31 @@ sidebar_label: All Guides
 
 Two guides, one site. Pick the track that matches your project — they cross-link where it matters, and both follow the same rule: **the datasheet, standard, and requirement always win over anything written here.**
 
+<div class="cn-home-gallery" aria-label="Examples of connector topics covered by the field guides">
+<a class="cn-home-gallery-item" href="hobby/families">
+<img src="img/photos/zif-connector-ffc.jpg" alt="Two flat-flex cables with exposed contacts in front of matching ZIF board connectors" />
+<span class="cn-home-gallery-copy"><strong>Board-level</strong><small>FFC / ZIF identification</small></span>
+<span class="cn-home-gallery-credit">Zeroping · CC0</span>
+</a>
+<a class="cn-home-gallery-item" href="decision-paths/micro-d">
+<img src="img/photos/micro-d-and-de9-comparison.jpg" alt="A compact Micro-D connector beside a larger DE-9 connector for scale" />
+<span class="cn-home-gallery-copy"><strong>Compact, high-density</strong><small>Micro-D selection</small></span>
+<span class="cn-home-gallery-credit">Andree.sk · CC BY-SA 4.0</span>
+</a>
+<a class="cn-home-gallery-item" href="decision-paths/industrial-sensor">
+<img src="img/photos/m12-m8-family.jpg" alt="M12 and M8 industrial sensor cordsets and panel receptacles" />
+<span class="cn-home-gallery-copy"><strong>Industrial sensor</strong><small>M12 / M8 interfaces</small></span>
+<span class="cn-home-gallery-credit">Riep. · CC BY-SA 4.0</span>
+</a>
+<a class="cn-home-gallery-item" href="decision-paths/sealed-enclosure-feedthrough">
+<img src="img/photos/cable-gland-disassembled.webp" alt="A disassembled cable gland showing its body, seal, washer, and compression nut" />
+<span class="cn-home-gallery-copy"><strong>Sealed feedthrough</strong><small>Cable-entry construction</small></span>
+<span class="cn-home-gallery-credit">Leotard · CC0</span>
+</a>
+</div>
+
+<p class="cn-home-gallery-note">Four interfaces, four different jobs. Follow a panel into the relevant guide, or see the complete <a href="image-attributions">image attribution register</a>.</p>
+
 <div class="cn-card-grid">
 <div class="cn-card cn-card--hobby">
 <div class="cn-card-kicker">Maker / Hobby</div>

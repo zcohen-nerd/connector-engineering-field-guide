@@ -71,6 +71,10 @@ A ferrule (bootlace ferrule, per the DIN 46228 style system) is a crimped tin-pl
 
 Soldering the end of a stranded wire and putting it under a screw feels tidy, but Phoenix Contact documents why it can loosen: the compressed solder/tin mass can fracture and change shape, and copper and solder expand differently during thermal cycling until the conductor is no longer clamped correctly.[^tinned-wire] The failure arrives later as a loose, high-resistance power joint. Use the conductor preparation the exact terminal permits — commonly bare stranded wire in a suitable rising clamp or a **properly crimped ferrule** — and tighten to the published specification.
 
+![Opened mains plug with heat-damaged terminals and tinned stranded conductors at the screw connections](/img/photos/defective-tinned-wire-plug.jpg)
+
+*A documented result of clamping tinned stranded wire: the connection loosened and heated inside this mains plug. This is a failure example, not a general-purpose assembly reference. Photo: [HansPL](https://commons.wikimedia.org/wiki/File:Defekter_Stecker_mit_verzinnter_Litze.jpg), released into the public domain, via Wikimedia Commons.*
+
 ## 6. Traps
 
 - **Tinned wire under a clamp** — see above; the tidy-looking one is the fire risk.

@@ -29,6 +29,10 @@ A sealed cable to a DC sensor or actuator in factory or field automation — the
 - **7/8-inch "mini-change"** — the larger US-heritage circular for sensor/actuator *power* distribution; you'll meet it on splitter boxes and older North American plants.
 - **DIN 43650 valve connectors ("Form A/B/C")** — the standard rectangular interface on solenoid valves and pressure switches; frequently the *other* connector on the same machine as your M12s.
 
+![A molded M12 plug on a green cable beside an M8 cordset and M12 and M8 panel-mount receptacles](/img/photos/m12-m8-family.jpg)
+
+*The usual sensor-cabling scale choice: M12 cordset and panel hardware beside the smaller M8 system. Photo: [Riep.](https://commons.wikimedia.org/wiki/File:M12_-_A.jpg), CC BY-SA 4.0, via Wikimedia Commons.*
+
 See the [M12 deep dive](../08-m12.md) for coding and pinout detail.
 
 ## Search terms

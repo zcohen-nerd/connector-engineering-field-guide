@@ -147,7 +147,12 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Appendix',
       collapsed: false,
-      items: ['appendix/quick-reference-tables', 'appendix/source-notes'],
+      items: [
+        'appendix/quick-reference-tables',
+        'appendix/source-notes',
+        'image-attributions',
+        'image-opportunities',
+      ],
     },
     'usage-and-attribution',
   ],

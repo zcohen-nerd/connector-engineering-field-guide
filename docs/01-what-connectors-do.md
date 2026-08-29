@@ -35,6 +35,10 @@ A connector is never just a place where wires meet. Every connector in a profess
 
 A connector can work perfectly on the bench and fail in the field because the cable is pulling sideways, vibrating, or unsupported.
 
+![Exploded view of connector shell, rear seal, 360-degree shield band, backshell, cable clamp, boot, and cable, annotated with the shield path and the mechanical load path](/img/diagrams/backshell-exploded.svg)
+
+*One assembly doing several jobs at once: the band and shells carry the shield path, while the backshell and clamp carry cable load so the contacts do not.*
+
 ## 1.3 Environmental boundary
 
 For sealed systems, the connector is part of the enclosure wall. It must block water, dust, salt fog, fuel/oil/hydraulic fluid, pressure differential, humidity, EMI, and thermal cycling — as required.

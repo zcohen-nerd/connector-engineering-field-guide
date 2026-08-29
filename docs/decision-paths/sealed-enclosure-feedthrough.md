@@ -26,6 +26,10 @@ Passing power or signal through the wall of a sealed enclosure without breaking 
 - **Sealed-automotive flange receptacles** — DEUTSCH DT flange / HD30 bulkhead class — where budget field wiring passes a wall and nothing requires mil hardware. See the [DEUTSCH deep dive](../deutsch.md).
 - **Hermetic / potted penetrator** where pressure or gas-tightness is required.
 
+![Disassembled plastic cable gland showing the panel nut, threaded body, rubber sealing insert, washer, and compression nut](/img/photos/cable-gland-disassembled.webp)
+
+*A cable gland is the fixed-cable alternative to a detachable connector. Its panel nut, body, elastomer insert, washer, and compression nut form one mechanical and sealing system; cable diameter and installation determine whether it works. Photo: [Leotard](https://commons.wikimedia.org/wiki/File:Cable_gland05.jpg), CC0 1.0, via Wikimedia Commons; resized and converted to WebP.*
+
 See [Decision Examples](../09-decision-examples.md).
 
 ## Search terms

@@ -10,6 +10,10 @@ sidebar_label: USB-C Power
 
 USB-C is the best project power inlet most hobby electronics has ever had: one reversible jack, a specified 10,000-cycle mating life,[^usbcyc] a universe of cheap supplies, and a negotiated ladder from 5 V bench power to 240 W. It is also the first power connector most makers meet that **requires attachment detection before power** — a compliant Type-C source leaves VBUS at its safe-zero state until it detects the sink's correct CC termination.[^usbattach] Almost every "my board won't power up over USB-C" story on earth is one of the handful of rules on this page, and the most famous victim was the Raspberry Pi 4.
 
+![A USB-C cable plug aligned above a USB-C receptacle in the edge of a tablet](/img/photos/usb-c-connector-and-receptacle.webp)
+
+*The reversible interface in its actual form: a USB-C plug and receptacle. The symmetry makes orientation easy; it does not make the port mechanically rugged, sealed, or electrically self-configuring. Photo: [Wikideas1](https://commons.wikimedia.org/wiki/File:USB-C_connector_and_receptacle.webp), CC0 1.0, via Wikimedia Commons; resized for web delivery.*
+
 ## 1. The deal: power is negotiated, not assumed
 
 A barrel jack is a wire from a wall adapter; USB-C is a *protocol* with a connector attached. Three escalating levels:

@@ -38,6 +38,10 @@ These are not "toy" connectors. Sealed automotive connector families are often a
 - **Aptiv (Delphi) Metri-Pack** — long-standing automotive terminal system in sealed and unsealed variants, sized by terminal series (150/280/480/630…).
 - **Aptiv (Delphi) Weather-Pack** — the classic 1–6-way sealed under-hood system (triple-ribbed silicone seals, ~20 A class); very often the first "sealed automotive kit" a graduating maker meets. Family figures in [§3.2](../03-connector-standards-and-families.md#32-sealed-automotive-connector-families).
 
+![Exploded line diagram of a DEUTSCH DT plug with contacts, rear silicone grommet, housing, orange wedgelock, and mating receptacle](/img/diagrams/deutsch-dt-exploded.svg)
+
+*A representative sealed-automotive system is more than two housings: contacts, rear grommet, and the secondary lock all participate in retention and sealing. Other families arrange the pieces differently, so order from the exact family drawing.*
+
 Family-level sealing and current figures for these live in the sourced [sealed automotive table (§3.2)](../03-connector-standards-and-families.md#32-sealed-automotive-connector-families) — read them as orientation, then verify the exact series datasheet. Don't over-shop brands: pick one family that covers your current range and stock it.
 
 ## Search terms

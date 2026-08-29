@@ -26,6 +26,10 @@ Board-to-wire wiring inside an enclosure — power and signal from a PCB to othe
 - **PicoBlade / [JST-GH](../hobby/jst-gh.md)** and similar for signal — and note they are *different* 1.25 mm families that do not intermate; the GH page carries the lookalike table.
 - **TE** and **Harwin** families where their ratings and latches fit.
 
+![Line diagram of the Molex Fit family at relative pitch scale, plus wire-to-board, wire-to-wire, and panel-mount arrangements](/img/diagrams/micro-fit-ladder.svg)
+
+*One internal-power ecosystem can cover several physical jobs, but the similar-looking Fit families sit at different pitches and do not intermate. Measure and select the exact family before choosing the contact and tooling.*
+
 These are not "hobby" parts — professional versions have latches, polarization, secondary locks (TPA), and defined ratings. The dividing line is the specific family and rating, not the brand (see [Major Connector Categories](../02-major-connector-categories.md)).
 
 ## Search terms

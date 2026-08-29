@@ -26,6 +26,10 @@ Harsh-environment external I/O on defense or aerospace hardware — vibration, s
 - **MIL-DTL-5015 / "MS-style" legacy circulars** — the pre-26482 threaded generation still common on older platforms; usually *matched* for compatibility with existing hardware rather than chosen for new design.
 - **[Micro-D](micro-d.md)** for compact high-reliability *internal* runs alongside the external circulars.
 
+![Line diagram of a Series III 38999 receptacle and plug profile with Tri-Start thread, scoop-proof, and keyway callouts](/img/diagrams/d38999-profile.svg)
+
+*The Series III physical cues that matter during selection: threaded coupling, recessed scoop-proof interface, and a keyed insert. The exact shell, arrangement, service class, and backshell still come from the part-number documentation.*
+
 See the [MIL-DTL-38999 deep dive](../07-mil-dtl-38999.md) and [Standards and Families](../03-connector-standards-and-families.md).
 
 ## Search terms

@@ -10,6 +10,10 @@ sidebar_label: Micro-D / compact high-rel
 
 A dense, lightweight, high-reliability connection inside protected hardware — where size and weight matter more than field-service convenience.
 
+![A microminiature D connector beside a much larger male DE-9 D-sub connector, showing the difference in shell and contact scale](/img/photos/micro-d-and-de9-comparison.jpg)
+
+*Micro-D beside a standard DE-9 D-sub. Both use the D-shaped shell concept, but the Micro-D's fine-pitch interface buys density at the cost of more delicate handling and assembly. Photo: [Andree.sk](https://commons.wikimedia.org/wiki/File:Micro-D_and_Mini-D_connectors.jpg), CC BY-SA 4.0, via Wikimedia Commons.*
+
 ## Use this when
 
 - The interface lives **inside an enclosure or protected assembly** and space/weight are constrained.

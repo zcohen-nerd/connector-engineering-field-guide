@@ -70,6 +70,10 @@ The sealed-automotive middle ground — the usual first landing spot for graduat
 | [Screw terminal block](hobby/screw-terminals.md) (PCB) | Wire clamped by a screw on the board edge | Can loosen under vibration if not designed, torqued, retained, or inspected appropriately. Use a proper latching connector or move clamping into an enclosure terminal block. |
 | Pluggable terminal block | Pluggable 2-part screw/spring terminal block, often Phoenix Contact / WAGO / Weidmüller style | Legitimate for panel/field wiring inside enclosures. Not automatically sealed or vibration-rated — house it appropriately. |
 
+![A labeled screw terminal strip mounted inside a metal cabinet with several power and signal wires landed on numbered positions](/img/photos/cabinet-terminal-block.webp)
+
+*What “move the clamping into an enclosure” looks like in service: a fixed, labeled terminal strip with numbered positions inside a cabinet. The photograph documents the arrangement, not a rating or workmanship endorsement. Photo: [tony_duell](https://commons.wikimedia.org/wiki/File:Cabinet_Terminal_Block.jpg), CC BY 2.0, via Wikimedia Commons; resized and converted to WebP.*
+
 :::tip
 
 Rule of thumb for the bench-to-product transition: when a connector leaves the lab, ask whether it latches, keys, retains its contacts, survives vibration, and seals to the environment it will live in. If any answer is "no" and the application needs it, upgrade the connector. And as always: the manufacturer datasheet and the applicable standard outrank anything in this guide.

@@ -127,6 +127,10 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 - **Marketplace names:** flat flex, FFC, FPC, ribbon cable (confusingly), "Pi camera cable," ZIF cable.
 - **What it is:** a flat flexible cable ending in bare printed contacts that clamp into a ZIF (zero-insertion-force) latched connector on the board — the Raspberry Pi camera/display interface and the inside of most consumer electronics. The cable end *is* the contact; 1.0 mm and 0.5 mm are the common pitch classes per [Molex's Easy-On FFC/FPC family](https://www.molex.com/en-us/products/connectors/ffc-fpc-connectors) (4–80 circuits) — measure, and verify against the connector drawing.
 - **Watch for:** contacts-up vs. contacts-down orientation (both cable types exist and the connector dictates which); same-end vs. opposite-end contact versions of "the same" cable; the fragile flip- or slide-style ZIF latch; low insertion-cycle expectations; and creasing — a sharp fold can crack conductors invisibly.
+
+![Two flat-flex cables with exposed contact fingers in front of their matching zero-insertion-force board connectors](/img/photos/zif-connector-ffc.jpg)
+
+*The cable end is the contact: exposed fingers slide into the board connector before its small latch clamps them. The two pictured cable constructions also show why conductor count and contact orientation must be checked, not assumed. Photo: [Zeroping](https://commons.wikimedia.org/wiki/File:ZIF_connector_and_FFC.jpg), CC0 1.0, via Wikimedia Commons.*
 - **Boards that mount rigidly to each other** may not need a cable at all — see the [board-to-board path](../decision-paths/board-to-board.md).
 
 ## GX and SP-style "aviation / waterproof" circulars

@@ -14,9 +14,13 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **AS39029** — the SAE specification (formerly M39029) for the removable crimp contacts used in MIL-DTL-38999 and related mil circulars. See [Contact sizes and current](07-mil-dtl-38999.md).
 
+**Authorized / franchised distributor** — a distributor selling under agreement with the manufacturer: factory traceability, manufacturer warranty, and PCN/EOL notices flow. The default channel for released hardware. See [Lifecycle & Procurement](lifecycle-and-procurement.md).
+
 **Backshell** — the rear accessory that provides strain relief, shield termination, sealing, and cable exit angle. Not optional. See [Connector Anatomy](05-connector-anatomy.md).
 
 **Blind mate** — mating a connector the operator can't see; needs lead-in, float, and pin-length stagger. See [Mating sequence and blind mate](05-connector-anatomy.md).
+
+**Broker / independent distributor** — a distributor operating outside manufacturer agreements; a legitimate channel for obsolete/allocated parts under counterfeit-avoidance controls, but traceability must be verified per lot. See [Lifecycle & Procurement](lifecycle-and-procurement.md).
 
 **Bundle derating** — reducing allowable per-contact current as more contacts are energized, because packed contacts heat each other. See [How to read a derating curve](04-connector-selection-workflow.md).
 
@@ -30,7 +34,7 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **Contact / terminal** — two names for the same part: the metal element crimped onto the wire and inserted into the housing. "Terminal" dominates kit and marketplace language; "contact" dominates datasheets. Family-specific either way. See [Crimping](hobby/crimping.md).
 
-**Contact resistance** — the milliohm-level resistance through a mated contact pair; rises with cycles and fretting, critical for low-level signals. See [Reading Datasheets](06-reading-datasheets.md).
+**Contact resistance** — the milliohm-level resistance through a mated contact pair; rises with cycles and fretting, critical for low-level signals. See [Reading Datasheets](06-reading-datasheets.md) and [Low-Level Signal Contacts](low-level-signal-contacts.md).
 
 **Contact size** — the numbered physical contact size (22D, 20, 16, 12, 8…); smaller number = larger contact = more current and larger wire. See [Contact sizes and current](07-mil-dtl-38999.md).
 
@@ -44,11 +48,17 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **Derating curve** — the manufacturer plot of allowable current vs. loaded-contact count and temperature; the number you actually design to. See [How to read a derating curve](04-connector-selection-workflow.md).
 
+**Dry circuit** — a circuit whose voltage and current are too low to break down the films that grow on contact surfaces, so the contact must be reliable without electrical help — noble (gold-class) plating, adequate force, and wipe. Most measurement and low-voltage signal lines qualify. See [Low-Level Signal Contacts](low-level-signal-contacts.md).
+
 **Dust cap** — the cover that protects an unmated connector from dirt, water, and pin damage; belongs on the BOM. See [Connector Anatomy](05-connector-anatomy.md).
 
-**DWV / hi-pot** — dielectric withstanding voltage; the survivable overvoltage test, *not* the continuous working voltage. See [Reading Datasheets](06-reading-datasheets.md).
+**DWV / hi-pot** — dielectric withstanding voltage; the survivable overvoltage test, *not* the continuous working voltage. See [Reading Datasheets](06-reading-datasheets.md) and the [Qualification Plan Template](tools/connector-qualification-template.md).
 
-**Fretting** — micro-motion wear that oxidizes contact surfaces under vibration, causing intermittent high resistance. See [Common failure points](01-what-connectors-do.md).
+**EOL / last-time buy (LTB)** — a manufacturer's discontinuance of a part, announced with final-order and final-ship dates; the decision point for a bridge buy, an approved alternate, or a redesign. See [Lifecycle & Procurement](lifecycle-and-procurement.md).
+
+**First article inspection (FAI)** — verifying that the first built unit(s) of a configuration match the complete drawing package before performance results count as evidence; AS9102 is the aerospace formalization. See the [Qualification Plan Template](tools/connector-qualification-template.md).
+
+**Fretting** — micro-motion wear that oxidizes contact surfaces under vibration, causing intermittent high resistance. See [Common failure points](01-what-connectors-do.md) and [Low-Level Signal Contacts](low-level-signal-contacts.md).
 
 **Front-release / rear-release** — which side the contact insertion/extraction tool works from; rear-release (wire side) is the common 38999 arrangement. See [Termination types](05-connector-anatomy.md).
 
@@ -94,9 +104,15 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **Mezzanine (board-to-board)** — a connector pair joining two parallel PCBs at a defined mated stack height; ordered as a matched header/receptacle pair from one family's height table. See [Board-to-board](decision-paths/board-to-board.md).
 
+**NRND** — not recommended for new designs; the lifecycle state between active and end-of-life. Existing designs are supported, but the clock is running. See [Lifecycle & Procurement](lifecycle-and-procurement.md).
+
+**Obsolescence / DMSMS** — the loss or impending loss of a part's manufacturing sources (DoD language: diminishing manufacturing sources and material shortages); managed proactively with multi-source families and recorded alternates, or reactively at much higher cost. See [Lifecycle & Procurement](lifecycle-and-procurement.md).
+
 **Open-barrel crimp** — the common stamped-terminal crimp style with two wing sets: **conductor wings** folded onto bare strands (the electrical joint) and **insulation wings** gripping the jacket (the strain relief). Both must be formed correctly. See [Crimping](hobby/crimping.md).
 
 **Panel mount** — a connector mounted through an enclosure wall (jam nut, flange, or snap-in), making the enclosure part of the interface — panel sealing and cutout included. See [Connector Anatomy](05-connector-anatomy.md).
+
+**PCN** — product/process change notification; the manufacturer's notice that a part is changing (material, plating, site, marking) while keeping its part number. Harmless to most users — except when it touches your qualified configuration. See [Lifecycle & Procurement](lifecycle-and-procurement.md).
 
 **Pigtail** — a shield gathered into a short wire instead of a 360° bond; inductive, so it radiates at RF. See [EMI, shielding, and bonding](05-connector-anatomy.md).
 
@@ -111,6 +127,10 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 **Pre-crimped lead** — a factory-terminated wire you insert into a housing yourself; often the most reliable hobby choice for tiny contacts (SH/GH/PH class). See [Crimping](hobby/crimping.md).
 
 **QPL** — Qualified Products List; the register of parts qualified to a military specification. Required when qualification matters, and a second-source consideration always. See [Production reality](04-connector-selection-workflow.md).
+
+**Qualification testing** — design-level proving of one documented connector configuration (parts, plating, wire, seals, tooling, process), done once per the governing spec's rules — distinct from *acceptance* testing, which verifies every built unit or lot. See the [Qualification Plan Template](tools/connector-qualification-template.md) and the [Harness Inspection Checklist](tools/harness-inspection-checklist.md).
+
+**Requalification** — re-opening qualification evidence when the qualified configuration changes: a PCN touching form/fit/function, an alternate or vendor change, a new site or plating. The governing spec decides the scope; the question is never optional. See the [Qualification Plan Template](tools/connector-qualification-template.md) and [Lifecycle & Procurement](lifecycle-and-procurement.md).
 
 **RMF** — Molex's Reduced Mating Force Micro-Fit terminals; a mating-force feature, with current still set by the exact terminal P/N. See [Micro-Fit deep dive](micro-fit.md), [Comparison Matrix](tools/connector-comparison-matrix.md).
 
@@ -136,9 +156,13 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **TPA** — Terminal Position Assurance; a secondary lock confirming every contact is fully seated before the connector can mate. See [Major Connector Categories](02-major-connector-categories.md).
 
+**Traceability / CoC** — the documented chain from factory to your dock (certificates of conformance, lot records) that authorized distribution provides by default and broker purchases must prove per lot. See [Lifecycle & Procurement](lifecycle-and-procurement.md).
+
 **Voltage rating** — a class figure tied to insulation, spacing, and test conditions; working voltage and withstand voltage (DWV) differ, and AC/DC/altitude assumptions matter. Verify the datasheet. See [Reading Datasheets](06-reading-datasheets.md).
 
 **Wedgelock** — the separate wedge (orange on gray DEUTSCH DT plugs, green on receptacles) that locks contacts into their cavities as the secondary retention; a DT-family connector without it has no retention system. Usually a separate line item. See [DEUTSCH Deep Dive](deutsch.md).
+
+**Wetting current** — the relay/switch-world concept of the minimum load a film-forming contact needs to stay reliable; below it, tin-class contacts drift intermittent. Gold-class contacts effectively have none in clean service — the reason they own dry-circuit duty. See [Low-Level Signal Contacts](low-level-signal-contacts.md).
 
 **Wire gauge (AWG / mm²)** — conductor size. Every contact supports a defined gauge range, and both the electrical load and the crimp quality depend on staying inside it. See [Crimping](hobby/crimping.md).
 

@@ -18,10 +18,15 @@ Crimping is where hobby wiring either becomes reliable or becomes a lifetime sup
 - **Official/OEM tooling is expensive but controlled** — the die matches the contact drawing and produces repeatable results. That's what you're paying for. (This is exactly the engineering track's [tooling discipline](../04-connector-selection-workflow.md) at hobby scale.)
 - **Strip length matters** — strands should fill the conductor wings and just be visible past them; too long shorts into the mating area, too short crimps onto insulation.
 - **Wire gauge and insulation diameter matter** — every contact has a supported wire and insulation range; outside it, the wings can't form properly.
+- **One wire per crimp barrel.** Doubling two wires into one terminal is done all the time and is wrong essentially every time: the barrel, die, and wire are qualified as a system for *one* conductor in a stated range, and a crimp only works by compressing that qualified fill into a gas-tight joint.[^crimpmech] Doubled wires never consolidate that way — one bundle usually ends up loose, and the joint corrodes from the inside. Manufacturers *do* qualify specific dual-wire combinations and publish them for specific terminals — the exception that proves the rule[^dualwire] — so unless the documentation for *your* terminal says two wires, build the branch with a proper splice, a lever connector, or a terminal actually rated for two.
 - **Soldering a crimp terminal is usually a smell.** Solder wicks up the strands and creates a stiff spot that fatigues and breaks right at the joint — and it usually means the crimp didn't hold on its own. (Rare intentional exceptions exist; they're not the hobby default.)
 - **Bad crimps cause intermittent failures**, and intermittents are the most expensive failures to find.
 - **Inspect every crimp:** conductor wings on bare strands, insulation wings on jacket, no stray strands, contact not deformed.
 - **Pull test gently** — a correct crimp survives a firm tug; a wrong one comes off now instead of in the field.
+
+![Schematic of a good open-barrel crimp — conductor wings on bare strands with tips just visible, insulation wings on the jacket — beside the four classic wrongs: strip too long reaching the mating area, strip too short crimping onto insulation, a stray strand outside the wings, and two wires doubled into a one-wire barrel with one bundle loose](/img/diagrams/hobby-crimp-good-vs-bad.svg)
+
+*The geometry to inspect for. What line art can't show is surface texture and deformation — which is why the inspection rules above still apply to every real crimp you make.*
 
 ![A ratcheting crimp tool with interchangeable die positions marked with AWG wire ranges](/img/photos/crimper-ratchet-awg.jpg)
 
@@ -50,3 +55,9 @@ Building something that others will use, or heading toward production? The engin
 :::
 
 Related: [Buying the Right Mating Parts](buying-mating-parts.md) · [Connector Kits](connector-kits.md) · [What People Forget](../what-people-forget.md) (tooling edition).
+
+## Sources
+
+[^crimpmech]: TE Connectivity crimping whitepapers — a crimp termination works by compressing the strands and barrel into a gas-tight joint, and holds only within the qualified terminal/wire/tooling combination: *A Primer on Small Wire Crimping* (TE-hosted) <https://www.te.com.cn/content/dam/te-com/documents/application-tooling/global/2349420-1_Primer-on-Small-Wire-Crimping-Whitepaper.pdf> and *Crimping Terminals: The Importance of Using the Right Tool* <https://www.te.com/content/dam/te-com/documents/industrial/global/1-1773953-1-terminals-and-splices-whitepaper.pdf>.
+
+[^dualwire]: Molex, *Test Summary — Dual-Wire*, 5556 (Mini-Fit Jr.) terminal — an example of a manufacturer explicitly qualifying a two-wire termination (2 × 22 AWG) for one specific terminal system. A wire combination is legitimate exactly when a document like this exists for your terminal — and unqualified when it doesn't. <https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/testsummarypdf/555/5556/55560010-TS-000.pdf>

@@ -95,6 +95,7 @@ const sidebars: SidebarsConfig = {
         '04-connector-selection-workflow',
         '05-connector-anatomy',
         '06-reading-datasheets',
+        'low-level-signal-contacts',
         '07-mil-dtl-38999',
         'mil-dtl-26482',
         '08-m12',
@@ -102,6 +103,7 @@ const sidebars: SidebarsConfig = {
         '09-decision-examples',
         '10-selection-checklist',
         '11-red-flags',
+        'lifecycle-and-procurement',
         '12-consumer-hobby-prototype-connectors',
         'micro-fit',
         '13-hands-on-exercises',
@@ -126,6 +128,7 @@ const sidebars: SidebarsConfig = {
         'tools/decode-38999-worksheet',
         'tools/deutsch-decode-worksheet',
         'tools/harness-inspection-checklist',
+        'tools/connector-qualification-template',
       ],
     },
     {

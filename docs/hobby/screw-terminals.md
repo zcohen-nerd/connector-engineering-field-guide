@@ -74,6 +74,7 @@ Soldering the end of a stranded wire and putting it under a screw feels tidy, bu
 ## 6. Traps
 
 - **Tinned wire under a clamp** — see above; the tidy-looking one is the fire risk.
+- **Two conductors into one clamp point.** Same disease as [doubling wires into one crimp](crimping.md): clamps are specified for one prepared conductor unless the block's documentation says otherwise. Where two stranded wires genuinely must land together and the terminal's size range allows it, **twin ferrules** (one sleeve made for two wires) turn them into a single qualified end — the purpose-made answer, versus hoping the screw catches both.
 - **Stray strands.** One whisker outside the clamp is a short waiting for a neighbor. Twist, ferrule, inspect.
 - **Terminal blocks are not strain relief.** The clamp holds the conductor electrically; the *cable* needs its own anchor before the block, always.
 - **The 5.0 vs 5.08 pluggable mismatch** — measure across all positions ÷ (N−1), per the [pitch page](pitch.md).

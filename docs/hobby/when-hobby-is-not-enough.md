@@ -22,7 +22,7 @@ Any one of these means at least *that interface* should graduate to the [Profess
 - **Repeated mating/unmating** — mating-cycle life is a real, finite spec.
 - **Harnesses built by someone else** — now you need defined contacts, tooling, and inspection criteria, not tribal knowledge.
 - **Documentation or release needed** — pinouts, cable drawings, ICDs. The engineering track's [templates](../tools/index.md) exist for exactly this.
-- **Production quantity** — repeatability, second sources, and incoming inspection start to matter.
+- **Production quantity** — repeatability, second sources, and incoming inspection start to matter; so does the part's *future* (lifecycle status, discontinuance notices, approved alternates — the engineering track's [Lifecycle & Procurement](../lifecycle-and-procurement.md) loop).
 - **Regulatory, qualification, or customer requirements** — the moment a requirement document exists, the engineering track's source discipline applies.
 
 ## Where to land

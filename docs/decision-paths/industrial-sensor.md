@@ -45,6 +45,7 @@ See the [M12 deep dive](../08-m12.md) for coding and pinout detail.
 - **IP rating** of the *complete, mated* assembly — and whether the unmated panel side is sealed only when capped.
 - **Coupling torque** — an example value only; use the manufacturer's number and a torque tool.
 - **Cable OD** vs. the gland range, and **vibration** requirement.
+- **Signal level** — a 24 V switched sensor line is forgiving; mV analog or high-resolution measurement lines are not, and want gold-class contacts and fretting-aware mechanics ([low-level signal contacts](../low-level-signal-contacts.md)).
 
 ## Parts people forget
 

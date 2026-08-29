@@ -95,7 +95,7 @@ One row class per run; the [cable drawing template](../tools/cable-drawing-templ
 - Cable jacket: oil-resistant per the plant environment spec; drag-chain-rated only where a run actually moves (none in this scenario — record that, too)
 - Labels: every cable labeled at both ends with the J-number; label spec in the ICD
 - Length tolerance: per the cable drawing template's tolerance field, set from routing reality, not guessed
-- Test requirements: continuity + hipot/IR per the [harness inspection checklist](../tools/harness-inspection-checklist.md) and the acceptance standard the program names
+- Test requirements: continuity + hipot/IR per the [harness inspection checklist](../tools/harness-inspection-checklist.md) and the acceptance standard the program names; design-level qualification evidence, where the program requires it, structured per the [qualification plan template](../tools/connector-qualification-template.md)
 
 ## Backshell / cap notes
 

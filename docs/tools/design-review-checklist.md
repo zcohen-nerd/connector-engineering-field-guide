@@ -23,6 +23,8 @@ Based on [Sections 10](../10-selection-checklist.md) and [11](../11-red-flags.md
 - [ ] Load-break / hot-plug / mate-under-power status recorded from the datasheet for every power-carrying interface (never assumed)
 - [ ] Tooling and assembly process are defined
 - [ ] Workmanship/acceptance standard identified (e.g. IPC/WHMA-A-620 or the program/customer equivalent)
+- [ ] Qualification evidence exists — or is planned — for the exact configuration: family/QPL basis or a program-level plan ([Qualification Plan Template](connector-qualification-template.md))
+- [ ] Supply integrity addressed: lifecycle status checked, approved alternates on record, authorized sourcing channel identified, PCN/EOL notice handling assigned ([Lifecycle & Procurement](../lifecycle-and-procurement.md))
 - [ ] Documentation package exists (BOM, pinout, cable drawing, ICD)
 
 ## Red-flag scan

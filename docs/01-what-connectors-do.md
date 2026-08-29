@@ -59,7 +59,7 @@ Connectors fail where electrical, mechanical, environmental, and human factors c
 
 | Failure mode | Root cause | Detection | Mitigation |
 |---|---|---|---|
-| Fretting corrosion | Micro-vibration oxidizes contact surface | High / intermittent contact resistance | Gold plating, vibration-rated coupling, anti-decoupling |
+| Fretting corrosion | Micro-vibration oxidizes contact surface | High / intermittent contact resistance | Gold plating, vibration-rated coupling, anti-decoupling ([low-level deep dive](low-level-signal-contacts.md)) |
 | Contact pushback / recession | Retention clip failure, over-insertion, contamination | Open circuit under vibration | Verify seating, secondary lock (TPA), inspect before mate |
 | Moisture ingress | Failed gland, missing O-ring, jacket damage, no cap | Insulation resistance drop, corrosion | Correct seal, torque to spec, dust caps on unmated ports |
 | Bent / damaged pins | Blind-mate misalignment, rough handling | Visual, open/short | Lead-in chamfer, keying, dust caps, training |

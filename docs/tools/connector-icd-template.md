@@ -25,6 +25,8 @@ Based on [Exercise 7](../13-hands-on-exercises.md).
 - Backshell P/N:
 - Dust cap P/N:
 - Keying / polarization:
+- Approved alternates (P/N, manufacturer, approval basis — see [Lifecycle & Procurement §5](../lifecycle-and-procurement.md)):
+- Vendor mixing within the mated pair (allowed/prohibited, verification basis):
 
 ## Pinout
 
@@ -64,7 +66,7 @@ Based on [Exercise 7](../13-hands-on-exercises.md).
 
 - Torque / assembly notes:
 - Cable requirements:
-- Test / inspection requirements:
+- Test / inspection requirements (build acceptance: [harness inspection checklist](harness-inspection-checklist.md) · design qualification: [qualification plan template](connector-qualification-template.md)):
 - Workmanship / acceptance standard (e.g. IPC/WHMA-A-620 or program/customer equivalent):
 
 ## Source / evidence tracking

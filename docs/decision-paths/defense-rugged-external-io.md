@@ -60,6 +60,7 @@ See [What People Forget](../what-people-forget.md).
 - What backshell and strain relief are compatible?
 - What alternate keying/polarization options exist?
 - What is the qualification / QPL status for my requirement?
+- What is the **lifecycle status** — and who receives PCN/EOL notices for these part numbers? (Defense programs live long enough to meet obsolescence; [Lifecycle & Procurement](../lifecycle-and-procurement.md) is the loop, and DMSMS is its formal name.)
 
 ## Example documentation bundle
 

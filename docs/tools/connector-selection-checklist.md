@@ -54,8 +54,12 @@ Based on [Section 10 — Practical Selection Checklist](../10-selection-checklis
 - [ ] Positioner/die and insert/extract tools identified
 - [ ] Assembly instructions and inspection criteria defined (acceptance per IPC/WHMA-A-620 or the program/customer equivalent)
 - [ ] Pull-test / continuity test plan defined
+- [ ] Qualification approach identified — family/QPL evidence or a program-level plan (see the [qualification plan template](connector-qualification-template.md))
 - [ ] Supplier availability and lead time checked
 - [ ] Second source / QPL considered
+- [ ] Lifecycle status checked (active / NRND / EOL) and PCN/EOL notice registration planned ([lifecycle](../lifecycle-and-procurement.md))
+- [ ] Approved alternates identified and recorded, with what "equivalent" was verified to mean
+- [ ] Authorized sourcing channel identified for every BOM line
 
 ## Documentation / configuration control
 

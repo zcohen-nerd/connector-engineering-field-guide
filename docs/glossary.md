@@ -48,7 +48,9 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **Dust cap** — the cover that protects an unmated connector from dirt, water, and pin damage; belongs on the BOM. See [Connector Anatomy](05-connector-anatomy.md).
 
-**DWV / hi-pot** — dielectric withstanding voltage; the survivable overvoltage test, *not* the continuous working voltage. See [Reading Datasheets](06-reading-datasheets.md).
+**DWV / hi-pot** — dielectric withstanding voltage; the survivable overvoltage test, *not* the continuous working voltage. See [Reading Datasheets](06-reading-datasheets.md) and the [Qualification Plan Template](tools/connector-qualification-template.md).
+
+**First article inspection (FAI)** — verifying that the first built unit(s) of a configuration match the complete drawing package before performance results count as evidence; AS9102 is the aerospace formalization. See the [Qualification Plan Template](tools/connector-qualification-template.md).
 
 **Fretting** — micro-motion wear that oxidizes contact surfaces under vibration, causing intermittent high resistance. See [Common failure points](01-what-connectors-do.md) and [Low-Level Signal Contacts](low-level-signal-contacts.md).
 
@@ -113,6 +115,8 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 **Pre-crimped lead** — a factory-terminated wire you insert into a housing yourself; often the most reliable hobby choice for tiny contacts (SH/GH/PH class). See [Crimping](hobby/crimping.md).
 
 **QPL** — Qualified Products List; the register of parts qualified to a military specification. Required when qualification matters, and a second-source consideration always. See [Production reality](04-connector-selection-workflow.md).
+
+**Qualification testing** — design-level proving of one documented connector configuration (parts, plating, wire, seals, tooling, process), done once per the governing spec's rules — distinct from *acceptance* testing, which verifies every built unit or lot. See the [Qualification Plan Template](tools/connector-qualification-template.md) and the [Harness Inspection Checklist](tools/harness-inspection-checklist.md).
 
 **RMF** — Molex's Reduced Mating Force Micro-Fit terminals; a mating-force feature, with current still set by the exact terminal P/N. See [Micro-Fit deep dive](micro-fit.md), [Comparison Matrix](tools/connector-comparison-matrix.md).
 

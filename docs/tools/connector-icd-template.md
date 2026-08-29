@@ -64,7 +64,7 @@ Based on [Exercise 7](../13-hands-on-exercises.md).
 
 - Torque / assembly notes:
 - Cable requirements:
-- Test / inspection requirements:
+- Test / inspection requirements (build acceptance: [harness inspection checklist](harness-inspection-checklist.md) · design qualification: [qualification plan template](connector-qualification-template.md)):
 - Workmanship / acceptance standard (e.g. IPC/WHMA-A-620 or program/customer equivalent):
 
 ## Source / evidence tracking

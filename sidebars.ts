@@ -127,6 +127,7 @@ const sidebars: SidebarsConfig = {
         'tools/decode-38999-worksheet',
         'tools/deutsch-decode-worksheet',
         'tools/harness-inspection-checklist',
+        'tools/connector-qualification-template',
       ],
     },
     {

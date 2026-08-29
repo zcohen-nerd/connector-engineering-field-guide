@@ -50,6 +50,7 @@ Use this at work. Adapt to your program; it is a working checklist, not a standa
 - [ ] Positioner/die and insert/extract tools identified
 - [ ] Assembly instructions + inspection criteria defined (acceptance per IPC/WHMA-A-620 or the program/customer equivalent)
 - [ ] Pull-test / continuity test plan defined
+- [ ] Qualification approach identified — family/QPL evidence or a program-level plan (see the [qualification plan template](tools/connector-qualification-template.md))
 - [ ] Supplier availability and lead time checked
 - [ ] Second source / QPL considered
 

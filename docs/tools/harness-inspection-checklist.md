@@ -14,6 +14,8 @@ A structured pass over a finished (or incoming) connectorized harness, assembled
 
 This checklist tells you **what to look at**. It deliberately contains **no acceptance values** — no pull forces, crimp heights, torque numbers, or test voltages. What *passing* looks like comes from the workmanship/acceptance standard your program names (commonly **IPC/WHMA-A-620**, or the program/customer equivalent)[^a620] and from the **manufacturer's application specification for the exact contact system** — never from this page. If you don't know which acceptance standard and application spec apply, that is finding #1.
 
+Scope note: this page is **build/incoming acceptance** — verifying units against a released design. Proving the *design itself* (first article, the qualification test matrix, evidence capture) is the [Connector Qualification Plan Template](connector-qualification-template.md)'s job.
+
 :::
 
 ## 1. Paperwork first

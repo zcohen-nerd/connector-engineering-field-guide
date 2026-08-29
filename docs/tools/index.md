@@ -1,7 +1,7 @@
 ---
 id: tools-index
 title: "Tools & Templates"
-description: "Reusable connector-engineering templates — selection checklist, comparison matrix, cable drawing, ICD, design-review and harness-inspection checklists, M12, 38999, and DEUTSCH quick tools — ready to copy and adapt."
+description: "Reusable connector-engineering templates — selection checklist, comparison matrix, cable drawing, ICD, design-review and harness-inspection checklists, a qualification plan template, M12, 38999, and DEUTSCH quick tools — ready to copy and adapt."
 slug: /tools
 sidebar_label: Overview
 ---
@@ -21,6 +21,7 @@ Reusable engineering-document templates derived from the guide. Copy them into y
 | [38999 Decode Worksheet](38999-decode-worksheet.md) | Decode a D38999 part number field by field against your vendor's catalog | [38999 deep dive §7.8](../07-mil-dtl-38999.md) |
 | [DEUTSCH Decode & Tooling Worksheet](deutsch-decode-worksheet.md) | Decode a DT-family part number and pick the matching contact line + crimp tooling | [DEUTSCH deep dive §4 + §7](../deutsch.md) |
 | [Harness Inspection Checklist](harness-inspection-checklist.md) | Run a build/incoming inspection pass on a finished harness | [Workflow §4](../04-connector-selection-workflow.md) + [§7.9](../07-mil-dtl-38999.md) + [What People Forget](../what-people-forget.md) |
+| [Qualification Plan Template](connector-qualification-template.md) | Structure design-level qualification of one connector configuration — first article, test matrix, evidence capture, requalification triggers | [§1.5](../01-what-connectors-do.md) + [Reading Datasheets §6](../06-reading-datasheets.md) + [Low-Level Signal Contacts](../low-level-signal-contacts.md) |
 
 :::note
 

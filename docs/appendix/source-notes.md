@@ -7,7 +7,7 @@ sidebar_label: Source Notes
 
 # Source Notes — Source-Status Dashboard
 
-**Status: v0.10 Beta — Audit Hardening + Release Tooling**
+**Status: v1.0 — Source-Verified Release**
 
 This page is the guide's transparency layer. Every technical statement in the guide falls into one of four buckets, and this page says which: **verified claims** (backed by a named public source), **engineering heuristics** (deliberate judgment, not specification), **example-only values** (teaching aids, never design authority), and an explicit **needs-source-before-v1.0 backlog**.
 
@@ -17,7 +17,7 @@ This guide is an educational engineering reference. Always verify ratings, quali
 
 :::
 
-Release history lives in the [changelog](../project/changelog.md). v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields. v0.8 split the site into hobby and professional tracks. v0.9 expanded the hobby track; v0.10 hardened sourcing and added release tooling.
+Release history lives in the [changelog](../project/changelog.md). v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields. v0.8 split the site into hobby and professional tracks. v0.9 expanded the hobby track; v0.10 hardened sourcing and added release tooling; v1.0 completed the sourcing milestone — every closable row below is closed, resolved as policy, or explicitly deferred by recorded decision.
 
 ## Hobby connector source status
 
@@ -135,7 +135,7 @@ The following are always example-only, even where the family figure is verified 
 
 ## 4. Needs source before v1.0
 
-The explicit backlog. These gate the v1.0 "source verified" milestone — they are the places where the guide currently relies on family-level sources, cautious wording, or no number at all, and where released-hardware use demands the exact document.
+The explicit backlog. These gated the v1.0 "source verified" milestone — **completed with the v1.0 release**: every closable row below is closed, resolved as standing policy, or explicitly deferred by recorded decision, and the section stays as the milestone record and the post-1.0 backlog. They are the places where the guide relies on family-level sources, cautious wording, or no number at all, and where released-hardware use demands the exact document.
 
 Two kinds of rows live here, and "done" means something different for each (clarified audit-2026-08): **closable rows**, where a better public source exists and needs to be found and cited — these can and should hit zero before v1.0 — and rows marked **per-design — permanent**, scoped per exact part / per assembly / per contact system, which no citation can close for *your* hardware. For those, the guide’s obligation is that every affected page carries the verify-the-exact-document hedge (re-verified audit-2026-08); they stay on this list as standing warnings, not unfinished work.
 

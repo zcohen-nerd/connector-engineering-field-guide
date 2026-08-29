@@ -34,11 +34,11 @@ Manufacturers communicate change through two instruments:
 - A **PCN** (product/process change notification) says the part is changing — material, plating, mold, manufacturing site, marking — while keeping its part number. Most PCNs are harmless to most users. The ones that aren't are the ones that touch *your* qualified configuration: a plating change is a [low-level](low-level-signal-contacts.md) and [requalification](#7-requalification) question, not an FYI.
 - A **discontinuance / EOL notice** says the part is going away, and names the last-order and last-ship dates.
 
-The semiconductor world formalized both practices in the JEDEC lineage (JESD46 / J-STD-046 for change notification, JESD48 / J-STD-048 for discontinuance); connector manufacturers issue notices under their own policies, but the shape — and the traps — are the same.[^jedec] Two traps in particular:
+The electronics industry formalized both practices jointly — JEDEC, ECIA (the connector industry's own association among them), and IPC publish J-STD-046 for change notification and J-STD-048 for discontinuance — and manufacturers issue notices under their own policies in the same shape, with the same traps.[^jedec] Two traps in particular:
 
 :::warning[Nobody is obligated to chase you]
 
-**Notices flow to customers of record, through the authorized channel.** Buy through a broker, or through an unregistered account, and the notice for your part goes to someone else. And under the JEDEC-lineage change-notification practice, **silence is acceptance** — commonly a 30-day acknowledgement window before the change is deemed accepted.[^jedec] Read what each notice actually states; the window is the manufacturer's, not this page's.
+**Notices flow to customers of record, through the authorized channel.** Buy through a broker, or through an unregistered account, and the notice for your part goes to someone else. And under the industry notification standard, **silence is acceptance**: lack of acknowledgement of a PCN within 30 days of its delivery constitutes acceptance of the change — and even an acknowledged notice is deemed accepted if nothing further is said within the 90-day review period.[^jedec] Read what each notice actually states; suppliers set their own terms, and the clock starts at delivery, not at reading.
 
 :::
 
@@ -102,7 +102,7 @@ The standards and programs named here — the JEDEC notice lineage, SD-22, IEC 6
 
 ## Sources
 
-[^jedec]: JEDEC-lineage notification standards, cited as the formalization of PCN/discontinuance practice (semiconductor-world standards; connector manufacturers follow analogous practice under their own policies): J-STD-046 (product change notification, successor to JESD46 — JEDEC document search: <https://www.jedec.org/document_search?search_api_views_fulltext=jesd46>) and J-STD-048 (product discontinuance, successor to JESD48, joint JEDEC/IPC/ECIA: <https://www.jedec.org/standards-documents/docs/j-std-048>). The silence-is-acceptance acknowledgement window (commonly 30 days) traces to the JESD46 lineage — verify against the actual notice and standard revision in hand.
+[^jedec]: J-STD-046A, *Customer Notification Standard for Product/Process Changes by Electronic Product Suppliers* — joint JEDEC/ECIA/IPC standard, November 2025 (revision of J-STD-046, July 2016). §4.2.3.1: customers should acknowledge a PCN within 30 days of its delivery, and lack of acknowledgement within 30 days constitutes acceptance of the change; §4.2.3.2: after acknowledgement, lack of additional response within the 90-day period likewise constitutes acceptance. Verified against the standard text (audit 2026-08); clauses paraphrased, no further text reproduced. Free download with registration: <https://www.jedec.org/standards-documents/docs/j-std-046>. Discontinuance counterpart: J-STD-048 (successor to JESD48): <https://www.jedec.org/standards-documents/docs/j-std-048>.
 
 [^dmsms]: SD-22, *Diminishing Manufacturing Sources and Material Shortages (DMSMS): A Guidebook of Best Practices* — the DoD Defense Standardization Program's public DMSMS guidebook, maintained under DoDI 4245.15 (DAU tool page: <https://www.dau.mil/tools/t/SD-22-Diminishing-Manufacturing-Sources-and-Material-Shortages-(DMSMS)-Guidebook>). IEC 62402:2019, *Obsolescence management* — requirements and guidance for an obsolescence management plan (IEC webstore listing: <https://webstore.iec.ch/en/publication/59531>).
 

@@ -109,7 +109,7 @@ No governing specification exists for this family — that fact organizes the wh
 
 [^svcurrent]: ProModeler (servo manufacturer), *How many Amps can the servo connector handle?* — the 0.1-inch (2.54 mm) pin class used by servo connectors is rated by the pin manufacturers at approximately 3.5 A continuous and 5 A intermittent. <https://www.promodeler.com/EDU/How-many-Amps-can-the-servo-connector-handle>
 
-[^svstall]: Savox published specifications — SC-1268SG high-torque standard-size digital servo: stall current 2.5 A @ 4.8 V / 3.0 A @ 6.0 V / 3.5 A @ 7.4 V. <https://www.savoxusa.com/products/savsc1268sg-high-torque-digital-servo>; SV0236MG high-voltage 1/5-scale servo: stall current 4.6 A @ 6.0 V / 5.7 A @ 7.4 V. <https://www.savoxusa.com/products/savsv0236mg-high-voltage-1-5-scale-servo>
+[^svstall]: Savox published specifications — SC-1268SG+ high-torque standard-size digital servo: stall current 2.8 A @ 6.0 V / 3.5 A @ 7.4 V / 4.3 A @ 8.4 V. <https://www.teamsavox.com/product/sc-1268sgp/>; SV-0236MG+ high-voltage 1/5-scale servo: stall current 4.6 A @ 6.0 V / 5.7 A @ 7.4 V. <https://www.teamsavox.com/product/sv-0236mgp/>
 
 [^svwire]: Hansen Hobbies servo-wire documentation — 26 AWG as standard-to-light-duty servo wire, 22 AWG as the heavy-duty choice, 20 AWG generally the thickest wire that fits servo connectors. <https://hansenhobbies.com/products/connectors/wire/servo_dxtw/> and <http://www.hansenhobbies.com/products/connectors/wire/servo_ec/>
 

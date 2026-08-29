@@ -16,6 +16,7 @@
 //
 // Call sites rewritten/checked:
 //   package.json                    "version": "X.Y.Z"
+//   package-lock.json               top-level + root-package versions
 //   CITATION.cff                    version + date-released (date: bump mode only)
 //   README.md                       **Status:** line (keeps its trailing badge text)
 //   docs/engineering-home.md        :::note[<status>] banner
@@ -100,6 +101,15 @@ function currentState() {
 function check() {
   const { semver, display: d, name, readmeStatus } = currentState();
   const errors = [];
+  const lock = JSON.parse(read('package-lock.json'));
+  if (lock.version !== semver) {
+    errors.push(`package-lock.json: top-level version is ${lock.version}, package.json says ${semver}`);
+  }
+  if (lock.packages?.['']?.version !== semver) {
+    errors.push(
+      `package-lock.json: root-package version is ${lock.packages?.['']?.version}, package.json says ${semver}`,
+    );
+  }
   if (name === null) {
     errors.push(
       `README.md status "${readmeStatus}" does not start with "${d} ${EM} " (package.json says ${semver})`,
@@ -136,6 +146,11 @@ function bump(semver, name, dateArg) {
   let pkg = read('package.json');
   pkg = pkg.replace(SITES[0].locate, `"version": "${semver}"`);
   write('package.json', pkg);
+
+  const lock = JSON.parse(read('package-lock.json'));
+  lock.version = semver;
+  lock.packages[''].version = semver;
+  write('package-lock.json', `${JSON.stringify(lock, null, 2)}\n`);
 
   let cff = read('CITATION.cff');
   cff = cff.replace(SITES[1].locate, `version: "${semver}"`);

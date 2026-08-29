@@ -36,7 +36,7 @@ With one sourced exception (Anderson Powerpole, below), **no current ratings are
 
 ## The one sourced row: Anderson Powerpole
 
-Anderson Power Products' PP15/45 Powerpole family is the documented outlier in this landscape: **15 A, 30 A, and 45 A contacts all share the same genderless housing**, covering #20 through #10 AWG, with the series rated up to 55 A per pole per Anderson's datasheet — and housings dovetail together so you build multi-pole connectors from single poles.[^pp1545] That's why bench supplies and radio shacks standardize on it. The trap is the flip side of genderless: nothing but your **assembly convention** (the agreed red/black stacking arrangement) polarizes the connection. The full system — the family ladder above 45 A, the standardized orientation, assembly discipline, and why it's the wrong answer for signal — now has its own page: the [Anderson Powerpole deep dive](anderson-powerpole.md).
+Anderson Power Products' PP15/45 Powerpole family is the documented outlier in this landscape: **15 A, 30 A, and 45 A contacts all share the same genderless housing**, covering #20 through #10 AWG, with the series rated up to 55 A per pole per Anderson's product specifications — and housings dovetail together so you build multi-pole connectors from single poles.[^pp1545] That's why bench supplies and radio shacks standardize on it. The trap is the flip side of genderless: nothing but your **assembly convention** (the agreed red/black stacking arrangement) polarizes the connection. The full system — the family ladder above 45 A, the standardized orientation, assembly discipline, and why it's the wrong answer for signal — now has its own page: the [Anderson Powerpole deep dive](anderson-powerpole.md).
 
 ## Traps
 
@@ -52,11 +52,11 @@ Fielded vehicles, bigger packs, or anything where load-break, touch safety, and 
 
 ## Source status
 
-Anderson PP15/45 figures are cited to Anderson's own datasheet,[^pp1545] the Deans/T-plug originator claim to W.S. Deans' own site,[^deans] and the MR/MT ecosystem attribution follows the AMASS sourcing on the [XT page](xt-connectors.md).[^amass] Everything else on this page is identification-level and deliberately rating-free — EC/IC (Horizon Hobby) and Traxxas publish limited public spec documentation, and clones dominate the market; source targets are tracked in [Hobby Source Notes](hobby-source-notes.md).
+Anderson PP15/45 figures are cited to Anderson's own product specifications,[^pp1545] the Deans/T-plug originator claim to W.S. Deans' own site,[^deans] and the MR/MT ecosystem attribution follows the AMASS sourcing on the [XT page](xt-connectors.md).[^amass] Everything else on this page is identification-level and deliberately rating-free — EC/IC (Horizon Hobby) and Traxxas publish limited public spec documentation, and clones dominate the market; source targets are tracked in [Hobby Source Notes](hobby-source-notes.md).
 
 ## Sources
 
-[^pp1545]: Anderson Power Products, *Powerpole® PP15/45 Series* datasheet — the smallest Powerpole housings; 15 A / 30 A / 45 A wire and PCB contacts share the same housings; wire sizes #20 AWG (0.5 mm²) through #10 AWG (6 mm²); rated up to 55 A per pole; genderless housings with dovetails for stacking multi-pole arrangements. <https://www.andersonpower.com/content/dam/app/ecommerce/product-pdfs/pp/ds-pp1545.pdf>
+[^pp1545]: Anderson Power Products, *Powerpole® PP15/45 Series* product specification — the smallest Powerpole housings; 15 A / 30 A / 45 A wire and PCB contacts share the same housings; wire sizes #20 AWG (0.5 mm²) through #10 AWG (6 mm²); rated up to 55 A per pole; genderless housings with dovetails for stacking multi-pole arrangements. <https://www.andersonpower.com/product/powerpole-15-45-tin-plated-power-contacts-20-16-awg-low-mating-force/>
 
 [^amass]: Amass Connectors — official manufacturer site of Changzhou Amass Electronics (originator of the XT series; its catalog also covers the MR/MT motor-trio ecosystem). Ratings for genuine AMASS XT parts are sourced on the [XT page](xt-connectors.md). <https://www.amassconnectors.com/>
 

@@ -18,13 +18,14 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
           cache: 'npm'
@@ -36,31 +37,20 @@ jobs:
         run: npm run build
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: build
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     environment:
       name: github-pages
-      # Wandalen/wretry.action doesn't pass the wrapped action's named outputs
-      # straight through — it bundles them into one JSON-string `outputs`
-      # output, so page_url has to be pulled back out with fromJSON().
-      url: ${{ fromJSON(steps.deployment.outputs.outputs).page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        # actions/deploy-pages@v4 hard-caps its own `timeout` input at 600000ms
-        # (10 min), so raising it doesn't help. The actual failure mode is
-        # transient GitHub Pages backend errors ("Deployment failed, try again
-        # later." or a stalled deployment_queued) — retrying the step is what
-        # GitHub's own error message recommends, so wrap it instead.
-        uses: Wandalen/wretry.action@v3.8.0
-        with:
-          action: actions/deploy-pages@v4
-          attempt_limit: 3
-          attempt_delay: 20000
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

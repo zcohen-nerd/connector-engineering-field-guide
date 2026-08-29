@@ -48,11 +48,11 @@ Found an error or have a better source? Corrections are very welcome — [open a
 - No paid-standards tables, no verbatim catalog tables, no unsourced exact ratings.
 - Practical decision logic beats vendor marketing.
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full source-discipline rules. For contributors: `Source/connector-engineering-field-guide.md` is the canonical source of truth for the **professional guide's** 14 numbered sections and appendix — factual corrections land there first, and the matching `docs/` pages are refreshed from it. Decision paths, tools, examples, the entire hobby track (`docs/hobby/`), and the other site pages are site-only material under `docs/`.
+See [`.github/CONTRIBUTING.md`](.github/CONTRIBUTING.md) for the full source-discipline rules. All published guide content lives under `docs/`, which is the single source of truth for both tracks, decision paths, tools, examples, and source-status notes.
 
 ## License
 
-- **Content** (the guide text, `docs/`, `Source/`, templates, examples): [CC BY 4.0](LICENSE)
+- **Content** (the guide text, templates, and examples under `docs/`): [CC BY 4.0](LICENSE)
 - **Code** (site configuration and build files): [MIT](LICENSE-CODE)
 
 When reusing material, credit: *A zcohen-nerd technical guide by Zac Cohen.*

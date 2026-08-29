@@ -7,7 +7,7 @@ import path from 'node:path';
 import process from 'node:process';
 
 const root = path.join(import.meta.dirname, '..');
-const contentRoots = ['assets', 'docs', 'Source', 'static'];
+const contentRoots = ['docs', 'scripts/assets', 'static'];
 const imageExtensions = new Set(['.gif', '.ico', '.jpeg', '.jpg', '.png', '.svg', '.webp']);
 const blockedExtensions = new Set(['.avif', '.heic', '.heif', '.icns', '.jxl']);
 const errors = [];

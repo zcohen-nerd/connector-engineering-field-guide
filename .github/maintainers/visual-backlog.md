@@ -1,12 +1,12 @@
 # Hobby Track — Visual Backlog
 
-> Line-art backlog for the hobby track. For the site-wide **photograph** wishlist (where real photos beat SVGs, with sourcing status), see [PHOTO_BACKLOG.md](PHOTO_BACKLOG.md).
+> Line-art backlog for the hobby track. For the site-wide **photograph** wishlist (where real photos beat SVGs, with sourcing status), see [photo-backlog.md](photo-backlog.md).
 
 Prioritized visuals for the hobby track (and one shared item). Style: match the existing simple line-art SVGs under `static/img/diagrams/` (white card, `#d0d7de` border, `#102040` navy line work, Arial). Added in v0.9; items 1–2 shipped in the same pass.
 
 | # | Visual | Status | Notes |
 |---|---|---|---|
-| 0 | **OG/social card update** (`static/img/og-card.png`) | **Done (audit-2026-08)** — source `assets/og-card.svg`, rendered via `npm run og-card` (`scripts/render-og-card.mjs`, sharp) | Two-track card: "Connector Field Guides" / "Hobby connectors + professional hardware interfaces." / "A zcohen-nerd technical guide" badge, brand tokens only. `themeConfig.image` unchanged; og:image meta verified in the built site. |
+| 0 | **OG/social card update** (`static/img/og-card.png`) | **Done (audit-2026-08)** — source `scripts/assets/og-card.svg`, rendered via `npm run og-card` (`scripts/render-og-card.mjs`, sharp) | Two-track card: "Connector Field Guides" / "Hobby connectors + professional hardware interfaces." / "A zcohen-nerd technical guide" badge, brand tokens only. `themeConfig.image` unchanged; og:image meta verified in the built site. |
 | 1 | Pitch measurement diagram | **Done (v0.9)** — `hobby-pitch-measurement.svg` | Embedded in `docs/hobby/pitch.md` |
 | 2 | Housing vs contact diagram | **Done (v0.9)** — `hobby-housing-vs-contact.svg` | Embedded in `docs/hobby/buying-mating-parts.md` |
 | 3 | JST-XH vs PH vs SH vs GH comparison silhouettes | Partly covered (images pass, 2026-07) | Per-series ID cards now exist (`hobby-jst-xh-id.svg`, `-ph-`, `-sh-`, `-sm-`) with cross-size hints; a single to-scale side-by-side silhouette sheet is still worth doing |

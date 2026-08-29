@@ -12,22 +12,21 @@
 //
 //   node scripts/bump-version.mjs <semver> "<Release Name>" [--date YYYY-MM-DD]
 //     Rewrite every call site for a release. <semver> is X.Y.Z; the date
-//     (default: today) goes to CITATION.cff date-released.
+//     (default: today) goes to .github/CITATION.cff date-released.
 //
 // Call sites rewritten/checked:
 //   package.json                    "version": "X.Y.Z"
 //   package-lock.json               top-level + root-package versions
-//   CITATION.cff                    version + date-released (date: bump mode only)
+//   .github/CITATION.cff            version + date-released (date: bump mode only)
 //   README.md                       **Status:** line (keeps its trailing badge text)
 //   docs/engineering-home.md        :::note[<status>] banner
 //   docs/appendix/source-notes.md   **Status: <status>** line
-//   Source/source-notes.md          **Status: <status>** line
 //
 // NOT rewritten (editorial, review by hand every release — the script reminds you):
 //   docs/hobby/index.md             ":::note[Introduced v0.8, expanded v0.9]" — only
 //                                   correct to bump when the release actually expands
 //                                   the hobby track.
-//   CHANGELOG.md                    the release entry itself.
+//   docs/project/changelog.md       the release entry itself.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -55,7 +54,7 @@ const SITES = [
     extract: (m) => ({ semver: m[1] }),
   },
   {
-    file: 'CITATION.cff',
+    file: '.github/CITATION.cff',
     locate: /^version:\s*"([^"]+)"$/m,
     render: (_d, _n, semver) => `version: "${semver}"`,
     extract: (m) => ({ semver: m[1] }),
@@ -74,12 +73,6 @@ const SITES = [
   },
   {
     file: 'docs/appendix/source-notes.md',
-    locate: /^\*\*Status: (.+)\*\*$/m,
-    render: (d, n) => `**Status: ${d} ${EM} ${n}**`,
-    extract: (m) => ({ status: m[1] }),
-  },
-  {
-    file: 'Source/source-notes.md',
     locate: /^\*\*Status: (.+)\*\*$/m,
     render: (d, n) => `**Status: ${d} ${EM} ${n}**`,
     extract: (m) => ({ status: m[1] }),
@@ -152,10 +145,10 @@ function bump(semver, name, dateArg) {
   lock.packages[''].version = semver;
   write('package-lock.json', `${JSON.stringify(lock, null, 2)}\n`);
 
-  let cff = read('CITATION.cff');
+  let cff = read('.github/CITATION.cff');
   cff = cff.replace(SITES[1].locate, `version: "${semver}"`);
   cff = cff.replace(/^date-released:.*$/m, `date-released: ${date}`);
-  write('CITATION.cff', cff);
+  write('.github/CITATION.cff', cff);
 
   let readme = read('README.md');
   readme = readme.replace(SITES[2].locate, (line) => {
@@ -172,7 +165,7 @@ function bump(semver, name, dateArg) {
 
   console.log(`Bumped to ${semver} ${EM} "${status}" (released ${date})`);
   console.log('\nStill manual — review before committing:');
-  console.log('  - CHANGELOG.md: write the release entry.');
+  console.log('  - docs/project/changelog.md: write the release entry.');
   console.log(
     '  - docs/hobby/index.md banner ("Introduced v0.8, expanded v0.9"): bump the\n' +
       '    "expanded" version only if this release actually expands the hobby track.',

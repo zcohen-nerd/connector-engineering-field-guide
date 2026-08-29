@@ -17,13 +17,13 @@ This guide is an educational engineering reference. Always verify ratings, quali
 
 :::
 
-Release history lives in the repository `CHANGELOG.md`. v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields. v0.8 split the site into hobby and professional tracks. v0.9 expanded the hobby track; v0.10 hardened sourcing and added release tooling.
+Release history lives in the [changelog](../project/changelog.md). v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields. v0.8 split the site into hobby and professional tracks. v0.9 expanded the hobby track; v0.10 hardened sourcing and added release tooling.
 
 ## Hobby connector source status
 
 <!-- Hobby per-topic status lives ONLY in hobby/source-notes. Do not duplicate here. -->
 
-The [Hobby Connector Field Guide](../hobby/index.md) (introduced v0.8, growing every release since) is **site-only material** with no `Source/` counterpart. Its per-topic source status — what is verified, what is example-only, and what still needs a source — is tracked in exactly one place: **[Hobby Source Notes](../hobby/hobby-source-notes.md)**, the authoritative tracker for that entire track. This dashboard intentionally carries no per-topic hobby detail; if a hobby claim's status matters to you, that page is the record.
+The [Hobby Connector Field Guide](../hobby/index.md) (introduced v0.8, growing every release since) keeps its per-topic source status — what is verified, what is example-only, and what still needs a source — in exactly one place: **[Hobby Source Notes](../hobby/hobby-source-notes.md)**, the authoritative tracker for that entire track. This dashboard intentionally carries no per-topic hobby detail; if a hobby claim's status matters to you, that page is the record.
 
 ## Source hierarchy
 

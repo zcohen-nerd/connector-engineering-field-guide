@@ -95,6 +95,7 @@ const sidebars: SidebarsConfig = {
         '04-connector-selection-workflow',
         '05-connector-anatomy',
         '06-reading-datasheets',
+        'low-level-signal-contacts',
         '07-mil-dtl-38999',
         'mil-dtl-26482',
         '08-m12',

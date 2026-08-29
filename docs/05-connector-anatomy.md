@@ -51,6 +51,8 @@ Pin/socket gender is *electrical*. Plug/receptacle is *mechanical*. Do not assum
 | Silver | High-current power, RF | Excellent conductivity | Can tarnish or form sulfide films that increase contact resistance depending on environment, contact force, and wiping action |
 | Nickel | Base layer, high-temp | Diffusion barrier, heat resistant | Higher contact resistance than gold; hard |
 
+When the load is millivolts and milliamps rather than amps, plating stops being a line item and becomes the design: [Low-Level Signals and Contact Design](low-level-signal-contacts.md) works through dry circuits, wetting current, fretting, and the gold-vs-tin mechanisms behind this table.
+
 ## 5.2 Termination types
 
 | Type | Description | Use case | Pro / con |

@@ -32,6 +32,8 @@ sidebar_label: Red Flags
 | Undersized wire in wire seal | Cavity leaks; whole connector seal defeated |
 | No ground-first mating sequence where needed | Power-before-ground → latch-up, ground bounce, resets |
 | Substituting "equivalent" parts without qualification | Plating/insert/thread/geometry can differ; not drop-in |
+| Gold contacts mated to tin contacts | The mixed interface fretts and builds tin oxide on the gold half — one plating class per mated pair ([low-level deep dive](low-level-signal-contacts.md)) |
+| mV/µA signals on tin or power-class contacts | Dry circuits can't break down surface films; intermittent, drifting resistance ([low-level deep dive](low-level-signal-contacts.md)) |
 
 Many of these reduce to an item that fell off the BOM or the drawing — see [What People Forget](what-people-forget.md).
 

@@ -40,4 +40,14 @@ Power connectors are also **not load-break devices**: don't unplug things under 
 
 :::
 
+## The other direction: tiny signals through big contacts
+
+The mistake also runs in reverse. A beefy power connector with spare poles looks like a free ride for a sensor line or data pair — and it isn't:
+
+- **Power contacts are usually tin (or silver) plated.** At sensor levels — millivolts, microamps — the signal can't break through the oxide films those platings grow, so the connection works when freshly plugged and drifts flaky over the following months. Gold-plated signal contacts exist precisely to avoid this.
+- **Re-plugging "fixes" it**, which is what makes it maddening: the wipe of mating scrapes a clean spot, the drift restarts, and the fault never shows up on the bench.
+- **Signal ≠ small power.** A 500 mA accessory feed through a power connector is fine. An I2C bus, analog sensor, or encoder line through one is a different physics problem.
+
+Route data and sense lines through a proper signal connector — keyed, latched, gold-to-gold. The engineering track's [Low-Level Signals and Contact Design](../low-level-signal-contacts.md) explains the whole mechanism (dry circuits, wetting current, fretting) when you want the why.
+
 Related: [JST-SM and LED strings](jst-sm-led-connectors.md) (power injection) · [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md).

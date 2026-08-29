@@ -91,6 +91,7 @@ Breadboards, Arduino/Raspberry Pi/ESP32 wiring, 3D printers, LEDs, RC power, con
 - [Decision paths](decision-paths/index.md) — scenario-based starting points
 - [MIL-DTL-38999 deep dive](07-mil-dtl-38999.md) and [MIL-DTL-26482 mini deep dive](mil-dtl-26482.md)
 - [M12 deep dive](08-m12.md), [DEUTSCH deep dive](deutsch.md), and [Micro-Fit 3.0 deep dive](micro-fit.md)
+- [Low-Level Signals and Contact Design](low-level-signal-contacts.md) — dry circuits, gold vs. tin, fretting
 - [Practical checklist](10-selection-checklist.md)
 - [What people forget](what-people-forget.md)
 - [Hands-on exercises](13-hands-on-exercises.md)

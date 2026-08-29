@@ -30,7 +30,7 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **Contact / terminal** — two names for the same part: the metal element crimped onto the wire and inserted into the housing. "Terminal" dominates kit and marketplace language; "contact" dominates datasheets. Family-specific either way. See [Crimping](hobby/crimping.md).
 
-**Contact resistance** — the milliohm-level resistance through a mated contact pair; rises with cycles and fretting, critical for low-level signals. See [Reading Datasheets](06-reading-datasheets.md).
+**Contact resistance** — the milliohm-level resistance through a mated contact pair; rises with cycles and fretting, critical for low-level signals. See [Reading Datasheets](06-reading-datasheets.md) and [Low-Level Signal Contacts](low-level-signal-contacts.md).
 
 **Contact size** — the numbered physical contact size (22D, 20, 16, 12, 8…); smaller number = larger contact = more current and larger wire. See [Contact sizes and current](07-mil-dtl-38999.md).
 
@@ -44,11 +44,13 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 
 **Derating curve** — the manufacturer plot of allowable current vs. loaded-contact count and temperature; the number you actually design to. See [How to read a derating curve](04-connector-selection-workflow.md).
 
+**Dry circuit** — a circuit whose voltage and current are too low to break down the films that grow on contact surfaces, so the contact must be reliable without electrical help — noble (gold-class) plating, adequate force, and wipe. Most measurement and low-voltage signal lines qualify. See [Low-Level Signal Contacts](low-level-signal-contacts.md).
+
 **Dust cap** — the cover that protects an unmated connector from dirt, water, and pin damage; belongs on the BOM. See [Connector Anatomy](05-connector-anatomy.md).
 
 **DWV / hi-pot** — dielectric withstanding voltage; the survivable overvoltage test, *not* the continuous working voltage. See [Reading Datasheets](06-reading-datasheets.md).
 
-**Fretting** — micro-motion wear that oxidizes contact surfaces under vibration, causing intermittent high resistance. See [Common failure points](01-what-connectors-do.md).
+**Fretting** — micro-motion wear that oxidizes contact surfaces under vibration, causing intermittent high resistance. See [Common failure points](01-what-connectors-do.md) and [Low-Level Signal Contacts](low-level-signal-contacts.md).
 
 **Front-release / rear-release** — which side the contact insertion/extraction tool works from; rear-release (wire side) is the common 38999 arrangement. See [Termination types](05-connector-anatomy.md).
 
@@ -139,6 +141,8 @@ The connector terms **both tracks** of this site use — the [Hobby](hobby/index
 **Voltage rating** — a class figure tied to insulation, spacing, and test conditions; working voltage and withstand voltage (DWV) differ, and AC/DC/altitude assumptions matter. Verify the datasheet. See [Reading Datasheets](06-reading-datasheets.md).
 
 **Wedgelock** — the separate wedge (orange on gray DEUTSCH DT plugs, green on receptacles) that locks contacts into their cavities as the secondary retention; a DT-family connector without it has no retention system. Usually a separate line item. See [DEUTSCH Deep Dive](deutsch.md).
+
+**Wetting current** — the relay/switch-world concept of the minimum load a film-forming contact needs to stay reliable; below it, tin-class contacts drift intermittent. Gold-class contacts effectively have none in clean service — the reason they own dry-circuit duty. See [Low-Level Signal Contacts](low-level-signal-contacts.md).
 
 **Wire gauge (AWG / mm²)** — conductor size. Every contact supports a defined gauge range, and both the electrical load and the crimp quality depend on staying inside it. See [Crimping](hobby/crimping.md).
 

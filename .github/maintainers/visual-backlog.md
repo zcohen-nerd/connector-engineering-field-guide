@@ -14,6 +14,7 @@ Prioritized visuals for the hobby track (and one shared item). Style: match the 
 | 5 | Good vs bad open-barrel crimp diagram | TODO | Conductor/insulation wings right vs. wrong; pairs with `crimping.md` |
 | 6 | Power vs signal connector decision sketch | TODO | Current path vs. signal path visual for `power-vs-signal.md` |
 | 7 | LED power injection connector warning diagram | TODO | Data pigtail vs. injection wiring; pairs with `jst-sm-led-connectors.md` |
+| 8 | Contact-interface film sketch (shared item, engineering track) | TODO | Two cross-sections: tin contact with oxide film / fretting debris in the contact zone vs. gold-to-gold metal contact; pairs with `docs/low-level-signal-contacts.md` §1/§5 |
 
 ## Images pass (2026-07)
 

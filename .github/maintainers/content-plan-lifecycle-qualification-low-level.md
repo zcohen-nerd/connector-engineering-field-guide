@@ -12,7 +12,7 @@ The three add-ons:
 
 | Phase | Add-on | Deliverable | Why this order |
 |---|---|---|---|
-| 1 | Low-level contact design | `docs/low-level-signal-contacts.md` + hooks | Most self-contained. Establishes the glossary vocabulary (dry circuit, wetting current, low-level contact resistance) that Phase 2's test matrix references. |
+| 1 | Low-level contact design | **Shipped (2026-08)** — `docs/low-level-signal-contacts.md` + all hooks; see the changelog's Unreleased→Added entry | Most self-contained. Establishes the glossary vocabulary (dry circuit, wetting current, low-level contact resistance) that Phase 2's test matrix references. |
 | 2 | Qualification plan/template | `docs/tools/connector-qualification-template.md` + hooks | Depends only on Phase 1 vocabulary. Its requalification-triggers table is what Phase 3's requalification section links to. |
 | 3 | Lifecycle & procurement integrity | `docs/lifecycle-and-procurement.md` + hooks | Largest integration surface (workflow, checklists, red flags, ICD, both tracks). Landing last means its links to the qualification template and low-level page resolve on day one — no dangling forward references in any phase. |
 

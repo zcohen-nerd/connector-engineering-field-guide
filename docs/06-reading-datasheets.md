@@ -17,13 +17,13 @@ Don't start with the glamour render. Start with the ordering information and the
 | Insert arrangement | Number, size, and layout of contacts | Pull the actual arrangement drawing — a pin count alone is not enough |
 | Contact type | Pin/socket; signal/power/coax/fiber | Verify gender and power-safety convention |
 | Termination | Crimp, solder cup, PCB tail, IDC, screw/spring | Crimp → note contact P/N for the correct tool/die |
-| Plating | Gold/tin/nickel/silver and thickness | Gold flash vs. thicker gold changes cycle life and dry-circuit performance |
+| Plating | Gold/tin/nickel/silver and thickness | Gold flash vs. thicker gold changes cycle life and dry-circuit performance ([low-level deep dive](low-level-signal-contacts.md)) |
 | Material / finish | Aluminum, stainless, composite; anodize, electroless nickel, etc. | For defense: verify finish-spec compliance |
 | Current rating | Max per contact under stated conditions | Per-contact or total? Derate for temperature and bundling |
 | Voltage rating | Working voltage; check altitude/pollution assumptions | Cover max transient, not just nominal; AC ≠ DC rating |
 | Insulation resistance | Leakage through the insulator, usually specified in MΩ or GΩ under defined test conditions | First parameter to drop after moisture/salt exposure, contamination, or damaged seals |
 | Dielectric withstand | Hi-pot survivability | Not the same as continuous working voltage |
-| Contact resistance | mΩ through a mated pair | Critical for low-level signals; rises with cycles and fretting |
+| Contact resistance | mΩ through a mated pair | Critical for low-level signals; rises with cycles and fretting. Check the *test method* — low-level (EIA-364-23-class) data is what speaks to signal duty ([low-level deep dive](low-level-signal-contacts.md)) |
 | Temperature range | Operating *and* storage | Check cable and backshell ranges too, plus transit/storage |
 | Ingress protection | IP rating / environmental class | Tested with cabling, mated *and* unmated? At what IP68 depth? |
 | Mating cycles | Rated connect/disconnect cycles | Service life with margin below the rating |

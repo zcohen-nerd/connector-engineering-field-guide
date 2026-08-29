@@ -22,6 +22,10 @@ The most damaging hobby connector mistake isn't a bad crimp — it's pulling **p
 
 Exact current limits are deliberately absent here: they belong to the exact contact, wire gauge, and datasheet — not to a family name or a listing title *(source needed per part)*.
 
+![Three wiring rows: a dev board to a sensor through a small signal connector carrying milliamps, marked fine; a battery to a motor through the same small connector with heat marks at the contact, marked wrong; and a battery to a motor through a fused, keyed, current-rated power pair with thick wire, marked right](/img/diagrams/hobby-power-vs-signal.svg)
+
+*The same instinct — "there's a connector in the drawer" — with three different outcomes. Amps get a rated, keyed pair, matched gauge, and a fuse near the source.*
+
 ## Which direction to look, by project
 
 | Project | Connector direction |

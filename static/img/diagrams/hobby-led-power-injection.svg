@@ -1,0 +1,63 @@
+<svg viewBox="0 0 760 400" width="760" height="400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Hobby: LED string data pigtail vs. power-injection wiring. The small
+       inline connector carries the data end; injection amps take their own
+       rated path. Feed count/placement come from the current + voltage-drop
+       calculation, not a universal length rule. -->
+  <rect x="0.5" y="0.5" width="759" height="399" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">Long LED runs — data rides the pigtail; injection amps take their own path</text>
+
+  <defs>
+    <marker id="ledArr" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,7 L0,14 Z" fill="#102040"/>
+    </marker>
+  </defs>
+
+  <!-- controller + inline pigtail pair -->
+  <rect x="30" y="120" width="95" height="52" rx="6" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="77" y="150" text-anchor="middle" font-size="12" fill="#102040">controller</text>
+  <line x1="125" y1="146" x2="142" y2="146" stroke="#102040" stroke-width="2"/>
+  <rect x="142" y="135" width="26" height="22" rx="3" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <rect x="168" y="137" width="24" height="18" rx="3" fill="#ffffff" stroke="#102040" stroke-width="2"/>
+  <rect x="150" y="129" width="12" height="6" rx="2" fill="#ffffff" stroke="#102040" stroke-width="1.5"/>
+  <line x1="150" y1="126" x2="132" y2="96" stroke="#3d6094" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="130" y="90" text-anchor="middle" font-size="11" fill="#3d6094">small inline pair (SM-style) —</text>
+  <text x="130" y="103" text-anchor="middle" font-size="11" fill="#3d6094">the data end, plus a short run's power</text>
+
+  <!-- LED strip -->
+  <rect x="205" y="126" width="510" height="40" rx="4" fill="#f4f7fb" stroke="#102040" stroke-width="2"/>
+  <line x1="192" y1="146" x2="205" y2="146" stroke="#102040" stroke-width="2"/>
+  <rect x="222" y="139" width="14" height="14" rx="2" fill="#e8edf4" stroke="#102040" stroke-width="1.2"/>
+  <rect x="266" y="139" width="14" height="14" rx="2" fill="#e8edf4" stroke="#102040" stroke-width="1.2"/>
+  <rect x="310" y="139" width="14" height="14" rx="2" fill="#e8edf4" stroke="#102040" stroke-width="1.2"/>
+  <rect x="354" y="139" width="14" height="14" rx="2" fill="#e8edf4" stroke="#102040" stroke-width="1.2"/>
+  <rect x="398" y="139" width="14" height="14" rx="2" fill="#e8edf4" stroke="#102040" stroke-width="1.2"/>
+  <rect x="442" y="139" width="14" height="14" rx="2" fill="#e8edf4" stroke="#102040" stroke-width="1.2"/>
+  <rect x="486" y="139" width="14" height="14" rx="2" fill="#e8edf4" stroke="#102040" stroke-width="1.2"/>
+  <rect x="530" y="139" width="14" height="14" rx="2" fill="#e8edf4" stroke="#102040" stroke-width="1.2"/>
+  <rect x="574" y="139" width="14" height="14" rx="2" fill="#e8edf4" stroke="#102040" stroke-width="1.2"/>
+  <rect x="618" y="139" width="14" height="14" rx="2" fill="#e8edf4" stroke="#102040" stroke-width="1.2"/>
+  <rect x="662" y="139" width="14" height="14" rx="2" fill="#e8edf4" stroke="#102040" stroke-width="1.2"/>
+  <text x="253" y="118" font-size="11" fill="#3b4453">data →</text>
+  <text x="700" y="118" text-anchor="end" font-size="11" fill="#3b4453">farthest LEDs — where drop shows first</text>
+
+  <!-- power supply -->
+  <rect x="320" y="288" width="150" height="50" rx="6" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
+  <text x="395" y="310" text-anchor="middle" font-size="12" font-weight="bold" fill="#102040">LED power supply</text>
+  <text x="395" y="326" text-anchor="middle" font-size="10.5" fill="#3b4453">source + branches protected</text>
+
+  <!-- injection feeds (thick, rated) -->
+  <path d="M370 288 V176" fill="none" stroke="#102040" stroke-width="5" marker-end="url(#ledArr)"/>
+  <path d="M430 288 V252 H688 V176" fill="none" stroke="#102040" stroke-width="5" marker-end="url(#ledArr)"/>
+  <text x="600" y="300" text-anchor="middle" font-size="11.5" fill="#102040" font-weight="bold">injection feeds — rated power</text>
+  <text x="600" y="315" text-anchor="middle" font-size="11.5" fill="#102040" font-weight="bold">connectors/blocks, conductors</text>
+  <text x="600" y="330" text-anchor="middle" font-size="11.5" fill="#102040" font-weight="bold">sized per branch</text>
+
+  <!-- forbidden path: amps through the data pigtail -->
+  <path d="M320 316 H160 V162" fill="none" stroke="#b3402f" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="128" y="245" text-anchor="middle" font-size="18" font-weight="bold" fill="#b3402f">✗</text>
+  <text x="95" y="268" text-anchor="middle" font-size="11.5" fill="#b3402f">not through the little</text>
+  <text x="95" y="282" text-anchor="middle" font-size="11.5" fill="#b3402f">data-string connector</text>
+
+  <text x="380" y="366" text-anchor="middle" font-size="11.5" fill="#3b4453">(multiple supplies: grounds stay common for the data signal; each supply's + feeds only its own section — no back-feeding)</text>
+  <text x="380" y="388" text-anchor="middle" font-size="12" font-style="italic" fill="#6f8bb4">Feed count and placement come from the worst-case current and voltage-drop calculation — not from a universal length rule.</text>
+</svg>

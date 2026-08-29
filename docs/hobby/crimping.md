@@ -23,6 +23,10 @@ Crimping is where hobby wiring either becomes reliable or becomes a lifetime sup
 - **Inspect every crimp:** conductor wings on bare strands, insulation wings on jacket, no stray strands, contact not deformed.
 - **Pull test gently** — a correct crimp survives a firm tug; a wrong one comes off now instead of in the field.
 
+![Schematic of a good open-barrel crimp — conductor wings on bare strands with tips just visible, insulation wings on the jacket — beside the three classic wrongs: strip too long reaching the mating area, strip too short crimping onto insulation, and a stray strand outside the wings](/img/diagrams/hobby-crimp-good-vs-bad.svg)
+
+*The geometry to inspect for. What line art can't show is surface texture and deformation — which is why the inspection rules above still apply to every real crimp you make.*
+
 ![A ratcheting crimp tool with interchangeable die positions marked with AWG wire ranges](/img/photos/crimper-ratchet-awg.jpg)
 
 *A ratcheting crimper with die positions marked by wire range (here AWG 18–22 and 24–30). The ratchet forces a full stroke every time — the consistency cheap plier-style tools can't give you. The die profile still only approximates each family's spec. Photo: [Smial](https://commons.wikimedia.org/wiki/File:Crimpzange_awg_18-30_IMGP5361.jpg), CC BY-SA 2.0 DE, via Wikimedia Commons.*

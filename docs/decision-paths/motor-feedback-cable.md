@@ -77,7 +77,7 @@ See [What People Forget](../what-people-forget.md).
 - **Building what you could buy.** Hand-terminating a 19-pole shielded feedback cable to beat a catalog cordset's price is usually a false economy — the cordset's shield termination and test are the product.
 - **Feedback routed with power** in one bundle, tray, or chain compartment. The classic intermittent-position-fault generator.
 - **Pigtailed shields** on servo power or feedback cables — see the shield discipline in [§5.7](../05-connector-anatomy.md#57-emi-shielding-and-bonding).
-- **Assuming any M23 mates any M23.** Shell thread is not insert, keying, or shield-shell compatibility — match the manufacturer's mating chart, and treat cross-vendor intermating as a claim to verify.
+- **Assuming any M23 mates any M23.** Shell thread is not insert, keying, or shield-shell compatibility — match the manufacturer's mating chart, and treat cross-vendor intermating as a claim to verify ([vendor mixing](../lifecycle-and-procurement.md) is recorded in the ICD, not improvised at purchasing).
 - **Mixing feedback ecosystems** — encoder protocols, pinouts, and cable constructions differ per drive family even over the same connector shell.
 - **Ignoring the drive manual's cable length and type limits** — feedback protocols and PWM output stages both carry cable constraints.
 

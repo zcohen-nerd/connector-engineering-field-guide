@@ -28,6 +28,7 @@ Don't start with the glamour render. Start with the ordering information and the
 | Ingress protection | IP rating / environmental class | Tested with cabling, mated *and* unmated? At what IP68 depth? |
 | Mating cycles | Rated connect/disconnect cycles | Service life with margin below the rating |
 | Tooling | Crimp tool, positioner/die, insert/extract tools | Wrong crimp tool is a leading contact-failure cause |
+| Lifecycle status | Active / NRND / EOL, and the datasheet's own revision date | An NRND part is a poor base for a new long-life design; distributor flags are hints, the manufacturer notice is the record ([lifecycle](lifecycle-and-procurement.md)) |
 | Assembly instructions | Strip length, crimp spec, torque, insertion | These define a buildable harness — read them |
 | Compatible backshells | Shielded, environmental, angled, boot adapters | Same manufacturer or confirmed cross-reference; thread pitch must match |
 | Accessories | Caps, gaskets, dummy contacts, sealing plugs | Budget into BOM from day one |

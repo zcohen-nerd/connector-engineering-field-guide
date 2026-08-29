@@ -2,6 +2,8 @@
 
 Planning document for three content add-ons, audited against the v0.10 site layout. Companion to [visual-backlog.md](visual-backlog.md) and [photo-backlog.md](photo-backlog.md). Nothing in this file is published content; it is the work plan the implementation PRs execute.
 
+**Status: all three phases shipped (2026-08).** This file is retained as the record of the plan and its per-phase hook tables; remaining follow-ups live where live work belongs — the source-notes §4 backlog (whitepaper hosting, EIA-364 anchors, the J-STD-046 window clause) and visual-backlog rows 8–10.
+
 The three add-ons:
 
 1. **Lifecycle and procurement integrity** — PCN/EOL handling, obsolescence, authorized distribution, counterfeit avoidance, approved alternates, vendor mixing, requalification.
@@ -14,7 +16,7 @@ The three add-ons:
 |---|---|---|---|
 | 1 | Low-level contact design | **Shipped (2026-08)** — `docs/low-level-signal-contacts.md` + all hooks; see the changelog's Unreleased→Added entry | Most self-contained. Establishes the glossary vocabulary (dry circuit, wetting current, low-level contact resistance) that Phase 2's test matrix references. |
 | 2 | Qualification plan/template | **Shipped (2026-08)** — `docs/tools/connector-qualification-template.md` + all hooks; see the changelog's Unreleased→Added entry | Depends only on Phase 1 vocabulary. Its requalification-triggers table is what Phase 3's requalification section links to. |
-| 3 | Lifecycle & procurement integrity | `docs/lifecycle-and-procurement.md` + hooks | Largest integration surface (workflow, checklists, red flags, ICD, both tracks). Landing last means its links to the qualification template and low-level page resolve on day one — no dangling forward references in any phase. |
+| 3 | Lifecycle & procurement integrity | **Shipped (2026-08)** — `docs/lifecycle-and-procurement.md` + all hooks; see the changelog's Unreleased→Added entry | Largest integration surface (workflow, checklists, red flags, ICD, both tracks). Landing last means its links to the qualification template and low-level page resolve on day one — no dangling forward references in any phase. |
 
 One PR per phase. Each PR is self-contained: new page, every hook edit, glossary entries, source-notes rows, changelog entry, and a passing build. No phase leaves a link pointing at a page that doesn't exist yet.
 

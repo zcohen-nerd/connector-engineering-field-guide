@@ -39,6 +39,8 @@ Everything here is covered in more depth elsewhere in the guide; this page just 
 - **ICD entry** — the interface control definition procurement and manufacturing build from. (See [Tools & Templates](tools/connector-icd-template.md).)
 - **Source-controlled pinout** — a released, rev-controlled pinout, not tribal knowledge in someone's notebook. (See [Red Flags](11-red-flags.md).)
 - **Lead time / second source** — a perfect connector with a 40-week lead time and no second source is a schedule failure. Check availability and QPL/second-source options early. (See [Selection Workflow §4](04-connector-selection-workflow.md).)
+- **PCN/EOL monitoring** — manufacturer notices flow to customers of record through the authorized channel; a released design with nobody registered to receive them learns about discontinuance from a failed order. (See [Lifecycle & Procurement](lifecycle-and-procurement.md).)
+- **Approved alternates, recorded at design time** — the substitute qualified calmly while the primary is still buyable, not improvised during a line-down. (See [Lifecycle & Procurement](lifecycle-and-procurement.md).)
 
 :::note
 

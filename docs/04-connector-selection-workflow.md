@@ -77,6 +77,8 @@ This is where the technically perfect connector turns out to be dead on arrival.
 
 Two procurement traps in particular: crimp contacts are often sold only in minimum order quantities (bags of ~100), and the connector, its contacts, the backshell, and the crimp tooling each carry *independent* lead times — order them together and early, not as an afterthought.
 
+Production reality also extends past the first build: check the part's **lifecycle status** (an NRND part is a poor foundation for a new long-life design), record **approved alternates while the primary is still buyable**, and plan for the manufacturer notices that will eventually arrive — [Lifecycle and Procurement Integrity](lifecycle-and-procurement.md) carries that whole loop.
+
 For production cable and wire harness workmanship, inspection, and acceptance criteria, use **IPC/WHMA-A-620** (*Requirements and Acceptance for Cable and Wire Harness Assemblies*) or the program/customer-required equivalent — and always follow the applicable contract, drawing notes, customer standard, and the manufacturer's application specification for the exact connector/contact/tooling system.[^a620] Concretely, the crimp part of the design package should name: the exact contact P/N, the wire gauge and insulation range, the approved crimp tool and positioner/die, the strip length, the pull-test or inspection requirement, the insertion/removal tools, the acceptance standard/inspection class the shop will build to, and any technician notes.
 
 The items that most often fall off the BOM or the drawing at this step are collected in [What People Forget](what-people-forget.md).

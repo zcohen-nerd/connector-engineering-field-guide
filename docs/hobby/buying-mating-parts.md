@@ -29,4 +29,4 @@ You've identified the connector. Now you need the *other half* — and this is w
 
 :::
 
-Related: [Marketplace Kits](connector-kits.md) · [Common Hobby Connector Families](families.md) · the engineering track's [What People Forget](../what-people-forget.md) — the professional version of "order both halves."
+Related: [Marketplace Kits](connector-kits.md) · [Common Hobby Connector Families](families.md) · the engineering track's [What People Forget](../what-people-forget.md) — the professional version of "order both halves" — and its [Lifecycle & Procurement Integrity](../lifecycle-and-procurement.md) page, where clone-vs-genuine grows up into counterfeit avoidance, traceability, and approved alternates.

@@ -25,6 +25,8 @@ Based on [Exercise 7](../13-hands-on-exercises.md).
 - Backshell P/N:
 - Dust cap P/N:
 - Keying / polarization:
+- Approved alternates (P/N, manufacturer, approval basis — see [Lifecycle & Procurement §5](../lifecycle-and-procurement.md)):
+- Vendor mixing within the mated pair (allowed/prohibited, verification basis):
 
 ## Pinout
 

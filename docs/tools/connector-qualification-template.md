@@ -111,7 +111,7 @@ Evidence is attached to the [§1](#1-what-is-being-qualified) configuration. Eac
 | Contact, plating, or material change | Do the electrical rows (especially [LLCR](../low-level-signal-contacts.md)) still hold? |
 | Crimp tool / die / process change | Does the termination still meet the application spec's evidence? |
 | Wire, seal, or backshell substitution | Do sealing and strain-relief results still apply? |
-| A manufacturer change notice affecting form/fit/function | What does the notice change relative to [§1](#1-what-is-being-qualified)? |
+| A manufacturer change notice (PCN) affecting form/fit/function | What does the notice change relative to [§1](#1-what-is-being-qualified)? ([Lifecycle & Procurement §2](../lifecycle-and-procurement.md) covers the notice-handling loop) |
 | "Equivalent" or alternate part substitution | [Red flag §11](../11-red-flags.md) — not drop-in until the evidence says so |
 | New environment beyond the tested envelope | Which exposure rows were never run at these levels? |
 

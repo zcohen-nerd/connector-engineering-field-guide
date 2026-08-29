@@ -16,6 +16,7 @@ Prioritized visuals for the hobby track (and one shared item). Style: match the 
 | 7 | LED power injection connector warning diagram | TODO | Data pigtail vs. injection wiring; pairs with `jst-sm-led-connectors.md` |
 | 8 | Contact-interface film sketch (shared item, engineering track) | TODO | Two cross-sections: tin contact with oxide film / fretting debris in the contact zone vs. gold-to-gold metal contact; pairs with `docs/low-level-signal-contacts.md` §1/§5 |
 | 9 | Qualification-sequence flow sketch (engineering track) | TODO | Sample groups flowing through exposure→re-measure sequences (baseline → exposure group → re-measure), with the "order comes from the governing spec" caption; pairs with `docs/tools/connector-qualification-template.md` §3/§5 |
+| 10 | Lifecycle-state flow sketch (engineering track) | TODO | Active → NRND → EOL/LTB window → obsolete, annotated with the decision each state forces (record alternates / stop new designs / bridge-buy-or-redesign / broker-scrutiny); pairs with `docs/lifecycle-and-procurement.md` §1 |
 
 ## Images pass (2026-07)
 

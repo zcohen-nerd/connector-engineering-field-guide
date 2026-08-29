@@ -53,6 +53,9 @@ Use this at work. Adapt to your program; it is a working checklist, not a standa
 - [ ] Qualification approach identified — family/QPL evidence or a program-level plan (see the [qualification plan template](tools/connector-qualification-template.md))
 - [ ] Supplier availability and lead time checked
 - [ ] Second source / QPL considered
+- [ ] Lifecycle status checked (active / NRND / EOL) and PCN/EOL notice registration planned ([lifecycle](lifecycle-and-procurement.md))
+- [ ] Approved alternates identified and recorded, with what "equivalent" was verified to mean
+- [ ] Authorized sourcing channel identified for every BOM line
 
 **Documentation / configuration control**
 - [ ] Connector, mate, contact, backshell, cap, gasket part numbers

@@ -103,6 +103,7 @@ const sidebars: SidebarsConfig = {
         '09-decision-examples',
         '10-selection-checklist',
         '11-red-flags',
+        'lifecycle-and-procurement',
         '12-consumer-hobby-prototype-connectors',
         'micro-fit',
         '13-hands-on-exercises',

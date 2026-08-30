@@ -8,7 +8,7 @@ sidebar_label: Sealed enclosure feedthrough
 
 # Pick a connector for a sealed enclosure feedthrough
 
-Passing power or signal through the wall of a sealed enclosure without breaking the seal.
+Drilling a hole in a sealed box is easy. Getting power or signals through that hole without turning it into the leak path is the actual job. The panel cutout, gasket, mounting hardware, cable exit, and unmated condition all count.
 
 ## Use this when
 

@@ -8,11 +8,11 @@ sidebar_label: Consumer/Hobby/Prototype Connectors
 
 # 12. Consumer, Hobby, and Prototype Connectors at the Bench-to-Product Boundary
 
-This page is written from the professional/industrial side of the boundary. It is not the main hobby connector guide — for identifying JST-family parts, buying mating connectors, crimping small terminals, and navigating marketplace kits, use the [Hobby Connector Field Guide](hobby/index.md). What this page answers is the transition question: **when are hobby/prototype connectors acceptable, and when do they become inappropriate for engineered, fielded, or production hardware?**
+This page looks at hobby connectors from the professional side of the fence. If you're trying to identify a JST-family part, buy a mate, crimp tiny terminals, or decode a marketplace kit, use the [Hobby Connector Field Guide](hobby/index.md). The question here is different: **when is a hobby connector a perfectly sensible choice, and when has the project outgrown it?**
 
-Consumer, hobby, and prototype connectors are not automatically "bad." They are optimized for cost, availability, and ease of use. The real question is whether a given connector is appropriate for the environment, mating-cycle requirement, strain relief, vibration profile, sealing requirement, configuration-control needs, and service model of your application. A connector that is perfect on a breadboard can be exactly wrong on the outside of a fielded enclosure — and the same part can be a sensible internal choice in a protected assembly. Know which world you're in.
+Hobby and prototype connectors aren't automatically bad. They're optimized for cost, availability, and getting something working quickly—which is often exactly what you need. Trouble starts when the environment, vibration, mating cycles, sealing, strain relief, documentation, or service model asks more than the connector was built to give. A part that's perfect on a breadboard can be ridiculous on the outside of a fielded enclosure and completely reasonable inside the protected box. Context does the judging.
 
-If your search starts with a vague label like `JST connector` or `aviation plug`, read [How to Search for Connectors](00-how-to-search-for-connectors.md) first and then come back to this page.
+If your search starts with `JST connector` or `aviation plug`, take a detour through [How to Search for Connectors](00-how-to-search-for-connectors.md). Those are folk labels, not enough information to make a design choice.
 
 :::tip[Working on the maker side of this line?]
 

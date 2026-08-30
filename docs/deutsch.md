@@ -8,7 +8,7 @@ sidebar_label: DEUTSCH Deep Dive
 
 # DEUTSCH Deep Dive
 
-DEUTSCH (today a TE Connectivity brand) is the connector name you'll hear most on off-road equipment, agricultural machinery, trucks, marine electrical systems, and field robotics. The family earned that position the same way 38999 earned aerospace: a complete, disciplined system — sealed thermoplastic housings, a rear-release crimp contact system, positive secondary locks, and an ecosystem of seals, plugs, boots, and tooling — at a price and hand-tool level a small team can actually adopt. For this guide's audience it is usually the first serious step above hobby connectors and the last stop before mil circulars.
+If you spend any time around off-road equipment, farm machinery, trucks, marine wiring, or field robots, you'll run into DEUTSCH. TE Connectivity owns the brand now, but the reason people keep reaching for it hasn't changed: sealed housings, rear-release crimp contacts, real secondary locks, and all the seals, plugs, boots, and tools needed to build the thing properly. Small teams can actually afford and hand-tool it, too. For most readers here, DEUTSCH is the first serious step above hobby connectors and the last stop before mil circulars.
 
 ![A round Deutsch HD-style 9-pin J1939 diagnostic plug with threaded coupling on a black cable](/img/photos/deutsch-j1939-plug.jpg)
 
@@ -16,13 +16,13 @@ DEUTSCH (today a TE Connectivity brand) is the connector name you'll hear most o
 
 :::tip[Just need to choose?]
 
-For a scenario walkthrough, see the [Rugged on a budget decision path](decision-paths/rugged-on-a-budget.md) — sealed automotive families including DEUTSCH are its headline candidates. This page is the detail behind that choice.
+If you just need to make a choice, start with [Rugged on a budget](decision-paths/rugged-on-a-budget.md). DEUTSCH and similar sealed automotive families are the main candidates there. Come back here when you want the details.
 
 :::
 
 :::note[This is a supplemental deep dive]
 
-Like the [MIL-DTL-26482 page](mil-dtl-26482.md), this page is site-only supplemental material, not one of the numbered canonical sections. It goes deeper than the sourced family table in [Standards and Families (§3.2)](03-connector-standards-and-families.md#32-sealed-automotive-connector-families) but follows the same rule: every figure here is a **cited, family-level orientation value**, never a substitute for the exact part's datasheet.
+This is a supplemental deep dive, like the [MIL-DTL-26482 page](mil-dtl-26482.md), not one of the numbered core sections. It goes well past the family table in [Standards and Families (§3.2)](03-connector-standards-and-families.md#32-sealed-automotive-connector-families), but the rule stays the same: every number here is a **cited, family-level orientation value**. Your exact part's datasheet still wins.
 
 :::
 
@@ -34,7 +34,7 @@ None of that is optional. Wire-to-wire DEUTSCH housings generally ship as bare s
 
 ## 2. The family map — every series and size
 
-The industrial DEUTSCH range is one contact philosophy (rear-insert, rear-release crimp contacts behind silicone seals) packaged at different sizes and shapes. Orientation figures below are family-level and cited; cavity counts and ratings for a specific shell come from the series datasheet.[^dtfam][^dtte][^dthd][^hd30][^hd10][^drc]
+The industrial DEUTSCH range is basically one contact philosophy — rear-insert, rear-release crimp contacts behind silicone seals — packaged in different sizes and shapes. The figures below are cited family-level guides. For an actual shell, pull the series datasheet.[^dtfam][^dtte][^dthd][^hd30][^hd10][^drc]
 
 | Series | Format | Cavities / shells | Contact sizes | Continuous current class | Typical role |
 |---|---|---|---|---|---|

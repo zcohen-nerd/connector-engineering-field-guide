@@ -8,7 +8,7 @@ sidebar_label: Design Review Checklist
 
 # Design Review Checklist
 
-Based on [Sections 10](../10-selection-checklist.md) and [11](../11-red-flags.md) of the guide.
+Use this for the connector part of design review. It pulls together the [selection checklist](../10-selection-checklist.md) and the [red flags](../11-red-flags.md) so the meeting catches real interface risk instead of spending twenty minutes on connector color.
 
 ## Readiness checks
 

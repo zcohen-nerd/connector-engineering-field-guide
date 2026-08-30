@@ -8,7 +8,7 @@ sidebar_label: Glossary
 
 # Glossary
 
-The connector terms **both tracks** of this site use — the [Hobby](hobby/index.md) and [Professional / Industrial](engineering-home.md) guides — in one place, each linked to the page that treats it in depth. Three naming warnings up front: **"male/female" is ambiguous** (housing gender and contact gender are independent — say which you mean), **"plug" and "receptacle" are not used consistently across vendors** (verify against the drawing's mating diagram), and **marketplace names are less reliable than drawings** (see [JST Is Not One Connector](hobby/jst-is-not-one-connector.md)). (The [30-Day Plan](14-thirty-day-learning-plan.md)'s Week 1 deliverable is your *own* glossary of 30 terms; start here, then rewrite the definitions in your own words.)
+Here are the connector terms both the [Hobby](hobby/index.md) and [Professional / Industrial](engineering-home.md) tracks use. Each one links to the page that goes deeper. Three warnings before the alphabet starts: **"male/female" is ambiguous** because housing gender and contact gender are separate; **"plug" and "receptacle" change meaning between vendors**; and **marketplace names are much less trustworthy than drawings**. Say exactly what you mean and check the mating diagram. If you're doing Week 1 of the [30-Day Plan](14-thirty-day-learning-plan.md), use this as a starting point, then rewrite 30 of these in your own words.
 
 **360° shield termination** — bonding the cable shield circumferentially into the backshell/shell instead of through a pigtail wire; keeps shield impedance low across frequency. See [EMI, shielding, and bonding](05-connector-anatomy.md).
 

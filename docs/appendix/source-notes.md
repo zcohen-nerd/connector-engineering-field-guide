@@ -9,11 +9,11 @@ sidebar_label: Source Notes
 
 **Status: v1.0 — Source-Verified Release**
 
-This page is the guide's transparency layer. Every technical statement in the guide falls into one of four buckets, and this page says which: **verified claims** (backed by a named public source), **engineering heuristics** (deliberate judgment, not specification), **example-only values** (teaching aids, never design authority), and an explicit **needs-source-before-v1.0 backlog**.
+This is where the guide shows its work. Every technical claim belongs in one of four buckets: **verified** (backed by a named public source), **engineering judgment** (useful, deliberate, and not a specification), **example only** (good for teaching, never design authority), or **still needs a source**.
 
 :::note
 
-This guide is an educational engineering reference. Always verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and program/customer requirements.
+The guide can help you ask better questions; it can't release hardware for you. Verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and your program or customer requirements.
 
 :::
 

@@ -8,11 +8,11 @@ sidebar_label: Comparison Matrix
 
 # Connector Comparison Matrix
 
-A worked version of the matrix from [Exercise 2](../13-hands-on-exercises.md), filled with representative figures from the manufacturer datasheets and standards cited in each cell. To score your own application, copy the table and blank the cells.
+This is the worked version of the matrix from [Exercise 2](../13-hands-on-exercises.md). The numbers come from the manufacturer documents and standards cited in the cells. For your own trade study, copy the table, blank it out, and make every candidate earn its score.
 
 :::warning[Read the numbers as orientation, not specification]
 
-Every figure below is a *typical or example* value for the **family**, pulled from the source footnoted in the cell — not a rating for any exact part. Current in particular depends on the specific contact, wire gauge, number of loaded contacts, temperature, and derating curve (see [Selection Workflow §2](../04-connector-selection-workflow.md)). Verify against the current datasheet, the applicable standard, and the QPL before relying on any value in released hardware. When this table and a datasheet disagree, the datasheet wins. A catalog rating is not a permission slip: use these figures as a screening tool, and the exact datasheet, derating curve, application specification, and program/customer requirement for design release.
+Every figure below is a *typical or example* value for the **family**, not a rating for an exact part. Current especially depends on the contact, wire gauge, loaded-contact count, temperature, and derating curve (see [Selection Workflow §2](../04-connector-selection-workflow.md)). Use the table to screen families. For released hardware, go back to the current datasheet, applicable standard, QPL, application specification, and program/customer requirements. If this table and a datasheet disagree, the datasheet wins. No committee meeting required.
 
 :::
 

@@ -8,9 +8,9 @@ sidebar_label: Image Attributions
 
 # Image Attributions
 
-This register is the provenance record for every externally sourced raster image in `static/img/photos/`. Captions remain close to the reading context; this page keeps the source and license evidence easy to audit. **No photo is relicensed by this repository.** License terms apply to each source image independently.
+This is the paper trail for every externally sourced raster image in `static/img/photos/`. The captions stay next to the photos; this page keeps the source and license details in one place so they're easy to check. **This repository does not relicense any photo.** Each source image keeps its own license terms.
 
-For older assets, the original import did not record whether a resize or metadata strip occurred. Those rows state that limitation rather than guessing. New assets record their transformation exactly.
+Some older imports didn't record whether the file was resized or had its metadata stripped. Those rows say “not recorded” instead of pretending we know. Newer assets list the exact changes.
 
 ## License links
 

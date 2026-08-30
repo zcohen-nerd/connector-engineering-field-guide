@@ -8,6 +8,8 @@ sidebar_label: Red Flags
 
 # 11. Red Flags and Beginner Mistakes
 
+Most connector failures aren't exotic. They're ordinary decisions that looked harmless in a meeting and turned into a bad crimp, a missing cap, an impossible service angle, or six weeks of lead-time pain. This is the fast scan for those decisions.
+
 | Red flag | Why it's bad |
 |---|---|
 | Picking only by pin count | Ignores current, voltage, contact size, environment, tooling |

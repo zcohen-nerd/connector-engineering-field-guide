@@ -8,7 +8,7 @@ sidebar_label: Debug / service port
 
 # Pick a connector for a debug/service port
 
-Occasional programming, debug, or service access — used at a bench or in maintenance, not as an operational interface.
+This is the port you use to program, debug, or rescue the hardware—not the connector the system depends on every minute. It may only get touched during bring-up or maintenance, but “temporary” ports have a habit of becoming permanent, so design it like somebody will still need it in five years.
 
 ## Use this when
 

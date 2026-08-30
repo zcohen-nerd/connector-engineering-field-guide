@@ -8,7 +8,7 @@ sidebar_label: Overview
 
 # Tools & Templates
 
-Reusable engineering-document templates derived from the guide. Copy them into your own design package and fill in the project-specific values. They are deliberately generic — no ratings or part numbers are assumed for you.
+These are the worksheets behind the guide. Copy what you need into your design package, replace every placeholder with project-specific information, and delete the parts that don't apply. They're generic on purpose; none of them picks ratings or part numbers for you.
 
 | Template | Use it to | Based on |
 |---|---|---|

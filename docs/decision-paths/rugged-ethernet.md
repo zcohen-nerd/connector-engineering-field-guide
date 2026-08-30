@@ -8,7 +8,7 @@ sidebar_label: Rugged Ethernet
 
 # Pick a connector for rugged Ethernet
 
-Ethernet that has to leave a protected enclosure, run along a machine, or survive an industrial environment.
+It's ordinary Ethernet until the cable leaves the clean cabinet. Then the latch, seal, shield path, cable category, bend life, and technician-proofing all become part of the link—not accessories you can bolt on later.
 
 ## Use this when
 

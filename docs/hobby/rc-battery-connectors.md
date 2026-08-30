@@ -12,7 +12,7 @@ The [XT page](xt-connectors.md) covers the XT30/60/90 ecosystem in depth. This p
 
 :::warning[Current claims on this page]
 
-With one sourced exception (Anderson Powerpole, below), **no current ratings are asserted on this page**. Deans-style, EC-style, Traxxas-style, Tamiya-style, and bullet connectors are sold overwhelmingly as clones with marketing numbers; treat every printed or listed amp figure as unverified until you find the actual manufacturer document for the actual part in your hand. The [XT page](xt-connectors.md) shows what a *sourced* rating looks like — and how far conditions move it.
+Apart from the sourced Anderson Powerpole example below, **this page gives no current ratings**. Deans-style, EC-style, Traxxas-style, Tamiya-style, and bullet connectors are mostly sold as clones with marketing numbers attached. Treat every amp figure as unverified until you find the manufacturer document for the exact part in your hand. The [XT page](xt-connectors.md) shows what a sourced rating looks like—and how much the test conditions matter.
 
 :::
 

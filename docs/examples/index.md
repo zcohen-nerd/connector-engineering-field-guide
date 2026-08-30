@@ -8,7 +8,7 @@ sidebar_label: Overview
 
 # Examples
 
-Worked examples that stay at the family-selection and documentation level; project-specific values are intentionally left as `TBD` or shown as clearly-labeled placeholders, so you adapt the structure rather than copy numbers. All three are fully reasoned end-to-end examples: the [Rugged Control Box](rugged-control-box.md) works [Exercise 1](../13-hands-on-exercises.md)'s whole external connector set, the [Connector Selection Packet](connector-selection-packet.md) documents a field-robot module to program grade, and the [M12 Sensor Interface](m12-sensor-interface.md) executes the sensor and Ethernet paths on one machine cell.
+These examples show the reasoning and paperwork, not magic numbers you can copy into your own design. Project-specific values stay `TBD` or are clearly marked as placeholders on purpose. The [Rugged Control Box](rugged-control-box.md) works through a whole external connector set, the [Connector Selection Packet](connector-selection-packet.md) takes a field-robot module to program-grade documentation, and the [M12 Sensor Interface](m12-sensor-interface.md) applies the sensor and Ethernet paths to one machine cell.
 
 | Example | Shows | Based on |
 |---|---|---|
@@ -18,6 +18,6 @@ Worked examples that stay at the family-selection and documentation level; proje
 
 :::note
 
-These examples illustrate *structure and process*, not a released design. No ratings or part numbers are asserted for you — the datasheet, applicable standard, and program requirements decide the actual values.
+Steal the structure, not the numbers. These aren't released designs, and they don't make ratings or part-number decisions for you. Your datasheets, standards, and program requirements still decide the real values.
 
 :::

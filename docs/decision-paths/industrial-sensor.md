@@ -8,7 +8,7 @@ sidebar_label: Industrial sensor
 
 # Pick a connector for an industrial sensor
 
-A sealed cable to a DC sensor or actuator in factory or field automation — the most common industrial connector job there is.
+If somebody says “industrial sensor cable,” this is probably the lane they mean: a sealed DC sensor, actuator, or IO-Link connection on a machine. M8 and M12 dominate for good reasons, but coding, pinout, cable style, and sealing details still decide the actual part.
 
 ## Use this when
 

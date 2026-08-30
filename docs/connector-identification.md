@@ -8,7 +8,7 @@ sidebar_label: Identification Workflow
 
 # Connector Identification Workflow
 
-The short, shared version of the skill both tracks depend on. Whether the part came off a marketplace LED string or a fielded harness, the sequence is the same — only the stakes and the paperwork change.
+This is the short version of the identification process both tracks use. Whether the mystery part came off a cheap LED string or a fielded harness, the steps are the same. Only the stakes — and the amount of paperwork — change.
 
 1. **Identify the use case and risk level.** Bench prototype or fielded hardware? That decides how much of this list is negotiable — and [which track you're in](hobby-or-professional.md).
 2. **Count positions** — every cavity, loaded or not.

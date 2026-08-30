@@ -32,8 +32,9 @@ const config: Config = {
     locales: ['en'],
   },
 
-  // Shared brand package: provides @theme/Navbar and @theme/Footer.
-  // Reads customFields.brand below for project-aware configuration.
+  // Shared brand package: provides the Footer, design tokens, and canonical
+  // ecosystem registry. The site-specific Navbar override in src/theme/Navbar
+  // reads the same customFields.brand values below.
   themes: ['@zcohen-nerd/brand'],
 
   customFields: {
@@ -41,21 +42,15 @@ const config: Config = {
       projectName: 'Connector Field Guides',
       projectFamily: 'technical-guide',
       projectBadge: 'A zcohen-nerd technical guide',
-      // The brand Navbar renders the top-left logo as <a href={brand.hubUrl}>.
-      // Point it at this site's landing page so "home" stays on the guide;
-      // the Portfolio remains reachable via connectLinks (footer) and the
-      // Projects switcher.
+      // Keep the project URLs canonical for the header's current-project state
+      // and the shared footer links.
       hubUrl: 'https://zcohen-nerd.github.io/connector-engineering-field-guide/',
       projectUrl: 'https://zcohen-nerd.github.io/connector-engineering-field-guide/',
       repoUrl: 'https://github.com/zcohen-nerd/connector-engineering-field-guide',
       attribution: 'A zcohen-nerd technical guide by Zac Cohen.',
       isHub: false,
-      // TODO(brand-package): custom top-nav links (Start / Hobby / Engineering /
-      // Source Notes) are not possible today — the brand Navbar renders
-      // brand.navLinks ONLY in hub mode (isHub: true); project mode renders
-      // projectBadge instead (verified in @zcohen-nerd/brand Navbar source).
-      // Supporting project-mode navLinks is a feature request against the
-      // brand package, not this repo. Navigation runs via sidebars + landing.
+      // Local primary navigation lives in src/theme/Navbar. Keep this field for
+      // compatibility with the shared brand package.
       navLinks: [],
       connectLinks: [
         {
@@ -86,9 +81,9 @@ const config: Config = {
     ],
   ],
 
-  // themeConfig.navbar and themeConfig.footer are intentionally omitted:
-  // the @zcohen-nerd/brand theme provides @theme/Navbar and @theme/Footer
-  // and is configured via customFields.brand above.
+  // themeConfig.navbar and themeConfig.footer are intentionally omitted. The
+  // local @theme/Navbar override and shared brand Footer both read the brand
+  // configuration above.
   themeConfig: {
     image: 'img/og-card.png',
     colorMode: {

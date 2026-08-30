@@ -8,11 +8,11 @@ sidebar_label: Motor + feedback cable
 
 # Pick connectors for motor power + feedback cabling
 
-A servo or motion axis usually needs **two electrical interfaces at the motor**: a power connection carrying the drive's switched output (plus brake and thermal wires), and a feedback connection carrying the encoder or resolver signals that the whole control loop depends on. The connector family here is largely chosen *for* you — servo motors ship with their receptacles installed, and drive ecosystems sell matched cordsets — so this path is less "pick a family" and more "recognize the family, buy the right halves, and don't sabotage the EMC."
+A servo axis usually needs **two electrical interfaces at the motor**: power for the drive output, brake, and thermal wires; then feedback for the encoder or resolver signals the whole control loop depends on. Most of the family choice has already been made for you because the motor ships with receptacles and the drive ecosystem sells matched cordsets. The real job is recognizing what you have, buying the right halves, and not wrecking the EMC on the way through.
 
 :::note[Deliberately number-free]
 
-Pin counts, currents, and voltage classes below are family-level orientation; every figure that matters comes from the motor's connection diagram, the drive manufacturer's cable specification, and the exact connector datasheet. When this page and the drive manual disagree, the drive manual wins — servo cabling is one of the places where the manufacturer's wiring guide is effectively part of the control design.
+The pin counts, currents, and voltage classes below only get you oriented. The numbers that matter come from the motor connection diagram, the drive manufacturer's cable specification, and the exact connector datasheet. If this page and the drive manual disagree, the drive manual wins. In servo systems, that wiring guide is part of the control design whether people file it that way or not.
 
 :::
 

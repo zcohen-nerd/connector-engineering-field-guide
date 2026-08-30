@@ -8,11 +8,11 @@ sidebar_label: Lifecycle & Procurement
 
 # Lifecycle and Procurement Integrity
 
-The [selection workflow](04-connector-selection-workflow.md) ends with a released design. The part, unfortunately, doesn't hold still after that: manufacturers change platings and factories, discontinue series, and quote 40-week lead times; distributors run dry; lookalikes appear exactly when the genuine article gets scarce. This page is about keeping a released interface **buildable and trustworthy for years** — the discipline that connects [Production reality (§4, Step 4)](04-connector-selection-workflow.md), [What People Forget](what-people-forget.md), and the [red flags](11-red-flags.md) about lead time and casual substitution into one loop.
+The [selection workflow](04-connector-selection-workflow.md) ends with a released design. The connector, unfortunately, doesn't freeze in time just because your drawing did. Manufacturers change platings and factories, discontinue series, and quote 40-week lead times. Distributors run dry. Lookalikes appear right when the genuine part gets scarce. This page is about keeping a released interface **buildable and trustworthy for years**, without procurement having to improvise under deadline pressure.
 
 ## 1. The part you picked will change
 
-Connector products move through a lifecycle, whether or not anyone tells you:
+Connector products move through a lifecycle whether anyone remembers to tell you or not:
 
 | State | What it means for a released design |
 |---|---|
@@ -25,7 +25,7 @@ Connector products move through a lifecycle, whether or not anyone tells you:
 
 *Each state forces a decision, and the cheap ones come early. The LTB window is the last point where the choice is yours rather than the broker market's.*
 
-Two places the state shows up, in [source-hierarchy](06-reading-datasheets.md) order: the **manufacturer's notice** is the record; **distributor lifecycle flags** are useful early hints and nothing more — the same rule as every other distributor-page datum. A released design should also record *when* its datasheets were last checked: a part can go NRND under a design that nobody is watching.
+You'll usually see that state in two places, and they are not equal. The **manufacturer's notice** is the record. A **distributor lifecycle flag** is an early hint and nothing more — the same rule as every other distributor-page claim. Also record *when* somebody last checked the datasheets. A part can quietly go NRND while a released design sits there looking finished.
 
 ## 2. PCN and EOL notices
 

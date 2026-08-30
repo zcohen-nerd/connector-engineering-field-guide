@@ -8,9 +8,9 @@ sidebar_label: Using with an Intern
 
 # How to Use This Guide with an Intern
 
-This site reads fine solo, but it was built with a second use in mind: handing a mechanical or mechatronics intern their first real electromechanical-interface work without either drowning them or letting them cargo-cult a connector choice. This page is the mentor's side of that: what to assign, in what order, and what to check.
+You can read this site solo, but it also works as an onboarding track for a mechanical or mechatronics intern doing their first real interface work. The trick is giving them enough structure to avoid drowning without letting them copy a connector choice they don't understand. This page is the mentor's side: what to assign, when to assign it, and what to look for in the result.
 
-The parts you'll orchestrate: the [30-day learning plan](14-thirty-day-learning-plan.md) (the spine), the [hands-on exercises](13-hands-on-exercises.md) (the reps), the [decision paths](decision-paths/index.md) (guided practice), the [templates](tools/index.md) (the deliverables), and [Source Notes](appendix/source-notes.md) (the discipline — see below, it's the most transferable thing here).
+The pieces are already here: the [30-day learning plan](14-thirty-day-learning-plan.md) is the spine, the [hands-on exercises](13-hands-on-exercises.md) provide the reps, the [decision paths](decision-paths/index.md) give them guardrails, and the [templates](tools/index.md) turn the work into reviewable deliverables. [Source Notes](appendix/source-notes.md) teaches the habit that matters most: knowing what you verified and what you're still assuming.
 
 ## Pick the entry point honestly
 

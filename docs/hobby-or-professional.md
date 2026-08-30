@@ -8,7 +8,7 @@ sidebar_label: Hobby or Professional?
 
 # Hobby or Professional?
 
-Both tracks teach the same core idea — a connector is a controlled interface. The difference is what happens when it fails, where it lives, and who has to build, inspect, or maintain it. Use this table when the [landing-page quick check](index.md) isn't enough.
+Both tracks start from the same idea: a connector is a controlled interface. The split comes down to what happens when it fails, where it lives, and who has to build or fix it. If the [quick check on the homepage](index.md) didn't settle it, use this table.
 
 | Situation | Use hobby guide | Use professional guide |
 |---|---|---|
@@ -28,13 +28,13 @@ Both tracks teach the same core idea — a connector is a controlled interface. 
 
 :::note
 
-The boundary is not about whether a connector is "fancy." It is about consequence of failure, environment, documentation, repeatability, and who has to build or maintain it.
+The boundary isn't whether the connector looks “professional.” It's the consequence of failure, the environment, the documentation burden, and whether somebody other than you has to build or maintain it.
 
 :::
 
-Two practical corollaries:
+Two useful rules fall out of that:
 
-- **Judge interface by interface, not project by project.** A robot's I2C sensor cluster can stay on the hobby track while its battery interface and external cabling graduate — see [When Hobby Connectors Are Not Enough](hobby/when-hobby-is-not-enough.md).
-- **"Maybe" rows usually mean "hobby parts, engineering discipline."** An outdoor LED decoration can keep hobby-class connectors *if* you apply the engineering questions — sealing condition, current calculation, strain relief — from the [selection workflow](04-connector-selection-workflow.md) or the [rugged-on-a-budget path](decision-paths/rugged-on-a-budget.md).
+- **Judge one interface at a time.** A robot's I2C sensor cluster can stay on the hobby track while its battery connection and external cabling graduate. See [When Hobby Connectors Are Not Enough](hobby/when-hobby-is-not-enough.md).
+- **“Maybe” usually means hobby parts with engineering discipline.** An outdoor LED decoration can keep hobby-class connectors *if* you do the real work—current calculation, sealing, strain relief, and a failure check—from the [selection workflow](04-connector-selection-workflow.md) or the [rugged-on-a-budget path](decision-paths/rugged-on-a-budget.md).
 
 Start pages: [Hobby Connector Field Guide](hobby/index.md) · [Professional / Industrial Connector Field Guide](engineering-home.md).

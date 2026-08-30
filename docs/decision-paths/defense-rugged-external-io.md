@@ -8,7 +8,7 @@ sidebar_label: Defense / rugged external I/O
 
 # Pick a connector for defense/rugged external I/O
 
-Harsh-environment external I/O on defense or aerospace hardware — vibration, sealing, EMI, and configuration control all in play.
+This is where all the hard requirements show up at once: external defense or aerospace I/O with vibration, sealing, EMI, keying, backshells, and configuration control in the same conversation. The connector family is only the start; the accessory stack and release discipline are part of the interface too.
 
 ## Use this when
 

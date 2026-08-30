@@ -10,7 +10,7 @@ sidebar_label: Hobby Guide Home
 
 *A practical map through hobby connector chaos: identify, choose, buy, crimp, and avoid the common traps.*
 
-Hobby connector information is messy. Product listings misuse names, photos lie, clone parts blur family boundaries, and "JST" often means almost nothing by itself. This guide is a practical map for identifying, choosing, buying, and crimping connectors for maker, student, 3D printer, LED, RC, sensor, and small-robot projects.
+Hobby connector information is a mess. Listings abuse names, photos lie about scale, clone parts blur family boundaries, and “JST” usually tells you almost nothing by itself. This guide helps you identify what you're holding, buy the right mate, crimp it without inventing new swear words, and know when a cheap hobby connector has reached the end of its lane.
 
 ![Anderson Powerpole housings, loose contacts, wire, and a ratcheting crimper arranged on a workbench](/img/photos/anderson-powerpole-bench.jpg)
 
@@ -18,13 +18,13 @@ Hobby connector information is messy. Product listings misuse names, photos lie,
 
 :::note[Introduced v0.8 — growing every release since]
 
-This track is still growing — its core workflow and a substantial set of family deep-pages are now in place, with the remaining capsule topics and depth work tracked on the [content roadmap](hobby-source-notes.md). The [Professional / Industrial guide](../engineering-home.md) is the longer-established track, and its foundational material (what connectors actually do, anatomy, crimping discipline) applies here too.
+This track is still growing, but the core workflow and the major family deep dives are here. The remaining short topics and depth work live on the [content roadmap](hobby-source-notes.md). The [Professional / Industrial guide](../engineering-home.md) has been around longer, and its fundamentals—what connectors do, how they're built, and what good crimping looks like—still apply here.
 
 :::
 
 ## The workflow that actually works
 
-Hobby connector names are messy, product photos and marketplace titles are not reliable, and "JST" by itself is not enough information. When you face any connector question, run this sequence instead of guessing:
+The names are messy, marketplace titles are unreliable, and “JST” by itself is not an identification. When a mystery connector lands on your bench, run this sequence instead of scrolling until a photo feels right:
 
 1. **Identify the connector family** — not "it looks like a JST," the actual family/series. ([How to identify an unknown connector](identify-unknown-connector.md))
 2. **Measure the pitch** with calipers. ([Pitch: the number that saves you](pitch.md))

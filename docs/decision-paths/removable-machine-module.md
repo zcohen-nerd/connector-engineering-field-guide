@@ -8,7 +8,7 @@ sidebar_label: Removable machine module
 
 # Pick a connector for a removable machine module
 
-A control box, machine section, test-cart module, or panelized subsystem that gets pulled for service — where power, signal, and sometimes data all cross one robust, serviceable interface. This is where **industrial rectangular / Han-style** connectors earn their keep.
+If a control box, machine section, test-cart module, or panelized subsystem gets pulled for service, one confident disconnect beats a fistful of loose plugs. This is where **industrial rectangular / Han-style** connectors earn their keep: power, signal, and sometimes data through one large, serviceable interface.
 
 ## Use this when
 

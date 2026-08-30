@@ -8,11 +8,11 @@ sidebar_label: Board-to-board
 
 # Pick a connector for board-to-board stacking
 
-Two boards that plug directly into each other — stacked, mezzanine, or card-into-backplane — with no wire in between. The [category table in §2](../02-major-connector-categories.md) names this territory; this path walks it. The defining spec is unusual: not current or sealing but **mated stack height**, the mechanical distance between the two boards, which the connector pair must match exactly and which almost every family offers in multiple heights under near-identical part numbers.
+No wires here: two boards plug straight into each other as a stack, mezzanine pair, or card and backplane. The spec that sneaks up on people is **mated stack height**—the exact distance between the boards after mating. Most families offer several heights behind nearly identical part numbers, so “same series” does not mean “same mechanical fit.”
 
 :::note[Basic orientation, deliberately number-free]
 
-This path covers the *basic* board-to-board decision — hobby stacking through industrial mezzanine and classic backplane. No current, cycle, or dimensional values are asserted; every family here publishes mated-height tables, per-pin ratings, and tolerance data, and the exact datasheet is the only source that counts. High-speed design (impedance-controlled mezzanine, modern backplane signal integrity) is beyond this page — know when you've crossed into it, and bring the manufacturer's SI documentation when you do.
+This is the basic map, from hobby stacking headers through industrial mezzanine pairs and classic backplanes. There are no current, cycle, or dimensional values here; those come from the exact family's height tables, per-pin ratings, and tolerance data. Once impedance-controlled mezzanine or modern backplane signal integrity enters the conversation, you've crossed into high-speed design. Bring the manufacturer's SI documentation and the right specialist with you.
 
 :::
 

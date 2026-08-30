@@ -8,7 +8,7 @@ sidebar_label: Rugged Control Box
 
 # Worked Example: Rugged Control Box
 
-[Exercise 1](../13-hands-on-exercises.md) worked end to end: the external connector set for a small sealed control box — 24 VDC input, Ethernet, CAN, four sensors, one motor output, one debug/service port — selected through the [decision paths](../decision-paths/index.md) and documented in the shape the [templates](../tools/index.md) define.
+This is [Exercise 1](../13-hands-on-exercises.md) worked all the way through: a small sealed control box with 24 VDC input, Ethernet, CAN, four sensors, one motor output, and a debug port. We'll run each interface through the [decision paths](../decision-paths/index.md), then turn the result into the kind of paperwork the [templates](../tools/index.md) expect.
 
 :::info[Illustrative composite — not a case report]
 
@@ -18,7 +18,7 @@ The box below is a teaching scenario built on Exercise 1, not a report of any si
 
 :::warning[Read this as reasoning, not a shopping list]
 
-Like the [Selection Packet](connector-selection-packet.md) and the [M12 example](m12-sensor-interface.md), this page teaches *how to decide and document*. Part numbers, counts, and lengths are placeholders (`J-`, `TBD`); a real project replaces every one with an exact, datasheet-verified P/N. No rating on this page is asserted for you.
+Like the [Selection Packet](connector-selection-packet.md) and the [M12 example](m12-sensor-interface.md), this page teaches *how to decide and document*. Part numbers, counts, and lengths marked `J-` or `TBD` are placeholders. A real project replaces every one with an exact, datasheet-verified value. Don't carry any rating from this example into your hardware.
 
 :::
 

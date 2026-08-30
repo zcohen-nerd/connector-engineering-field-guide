@@ -7,7 +7,7 @@ sidebar_label: Quick Reference Tables
 
 # Appendix: Quick-Reference Tables
 
-These are deliberately kept as compact lookup tables — IP ratings (A1), 38999 contact sizes (A2), a family-selection quick guide (A3), and mating-cycle life by family (A4). Use the contents panel to jump between them. Every value is an orientation aid to verify against the source, not a selection rule. For scenario-by-scenario reasoning, see the [Decision Paths](../decision-paths/index.md).
+This is the page to keep open when you need the quick answer: IP ratings (A1), 38999 contact sizes (A2), a family-selection guide (A3), and mating-cycle life (A4). Every value gets you oriented; none of it selects a part for you. Verify the source before using a number, and use the [Decision Paths](../decision-paths/index.md) when you need the reasoning instead of the lookup.
 
 :::caution[Ratings are system-level]
 

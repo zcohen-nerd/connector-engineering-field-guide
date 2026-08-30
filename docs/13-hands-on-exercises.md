@@ -8,9 +8,9 @@ sidebar_label: Hands-On Exercises
 
 # 13. Hands-On Learning Exercises
 
-Connector knowledge is built by doing. Each exercise produces a deliverable that demonstrates real competence.
+You learn connectors by handling real parts and producing real paperwork. Each exercise ends with something another engineer could review—not just a pile of tabs and a vague feeling that M12 is probably involved.
 
-Use [How to Search for Connectors](00-how-to-search-for-connectors.md) as a starting point for Exercise 2 and Exercise 3 so your search terms and filters are deliberate before you start comparing families or decoding real parts.
+For Exercises 2 and 3, start with [How to Search for Connectors](00-how-to-search-for-connectors.md). Get the search terms and filters straight before you compare families or try to decode a real part number.
 
 ## Exercise 1 — Rugged control box connector set
 

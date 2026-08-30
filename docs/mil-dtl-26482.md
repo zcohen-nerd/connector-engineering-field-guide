@@ -12,7 +12,7 @@ MIL-DTL-26482 is a rugged circular connector family you meet often in military, 
 
 :::note[This is a mini deep dive]
 
-This page is orientation-level supplemental material, not one of the numbered canonical sections. It reuses the sourced 26482 figures from [Standards and Families (§3)](03-connector-standards-and-families.md) and the [comparison matrix](tools/connector-comparison-matrix.md). Verify series, contact type, environmental class, and tooling against the exact datasheet and, where qualification matters, the QPL.
+This is a field orientation, not the document you release against. It reuses the sourced 26482 figures from [Standards and Families (§3)](03-connector-standards-and-families.md) and the [comparison matrix](tools/connector-comparison-matrix.md). Before you buy or release anything, verify the series, contact type, environmental class, tooling, and—when qualification matters—the QPL.
 
 :::
 

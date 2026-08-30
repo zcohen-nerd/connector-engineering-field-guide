@@ -8,7 +8,7 @@ sidebar_label: Cable Drawing Template
 
 # Cable Drawing Template
 
-Based on [Exercise 6](../13-hands-on-exercises.md).
+This is the blank version of [Exercise 6](../13-hands-on-exercises.md). Fill it in until somebody other than you can build and test the cable without guessing.
 
 ## Cable endpoints
 

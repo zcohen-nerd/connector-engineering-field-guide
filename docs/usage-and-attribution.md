@@ -8,7 +8,7 @@ sidebar_label: Usage and Attribution
 
 # Usage and Attribution
 
-This guide is intended to be freely shareable as an educational field reference. A few ground rules keep it clean for open-source publication:
+This guide is meant to be shared. A few ground rules keep the open-source version useful without quietly copying material that belongs to somebody else:
 
 - Do not reproduce paid standards tables (e.g. the body of MIL-DTL or IEC documents) in derivative versions of this guide. Reference them and point readers to the source.
 - Do not copy proprietary catalog tables verbatim. Use public manufacturer datasheets and standards references for verification, and summarize in your own words.

@@ -8,13 +8,13 @@ sidebar_label: Harness Inspection Checklist
 
 # Harness Inspection Checklist
 
-A structured pass over a finished (or incoming) connectorized harness, assembled from the guide's own checklists and trap lists: [Selection Workflow §4](../04-connector-selection-workflow.md), [Practical Checklist §10](../10-selection-checklist.md), the [38999 mistakes table §7.9](../07-mil-dtl-38999.md), and [What People Forget](../what-people-forget.md).
+Use this on a finished or incoming harness when “looks fine” isn't an inspection result. It pulls together the guide's build checks and common traps from [Selection Workflow §4](../04-connector-selection-workflow.md), the [Practical Checklist](../10-selection-checklist.md), the [38999 mistakes table](../07-mil-dtl-38999.md), and [What People Forget](../what-people-forget.md).
 
 :::warning[What this checklist is — and is not]
 
-This checklist tells you **what to look at**. It deliberately contains **no acceptance values** — no pull forces, crimp heights, torque numbers, or test voltages. What *passing* looks like comes from the workmanship/acceptance standard your program names (commonly **IPC/WHMA-A-620**, or the program/customer equivalent)[^a620] and from the **manufacturer's application specification for the exact contact system** — never from this page. If you don't know which acceptance standard and application spec apply, that is finding #1.
+This checklist tells you **where to look**. It does **not** invent pull forces, crimp heights, torque numbers, or test voltages. What counts as *passing* comes from the workmanship/acceptance standard your program names (commonly **IPC/WHMA-A-620**, or the program/customer equivalent)[^a620] and the **manufacturer's application specification for the exact contact system**. If you can't name those documents, you already found the first problem.
 
-Scope note: this page is **build/incoming acceptance** — verifying units against a released design. Proving the *design itself* (first article, the qualification test matrix, evidence capture) is the [Connector Qualification Plan Template](connector-qualification-template.md)'s job.
+This page covers **build/incoming acceptance**: does this unit match the released design? Proving the *design itself* is the job of the [Connector Qualification Plan Template](connector-qualification-template.md).
 
 :::
 

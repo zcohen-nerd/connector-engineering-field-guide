@@ -8,13 +8,13 @@ sidebar_label: Micro-Fit 3.0 Deep Dive
 
 # Molex Micro-Fit 3.0: The Internal-Power Workhorse
 
-Micro-Fit 3.0 is the connector this guide keeps recommending the moment wiring gets serious but stays *inside the box*: the standard answer to "[graduate from Dupont](12-consumer-hobby-prototype-connectors.md)" on the hobby side and the internal-power default on the professional side. What makes it worth a deep dive is the property that makes people like it in the first place — **one 3.00 mm crimp-contact system that serves wire-to-board, wire-to-wire, and panel-mount duty interchangeably** — plus two numbers almost nobody reads before designing it in: the terminal-dependent current rating and a mating-cycle figure that surprises everyone.
+Micro-Fit 3.0 is where this guide keeps landing once the wiring gets serious but stays *inside the box*. On the hobby side, it's a sensible way to [graduate from Dupont](12-consumer-hobby-prototype-connectors.md). On the professional side, it's a solid internal-power default. The big appeal is simple: **one 3.00 mm crimp-contact system handles wire-to-board, wire-to-wire, and panel-mount jobs**. The catch is buried in two numbers people routinely skip: current depends on the terminal, and the standard mating-cycle rating is lower than most people expect.
 
-Like the [MIL-DTL-26482](mil-dtl-26482.md) and [DEUTSCH](deutsch.md) pages, this is a supplemental site-only deep dive: family-level, cited to the manufacturer's own literature, and never a substitute for the exact part's datasheet.
+Like the [MIL-DTL-26482](mil-dtl-26482.md) and [DEUTSCH](deutsch.md) pages, this is a supplemental deep dive. The family-level numbers come from Molex's own literature, but your exact part's datasheet is still the release document.
 
 ## 1. What it actually is
 
-The genuine Molex **Micro-Fit 3.0** system: **3.00 mm pitch**, crimp wire terminations, **2–24 circuits in single and dual rows**, polarized housings with a **positive latch**, optional **TPA** (terminal position assurance), a 600 V class, −40 to +105 °C, and **no environmental sealing**.[^microfit] The moving parts of the ordering picture:
+The genuine Molex **Micro-Fit 3.0** system has **3.00 mm pitch**, crimp wire terminations, **2–24 circuits in single and dual rows**, polarized housings with a **positive latch**, optional **TPA** (terminal position assurance), a 600 V class, −40 to +105 °C, and **no environmental sealing**.[^microfit] Here are the ordering pieces people miss:
 
 - **Receptacle housings** (the 43025 class) carry female crimp terminals (the 43030 class); **headers and plug housings** (43045 and kin) complete the pair. Housing, terminal, and header are always separate line items — the same [housing-and-contact discipline](hobby/buying-mating-parts.md) as every crimp family.
 - A full **product specification** governs the system — mating forces, current/temperature behavior, crimp requirements — and it, not the family name, is the release authority for a design.[^microfitps]

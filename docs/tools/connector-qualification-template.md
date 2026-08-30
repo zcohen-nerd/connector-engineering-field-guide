@@ -8,11 +8,11 @@ sidebar_label: Qualification Plan Template
 
 # Connector Qualification Plan Template
 
-The design-level counterpart of the [Harness Inspection Checklist](harness-inspection-checklist.md): where that page verifies *built units* against a released design, this one structures the evidence that the *design itself* — one documented connector configuration — does what the requirements claim. It is assembled from the guide's own material: [configuration control §1.5](../01-what-connectors-do.md), [Reading Datasheets §6](../06-reading-datasheets.md), the [derating discussion in §4](../04-connector-selection-workflow.md), and the [low-level contact page](../low-level-signal-contacts.md).
+The [Harness Inspection Checklist](harness-inspection-checklist.md) asks whether a built unit matches the drawing. This template asks the earlier question: does the *design itself* actually do what the requirements claim? It gives you a place to plan and record the evidence for one documented connector configuration, using the guide's material on [configuration control](../01-what-connectors-do.md), [datasheets](../06-reading-datasheets.md), [derating](../04-connector-selection-workflow.md), and [low-level contacts](../low-level-signal-contacts.md).
 
 :::warning[What this template is — and is not]
 
-This template tells you **what a qualification plan needs to contain and record**. It deliberately contains **no test values, durations, sample sizes, sequences, or acceptance criteria** — those come from the governing specification (the slash sheet or product specification, the program/customer standard, the applicable safety standard) and the contract, never from this page. It names common industry **test-method families** (the EIA-364 series)[^eia364] as orientation for what each test is called, not as a selection: the governing document picks the methods, revisions, conditions, and pass/fail limits. If you cannot name the document that defines "passing," that is finding #1 — stop and resolve it before spending samples.
+This template tells you **what the plan needs to contain and record**. It does **not** make up test values, durations, sample sizes, sequences, or acceptance criteria. Those come from the governing specification, program/customer standard, applicable safety standard, and contract. The EIA-364 test-method families named here[^eia364] help you identify the tests; they don't choose the method, revision, condition, or pass/fail limit for you. If you can't name the document that defines “passing,” stop there and fix that before spending samples.
 
 :::
 

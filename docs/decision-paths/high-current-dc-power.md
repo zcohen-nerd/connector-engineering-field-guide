@@ -8,7 +8,7 @@ sidebar_label: High-current DC power
 
 # Pick a connector for high-current DC power
 
-Motors, batteries, heaters, PDUs — connections where current, heat rise, and touch safety dominate the decision.
+Once you're feeding motors, batteries, heaters, or a PDU, pin count stops being the interesting part. Current, heat rise, fault energy, and touch safety run the decision. This is not the place to round up from a catalog headline and hope the enclosure stays cool.
 
 :::danger[Energized connector safety]
 

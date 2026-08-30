@@ -8,6 +8,8 @@ sidebar_label: Connector Anatomy
 
 # 5. Connector Anatomy
 
+Before a part number makes sense, you need to know which piece you're looking at. “The connector” may mean the shell, insert, contacts, backshell, panel hardware, or the whole assembled interface—and vendors are perfectly happy to sell those as six separate line items.
+
 | Part | Purpose |
 |---|---|
 | Shell | Outer body: structure, mating interface, shielding path, environmental protection, ground reference |

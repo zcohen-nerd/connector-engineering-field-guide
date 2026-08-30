@@ -8,7 +8,7 @@ sidebar_label: RF / GPS / radio
 
 # Pick a connector for an RF, GPS, or radio path
 
-Antenna, GPS, radio, timing, RF test, or video/broadcast coax — a controlled-impedance signal that has to keep its impedance and shielding intact. The goal of this page is to keep a non-RF engineer from treating an RF line like ordinary signal wiring. It is **orientation-level**, not an RF design course.
+RF isn't ordinary signal wiring with a fancier plug. Antenna, GPS, radio, timing, test, and video coax all need a controlled impedance and an intact shield path. This page gives a non-RF engineer enough orientation to route the problem correctly and ask useful questions. It is not a microwave design course.
 
 :::warning
 

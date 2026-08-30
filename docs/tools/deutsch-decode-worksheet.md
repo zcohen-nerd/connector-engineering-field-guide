@@ -8,7 +8,7 @@ sidebar_label: DEUTSCH Decode Worksheet
 
 # DEUTSCH Decode & Tooling Worksheet
 
-Based on [§7 (part-number decode)](../deutsch.md#7-decoding-a-part-number-worked-example) and [§4 (the contact-system trap)](../deutsch.md#4-the-contact-system-trap-solid-vs-stamped-and-formed) of the DEUTSCH deep dive — the reasoning and caveats live there; this page turns them into a form you fill in against *your* part number and TE's current literature.
+The DEUTSCH deep dive explains [how to decode the part number](../deutsch.md#7-decoding-a-part-number-worked-example) and [why the contact line changes the tooling](../deutsch.md#4-the-contact-system-trap-solid-vs-stamped-and-formed). This page turns that into a worksheet for *your* part number and TE's current literature.
 
 :::warning[Read this before decoding]
 

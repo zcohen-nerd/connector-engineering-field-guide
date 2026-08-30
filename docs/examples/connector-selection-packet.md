@@ -12,7 +12,7 @@ This is what "done" looks like: one interface taken from a loose requirement all
 
 :::warning[Read this as reasoning, not a shopping list]
 
-This example teaches *how to decide and document*, not what to buy. Part numbers are placeholders like `J1`, `P1`, and `CONTACT-SIZE16-SKT-EXAMPLE`. A real project replaces every placeholder with an exact, datasheet-verified P/N, and sizes every current against the manufacturer's derating curve. No rating below is asserted for you.
+This example teaches *how to decide and document*, not what to buy. Part numbers like `J1`, `P1`, and `CONTACT-SIZE16-SKT-EXAMPLE` are placeholders. In a real project, replace every one with an exact, datasheet-verified P/N and size every current against the manufacturer's derating curve. None of the example ratings below is yours to reuse.
 
 :::
 

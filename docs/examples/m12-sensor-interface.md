@@ -8,7 +8,7 @@ sidebar_label: M12 Sensor Interface
 
 # Worked Example: M12 Sensor Interface
 
-One machine interface taken from "the sensors need to plug in somewhere" to a documented M12 architecture — the [Industrial sensor](../decision-paths/industrial-sensor.md) and [Rugged Ethernet](../decision-paths/rugged-ethernet.md) decision paths executed on a concrete system, with the [M12 deep dive](../08-m12.md) as the technical backbone.
+“The sensors need to plug in somewhere” is not an interface definition, so this example keeps going until it has a documented M12 architecture. It applies the [Industrial sensor](../decision-paths/industrial-sensor.md) and [Rugged Ethernet](../decision-paths/rugged-ethernet.md) paths to one real machine layout, with the [M12 deep dive](../08-m12.md) supplying the technical detail.
 
 :::info[Illustrative composite — not a case report]
 
@@ -22,7 +22,7 @@ The scenario below is an illustrative composite, informed by a sanitized real-wo
 
 :::warning[Read this as reasoning, not a shopping list]
 
-Like the [Selection Packet](connector-selection-packet.md), this example teaches *how to decide and document*. Part numbers, counts, and lengths are placeholders (`J-`, `TBD`); a real project replaces every one with an exact, datasheet-verified P/N. No rating on this page is asserted for you.
+Like the [Selection Packet](connector-selection-packet.md), this example teaches *how to decide and document*. Part numbers, counts, and lengths marked `J-` or `TBD` are placeholders. A real project replaces every one with an exact, datasheet-verified value. Don't reuse a rating from this page just because it looks close.
 
 :::
 

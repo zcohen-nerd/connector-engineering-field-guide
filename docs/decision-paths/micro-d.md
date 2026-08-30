@@ -8,7 +8,7 @@ sidebar_label: Micro-D / compact high-rel
 
 # Pick a connector for a compact high-reliability internal interface
 
-A dense, lightweight, high-reliability connection inside protected hardware — where size and weight matter more than field-service convenience.
+Use this path when you need a lot of reliable contacts in very little space and the connector can live inside protected hardware. Micro-D buys density and low weight by asking for careful handling, specialized tooling, and a service model that doesn't involve muddy gloves.
 
 ![A microminiature D connector beside a much larger male DE-9 D-sub connector, showing the difference in shell and contact scale](/img/photos/micro-d-and-de9-comparison.jpg)
 

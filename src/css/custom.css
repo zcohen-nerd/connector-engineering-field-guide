@@ -29,6 +29,9 @@
   --ifm-color-primary-lighter:  #3d6094;
   --ifm-color-primary-lightest: #6f8bb4;
 
+  /* The local guide header is taller than the stock Docusaurus navbar. */
+  --ifm-navbar-height: 64px;
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }

@@ -12,13 +12,13 @@ sidebar_label: Engineering Guide Home
 
 :::note[v1.0 — Source-Verified Release]
 
-Technical corrections welcome with sources. This guide is an educational engineering reference. Always verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and program/customer requirements.
+Corrections are welcome—bring sources. This is an educational engineering reference, so verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and your program or customer requirements.
 
 :::
 
-Picking connectors is harder than it should be. The information is scattered across datasheets, standards, catalogs, vendor naming systems, and tribal knowledge. This guide exists to help engineers who are not connector specialists figure out what connector family to start with, what specifications actually matter, what mistakes to avoid, and how to turn "I need a plug here" into a buildable, documented interface.
+Picking connectors is harder than it should be. The useful information is scattered across datasheets, standards, catalogs, vendor naming systems, and whatever the last engineer remembers. This guide pulls that mess into one place. It's for engineers who aren't connector specialists but still need to turn “I need a plug here” into something procurement can buy, manufacturing can build, and a technician can service later.
 
-The goal is not to make you a connector expert. The goal is to help you classify the interface, choose a sane connector family to investigate first, understand what specs matter, avoid common traps, and document the interface properly.
+You don't need to become a connector wizard. You need to classify the interface, pick a sane family to investigate, know which specs matter, spot the usual traps, and document the result well enough that nobody has to reverse-engineer your intent later.
 
 ![A rugged circular flange receptacle beside its matching cable plug, with contacts and coupling hardware visible](/img/photos/mil-dtl-38999-pair.jpg)
 
@@ -32,7 +32,7 @@ A connector is a *controlled interface between subsystems*. It carries power, si
 
 :::warning[Disclaimer]
 
-This guide is educational and intended to teach engineering judgment. It is **not** a substitute for applicable standards, manufacturer datasheets, safety requirements, customer specifications, qualification requirements, or program-specific design rules. Exact connector ratings, part numbers, tooling, assembly instructions, and qualification status must be verified before use in released hardware. **When this guide conflicts with a datasheet, applicable standard, customer requirement, or qualified program requirement, the datasheet / standard / customer requirement wins.**
+This guide teaches engineering judgment. It does **not** replace applicable standards, manufacturer datasheets, safety requirements, customer specifications, qualification requirements, or program-specific design rules. Before anything goes into released hardware, verify the exact ratings, part numbers, tooling, assembly instructions, and qualification status. **If this guide disagrees with a datasheet, applicable standard, customer requirement, or qualified program requirement, the source requirement wins.**
 
 :::
 

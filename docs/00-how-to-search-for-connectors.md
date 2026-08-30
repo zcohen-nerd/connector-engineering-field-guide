@@ -8,11 +8,11 @@ sidebar_label: How to Search for Connectors
 
 # How to Search for Connectors
 
-Connector selection often goes wrong before the datasheet even opens. The search terms are too vague, too brand-specific, or too focused on shape instead of function. This page is about turning a loose need into useful search terms and filters.
+A connector search can go sideways before the first datasheet even opens. “Waterproof 12-pin plug” gets you a wall of unrelated parts, and starting from a brand name can hide better families. The fix is simple: describe the interface and the job, not just the shape in your head.
 
 ## Start with the interface, not the connector
 
-Bad searches usually start with vague phrases such as:
+Bad searches usually sound like this:
 
 - waterproof connector
 - 12 pin connector
@@ -20,7 +20,7 @@ Bad searches usually start with vague phrases such as:
 - aviation plug
 - JST connector
 
-Better searches describe the interface you are trying to build:
+Better searches describe what you're actually building:
 
 - environment
 - connector family
@@ -34,7 +34,7 @@ Better searches describe the interface you are trying to build:
 - cable OD or wire gauge
 - data type
 
-Start by writing down what crosses the boundary, who touches it, how often it is mated, whether it crosses an environmental boundary, and what would go wrong if the wrong cable were plugged in.
+Write down what crosses the boundary, who touches it, how often it gets disconnected, whether it has to keep water or dirt out, and what happens if somebody plugs in the wrong cable. That little bit of homework saves a lot of catalog wandering.
 
 ![Four connector-body examples showing that pin or socket contacts can appear in either a plug or a receptacle](/img/diagrams/pin-socket-plug-receptacle.svg)
 
@@ -56,7 +56,7 @@ Use search terms that combine the family, the use case, and one or two constrain
 
 :::warning
 
-Search terms are only a starting point. The datasheet, applicable standard, and manufacturer documentation still decide whether the part is suitable.
+Search terms only get you to the shortlist. The datasheet, applicable standard, and manufacturer documentation decide whether the part actually belongs in the design.
 
 :::
 

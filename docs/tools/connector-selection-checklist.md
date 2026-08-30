@@ -8,7 +8,7 @@ sidebar_label: Selection Checklist
 
 # Connector Selection Checklist
 
-Based on [Section 10 — Practical Selection Checklist](../10-selection-checklist.md).
+This is the copy-ready version of the [Practical Selection Checklist](../10-selection-checklist.md). Use it before the connector choice hardens into a drawing, a purchase order, and a problem nobody wants to own.
 
 ## Interface definition
 

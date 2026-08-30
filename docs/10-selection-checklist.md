@@ -8,7 +8,7 @@ sidebar_label: Practical Checklist
 
 # 10. Practical Selection Checklist
 
-Use this at work. Adapt to your program; it is a working checklist, not a standard.
+Use this at work. Bend it to fit your program, add the weird local requirements, and delete what truly doesn't apply. It's a working checklist, not a standard—and “not applicable” should be a decision, not a shortcut.
 
 **Interface definition**
 - [ ] What subsystem boundary is this?

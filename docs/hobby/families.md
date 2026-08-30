@@ -8,7 +8,7 @@ sidebar_label: Overview
 
 # Common Hobby Connector Families
 
-Capsule field notes on the families hobby projects actually meet: what the marketplace calls them, what they really are, and what bites. Pitches cited on [JST Is Not One Connector](jst-is-not-one-connector.md) carry sources, and a few capsules below carry their own datasheet-level citations (WAGO's 221 ratings, Molex's FFC pitch classes); everything else here is orientation — **verify the exact part's drawing/datasheet before relying on it**, and treat all current capability as *source needed* unless you're holding the datasheet ([power vs signal](power-vs-signal.md)).
+These are quick field notes on the families hobby projects actually use: what sellers call them, what they really are, and what tends to bite. The JST pitches link back to sourced tables, and a few sections carry their own datasheet citations. Everything else is identification-level guidance. **Check the exact drawing before you trust a fit, and don't trust a current claim unless you're holding the datasheet** ([power vs signal](power-vs-signal.md)).
 
 ## Dupont / 0.1 inch headers
 

@@ -8,7 +8,7 @@ sidebar_label: Overview
 
 # Decision Paths
 
-Scenario-based starting points. Each page walks one common interface from "I need a connector here" to a documented, buildable choice, using the same structure:
+Start with the job in front of you. Each page takes one common “I need a connector here” problem and walks it toward a choice you can document and build:
 
 - **Use this when / Avoid this when** — is this even the right scenario?
 - **Families to start with** — where to point your search first
@@ -17,7 +17,7 @@ Scenario-based starting points. Each page walks one common interface from "I nee
 - **Questions to ask a vendor/FAE**
 - **Example documentation bundle** — what "done" looks like
 
-These pages summarize and cross-link the rest of the guide; they do not replace the deep dives, the datasheet, or the applicable standard. No ratings or part numbers are asserted for you — verify every value against the source.
+These are routing pages, not permission slips. They point you toward useful families and the questions that separate them, then hand you off to the deep dives and source documents. Verify every rating and part number against the real source before you use it.
 
 ![A group of M12 and M8 cordsets and panel receptacles showing several body styles within one industrial interface class](/img/photos/m12-m8-family.jpg)
 

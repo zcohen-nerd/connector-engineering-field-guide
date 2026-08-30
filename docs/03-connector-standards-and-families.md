@@ -10,7 +10,9 @@ sidebar_label: Standards and Families
 
 :::note
 
-Always verify against the *current* version of the applicable standard and the manufacturer's datasheet. Standards get revised; part-number schemas vary between manufacturers. What follows is a framework for thinking, not a substitute for the source document — when this guide and a manufacturer datasheet or standard disagree, the datasheet/standard wins. A catalog rating is not a permission slip — treat every figure in these tables as a screening value, and use the exact datasheet, derating curve, application specification, and program/customer requirement for design release. MIL-DTL-38999 covers miniature high-density environmental circular connectors with removable crimp or hermetic solder contacts; M12 connectors are covered by the IEC 61076-2-x family (e.g. 61076-2-101 for A/B/D codings, 61076-2-109 for X-coded, 61076-2-111 for power codings — sourced on the [M12 deep dive](08-m12.md)); the MIL-DTL-38999 scope and part-number structure are sourced on the [MIL-DTL-38999 deep dive](07-mil-dtl-38999.md).
+Use this page as a map, not release authority. Standards get revised, manufacturers encode part numbers differently, and catalog ratings leave out the conditions that matter. If this guide disagrees with the current standard or datasheet, the source document wins.
+
+Treat every number below as a screening value. A released design still needs the exact datasheet, derating curve, application specification, and program or customer requirement. For orientation: MIL-DTL-38999 covers miniature high-density environmental circular connectors with removable crimp or hermetic solder contacts. M12 connectors live in the IEC 61076-2-x family—for example, -2-101 for A/B/D codings, -2-109 for X-coded, and -2-111 for power codings. The details and sources live on the [38999](07-mil-dtl-38999.md) and [M12](08-m12.md) deep dives.
 
 :::
 

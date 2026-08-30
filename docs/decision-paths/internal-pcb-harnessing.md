@@ -8,7 +8,7 @@ sidebar_label: Internal PCB harnessing
 
 # Pick a connector for internal PCB harnessing
 
-Board-to-wire wiring inside an enclosure — power and signal from a PCB to other assemblies.
+This is the wiring that stays inside the box: power and signals leaving a PCB for fans, switches, motors, batteries, or another assembly. The enclosure protects it from weather, but vibration, bad latches, contact choice, tooling, and service mistakes can still ruin your day.
 
 ## Use this when
 

@@ -8,7 +8,7 @@ sidebar_label: Connector ICD Template
 
 # Connector ICD Template
 
-Based on [Exercise 7](../13-hands-on-exercises.md).
+This is the blank version of [Exercise 7](../13-hands-on-exercises.md). The goal is simple: define the interface well enough that the electrical, mechanical, procurement, and manufacturing teams all build the same thing.
 
 ## Interface identification
 

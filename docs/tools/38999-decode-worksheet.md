@@ -8,7 +8,7 @@ sidebar_label: 38999 Decode Worksheet
 
 # 38999 Part-Number Decode Worksheet
 
-Based on [§7.8 of the MIL-DTL-38999 deep dive](../07-mil-dtl-38999.md) — the worked example and its caveats live there; this page turns them into a form you fill in against *your* part number and *your* manufacturer's catalog.
+The [MIL-DTL-38999 deep dive](../07-mil-dtl-38999.md) explains the reasoning and works through an example. This page strips that down to a worksheet for *your* part number and *your* manufacturer's catalog.
 
 :::warning[Read this before decoding]
 

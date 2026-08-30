@@ -10,7 +10,7 @@ sidebar_label: All Guides
 
 *Practical connector selection without the folklore, forum archaeology, and "looks close enough" nonsense.*
 
-Two guides, one site. Pick the track that matches your project — they cross-link where it matters, and both follow the same rule: **the datasheet, standard, and requirement always win over anything written here.**
+Two guides, one site. Pick the one that matches what you're building. They cross-link where it matters, and they both follow the same rule: **the datasheet, standard, and requirement always win over anything written here.**
 
 <div class="cn-home-gallery" aria-label="Examples of connector topics covered by the field guides">
 <a class="cn-home-gallery-item" href="hobby/families">
@@ -66,8 +66,8 @@ Two guides, one site. Pick the track that matches your project — they cross-li
 | Are you making released drawings, ICDs, or harness documentation? | No | Yes |
 | Does someone else need to build, inspect, or maintain it? | Maybe | Yes |
 
-Still torn? The longer answer is [Hobby or Professional?](hobby-or-professional.md) — the boundary is consequence of failure, environment, and documentation, not how fancy the connector is.
+Still torn? Read [Hobby or Professional?](hobby-or-professional.md). The real dividing line is what failure costs, where the hardware lives, and how tightly it has to be documented—not how fancy the connector looks.
 
-Both tracks share the site's [Source Notes](appendix/source-notes.md) — the transparency dashboard for what is verified, what is judgment, and what is example-only — the [Glossary](glossary.md), and the [Connector Identification Workflow](connector-identification.md).
+Both tracks share the [Source Notes](appendix/source-notes.md)—where the site shows its work—the [Glossary](glossary.md), and the [Connector Identification Workflow](connector-identification.md).
 
-Onboarding someone? [How to Use This Guide with an Intern](using-this-guide-with-an-intern.md) turns the reading order, exercises, and templates into a four-week mentoring program.
+Onboarding someone? [How to Use This Guide with an Intern](using-this-guide-with-an-intern.md) turns the reading, exercises, and templates into a four-week plan you can actually run.

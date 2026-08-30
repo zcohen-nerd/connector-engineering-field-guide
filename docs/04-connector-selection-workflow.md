@@ -8,9 +8,9 @@ sidebar_label: Selection Workflow
 
 # 4. Connector Selection — Think in This Order
 
-Connector selection is multi-variable optimization. An excellent choice on most criteria that fails one critical criterion is still wrong. Work the steps in order — don't start from a connector you like.
+Connector selection is a pile of tradeoffs pretending to be a catalog search. A part can look great on nine criteria and still be completely wrong because it fails the tenth. Work the steps in order, and don't start with a connector you already want to justify.
 
-If you are still trying to turn a vague need into useful search terms, start with [How to Search for Connectors](00-how-to-search-for-connectors.md) before you begin narrowing families.
+If the requirement is still “something waterproof with twelve pins,” stop and use [How to Search for Connectors](00-how-to-search-for-connectors.md) first. You'll get much better results once the interface is defined well enough to search.
 
 :::tip[Unknown part in hand instead of a requirement?]
 

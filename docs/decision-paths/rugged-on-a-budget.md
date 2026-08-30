@@ -8,11 +8,13 @@ sidebar_label: Rugged on a budget
 
 # Pick a connector for rugged-on-a-budget field wiring
 
-The gap between hobby connectors and mil-spec circulars is where most field-robotics wiring actually lives. Sealed automotive and off-road families offer datasheet-rated sealing (IP67/IP68-class, family-dependent) and automotive-grade vibration performance without the cost, tooling, and lead time of MIL-DTL-38999 — *as long as you treat them with the same discipline you would give any sealed connector.*
+Most field-robotics wiring lives in the gap between white hobby plugs and full mil-spec circulars. Sealed automotive and off-road families can give you documented sealing and vibration performance without 38999 cost, tooling, and lead time. The catch is that you still have to treat them like engineered sealed connectors, not nicer-looking hobby parts.
 
 :::note
 
-These are not "toy" connectors. Sealed automotive connector families are often a strong middle ground for prototypes, field equipment, off-road systems, mobile robotics, and non-mission-critical outdoor hardware — much more robust than hobby JST/Dupont-style connectors, without the cost, size, and sourcing burden of full circular military/aerospace families. But do not treat "automotive sealed" as a universal environmental rating: verify the exact connector family, seal system, wire seal range, cavity plugs, temperature range, vibration suitability, fluid exposure, IP rating conditions, and assembly tooling against the manufacturer documentation.
+These aren't toy connectors. They're often the sweet spot for prototypes, field equipment, off-road systems, mobile robots, and outdoor hardware that doesn't need a military/aerospace family.
+
+But “automotive sealed” is not one universal rating. Verify the exact family, seal system, wire-seal range, cavity plugs, temperature range, vibration suitability, fluid exposure, IP-rating conditions, and assembly tooling against the manufacturer's documentation. Yes, the list is long. Water finds the item you skipped.
 
 :::
 

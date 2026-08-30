@@ -8,7 +8,7 @@ sidebar_label: Low-Level Signal Contacts
 
 # Low-Level Signals and Contact Design
 
-The intuition most people bring to contacts is "more current is harder." For the contact *interface*, the opposite is closer to the truth: a contact that happily carries ten amps can be unreliable at ten millivolts. This page explains why — surface films, dry circuits, wetting current, the gold-vs-tin decision, and fretting — and gives you a one-question test for whether a contact system belongs anywhere near your signal.
+Most people assume more current means a harder connector problem. At the contact *interface*, the opposite can be true: a contact that happily carries ten amps may turn flaky at ten millivolts. The reasons are surface films, dry circuits, wetting current, plating, and fretting. We'll unpack those, then use one simple question to decide whether a contact system belongs anywhere near your signal.
 
 It extends the [plating table in §5.1](05-connector-anatomy.md) and the contact-resistance row in [Reading Datasheets §6](06-reading-datasheets.md); the hobby-track version of the boundary is [Power vs Signal](hobby/power-vs-signal.md).
 
@@ -100,7 +100,7 @@ Adding the low-level lens to the [§6 field guide](06-reading-datasheets.md):
 
 ## Source status
 
-The film/dry-circuit/fretting mechanisms and the gold-vs-tin logic are cited to the EIA-364-23 method listings and to manufacturer engineering documents (AMP/Tyco plating whitepapers, Omron relay technical documentation, Samtec's LLCR explainer) — see below. The "lane test" and mitigation orderings are engineering judgment, tracked as heuristics in [Source Notes](appendix/source-notes.md). No universal numeric limits are asserted anywhere on this page: minimum loads, normal forces, plating thicknesses, and cycle lives are properties of exact part numbers and belong to their datasheets.
+The film, dry-circuit, fretting, and gold-vs-tin explanations come from the EIA-364-23 method listings and manufacturer engineering documents listed below. The “lane test” and mitigation order are engineering judgment, tracked as heuristics in [Source Notes](appendix/source-notes.md). There is no universal magic number on this page: minimum loads, normal forces, plating thicknesses, and cycle lives belong to exact part numbers and their datasheets.
 
 ## Sources
 

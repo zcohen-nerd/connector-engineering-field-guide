@@ -8,7 +8,7 @@ sidebar_label: Decision Examples
 
 # 9. Connector Decision Examples
 
-The reasoning is what transfers to your own problems. Use the quick map to jump to a scenario, then read the detail — families, the specs that decide it, what to reject and why, and the mistakes to avoid.
+The useful part here is the reasoning, not the answer in the last column. Jump to the closest scenario, then look at which families made the list, which specs actually decided it, and what got rejected before it became an expensive mistake.
 
 For a step-by-step walkthrough of the most common scenarios, see the [Decision Paths](decision-paths/index.md). Family-level depth behind these choices lives in the deep dives: [MIL-DTL-38999](07-mil-dtl-38999.md), [MIL-DTL-26482](mil-dtl-26482.md), [M12/M8](08-m12.md), [DEUTSCH](deutsch.md), and [Molex Micro-Fit 3.0](micro-fit.md).
 

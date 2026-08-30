@@ -8,7 +8,7 @@ sidebar_label: Decision Guide
 
 # Hobby Connector Decision Guide
 
-Starting points, not verdicts — each row assumes you'll [identify properly](identify-unknown-connector.md), [measure the pitch](pitch.md), and verify the exact part before committing. No current ratings are asserted here; that's the datasheet's job ([power vs signal](power-vs-signal.md)).
+This table gets you into the right neighborhood; it doesn't pick the house. [Identify the family](identify-unknown-connector.md), [measure the pitch](pitch.md), and verify the exact part before you commit. Current ratings stay out of this table because they belong to the real contact, wire, and datasheet ([power vs signal](power-vs-signal.md)).
 
 ![Three wiring examples contrasting a small signal connector, the same small connector overloaded with motor current, and a fused current-rated power connector](/img/diagrams/hobby-power-vs-signal.svg)
 

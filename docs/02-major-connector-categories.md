@@ -8,7 +8,7 @@ sidebar_label: Major Connector Categories
 
 # 2. Major Connector Categories
 
-Scope your search by category before diving into specific families. Each category optimizes for different axes.
+Before you pick a family, get into the right category. Circular, rectangular, board-to-wire, RF, and high-current connectors solve different problems; treating them as one giant catalog is how you end up comparing parts that were never competing in the first place.
 
 | Category | Typical use | Rugged / professional examples | Less suitable when |
 |---|---|---|---|

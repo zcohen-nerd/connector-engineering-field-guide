@@ -16,6 +16,10 @@ The scenario below is an illustrative composite, informed by a sanitized real-wo
 
 :::
 
+![A group of M12 and M8 industrial cordsets and panel receptacles in several body and cable-exit styles](/img/photos/m12-m8-family.jpg)
+
+*The worked example standardizes on M12, but the physical ecosystem still contains panel receptacles, molded cordsets, field-wireable bodies, and different cable exits. The exact device, coding, mounting, and service plan choose among them. Photo: [Riep.](https://commons.wikimedia.org/wiki/File:M12_-_A.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons.*
+
 :::warning[Read this as reasoning, not a shopping list]
 
 Like the [Selection Packet](connector-selection-packet.md), this example teaches *how to decide and document*. Part numbers, counts, and lengths are placeholders (`J-`, `TBD`); a real project replaces every one with an exact, datasheet-verified P/N. No rating on this page is asserted for you.

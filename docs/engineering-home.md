@@ -20,6 +20,10 @@ Picking connectors is harder than it should be. The information is scattered acr
 
 The goal is not to make you a connector expert. The goal is to help you classify the interface, choose a sane connector family to investigate first, understand what specs matter, avoid common traps, and document the interface properly.
 
+![A rugged circular flange receptacle beside its matching cable plug, with contacts and coupling hardware visible](/img/photos/mil-dtl-38999-pair.jpg)
+
+*A rugged circular is not just a shell with enough contacts: the insert arrangement, keying, coupling, backshell, contacts, and mating half all belong to the controlled interface. Photo: [Abaillieul](https://commons.wikimedia.org/wiki/File:38999_connector_nickel-teflon.jpg), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), via Wikimedia Commons.*
+
 :::note[Core mental model]
 
 A connector is a *controlled interface between subsystems*. It carries power, signals, and data; survives the environment; defines the service boundary; and becomes a configuration-controlled item in your released design baseline.

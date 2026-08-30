@@ -25,8 +25,13 @@ Occasional programming, debug, or service access — used at a bench or in maint
 - **[Micro-D](micro-d.md)** or **MIL-grade D-sub** for a benign, protected service port.
 - **[Sealed service M12](../08-m12.md)** or a **[38999 maintenance connector](../07-mil-dtl-38999.md)** if the port is external.
 - **USB-C only behind a cover**, never as a bare exposed panel port — the hobby track's [USB-C power page](../hobby/usb-c-power.md) covers the connector's electrical side.
+- **8P8C modular (often called RJ45)** for protected console or service access only when the pinout and use are explicit. Its familiar Ethernet appearance invites the wrong cable, so do not repurpose it casually or place hazardous/non-Ethernet signals where a network cable can reach.
 - **Push-pull latching circulars (LEMO / ODU / Fischer class)** — the premium test/medical/broadcast quick-disconnect: self-latching, compact, high-cycle — at a price class of its own. Know them on sight, and specify them where cycle count and one-handed mating justify the cost.
 - **On vehicles, the diagnostic port is already standardized** — OBD-II / SAE J1962 on cars and light trucks, the 9-pin J1939 DEUTSCH HD10 on heavy equipment (see the [DEUTSCH deep dive](../deutsch.md)). Match the standard; don't invent a port.
+
+![A clear 8P8C modular plug on a blue patch cable, with the eight contacts and latch visible](/img/photos/rj45-patch-cable.webp)
+
+*Familiarity is both the attraction and the hazard: this 8P8C plug looks like ordinary Ethernet, so a non-Ethernet service use needs explicit labeling, pinout control, and a misconnection analysis. Photo: [Devcore](https://commons.wikimedia.org/wiki/File:RJ45.jpg), [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), via Wikimedia Commons. Resized and converted to WebP.*
 
 See [Decision Examples](../09-decision-examples.md).
 

@@ -10,6 +10,10 @@ sidebar_label: Decision Guide
 
 Starting points, not verdicts — each row assumes you'll [identify properly](identify-unknown-connector.md), [measure the pitch](pitch.md), and verify the exact part before committing. No current ratings are asserted here; that's the datasheet's job ([power vs signal](power-vs-signal.md)).
 
+![Three wiring examples contrasting a small signal connector, the same small connector overloaded with motor current, and a fused current-rated power connector](/img/diagrams/hobby-power-vs-signal.svg)
+
+*Choose from the load outward: signal and power paths may look similar on a bench, but current, contact resistance, wire gauge, keying, and fusing make them different connector problems.*
+
 | You're wiring… | Start by looking at | The caveat that decides it |
 |---|---|---|
 | I2C sensors to a dev board | Qwiic / STEMMA QT (SH-style) ecosystem | stay inside one ecosystem; Grove is different |

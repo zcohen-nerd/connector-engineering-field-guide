@@ -22,6 +22,10 @@ A real connector **family** (or series) is a system defined by a manufacturer dr
 
 Pick any one piece from a different family and the system quietly breaks: contacts that back out of the housing, latches that don't quite lock, "fits but intermittent" joints that fail when the project is on a shelf across the room.
 
+![Diagram of an empty connector housing plus a separate open-barrel crimp contact, labeled as two distinct part numbers from the same family](/img/diagrams/hobby-housing-vs-contact.svg)
+
+*A housing and its contacts are separate purchases. Both must belong to the same family, and the contact still has to match the wire range and approved crimp process.*
+
 ## Why vibes fail
 
 - **Lookalikes abound.** Several families share a near-identical white-nylon-with-a-latch aesthetic at slightly different pitches. Your eyes cannot tell 2.0 mm from 2.5 mm across a photo — [calipers can](pitch.md).

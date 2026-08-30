@@ -19,6 +19,10 @@ Scenario-based starting points. Each page walks one common interface from "I nee
 
 These pages summarize and cross-link the rest of the guide; they do not replace the deep dives, the datasheet, or the applicable standard. No ratings or part numbers are asserted for you — verify every value against the source.
 
+![A group of M12 and M8 cordsets and panel receptacles showing several body styles within one industrial interface class](/img/photos/m12-m8-family.jpg)
+
+*A decision path starts with the job, then narrows the family and configuration. Even the familiar M8/M12 sensor ecosystem spans different shell sizes, cable exits, and mounting styles. Photo: [Riep.](https://commons.wikimedia.org/wiki/File:M12_-_A.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons.*
+
 | Scenario | Start here |
 |---|---|
 | Sealed sensor/actuator cable in factory or field automation | [Industrial sensor](industrial-sensor.md) |

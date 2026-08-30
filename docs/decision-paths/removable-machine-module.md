@@ -33,6 +33,10 @@ A control box, machine section, test-cart module, or panelized subsystem that ge
 
 Termination is available in **crimp, screw, or cage-clamp**; coupling is usually a **lever or single/double lever lock**. Family-level current, voltage, and mating-cycle figures for the Han E insert are in the sourced [comparison matrix](../tools/connector-comparison-matrix.md) — verify the exact insert/hood datasheet.
 
+![An open 10-pole heavy-duty rectangular cable connector showing the pin insert, protective metal shell, and cable entry](/img/photos/heavy-duty-10-pole-connector.webp)
+
+*A representative heavy-duty rectangular connector with the hood open. The insert, contacts, hood/housing, latch hardware, cable entry, and mating half are separate configuration items; a complete interface has to specify all of them. Photo: [Carnby](https://commons.wikimedia.org/wiki/File:10-pole_heavy_duty_connector.jpg), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), via Wikimedia Commons. Resized and converted to WebP.*
+
 ## Search terms
 
 - `industrial rectangular connector hood housing insert`

@@ -37,6 +37,10 @@ Pin counts, currents, and voltage classes below are family-level orientation; ev
 - **"One-cable" servo connections** — several ecosystems now run digital feedback inside the power cable (single-connector motors). Treat these as proprietary drive-ecosystem interfaces: follow the drive manufacturer's cable and connector spec exactly.
 - **M12-class** for small motors/steppers, as above.
 
+![A 16-position M23 circular connector with a metal body, threaded coupling nut, and dense signal-contact insert](/img/photos/m23-16-pin-circular-connector.webp)
+
+*A 16-position M23-class circular connector showing the family’s threaded coupling and dense signal insert. The familiar shell does not establish the insert, keying, pinout, or motor compatibility; the motor and drive documentation still decide those. Photo: [Phiarc](https://commons.wikimedia.org/wiki/File:M23_16_pin_circular_connector.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons. Resized and converted to WebP.*
+
 ![Schematic of a servo motor connected to its drive by two separate shielded cables — power and feedback — with 360-degree shield termination at both ends and physical separation between the runs](/img/diagrams/motor-feedback-cabling.svg)
 
 *The layout that works: two shielded cables, 360° shield termination at both ends per the drive manual, and physical separation between the switched power run and the feedback run.*

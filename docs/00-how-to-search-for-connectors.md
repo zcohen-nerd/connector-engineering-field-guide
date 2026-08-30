@@ -36,6 +36,10 @@ Better searches describe the interface you are trying to build:
 
 Start by writing down what crosses the boundary, who touches it, how often it is mated, whether it crosses an environmental boundary, and what would go wrong if the wrong cable were plugged in.
 
+![Four connector-body examples showing that pin or socket contacts can appear in either a plug or a receptacle](/img/diagrams/pin-socket-plug-receptacle.svg)
+
+*Search body style and contact gender separately. “Plug,” “receptacle,” “pin,” and “socket” describe different attributes; collapsing them into “male” or “female connector” throws away useful search information.*
+
 ## Search term patterns
 
 Use search terms that combine the family, the use case, and one or two constraints:

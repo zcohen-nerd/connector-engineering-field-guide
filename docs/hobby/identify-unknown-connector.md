@@ -29,6 +29,10 @@ The mystery connector — on a salvaged board, a prewired LED string, a drone pa
 11. **Compare manufacturer drawings, not just photos.** Photos lie about scale; a dimensioned drawing either matches your calipers or it doesn't.
 12. **Buy test samples before committing** to a bulk order or wiring a whole project.
 
+![Diagram showing pitch measured across several contact intervals, then divided by the number of intervals](/img/diagrams/hobby-pitch-measurement.svg)
+
+*Measure across multiple contact intervals and divide. The longer span reduces the effect of jaw placement and makes nearby pitch families easier to distinguish.*
+
 ## Search query examples
 
 ```text

@@ -12,6 +12,10 @@ sidebar_label: Hobby Guide Home
 
 Hobby connector information is messy. Product listings misuse names, photos lie, clone parts blur family boundaries, and "JST" often means almost nothing by itself. This guide is a practical map for identifying, choosing, buying, and crimping connectors for maker, student, 3D printer, LED, RC, sensor, and small-robot projects.
 
+![Anderson Powerpole housings, loose contacts, wire, and a ratcheting crimper arranged on a workbench](/img/photos/anderson-powerpole-bench.jpg)
+
+*The real system is larger than the visible plastic: housing, contact, wire range, mating half, and tooling all have to agree. Photo: [4dtext](https://commons.wikimedia.org/wiki/File:Powerpole_stuff.jpg), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), via Wikimedia Commons.*
+
 :::note[Introduced v0.8 — growing every release since]
 
 This track is still growing — its core workflow and a substantial set of family deep-pages are now in place, with the remaining capsule topics and depth work tracked on the [content roadmap](hobby-source-notes.md). The [Professional / Industrial guide](../engineering-home.md) is the longer-established track, and its foundational material (what connectors actually do, anatomy, crimping discipline) applies here too.

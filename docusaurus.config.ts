@@ -4,7 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Connector Field Guides',
-  tagline: 'Practical connector selection for hobby projects and engineered hardware.',
+  tagline:
+    'Practical connector selection for hobby projects and engineered hardware.',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -19,12 +20,16 @@ const config: Config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'throw',
 
   // CRITICAL: .md files use CommonMark parser, not MDX v3.
   // Required to preserve <!-- TODO: source/verify --> HTML comments
   // without MDX parse errors.
   markdown: {
     format: 'detect',
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
   },
 
   // Icons + a minimal, non-PWA web manifest (display: "browser", no service
@@ -75,9 +80,12 @@ const config: Config = {
       projectBadge: 'A zcohen-nerd technical guide',
       // Keep the project URLs canonical for the header's current-project state
       // and the shared footer links.
-      hubUrl: 'https://zcohen-nerd.github.io/connector-engineering-field-guide/',
-      projectUrl: 'https://zcohen-nerd.github.io/connector-engineering-field-guide/',
-      repoUrl: 'https://github.com/zcohen-nerd/connector-engineering-field-guide',
+      hubUrl:
+        'https://zcohen-nerd.github.io/connector-engineering-field-guide/',
+      projectUrl:
+        'https://zcohen-nerd.github.io/connector-engineering-field-guide/',
+      repoUrl:
+        'https://github.com/zcohen-nerd/connector-engineering-field-guide',
       attribution: 'A zcohen-nerd technical guide by Zac Cohen.',
       isHub: false,
       // Local primary navigation lives in src/theme/Navbar. Keep this field for

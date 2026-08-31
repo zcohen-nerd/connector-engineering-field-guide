@@ -1,0 +1,9 @@
+{
+  "_comment": "Budgets ~15% above the verified 2026-08 baseline; ratchet down after any bundle optimisation (see CONTRIBUTING.md).",
+  "routes": ["/", "/07-mil-dtl-38999", "/404.html"],
+  "initialJsGzipKB": 175,
+  "initialCssGzipKB": 22,
+  "allJsRawKB": 2850,
+  "criticalHeadAssets": 6,
+  "perRouteInlineMediaKB": {"default": 1200}
+}

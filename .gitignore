@@ -3,3 +3,10 @@ site/
 node_modules/
 build/
 .docusaurus/
+
+# Quality-gate tooling output
+coverage/
+playwright-report/
+playwright/.cache/
+test-results/
+reports/quality/

@@ -111,7 +111,7 @@
 
 .cn-home-gallery-credit {
   padding: 0 0.75rem 0.65rem;
-  color: var(--ifm-color-emphasis-600);
+  color: var(--ifm-color-emphasis-700);
   font-size: 0.65rem;
   line-height: 1.25;
 }
@@ -186,7 +186,7 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--ifm-color-emphasis-600);
+  color: var(--ifm-color-emphasis-700);
   margin-bottom: 0.4rem;
 }
 
@@ -268,4 +268,17 @@
 .cn-footer-license code {
   background: rgba(255, 255, 255, 0.08);
   color: inherit;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   WCAG 2.4.1 / SC 1.4.1 — links inside running prose must be distinguishable
+   without relying on colour. Underline content links in paragraphs, list items,
+   and table cells. Standalone link components (cards, buttons, the homepage
+   gallery tiles) opt out through their own `text-decoration: none` rules.
+   ───────────────────────────────────────────────────────────────────────────── */
+.markdown p a,
+.markdown li a,
+.markdown td a,
+.cn-home-gallery-note a {
+  text-decoration: underline;
 }

@@ -242,3 +242,30 @@
     text-align: center;
   }
 }
+
+/* Guide-specific dual-license strip below the shared brand footer.
+   See src/theme/Footer/index.tsx. */
+.cn-footer-license {
+  background: var(--ifm-footer-background-color, #0b0f14);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  padding: 0.9rem 1rem;
+  text-align: center;
+}
+
+.cn-footer-license p {
+  margin: 0 auto;
+  max-width: 60rem;
+}
+
+.cn-footer-license a {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: underline;
+}
+
+.cn-footer-license code {
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+}

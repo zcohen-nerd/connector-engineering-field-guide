@@ -19,6 +19,7 @@
 //   package-lock.json               top-level + root-package versions
 //   .github/CITATION.cff            version + date-released (date: bump mode only)
 //   README.md                       **Status:** line (keeps its trailing badge text)
+//   docs/index.md                   :::note[<status>] banner (site homepage)
 //   docs/engineering-home.md        :::note[<status>] banner
 //   docs/appendix/source-notes.md   **Status: <status>** line
 //
@@ -64,6 +65,12 @@ const SITES = [
     locate: /^\*\*Status:\*\* (.+?)(?: ·.*)?$/m,
     render: (d, n) => null, // handled specially to preserve the trailing badge
     extract: (m) => ({ status: m[1].trim() }),
+  },
+  {
+    file: 'docs/index.md',
+    locate: /^:::note\[(v\d+\.\d+[^\]]*)\]$/m,
+    render: (d, n) => `:::note[${d} ${EM} ${n}]`,
+    extract: (m) => ({ status: m[1] }),
   },
   {
     file: 'docs/engineering-home.md',

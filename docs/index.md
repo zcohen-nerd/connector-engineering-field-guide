@@ -12,6 +12,12 @@ sidebar_label: All Guides
 
 Two guides, one site. Pick the one that matches what you're building. They cross-link where it matters, and they both follow the same rule: **the datasheet, standard, and requirement always win over anything written here.**
 
+:::note[v1.0 — Source-Verified Release]
+
+The source-verification milestone shipped with v1.0; the guide is continuously reviewed after it. [Source Notes](appendix/source-notes.md) is the standing record of what is verified, what is engineering judgment, and what you still owe your own hardware. Corrections — with sources — are welcome.
+
+:::
+
 <div class="cn-home-gallery" aria-label="Examples of connector topics covered by the field guides">
 <a class="cn-home-gallery-item" href="hobby/families">
 <img src="img/photos/zif-connector-ffc.jpg" alt="Two flat-flex cables with exposed contacts in front of matching ZIF board connectors" />

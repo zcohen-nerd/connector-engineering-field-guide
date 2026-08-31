@@ -58,3 +58,9 @@ See [`.github/CONTRIBUTING.md`](.github/CONTRIBUTING.md) for the full source-dis
 When reusing material, credit: *A zcohen-nerd technical guide by Zac Cohen.*
 
 > GitHub may display a single license for the repository based on the `LICENSE` file. The dual-license split above is authoritative — content is CC BY 4.0, code is MIT.
+
+## Quality gates
+
+Formatting, lint, link, accessibility, responsive, and bundle-budget checks — and
+every local + CI command — are documented in
+[.github/CONTRIBUTING.md](.github/CONTRIBUTING.md).

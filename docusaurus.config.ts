@@ -4,7 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Connector Field Guides',
-  tagline: 'Practical connector selection for hobby projects and engineered hardware.',
+  tagline:
+    'Practical connector selection for hobby projects and engineered hardware.',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -19,13 +20,48 @@ const config: Config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'throw',
 
   // CRITICAL: .md files use CommonMark parser, not MDX v3.
   // Required to preserve <!-- TODO: source/verify --> HTML comments
   // without MDX parse errors.
   markdown: {
     format: 'detect',
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
   },
+
+  // Icons + a minimal, non-PWA web manifest (display: "browser", no service
+  // worker). Docusaurus already emits <link rel="icon"> from `favicon`.
+  // hrefs carry the baseUrl prefix because headTags entries are not
+  // auto-prefixed. Per-doc TechArticle JSON-LD lives in
+  // src/theme/DocItem/Layout/index.tsx.
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        href: '/connector-engineering-field-guide/apple-touch-icon.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'manifest',
+        href: '/connector-engineering-field-guide/site.webmanifest',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {name: 'theme-color', content: '#0a1428'},
+    },
+    // Search Console verification — paste the token from Google Search Console /
+    // Bing Webmaster Tools and uncomment, then rebuild. See
+    // SEARCH-CONSOLE-CHECKLIST.md. (No console change has been made.)
+    // {tagName: 'meta', attributes: {name: 'google-site-verification', content: 'REPLACE_ME'}},
+    // {tagName: 'meta', attributes: {name: 'msvalidate.01', content: 'REPLACE_ME'}},
+  ],
 
   i18n: {
     defaultLocale: 'en',
@@ -44,9 +80,12 @@ const config: Config = {
       projectBadge: 'A zcohen-nerd technical guide',
       // Keep the project URLs canonical for the header's current-project state
       // and the shared footer links.
-      hubUrl: 'https://zcohen-nerd.github.io/connector-engineering-field-guide/',
-      projectUrl: 'https://zcohen-nerd.github.io/connector-engineering-field-guide/',
-      repoUrl: 'https://github.com/zcohen-nerd/connector-engineering-field-guide',
+      hubUrl:
+        'https://zcohen-nerd.github.io/connector-engineering-field-guide/',
+      projectUrl:
+        'https://zcohen-nerd.github.io/connector-engineering-field-guide/',
+      repoUrl:
+        'https://github.com/zcohen-nerd/connector-engineering-field-guide',
       attribution: 'A zcohen-nerd technical guide by Zac Cohen.',
       isHub: false,
       // Local primary navigation lives in src/theme/Navbar. Keep this field for

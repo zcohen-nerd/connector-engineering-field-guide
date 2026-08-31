@@ -1,0 +1,12 @@
+# Connector Field Guides — https://zcohen-nerd.github.io/connector-engineering-field-guide/
+#
+# Served by GitHub Pages at:
+#   https://zcohen-nerd.github.io/connector-engineering-field-guide/robots.txt
+# The authoritative host-level robots.txt for zcohen-nerd.github.io is owned by
+# the root site; this file states this project's crawl intent for tools that
+# also read the subpath copy, and carries the correct sitemap URL.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://zcohen-nerd.github.io/connector-engineering-field-guide/sitemap.xml

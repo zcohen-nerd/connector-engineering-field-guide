@@ -1,0 +1,13 @@
+{
+  "name": "Connector Field Guides",
+  "short_name": "Connector Guide",
+  "description": "Two connector field guides — a hobby track and a professional/industrial track — for selection, specification, and interface documentation.",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#0a1428",
+  "theme_color": "#0a1428",
+  "icons": [
+    {"src": "img/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "img/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

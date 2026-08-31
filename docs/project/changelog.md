@@ -1,6 +1,7 @@
 ---
 id: changelog
 title: Changelog
+description: "Release history for the Connector Field Guides, from the early betas through the v1.0 Source-Verified Release."
 slug: /changelog
 ---
 

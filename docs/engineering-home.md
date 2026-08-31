@@ -12,7 +12,7 @@ sidebar_label: Engineering Guide Home
 
 :::note[v1.0 — Source-Verified Release]
 
-Corrections are welcome—bring sources. This is an educational engineering reference, so verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and your program or customer requirements.
+The source-verification milestone shipped with v1.0, and the guide is **continuously reviewed** after it — the [Source Notes](appendix/source-notes.md) dashboard is the standing record. Corrections are welcome—bring sources. This is an educational engineering reference, so verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and your program or customer requirements.
 
 :::
 

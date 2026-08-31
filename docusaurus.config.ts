@@ -27,6 +27,37 @@ const config: Config = {
     format: 'detect',
   },
 
+  // Icons + a minimal, non-PWA web manifest (display: "browser", no service
+  // worker). Docusaurus already emits <link rel="icon"> from `favicon`.
+  // hrefs carry the baseUrl prefix because headTags entries are not
+  // auto-prefixed. Per-doc TechArticle JSON-LD lives in
+  // src/theme/DocItem/Layout/index.tsx.
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        href: '/connector-engineering-field-guide/apple-touch-icon.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'manifest',
+        href: '/connector-engineering-field-guide/site.webmanifest',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {name: 'theme-color', content: '#0a1428'},
+    },
+    // Search Console verification — paste the token from Google Search Console /
+    // Bing Webmaster Tools and uncomment, then rebuild. See
+    // SEARCH-CONSOLE-CHECKLIST.md. (No console change has been made.)
+    // {tagName: 'meta', attributes: {name: 'google-site-verification', content: 'REPLACE_ME'}},
+    // {tagName: 'meta', attributes: {name: 'msvalidate.01', content: 'REPLACE_ME'}},
+  ],
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],

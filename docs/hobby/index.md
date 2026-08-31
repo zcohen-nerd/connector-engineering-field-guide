@@ -16,9 +16,9 @@ Hobby connector information is a mess. Listings abuse names, photos lie about sc
 
 *The real system is larger than the visible plastic: housing, contact, wire range, mating half, and tooling all have to agree. Photo: [4dtext](https://commons.wikimedia.org/wiki/File:Powerpole_stuff.jpg), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), via Wikimedia Commons.*
 
-:::note[Introduced v0.8 — growing every release since]
+:::note[Part of the v1.0 — Source-Verified Release]
 
-This track is still growing, but the core workflow and the major family deep dives are here. The remaining short topics and depth work live on the [content roadmap](hobby-source-notes.md). The [Professional / Industrial guide](../engineering-home.md) has been around longer, and its fundamentals—what connectors do, how they're built, and what good crimping looks like—still apply here.
+This track joined at v0.8 and keeps expanding under the same source discipline as the rest of the guide; the core workflow and the major family deep dives are in place, and the remaining short topics are tracked in [Hobby Source Notes](hobby-source-notes.md). The [Professional / Industrial guide](../engineering-home.md) has been around longer, and its fundamentals—what connectors do, how they're built, and what good crimping looks like—still apply here.
 
 :::
 

@@ -14,7 +14,7 @@ This guide is meant to be shared. A few ground rules keep the open-source versio
 - Do not copy proprietary catalog tables verbatim. Use public manufacturer datasheets and standards references for verification, and summarize in your own words.
 - Manufacturer names, standards, trademarks, and connector family names (Amphenol, Glenair, Souriau, ITT Cannon, TE, Molex, JST, Harting, Phoenix Contact, WAGO, Weidmüller, Anderson, Harwin, Omnetics, and others) remain the property of their respective owners and are used here only for identification and education.
 
-See [Source Notes](appendix/source-notes.md) for the list of claims that need source verification before v1.0 — before relying on these values in released hardware.
+See [Source Notes](appendix/source-notes.md) — the guide's standing source-status dashboard — for what is verified, what is engineering judgment, what is example-only, and the per-design checks you still owe your own hardware before relying on any value in a released design.
 
 ## Photographs and diagrams
 

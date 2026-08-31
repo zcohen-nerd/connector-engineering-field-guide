@@ -17,7 +17,7 @@ The guide can help you ask better questions; it can't release hardware for you. 
 
 :::
 
-Release history lives in the [changelog](../project/changelog.md). v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields. v0.8 split the site into hobby and professional tracks. v0.9 expanded the hobby track; v0.10 hardened sourcing and added release tooling; v1.0 completed the sourcing milestone — every closable row below is closed, resolved as policy, or explicitly deferred by recorded decision.
+Release history lives in the [changelog](../project/changelog.md). v0.7 added source hierarchy guidance, evidence fields in templates, tighter sealed-automotive language, system-level rating warnings, shield-termination nuance, and RF/fiber decision fields. v0.8 split the site into hobby and professional tracks. v0.9 expanded the hobby track; v0.10 hardened sourcing and added release tooling; **v1.0 shipped the sourcing milestone** — every closable row below is closed, resolved as policy, or explicitly deferred by recorded decision — and the guide is **continuously reviewed** after it: this dashboard and the per-page Sources sections are re-checked each audit.
 
 ## Hobby connector source status
 
@@ -133,11 +133,11 @@ The following are always example-only, even where the family figure is verified 
 - Voltage/current figures quoted from standard listings (4 A / 250 V A-coded, 16 A / 630 V power codings, 600/1000 V 26482 classes) — tied to the cited edition and configuration, not universal ratings.
 - The RF and fiber minimum-decision-field tables (§2 and the RF path) — process aids listing what to capture; they assert no performance values.
 
-## 4. Needs source before v1.0
+## 4. Source backlog and standing warnings
 
-The explicit backlog. These gated the v1.0 "source verified" milestone — **completed with the v1.0 release**: every closable row below is closed, resolved as standing policy, or explicitly deferred by recorded decision, and the section stays as the milestone record and the post-1.0 backlog. They are the places where the guide relies on family-level sources, cautious wording, or no number at all, and where released-hardware use demands the exact document.
+The explicit backlog. These rows gated the v1.0 "source-verified" milestone, and **that milestone shipped with the v1.0 release**: every closable row below is now closed, resolved as standing policy, or explicitly deferred by recorded owner decision. The section stays as the milestone record and the continuously-reviewed post-1.0 backlog. They are the places where the guide relies on family-level sources, cautious wording, or no number at all, and where released-hardware use demands the exact document.
 
-Two kinds of rows live here, and "done" means something different for each (clarified audit-2026-08): **closable rows**, where a better public source exists and needs to be found and cited — these can and should hit zero before v1.0 — and rows marked **per-design — permanent**, scoped per exact part / per assembly / per contact system, which no citation can close for *your* hardware. For those, the guide’s obligation is that every affected page carries the verify-the-exact-document hedge (re-verified audit-2026-08); they stay on this list as standing warnings, not unfinished work.
+Two kinds of rows live here, and "done" means something different for each (clarified audit-2026-08): **closable rows**, where a better public source exists and needs to be found and cited — these reached zero at v1.0 — and rows marked **per-design — permanent**, scoped per exact part / per assembly / per contact system, which no citation can close for *your* hardware. For those, the guide’s obligation is that every affected page carries the verify-the-exact-document hedge (re-verified audit-2026-08); they stay on this list as standing warnings, not unfinished work.
 
 | Priority | Item | Pages affected | Source needed | Risk if unsourced | Notes |
 | --- | --- | --- | --- | --- | --- |

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -31,7 +31,8 @@ function ConnectorMark({className = ''}) {
       height="38"
       viewBox="0 0 38 38"
       aria-hidden="true"
-      focusable="false">
+      focusable="false"
+    >
       <path
         d="M3.5 10.5h12l3.5 4v9l-3.5 4h-12z"
         fill="none"
@@ -191,7 +192,8 @@ export default function Navbar() {
           'navbar',
           styles.header,
           isHomepage ? styles.headerHome : styles.headerCompact,
-        ].join(' ')}>
+        ].join(' ')}
+      >
         <div className={styles.measure}>
           <div className={styles.mainRow}>
             {!mobileSidebar.disabled && (
@@ -200,15 +202,20 @@ export default function Navbar() {
                 className={styles.sidebarToggle}
                 aria-label="Toggle guide contents"
                 aria-expanded={mobileSidebar.shown}
-                onClick={mobileSidebar.toggle}>
+                onClick={mobileSidebar.toggle}
+              >
                 <SidebarIcon open={mobileSidebar.shown} />
               </button>
             )}
 
-            <Link
-              to="/"
-              className={styles.brand}
-              aria-label="Connector Field Guides home">
+            {/*
+              No aria-label here: it would replace the visible wordmark text
+              in the accessible name and trip axe's label-content-name-mismatch.
+              The visible lines ("A zcohen-nerd technical guide" /
+              "Connector Field Guides") stay in the accessible name, and a
+              visually-hidden clause adds the "returns home" purpose.
+            */}
+            <Link to="/" className={styles.brand}>
               <ConnectorMark className={styles.brandMark} />
               <span className={styles.brandText}>
                 <span className={styles.parentLine}>
@@ -221,6 +228,7 @@ export default function Navbar() {
                   </span>
                 )}
               </span>
+              <span className={styles.srOnly}> — home page</span>
             </Link>
 
             <nav className={styles.desktopNav} aria-label="Primary navigation">
@@ -232,7 +240,8 @@ export default function Navbar() {
                     styles.navLink,
                     isActive(item.to) ? styles.navLinkActive : '',
                   ].join(' ')}
-                  aria-current={isActive(item.to) ? 'page' : undefined}>
+                  aria-current={isActive(item.to) ? 'page' : undefined}
+                >
                   {item.label}
                 </Link>
               ))}
@@ -248,7 +257,8 @@ export default function Navbar() {
                   ].join(' ')}
                   aria-expanded={ecosystemOpen}
                   aria-controls={ECOSYSTEM_ID}
-                  onClick={() => setEcosystemOpen((value) => !value)}>
+                  onClick={() => setEcosystemOpen((value) => !value)}
+                >
                   Ecosystem
                   <ChevronDown />
                 </button>
@@ -256,7 +266,8 @@ export default function Navbar() {
                 <div
                   id={ECOSYSTEM_ID}
                   className={styles.ecosystemMenu}
-                  hidden={!ecosystemOpen}>
+                  hidden={!ecosystemOpen}
+                >
                   <div className={styles.menuLabel}>ZCOHEN-NERD ECOSYSTEM</div>
                   {projects.map((project) => (
                     <a
@@ -266,7 +277,8 @@ export default function Navbar() {
                       aria-current={
                         isCurrentProject(project.href) ? 'page' : undefined
                       }
-                      onClick={() => setEcosystemOpen(false)}>
+                      onClick={() => setEcosystemOpen(false)}
+                    >
                       <span>
                         <strong>{project.name}</strong>
                         <small>{project.blurb}</small>
@@ -289,7 +301,8 @@ export default function Navbar() {
               aria-expanded={mobileOpen}
               aria-controls={MOBILE_NAV_ID}
               aria-label={mobileOpen ? 'Close navigation' : 'Open navigation'}
-              onClick={() => setMobileOpen((value) => !value)}>
+              onClick={() => setMobileOpen((value) => !value)}
+            >
               <MenuIcon open={mobileOpen} />
             </button>
           </div>
@@ -307,7 +320,8 @@ export default function Navbar() {
           id={MOBILE_NAV_ID}
           className={styles.mobileNav}
           aria-label="Mobile navigation"
-          hidden={!mobileOpen}>
+          hidden={!mobileOpen}
+        >
           <div className={styles.mobileNavInner}>
             {navigation.map((item) => (
               <Link
@@ -318,7 +332,8 @@ export default function Navbar() {
                   isActive(item.to) ? styles.mobileNavLinkActive : '',
                 ].join(' ')}
                 aria-current={isActive(item.to) ? 'page' : undefined}
-                onClick={() => setMobileOpen(false)}>
+                onClick={() => setMobileOpen(false)}
+              >
                 <span>{item.label}</span>
                 <span aria-hidden="true">→</span>
               </Link>
@@ -333,7 +348,8 @@ export default function Navbar() {
                   className={styles.mobileSubLink}
                   aria-current={
                     isCurrentProject(project.href) ? 'page' : undefined
-                  }>
+                  }
+                >
                   <span>{project.name}</span>
                   <span aria-hidden="true">
                     {isCurrentProject(project.href) ? '•' : '↗'}

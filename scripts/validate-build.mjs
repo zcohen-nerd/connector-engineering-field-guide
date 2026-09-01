@@ -107,24 +107,99 @@ check(
 const h1Count = (index.match(/<h1[\s>]/g) || []).length;
 check('home route has exactly one <h1>', h1Count === 1, `found ${h1Count}`);
 
-// --- structured data parses ------------------------------------------
+// --- structured data: the DocItem/Layout swizzle emits a TechArticle block on
+//     every doc route, and docs/index.md has `slug: /`, so the home route
+//     carries one too. Assert its shape rather than noting its absence. --------
 const ldBlocks = [
   ...index.matchAll(
-    /<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g,
+    new RegExp(
+      `<script[^>]+type=${q}application/ld\\+json${q}[^>]*>([\\s\\S]*?)</script>`,
+      'g',
+    ),
   ),
 ].map((m) => m[1]);
-if (ldBlocks.length) {
-  let allParse = true;
-  for (const b of ldBlocks) {
-    try {
-      JSON.parse(b);
-    } catch {
-      allParse = false;
-    }
+check('home route emits a JSON-LD block', ldBlocks.length > 0);
+
+const parsedLd = [];
+let allParse = ldBlocks.length > 0;
+for (const b of ldBlocks) {
+  try {
+    parsedLd.push(JSON.parse(b));
+  } catch {
+    allParse = false;
   }
-  check(`all ${ldBlocks.length} JSON-LD block(s) parse`, allParse);
-} else {
-  notes.push('no JSON-LD on the home route (not fatal).');
+}
+check(`all ${ldBlocks.length} JSON-LD block(s) parse`, allParse);
+
+const techArticle = parsedLd.find((o) => o && o['@type'] === 'TechArticle');
+check('home route has a TechArticle JSON-LD block', !!techArticle);
+if (techArticle) {
+  check(
+    'TechArticle @context is schema.org',
+    techArticle['@context'] === 'https://schema.org',
+    techArticle['@context'],
+  );
+  check(
+    'TechArticle url is the canonical home URL',
+    techArticle.url === CANONICAL_HOME,
+    techArticle.url,
+  );
+  check(
+    'TechArticle image is an absolute https image URL',
+    typeof techArticle.image === 'string' &&
+      /^https:\/\/\S+\.(?:png|jpe?g|webp)$/i.test(techArticle.image),
+    techArticle.image,
+  );
+  check(
+    'TechArticle has a non-empty headline',
+    typeof techArticle.headline === 'string' &&
+      techArticle.headline.trim().length > 0,
+  );
+  check(
+    'TechArticle author is a named Person',
+    techArticle.author?.['@type'] === 'Person' &&
+      typeof techArticle.author?.name === 'string' &&
+      techArticle.author.name.trim().length > 0,
+  );
+  check(
+    'TechArticle isPartOf is the Connector Field Guides CreativeWork on this origin',
+    techArticle.isPartOf?.name === 'Connector Field Guides' &&
+      techArticle.isPartOf?.url === CANONICAL_HOME,
+  );
+}
+
+// --- home link accessible name (regression guard for label-content-name-
+//     mismatch): the Navbar wordmark link must keep its visible text in its
+//     accessible name and still communicate that it returns home. It used an
+//     aria-label that replaced the visible text and tripped the axe rule. ------
+const homeLinkMatch = [
+  ...index.matchAll(
+    new RegExp(
+      `<a\\b([^>]*?)href=${q}${escapeRe(BASE_URL)}${q}([^>]*)>([\\s\\S]*?)</a>`,
+      'g',
+    ),
+  ),
+].find((m) => /A zcohen-nerd technical guide/.test(m[3]));
+check('home route has a wordmark link to the site root', !!homeLinkMatch);
+if (homeLinkMatch) {
+  const attrs = `${homeLinkMatch[1]} ${homeLinkMatch[2]}`;
+  const text = homeLinkMatch[3].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+  check(
+    'home link has no aria-label overriding its visible wordmark text',
+    !/\baria-label=/.test(attrs),
+    attrs.trim(),
+  );
+  for (const needle of [
+    'A zcohen-nerd technical guide',
+    'Connector Field Guides',
+    'home',
+  ]) {
+    check(
+      `home link accessible name contains "${needle}"`,
+      text.toLowerCase().includes(needle.toLowerCase()),
+      text.trim(),
+    );
+  }
 }
 
 // --- report ------------------------------------------------------------

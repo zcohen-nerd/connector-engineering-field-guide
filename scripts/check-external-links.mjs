@@ -172,7 +172,7 @@ async function recheck(url) {
             'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
           'accept-language': 'en-US,en;q=0.9',
         },
-        signal: AbortSignal.timeout(20000),
+        signal: AbortSignal.timeout(10000),
       });
       if (r.status < 400) return {ok: true, status: r.status};
       if (!INDETERMINATE.has(r.status))
@@ -180,27 +180,48 @@ async function recheck(url) {
     } catch {
       /* network/timeout — try once more, then treat as indeterminate */
     }
-    await sleep(1500 + Math.floor(Math.random() * 1000));
+    if (attempt === 0) await sleep(1200 + Math.floor(Math.random() * 800));
   }
   return {ok: false, status: 0};
 }
 
-const rawBroken = result.links.filter((l) => l.state === 'BROKEN');
-const blocked = [];
-const broken = [];
-for (const l of rawBroken) {
-  if (isExternal(l.url) && INDETERMINATE.has(Number(l.status))) {
-    const res = await recheck(l.url);
-    if (res.ok) continue; // recovered — not a problem
-    if (res.hard) {
-      broken.push({...l, status: res.status});
-    } else {
-      blocked.push(l);
-    }
-  } else {
-    broken.push(l);
-  }
+// Run the rechecks with bounded concurrency and an overall cap so a batch of
+// slow bot-walled hosts can't stretch the tail for many minutes.
+async function mapLimit(items, limit, fn) {
+  const out = new Array(items.length);
+  let i = 0;
+  const workers = Array.from(
+    {length: Math.min(limit, items.length)},
+    async () => {
+      while (i < items.length) {
+        const idx = i++;
+        out[idx] = await fn(items[idx], idx);
+      }
+    },
+  );
+  await Promise.all(workers);
+  return out;
 }
+
+const rawBroken = result.links.filter((l) => l.state === 'BROKEN');
+const toRecheck = rawBroken.filter(
+  (l) => isExternal(l.url) && INDETERMINATE.has(Number(l.status)),
+);
+const passthrough = rawBroken.filter((l) => !toRecheck.includes(l));
+
+const recheckResults = await Promise.race([
+  mapLimit(toRecheck, 8, (l) => recheck(l.url)),
+  sleep(120000).then(() => null), // recheck phase cap: 2 min
+]);
+
+const blocked = [];
+const broken = [...passthrough];
+toRecheck.forEach((l, idx) => {
+  const res = recheckResults?.[idx];
+  if (res?.ok) return; // recovered — not a problem
+  if (res?.hard) broken.push({...l, status: res.status});
+  else blocked.push(l); // still 401/403/429, timed out, or recheck phase capped
+});
 
 const skipped = result.links.filter((l) => l.state === 'SKIPPED');
 const brokenExternal = broken.filter((l) => isExternal(l.url));

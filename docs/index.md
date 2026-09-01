@@ -20,22 +20,22 @@ The source-verification milestone shipped with v1.0; the guide is continuously r
 
 <div class="cn-home-gallery" aria-label="Examples of connector topics covered by the field guides">
 <a class="cn-home-gallery-item" href="hobby/families">
-<img src="img/photos/zif-connector-ffc.jpg" alt="Two flat-flex cables with exposed contacts in front of matching ZIF board connectors" />
+<img src="img/photos/responsive/zif-connector-ffc-640w.webp" srcset="img/photos/responsive/zif-connector-ffc-320w.webp 320w, img/photos/responsive/zif-connector-ffc-480w.webp 480w, img/photos/responsive/zif-connector-ffc-640w.webp 640w, img/photos/responsive/zif-connector-ffc-800w.webp 800w" sizes="(max-width: 600px) 46vw, 185px" width="1614" height="1064" loading="lazy" decoding="async" alt="Two flat-flex cables with exposed contacts in front of matching ZIF board connectors" />
 <span class="cn-home-gallery-copy"><strong>Board-level</strong><small>FFC / ZIF identification</small></span>
 <span class="cn-home-gallery-credit">Zeroping · CC0</span>
 </a>
 <a class="cn-home-gallery-item" href="decision-paths/micro-d">
-<img src="img/photos/micro-d-and-de9-comparison.jpg" alt="A compact Micro-D connector beside a larger DE-9 connector for scale" />
+<img src="img/photos/responsive/micro-d-and-de9-comparison-640w.webp" srcset="img/photos/responsive/micro-d-and-de9-comparison-320w.webp 320w, img/photos/responsive/micro-d-and-de9-comparison-480w.webp 480w, img/photos/responsive/micro-d-and-de9-comparison-640w.webp 640w, img/photos/responsive/micro-d-and-de9-comparison-800w.webp 800w" sizes="(max-width: 600px) 46vw, 185px" width="1500" height="1072" loading="lazy" decoding="async" alt="A compact Micro-D connector beside a larger DE-9 connector for scale" />
 <span class="cn-home-gallery-copy"><strong>Compact, high-density</strong><small>Micro-D selection</small></span>
 <span class="cn-home-gallery-credit">Andree.sk · CC BY-SA 4.0</span>
 </a>
 <a class="cn-home-gallery-item" href="decision-paths/industrial-sensor">
-<img src="img/photos/m12-m8-family.jpg" alt="M12 and M8 industrial sensor cordsets and panel receptacles" />
+<img src="img/photos/responsive/m12-m8-family-640w.webp" srcset="img/photos/responsive/m12-m8-family-320w.webp 320w, img/photos/responsive/m12-m8-family-480w.webp 480w, img/photos/responsive/m12-m8-family-640w.webp 640w, img/photos/responsive/m12-m8-family-800w.webp 800w" sizes="(max-width: 600px) 46vw, 185px" width="1024" height="682" loading="lazy" decoding="async" alt="M12 and M8 industrial sensor cordsets and panel receptacles" />
 <span class="cn-home-gallery-copy"><strong>Industrial sensor</strong><small>M12 / M8 interfaces</small></span>
 <span class="cn-home-gallery-credit">Riep. · CC BY-SA 4.0</span>
 </a>
 <a class="cn-home-gallery-item" href="decision-paths/sealed-enclosure-feedthrough">
-<img src="img/photos/cable-gland-disassembled.webp" alt="A disassembled cable gland showing its body, seal, washer, and compression nut" />
+<img src="img/photos/responsive/cable-gland-disassembled-640w.webp" srcset="img/photos/responsive/cable-gland-disassembled-320w.webp 320w, img/photos/responsive/cable-gland-disassembled-480w.webp 480w, img/photos/responsive/cable-gland-disassembled-640w.webp 640w, img/photos/responsive/cable-gland-disassembled-800w.webp 800w" sizes="(max-width: 600px) 46vw, 185px" width="1600" height="1067" loading="lazy" decoding="async" alt="A disassembled cable gland showing its body, seal, washer, and compression nut" />
 <span class="cn-home-gallery-copy"><strong>Sealed feedthrough</strong><small>Cable-entry construction</small></span>
 <span class="cn-home-gallery-credit">Leotard · CC0</span>
 </a>

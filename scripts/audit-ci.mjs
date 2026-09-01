@@ -17,8 +17,8 @@
  *   - an allowlisted advisory (.github/audit-allowlist.json)
  *     past its `review_by` date                       -> fail (forces re-review)
  *
- * Run: npm audit --json | node scripts/audit-ci.mjs
- *   or: node scripts/audit-ci.mjs   (runs `npm audit --json` itself)
+ * Run: node scripts/audit-ci.mjs             (runs `npm audit --json` itself)
+ *   or: npm audit --json | node scripts/audit-ci.mjs   (reads piped stdin)
  */
 import {readFileSync, existsSync} from 'node:fs';
 import {execSync} from 'node:child_process';
@@ -67,12 +67,20 @@ function readAudit() {
       /* fall through */
     }
   }
-  return JSON.parse(
-    execSync('npm audit --json', {
-      encoding: 'utf8',
-      maxBuffer: 64 * 1024 * 1024,
-    }),
-  );
+  try {
+    return JSON.parse(
+      execSync('npm audit --json', {
+        encoding: 'utf8',
+        maxBuffer: 64 * 1024 * 1024,
+      }),
+    );
+  } catch (e) {
+    // `npm audit` exits non-zero whenever ANY advisory exists, so execSync
+    // throws even though a complete JSON report was written to stdout. Parse
+    // that; only a genuinely empty stdout is a real failure.
+    if (e.stdout) return JSON.parse(e.stdout);
+    throw e;
+  }
 }
 
 // Advisory-package names that, in a Docusaurus project, are always reached

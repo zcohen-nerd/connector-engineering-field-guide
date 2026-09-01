@@ -19,6 +19,7 @@ export default [
       'build/',
       '.docusaurus/',
       'node_modules/',
+      '.venv/', // local Python venv (git-ignored) — vendored mkdocs JS is not ours
       'lib/',
       'coverage/',
       'playwright-report/',

@@ -37,5 +37,8 @@ jobs:
       - name: Install (lockfile-exact)
         run: npm ci --no-audit --no-fund
 
+      # Not piped: `npm audit` exits non-zero when advisories exist, which under
+      # `bash -o pipefail` would fail the step regardless of the gate's verdict.
+      # audit-ci.mjs runs `npm audit --json` itself and tolerates that exit code.
       - name: Audit gate
-        run: npm audit --json | node scripts/audit-ci.mjs
+        run: node scripts/audit-ci.mjs

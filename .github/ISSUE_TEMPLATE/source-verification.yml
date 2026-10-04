@@ -23,7 +23,7 @@ body:
     id: proposed_source
     attributes:
       label: Proposed primary source
-      description: Link or identify the datasheet, standard, catalog, or QPL source.
+      description: Identify the datasheet, standard, catalog, or QPL source.
     validations:
       required: true
   - type: textarea

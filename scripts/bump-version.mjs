@@ -52,37 +52,37 @@ const SITES = [
     file: 'package.json',
     locate: /"version":\s*"([^"]+)"/,
     render: (_d, _n, semver) => `"version": "${semver}"`,
-    extract: (m) => ({ semver: m[1] }),
+    extract: (m) => ({semver: m[1]}),
   },
   {
     file: 'CITATION.cff',
     locate: /^version:\s*"([^"]+)"$/m,
     render: (_d, _n, semver) => `version: "${semver}"`,
-    extract: (m) => ({ semver: m[1] }),
+    extract: (m) => ({semver: m[1]}),
   },
   {
     file: 'README.md',
     locate: /^\*\*Status:\*\* (.+?)(?: ·.*)?$/m,
     render: (d, n) => null, // handled specially to preserve the trailing badge
-    extract: (m) => ({ status: m[1].trim() }),
+    extract: (m) => ({status: m[1].trim()}),
   },
   {
     file: 'docs/index.md',
     locate: /^:::note\[(v\d+\.\d+[^\]]*)\]$/m,
     render: (d, n) => `:::note[${d} ${EM} ${n}]`,
-    extract: (m) => ({ status: m[1] }),
+    extract: (m) => ({status: m[1]}),
   },
   {
     file: 'docs/engineering/index.md',
     locate: /^:::note\[(v\d+\.\d+[^\]]*)\]$/m,
     render: (d, n) => `:::note[${d} ${EM} ${n}]`,
-    extract: (m) => ({ status: m[1] }),
+    extract: (m) => ({status: m[1]}),
   },
   {
     file: 'docs/appendix/source-notes.md',
     locate: /^\*\*Status: (.+)\*\*$/m,
     render: (d, n) => `**Status: ${d} ${EM} ${n}**`,
-    extract: (m) => ({ status: m[1] }),
+    extract: (m) => ({status: m[1]}),
   },
 ];
 
@@ -95,15 +95,17 @@ function currentState() {
   const status = readme[1].trim();
   const prefix = `${d} ${EM} `;
   const name = status.startsWith(prefix) ? status.slice(prefix.length) : null;
-  return { semver, display: d, name, readmeStatus: status };
+  return {semver, display: d, name, readmeStatus: status};
 }
 
 function check() {
-  const { semver, display: d, name, readmeStatus } = currentState();
+  const {semver, display: d, name, readmeStatus} = currentState();
   const errors = [];
   const lock = JSON.parse(read('package-lock.json'));
   if (lock.version !== semver) {
-    errors.push(`package-lock.json: top-level version is ${lock.version}, package.json says ${semver}`);
+    errors.push(
+      `package-lock.json: top-level version is ${lock.version}, package.json says ${semver}`,
+    );
   }
   if (lock.packages?.['']?.version !== semver) {
     errors.push(
@@ -124,15 +126,25 @@ function check() {
     }
     const got = site.extract(m);
     if (got.semver !== undefined && got.semver !== semver) {
-      errors.push(`${site.file}: has ${got.semver}, package.json says ${semver}`);
+      errors.push(
+        `${site.file}: has ${got.semver}, package.json says ${semver}`,
+      );
     }
-    if (got.status !== undefined && expectStatus !== null && got.status !== expectStatus) {
-      errors.push(`${site.file}: has "${got.status}", expected "${expectStatus}"`);
+    if (
+      got.status !== undefined &&
+      expectStatus !== null &&
+      got.status !== expectStatus
+    ) {
+      errors.push(
+        `${site.file}: has "${got.status}", expected "${expectStatus}"`,
+      );
     }
   }
   if (errors.length) {
     console.error('Version drift detected:\n  - ' + errors.join('\n  - '));
-    console.error('\nFix by hand or re-run: node scripts/bump-version.mjs <semver> "<Release Name>"');
+    console.error(
+      '\nFix by hand or re-run: node scripts/bump-version.mjs <semver> "<Release Name>"',
+    );
     process.exit(1);
   }
   console.log(`Version in sync: ${semver} ${EM} "${expectStatus}"`);
@@ -159,7 +171,9 @@ function bump(semver, name, dateArg) {
 
   let readme = read('README.md');
   readme = readme.replace(SITES[2].locate, (line) => {
-    const badge = line.includes('·') ? ' ·' + line.split('·').slice(1).join('·') : '';
+    const badge = line.includes('·')
+      ? ' ·' + line.split('·').slice(1).join('·')
+      : '';
     return `**Status:** ${status}${badge}`;
   });
   write('README.md', readme);

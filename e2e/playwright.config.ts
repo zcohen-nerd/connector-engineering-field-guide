@@ -7,7 +7,7 @@
 import {defineConfig, devices} from '@playwright/test';
 import {resolve} from 'node:path';
 
-const root = resolve(import.meta.dirname, '..');
+const root = resolve(__dirname, '..');
 const PORT = Number(process.env.PW_PORT || 4321);
 
 export default defineConfig({

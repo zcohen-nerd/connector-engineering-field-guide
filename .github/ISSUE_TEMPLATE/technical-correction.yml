@@ -37,6 +37,6 @@ body:
     id: why_it_matters
     attributes:
       label: Why it matters
-      description: Explain the design, safety, manufacturability, or clarity impact.
+      description: Explain the impact on design, safety, manufacture, or clarity.
     validations:
       required: true

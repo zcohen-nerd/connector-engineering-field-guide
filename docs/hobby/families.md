@@ -85,7 +85,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 - **Marketplace names:** Powerpole, Anderson connectors, PP15/45, "Anderson-style."
 - **What it is:** a **genderless** single-pole DC power system — one PP15/45 housing accepts 15/30/45 A contacts, and poles dovetail into whatever multi-pole blocks you need. The ham-radio, robotics, and DC-distribution standard.
 - **Watch for:** housing color is identification only (every color mates with every color), so **your assembly convention is the only polarity protection** — build every pair one way and pin it; unsealed; not load-break; clones get the contact spring wrong.
-- **Full page:** [Anderson Powerpole](anderson-powerpole.md) — the PP15/45 datasheet numbers, the family ladder to 350 A-class, the ARES "Red Right, Tongue Top" standard, and why it's the wrong answer for signal.
+- **Full page:** [Anderson Powerpole](anderson-powerpole.md) — the PP15/45 datasheet numbers, the family ladder to 350 A-class, the ARES "Red Right, Tongue Top" standard, and how to evaluate it for signal duty against exact-product evidence and circuit requirements.
 
 ## Screw terminals and spring terminals
 

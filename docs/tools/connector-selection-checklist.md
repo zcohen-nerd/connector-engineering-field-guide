@@ -8,7 +8,7 @@ sidebar_label: Selection Checklist
 
 # Connector Selection Checklist
 
-This is the copy-ready version of the [Practical Selection Checklist](../10-selection-checklist.md). Use it before the connector choice hardens into a drawing, a purchase order, and a problem nobody wants to own.
+This is the copy-ready version of the [Practical Selection Checklist](../engineering/guide/10-selection-checklist.md). Use it before the connector choice hardens into a drawing, a purchase order, and a problem nobody wants to own.
 
 ## Interface definition
 
@@ -57,7 +57,7 @@ This is the copy-ready version of the [Practical Selection Checklist](../10-sele
 - [ ] Qualification approach identified — family/QPL evidence or a program-level plan (see the [qualification plan template](connector-qualification-template.md))
 - [ ] Supplier availability and lead time checked
 - [ ] Second source / QPL considered
-- [ ] Lifecycle status checked (active / NRND / EOL) and PCN/EOL notice registration planned ([lifecycle](../lifecycle-and-procurement.md))
+- [ ] Lifecycle status checked (active / NRND / EOL) and PCN/EOL notice registration planned ([lifecycle](../engineering/topics/lifecycle-and-procurement.md))
 - [ ] Approved alternates identified and recorded, with what "equivalent" was verified to mean
 - [ ] Authorized sourcing channel identified for every BOM line
 

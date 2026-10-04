@@ -33,15 +33,15 @@ For high-energy systems — batteries, motor controllers, heaters, PDUs — docu
 - **Anderson SB** for battery/robot power quick-disconnects — great current density, but unsealed, unshielded, and genderless; add a boot or choose a sealed family for external/environmental interfaces. (The lighter-duty Powerpole line pictured below shares the genderless workflow — the hobby track's [Powerpole deep dive](../hobby/anderson-powerpole.md) covers that system, its family ladder, and its orientation discipline.)
 - **Industrial rectangular / Han-style power** inserts.
 - **High-current circular** connectors.
-- **Sealed automotive power** — DEUTSCH DTP (~25 A contacts) and single-cavity DTHD (~25–100 A) class parts for budget sealed power runs. See the [DEUTSCH deep dive](../deutsch.md).
-- **MC4-style PV connectors** — the solar-string standard, common on solar-charged robots and carts too. Touch-safe and keyed, but emphatically **not load-break** (PV DC arcs — de-energize before disconnect), and manufacturers warn against mixing brands: use matched pairs from one maker and treat any "MC4-compatible" cross-mating claim as unverified ([vendor mixing](../lifecycle-and-procurement.md) is a recorded design decision, never a procurement improvisation).
-- **[MIL-DTL-38999](../07-mil-dtl-38999.md) size 12** *only where the derating supports the load*, or **size 8 / larger** and **dedicated power contacts** (e.g. HCP/RADSOK) for higher current.
+- **Sealed automotive power** — DEUTSCH DTP (~25 A contacts) and single-cavity DTHD (~25–100 A) class parts for budget sealed power runs. See the [DEUTSCH deep dive](../engineering/families/deutsch.md).
+- **MC4-style PV connectors** — the solar-string standard, common on solar-charged robots and carts too. Touch-safe and keyed, but emphatically **not load-break** (PV DC arcs — de-energize before disconnect), and manufacturers warn against mixing brands: use matched pairs from one maker and treat any "MC4-compatible" cross-mating claim as unverified ([vendor mixing](../engineering/topics/lifecycle-and-procurement.md) is a recorded design decision, never a procurement improvisation).
+- **[MIL-DTL-38999](../engineering/families/07-mil-dtl-38999.md) size 12** *only where the derating supports the load*, or **size 8 / larger** and **dedicated power contacts** (e.g. HCP/RADSOK) for higher current.
 
 ![Anderson Powerpole housings and contacts on a workbench beside a wire spool and crimp tool](/img/photos/anderson-powerpole-bench.jpg)
 
 *Anderson Powerpole-style housings, loose contacts, wire, and the crimper — the genderless quick-disconnect workflow in one frame. Photo: [4dtext](https://commons.wikimedia.org/wiki/File:Powerpole_stuff.jpg), CC BY-SA 3.0, via Wikimedia Commons.*
 
-See [Quick-Reference A3](../appendix/quick-reference-tables.md) and [Decision Examples](../09-decision-examples.md).
+See [Quick-Reference A3](../appendix/quick-reference-tables.md) and [Decision Examples](../engineering/guide/09-decision-examples.md).
 
 ## Search terms
 
@@ -51,7 +51,7 @@ See [Quick-Reference A3](../appendix/quick-reference-tables.md) and [Decision Ex
 
 ## Specs to check
 
-- **Contact current rating at temperature**, bundle-derated per the manufacturer's **derating curve** — current is never one number (see [Selection Workflow §2](../04-connector-selection-workflow.md)).
+- **Contact current rating at temperature**, bundle-derated per the manufacturer's **derating curve** — current is never one number (see [Selection Workflow §2](../engineering/guide/04-connector-selection-workflow.md)).
 - **Wire gauge**, **number of loaded contacts**, **ambient temperature**, **heat rise**, and **duty cycle**.
 - **Touch safety** on the energized side (recessed sockets / touch-safe contacts), and whether the connector is touch-safe **when unmated**.
 - **Load-break / hot-plug / mate-under-power status** — yes / no / explicitly prohibited / not specified — from the datasheet, never assumed.
@@ -63,7 +63,7 @@ See [Quick-Reference A3](../appendix/quick-reference-tables.md) and [Decision Ex
 - **Touch-safe / recessed** contacts on the energized/source side.
 - The correct **contact size** and crimp tooling.
 
-See [What People Forget](../what-people-forget.md).
+See [What People Forget](../engineering/guide/what-people-forget.md).
 
 ## Common traps
 
@@ -86,4 +86,4 @@ See [What People Forget](../what-people-forget.md).
 - A source-controlled **pinout** marking source/load direction.
 - A [cable drawing](../tools/cable-drawing-template.md) and [ICD entry](../tools/connector-icd-template.md) capturing current, wire gauge, torque, and the **energized-work statement**: load-break/hot-plug status, mate/unmate-under-power permission, touch safety, fusing, fault current, and inrush/precharge — plus any required warning label or service procedure.
 
-Related: [Decision Examples](../09-decision-examples.md) · [Selection Workflow](../04-connector-selection-workflow.md).
+Related: [Decision Examples](../engineering/guide/09-decision-examples.md) · [Selection Workflow](../engineering/guide/04-connector-selection-workflow.md).

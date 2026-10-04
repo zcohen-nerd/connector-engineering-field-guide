@@ -12,7 +12,7 @@ Hobby connectors are honest parts doing honest work — on a bench, in an enclos
 
 ## The triggers
 
-Any one of these means at least *that interface* should graduate to the [Professional / Industrial guide](../engineering-home.md) (for the full boundary table, see [Hobby or Professional?](../hobby-or-professional.md)):
+Any one of these means at least *that interface* should graduate to the [Professional / Industrial guide](../engineering/index.md) (for the full boundary table, see [Hobby or Professional?](../shared/hobby-or-professional.md)):
 
 - **Outdoor fielded equipment** — rain, dust, condensation, UV. Sealing is a system property, not a product-title adjective.
 - **A vehicle or robot exposed to vibration/weather** — friction-fit connectors walk apart; latches and strain relief become load-bearing decisions.
@@ -22,14 +22,14 @@ Any one of these means at least *that interface* should graduate to the [Profess
 - **Repeated mating/unmating** — mating-cycle life is a real, finite spec.
 - **Harnesses built by someone else** — now you need defined contacts, tooling, and inspection criteria, not tribal knowledge.
 - **Documentation or release needed** — pinouts, cable drawings, ICDs. The engineering track's [templates](../tools/index.md) exist for exactly this.
-- **Production quantity** — repeatability, second sources, and incoming inspection start to matter; so does the part's *future* (lifecycle status, discontinuance notices, approved alternates — the engineering track's [Lifecycle & Procurement](../lifecycle-and-procurement.md) loop).
+- **Production quantity** — repeatability, second sources, and incoming inspection start to matter; so does the part's *future* (lifecycle status, discontinuance notices, approved alternates — the engineering track's [Lifecycle & Procurement](../engineering/topics/lifecycle-and-procurement.md) loop).
 - **Regulatory, qualification, or customer requirements** — the moment a requirement document exists, the engineering track's source discipline applies.
 
 ## Where to land
 
-- **First stop for most graduating projects:** [Rugged on a budget](../decision-paths/rugged-on-a-budget.md) — sealed automotive families ([Deutsch](../deutsch.md), Superseal, MX150, Metri-Pack) are the natural next step above hobby parts, without mil-spec cost.
-- **The full method:** the [selection workflow](../04-connector-selection-workflow.md) and [practical checklist](../10-selection-checklist.md).
-- **The map:** the [engineering guide home](../engineering-home.md) and its scenario cards.
+- **First stop for most graduating projects:** [Rugged on a budget](../decision-paths/rugged-on-a-budget.md) — sealed automotive families ([Deutsch](../engineering/families/deutsch.md), Superseal, MX150, Metri-Pack) are the natural next step above hobby parts, without mil-spec cost.
+- **The full method:** the [selection workflow](../engineering/guide/04-connector-selection-workflow.md) and [practical checklist](../engineering/guide/10-selection-checklist.md).
+- **The map:** the [engineering guide home](../engineering/index.md) and its scenario cards.
 
 :::note
 

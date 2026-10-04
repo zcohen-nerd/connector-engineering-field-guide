@@ -9,7 +9,7 @@ body:
     attributes:
       label: Page/section
       description: Where in the guide is the issue?
-      placeholder: docs/07-mil-dtl-38999.md, Section 7.5
+      placeholder: docs/engineering/families/07-mil-dtl-38999.md, Section 7.5
     validations:
       required: true
   - type: textarea

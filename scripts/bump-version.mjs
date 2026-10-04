@@ -12,15 +12,15 @@
 //
 //   node scripts/bump-version.mjs <semver> "<Release Name>" [--date YYYY-MM-DD]
 //     Rewrite every call site for a release. <semver> is X.Y.Z; the date
-//     (default: today) goes to .github/CITATION.cff date-released.
+//     (default: today) goes to CITATION.cff date-released.
 //
 // Call sites rewritten/checked:
 //   package.json                    "version": "X.Y.Z"
 //   package-lock.json               top-level + root-package versions
-//   .github/CITATION.cff            version + date-released (date: bump mode only)
+//   CITATION.cff            version + date-released (date: bump mode only)
 //   README.md                       **Status:** line (keeps its trailing badge text)
 //   docs/index.md                   :::note[<status>] banner (site homepage)
-//   docs/engineering-home.md        :::note[<status>] banner
+//   docs/engineering/index.md        :::note[<status>] banner
 //   docs/appendix/source-notes.md   **Status: <status>** line
 //
 // NOT rewritten (editorial, review by hand every release — the script reminds you):
@@ -55,7 +55,7 @@ const SITES = [
     extract: (m) => ({ semver: m[1] }),
   },
   {
-    file: '.github/CITATION.cff',
+    file: 'CITATION.cff',
     locate: /^version:\s*"([^"]+)"$/m,
     render: (_d, _n, semver) => `version: "${semver}"`,
     extract: (m) => ({ semver: m[1] }),
@@ -73,7 +73,7 @@ const SITES = [
     extract: (m) => ({ status: m[1] }),
   },
   {
-    file: 'docs/engineering-home.md',
+    file: 'docs/engineering/index.md',
     locate: /^:::note\[(v\d+\.\d+[^\]]*)\]$/m,
     render: (d, n) => `:::note[${d} ${EM} ${n}]`,
     extract: (m) => ({ status: m[1] }),
@@ -152,10 +152,10 @@ function bump(semver, name, dateArg) {
   lock.packages[''].version = semver;
   write('package-lock.json', `${JSON.stringify(lock, null, 2)}\n`);
 
-  let cff = read('.github/CITATION.cff');
+  let cff = read('CITATION.cff');
   cff = cff.replace(SITES[1].locate, `version: "${semver}"`);
   cff = cff.replace(/^date-released:.*$/m, `date-released: ${date}`);
-  write('.github/CITATION.cff', cff);
+  write('CITATION.cff', cff);
 
   let readme = read('README.md');
   readme = readme.replace(SITES[2].locate, (line) => {

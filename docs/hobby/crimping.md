@@ -15,7 +15,7 @@ Crimping is where hobby wiring either becomes reliable or becomes a lifetime sup
 - **Crimp contacts are family-specific.** An XH housing takes XH contacts; PH takes PH; "Dupont" takes its own. Housings and terminals must match — kit-drawer mixing is how contacts back out of housings.
 - **Open-barrel crimps have two sets of wings:** **conductor wings** that fold onto bare strands (the electrical joint) and **insulation wings** that grip the jacket (the strain relief). Both must be formed correctly — a crimp that only grabs insulation reads as "works, sometimes."
 - **Cheap generic crimpers can work for learning, but are inconsistent** — die profiles only approximate each family's spec, so quality varies crimp to crimp. Fine for prototypes you can re-do; risky for anything that has to stay working.
-- **Official/OEM tooling is expensive but controlled** — the die matches the contact drawing and produces repeatable results. That's what you're paying for. (This is exactly the engineering track's [tooling discipline](../04-connector-selection-workflow.md) at hobby scale.)
+- **Official/OEM tooling is expensive but controlled** — the die matches the contact drawing and produces repeatable results. That's what you're paying for. (This is exactly the engineering track's [tooling discipline](../engineering/guide/04-connector-selection-workflow.md) at hobby scale.)
 - **Strip length matters** — strands should fill the conductor wings and just be visible past them; too long shorts into the mating area, too short crimps onto insulation.
 - **Wire gauge and insulation diameter matter** — every contact has a supported wire and insulation range; outside it, the wings can't form properly.
 - **One wire per crimp barrel.** Doubling two wires into one terminal is done all the time and is wrong essentially every time: the barrel, die, and wire are qualified as a system for *one* conductor in a stated range, and a crimp only works by compressing that qualified fill into a gas-tight joint.[^crimpmech] An unapproved two-wire fill has unverified compression, retention, and sealing; one conductor can remain loose even when the other passes a tug. This isn't just folklore: NASA's public crimp workmanship standard settles it in one line — contact-conductor combinations **shall** be in accordance with manufacturer's recommendations.[^nasa87394] Manufacturers *do* qualify specific dual-wire combinations and publish them for specific terminals — the exception that proves the rule[^dualwire] — so unless the documentation for *your* terminal says two wires, build the branch with a proper splice, a lever connector, or a terminal actually rated for two.
@@ -50,11 +50,11 @@ You still choose the housing, verify the family/series, and confirm wire gauge �
 
 :::note
 
-Building something that others will use, or heading toward production? The engineering track covers [termination types (§5.2)](../05-connector-anatomy.md), the [crimp design package (§4)](../04-connector-selection-workflow.md), and the IPC/WHMA-A-620 workmanship/acceptance world.
+Building something that others will use, or heading toward production? The engineering track covers [termination types (§5.2)](../engineering/guide/05-connector-anatomy.md), the [crimp design package (§4)](../engineering/guide/04-connector-selection-workflow.md), and the IPC/WHMA-A-620 workmanship/acceptance world.
 
 :::
 
-Related: [Buying the Right Mating Parts](buying-mating-parts.md) · [Connector Kits](connector-kits.md) · [What People Forget](../what-people-forget.md) (tooling edition).
+Related: [Buying the Right Mating Parts](buying-mating-parts.md) · [Connector Kits](connector-kits.md) · [What People Forget](../engineering/guide/what-people-forget.md) (tooling edition).
 
 ## Sources
 

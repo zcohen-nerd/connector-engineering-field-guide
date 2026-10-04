@@ -9,6 +9,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Repository organization
+
+- Grouped professional chapters, connector-family deep dives, engineering topics, and shared references into dedicated directories. Updated relative links, sidebar IDs, and version tooling while preserving all published page URLs.
+- Moved owner runbooks, audit snapshots, and editorial backlogs into `maintenance/`; auxiliary quality settings into `config/quality/`; and Playwright configuration beside its tests. Updated npm commands and report/server paths for the relocated test configuration.
+- Updated remaining derating/source records, backshell summaries, 38999 metadata, and servo navigation labels to match the content corrections.
+
 ### Content corrections
 
 - Corrected low-level tin/gold contact guidance, servo-reversal warnings, barrel-plug mismatch geometry, 38999 contact-current interpretation, and DT/DTM/DTP service procedures across prose, summaries, and diagrams.

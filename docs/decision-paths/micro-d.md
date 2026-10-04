@@ -22,18 +22,18 @@ Use this path when you need a lot of reliable contacts in very little space and 
 
 ## Avoid this when
 
-- The connector will be **mated/demated in dirty, wet, or field-service conditions** — Micro-D is an internal/protected family, not a dirty field-service one ([§3](../03-connector-standards-and-families.md)).
+- The connector will be **mated/demated in dirty, wet, or field-service conditions** — Micro-D is an internal/protected family, not a dirty field-service one ([§3](../engineering/guide/03-connector-standards-and-families.md)).
 - The required **current exceeds the exact assembly's derated capability** — go to larger contacts or a dedicated power path ([high-current DC path](high-current-dc-power.md)). Low-power circuits can be suitable within verified limits.
 - A cheaper, bigger connector would do — the density buys cost, delicacy, and assembly complexity you shouldn't pay for without a reason.
 
 ## Families to start with
 
-- **Micro-D (MIL-DTL-83513)** — fine pitch (contacts on .050 in / 1.27 mm centers), lightweight, rugged, high-density; the family-level figures (≈3 A-class per contact, sea-level voltage rating) and their source live in [§3 Standards and Families](../03-connector-standards-and-families.md).[^microd]
+- **Micro-D (MIL-DTL-83513)** — fine pitch (contacts on .050 in / 1.27 mm centers), lightweight, rugged, high-density; the family-level figures (≈3 A-class per contact, sea-level voltage rating) and their source live in [§3 Standards and Families](../engineering/guide/03-connector-standards-and-families.md).[^microd]
 - **Nano-D (MIL-DTL-32139)** — Micro-D's even-finer-pitch sibling for extreme miniaturization: the same handling and assembly discipline, more so. This guide quotes no figures for it — size strictly against the exact spec and part datasheet.
-- **MIL-grade D-sub (MIL-DTL-24308)** where you have the panel space and want cheaper, more forgiving hardware — see the comparison in [§3](../03-connector-standards-and-families.md).
+- **MIL-grade D-sub (MIL-DTL-24308)** where you have the panel space and want cheaper, more forgiving hardware — see the comparison in [§3](../engineering/guide/03-connector-standards-and-families.md).
 - For an occasional-access programming/service flavor of this problem, see the [debug / service port path](debug-service-port.md) — Micro-D appears there too.
 
-See [Decision Examples](../09-decision-examples.md).
+See [Decision Examples](../engineering/guide/09-decision-examples.md).
 
 ## Search terms
 
@@ -46,7 +46,7 @@ See [Decision Examples](../09-decision-examples.md).
 - **Current per contact vs. your actual loads** — this is a signal-class family; check every loaded contact against the exact part's datasheet, not the family figure.
 - **Voltage rating at your altitude** — the family figure cited in §3 is a sea-level rating; verify the exact part and condition.
 - **Temperature range** for the exact part and termination style.
-- **Contact arrangement** — exact arrangements vary by product; pull the manufacturer's drawing ([§3](../03-connector-standards-and-families.md)).
+- **Contact arrangement** — exact arrangements vary by product; pull the manufacturer's drawing ([§3](../engineering/guide/03-connector-standards-and-families.md)).
 - **Termination and tooling** — what the assembly process requires, who performs it, and to which workmanship spec.
 - **Mounting and keying** — board vs. panel vs. cable-to-cable, and how adjacent identical connectors are told apart.
 - **Qualification** — if the program requires qualified parts, verify the exact part number's QPL status; "mil-style" is not qualification.
@@ -58,11 +58,11 @@ See [Decision Examples](../09-decision-examples.md).
 - **Savers / caps** for connectors that see repeated bench mating during development.
 - The **assembly/tooling budget** — the connector is only part of the cost.
 
-See [What People Forget](../what-people-forget.md).
+See [What People Forget](../engineering/guide/what-people-forget.md).
 
 ## Common traps
 
-- Treating Micro-D as a rugged *external* connector because it is "mil-spec" — the spec covers a compact high-reliability family, not dirty field service ([§3](../03-connector-standards-and-families.md)).
+- Treating Micro-D as a rugged *external* connector because it is "mil-spec" — the spec covers a compact high-reliability family, not dirty field service ([§3](../engineering/guide/03-connector-standards-and-families.md)).
 - Assigning power without checking per-contact current, temperature, wire, voltage drop, and fault duty.
 - Ignoring **assembly complexity** until production — delicate, fine-pitch hardware punishes improvised processes.
 - Choosing it where a standard D-sub or a small rectangular family would do the job for less.
@@ -80,7 +80,7 @@ See [What People Forget](../what-people-forget.md).
 - A source-controlled **pinout** and an [ICD entry](../tools/connector-icd-template.md) recording arrangement, keying, and the assembly spec.
 - A [cable drawing](../tools/cable-drawing-template.md) if it's the cable version — including strain relief and backshell.
 
-Related: [§3 Standards and Families](../03-connector-standards-and-families.md) · [Debug / service port](debug-service-port.md) · [What People Forget](../what-people-forget.md).
+Related: [§3 Standards and Families](../engineering/guide/03-connector-standards-and-families.md) · [Debug / service port](debug-service-port.md) · [What People Forget](../engineering/guide/what-people-forget.md).
 
 ## Sources
 

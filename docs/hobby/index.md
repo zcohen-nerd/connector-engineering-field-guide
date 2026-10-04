@@ -18,7 +18,7 @@ Hobby connector information is a mess. Listings abuse names, photos lie about sc
 
 :::note[Part of the v1.0 — Source-Verified Release]
 
-This track joined at v0.8 and keeps expanding under the same source discipline as the rest of the guide; the core workflow and the major family deep dives are in place, and the remaining short topics are tracked in [Hobby Source Notes](hobby-source-notes.md). The [Professional / Industrial guide](../engineering-home.md) has been around longer, and its fundamentals—what connectors do, how they're built, and what good crimping looks like—still apply here.
+This track joined at v0.8 and keeps expanding under the same source discipline as the rest of the guide; the core workflow and the major family deep dives are in place, and the remaining short topics are tracked in [Hobby Source Notes](hobby-source-notes.md). The [Professional / Industrial guide](../engineering/index.md) has been around longer, and its fundamentals—what connectors do, how they're built, and what good crimping looks like—still apply here.
 
 :::
 
@@ -62,12 +62,12 @@ Covered in dedicated pages:
 - LED string and strip connectors, including JST-SM-style connectors
 - RC power connectors — the XT30/XT60/XT90 ecosystem, plus the wider battery-connector landscape (Deans, EC, Traxxas, Tamiya-style, bullets, Powerpole)
 - The Anderson Powerpole system
-- Servo connectors — one pin order, two housings, and the stall-current reality
+- Servo connectors — a common pin order, two housings, and the stall-current reality
 - USB-C as a project power source — the resistor rule, the PD ladder, and the cable's role
 - JST-GH — the drone world's locking standard
 - Barrel jacks and their polarity traps
 - Screw terminals, spring clamps, and ferrules
-- Molex Micro-Fit 3.0 and the Fit ladder — capsule here, with the [full deep dive on the engineering track](../micro-fit.md)
+- Molex Micro-Fit 3.0 and the Fit ladder — capsule here, with the [full deep dive on the engineering track](../engineering/families/micro-fit.md)
 - Crimping, pre-crimped leads, and connector kits
 - Identifying unknown connectors
 
@@ -85,7 +85,7 @@ Capsule notes only, for now — short field notes in [Common Hobby Connector Fam
 - It does not guarantee clone compatibility.
 - It does not make marketplace current ratings trustworthy.
 - It does not certify connectors for fielded, safety-critical, outdoor, automotive, marine, or production systems.
-- When a project becomes fielded or customer-facing, use the [Professional / Industrial guide](../engineering-home.md).
+- When a project becomes fielded or customer-facing, use the [Professional / Industrial guide](../engineering/index.md).
 
 :::warning[The one habit that prevents most hobby connector pain]
 
@@ -97,4 +97,4 @@ Never trust a listing title or a photo. Verify **pitch, latch, housing, contact,
 
 The core mental model is the same in both tracks: a connector is a *controlled interface*, not just "a plug with enough pins." When your project starts carrying real battery power, going outdoors, riding on a vehicle, or being built by someone else, that's your cue to graduate specific interfaces to the engineering track — start with [rugged on a budget](../decision-paths/rugged-on-a-budget.md) and the [energized-connector safety warning](../decision-paths/high-current-dc-power.md).
 
-Mentoring a student or intern who starts from maker experience? [How to Use This Guide with an Intern](../using-this-guide-with-an-intern.md) sequences both tracks into an onboarding program.
+Mentoring a student or intern who starts from maker experience? [How to Use This Guide with an Intern](../engineering/guide/using-this-guide-with-an-intern.md) sequences both tracks into an onboarding program.

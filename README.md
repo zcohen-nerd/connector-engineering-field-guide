@@ -68,3 +68,23 @@ When reusing material, credit: *A zcohen-nerd technical guide by Zac Cohen.*
 Formatting, lint, link, accessibility, responsive, and bundle-budget checks — and
 every local + CI command — are documented in
 [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md).
+
+## Repository layout
+
+| Location | Purpose |
+| --- | --- |
+| `docs/index.md` | Published two-track landing page |
+| `docs/engineering/` | Professional guide: core chapters, family deep dives, and engineering topics |
+| `docs/hobby/` | Hobby guide and connector-family field notes |
+| `docs/shared/` | Shared glossary, identification, track choice, and attribution |
+| `docs/decision-paths/`, `docs/examples/`, `docs/tools/`, `docs/appendix/` | Scenario guidance, examples, templates, and references |
+| `docs/project/` | Published changelog and image opportunities |
+| `maintenance/` | Owner runbooks, audit snapshots, and editorial backlogs; excluded from the published guide |
+| `config/quality/` | Performance budgets, link-check settings, and dependency-audit exceptions |
+| `e2e/` | Browser smoke tests and their Playwright configuration |
+| `scripts/`, `src/`, `static/` | Build utilities, site components/styles, and served assets |
+
+Root files provide the repository overview, licenses, citation and agent instructions,
+package metadata, and configuration discovered there by Docusaurus, TypeScript,
+ESLint, Prettier, markdownlint, and size-limit. Published page URLs are defined by
+front matter; moving a page requires updating its relative links and sidebar ID.

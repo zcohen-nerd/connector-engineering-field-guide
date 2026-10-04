@@ -71,4 +71,4 @@ Copy this and fill it in — the blanks you can't fill are your shopping list:
 - Source document / drawing:
 - Verification status:
 
-Related: [How to Identify an Unknown Connector](identify-unknown-connector.md) · [Marketplace Kits](connector-kits.md) · [Buying the Right Mating Parts](buying-mating-parts.md) · the shared [Glossary](../glossary.md) for every term above.
+Related: [How to Identify an Unknown Connector](identify-unknown-connector.md) · [Marketplace Kits](connector-kits.md) · [Buying the Right Mating Parts](buying-mating-parts.md) · the shared [Glossary](../shared/glossary.md) for every term above.

@@ -8,7 +8,7 @@ sidebar_label: Design Review Checklist
 
 # Design Review Checklist
 
-Use this for the connector part of design review. It pulls together the [selection checklist](../10-selection-checklist.md) and the [red flags](../11-red-flags.md) so the meeting catches real interface risk instead of spending twenty minutes on connector color.
+Use this for the connector part of design review. It pulls together the [selection checklist](../engineering/guide/10-selection-checklist.md) and the [red flags](../engineering/guide/11-red-flags.md) so the meeting catches real interface risk instead of spending twenty minutes on connector color.
 
 ## Readiness checks
 
@@ -24,7 +24,7 @@ Use this for the connector part of design review. It pulls together the [selecti
 - [ ] Tooling and assembly process are defined
 - [ ] Workmanship/acceptance standard identified (e.g. IPC/WHMA-A-620 or the program/customer equivalent)
 - [ ] Qualification evidence exists — or is planned — for the exact configuration: family/QPL basis or a program-level plan ([Qualification Plan Template](connector-qualification-template.md))
-- [ ] Supply integrity addressed: lifecycle status checked, approved alternates on record, authorized sourcing channel identified, PCN/EOL notice handling assigned ([Lifecycle & Procurement](../lifecycle-and-procurement.md))
+- [ ] Supply integrity addressed: lifecycle status checked, approved alternates on record, authorized sourcing channel identified, PCN/EOL notice handling assigned ([Lifecycle & Procurement](../engineering/topics/lifecycle-and-procurement.md))
 - [ ] Documentation package exists (BOM, pinout, cable drawing, ICD)
 
 ## Red-flag scan

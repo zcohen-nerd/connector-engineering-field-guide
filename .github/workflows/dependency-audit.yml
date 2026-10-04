@@ -3,7 +3,7 @@ name: dependency-audit
 # Reports residual npm advisories and fails only on direct or
 # possibly-runtime-exposed high/critical findings. Build-only and
 # dev-server-only advisories are listed but do not fail the run.
-# Documented exceptions live in .github/audit-allowlist.json.
+# Documented exceptions live in config/quality/dependency-audit-allowlist.json.
 
 on:
   schedule:
@@ -12,7 +12,7 @@ on:
     paths:
       - "package.json"
       - "package-lock.json"
-      - ".github/audit-allowlist.json"
+      - "config/quality/dependency-audit-allowlist.json"
       - ".github/workflows/dependency-audit.yml"
       - "scripts/audit-ci.mjs"
   workflow_dispatch:

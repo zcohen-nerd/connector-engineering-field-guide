@@ -24,7 +24,7 @@ The pin counts, currents, and voltage classes below only get you oriented. The n
 
 ## Avoid this when
 
-- The motor is small enough that the ecosystem uses **M12-class connectors** for both power and feedback — see the [industrial sensor path](industrial-sensor.md) and [M12 deep dive](../08-m12.md); the same discipline applies at smaller scale.
+- The motor is small enough that the ecosystem uses **M12-class connectors** for both power and feedback — see the [industrial sensor path](industrial-sensor.md) and [M12 deep dive](../engineering/families/08-m12.md); the same discipline applies at smaller scale.
 - The motor wires into a **terminal box** with glands and no disconnect — that's a wiring-practice problem, not a connector selection.
 - A program requires **mil-spec hardware** — see [defense/rugged external I/O](defense-rugged-external-io.md).
 - It's a hobby servo lead — [hobby track, servo connectors](../hobby/servo-connectors.md).
@@ -56,9 +56,9 @@ The pin counts, currents, and voltage classes below only get you oriented. The n
 ## Specs to check
 
 - **The motor's connection diagram first.** The receptacles on the motor define series, inserts, keying, and pinout — you are buying the *mating* halves and cable, not choosing an interface.
-- **Shield strategy per the drive manual** — servo power cables carry fast-switched PWM edges; expect a requirement for **360° shield termination at both ends** through metal backshells/glands, and follow it exactly. A pigtailed shield on a servo power cable is an EMC incident waiting for commissioning week ([§5.7](../05-connector-anatomy.md#57-emi-shielding-and-bonding)).
+- **Shield strategy per the drive manual** — servo power cables carry fast-switched PWM edges; expect a requirement for **360° shield termination at both ends** through metal backshells/glands, and follow it exactly. A pigtailed shield on a servo power cable is an EMC incident waiting for commissioning week ([§5.7](../engineering/guide/05-connector-anatomy.md#57-emi-shielding-and-bonding)).
 - **Separation of power and feedback** — separate cables, separated routing, crossings at right angles; the encoder pair's integrity is the axis's integrity.
-- **Feedback-contact suitability** — encoder/resolver signals are low-level; verify low-level performance and signal-integrity requirements for the exact contact system and service conditions. Spare power poles are neither automatically suitable nor unsuitable; use them only when the contact system meets the circuit, signal-integrity, and fault-segregation requirements ([low-level signal contacts](../low-level-signal-contacts.md)).
+- **Feedback-contact suitability** — encoder/resolver signals are low-level; verify low-level performance and signal-integrity requirements for the exact contact system and service conditions. Spare power poles are neither automatically suitable nor unsuitable; use them only when the contact system meets the circuit, signal-integrity, and fault-segregation requirements ([low-level signal contacts](../engineering/topics/low-level-signal-contacts.md)).
 - **Current and voltage class** for the power insert against the drive's continuous and peak output — plus **brake and thermal-sensor conductors**, which ride in the power cable in many ecosystems.
 - **Cable construction** — drag-chain/continuous-flex rating, bend radius, jacket chemistry (oils/coolant), and the twisted/shielded pair construction the feedback protocol requires.
 - **Coupling type and access** — threaded vs. quick-lock, and whether a hand fits the coupling nut in the installed position.
@@ -74,14 +74,14 @@ The pin counts, currents, and voltage classes below only get you oriented. The n
 - **Dust caps** for open receptacles during machine build.
 - **Spare cordsets** for the maintenance stock — motors outlive cables in drag chains.
 
-See [What People Forget](../what-people-forget.md).
+See [What People Forget](../engineering/guide/what-people-forget.md).
 
 ## Common traps
 
 - **Building what you could buy.** Hand-terminating a 19-pole shielded feedback cable to beat a catalog cordset's price is usually a false economy — the cordset's shield termination and test are the product.
 - **Feedback routed with power** in one bundle, tray, or chain compartment. The classic intermittent-position-fault generator.
-- **Pigtailed shields** on servo power or feedback cables — see the shield discipline in [§5.7](../05-connector-anatomy.md#57-emi-shielding-and-bonding).
-- **Assuming any M23 mates any M23.** Shell thread is not insert, keying, or shield-shell compatibility — match the manufacturer's mating chart, and treat cross-vendor intermating as a claim to verify ([vendor mixing](../lifecycle-and-procurement.md) is recorded in the ICD, not improvised at purchasing).
+- **Pigtailed shields** on servo power or feedback cables — see the shield discipline in [§5.7](../engineering/guide/05-connector-anatomy.md#57-emi-shielding-and-bonding).
+- **Assuming any M23 mates any M23.** Shell thread is not insert, keying, or shield-shell compatibility — match the manufacturer's mating chart, and treat cross-vendor intermating as a claim to verify ([vendor mixing](../engineering/topics/lifecycle-and-procurement.md) is recorded in the ICD, not improvised at purchasing).
 - **Mixing feedback ecosystems** — encoder protocols, pinouts, and cable constructions differ per drive family even over the same connector shell.
 - **Ignoring the drive manual's cable length and type limits** — feedback protocols and PWM output stages both carry cable constraints.
 
@@ -100,7 +100,7 @@ See [What People Forget](../what-people-forget.md).
 - An [ICD entry](../tools/connector-icd-template.md) per axis: connector series/inserts, pinouts by reference to the motor/drive documents, routing/separation rules.
 - A [harness-inspection](../tools/harness-inspection-checklist.md) pass covering shield continuity and coupling torque/lock verification.
 
-Related: [Industrial sensor](industrial-sensor.md) · [High-current DC power](high-current-dc-power.md) (and its energized-connector warning) · [Removable machine module](removable-machine-module.md) · [EMI, shielding, and bonding (§5.7)](../05-connector-anatomy.md#57-emi-shielding-and-bonding) · [M12 deep dive](../08-m12.md).
+Related: [Industrial sensor](industrial-sensor.md) · [High-current DC power](high-current-dc-power.md) (and its energized-connector warning) · [Removable machine module](removable-machine-module.md) · [EMI, shielding, and bonding (§5.7)](../engineering/guide/05-connector-anatomy.md#57-emi-shielding-and-bonding) · [M12 deep dive](../engineering/families/08-m12.md).
 
 ## Sources
 

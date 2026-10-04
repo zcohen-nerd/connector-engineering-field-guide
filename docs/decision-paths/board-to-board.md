@@ -71,7 +71,7 @@ This is the basic map, from hobby stacking headers through industrial mezzanine 
 - **Board keep-outs and land patterns** per the manufacturer drawing — including keep-outs under the mated connector on both boards.
 - **Spares for fine-pitch parts during development** — rework kills them faster than service does.
 
-See [What People Forget](../what-people-forget.md).
+See [What People Forget](../engineering/guide/what-people-forget.md).
 
 ## Common traps
 
@@ -80,7 +80,7 @@ See [What People Forget](../what-people-forget.md).
 - **Unpolarized stacks assembled offset or reversed** — the Dupont trap at board scale; keying or asymmetric mounting prevents it.
 - **Card-edge cycles assumed free.** The mating half is plated fingers; plating spec, bevel, and cycle expectations belong in the design, not in hope.
 - **Tolerance stack never closed.** Coplanarity and standoff math decide whether fine-pitch contacts actually wipe; the datasheet's tolerance section is load-bearing reading.
-- **Treating a stack joint as a service disconnect.** Low-cycle families in a pull-it-weekly role wear out early — see the service-model logic in [§1](../01-what-connectors-do.md).
+- **Treating a stack joint as a service disconnect.** Low-cycle families in a pull-it-weekly role wear out early — see the service-model logic in [§1](../engineering/guide/01-what-connectors-do.md).
 
 ## Questions to ask a vendor/FAE
 
@@ -97,4 +97,4 @@ See [What People Forget](../what-people-forget.md).
 - An [ICD entry](../tools/connector-icd-template.md) for the board interface: pinout, power-pin allocation, keep-outs, mate/unmate procedure, cycle budget.
 - A [design-review](../tools/design-review-checklist.md) pass covering the tolerance stack and the mechanical-support plan.
 
-Related: [Internal PCB harnessing](internal-pcb-harnessing.md) (the wire alternative) · [Micro-D / compact high-rel](micro-d.md) · [Connector Anatomy (§5)](../05-connector-anatomy.md) · [Major Connector Categories (§2)](../02-major-connector-categories.md) · [Identification Workflow](../connector-identification.md).
+Related: [Internal PCB harnessing](internal-pcb-harnessing.md) (the wire alternative) · [Micro-D / compact high-rel](micro-d.md) · [Connector Anatomy (§5)](../engineering/guide/05-connector-anatomy.md) · [Major Connector Categories (§2)](../engineering/guide/02-major-connector-categories.md) · [Identification Workflow](../shared/connector-identification.md).

@@ -74,7 +74,7 @@ The electrical story gets the attention, but hobby USB-C failures are just as of
 
 - **The jack must be anchored through the board.** A cable is a lever, and thousands of cycles of leverage rip surface-mount-only shells off their pads. Prefer receptacles with **through-hole shell stakes** (or at least generous anchor tabs), and treat an SMT-only jack on a frequently-plugged project as a consumable.
 - **Strain relief is the enclosure's job.** Panel-mount USB-C passthroughs exist for project boxes; a jack floating on a small PCB inside a case, reached through a hole, is a pad-ripper.
-- **It is not sealed and not rugged.** The 10,000-cycle figure is durability, not environment — the engineering track's [§12.4](../12-consumer-hobby-prototype-connectors.md) covers when consumer I/O must hide behind a cover or give way to a [sealed service connector](../decision-paths/debug-service-port.md).
+- **It is not sealed and not rugged.** The 10,000-cycle figure is durability, not environment — the engineering track's [§12.4](../engineering/guide/12-consumer-hobby-prototype-connectors.md) covers when consumer I/O must hide behind a cover or give way to a [sealed service connector](../decision-paths/debug-service-port.md).
 
 ## 6. The rules that never change
 
@@ -87,7 +87,7 @@ The electrical story gets the attention, but hobby USB-C failures are just as of
 
 ## Source status
 
-The CC/Rd/Rp mechanism (5.1 kΩ per CC pin; source advertisement levels) is cited to silicon-vendor engineering documentation;[^usbcc] the unattached safe-zero and attached-source transition to USB-IF's functional test specification;[^usbattach] the PD voltage rungs, 100 W/240 W ceilings, and e-marked/EPR cable requirements to USB-IF's own publications;[^usbpd] the 10,000-cycle durability figure to the USB-IF Type-C specification (as in [§12.4](../12-consumer-hobby-prototype-connectors.md));[^usbcyc] and the Raspberry Pi 4 case study to engineering-press coverage carrying the Raspberry Pi co-creator's own confirmation, labeled as such.[^rpi4] Exact resistor tolerances, PDO tables, and connector pin assignments live in the USB-IF specifications — this page is deliberately a power-user's map, not a reproduction. Tracked in [Hobby Source Notes](hobby-source-notes.md).
+The CC/Rd/Rp mechanism (5.1 kΩ per CC pin; source advertisement levels) is cited to silicon-vendor engineering documentation;[^usbcc] the unattached safe-zero and attached-source transition to USB-IF's functional test specification;[^usbattach] the PD voltage rungs, 100 W/240 W ceilings, and e-marked/EPR cable requirements to USB-IF's own publications;[^usbpd] the 10,000-cycle durability figure to the USB-IF Type-C specification (as in [§12.4](../engineering/guide/12-consumer-hobby-prototype-connectors.md));[^usbcyc] and the Raspberry Pi 4 case study to engineering-press coverage carrying the Raspberry Pi co-creator's own confirmation, labeled as such.[^rpi4] Exact resistor tolerances, PDO tables, and connector pin assignments live in the USB-IF specifications — this page is deliberately a power-user's map, not a reproduction. Tracked in [Hobby Source Notes](hobby-source-notes.md).
 
 ## Sources
 
@@ -97,7 +97,7 @@ The CC/Rd/Rp mechanism (5.1 kΩ per CC pin; source advertisement levels) is cite
 
 [^usbpd]: USB-IF, *USB PD 3.1 Specification Announcement* — Extended Power Range to 240 W via new 28 V / 36 V / 48 V fixed voltages atop the existing 5 / 9 / 15 / 20 V rungs; 100 W as 20 V / 5 A; above-3 A operation requires 5 A e-marked cables and EPR requires EPR-rated cables. <https://www.usb.org/sites/default/files/2021-05/USB%20PG%20USB%20PD%203.1%20DevUpdate%20Announcement_FINAL.pdf>; USB-IF, *USB Charger (USB Power Delivery)* program page. <https://www.usb.org/usb-charger-pd>
 
-[^usbcyc]: USB-IF, *USB Type-C Cable and Connector Specification* — 10,000-cycle connector durability (minimum); the same figure cited in [§12.4](../12-consumer-hobby-prototype-connectors.md). Durability is a mating-cycle figure only — not sealing, vibration, or ruggedness. <https://www.usb.org/document-library/usb-type-cr-cable-and-connector-specification-release-25>
+[^usbcyc]: USB-IF, *USB Type-C Cable and Connector Specification* — 10,000-cycle connector durability (minimum); the same figure cited in [§12.4](../engineering/guide/12-consumer-hobby-prototype-connectors.md). Durability is a mating-cycle figure only — not sealing, vibration, or ruggedness. <https://www.usb.org/document-library/usb-type-cr-cable-and-connector-specification-release-25>
 
 [^rpi4]: Raspberry Pi 4 USB-C case study (engineering-press coverage, labeled as such; the technical analysis originated with engineer Tyler Ward and was confirmed by Raspberry Pi co-creator Eben Upton): Hackaday, *Exploring the Raspberry Pi 4 USB-C Issue In-Depth* — one 5.1 kΩ resistor shared between CC1/CC2 instead of one per pin; e-marked cables read the port as an audio adapter accessory and withhold power. <https://hackaday.com/2019/07/16/exploring-the-raspberry-pi-4-usb-c-issue-in-depth/>; The Register — the flaw was corrected in a subsequent board revision. <https://www.theregister.com/2020/02/21/pi_4_fixed/>
 

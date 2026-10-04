@@ -1,0 +1,110 @@
+---
+id: engineering-home
+title: Professional / Industrial Connector Field Guide
+description: "The professional/industrial connector guide: requirements, ratings, standards, qualification, documentation, tooling, and lifecycle risk for real systems."
+slug: /engineering
+sidebar_label: Engineering Guide Home
+---
+
+# Professional / Industrial Connector Field Guide
+
+*Practical connector selection for rugged, industrial, military-style, and electromechanical systems.*
+
+:::note[v1.0 — Source-Verified Release]
+
+“Source-Verified Release” is the historical v1.0 release name, not a claim that every source interpretation or example is complete. Deferred items remain unverified; see the [content correction record](../appendix/source-notes.md#content-corrections-2026-10-04).
+
+The source-verification milestone shipped with v1.0, and the guide is **continuously reviewed** after it — the [Source Notes](../appendix/source-notes.md) dashboard is the standing record. Corrections are welcome—bring sources. This is an educational engineering reference, so verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and your program or customer requirements.
+
+:::
+
+Picking connectors is harder than it should be. The useful information is scattered across datasheets, standards, catalogs, vendor naming systems, and whatever the last engineer remembers. This guide pulls that mess into one place. It's for engineers who aren't connector specialists but still need to turn “I need a plug here” into something procurement can buy, manufacturing can build, and a technician can service later.
+
+You don't need to become a connector wizard. You need to classify the interface, pick a sane family to investigate, know which specs matter, spot the usual traps, and document the result well enough that nobody has to reverse-engineer your intent later.
+
+![A rugged circular flange receptacle beside its matching cable plug, with contacts and coupling hardware visible](/img/photos/mil-dtl-38999-pair.jpg)
+
+*A rugged circular is not just a shell with enough contacts: the insert arrangement, keying, coupling, backshell, contacts, and mating half all belong to the controlled interface. Photo: [Abaillieul](https://commons.wikimedia.org/wiki/File:38999_connector_nickel-teflon.jpg), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), via Wikimedia Commons.*
+
+:::note[Core mental model]
+
+A connector is a *controlled interface between subsystems*. It carries power, signals, and data; survives the environment; defines the service boundary; and becomes a configuration-controlled item in your released design baseline.
+
+:::
+
+:::warning[Disclaimer]
+
+This guide teaches engineering judgment. It does **not** replace applicable standards, manufacturer datasheets, safety requirements, customer specifications, qualification requirements, or program-specific design rules. Before anything goes into released hardware, verify the exact ratings, part numbers, tooling, assembly instructions, and qualification status. **If this guide disagrees with a datasheet, applicable standard, customer requirement, or qualified program requirement, the source requirement wins.**
+
+:::
+
+## Start Here: Pick a Connector
+
+Use these cards to get to a reasonable starting family before you disappear into catalogs and datasheets. If you are still trying to figure out how to search, start with [How to Search for Connectors](guide/00-how-to-search-for-connectors.md).
+
+<div class="cn-card-grid">
+<div class="cn-card"><div class="cn-card-title">A sealed industrial sensor cable</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> M8 or M12 A-coded</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> pinout, current, IP rating, torque, cable OD, vibration</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/industrial-sensor">Industrial sensor</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Servo motor power + feedback cabling</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> The motor's own receptacles — M23-class power + signal pair, or the drive ecosystem's cordsets</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> shield termination per the drive manual, power/feedback separation, drag-chain cable, brake/thermal wires</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/motor-feedback-cable">Motor + feedback cable</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Rugged Ethernet outside an enclosure</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> M12 D-coded, M12 X-coded, or sealed/rugged RJ45</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> data rate, shielding, cable category, sealing, latch protection</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/rugged-ethernet">Rugged Ethernet</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Internal PCB power harness</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Micro-Fit, Mini-Fit, Nano-Fit, TE/Harwin/JST family as appropriate</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> current, wire gauge, latch, TPA, tooling, vibration</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/internal-pcb-harnessing">Internal PCB harnessing</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Two boards plugging into each other</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Stacking headers, fine-pitch mezzanine pair, card edge, or DIN 41612 backplane class</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> mated stack height, polarization, cycles, standoff/support plan, tolerance stack</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/board-to-board">Board-to-board</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Better-than-hobby field wiring on a budget</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Sealed automotive — Deutsch DT/DTM/DTP, Superseal, MX150, Metri-Pack</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> wire seal range, correct contact/crimp, cavity plugs, wedgelock/secondary lock</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/rugged-on-a-budget">Rugged on a budget</a></div></div>
+<div class="cn-card"><div class="cn-card-title">High-current DC power</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Anderson SB, industrial rectangular power insert, high-current circular, 38999 power contacts where appropriate</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> derating, wire gauge, loaded contacts, heat rise, touch safety, sealing (Anderson SB is unsealed/genderless — add a boot outdoors)</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/high-current-dc-power">High-current DC power</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Power or signal through a sealed enclosure wall</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> 38999 jam-nut or flange panel receptacle, sealed M12 panel mount; hermetic/potted penetrator where there is real pressure</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> IP rating and stated depth/duration, panel gasket, panel thickness/cutout, coupling and jam-nut torque, internal termination, wire seals and cavity plugs</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/sealed-enclosure-feedthrough">Sealed enclosure feedthrough</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Defense/rugged external payload interface</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> MIL-DTL-38999, MIL-DTL-26482, or similar rugged circular</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> shell size, insert arrangement, contacts, backshell, keying, caps</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/defense-rugged-external-io">Defense / rugged external I/O</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Compact high-reliability internal interface</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Micro-D or other high-reliability compact connector</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> current, tooling, assembly process, service model</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/micro-d">Micro-D / compact high-rel</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Debug or service access</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Protected USB-C, keyed shrouded header, Tag-Connect, Micro-D, D-sub, sealed service connector</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> access level, ESD, mating cycles, pin protection, documentation</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/debug-service-port">Debug / service port</a></div></div>
+<div class="cn-card"><div class="cn-card-title">Removable machine module</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> Industrial rectangular / Han-style connector or 38999 hybrid</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> mixed power/signal/data, serviceability, keying, ground-first sequencing</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/removable-machine-module">Removable machine module</a></div></div>
+<div class="cn-card"><div class="cn-card-title">RF/GPS/radio path</div><div class="cn-card-row"><span class="cn-card-label">Start with</span> SMA, TNC, N-Type, BNC, MCX, SMP/SMPM, or coax contacts in a hybrid connector</div><div class="cn-card-row"><span class="cn-card-label">Then check</span> impedance, frequency, cable, torque, shielding</div><div class="cn-card-row"><span class="cn-card-label">Path</span> <a href="decision-paths/rf-gps-radio">RF / GPS / radio</a></div></div>
+</div>
+
+Want a step-by-step walkthrough? Every card above links to a full [Decision Path](../decision-paths/index.md) that walks the scenario from "I need a connector here" to a documented, buildable choice.
+
+:::tip[Working on a maker or dev-board project instead?]
+
+Breadboards, Arduino/Raspberry Pi/ESP32 wiring, 3D printers, LEDs, RC power, connector kits from online marketplaces — that ecosystem has its own naming chaos and its own guide. See the [Hobby Connector Field Guide](../hobby/index.md), or [Hobby or Professional?](../shared/hobby-or-professional.md) if you're torn.
+
+:::
+
+## Who this is for
+
+- Mechanical engineering interns
+- Junior electromechanical / mechatronics engineers
+- Robotics and controls engineers
+- Small hardware teams
+- Makers transitioning into professional hardware design
+
+## What this guide helps you do
+
+- Classify the interface you are trying to build
+- Pick a sane connector family to investigate first
+- Know which specifications actually matter
+- Avoid common beginner traps
+- Turn a loose connector choice into a buildable, documented interface
+
+## What this guide is not
+
+- Not a connector catalog
+- Not a replacement for standards
+- Not a manufacturer datasheet
+- Not a qualification document
+
+## Use the guide
+
+- [How to search for connectors](guide/00-how-to-search-for-connectors.md)
+- [What connectors actually do](guide/01-what-connectors-do.md)
+- [Connector selection workflow](guide/04-connector-selection-workflow.md)
+- [Decision paths](../decision-paths/index.md) — scenario-based starting points
+- [MIL-DTL-38999 deep dive](families/07-mil-dtl-38999.md) and [MIL-DTL-26482 mini deep dive](families/mil-dtl-26482.md)
+- [M12 deep dive](families/08-m12.md), [DEUTSCH deep dive](families/deutsch.md), and [Micro-Fit 3.0 deep dive](families/micro-fit.md)
+- [Low-Level Signals and Contact Design](topics/low-level-signal-contacts.md) — dry circuits, gold vs. tin, fretting
+- [Lifecycle and Procurement Integrity](topics/lifecycle-and-procurement.md) — PCN/EOL, obsolescence, counterfeit avoidance, alternates
+- [Practical checklist](guide/10-selection-checklist.md)
+- [What people forget](guide/what-people-forget.md)
+- [Hands-on exercises](guide/13-hands-on-exercises.md)
+- [Tools & templates](../tools/index.md) and worked examples: [Rugged Control Box](../examples/rugged-control-box.md), [Connector Selection Packet](../examples/connector-selection-packet.md), [M12 Sensor Interface](../examples/m12-sensor-interface.md)
+- [Using this guide with an intern](guide/using-this-guide-with-an-intern.md) — the mentor's sequencing of all of the above
+
+## Source discipline
+
+The Markdown files under `docs/` are the **canonical guide source** for every published page. The professional core is organized as the 14 numbered guide sections plus `appendix/`; decision paths, tools, examples, supplemental deep dives, shared references, and the hobby track live alongside it. Source-verification status is maintained in [Source Notes](../appendix/source-notes.md), with hobby-specific status in [Hobby Source Notes](../hobby/hobby-source-notes.md). Datasheets, applicable standards, customer requirements, and qualified program requirements always win over the guide.

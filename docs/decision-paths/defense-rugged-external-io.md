@@ -22,7 +22,7 @@ This is where all the hard requirements show up at once: external defense or aer
 ## Families to start with
 
 - **MIL-DTL-38999** — Series III is often the default for new harsh-environment designs (threaded, scoop-proof, anti-decoupling), subject to size/mating-speed/legacy/customer/program requirements.
-- **MIL-DTL-26482** — smaller/cheaper rugged circular with a fast bayonet, where its ratings fit. See the [MIL-DTL-26482 mini deep dive](../mil-dtl-26482.md) for the Series 1/2 trap and when to prefer it.
+- **MIL-DTL-26482** — smaller/cheaper rugged circular with a fast bayonet, where its ratings fit. See the [MIL-DTL-26482 mini deep dive](../engineering/families/mil-dtl-26482.md) for the Series 1/2 trap and when to prefer it.
 - **MIL-DTL-5015 / "MS-style" legacy circulars** — the pre-26482 threaded generation still common on older platforms; usually *matched* for compatibility with existing hardware rather than chosen for new design.
 - **[Micro-D](micro-d.md)** for compact high-reliability *internal* runs alongside the external circulars.
 
@@ -30,7 +30,7 @@ This is where all the hard requirements show up at once: external defense or aer
 
 *The Series III physical cues that matter during selection: threaded coupling, recessed scoop-proof interface, and a keyed insert. The exact shell, arrangement, service class, and backshell still come from the part-number documentation.*
 
-See the [MIL-DTL-38999 deep dive](../07-mil-dtl-38999.md) and [Standards and Families](../03-connector-standards-and-families.md).
+See the [MIL-DTL-38999 deep dive](../engineering/families/07-mil-dtl-38999.md) and [Standards and Families](../engineering/guide/03-connector-standards-and-families.md).
 
 ## Search terms
 
@@ -50,7 +50,7 @@ See the [MIL-DTL-38999 deep dive](../07-mil-dtl-38999.md) and [Standards and Fam
 - **Alternate keying** across similar same-shell connectors.
 - A documented **torque / assembly procedure**.
 
-See [What People Forget](../what-people-forget.md).
+See [What People Forget](../engineering/guide/what-people-forget.md).
 
 ## Common traps
 
@@ -64,7 +64,7 @@ See [What People Forget](../what-people-forget.md).
 - What backshell and strain relief are compatible?
 - What alternate keying/polarization options exist?
 - What is the qualification / QPL status for my requirement?
-- What is the **lifecycle status** — and who receives PCN/EOL notices for these part numbers? (Defense programs live long enough to meet obsolescence; [Lifecycle & Procurement](../lifecycle-and-procurement.md) is the loop, and DMSMS is its formal name.)
+- What is the **lifecycle status** — and who receives PCN/EOL notices for these part numbers? (Defense programs live long enough to meet obsolescence; [Lifecycle & Procurement](../engineering/topics/lifecycle-and-procurement.md) is the loop, and DMSMS is its formal name.)
 
 ## Example documentation bundle
 
@@ -72,4 +72,4 @@ See [What People Forget](../what-people-forget.md).
 - A source-controlled **pinout** with keying documented in the [ICD](../tools/connector-icd-template.md).
 - A [cable drawing](../tools/cable-drawing-template.md) and a torque/assembly note.
 
-Related: [MIL-DTL-38999 deep dive](../07-mil-dtl-38999.md) · [Decision Examples](../09-decision-examples.md) · [Rugged Control Box worked example](../examples/rugged-control-box.md).
+Related: [MIL-DTL-38999 deep dive](../engineering/families/07-mil-dtl-38999.md) · [Decision Examples](../engineering/guide/09-decision-examples.md) · [Rugged Control Box worked example](../examples/rugged-control-box.md).

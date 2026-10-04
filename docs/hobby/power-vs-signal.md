@@ -55,6 +55,6 @@ A spare pole in a power connector still needs a signal-duty check.
 - **Re-plugging can mask a fault.** The mating wipe can temporarily clear debris; inspect and measure before disturbing a suspect interface where the diagnostic procedure permits.
 - **Signal requirements go beyond current.** Check shielding, pair geometry, common-mode range, and the signal error budget, as well as retention and polarization.
 
-Use a contact system supported by manufacturer evidence or application qualification. Missing public low-level data means ask and verify, not assume failure or success. The engineering track's [Low-Level Signals and Contact Design](../low-level-signal-contacts.md) explains the mechanisms.
+Use a contact system supported by manufacturer evidence or application qualification. Missing public low-level data means ask and verify, not assume failure or success. The engineering track's [Low-Level Signals and Contact Design](../engineering/topics/low-level-signal-contacts.md) explains the mechanisms.
 
 Related: [JST-SM and LED strings](jst-sm-led-connectors.md) (power injection) · [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md).

@@ -74,7 +74,7 @@ Pitch, position span, header orientations, the two crimp-contact wire ranges, an
 
 ## When to move to the engineering track
 
-Vibration, field exposure, real battery current, or someone else building the harness — see [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md) and, for sealed field wiring one step up, [rugged on a budget](../decision-paths/rugged-on-a-budget.md) (family detail in the [DEUTSCH deep dive](../deutsch.md)).
+Vibration, field exposure, real battery current, or someone else building the harness — see [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md) and, for sealed field wiring one step up, [rugged on a budget](../decision-paths/rugged-on-a-budget.md) (family detail in the [DEUTSCH deep dive](../engineering/families/deutsch.md)).
 
 ## Sources
 

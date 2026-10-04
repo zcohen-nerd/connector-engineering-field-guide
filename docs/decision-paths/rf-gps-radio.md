@@ -24,7 +24,7 @@ If the frequency, power, or environment is high enough to be risky — precision
 
 ## Avoid this when
 
-- The signal is **ordinary low-speed discrete/analog** wiring — use the normal [selection workflow](../04-connector-selection-workflow.md).
+- The signal is **ordinary low-speed discrete/analog** wiring — use the normal [selection workflow](../engineering/guide/04-connector-selection-workflow.md).
 - The interface is **Ethernet over twisted pair** — see [Rugged Ethernet](rugged-ethernet.md).
 - The design needs **detailed RF launch design, microwave performance, or precision test-fixture work** beyond this guide.
 
@@ -37,7 +37,7 @@ If the frequency, power, or environment is high enough to be risky — precision
 - **MCX / MMCX** — snap-on miniatures for tight spaces (e.g. GPS modules).
 - **U.FL / IPEX-style (MHF-class)** — the tiny snap-on board micro-coax on dev boards, GPS/LoRa/Wi-Fi modules, and drone gear (50 Ω, GHz-class, ultra-fine ~0.8 mm cable). These are board-assembly parts, not service ports: removal wants the extraction tool, and mating-cycle ratings are low — check the spec before planning repeated disconnects, and bring the signal to a panel via a U.FL-to-SMA bulkhead pigtail instead of cycling the board connector. Naming chaos alert: "U.FL" is Hirose's genuine series, while "IPEX"/"IPX"/"MHF" listings may or may not be the same geometry and generation — verify the mate.
 - **SMP / SMPM** — board-to-board / blind-mate miniatures for dense, high-frequency assemblies.
-- **Coax contacts inside a MIL-DTL-38999 or other hybrid connector** — for a rugged payload, one coax contact in an existing hybrid insert may beat a separate coax bulkhead. See [38999 §7.6](../07-mil-dtl-38999.md#76-coax-twinax-and-quadrax-in-a-38999).
+- **Coax contacts inside a MIL-DTL-38999 or other hybrid connector** — for a rugged payload, one coax contact in an existing hybrid insert may beat a separate coax bulkhead. See [38999 §7.6](../engineering/families/07-mil-dtl-38999.md#76-coax-twinax-and-quadrax-in-a-38999).
 
 ![Two antenna connectors side by side, one with a center socket and one with a center pin, otherwise identical](/img/photos/sma-vs-rpsma.jpg)
 
@@ -103,14 +103,14 @@ RF connector selection is not only mechanical fit. Frequency range, impedance co
 - **Weather caps / protective caps** — contamination on an RF interface degrades performance and can damage the mating face.
 - **Bulkhead hardware and a panel gasket** for feedthroughs.
 
-See [What People Forget](../what-people-forget.md).
+See [What People Forget](../engineering/guide/what-people-forget.md).
 
 ## Common traps
 
 - **Selecting by pin count / "it fits."** RF selection is impedance, frequency, power, cable compatibility, shielding, environment, and service model — the connector, cable, termination, launch geometry, and panel transition are one system.
 - **Mixing 50 Ω and 75 Ω** BNCs (or SMA/RP-SMA) because they look alike.
 - **Skipping the torque wrench** on threaded RF connectors — over- or under-torque both degrade the match and can damage the interface.
-- **Long shield pigtails** at the panel transition — inductive, and they radiate. Keep the shield/ground path short and circumferential; see [EMI, shielding, and bonding (§5.7)](../05-connector-anatomy.md#57-emi-shielding-and-bonding).
+- **Long shield pigtails** at the panel transition — inductive, and they radiate. Keep the shield/ground path short and circumferential; see [EMI, shielding, and bonding (§5.7)](../engineering/guide/05-connector-anatomy.md#57-emi-shielding-and-bonding).
 - **Assuming a family frequency ceiling.** As a rough ordering, SMA-class connectors are generally used at higher frequencies than N/TNC/BNC families — but the exact ceiling is part- and cable-specific, so read the datasheet.
 
 ## Questions to ask a vendor/FAE
@@ -127,4 +127,4 @@ See [What People Forget](../what-people-forget.md).
 - A source-controlled **cable/RF interface definition**: connector, cable type, impedance, torque, and shielding/bond, in the [ICD](../tools/connector-icd-template.md).
 - A [cable drawing](../tools/cable-drawing-template.md) note for the coax, its termination, and the panel transition.
 
-Related: [RF connectors — a brief orientation (§2)](../02-major-connector-categories.md#rf-connectors--a-brief-orientation) · [EMI, shielding, and bonding (§5.7)](../05-connector-anatomy.md#57-emi-shielding-and-bonding) · [Coax/twinax in a 38999 (§7.6)](../07-mil-dtl-38999.md#76-coax-twinax-and-quadrax-in-a-38999) · [Defense / rugged external I/O](defense-rugged-external-io.md) · [Practical Checklist](../10-selection-checklist.md).
+Related: [RF connectors — a brief orientation (§2)](../engineering/guide/02-major-connector-categories.md#rf-connectors--a-brief-orientation) · [EMI, shielding, and bonding (§5.7)](../engineering/guide/05-connector-anatomy.md#57-emi-shielding-and-bonding) · [Coax/twinax in a 38999 (§7.6)](../engineering/families/07-mil-dtl-38999.md#76-coax-twinax-and-quadrax-in-a-38999) · [Defense / rugged external I/O](defense-rugged-external-io.md) · [Practical Checklist](../engineering/guide/10-selection-checklist.md).

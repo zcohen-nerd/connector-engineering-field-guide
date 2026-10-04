@@ -36,7 +36,7 @@ Breadboards, Arduino-style headers, Raspberry Pi GPIO jumper wiring, dev-board e
 
 ## What to buy
 
-For bench use: pre-made jumper assortments (M-M, M-F, F-F) from a reputable supplier beat crimping your own. For semi-permanent internal wiring, step up to a latched family instead — the classic destination is [Molex Micro-Fit 3.0](../micro-fit.md), and the [internal PCB harnessing path](../decision-paths/internal-pcb-harnessing.md) maps the alternatives. If you do crimp: housings and contacts are separate purchases, and [the crimping rules](crimping.md) apply.
+For bench use: pre-made jumper assortments (M-M, M-F, F-F) from a reputable supplier beat crimping your own. For semi-permanent internal wiring, step up to a latched family instead — the classic destination is [Molex Micro-Fit 3.0](../engineering/families/micro-fit.md), and the [internal PCB harnessing path](../decision-paths/internal-pcb-harnessing.md) maps the alternatives. If you do crimp: housings and contacts are separate purchases, and [the crimping rules](crimping.md) apply.
 
 :::warning[Dupont is a bench connector, not a retention strategy]
 
@@ -47,7 +47,7 @@ Dupont-style jumpers are excellent for breadboards and quick experiments. They h
 ## Common traps
 
 - **Power through jumpers.** Thin kit wire plus a friction contact is a voltage-drop and heat generator — treat Dupont as a signal-and-milliamps connector and use real [power wiring](power-vs-signal.md) for anything that works for a living.
-- **No polarization** — nothing stops a reversed or offset connection except your attention. Shrouded/keyed headers exist for a reason ([glossary](../glossary.md)).
+- **No polarization** — nothing stops a reversed or offset connection except your attention. Shrouded/keyed headers exist for a reason ([glossary](../shared/glossary.md)).
 - **Vibration walks them off.** The first bumpy ride disconnects them; there is no latch.
 - **Kit-to-kit inconsistency** — retention force and plating vary; a loose contact is an intermittent, not a failure you'll find quickly.
 

@@ -23,9 +23,9 @@
     "lint:md:all": "markdownlint-cli2 \"**/*.md\" \"**/*.mdx\"",
     "validate": "node scripts/bump-version.mjs --check && node scripts/validate-build.mjs",
     "verify": "npm run format:check && npm run typecheck && npm run lint && npm run lint:md && npm run validate",
-    "test:e2e": "playwright test",
-    "test:a11y": "playwright test a11y",
-    "test:responsive": "playwright test responsive",
+    "test:e2e": "playwright test --config e2e/playwright.config.ts",
+    "test:a11y": "playwright test --config e2e/playwright.config.ts a11y",
+    "test:responsive": "playwright test --config e2e/playwright.config.ts responsive",
     "links:external": "node scripts/check-external-links.mjs",
     "size": "size-limit",
     "bundle-report": "node scripts/bundle-report.mjs"

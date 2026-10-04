@@ -89,7 +89,7 @@ Soldering the end of a stranded wire and putting it under a screw feels tidy, bu
 
 ## 7. When to move to the engineering track
 
-Field-serviceable distribution done right — DIN-rail terminal blocks in an enclosure with documented torque and wire prep — is the professional version of this page: see [§12.3](../12-consumer-hobby-prototype-connectors.md), [terminal blocks in the family map](../03-connector-standards-and-families.md), and, when the wiring leaves the bench, [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md).
+Field-serviceable distribution done right — DIN-rail terminal blocks in an enclosure with documented torque and wire prep — is the professional version of this page: see [§12.3](../engineering/guide/12-consumer-hobby-prototype-connectors.md), [terminal blocks in the family map](../engineering/guide/03-connector-standards-and-families.md), and, when the wiring leaves the bench, [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md).
 
 ## Source status
 

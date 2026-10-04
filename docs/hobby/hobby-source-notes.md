@@ -8,7 +8,7 @@ sidebar_label: Hobby Source Notes
 
 # Hobby Source Notes
 
-The hobby track follows the same transparency rules as the rest of the site (see the main [Source Notes dashboard](../appendix/source-notes.md) and the [source hierarchy](../06-reading-datasheets.md)): claims are sourced, marked as judgment, or explicitly flagged as needing a source. Clone and marketplace parts make this discipline *more* important in hobby work, not less.
+The hobby track follows the same transparency rules as the rest of the site (see the main [Source Notes dashboard](../appendix/source-notes.md) and the [source hierarchy](../engineering/guide/06-reading-datasheets.md)): claims are sourced, marked as judgment, or explicitly flagged as needing a source. Clone and marketplace parts make this discipline *more* important in hobby work, not less.
 
 The [October 2026 correction record](../appendix/source-notes.md#content-corrections-2026-10-04) distinguishes claim verification from source presence. The corrections include servo reversal, barrel dimensions, ferrule applicability, USB-C port roles, genuine 2.54 mm JST families, and low-level contact guidance. Historical deferrals below remain evidence gaps; they are not verified claims.
 
@@ -17,8 +17,8 @@ The [October 2026 correction record](../appendix/source-notes.md#content-correct
 Only what is actually backed by sources present in this repo:
 
 - **JST XH, PH, EH, SH, GH, ZH, SM, and RCY series** — pitch, connector type, and headline datasheet ratings (XH 2.5 / PH 2.0 / EH 2.5 / SH 1.0 / GH 1.25 / ZH 1.5 / SM 2.5 / RCY 2.5 mm), each cited to its official JST series PDF (ZH to JST's official product page) on [JST Is Not One Connector](jst-is-not-one-connector.md). **Genuine-part figures only — clones and "compatible" parts are not covered by them.**
-- **JST VH** (3.96 mm, up to ~10 A @ AWG 16) — per the JST datasheet cited in the engineering track's [§12](../12-consumer-hobby-prototype-connectors.md).
-- **USB-C 10,000-cycle durability** — per the USB-IF Type-C specification, cited in [§12](../12-consumer-hobby-prototype-connectors.md).
+- **JST VH** (3.96 mm, up to ~10 A @ AWG 16) — per the JST datasheet cited in the engineering track's [§12](../engineering/guide/12-consumer-hobby-prototype-connectors.md).
+- **USB-C 10,000-cycle durability** — per the USB-IF Type-C specification, cited in [§12](../engineering/guide/12-consumer-hobby-prototype-connectors.md).
 - **One wire per crimp barrel** — the gas-tight/qualified-fill mechanism per TE Connectivity's crimping whitepapers; the dual-wire-only-when-explicitly-qualified exception evidenced by Molex's published dual-wire test summary for the 5556 (Mini-Fit Jr.) terminal (2 × 22 AWG); and the clause-level backing verified against NASA-STD-8739.4 §12.3.3 (contact-conductor combinations shall be per manufacturer's recommendations). Cited on [Crimping](crimping.md); genuine-part, exact-terminal documentation controls as always.
 - **USB-C power mechanics** — the sink-side 5.1 kΩ-per-CC-pin rule and the source's Rp current-advertisement levels per silicon-vendor engineering documentation (Infineon, Renesas); the unattached vSafe0V behavior and Rd-qualified transition to the attached-source state per USB-IF's functional test specification; the PD fixed-voltage rungs (5/9/15/20 V, plus 28/36/48 V EPR), the 100 W / 240 W ceilings, and the e-marked/EPR cable requirements per USB-IF's own publications; the Raspberry Pi 4 shared-CC-resistor case study per engineering-press coverage carrying Raspberry Pi's own confirmation (labeled as such). Cited on [USB-C Power for Hobby Projects](usb-c-power.md).
 - **JST GH figures and the Pixhawk standardization** — 1.25 mm pitch, 2–15 circuits, positive latch, 1 A (AWG #26) / 50 V / AWG #30–26 per the official JST GH datasheet; GH as the connector of the Pixhawk Connector Standard (DS-009), the DF13-predecessor history, and the not-all-boards-follow-the-pinouts caveat per the Pixhawk standards document and Dronecode connector-workgroup documentation. Cited on [JST-GH](jst-gh.md).
@@ -46,7 +46,7 @@ Only what is actually backed by sources present in this repo:
 - **Treat marketplace connector names as clues, not proof.**
 - **Buy small samples before committing.**
 - **Use pre-crimped leads when tiny terminals/tooling are impractical** — a reliability decision, not cheating.
-- **Move to the [professional guide](../hobby-or-professional.md) when failure consequence, environment, or documentation burden increases.**
+- **Move to the [professional guide](../shared/hobby-or-professional.md) when failure consequence, environment, or documentation burden increases.**
 - Soldering crimp terminals is usually a smell; genuine parts from authorized distributors are cheap insurance for repeatable projects.
 
 ## Example-only / source-needed values

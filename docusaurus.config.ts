@@ -58,7 +58,7 @@ const config: Config = {
     },
     // Search Console verification — paste the token from Google Search Console /
     // Bing Webmaster Tools and uncomment, then rebuild. See
-    // SEARCH-CONSOLE-CHECKLIST.md. (No console change has been made.)
+    // maintenance/runbooks/search-console.md. (No console change has been made.)
     // {tagName: 'meta', attributes: {name: 'google-site-verification', content: 'REPLACE_ME'}},
     // {tagName: 'meta', attributes: {name: 'msvalidate.01', content: 'REPLACE_ME'}},
   ],

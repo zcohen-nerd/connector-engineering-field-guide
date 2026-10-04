@@ -47,11 +47,11 @@ Three practical consequences:
 
 *The red pair behind most "JST battery connector" listings is the RCY series (2.5 mm, wire-to-wire) — not SM, not PH, not XH. Photo: [Mike mahoney aus4810](https://commons.wikimedia.org/wiki/File:JST_RCY.JPG), CC BY-SA 4.0, via Wikimedia Commons.*
 
-The vocabulary doing the work here — *pitch*, *contact vs. terminal*, *housing*, the *male/female* ambiguity, *genuine vs. clone* — is pinned down in the shared [Glossary](../glossary.md).
+The vocabulary doing the work here — *pitch*, *contact vs. terminal*, *housing*, the *male/female* ambiguity, *genuine vs. clone* — is pinned down in the shared [Glossary](../shared/glossary.md).
 
 ## Sources
 
-All figures are for genuine JST parts assembled per the datasheet; clones and "compatible" parts are not covered by them. See also the engineering track's [consumer/hobby connectors §12](../12-consumer-hobby-prototype-connectors.md).
+All figures are for genuine JST parts assembled per the datasheet; clones and "compatible" parts are not covered by them. See also the engineering track's [consumer/hobby connectors §12](../engineering/guide/12-consumer-hobby-prototype-connectors.md).
 
 [^jst-xh]: JST XH series datasheet, official JST PDF — 2.5 mm pitch, wire-to-board; 3 A current class (contact/gauge-dependent), 250 V. <https://www.jst-mfg.com/product/pdf/eng/eXH.pdf>
 

@@ -12,9 +12,9 @@ These examples show the reasoning and paperwork, not magic numbers you can copy 
 
 | Example | Shows | Based on |
 |---|---|---|
-| [Rugged Control Box](rugged-control-box.md) | Selecting and documenting the full external connector set for a small sealed enclosure — Exercise 1 architecture study | [Exercise 1](../13-hands-on-exercises.md) |
+| [Rugged Control Box](rugged-control-box.md) | Selecting and documenting the full external connector set for a small sealed enclosure — Exercise 1 architecture study | [Exercise 1](../engineering/guide/13-hands-on-exercises.md) |
 | [Connector Selection Packet](connector-selection-packet.md) | An illustrative packet for one rugged field-robot module — requirements → decision matrix → architecture → pinout → BOM → cable → ICD → review | [Rugged-on-a-budget](../decision-paths/rugged-on-a-budget.md) |
-| [M12 Sensor Interface](m12-sensor-interface.md) | Selecting M12 codings for a sensor + industrial-Ethernet interface — candidates, rejections, and the service-model reasoning that decides it | [Industrial sensor](../decision-paths/industrial-sensor.md) + [M12 deep dive](../08-m12.md) |
+| [M12 Sensor Interface](m12-sensor-interface.md) | Selecting M12 codings for a sensor + industrial-Ethernet interface — candidates, rejections, and the service-model reasoning that decides it | [Industrial sensor](../decision-paths/industrial-sensor.md) + [M12 deep dive](../engineering/families/08-m12.md) |
 
 :::note
 

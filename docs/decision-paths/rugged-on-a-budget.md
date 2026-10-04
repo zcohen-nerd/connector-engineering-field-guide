@@ -28,23 +28,23 @@ But “automotive sealed” is not one universal rating. Verify the exact family
 ## Avoid this when
 
 - A customer or program **specifically requires MIL-DTL / QPL** hardware, EMI backshell continuity, 360° shield termination, high-density mixed inserts, or coax/twinax/fiber contacts — see [Defense / rugged external I/O](defense-rugged-external-io.md).
-- You need **Ethernet** ([Rugged Ethernet](rugged-ethernet.md)), an **[RF/GPS/radio path](rf-gps-radio.md)**, or [fiber](../02-major-connector-categories.md#fiber-connectors--a-brief-orientation).
+- You need **Ethernet** ([Rugged Ethernet](rugged-ethernet.md)), an **[RF/GPS/radio path](rf-gps-radio.md)**, or [fiber](../engineering/guide/02-major-connector-categories.md#fiber-connectors--a-brief-orientation).
 - The interface is **internal and protected** and does not need sealing — see [Internal PCB harnessing](internal-pcb-harnessing.md).
 - You need a panel-mounted, mixed-signal, high-density, configuration-controlled **defense/aero external interface**.
 
 ## Families to start with
 
-- **Deutsch DT / DTM / DTP** — distinct plug/receptacle housings with wedgelocks, hand-crimpable, ubiquitous in off-road and automotive. Rough split: **DTM** for small signal, **DT** for mid-range, **DTP** for power. Full family detail — every series and size, contact lines, tooling, part-number decode — in the [DEUTSCH Deep Dive](../deutsch.md).
+- **Deutsch DT / DTM / DTP** — distinct plug/receptacle housings with wedgelocks, hand-crimpable, ubiquitous in off-road and automotive. Rough split: **DTM** for small signal, **DT** for mid-range, **DTP** for power. Full family detail — every series and size, contact lines, tooling, part-number decode — in the [DEUTSCH Deep Dive](../engineering/families/deutsch.md).
 - **TE AMP Superseal 1.5 / AMPSEAL** — compact sealed inline connectors; AMPSEAL covers higher pin counts.
 - **Molex MX150 / MX150L** — sealed signal-to-power system for industrial/automotive use.
 - **Aptiv (Delphi) Metri-Pack** — long-standing automotive terminal system in sealed and unsealed variants, sized by terminal series (150/280/480/630…).
-- **Aptiv (Delphi) Weather-Pack** — the classic 1–6-way sealed under-hood system (triple-ribbed silicone seals, ~20 A class); very often the first "sealed automotive kit" a graduating maker meets. Family figures in [§3.2](../03-connector-standards-and-families.md#32-sealed-automotive-connector-families).
+- **Aptiv (Delphi) Weather-Pack** — the classic 1–6-way sealed under-hood system (triple-ribbed silicone seals, ~20 A class); very often the first "sealed automotive kit" a graduating maker meets. Family figures in [§3.2](../engineering/guide/03-connector-standards-and-families.md#32-sealed-automotive-connector-families).
 
 ![Exploded line diagram of a DEUTSCH DT plug with contacts, rear silicone grommet, housing, orange wedgelock, and mating receptacle](/img/diagrams/deutsch-dt-exploded.svg)
 
 *A representative sealed-automotive system is more than two housings: contacts, rear grommet, and the secondary lock all participate in retention and sealing. Other families arrange the pieces differently, so order from the exact family drawing.*
 
-Family-level sealing and current figures for these live in the sourced [sealed automotive table (§3.2)](../03-connector-standards-and-families.md#32-sealed-automotive-connector-families) — read them as orientation, then verify the exact series datasheet. Don't over-shop brands: pick one family that covers your current range and stock it.
+Family-level sealing and current figures for these live in the sourced [sealed automotive table (§3.2)](../engineering/guide/03-connector-standards-and-families.md#32-sealed-automotive-connector-families) — read them as orientation, then verify the exact series datasheet. Don't over-shop brands: pick one family that covers your current range and stock it.
 
 ## Search terms
 
@@ -73,7 +73,7 @@ Family-level sealing and current figures for these live in the sourced [sealed a
 - The **correct crimp tool** and an **extraction tool**.
 - **Both halves and the contacts** — pins and sockets are separate line items from the housings.
 
-See [What People Forget](../what-people-forget.md) for the full list.
+See [What People Forget](../engineering/guide/what-people-forget.md) for the full list.
 
 ## Common traps
 
@@ -104,4 +104,4 @@ A sealed automotive family is *not* a substitute for MIL-DTL-38999 where qualifi
 
 An illustrative packet structure — requirements through review checklist, with release fields still open — is the [Connector Selection Packet](../examples/connector-selection-packet.md).
 
-Related: [Sealed automotive families (§3.2)](../03-connector-standards-and-families.md#32-sealed-automotive-connector-families) · [Consumer/hobby vs. production](../12-consumer-hobby-prototype-connectors.md) · [Selection Workflow](../04-connector-selection-workflow.md) · [Practical Checklist](../10-selection-checklist.md).
+Related: [Sealed automotive families (§3.2)](../engineering/guide/03-connector-standards-and-families.md#32-sealed-automotive-connector-families) · [Consumer/hobby vs. production](../engineering/guide/12-consumer-hobby-prototype-connectors.md) · [Selection Workflow](../engineering/guide/04-connector-selection-workflow.md) · [Practical Checklist](../engineering/guide/10-selection-checklist.md).

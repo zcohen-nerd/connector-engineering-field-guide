@@ -25,7 +25,7 @@ If somebody says “industrial sensor cable,” this is probably the lane they m
 ## Families to start with
 
 - **M12 A-coded** — 4-pin A-coded is extremely common for basic DC sensors; 3/4/5/8-pin variants cover most sensor/actuator/IO-Link needs.
-- **M8** — for small sensors where an M12 is physically too large (less current, fewer pins, smaller cable). See [M8 — the smaller sibling](../08-m12.md#86-m8--the-smaller-sibling).
+- **M8** — for small sensors where an M12 is physically too large (less current, fewer pins, smaller cable). See [M8 — the smaller sibling](../engineering/families/08-m12.md#86-m8--the-smaller-sibling).
 - **7/8-inch "mini-change"** — the larger US-heritage circular for sensor/actuator *power* distribution; you'll meet it on splitter boxes and older North American plants.
 - **DIN 43650 valve connectors ("Form A/B/C")** — the standard rectangular interface on solenoid valves and pressure switches; frequently the *other* connector on the same machine as your M12s.
 
@@ -33,7 +33,7 @@ If somebody says “industrial sensor cable,” this is probably the lane they m
 
 *The usual sensor-cabling scale choice: M12 cordset and panel hardware beside the smaller M8 system. Photo: [Riep.](https://commons.wikimedia.org/wiki/File:M12_-_A.jpg), CC BY-SA 4.0, via Wikimedia Commons.*
 
-See the [M12 deep dive](../08-m12.md) for coding and pinout detail.
+See the [M12 deep dive](../engineering/families/08-m12.md) for coding and pinout detail.
 
 ## Search terms
 
@@ -45,11 +45,11 @@ See the [M12 deep dive](../08-m12.md) for coding and pinout detail.
 ## Specs to check
 
 - Exact **coding** and **pinout** — not all 4-pin M12 pinouts are the same.
-- **Current** per contact — A-coded connectors are commonly in a low-single-digit-amp class, but the exact figure is connector/cable/temperature dependent; confirm the datasheet (see [M12 §8.1](../08-m12.md)).
+- **Current** per contact — A-coded connectors are commonly in a low-single-digit-amp class, but the exact figure is connector/cable/temperature dependent; confirm the datasheet (see [M12 §8.1](../engineering/families/08-m12.md)).
 - **IP rating** of the *complete, mated* assembly — and whether the unmated panel side is sealed only when capped.
 - **Coupling torque** — an example value only; use the manufacturer's number and a torque tool.
 - **Cable OD** vs. the gland range, and **vibration** requirement.
-- **Signal level** — a 24 V switched sensor line is forgiving; mV analog or high-resolution measurement lines need low-level performance evidence, a suitable plating system, stable mechanics, and a defined signal error budget ([low-level signal contacts](../low-level-signal-contacts.md)).
+- **Signal level** — a 24 V switched sensor line is forgiving; mV analog or high-resolution measurement lines need low-level performance evidence, a suitable plating system, stable mechanics, and a defined signal error budget ([low-level signal contacts](../engineering/topics/low-level-signal-contacts.md)).
 
 ## Parts people forget
 
@@ -57,7 +57,7 @@ See the [M12 deep dive](../08-m12.md) for coding and pinout detail.
 - A **cap** for the unmated panel connector.
 - The **torque spec and tool**.
 
-See [What People Forget](../what-people-forget.md) for the full list.
+See [What People Forget](../engineering/guide/what-people-forget.md) for the full list.
 
 ## Common traps
 
@@ -79,4 +79,4 @@ See [What People Forget](../what-people-forget.md) for the full list.
 - A source-controlled **pinout**.
 - A [cable drawing](../tools/cable-drawing-template.md) and an [ICD entry](../tools/connector-icd-template.md).
 
-Related: [Decision Examples](../09-decision-examples.md) · [Selection Workflow](../04-connector-selection-workflow.md).
+Related: [Decision Examples](../engineering/guide/09-decision-examples.md) · [Selection Workflow](../engineering/guide/04-connector-selection-workflow.md).

@@ -21,16 +21,16 @@ Drilling a hole in a sealed box is easy. Getting power or signals through that h
 
 ## Families to start with
 
-- **[MIL-DTL-38999](../07-mil-dtl-38999.md) jam-nut or flange** panel receptacles for rugged sealed I/O.
-- **[Sealed M12 panel](../08-m12.md)** receptacles for industrial sealed I/O.
-- **Sealed-automotive flange receptacles** — DEUTSCH DT flange / HD30 bulkhead class — where budget field wiring passes a wall and nothing requires mil hardware. See the [DEUTSCH deep dive](../deutsch.md).
+- **[MIL-DTL-38999](../engineering/families/07-mil-dtl-38999.md) jam-nut or flange** panel receptacles for rugged sealed I/O.
+- **[Sealed M12 panel](../engineering/families/08-m12.md)** receptacles for industrial sealed I/O.
+- **Sealed-automotive flange receptacles** — DEUTSCH DT flange / HD30 bulkhead class — where budget field wiring passes a wall and nothing requires mil hardware. See the [DEUTSCH deep dive](../engineering/families/deutsch.md).
 - **Hermetic / potted penetrator** where pressure or gas-tightness is required.
 
 ![Disassembled plastic cable gland showing the panel nut, threaded body, rubber sealing insert, washer, and compression nut](/img/photos/cable-gland-disassembled.webp)
 
 *A cable gland is the fixed-cable alternative to a detachable connector. Its panel nut, body, elastomer insert, washer, and compression nut form one mechanical and sealing system; cable diameter and installation determine whether it works. Photo: [Leotard](https://commons.wikimedia.org/wiki/File:Cable_gland05.jpg), CC0 1.0, via Wikimedia Commons; resized and converted to WebP.*
 
-See [Decision Examples](../09-decision-examples.md).
+See [Decision Examples](../engineering/guide/09-decision-examples.md).
 
 ## Search terms
 
@@ -54,7 +54,7 @@ For a pressure or leak-tight boundary, also specify differential pressure/depth,
 - A **cap** for the unmated exterior connector.
 - Correct **wire-seal sizing** and **sealing plugs** for unused cavities.
 
-See [What People Forget](../what-people-forget.md).
+See [What People Forget](../engineering/guide/what-people-forget.md).
 
 ## Common traps
 
@@ -76,4 +76,4 @@ See [What People Forget](../what-people-forget.md).
 - A source-controlled **pinout** and the internal termination plan.
 - A [cable drawing](../tools/cable-drawing-template.md) and [ICD entry](../tools/connector-icd-template.md) recording IP target, panel thickness, gasket, and torque.
 
-Related: [Decision Examples](../09-decision-examples.md) · [Connector Anatomy §5.5–5.6](../05-connector-anatomy.md).
+Related: [Decision Examples](../engineering/guide/09-decision-examples.md) · [Connector Anatomy §5.5–5.6](../engineering/guide/05-connector-anatomy.md).

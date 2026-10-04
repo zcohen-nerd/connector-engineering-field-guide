@@ -8,7 +8,7 @@ sidebar_label: Rugged Control Box
 
 # Worked Example: Rugged Control Box
 
-This architecture study develops [Exercise 1](../13-hands-on-exercises.md): a small sealed control box with 24 VDC input, Ethernet, CAN, four sensors, one motor output, and a debug port. We'll run each interface through the [decision paths](../decision-paths/index.md), then turn the result into the kind of paperwork the [templates](../tools/index.md) expect.
+This architecture study develops [Exercise 1](../engineering/guide/13-hands-on-exercises.md): a small sealed control box with 24 VDC input, Ethernet, CAN, four sensors, one motor output, and a debug port. We'll run each interface through the [decision paths](../decision-paths/index.md), then turn the result into the kind of paperwork the [templates](../tools/index.md) expect.
 
 :::info[Illustrative composite — not a case report]
 
@@ -34,7 +34,7 @@ The quiet headline decision: **every interface below lands on one circular famil
 | --- | --- | --- |
 | 24 VDC input | Box supply, current TBD from the power budget (assumed within a power-coded M12 class below — verify against the exact datasheet) | Plant 24 VDC distribution; source-side protection TBD |
 | Ethernet | One run to the line controller; rate TBD from the controller spec — **10/100 assumed below, to be confirmed** | Shielded run, washdown-adjacent |
-| CAN | Multi-drop segment, this box + 2 nodes; bus power TBD | Termination location must be designed, not discovered ([§8.5](../08-m12.md)) |
+| CAN | Multi-drop segment, this box + 2 nodes; bus power TBD | Termination location must be designed, not discovered ([§8.5](../engineering/families/08-m12.md)) |
 | Four sensors | Discrete DC sensors on the frame, per-circuit current TBD vs. exact part ratings | Swapped by shift technicians — unplug/replug service model |
 | Motor output | One small 24 VDC gearmotor, stall current TBD from the motor datasheet | No separate feedback run in this scenario |
 | Debug / service port | Reachable without opening the box; sealed when unused; low mating-cycle duty | Used a few times a year, capped otherwise |
@@ -44,9 +44,9 @@ The quiet headline decision: **every interface below lands on one circular famil
 
 | Interface | Requirement summary | Candidate families | Selected family | Status |
 | --- | --- | --- | --- | --- |
-| J1 — 24 VDC input | Sealed DC power inlet | M12 power-coded; bare cable gland; [DT-style](../deutsch.md) | **M12 L-coded candidate ([§8.1](../08-m12.md)); exact device and cordset TBD** | Pending power budget |
-| J2 — Ethernet | Sealed industrial Ethernet | M12 D-coded; M12 X-coded; sealed RJ45 | **M12 D-coded, 4-pin ([§8.1](../08-m12.md))** | Pending rate confirmation |
-| J3 — CAN | Sealed multi-drop fieldbus drop | M12 A-coded 5-pin; hardwired gland | **M12 A-coded, 5-pin ("some CAN" rides A-coded — [§8.1](../08-m12.md)); topology per [§8.5](../08-m12.md)** | Candidate; exact mate and pinout open |
+| J1 — 24 VDC input | Sealed DC power inlet | M12 power-coded; bare cable gland; [DT-style](../engineering/families/deutsch.md) | **M12 L-coded candidate ([§8.1](../engineering/families/08-m12.md)); exact device and cordset TBD** | Pending power budget |
+| J2 — Ethernet | Sealed industrial Ethernet | M12 D-coded; M12 X-coded; sealed RJ45 | **M12 D-coded, 4-pin ([§8.1](../engineering/families/08-m12.md))** | Pending rate confirmation |
+| J3 — CAN | Sealed multi-drop fieldbus drop | M12 A-coded 5-pin; hardwired gland | **M12 A-coded, 5-pin ("some CAN" rides A-coded — [§8.1](../engineering/families/08-m12.md)); topology per [§8.5](../engineering/families/08-m12.md)** | Candidate; exact mate and pinout open |
 | J4–J7 — Sensors | Four sealed DC sensor circuits | M12 A-coded 4-pin; M8; glands into a junction box | **M12 A-coded, 4-pin ([Industrial sensor path](../decision-paths/industrial-sensor.md))** | Candidate; exact mate and pinout open |
 | J8 — Motor output | Sealed small-motor DC power | M12 power-coded; [M23-class](../decision-paths/motor-feedback-cable.md); DT-style | **M12 T-coded candidate, distinct from J1; no shared power-cordset type** | Pending stall-current check |
 | J9 — Debug/service | Sealed, occasional-use service port | Sealed M12 A-coded 8-pin; USB-C behind a cover; Micro-D behind a hatch | **M12 A-coded, 8-pin, with a chained screw cap ([Debug/service path](../decision-paths/debug-service-port.md))** | Candidate; exact mate and pinout open |
@@ -56,16 +56,16 @@ The quiet headline decision: **every interface below lands on one circular famil
 | Interface | Rejected option | Why rejected |
 | --- | --- | --- |
 | 24 VDC input | Cable gland + hardwired tail | Fails the service model — every box swap becomes a wiring job, done by whoever is on shift; a gland is the right answer only for a run that never unplugs, and this run *does* unplug during service |
-| 24 VDC input | [MIL-DTL-38999](../07-mil-dtl-38999.md) | No program requirement to justify the cost/lead-time class ([defense path](../decision-paths/defense-rugged-external-io.md) logic in reverse) |
-| 24 VDC / motor | M12 K-coded | AC power coding ([§8.1](../08-m12.md)) — wrong lane for a 24 VDC system |
+| 24 VDC input | [MIL-DTL-38999](../engineering/families/07-mil-dtl-38999.md) | No program requirement to justify the cost/lead-time class ([defense path](../decision-paths/defense-rugged-external-io.md) logic in reverse) |
+| 24 VDC / motor | M12 K-coded | AC power coding ([§8.1](../engineering/families/08-m12.md)) — wrong lane for a 24 VDC system |
 | 24 VDC / motor | A-coded pins doing power duty | A-coded connectors can carry power within their exact ratings. Here the supply and stall-current budgets remain open; retain the power-coded candidates until those budgets are checked |
 | Ethernet | M12 X-coded "to be safe" | D-coded is the simpler candidate for the assumed 10/100 link. X-coded can also support lower rates where the equipment, cordset ecosystem, or upgrade plan justifies it |
 | Ethernet | Sealed/rugged RJ45 | Workable, but breaks the one-family standardization and adds a second seal/latch system to maintain ([Rugged Ethernet path](../decision-paths/rugged-ethernet.md) checklist concerns) |
 | Sensors | M8 | Viable technically; rejected as a standardization decision — one shell size across the box (same reasoning as the [M12 example](m12-sensor-interface.md)) |
 | Sensors | Glands into a junction box | Service model again — sensor swaps become enclosure work inside a sealed box; the [M12 example](m12-sensor-interface.md) rejects glands on the same grounds |
 | Motor output | [M23-class](../decision-paths/motor-feedback-cable.md) | Right family for a real servo axis with feedback; oversized for one small DC gearmotor — becomes the answer if the motor grows (see "What would change") |
-| All sealed runs | [DT-style sealed automotive](../deutsch.md) | Good parts in their lane ([budget path](../decision-paths/rugged-on-a-budget.md)); rejected because the industrial cordset ecosystem here is M12 — fighting the ecosystem means custom pigtails |
-| Debug/service | Bare USB-C on the panel | The [debug path](../decision-paths/debug-service-port.md) allows USB-C *only behind a cover*; a bare consumer port on a washdown-adjacent panel fails [§12.4's boundary](../12-consumer-hobby-prototype-connectors.md) |
+| All sealed runs | [DT-style sealed automotive](../engineering/families/deutsch.md) | Good parts in their lane ([budget path](../decision-paths/rugged-on-a-budget.md)); rejected because the industrial cordset ecosystem here is M12 — fighting the ecosystem means custom pigtails |
+| Debug/service | Bare USB-C on the panel | The [debug path](../decision-paths/debug-service-port.md) allows USB-C *only behind a cover*; a bare consumer port on a washdown-adjacent panel fails [§12.4's boundary](../engineering/guide/12-consumer-hobby-prototype-connectors.md) |
 
 ## Pinout
 
@@ -74,8 +74,8 @@ Assignments below are **illustrative structure only** — every pin function, an
 | Connector | Pin | Signal | Direction | Notes |
 | --- | --- | --- | --- | --- |
 | J1 (24 VDC in) | TBD from selected L-coded device drawing | Supply circuit(s), associated returns, and FE per that device | In | Separate circuit assignments; no contact paralleling or current-sharing credit |
-| J2 (Ethernet) | 1–4 | TX+ / RX+ / TX− / RX− per the D-coded cordset datasheet | Bidir | Shield continuity per [§5.7](../05-connector-anatomy.md); category per the cordset spec |
-| J3 (CAN) | 1–5 | Shield / bus power / bus return / CAN_H / CAN_L per the device and protocol documentation | Bidir | Multi-drop: this port is one *drop* — T-piece and end-termination per [§8.5](../08-m12.md) |
+| J2 (Ethernet) | 1–4 | TX+ / RX+ / TX− / RX− per the D-coded cordset datasheet | Bidir | Shield continuity per [§5.7](../engineering/guide/05-connector-anatomy.md); category per the cordset spec |
+| J3 (CAN) | 1–5 | Shield / bus power / bus return / CAN_H / CAN_L per the device and protocol documentation | Bidir | Multi-drop: this port is one *drop* — T-piece and end-termination per [§8.5](../engineering/families/08-m12.md) |
 | J4–J7 (sensors) | 1–4 | +V / signal / 0 V (+ spare or second signal) per each sensor datasheet | In | Same discipline as the [M12 example](m12-sensor-interface.md) |
 | J8 (motor) | TBD from selected T-coded assembly drawing | One motor feed and its return; remaining positions per approved assembly | Out | One contact per current path; stall/fault current and unused-position treatment must be verified |
 | J9 (service) | 1–8 | UART TX/RX, boot/enable strap, logic ground, reserved | Bidir | Logic-level only — no power export; capped when unused |
@@ -124,8 +124,8 @@ One row class per run; the [cable drawing template](../tools/cable-drawing-templ
 | Wire | Gauge | Color | Pair / shield | End A | End B | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
 | J1 power conductors | Per cordset spec (sized to the power budget) | Per cordset — recorded, not assumed | Unshielded power | J1 plug (molded) | Plant 24 VDC drop | Verify current at temperature vs. the exact assembly |
-| J2 Ethernet | Per cordset category spec | — | Shielded, pairing per spec | J2 plug (molded) | Line controller | Shield termination both ends per [§5.7](../05-connector-anatomy.md) |
-| J3 CAN drop | Per CAN cable spec | — | Shielded pair + power | J3 plug | Bus T-piece | Drop length within protocol limits ([§8.5](../08-m12.md)) |
+| J2 Ethernet | Per cordset category spec | — | Shielded, pairing per spec | J2 plug (molded) | Line controller | Shield termination both ends per [§5.7](../engineering/guide/05-connector-anatomy.md) |
+| J3 CAN drop | Per CAN cable spec | — | Shielded pair + power | J3 plug | Bus T-piece | Drop length within protocol limits ([§8.5](../engineering/families/08-m12.md)) |
 | J4–J7 sensor runs | Per cordset spec | — | Unshielded | Sensor M12 | J4–J7 | Off-the-shelf molded cordsets, stocked lengths |
 | J8 motor run | Sized to stall current | — | Per motor/EMC needs | J8 plug | Motor leads | Anchored against gearmotor vibration |
 
@@ -140,10 +140,10 @@ Molded cordsets carry their own strain relief and sealing, so this box needs no 
 
 | Interface | Accessory | Notes |
 | --- | --- | --- |
-| All receptacles | Sealing screw caps, chained | The unmated state is part of the sealing design ([§8.3](../08-m12.md)); verify the receptacle's unmated rating; exposed contacts and the panel penetration are separate sealing boundaries |
+| All receptacles | Sealing screw caps, chained | The unmated state is part of the sealing design ([§8.3](../engineering/families/08-m12.md)); verify the receptacle's unmated rating; exposed contacts and the panel penetration are separate sealing boundaries |
 | J9 service port | Cap **plus** a log discipline | The port is capped 360 days a year — the cap *is* the interface most of the time |
-| All | Torque per each part's datasheet | Coupling-torque values are manufacturer-specified ([§8.3](../08-m12.md)); finger-tight is not a spec |
-| CAN segment | Terminating M12 plug at each bus end | Termination lives at the bus ends, not "wherever" — [§8.5](../08-m12.md) |
+| All | Torque per each part's datasheet | Coupling-torque values are manufacturer-specified ([§8.3](../engineering/families/08-m12.md)); finger-tight is not a spec |
+| CAN segment | Terminating M12 plug at each bus end | Termination lives at the bus ends, not "wherever" — [§8.5](../engineering/families/08-m12.md) |
 
 ## ICD entry
 
@@ -155,9 +155,9 @@ One worked entry (J2) in the [ICD template's](../tools/connector-icd-template.md
 - Contact P/Ns: n/a (molded assembly) — field-repair kit P/N `TBD`, temporary-article rule per the [M12 example §6](m12-sensor-interface.md)
 - Backshell P/N: n/a (molded); panel-side sealing per receptacle datasheet
 - Dust cap P/N: `TBD`, chained
-- Keying / polarization: D-coding is the key ([§8.1](../08-m12.md)); no same-coding neighbor on this panel face
+- Keying / polarization: D-coding is the key ([§8.1](../engineering/families/08-m12.md)); no same-coding neighbor on this panel face
 - Electrical limits: per the exact receptacle/cordset datasheets — recorded here with revision, never quoted from memory
-- Shielding: 360° continuity through the receptacle to the enclosure bond point ([§5.7](../05-connector-anatomy.md))
+- Shielding: 360° continuity through the receptacle to the enclosure bond point ([§5.7](../engineering/guide/05-connector-anatomy.md))
 - Environmental assumptions: sealed-when-mated per the exact assembly's tested rating; capped when unmated; plant spec `TBD` governs
 - Mating cycles: per datasheet ([A4](../appendix/quick-reference-tables.md) carries the family-level orientation)
 - Torque / assembly notes: coupling torque per datasheet; torque tool `TBD`; record value + tool in the build record
@@ -169,20 +169,20 @@ One worked entry (J2) in the [ICD template's](../tools/connector-icd-template.md
 | Risk | Mitigation |
 | --- | --- |
 | Nine same-size circular connectors (six interface types) on one small box — wrong-port mating attempts | Close every cell of the port-to-cable mating review above; verify actual parts and resulting net connections. Labels and panel photos supplement mechanical or electrical mitigation |
-| A-coded pins drafted into power duty during a "quick fix" | Verify actual load, fault duty, and assembly ratings; do not infer suitability or exclusion from A-coding alone ([§8.1](../08-m12.md)) |
-| CAN termination forgotten or duplicated | Terminating plugs are BOM line items with J-numbers, not accessories; topology drawing in the package ([§8.5](../08-m12.md)) |
+| A-coded pins drafted into power duty during a "quick fix" | Verify actual load, fault duty, and assembly ratings; do not infer suitability or exclusion from A-coding alone ([§8.1](../engineering/families/08-m12.md)) |
+| CAN termination forgotten or duplicated | Terminating plugs are BOM line items with J-numbers, not accessories; topology drawing in the package ([§8.5](../engineering/families/08-m12.md)) |
 | Receptacles left uncapped after service | Chained caps; capped-state photo in the close-out checklist; the service port's cap logged like a tool |
 | Motor stall current outgrows the selected power coding | Stall check is a release gate (requirements table); escalation path pre-named (M23-class — see below) |
-| Ethernet rate requirement changes after release | The D-vs-X decision and its trigger are recorded ([§8.1](../08-m12.md)) — a rate change reopens J2, not a debate |
+| Ethernet rate requirement changes after release | The D-vs-X decision and its trigger are recorded ([§8.1](../engineering/families/08-m12.md)) — a rate change reopens J2, not a debate |
 | Cordset vendor change alters pinout/wire colors | Colors are example-only by rule; the ICD pins functions to *pin numbers* with datasheet revisions ([Source Notes](../appendix/source-notes.md)) |
 
 ## What would change if…
 
 - **The power budget outgrows the M12 power class** — J1/J8 move up a family (the [high-current path](../decision-paths/high-current-dc-power.md) takes over, derating curve first), and the one-family standardization is consciously traded away, in writing.
 - **The motor becomes a servo axis** — feedback appears, and the whole J8 question transfers to the [motor + feedback cable path](../decision-paths/motor-feedback-cable.md): drive-ecosystem cordsets, M23-class connectors, and the EMC discipline that comes with them.
-- **The box moves into direct washdown** — re-verify every mated *and unmated* rating against the plant spec ([§8.3](../08-m12.md)) and re-run the [sealed enclosure feedthrough path](../decision-paths/sealed-enclosure-feedthrough.md) for the panel itself.
+- **The box moves into direct washdown** — re-verify every mated *and unmated* rating against the plant spec ([§8.3](../engineering/families/08-m12.md)) and re-run the [sealed enclosure feedthrough path](../decision-paths/sealed-enclosure-feedthrough.md) for the panel itself.
 - **A defense/aero customer appears** — the requirement set, not preference, moves the external interfaces toward [38999-class](../decision-paths/defense-rugged-external-io.md) hardware, and the [Selection Packet](connector-selection-packet.md) shows what that documentation grade looks like.
-- **Someone proposes one big multipole for everything** — that's the [removable machine module path's](../decision-paths/removable-machine-module.md) problem statement; run it honestly before deciding: use the path for the service reality, and [§5's anatomy](../05-connector-anatomy.md) for the blind-mate and float mechanics a docking interface leans on.
+- **Someone proposes one big multipole for everything** — that's the [removable machine module path's](../decision-paths/removable-machine-module.md) problem statement; run it honestly before deciding: use the path for the service reality, and [§5's anatomy](../engineering/guide/05-connector-anatomy.md) for the blind-mate and float mechanics a docking interface leans on.
 
 ## Documentation bundle
 

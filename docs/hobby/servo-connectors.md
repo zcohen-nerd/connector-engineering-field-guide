@@ -1,12 +1,12 @@
 ---
 id: servo-connectors
-title: "Servo Connectors: One Pin Order, Two Housings, No Standard"
+title: "Servo Connectors: A Common Pin Order, Two Housings, No Standard"
 description: "The servo-lead deep dive: JR vs Futaba housings, what center-positive does and does not protect, the old-Airtronics trap, the 'it's just Dupont' truth, and the stall-current math that makes three pins a power problem."
 slug: /hobby/servo-connectors
 sidebar_label: Servo Connectors
 ---
 
-# Servo Connectors: One Pin Order, Two Housings, No Standard
+# Servo Connectors: A Common Pin Order, Two Housings, No Standard
 
 The three-pin servo lead may be the most-manufactured connector interface in hobby electronics — every RC receiver, flight controller, servo tester, and half the robotics boards on your bench speak it. It is also a **de-facto standard with no governing specification**: the pin order, the wire colors, the two housing styles, and even the current it can carry are all convention plus vendor documentation. This page writes the conventions down, because the traps live exactly where people assume somebody standardized this.
 

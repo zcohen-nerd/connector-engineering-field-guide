@@ -8,7 +8,7 @@ sidebar_label: M12 Coding Cheat Sheet
 
 # M12 Coding Cheat Sheet
 
-This is the print-friendly version of [§8.1 in the M12 deep dive](../08-m12.md). Use it to get into the right neighborhood, then let the exact part's datasheet make the final call.
+This is the print-friendly version of [§8.1 in the M12 deep dive](../engineering/families/08-m12.md). Use it to get into the right neighborhood, then let the exact part's datasheet make the final call.
 
 The keyway and insert geometry keep different codings from mating. Exact geometry comes from IEC 61076-2-101/-109/-111 and the manufacturer drawing. The standards make cross-vendor interoperability possible, not automatic: you still need to check code, pin count, gender, shielding, sealing, torque, and the full cable assembly.
 

@@ -14,7 +14,7 @@
  *   - HIGH/CRITICAL whose dependency path is entirely
  *     browser-runtime (no webpack/dev-server/build)   -> fail
  *   - everything else (build-only, dev-server-only)   -> report, pass
- *   - an allowlisted advisory (.github/audit-allowlist.json)
+ *   - an allowlisted advisory (config/quality/dependency-audit-allowlist.json)
  *     past its `review_by` date                       -> fail (forces re-review)
  *
  * Run: node scripts/audit-ci.mjs             (runs `npm audit --json` itself)
@@ -23,7 +23,7 @@
 import {readFileSync, existsSync} from 'node:fs';
 import {execSync} from 'node:child_process';
 
-const ALLOWLIST_PATH = '.github/audit-allowlist.json';
+const ALLOWLIST_PATH = 'config/quality/dependency-audit-allowlist.json';
 
 // Path substrings that mean "this can never run on the deployed site".
 const DEV_SERVER = [

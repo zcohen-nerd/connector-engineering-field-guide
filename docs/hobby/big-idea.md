@@ -39,6 +39,6 @@ Before buying or committing: resolve the connector to a **family + series**, pul
 
 :::note
 
-This is the same core mental model as the [engineering track](../01-what-connectors-do.md): a connector is a *controlled interface*, not "a plug with enough pins." Hobby projects just meet it in cheaper packaging.
+This is the same core mental model as the [engineering track](../engineering/guide/01-what-connectors-do.md): a connector is a *controlled interface*, not "a plug with enough pins." Hobby projects just meet it in cheaper packaging.
 
 :::

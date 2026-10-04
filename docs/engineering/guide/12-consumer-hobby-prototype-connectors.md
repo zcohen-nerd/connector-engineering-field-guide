@@ -1,0 +1,115 @@
+---
+id: 12-consumer-hobby-prototype-connectors
+title: "12. Consumer, Hobby, and Prototype Connectors at the Bench-to-Product Boundary"
+description: "When hobby and prototype connectors (Dupont, JST-XH, screw terminals, USB-C) are acceptable, and when they fail in production or rugged field service."
+slug: /12-consumer-hobby-prototype-connectors
+sidebar_label: Consumer/Hobby/Prototype Connectors
+---
+
+# 12. Consumer, Hobby, and Prototype Connectors at the Bench-to-Product Boundary
+
+This page looks at hobby connectors from the professional side of the fence. If you're trying to identify a JST-family part, buy a mate, crimp tiny terminals, or decode a marketplace kit, use the [Hobby Connector Field Guide](../../hobby/index.md). The question here is different: **when is a hobby connector a perfectly sensible choice, and when has the project outgrown it?**
+
+Hobby and prototype connectors aren't automatically bad. They're optimized for cost, availability, and getting something working quickly—which is often exactly what you need. Trouble starts when the environment, vibration, mating cycles, sealing, strain relief, documentation, or service model asks more than the connector was built to give. A part that's perfect on a breadboard can be ridiculous on the outside of a fielded enclosure and completely reasonable inside the protected box. Context does the judging.
+
+If your search starts with `JST connector` or `aviation plug`, take a detour through [How to Search for Connectors](00-how-to-search-for-connectors.md). Those are folk labels, not enough information to make a design choice.
+
+:::tip[Working on the maker side of this line?]
+
+The [Hobby Connector Field Guide](../../hobby/index.md) covers this territory from the maker's seat — [identifying mystery connectors](../../hobby/identify-unknown-connector.md), [decoding the JST family mess](../../hobby/jst-is-not-one-connector.md), [marketplace kits](../../hobby/connector-kits.md), [pre-crimped leads](../../hobby/crimping.md), and dev-board ecosystems.
+
+:::
+
+| Prototype / consumer choice | Production / rugged equivalent | Why |
+|---|---|---|
+| Dupont jumpers | Keyed, latching, positively retained wire-to-board ([Molex Micro-Fit](../families/micro-fit.md)/Nano-Fit, Harwin, Omnetics, or JST GH where appropriate — see [internal PCB harnessing](../../decision-paths/internal-pcb-harnessing.md)) | Retention, polarization, repeatability |
+| JST-XH exposed externally | [Sealed M8/M12](../families/08-m12.md), sealed circular, [sealed wire-to-wire](../families/deutsch.md) | Environmental protection |
+| USB-C exposed service port | Sealed service connector, internal USB behind cover, [M12 Ethernet](../families/08-m12.md) | Robustness and sealing (see 12.4) |
+| 8P8C / RJ45 exposed outdoors | [M12 D/X-coded](../../decision-paths/rugged-ethernet.md) or sealed industrial RJ45 | Vibration / water protection (see 12.5) |
+| Screw terminals on dangling wires | Terminal blocks inside an enclosure | Serviceability and safety |
+| Barrel jack | Locking power connector or sealed circular | Retention and current rating |
+| Header pins for debug | Keyed shrouded header, Tag-Connect, Micro-D, protected port — see the [debug/service-port path](../../decision-paths/debug-service-port.md) | Misplug prevention and durability |
+| [XT60/XT90](../../hobby/xt-connectors.md) battery connectors | Anderson SB, high-current circular, 38999 power contacts — see the [high-current path](../../decision-paths/high-current-dc-power.md) | IP rating, cycle life, professional qualification |
+
+The sealed-automotive middle ground — the usual first landing spot for graduating field wiring — is walked in [rugged-on-a-budget](../../decision-paths/rugged-on-a-budget.md) and detailed family-by-family in the [DEUTSCH deep dive](../families/deutsch.md).
+
+## 12.1 "Dupont" connectors
+
+"Dupont" is the shop nickname for the 2.54 mm (0.1") pitch crimp-pin jumper connectors found on every breadboard and dev board. The name is historical — the 0.1" crimp-jumper lineage traces back through Berg → DuPont → FCI → Amphenol, so it is no longer a distinct current product line, and not a specification you can order to; what people mean is a generic 0.1" pin-and-socket housing on individually crimped contacts. They exist because they mate with the universal 0.1" header — which is why they're everywhere in prototyping. The hobby track's [Dupont page](../../hobby/dupont-headers.md) covers identification, buying, and crimping from the maker's seat.
+
+| Property | Reality |
+|---|---|
+| Retention | Friction only. No latch, no lock. Pulls off under almost any cable load or vibration. |
+| Polarization | Effectively none. A row of identical housings can be plugged in shifted by one pin or reversed. |
+| Crimp quality | Inconsistent with cheap tools and loose tolerances; intermittent contacts are common. |
+| Current / environment | Low current, no sealing, no strain relief. Contacts back out of the housing over time. |
+
+**Use them for:** bench prototyping, throwaway test rigs, signals you can re-seat by hand. **Avoid for:** anything that ships, moves, vibrates, or needs to be reliable. Use a keyed, latching, positively retained wire-to-board family such as [Molex Micro-Fit](../families/micro-fit.md)/Nano-Fit, Harwin, Omnetics, or [JST GH](../../hobby/jst-gh.md) where appropriate. JST PH can be acceptable for low-stress internal wiring, but it is not a rugged external connector.
+
+## 12.2 The JST series — not one connector
+
+"JST" is a manufacturer, not a connector. JST makes dozens of distinct series with very different pitch, current, locking, and quality. Saying "use a JST" is like saying "use a screw" — the series matters. Hobby kits routinely misuse the term "JST" to mean whatever 2-pin connector came in the bag, so confirm the actual series before designing it in.
+
+| Series | Pitch | Typical use | Notes for professional work |
+|---|---|---|---|
+| [XH](../../hobby/jst-xh.md) | 2.5 mm[^jst] | Hobby battery balance leads, dev boards | Low-cost internal board-to-wire; friction lock (no positive latch). Common but not good for vibration or external service without an additional retention/environmental strategy. |
+| [PH](../../hobby/jst-ph.md) | 2.0 mm | Small Li-ion packs, internal signal | Compact internal wire-to-board; useful but not rugged. Acceptable for low-stress internal wiring; not a sealed/rugged external connector. |
+| [GH](../../hobby/jst-gh.md) | 1.25 mm | Compact internal signal, sensors | Compact internal wire-to-board with a secure locking feature; useful where small size and retention matter. Not sealed/rugged external by default. |
+| [SH](../../hobby/jst-sh-qwiic-stemma.md) | 1.0 mm | Very small board-to-wire (e.g. Qwiic-style) | Tiny, fragile, signal-only. Friction lock. Easy to damage during rework. |
+| VH | 3.96 mm[^jst] | Internal power / power-supply wiring | Higher-current JST family than the smaller series — rated up to ~10 A with AWG #16 per JST; exact current depends on contact/wire/configuration and must be verified. Still internal/protected use unless the full assembly is designed for environment/vibration. |
+| EH / ZH | 2.5 / 1.5 mm[^jst] | General signal | Mid-tier signal series — EH is a 3 A / 250 V class (AWG #22), ZH a 1 A / 50 V class (AWG #26–32) per JST; check the datasheet for lock style and exact rating. |
+
+**The professional read:** "JST" alone is not a connector specification, and it is not automatically hobby-grade — JST also makes genuinely rugged, sealed, locking automotive/industrial series (the same territory as the [sealed-automotive families in §3.2](03-connector-standards-and-families.md#32-sealed-automotive-connector-families)). The dividing line is the specific series and whether it has a positive lock, keying, a verified crimp, and the current/seal rating your application needs.
+
+## 12.3 Other commonly-confused prototype connectors
+
+| Connector | What it really is | Professional caution |
+|---|---|---|
+| IDC ribbon (2.54 mm) | Mass-terminated ribbon header (e.g. classic 10/16/40-pin) | Convenient internal use; no strain relief or sealing. Fine inside a box, but a poor choice as an external interface. |
+| [Barrel jack](../../hobby/barrel-jacks.md) (DC power) | Coaxial DC power plug | Mechanically keyed center/sleeve interface, but no universal polarity convention; center-positive vs. center-negative mistakes are common. Usually poor retention unless a locking type is used. |
+| [Screw terminal block](../../hobby/screw-terminals.md) (PCB) | Wire clamped by a screw on the board edge | Can loosen under vibration if not designed, torqued, retained, or inspected appropriately. Use a proper latching connector or move clamping into an enclosure terminal block. |
+| Pluggable terminal block | Pluggable 2-part screw/spring terminal block, often Phoenix Contact / WAGO / Weidmüller style | Legitimate for panel/field wiring inside enclosures. Not automatically sealed or vibration-rated — house it appropriately. |
+
+![A labeled screw terminal strip mounted inside a metal cabinet with several power and signal wires landed on numbered positions](/img/photos/cabinet-terminal-block.webp)
+
+*What “move the clamping into an enclosure” looks like in service: a fixed, labeled terminal strip with numbered positions inside a cabinet. The photograph documents the arrangement, not a rating or workmanship endorsement. Photo: [tony_duell](https://commons.wikimedia.org/wiki/File:Cabinet_Terminal_Block.jpg), CC BY 2.0, via Wikimedia Commons; resized and converted to WebP.*
+
+:::tip
+
+Rule of thumb for the bench-to-product transition: when a connector leaves the lab, ask whether it latches, keys, retains its contacts, survives vibration, and seals to the environment it will live in. If any answer is "no" and the application needs it, upgrade the connector. And as always: the manufacturer datasheet and the applicable standard outrank anything in this guide.
+
+:::
+
+## 12.4 USB-C, HDMI, and other consumer I/O
+
+USB-C, HDMI, and similar consumer I/O connectors can be excellent in consumer electronics, lab equipment, internal service ports, and protected user interfaces. What they are not is automatically rugged, sealed, vibration-resistant, EMI-controlled at the enclosure boundary, or appropriate as exposed field connectors.
+
+USB-C has a high mating-cycle expectation — the USB Type-C specification calls for 10,000-cycle durability, versus roughly 1,500 for USB Type-A[^usbc] — but mating-cycle life is not the same as environmental sealing, vibration survival, ESD strategy, strain relief, EMI control, or suitability as an exposed rugged service port. HDMI is common and convenient but is usually a poor exposed-service connector in harsh electromechanical systems unless protected or ruggedized. (For USB-C as a *power inlet* — the CC-resistor rule, PD negotiation, and cable classes — the hobby track's [USB-C power page](../../hobby/usb-c-power.md) covers the electrical side.)
+
+If you need consumer I/O on rugged equipment, place it behind a sealed cover, use an internal service hatch, choose a ruggedized variant, or replace it with a more appropriate sealed connector such as M12 Ethernet, sealed USB, or a qualified circular service connector.
+
+:::warning[Practical warning]
+
+A consumer connector can be fine inside the box and wrong on the outside of the box.
+
+:::
+
+## 12.5 RJ45 / 8P8C Ethernet
+
+What people casually call "RJ45 Ethernet" is usually an 8P8C modular connector — RJ45 is the common casual term, 8P8C is the actual connector geometry. It is a fine choice in racks, offices, lab equipment, protected panels, and inside enclosures. It is not ideal as an exposed connector in wet, dirty, high-vibration, or field-service equipment unless a ruggedized/sealed RJ45 system is used.
+
+For industrial/rugged Ethernet, the common options are:
+
+- **[M12 D-coded](../families/08-m12.md)** — commonly used for 10/100BASE-TX.
+- **[M12 X-coded](../families/08-m12.md)** — used for GbE/10G-class industrial Ethernet.
+- **Sealed/rugged RJ45** — may be appropriate where compatibility with standard patch cables matters.
+
+Whichever you choose, check shielding continuity, strain relief, latch protection, bend radius, mating cycles, and environmental rating — the [rugged Ethernet decision path](../../decision-paths/rugged-ethernet.md) walks the choice. Avoid exposing a normal plastic 8P8C latch where it can snag, break, fill with dirt, or lose retention.
+
+## Sources
+
+[^jst]: JST product datasheets (jst-mfg.com). Verified directly from JST datasheets: **XH** = 2.5 mm pitch, 3 A, 250 V; **VH** = 3.96 mm pitch, up to 10 A (AWG #16), 250 V. Other series follow JST's published pitches — PH 2.0 mm, GH 1.25 mm, SH 1.0 mm, EH 2.5 mm, ZH 1.5 mm. Exact current depends on the contact, wire gauge, and configuration; "JST" alone is not a specification. Official series PDFs: XH <https://www.jst-mfg.com/product/pdf/eng/eXH.pdf> — VH <https://www.jst-mfg.com/product/pdf/eng/eVH.pdf> — PH <https://www.jst-mfg.com/product/pdf/eng/ePH.pdf> — SH <https://www.jst-mfg.com/product/pdf/eng/eSH.pdf> — GH <https://www.jst-mfg.com/product/pdf/eng/eGH.pdf> — SM <https://www.jst-mfg.com/product/pdf/eng/eSM.pdf> — RCY <https://www.jst-mfg.com/product/pdf/eng/eRCY.pdf> (SM and RCY are 2.5 mm wire-to-wire series) — EH <https://www.jst-mfg.com/product/pdf/eng/eEH.pdf> (2.5 mm, 3 A AWG #22, 250 V) — ZH per JST's official product page <https://www.jst.com/products/crimp-style-connectors-wire-to-board-type/zh-connector/> (1.5 mm, 1 A AWG #26–32, 50 V)
+
+[^usbc]: USB-IF, *USB Type-C Cable and Connector Specification* (Release 2.5, USB-IF document library) — specifies connector durability of 10,000 mating cycles (minimum), versus roughly 1,500 for USB Type-A/B. <https://www.usb.org/document-library/usb-type-cr-cable-and-connector-specification-release-25> Vendor USB-C datasheets reproduce the same figure (Mouser-hosted example: <https://www.mouser.com/pdfDocs/USBCCADatasheet.pdf>). Durability is a mating-cycle figure only — not a measure of sealing, vibration, or ruggedness.
+
+---

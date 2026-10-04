@@ -49,4 +49,4 @@ Marketplace listings routinely mislabel series, round pitches, and reuse stock p
 
 :::
 
-Related: the [shared identification workflow](../connector-identification.md) (the short version both tracks use) · [The Big Idea](big-idea.md) · [Common Hobby Connector Families](families.md) · the engineering track's [How to Search for Connectors](../00-how-to-search-for-connectors.md) for the datasheet-driven version of this skill.
+Related: the [shared identification workflow](../shared/connector-identification.md) (the short version both tracks use) · [The Big Idea](big-idea.md) · [Common Hobby Connector Families](families.md) · the engineering track's [How to Search for Connectors](../engineering/guide/00-how-to-search-for-connectors.md) for the datasheet-driven version of this skill.

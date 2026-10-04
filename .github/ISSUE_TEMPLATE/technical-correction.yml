@@ -9,7 +9,7 @@ body:
     attributes:
       label: Page/section
       description: Where in the guide is the issue?
-      placeholder: docs/07-mil-dtl-38999.md, Section 7.5
+      placeholder: docs/engineering/families/07-mil-dtl-38999.md, Section 7.5
     validations:
       required: true
   - type: textarea
@@ -37,6 +37,6 @@ body:
     id: why_it_matters
     attributes:
       label: Why it matters
-      description: Explain the design, safety, manufacturability, or clarity impact.
+      description: Explain the impact on design, safety, manufacture, or clarity.
     validations:
       required: true

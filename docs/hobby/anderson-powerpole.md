@@ -83,7 +83,7 @@ Before using spare Powerpole poles for data or sense lines, check what the propo
 - **Retention, polarization, and shielding.** Verify the assembled housing arrangement and any retention accessories; ordinary unshielded poles do not provide a controlled shielding path or pair geometry.
 - **Circuit requirements.** A low-current accessory feed needs a verified power path; an analog sensor or data pair also needs its own error-budget and signal-integrity checks.
 
-[Low-Level Signals and Contact Design](../low-level-signal-contacts.md) gives the evidence test. A keyed, latched signal family may be the simpler choice, but the decision follows the requirements.
+[Low-Level Signals and Contact Design](../engineering/topics/low-level-signal-contacts.md) gives the evidence test. A keyed, latched signal family may be the simpler choice, but the decision follows the requirements.
 
 ## 7. Mounting and distribution
 

@@ -58,8 +58,8 @@ Use **Node 22** (`.nvmrc`). Run `npm run <script>`:
 | `test:a11y` | Playwright + `@axe-core/playwright` — WCAG 2.1 A/AA smoke on `/`, a representative article, `/404.html`. | `a11y` |
 | `test:responsive` | Playwright — no horizontal overflow, landmarks inside the viewport, tap targets, full-page screenshots at 360/390/768/1024/1440/1920 px. | `responsive` |
 | `size` | `size-limit` — initial JS (gzip) <= 175 kB, initial CSS (gzip) <= 22 kB. Needs `npm run build`. | `bundle-budget` |
-| `bundle-report` | `scripts/bundle-report.mjs` — payload sizes, route-chunk count, per-route LCP candidate + inline-media weight; enforces `perf-budgets.json`. | `bundle-budget` |
-| `links:external` | linkinator over the served build — outbound URLs, retries, skip list for login-gated / bot-walled hosts (`linkinator.config.json`). | `links-external.yml` (weekly, non-blocking) |
+| `bundle-report` | `scripts/bundle-report.mjs` — payload sizes, route-chunk count, per-route LCP candidate + inline-media weight; enforces `config/quality/perf-budgets.json`. | `bundle-budget` |
+| `links:external` | linkinator over the served build — outbound URLs, retries, skip list for login-gated / bot-walled hosts (`config/quality/linkinator.json`). | `links-external.yml` (weekly, non-blocking) |
 | `verify` | `format:check && typecheck && lint && lint:md && validate`. | — |
 
 ### One-time Prettier baseline
@@ -98,3 +98,18 @@ resolved or documented every current finding; then they become blocking.
   pages; `lint:md` is changed-scoped so it does not block.
 - Perf budgets sit ~15% above the 2026-08 baseline; ratchet down after any
   optimisation.
+
+## File placement
+
+- Published guide text belongs in `docs/`: professional chapters and deep dives
+  in `engineering/`, hobby content in `hobby/`, and shared references in `shared/`.
+- Keep owner procedures, dated audits, and editorial plans in `maintenance/`.
+- Put auxiliary quality settings in `config/quality/`. Tool configurations that
+  depend on root discovery stay at the root; Playwright lives beside its tests
+  and the `test:*` npm commands select that configuration explicitly.
+- Keep GitHub workflows, issue forms, and community files in `.github/`.
+- When moving published pages, preserve their explicit `slug`, update relative
+  Markdown links, and update directory-qualified IDs in `sidebars.ts`.
+
+See the [repository layout](../README.md#repository-layout) and
+[maintenance index](../maintenance/README.md) for the complete directory map.

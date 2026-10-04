@@ -19,11 +19,11 @@ If a control box, machine section, test-cart module, or panelized subsystem gets
 
 ## Avoid this when
 
-- **Weight and size are tightly constrained** — small aerospace payloads, handheld devices. See the compact circular families ([M12](../08-m12.md), [MIL-DTL-26482](../mil-dtl-26482.md)) instead.
+- **Weight and size are tightly constrained** — small aerospace payloads, handheld devices. See the compact circular families ([M12](../engineering/families/08-m12.md), [MIL-DTL-26482](../engineering/families/mil-dtl-26482.md)) instead.
 - The interface needs **defense/aero qualification** or a **38999 ecosystem** — see [Defense / rugged external I/O](defense-rugged-external-io.md).
 - It is a **simple sensor cable** where an [M8/M12](industrial-sensor.md) is cleaner.
 - It is **internal PCB harnessing** — see [Internal PCB harnessing](internal-pcb-harnessing.md).
-- It needs **RF/coax/fiber** discipline the selected insert can't support — see the [RF/GPS/radio path](rf-gps-radio.md) and, for fiber, [§2's orientation](../02-major-connector-categories.md#fiber-connectors--a-brief-orientation).
+- It needs **RF/coax/fiber** discipline the selected insert can't support — see the [RF/GPS/radio path](rf-gps-radio.md) and, for fiber, [§2's orientation](../engineering/guide/02-major-connector-categories.md#fiber-connectors--a-brief-orientation).
 
 ## Families to start with
 
@@ -68,7 +68,7 @@ A removable module invites technicians to unplug it without checking what's ener
 - The **PE/ground module or contact** where power is present.
 - **Contacts + crimp/insert tooling**, and **blank/filler modules** for unused insert bays.
 
-See [What People Forget](../what-people-forget.md).
+See [What People Forget](../engineering/guide/what-people-forget.md).
 
 ## Common traps
 
@@ -100,4 +100,4 @@ The strength of these connectors is **serviceability and modularity**, not compa
 
 For the end-to-end reasoning on a mixed power/signal module, see the [Connector Selection Packet](../examples/connector-selection-packet.md) worked example.
 
-Related: [Standards and Families (§3)](../03-connector-standards-and-families.md) · [Decision Examples](../09-decision-examples.md) · [Selection Workflow](../04-connector-selection-workflow.md) · [Practical Checklist](../10-selection-checklist.md).
+Related: [Standards and Families (§3)](../engineering/guide/03-connector-standards-and-families.md) · [Decision Examples](../engineering/guide/09-decision-examples.md) · [Selection Workflow](../engineering/guide/04-connector-selection-workflow.md) · [Practical Checklist](../engineering/guide/10-selection-checklist.md).

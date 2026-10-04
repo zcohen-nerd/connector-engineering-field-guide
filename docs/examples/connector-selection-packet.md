@@ -8,7 +8,7 @@ sidebar_label: Selection Packet
 
 # Worked Example: Connector Selection Packet
 
-This is a packet structure for an interface design review. It demonstrates the reasoning and required artifacts, but its placeholder parts, electrical limits, and qualification evidence remain open. It is not a buildable or released design. It ties together the [selection workflow](../04-connector-selection-workflow.md), the [rugged-on-a-budget](../decision-paths/rugged-on-a-budget.md) and [removable machine module](../decision-paths/removable-machine-module.md) decision paths, and every template under [Tools & Templates](../tools/index.md).
+This is a packet structure for an interface design review. It demonstrates the reasoning and required artifacts, but its placeholder parts, electrical limits, and qualification evidence remain open. It is not a buildable or released design. It ties together the [selection workflow](../engineering/guide/04-connector-selection-workflow.md), the [rugged-on-a-budget](../decision-paths/rugged-on-a-budget.md) and [removable machine module](../decision-paths/removable-machine-module.md) decision paths, and every template under [Tools & Templates](../tools/index.md).
 
 :::warning[Read this as reasoning, not a shopping list]
 
@@ -47,9 +47,9 @@ A small outdoor field robot has a **removable sensor/control module**. When the 
 
 At least three families are worth a look before committing:
 
-- **Sealed automotive (Deutsch DT / DTM / DTP)** — sealed, hand-crimpable, cheap, ubiquitous. See [rugged-on-a-budget](../decision-paths/rugged-on-a-budget.md) and the [DEUTSCH Deep Dive](../deutsch.md).
+- **Sealed automotive (Deutsch DT / DTM / DTP)** — sealed, hand-crimpable, cheap, ubiquitous. See [rugged-on-a-budget](../decision-paths/rugged-on-a-budget.md) and the [DEUTSCH Deep Dive](../engineering/families/deutsch.md).
 - **M12 (A-coded + a separate coded connector for CAN)** — clean COTS ecosystem, molded cordsets. See [industrial sensor](../decision-paths/industrial-sensor.md).
-- **MIL-DTL-38999** — rugged and configuration-controlled, but overkill here. See the [38999 deep dive](../07-mil-dtl-38999.md).
+- **MIL-DTL-38999** — rugged and configuration-controlled, but overkill here. See the [38999 deep dive](../engineering/families/07-mil-dtl-38999.md).
 - **Industrial rectangular / Han-style** — great for serviceable modules, but large for a small robot. See [removable machine module](../decision-paths/removable-machine-module.md).
 
 ## 3. Decision matrix
@@ -141,7 +141,7 @@ Every required line must become a real orderable item. The placeholders below ar
 
 - **Wire gauge** — power conductors sized to the load *and* the contact derating curve; signal conductors per the contact and signal.
 - **Pair twisting** — CAN_H/CAN_L a maintained twisted pair end-to-end; do not split the pair through the connector transition.
-- **Shield termination** — external chassis-entry clamps at both ends are the proposed topology in §5; no drain wire shares J2 pin 6. Detail clamp hardware, bonds, insulation, and service disconnection. Verify the choice against the system's interference spectrum and bonding network; see [§5.7](../05-connector-anatomy.md#57-emi-shielding-and-bonding).
+- **Shield termination** — external chassis-entry clamps at both ends are the proposed topology in §5; no drain wire shares J2 pin 6. Detail clamp hardware, bonds, insulation, and service disconnection. Verify the choice against the system's interference spectrum and bonding network; see [§5.7](../engineering/guide/05-connector-anatomy.md#57-emi-shielding-and-bonding).
 - **Seal dimensions** — DT/DTM/DTP rear grommets seal each wire's insulation OD. Verify every populated cavity and sealing plug. Separately check overall cable OD against any boot, gland, clamp, or strain-relief accessory.
 - **Bend radius** — respect the cable's minimum bend radius at the connector exit; pick a straight vs. right-angle backshell/boot accordingly.
 - **Label scheme** — both ends of every wire and both connector shells (`J1`/`P1`, `J2`/`P2`).
@@ -160,9 +160,9 @@ The template for this is the [cable drawing template](../tools/cable-drawing-tem
 - **Signal definitions:** isolated 24 V-class discrete I/O and CAN per §5; thresholds, common-mode limits, termination, and isolation specifications remain open
 - **Shield / chassis treatment:** external shield clamps to chassis at both ends; separate insulated SIGNAL_RTN in the isolated field-I/O domain. Bond hardware, EMC evidence, and fault analysis remain open (§5)
 - **Environmental assumptions:** sealed (target IP67-class) when mated and locked; unmated only when capped *(verify the exact family/assembly rating)*
-- **Service / cap note:** environment-rated caps as required on unmated ports; DT/DTM/DTP repair needs mating-face wedgelock/release access and rear contact withdrawal ([procedure](../deutsch.md#dtdtmdtp-contact-removal))
+- **Service / cap note:** environment-rated caps as required on unmated ports; DT/DTM/DTP repair needs mating-face wedgelock/release access and rear contact withdrawal ([procedure](../engineering/families/deutsch.md#dtdtmdtp-contact-removal))
 - **Revision control:** this ICD and the pinout are rev-controlled; changes go through the interface owner
-- **Source / evidence tracking:** every rating in the released version cites its datasheet + revision, the derating basis, and — because this packet is a teaching example — every placeholder is marked **example-only** (verification status: example). Family-level figures trace to the sourced [§3.2 table](../03-connector-standards-and-families.md#32-sealed-automotive-connector-families); nothing here is a verified part rating
+- **Source / evidence tracking:** every rating in the released version cites its datasheet + revision, the derating basis, and — because this packet is a teaching example — every placeholder is marked **example-only** (verification status: example). Family-level figures trace to the sourced [§3.2 table](../engineering/guide/03-connector-standards-and-families.md#32-sealed-automotive-connector-families); nothing here is a verified part rating
 
 Use the [ICD template](../tools/connector-icd-template.md) for the full form.
 
@@ -186,7 +186,7 @@ Run the full [design review checklist](../tools/design-review-checklist.md) befo
 
 ## 10. What would change if…
 
-- **A formal defense / QPL requirement appears** → reconsider [MIL-DTL-38999](../07-mil-dtl-38999.md) (or [26482](../mil-dtl-26482.md) where a bayonet fits); the sealed-automotive choice no longer satisfies the requirement.
+- **A formal defense / QPL requirement appears** → reconsider [MIL-DTL-38999](../engineering/families/07-mil-dtl-38999.md) (or [26482](../engineering/families/mil-dtl-26482.md) where a bayonet fits); the sealed-automotive choice no longer satisfies the requirement.
 - **Ethernet is added** → add a [rugged Ethernet](../decision-paths/rugged-ethernet.md) path (M12 D/X-coded or sealed RJ45); do not try to run gigabit on the discrete signal connector.
 - **RF / GPS is added** → use the [RF/GPS/radio path](../decision-paths/rf-gps-radio.md) — a coax contact or a separate coax bulkhead, not a spare signal pin.
 - **Current increases significantly** → revisit contact size, the derating curve, and possibly a dedicated/split power connector.

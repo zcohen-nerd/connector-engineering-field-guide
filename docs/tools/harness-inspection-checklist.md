@@ -8,7 +8,7 @@ sidebar_label: Harness Inspection Checklist
 
 # Harness Inspection Checklist
 
-Use this on a finished or incoming harness when “looks fine” isn't an inspection result. It pulls together the guide's build checks and common traps from [Selection Workflow §4](../04-connector-selection-workflow.md), the [Practical Checklist](../10-selection-checklist.md), the [38999 mistakes table](../07-mil-dtl-38999.md), and [What People Forget](../what-people-forget.md).
+Use this on a finished or incoming harness when “looks fine” isn't an inspection result. It pulls together the guide's build checks and common traps from [Selection Workflow §4](../engineering/guide/04-connector-selection-workflow.md), the [Practical Checklist](../engineering/guide/10-selection-checklist.md), the [38999 mistakes table](../engineering/families/07-mil-dtl-38999.md), and [What People Forget](../engineering/guide/what-people-forget.md).
 
 :::warning[What this checklist is — and is not]
 
@@ -22,7 +22,7 @@ This page covers **build/incoming acceptance**: does this unit match the release
 
 - [ ] The governing **drawing / [cable drawing](cable-drawing-template.md)** is on hand, at the revision being built/inspected
 - [ ] The **[ICD](connector-icd-template.md)** (or equivalent interface definition) is on hand, at revision
-- [ ] The **workmanship/acceptance standard and class** the harness was built to is named on the drawing or work instruction ([§4](../04-connector-selection-workflow.md))
+- [ ] The **workmanship/acceptance standard and class** the harness was built to is named on the drawing or work instruction ([§4](../engineering/guide/04-connector-selection-workflow.md))
 - [ ] The **manufacturer application specs** for each contact system used are identified
 - [ ] Any **deviations/waivers** are recorded, not verbal
 
@@ -31,15 +31,15 @@ This page covers **build/incoming acceptance**: does this unit match the release
 Per the crimp design package §4 says the drawing should carry:
 
 - [ ] The **exact contact P/N** used matches the drawing (not "equivalent-looking" — [hobby crimping](../hobby/crimping.md) explains why families don't transfer)
-- [ ] **Wire gauge and insulation range** match what the contact and wire seal were specified for — undersized wire in a wire seal defeats the seal ([§7.9](../07-mil-dtl-38999.md))
-- [ ] **One wire per crimp barrel** — a doubled-in second wire is an unqualified termination (and a defeated wire seal) unless the drawing cites the contact's own dual-wire specification; branches belong in splices or multi-wire-rated terminals ([crimping](../hobby/crimping.md), [§5.2](../05-connector-anatomy.md))
-- [ ] The **approved crimp tool / positioner / die** was used and is in calibration ([§4](../04-connector-selection-workflow.md))
-- [ ] **Visual inspection** performed per the named acceptance standard/class — remembering the trap: a crimp can pass visual and still fail in vibration ([§7.9](../07-mil-dtl-38999.md)); the application spec's inspection/pull-test requirement decides, not appearance
+- [ ] **Wire gauge and insulation range** match what the contact and wire seal were specified for — undersized wire in a wire seal defeats the seal ([§7.9](../engineering/families/07-mil-dtl-38999.md))
+- [ ] **One wire per crimp barrel** — a doubled-in second wire is an unqualified termination (and a defeated wire seal) unless the drawing cites the contact's own dual-wire specification; branches belong in splices or multi-wire-rated terminals ([crimping](../hobby/crimping.md), [§5.2](../engineering/guide/05-connector-anatomy.md))
+- [ ] The **approved crimp tool / positioner / die** was used and is in calibration ([§4](../engineering/guide/04-connector-selection-workflow.md))
+- [ ] **Visual inspection** performed per the named acceptance standard/class — remembering the trap: a crimp can pass visual and still fail in vibration ([§7.9](../engineering/families/07-mil-dtl-38999.md)); the application spec's inspection/pull-test requirement decides, not appearance
 - [ ] **Pull-test or equivalent verification** performed if and as the drawing/application spec requires, and recorded
 
 ## 3. Connector assembly
 
-From the [§7.9 mistakes table](../07-mil-dtl-38999.md) and [What People Forget](../what-people-forget.md):
+From the [§7.9 mistakes table](../engineering/families/07-mil-dtl-38999.md) and [What People Forget](../engineering/guide/what-people-forget.md):
 
 - [ ] **Required rear hardware** present and correct — verify strain relief and shield termination, and inspect integral rear wire seals separately from any backshell/gland
 - [ ] **Contact seating** verified at each cavity using the manufacturer's approved seating check; no forced or displaced contacts
@@ -47,15 +47,15 @@ From the [§7.9 mistakes table](../07-mil-dtl-38999.md) and [What People Forget]
 - [ ] **Strain relief** engaged on the cable, not on individual conductors
 - [ ] **Shield termination** matches the drawing's stated strategy (360° / pigtail / isolated — as documented, not as improvised)
 - [ ] **Unused cavities** carry sealing plugs where the drawing requires them
-- [ ] **Coupling / jam-nut torque** applied per the documented torque procedure — finger-tight is not a sealed, engaged mate ([What People Forget](../what-people-forget.md))
-- [ ] **Caps/covers** present for connectors that ship or sit unmated ([§7.9](../07-mil-dtl-38999.md))
+- [ ] **Coupling / jam-nut torque** applied per the documented torque procedure — finger-tight is not a sealed, engaged mate ([What People Forget](../engineering/guide/what-people-forget.md))
+- [ ] **Caps/covers** present for connectors that ship or sit unmated ([§7.9](../engineering/families/07-mil-dtl-38999.md))
 
 ## 4. Mechanical checks
 
-- [ ] **Keying/clocking** of each connector matches the ICD — same-key-different-pinout is an eventual mis-mate ([§7.9](../07-mil-dtl-38999.md))
-- [ ] **Contact gender vs. the mating half** verified — gender is independent of plug/receptacle ([§7.9](../07-mil-dtl-38999.md))
-- [ ] **Bend radius and cable exit** comply with the drawing ([§10](../10-selection-checklist.md))
-- [ ] **Labels / identification** present and matching the rev-controlled labeling scheme ([§10](../10-selection-checklist.md))
+- [ ] **Keying/clocking** of each connector matches the ICD — same-key-different-pinout is an eventual mis-mate ([§7.9](../engineering/families/07-mil-dtl-38999.md))
+- [ ] **Contact gender vs. the mating half** verified — gender is independent of plug/receptacle ([§7.9](../engineering/families/07-mil-dtl-38999.md))
+- [ ] **Bend radius and cable exit** comply with the drawing ([§10](../engineering/guide/10-selection-checklist.md))
+- [ ] **Labels / identification** present and matching the rev-controlled labeling scheme ([§10](../engineering/guide/10-selection-checklist.md))
 - [ ] Overall length and breakout dimensions within drawing tolerance
 
 A gentle seating check confirms latch engagement; it is not a quantified retention test or proof of crimp strength. Perform controlled retention tests only at the specified force and procedure, and destructive crimp pull tests on the designated samples. Do not destructively test a deliverable harness by default.

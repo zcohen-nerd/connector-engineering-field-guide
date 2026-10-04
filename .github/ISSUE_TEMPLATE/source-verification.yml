@@ -16,14 +16,14 @@ body:
     attributes:
       label: Current guide location
       description: Where does the claim appear today?
-      placeholder: docs/08-m12.md, Section 8.3
+      placeholder: docs/engineering/families/08-m12.md, Section 8.3
     validations:
       required: true
   - type: textarea
     id: proposed_source
     attributes:
       label: Proposed primary source
-      description: Link or identify the datasheet, standard, catalog, or QPL source.
+      description: Identify the datasheet, standard, catalog, or QPL source.
     validations:
       required: true
   - type: textarea

@@ -31,7 +31,7 @@ It's ordinary Ethernet until the cable leaves the clean cabinet. Then the latch,
 
 *The same cable, two worlds: M12 X-coded (left — note the X-shaped shield cross separating the four pairs) versus a standard 8P8C/RJ45 plug. Photo: [Anordal](https://commons.wikimedia.org/wiki/File:M12X_vs_8P8C_ethernet_connectors.webp), CC BY-SA 4.0, via Wikimedia Commons.*
 
-See the [M12 deep dive](../08-m12.md) for the D-coded vs. X-coded distinction.
+See the [M12 deep dive](../engineering/families/08-m12.md) for the D-coded vs. X-coded distinction.
 
 ## Search terms
 
@@ -53,7 +53,7 @@ If PoE is used, also verify device roles, power class, pair/current requirements
 - **Shielded cable** matched to the connector, and the **shell/shield bond**.
 - The **mating cordset** and a **cap** for the unmated side.
 
-See [What People Forget](../what-people-forget.md).
+See [What People Forget](../engineering/guide/what-people-forget.md).
 
 ## Common traps
 
@@ -74,4 +74,4 @@ See [What People Forget](../what-people-forget.md).
 - A source-controlled **pinout** (including shield assignment).
 - A [cable drawing](../tools/cable-drawing-template.md) and [ICD entry](../tools/connector-icd-template.md).
 
-Related: [Decision Examples](../09-decision-examples.md) · [M12 deep dive](../08-m12.md).
+Related: [Decision Examples](../engineering/guide/09-decision-examples.md) · [M12 deep dive](../engineering/families/08-m12.md).

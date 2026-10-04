@@ -74,8 +74,8 @@ The source-verification milestone shipped with v1.0; the guide is continuously r
 | Are you making released drawings, ICDs, or harness documentation? | No | Yes |
 | Does someone else need to build, inspect, or maintain it? | Maybe | Yes |
 
-Still torn? Read [Hobby or Professional?](hobby-or-professional.md). The real dividing line is what failure costs, where the hardware lives, and how tightly it has to be documented—not how fancy the connector looks.
+Still torn? Read [Hobby or Professional?](shared/hobby-or-professional.md). The real dividing line is what failure costs, where the hardware lives, and how tightly it has to be documented—not how fancy the connector looks.
 
-Both tracks share the [Source Notes](appendix/source-notes.md)—where the site shows its work—the [Glossary](glossary.md), and the [Connector Identification Workflow](connector-identification.md).
+Both tracks share the [Source Notes](appendix/source-notes.md)—where the site shows its work—the [Glossary](shared/glossary.md), and the [Connector Identification Workflow](shared/connector-identification.md).
 
-Onboarding someone? [How to Use This Guide with an Intern](using-this-guide-with-an-intern.md) turns the reading, exercises, and templates into a four-week plan you can actually run.
+Onboarding someone? [How to Use This Guide with an Intern](engineering/guide/using-this-guide-with-an-intern.md) turns the reading, exercises, and templates into a four-week plan you can actually run.

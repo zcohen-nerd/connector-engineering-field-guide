@@ -57,7 +57,7 @@ SH series figures: official JST datasheet.[^jst-sh] Qwiic/STEMMA QT conventions:
 
 ## When to move to the engineering track
 
-When the "sensor chain" becomes a fielded instrument: vibration, sealing, or documented harnesses — [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md) and the [industrial sensor path](../decision-paths/industrial-sensor.md) (where [M8/M12](../08-m12.md) do this job with threads and seals).
+When the "sensor chain" becomes a fielded instrument: vibration, sealing, or documented harnesses — [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md) and the [industrial sensor path](../decision-paths/industrial-sensor.md) (where [M8/M12](../engineering/families/08-m12.md) do this job with threads and seals).
 
 ## Sources
 

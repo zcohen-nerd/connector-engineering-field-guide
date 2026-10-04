@@ -6,7 +6,7 @@
  * additionally verifies every *outbound* URL still resolves, and catches links
  * in raw HTML / static files the MDX compiler never sees. Rate-limited /
  * login-gated / intentionally-dynamic hosts are excluded in
- * `linkinator.config.json` (mailto, tel, LinkedIn, X, Autodesk, …). linkinator
+ * `config/quality/linkinator.json` (mailto, tel, LinkedIn, X, Autodesk, …). linkinator
  * retries transient errors (see the config) before calling a link broken.
  *
  * An outbound 401/403/429 is re-checked once here with a browser-like GET and,
@@ -47,8 +47,8 @@ if (!existsSync('build/index.html')) {
   process.exit(1);
 }
 
-const cfg = existsSync('linkinator.config.json')
-  ? JSON.parse(readFileSync('linkinator.config.json', 'utf8'))
+const cfg = existsSync('config/quality/linkinator.json')
+  ? JSON.parse(readFileSync('config/quality/linkinator.json', 'utf8'))
   : {};
 
 const server = spawn('npm', ['run', 'serve', '--', '--port', String(port)], {

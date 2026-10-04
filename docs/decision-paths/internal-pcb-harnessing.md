@@ -22,7 +22,7 @@ This is the wiring that stays inside the box: power and signals leaving a PCB fo
 
 ## Families to start with
 
-- **[Molex Micro-Fit](../micro-fit.md)** (and Mini-Fit / Nano-Fit) for internal power — its deep dive covers the Fit ladder, the terminal-set current, and the 30-cycle gotcha.
+- **[Molex Micro-Fit](../engineering/families/micro-fit.md)** (and Mini-Fit / Nano-Fit) for internal power — its deep dive covers the Fit ladder, the terminal-set current, and the 30-cycle gotcha.
 - **PicoBlade / [JST-GH](../hobby/jst-gh.md)** and similar for signal — and note they are *different* 1.25 mm families that do not intermate; the GH page carries the lookalike table.
 - **TE** and **Harwin** families where their ratings and latches fit.
 
@@ -30,7 +30,7 @@ This is the wiring that stays inside the box: power and signals leaving a PCB fo
 
 *One internal-power ecosystem can cover several physical jobs, but the similar-looking Fit families sit at different pitches and do not intermate. Measure and select the exact family before choosing the contact and tooling.*
 
-These are not "hobby" parts — professional versions have latches, polarization, secondary locks (TPA), and defined ratings. The dividing line is the specific family and rating, not the brand (see [Major Connector Categories](../02-major-connector-categories.md)).
+These are not "hobby" parts — professional versions have latches, polarization, secondary locks (TPA), and defined ratings. The dividing line is the specific family and rating, not the brand (see [Major Connector Categories](../engineering/guide/02-major-connector-categories.md)).
 
 ## Search terms
 
@@ -50,7 +50,7 @@ These are not "hobby" parts — professional versions have latches, polarization
 - **Crimp tooling** and the correct **contacts** for the family.
 - The **TPA / secondary lock** and a **keyed housing**.
 
-See [What People Forget](../what-people-forget.md).
+See [What People Forget](../engineering/guide/what-people-forget.md).
 
 ## Common traps
 
@@ -70,4 +70,4 @@ See [What People Forget](../what-people-forget.md).
 - A source-controlled **pinout** with keying noted.
 - A [cable drawing](../tools/cable-drawing-template.md) and, for a controlled internal interface, an [ICD entry](../tools/connector-icd-template.md).
 
-Related: [Decision Examples](../09-decision-examples.md) · [Consumer / Hobby / Prototype connectors](../12-consumer-hobby-prototype-connectors.md) · for quick prototyping with pre-crimped leads and kit parts, the hobby track's [Crimping](../hobby/crimping.md) and [Marketplace Kits](../hobby/connector-kits.md) pages.
+Related: [Decision Examples](../engineering/guide/09-decision-examples.md) · [Consumer / Hobby / Prototype connectors](../engineering/guide/12-consumer-hobby-prototype-connectors.md) · for quick prototyping with pre-crimped leads and kit parts, the hobby track's [Crimping](../hobby/crimping.md) and [Marketplace Kits](../hobby/connector-kits.md) pages.

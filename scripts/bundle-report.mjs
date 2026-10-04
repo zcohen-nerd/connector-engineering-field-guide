@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Descriptive bundle / critical-asset report over the built site, plus a small
- * set of hard budgets from `perf-budgets.json`.
+ * set of hard budgets from `config/quality/perf-budgets.json`.
  *
  * `size-limit` (see .size-limit.json) is the primary JS/CSS gate; this script
  * adds the numbers size-limit does not surface — raw+gzip side by side, route
@@ -9,7 +9,7 @@
  * assets in <head>, and inline page-media weight (generalises the Portfolio
  * repo's existing 1200 KB image budget to every configured route).
  *
- *   node scripts/bundle-report.mjs        # report + enforce perf-budgets.json
+ *   node scripts/bundle-report.mjs        # report + enforce config/quality/perf-budgets.json
  *   node scripts/bundle-report.mjs --report-only
  *
  * Writes reports/quality/bundle-report.{json,md}. Exits 1 on a budget breach
@@ -23,7 +23,7 @@ import {
   readdirSync,
   statSync,
 } from 'node:fs';
-import {join, dirname, extname} from 'node:path';
+import {join, extname} from 'node:path';
 import {gzipSync} from 'node:zlib';
 
 const reportOnly = process.argv.includes('--report-only');
@@ -32,8 +32,8 @@ if (!existsSync(join(B, 'index.html'))) {
   console.error('build/ not found — run `npm run build` first.');
   process.exit(1);
 }
-const budgets = existsSync('perf-budgets.json')
-  ? JSON.parse(readFileSync('perf-budgets.json', 'utf8'))
+const budgets = existsSync('config/quality/perf-budgets.json')
+  ? JSON.parse(readFileSync('config/quality/perf-budgets.json', 'utf8'))
   : {};
 const routes = budgets.routes ?? ['/'];
 

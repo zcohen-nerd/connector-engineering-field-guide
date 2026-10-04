@@ -22,7 +22,7 @@ These are quick field notes on the families hobby projects actually use: what se
 - **Marketplace names:** Micro-Fit, "micro fit 3," MicroFit 3.0 — and, unhelpfully, just "Molex connector."
 - **What it is:** the 3.0 mm-pitch **latching** crimp family that is the classic Dupont graduation: polarized housings, positive latch, TPA options, and one contact system serving wire-to-board, wire-to-wire, and panel-mount jobs. It sits on a ladder of lookalike siblings — Nano-Fit (2.5 mm), **Mini-Fit Jr. (4.2 mm — the ATX power connector)**, Mega-Fit (5.7 mm) — and none of them intermate.
 - **Watch for:** eyeballed pitch (3.0 vs 4.2 mm is invisible in photos — [measure](pitch.md)); "micro-fit style" clone kits inheriting nothing from genuine figures; current set by the **terminal P/N**, not the family name; and standard terminals rated around **30 mating cycles** — it's a configuration interface, not a quick-disconnect.
-- **Full page:** [Micro-Fit 3.0 deep dive](../micro-fit.md) (engineering track) — the Fit ladder, the terminal-set current story, the 30-cycle surprise, and TPA/keying discipline.
+- **Full page:** [Micro-Fit 3.0 deep dive](../engineering/families/micro-fit.md) (engineering track) — the Fit ladder, the terminal-set current story, the 30-cycle surprise, and TPA/keying discipline.
 
 ## JST-XH
 
@@ -110,7 +110,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 ## USB connectors
 
 - **What it is:** USB-A/micro-B/USB-C as hobby power-and-data workhorses.
-- **Watch for:** cheap cables with undersized conductors that drop volts under load; USB-C requiring pull-down resistors (or a PD negotiation) to get power from a C-to-C source — a bare breakout may read 0 V; connector current limits per the USB spec and the part's datasheet, not vibes. See the engineering track's [§12 consumer I/O coverage](../12-consumer-hobby-prototype-connectors.md).
+- **Watch for:** cheap cables with undersized conductors that drop volts under load; USB-C requiring pull-down resistors (or a PD negotiation) to get power from a C-to-C source — a bare breakout may read 0 V; connector current limits per the USB spec and the part's datasheet, not vibes. See the engineering track's [§12 consumer I/O coverage](../engineering/guide/12-consumer-hobby-prototype-connectors.md).
 - **Full page:** [USB-C Power for Hobby Projects](usb-c-power.md) — the 5.1 kΩ resistor rule, the source's advertisement, the PD ladder to 240 W, and the cable's role.
 
 ## IDC ribbon connectors
@@ -138,7 +138,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 
 - **Marketplace names:** aviation plug, aviation connector, GX12 / GX16 / GX20, SP13 / SP17 / SP21 "waterproof connector."
 - **What it is:** inexpensive marketplace circulars — GX-style are small threaded metal-shell panel connectors (the number is the nominal shell diameter in mm); SP-style are plastic shells sold with IP claims. Genuinely useful for hobby panels and quick disconnects *when treated skeptically*.
-- **Watch for:** "aviation plug" is a naming trap, not a specification ([How to Search](../00-how-to-search-for-connectors.md) uses it as the canonical vague label); current and IP claims are listing-grade until proven; sealing, where real, is conditional on gaskets, panel torque, and cable fit; and with no controlling drawing, clone-to-clone mating is never guaranteed.
+- **Watch for:** "aviation plug" is a naming trap, not a specification ([How to Search](../engineering/guide/00-how-to-search-for-connectors.md) uses it as the canonical vague label); current and IP claims are listing-grade until proven; sealing, where real, is conditional on gaskets, panel torque, and cable fit; and with no controlling drawing, clone-to-clone mating is never guaranteed.
 - **If the "waterproof" actually matters,** graduate to a datasheet-rated family: [rugged on a budget](../decision-paths/rugged-on-a-budget.md) or [M12-class](../decision-paths/industrial-sensor.md).
 
 ---

@@ -39,10 +39,10 @@ These are routing pages, not permission slips. They point you toward useful fami
 | Serviceable machine module — mixed power/signal/data | [Removable machine module](removable-machine-module.md) |
 | Antenna, GPS, radio, or coax path | [RF / GPS / radio](rf-gps-radio.md) |
 
-Family-level depth behind the paths lives in the deep dives: [MIL-DTL-38999](../07-mil-dtl-38999.md), [MIL-DTL-26482](../mil-dtl-26482.md), [M12/M8](../08-m12.md), [DEUTSCH](../deutsch.md), and [Molex Micro-Fit 3.0](../micro-fit.md).
+Family-level depth behind the paths lives in the deep dives: [MIL-DTL-38999](../engineering/families/07-mil-dtl-38999.md), [MIL-DTL-26482](../engineering/families/mil-dtl-26482.md), [M12/M8](../engineering/families/08-m12.md), [DEUTSCH](../engineering/families/deutsch.md), and [Molex Micro-Fit 3.0](../engineering/families/micro-fit.md).
 
 :::note
 
-Still turning a vague need into search terms? Start with [How to Search for Connectors](../00-how-to-search-for-connectors.md), then come back here. Matching or replacing a connector you already have? Use the [identification workflow](../connector-identification.md).
+Still turning a vague need into search terms? Start with [How to Search for Connectors](../engineering/guide/00-how-to-search-for-connectors.md), then come back here. Matching or replacing a connector you already have? Use the [identification workflow](../shared/connector-identification.md).
 
 :::

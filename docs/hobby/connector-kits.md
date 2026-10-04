@@ -37,7 +37,7 @@ The assorted-connector kit — a plastic organizer of housings and terminals for
 
 :::note
 
-This is the hobby edition of the engineering track's [source hierarchy (§6.1)](../06-reading-datasheets.md): a marketplace listing sits at the very bottom — useful for discovery and availability, never design authority for ratings or compatibility.
+This is the hobby edition of the engineering track's [source hierarchy (§6.1)](../engineering/guide/06-reading-datasheets.md): a marketplace listing sits at the very bottom — useful for discovery and availability, never design authority for ratings or compatibility.
 
 :::
 

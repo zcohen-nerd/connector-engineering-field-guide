@@ -36,12 +36,23 @@ Apart from the sourced Anderson Powerpole example below, **this page gives no cu
 
 ## The one sourced row: Anderson Powerpole
 
-Anderson Power Products' PP15/45 Powerpole family is the documented outlier in this landscape: **15 A, 30 A, and 45 A contacts all share the same genderless housing**, covering #20 through #10 AWG, with the series rated up to 55 A per pole per Anderson's product specifications — and housings dovetail together so you build multi-pole connectors from single poles.[^pp1545] That's why bench supplies and radio shacks standardize on it. The trap is the flip side of genderless: nothing but your **assembly convention** (the agreed red/black stacking arrangement) polarizes the connection. The full system — the family ladder above 45 A, the standardized orientation, assembly discipline, and why it's the wrong answer for signal — now has its own page: the [Anderson Powerpole deep dive](anderson-powerpole.md).
+Anderson Power Products' PP15/45 Powerpole family is the documented outlier in this landscape: **15 A, 30 A, and 45 A contacts all share the same genderless housing**, covering #20 through #10 AWG, with the series rated up to 55 A per pole per Anderson's product specifications — and housings dovetail together so you build multi-pole connectors from single poles.[^pp1545] That's why bench supplies and radio shacks standardize on it. The trap is the flip side of genderless: nothing but your **assembly convention** (the agreed red/black stacking arrangement) polarizes the connection. The full system — the family ladder above 45 A, the standardized orientation, assembly discipline, and the extra checks needed for signal duty — now has its own page: the [Anderson Powerpole deep dive](anderson-powerpole.md).
+
+## Before changing a battery connector
+
+Prefer a correctly specified factory lead or adapter when practical. Disconnect the pack from the charger and load; the battery-side conductors **remain live**.
+
+- Follow the pack and connector manufacturers' retermination instructions. If retermination is permitted, expose and finish **one conductor at a time**, fully insulating it before exposing the other. Never cut both battery leads together.
+- Keep tools and loose strands from bridging terminals. Use an insulated work area and cover adjacent live contacts.
+- Confirm polarity with a suitably rated meter and insulated probe tips before connecting the finished lead. Do not use continuity/resistance mode on an energized pack.
+- For balance leads, avoid bridging adjacent cell taps; see the [XH page](jst-xh.md).
+
+This controls the short-circuit hazard during connector work; it does not make a damaged pack suitable for repair.
 
 ## Traps
 
 - **The adapter drawer.** A mixed fleet breeds adapters, and every adapter is two more connections, more resistance, and a hiding place for a bad joint — right in the highest-current path you own. Standardize the fleet on one ecosystem (calculated against your loads) and re-terminate; keep adapters for the charger bench, not the vehicle.
-- **Unplugging under load.** Battery DC arcs. Same rule as everywhere in both guides: de-energize first, and prefer anti-spark variants on high-capacity packs. See [power vs signal](power-vs-signal.md) and the [energized-connector warning](../decision-paths/high-current-dc-power.md).
+- **Unplugging under load.** Battery DC arcs. Same rule as everywhere in both guides: remove load current before disconnecting. An anti-spark/precharge feature limits connection inrush; it is not a load-break rating. See [power vs signal](power-vs-signal.md) and the [energized-connector warning](../decision-paths/high-current-dc-power.md).
 - **Solder joints are the connector.** Most of these families use solder tabs or cups. A cold joint or wicked-stiff wire at the tab fails before the connector does — strain-relieve with heat-shrink past the joint, every time.
 - **Polarity is your job.** Tamiya-style shells and bare bullets carry no trustworthy polarity convention, and even keyed shells only guarantee *orientation*, not that the pack was wired correctly. Meter the pack before its first connection to anything expensive.
 - **Clone roulette, again.** Blade thickness, bullet spring force, plating, and shell fit vary between clones of every family here. Buy matched pairs from one source and inspect the mate.

@@ -9,7 +9,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-_Nothing yet._
+### Content corrections
+
+- Corrected low-level tin/gold contact guidance, servo-reversal warnings, barrel-plug mismatch geometry, 38999 contact-current interpretation, and DT/DTM/DTP service procedures across prose, summaries, and diagrams.
+- Removed unsupported M12 contact paralleling and wrong-port safety claims; added a complete grouped port/cable review matrix. Separated signal reference, power return, and shield/chassis paths in the selection packet.
+- Corrected pitch measurement, military PIN decoding, derating-curve reading, ferrule applicability, IP notation, sealing boundaries, RF compatibility, USB-C role/voltage guidance, JST identification, and family-level overstatements.
+- Added drawing and electrical-definition fields, unintended-short and retention checks, failure-preserving qualification guidance, and exposure-coverage decisions to the reusable templates.
+- Added concise battery-connector work guidance and signal-system checks; aligned diagram labels with the revised text.
+- Clarified that examples are architecture/documentation studies with open release decisions. Added an exercise review rubric and a [claim-level correction record](../appendix/source-notes.md#content-corrections-2026-10-04); historical release notes remain unchanged.
 
 ## [1.0.0] - 2026-08-29
 

@@ -1,14 +1,14 @@
 ---
 id: anderson-powerpole
 title: "Anderson Powerpole: The Genderless Power System"
-description: "The Powerpole deep dive: one housing with three contacts, the family ladder to 350 A, dovetail stacking, the ARES orientation standard, assembly details — and why it's the wrong answer for signal."
+description: "The Powerpole deep dive: one housing with three contacts, the family ladder to 350 A, dovetail stacking, the ARES orientation standard, assembly details — and what to verify before using it for signals."
 slug: /hobby/anderson-powerpole
 sidebar_label: Anderson Powerpole
 ---
 
 # Anderson Powerpole: The Genderless Power System
 
-The Powerpole is what a power connector looks like when it's designed as a *system* instead of a plug: genderless single-pole housings you stack into whatever arrangement you need, tin- or silver-plated wiping contacts selected for the duty, and one housing that accepts three different current classes of contact. It's the standard on ham radio benches, combat robots, and DC power distribution for good reasons — and it comes with three disciplines (orientation, current-class, and contact finish) that this page makes explicit. It is also, per the section below, **a power connector that keeps getting drafted into signal jobs it shouldn't do**.
+The Powerpole is what a power connector looks like when it's designed as a *system* instead of a plug: genderless single-pole housings you stack into whatever arrangement you need, tin- or silver-plated wiping contacts selected for the duty, and one housing that accepts three different current classes of contact. It's the standard on ham radio benches, combat robots, and DC power distribution for good reasons — and it comes with three disciplines (orientation, current-class, and contact finish) that this page makes explicit. It is also, per the section below, **a power connector whose ratings do not by themselves establish signal performance**.
 
 ![Anderson Powerpole housings and contacts on a workbench beside a wire spool and crimp tool](/img/photos/anderson-powerpole-bench.jpg)
 
@@ -74,16 +74,16 @@ A genderless connector has no built-in polarity protection — **your assembly c
 - **Dress the wire.** Poles accept the wire straight in with no built-in strain relief; anchor cables near the connector, especially on anything that moves.
 - **Fuse near the source.** The Powerpole habit of building distribution networks means the battery side deserves a fuse before the first splice — [power vs signal](power-vs-signal.md) rules apply to the whole tree.
 
-## 6. Ridiculously useful for power — the wrong answer for signal
+## 6. Power ratings do not qualify signal duty
 
-Powerpoles are so convenient that they get drafted into signal jobs, and it's worth saying plainly why that's a misuse:
+Before using spare Powerpole poles for data or sense lines, check what the proposed interface needs:
 
-- **Scale.** One Powerpole per circuit is enormous next to any signal family — a 6-signal interface in Powerpoles is a brick of housings doing a job a single latched connector does better.
-- **Wrong contact lane.** The system is engineered and characterized for *power* — flat-wiping contacts sized in tens of amps, offered in tin and silver. Low-level signals are outside its documented lane; nothing in the product documentation speaks to dry-circuit reliability, and you'd be designing on vibes. (The engineering track's [Low-Level Signals and Contact Design](../low-level-signal-contacts.md) is the general version of this rule — and the test to apply to any family.)
-- **No latch, no shield, no key.** Friction/detent retention with no positive latch, no shielding story for data, and polarity/keying that exists only by convention — three strikes for signal work. Keyed, latched signal families ([internal PCB harnessing](../decision-paths/internal-pcb-harnessing.md), or the hobby [families map](families.md)) are the right tools.
-- **The legitimate gray zone** is low-current *power* — a 500 mA accessory feed in a Powerpole fleet is fine, because it keeps the fleet on one system. Signal ≠ small power; route data and sense lines through a signal connector.
+- **Scale.** One housing per circuit may be bulky compared with a multipole signal connector.
+- **Low-level evidence.** The cited PP15/45 power and durability data do not establish performance for every dry-circuit application. Ask for relevant low-level results or qualify the exact contact system. Tin or silver plating alone does not prove suitability or failure.
+- **Retention, polarization, and shielding.** Verify the assembled housing arrangement and any retention accessories; ordinary unshielded poles do not provide a controlled shielding path or pair geometry.
+- **Circuit requirements.** A low-current accessory feed needs a verified power path; an analog sensor or data pair also needs its own error-budget and signal-integrity checks.
 
-And the environmental rule carries over from the [professional side](../decision-paths/high-current-dc-power.md): Powerpoles are **unsealed** — outdoors they need a boot, an enclosure, or a [sealed family](../decision-paths/rugged-on-a-budget.md) instead.
+[Low-Level Signals and Contact Design](../low-level-signal-contacts.md) gives the evidence test. A keyed, latched signal family may be the simpler choice, but the decision follows the requirements.
 
 ## 7. Mounting and distribution
 

@@ -76,4 +76,22 @@ For Exercises 2 and 3, start with [How to Search for Connectors](00-how-to-searc
 
 **Related guide pages:** [Practical Checklist](10-selection-checklist.md) · [Red Flags](11-red-flags.md) · [Design Review Checklist](tools/design-review-checklist.md)
 
+## Review rubric
+
+Apply this rubric to every deliverable. Mark each row **pass**, **revise**, or **not applicable with rationale**; a blank or TBD is an open item, not a pass.
+
+| Review dimension | Evidence needed to pass |
+|---|---|
+| Requirements | Measurable electrical, environmental, mechanical, service, and procurement needs with owners and sources |
+| Selection | At least one credible alternative and a requirement-based rejection; family reputation alone is insufficient |
+| Exact configuration | Both mating halves, contacts, seals, locks, accessories, wire, and tooling identified at revision |
+| Electrical definition | Numbered mating-face views, pin 1/key orientation, direction/reference, limits, return paths, and reserved-pin treatment |
+| Wrong connections | All plausible cross-mates assessed; harmful pairings excluded or controlled with verified mitigation |
+| Buildability | Cable datums, lengths/tolerances, wire preparation, assembly instructions, and service access defined |
+| Verification | Requirement-linked acceptance criteria, appropriate qualification basis, and result records |
+| Source discipline | Claim matches source scope/configuration; assumptions and deferred decisions remain visibly open |
+
+For Exercises 1 and 4–7, an architecture-review pass may retain named open items with owners and closure evidence specified. A release-review pass requires those items closed. For Exercise 8, include that closure evidence in each corrective action.
+
+
 ---

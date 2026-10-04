@@ -22,7 +22,7 @@ The assorted-connector kit — a plastic organizer of housings and terminals for
 - **Contacts may not match housings well** — kit terminals are often near-copies whose retention in the housing varies.
 - **Metal quality and plating are unknown** — contact force and corrosion behavior are unspecified.
 - **Current ratings may be missing or unreliable** — a kit card's amp number has no datasheet behind it *(treat every kit rating as source needed)*.
-- **Pitch/family may be rounded or mislabeled** — "2.54 mm JST" is a contradiction that appears in real listings.
+- **Pitch/family may be rounded or mislabeled.** “2.54 mm JST” is incomplete, not inherently contradictory: JST makes genuine 2.54 mm families such as RE. Ask for the series and manufacturer drawing, then compare housing, latch, and contacts; pitch alone proves neither brand nor compatibility.[^jstre]
 - **Clone-to-clone and clone-to-genuine mating may be inconsistent** — sometimes fine, sometimes loose, no drawing to arbitrate.
 - **For repeatable projects, buy official parts or known pre-crimped leads** — genuine series parts from an authorized distributor, or pre-crimped leads from a reputable supplier, cost little more and remove the guesswork.
 
@@ -42,3 +42,5 @@ This is the hobby edition of the engineering track's [source hierarchy (§6.1)](
 :::
 
 Related: [Buying the Right Mating Parts](buying-mating-parts.md) · [Crimping](crimping.md) · [JST Is Not One Connector](jst-is-not-one-connector.md).
+
+[^jstre]: JST, *RE Connectors*, official series datasheet: 2.54 mm-pitch wire-to-board crimp family. <https://www.jst-mfg.com/product/pdf/eng/eRE.pdf>

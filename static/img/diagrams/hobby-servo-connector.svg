@@ -4,7 +4,7 @@
        wire colors are semantic (the actual convention). Schematic only —
        no absolute dimensions asserted. -->
   <rect x="0.5" y="0.5" width="759" height="339" rx="10" fill="#ffffff" stroke="#d0d7de"/>
-  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">The servo connector — one pin order, two housings, zero keying on a bare header</text>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">The servo connector — common pin order, two housings, zero keying on a bare header</text>
 
   <!-- Panel 1: pin order, face view -->
   <text x="103" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#3b4453">S</text>
@@ -17,9 +17,9 @@
   <line x1="103" y1="148" x2="103" y2="172" stroke="#c9d3df" stroke-width="4"/>
   <line x1="136" y1="148" x2="136" y2="172" stroke="#b3402f" stroke-width="4"/>
   <line x1="169" y1="148" x2="169" y2="172" stroke="#3b4453" stroke-width="4"/>
-  <text x="136" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">+ is always the center pin</text>
+  <text x="136" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">+ commonly at center</text>
   <text x="136" y="212" text-anchor="middle" font-size="12" fill="#3b4453">reversed = S and &#8722; swapped:</text>
-  <text x="136" y="226" text-anchor="middle" font-size="12" fill="#3b4453">it won't run &#8212; nothing burns</text>
+  <text x="136" y="226" text-anchor="middle" font-size="12" fill="#3b4453">damage is possible</text>
 
   <!-- Panel 2: universal/JR vs Futaba J housing profiles -->
   <text x="328" y="88" text-anchor="middle" font-size="12" fill="#3b4453">universal / JR</text>
@@ -54,7 +54,7 @@
   <text x="608" y="212" text-anchor="middle" font-size="12" fill="#3b4453">shifted or reversed still fits &#8212;</text>
   <text x="608" y="226" text-anchor="middle" font-size="12" fill="#3b4453">count pins, then look again</text>
 
-  <text x="380" y="268" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">wire colors are the maker's choice &#8212; pin order is the standard: verify order at both ends, not hue</text>
+  <text x="380" y="268" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">Common convention only: verify pin order at both ends; legacy exceptions exist</text>
   <text x="380" y="292" text-anchor="middle" font-size="13" font-weight="bold" fill="#b3402f">one + and one &#8722; contact carry the whole stall current &#8212; the plug is part of the power budget</text>
   <text x="380" y="322" text-anchor="middle" font-size="12" font-style="italic" fill="#6f8bb4">Schematic &#8212; a de-facto standard with no governing spec; housings, colors, and ratings vary by maker.</text>
 </svg>

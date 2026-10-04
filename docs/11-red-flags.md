@@ -13,7 +13,7 @@ Most connector failures aren't exotic. They're ordinary decisions that looked ha
 | Red flag | Why it's bad |
 |---|---|
 | Picking only by pin count | Ignores current, voltage, contact size, environment, tooling |
-| Ignoring backshells | No strain relief, poor EMI, poor sealing |
+| Ignoring required rear hardware | Strain relief, shielding, or accessory sealing may be missing; verify integral seals separately |
 | Ignoring tooling | Design may be impossible to build correctly |
 | Mixing signal and power casually | Noise, safety, creepage, heating, service confusion |
 | Bad shielding (pigtail) termination | Pigtails are inductive — raise impedance, radiate |
@@ -32,11 +32,11 @@ Most connector failures aren't exotic. They're ordinary decisions that looked ha
 | No torque spec | Sealing and anti-vibration features compromised |
 | Confusing IP67 with IP68 | IP67 ≈ 1 m / 30 min; IP68 = stated depth/duration — not interchangeable |
 | Undersized wire in wire seal | Cavity leaks; whole connector seal defeated |
-| Two wires doubled into a one-wire crimp barrel | Unqualified fill never forms the gas-tight joint; one wire loose, wire seal defeated — use a splice or a dual-wire-rated terminal ([crimping](hobby/crimping.md)) |
+| Two wires doubled into a one-wire crimp barrel | Unqualified fill has unverified compression, retention, and sealing; one conductor may be loose — use a splice or a dual-wire-rated terminal ([crimping](hobby/crimping.md)) |
 | No ground-first mating sequence where needed | Power-before-ground → latch-up, ground bounce, resets |
 | Substituting "equivalent" parts without qualification | Plating/insert/thread/geometry can differ; not drop-in |
-| Gold contacts mated to tin contacts | The mixed interface fretts and builds tin oxide on the gold half — one plating class per mated pair ([low-level deep dive](low-level-signal-contacts.md)) |
-| mV/µA signals on tin or power-class contacts | Dry circuits can't break down surface films; intermittent, drifting resistance ([low-level deep dive](low-level-signal-contacts.md)) |
+| Gold contacts mated to tin contacts | The mixed interface frets and builds tin oxide on the gold half — one plating class per mated pair ([low-level deep dive](low-level-signal-contacts.md)) |
+| Low-level signals without contact-performance evidence | Power ratings alone do not establish low-level reliability; verify the exact interface after relevant exposures ([low-level deep dive](low-level-signal-contacts.md)) |
 | No PCN/EOL monitoring on a released design | Notices go to customers of record; you learn about discontinuance from a failed order ([lifecycle](lifecycle-and-procurement.md)) |
 | Broker purchase without traceability verification | Counterfeit exposure concentrates in scarce/obsolete parts ([lifecycle](lifecycle-and-procurement.md)) |
 | Mixing manufacturers in one mated pair unverified | Outside QPL-class families, no drawing arbitrates the mate ([lifecycle](lifecycle-and-procurement.md)) |

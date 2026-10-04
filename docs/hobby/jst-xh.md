@@ -45,7 +45,7 @@ XH's most famous job is the LiPo **balance lead**, and the convention is worth w
 
 - **Pin count = cell count + 1.** A 3S pack has a 4-position plug, a 4S pack a 5-position plug, and chargers ship 2S–6S XH balance boards on exactly that pattern.
 - **One end is pack negative; the rest are ascending cell taps** — B−, cell 1, cell 2, … up to pack positive at the far end, so the charger can read every cell across adjacent pins.
-- **It's a convention, not a spec.** Before a pack's first charge — and before trusting any adapter or extension — verify the tap order with a meter against the charger's documentation. A miswired balance lead puts full-cell voltages across the wrong charger inputs, and lithium chemistry grades that mistake harshly.
+- **It's a convention, not a spec.** Before a pack's first charge — and before trusting any adapter or extension — verify the tap order with a suitably rated meter in voltage mode against the charger's documentation. Use insulated probe tips with minimal exposed metal so a slip cannot bridge adjacent live taps; never use continuity/resistance mode on the pack. A miswired balance lead puts full-cell voltages across the wrong charger inputs, and lithium chemistry grades that mistake harshly.
 
 Balance taps carry *balancing* currents; the pack's main current stays on a [real power connector](xt-connectors.md). And the fact that the plug is "just an XH" is exactly why [buying genuine parts](buying-mating-parts.md) matters here — the one connector in the hobby that routinely touches every cell of a lithium pack is a bad place for a mystery-metal clone.
 

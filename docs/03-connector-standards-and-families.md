@@ -65,7 +65,7 @@ Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cos
 
 | Family | Typical sealing | Typical current / contact | Notes |
 |---|---|---|---|
-| [Deutsch DTM / DT / DTP](deutsch.md) | IP68[^deutsch] | ~7.5 A (DTM, size 20) / ~13 A (DT, size 16) / ~25 A (DTP, size 12)[^deutsch] | Genderless wedgelock housings; ubiquitous in off-road/automotive; hand-crimpable |
+| [Deutsch DTM / DT / DTP](deutsch.md) | IP68[^deutsch] | ~7.5 A (DTM, size 20) / ~13 A (DT, size 16) / ~25 A (DTP, size 12)[^deutsch] | Distinct plug and receptacle housings with wedgelocks; ubiquitous in off-road/automotive; hand-crimpable |
 | TE AMP Superseal 1.5 / AMPSEAL | IP67[^superseal] | ~14 A (Superseal 1.5)[^superseal] | Compact sealed inline; AMPSEAL for higher pin counts |
 | Molex MX150 / MX150L | IP67[^mx150] | up to ~30–40 A (MX150L, 8–12 AWG)[^mx150] | Sealed signal-to-power; industrial/automotive |
 | Aptiv (Delphi) Metri-Pack | Sealed & unsealed variants[^metripack] | 150 / 280 / 480 / 630 / 800 series — a few A up to tens of A by series (verify)[^metripack] | Long-standing automotive terminal system |

@@ -26,7 +26,7 @@ Qualification attaches to a **documented configuration**, not a family name. "38
 | Contact P/Ns, **plating + thickness** | TBD |
 | Wire types, gauges, insulation ODs | TBD |
 | Wire seals / sealing plugs / interfacial seals | TBD |
-| Backshell P/N + shield termination method | TBD |
+| Required rear hardware P/Ns or integral/not applicable; strain relief and shield termination method | TBD |
 | Crimp tool / positioner / die (+ calibration basis) | TBD |
 | Torque values + procedure reference | TBD |
 | Assembly instruction / application spec + rev | TBD |
@@ -56,6 +56,10 @@ Where the family already carries qualification — a [QPL/QPD-listed](../glossar
 Test order changes results: durability cycles before a sealing test ages the seal the way service will; vibration before contact-resistance measurement is a different question from vibration after. Governing specifications define qualification **sequences and sample groups** for exactly this reason. Take the sequence from the governing document and record which one — don't improvise an order, and don't let this template's row order below be mistaken for one.
 
 :::
+
+### Preserve the failure evidence
+
+The approved sequence must state when LLCR is measured relative to remating, cleaning, higher-energy continuity/resistance tests, and other conditioning. These actions can alter films or remove debris and hide the failure being investigated. Where low-level degradation is being assessed, preserve the as-exposed interface and obtain LLCR before potentially conditioning it, **as the governing method and approved sequence require**. Record any unavoidable disturbance; do not silently reset the sample. No universal “IR first” order is implied.
 
 ## 4. First article
 
@@ -87,6 +91,19 @@ One row per requested proof. **Common method family** names the EIA-364-series p
 | Vibration | The mated pair survives the environment **while working** — monitored for discontinuities *during* exposure, not just inspected after | EIA-364-28, with discontinuity monitoring (EIA-364-46 class) | Profile source, fixturing, monitoring setup, any discontinuity events |
 | Sealing | The mated (and, if claimed, capped-unmated) assembly meets its ingress claim | IP verification per IEC 60529 ([A1](../appendix/quick-reference-tables.md)); program immersion/pressure requirements | Condition tested (mated/capped), depth/duration source, post-test IR |
 | Durability (mating cycles) | The contact system survives its service-life cycles — then **re-passes** the electrical rows above | EIA-364-09, followed by re-measurement | Cycle count source, lubrication state, post-cycle LLCR/IR/DWV |
+
+### Exposure coverage decision
+
+Document applicability rather than assuming the example rows are complete. For each exposure below, cite a requirement and include it in an approved group, accept existing applicable evidence, or record a justified exclusion with an owner.
+
+| Exposure / duty | Requirement or exclusion rationale | Configuration, method, and evidence |
+|---|---|---|
+| Thermal cycling / shock | TBD | TBD |
+| Humidity / condensation | TBD | TBD |
+| Fluids, salt, corrosion, and contaminants | TBD | TBD |
+| Mechanical shock | TBD | TBD |
+| Cable flex, torsion, and strain-relief loading | TBD | TBD |
+| Other application-specific exposure or energized duty | TBD | TBD |
 
 ## 6. Evidence capture
 

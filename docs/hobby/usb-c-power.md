@@ -26,11 +26,11 @@ The practical consequence: **you cannot judge a USB-C power chain by its jack.**
 
 ![Line diagram of the USB-C power story: the sink's two 5.1 kΩ CC resistors to ground, the source's Rp advertisement levels, and the PD voltage ladder from 5 V through the EPR rungs](/img/diagrams/hobby-usbc-power.svg)
 
-*The whole page in one card: the board asks (one 5.1 kΩ per CC pin), the source advertises (Rp sets the 5 V current), and everything above 5 V is negotiated — with the cable as a rated participant.*
+*The whole page in one card: the illustrated simple sink receptacle presents separate Rd on each CC pin, the source advertises (Rp sets the 5 V current), and everything above 5 V is negotiated — with the cable as a rated participant.*
 
-## 2. The 5.1 kΩ rule — the two resistors every board must have
+## 2. The 5.1 kΩ rule — a simple sink receptacle
 
-For a device to receive power from a compliant C-to-C source, it must present a pull-down resistor — **Rd, 5.1 kΩ, on CC1 and CC2, one resistor per pin** — so the source can detect that a device (and which cable orientation) is attached.[^usbcc] No Rd, no detection; no detection, **no volts**. The symptom is unmistakable: the board runs from a phone charger's A-to-C cable but reads 0 V on a C-to-C cable from a modern supply.
+For a simple sink-only device with a Type-C receptacle to receive power from a compliant C-to-C source, it presents **separate Rd terminations on CC1 and CC2**, commonly two 5.1 kΩ resistors — so the source can detect that a device (and which cable orientation) is attached.[^usbcc] A controller may provide Rd internally: follow its reference design rather than adding duplicate pull-downs. Source ports, dual-role ports, and captive-cable/plug implementations have different termination rules. In this sink-receptacle case, no valid Rd means no attachment detection and no VBUS. The symptom is unmistakable: the board runs from a phone charger's A-to-C cable but reads 0 V on a C-to-C cable from a modern supply.
 
 Why *two* separate resistors: the connector is reversible, a standard cable connects only one CC wire through, and an **e-marked cable** (§4) terminates the second CC pin itself. A single resistor shared between both pins reads wrong the moment an e-marked cable is involved — which is exactly the bug that shipped on a very famous board:
 
@@ -41,6 +41,16 @@ The original Raspberry Pi 4 shared **one** 5.1 kΩ resistor between CC1 and CC2 
 :::
 
 For your own designs and the breakout boards you buy: check for the pair of 5.1 kΩ resistors (or a proper PD controller) before blaming the supply. Marketplace "USB-C power breakout" listings that are just a bare jack on pads — no resistors — will never take power from a C-to-C cable.
+
+### Match the implementation to the role
+
+| Port / supply mode | What to verify |
+|---|---|
+| Simple sink-only Type-C receptacle, 5 V | Separate Rd on CC1 and CC2; source-advertised current and load limit |
+| Controller-managed sink receptacle | Controller's internal/external Rd requirements and reference design; no duplicate pull-downs |
+| Source or dual-role port | Role-specific Rp/Rd behavior and controller state machine; the passive sink sketch is not its circuit |
+| Captive cable or Type-C plug implementation | The applicable cable/plug CC and VCONN wiring; do not copy a receptacle circuit blindly |
+| PD sink/trigger, fixed or programmable voltage | Source capabilities, supported request mode, successful contract, cable rating, and fallback behavior |
 
 ## 3. What the source advertises — and why "USB-C" doesn't mean 3 A
 
@@ -54,7 +64,7 @@ USB Power Delivery is a digital negotiation over the CC wire. The fixed voltage 
 
 - **Unattached is safe-zero; attached begins at 5 V.** A compliant Type-C source does not drive VBUS while unattached. After it detects Rd and enters the attached-source state, it supplies the default 5 V class; voltages above 5 V appear only after a successful PD contract.[^usbattach] If a project needs 12 V from USB-C, something must *ask* — a PD controller IC or a trigger module.
 - **Above 3 A, the cable is an active participant.** Currents past 3 A (and every EPR level) require an **e-marked cable** — one with an identity chip declaring its rating; EPR additionally requires an EPR-rated cable.[^usbpd] A "100 W" listing claim on a cable with no e-marker is fiction.
-- **9 V/12 V "just works" stories are usually proprietary.** Phone fast-charge schemes predating or bypassing PD exist; don't design a project around one charger's behavior — design around the PD rungs and verify with a meter.
+- **9 V is a standard PD fixed voltage; 12 V needs a capability check.** A source may offer an optional 12 V fixed supply or a suitable programmable range, but neither is guaranteed. Proprietary fast-charge schemes also exist. Confirm the source's offered capabilities and the sink/trigger's supported mode, then verify the contract and output.[^pdoptional]
 
 **PD trigger/decoy modules** (marketplace boards that request a fixed rung and hand you screw terminals) are genuinely useful project parts — with the standard [marketplace skepticism](connector-kits.md): verify the requested voltage with a meter before connecting a load, and check what the module does when the charger *can't* supply the requested rung (falling back to 5 V is common and can brown out or back-feed a load expecting 20 V).
 
@@ -68,7 +78,7 @@ The electrical story gets the attention, but hobby USB-C failures are just as of
 
 ## 6. The rules that never change
 
-- **Two 5.1 kΩ resistors** (or a PD controller) on every powered board — no exceptions, no sharing.
+- **Correct CC terminations for the port role.** A simple sink receptacle needs separate Rd on CC1 and CC2, externally or in its controller; do not share one resistor or duplicate internal terminations.
 - **Meter first.** Verify what a supply advertises and what a trigger module actually latched before the load finds out.
 - **The cable is a rated component** — 3 A basic vs 5 A e-marked vs EPR — not an accessory.
 - **Don't out-draw the advertisement**, even when it seems to work.
@@ -90,3 +100,5 @@ The CC/Rd/Rp mechanism (5.1 kΩ per CC pin; source advertisement levels) is cite
 [^usbcyc]: USB-IF, *USB Type-C Cable and Connector Specification* — 10,000-cycle connector durability (minimum); the same figure cited in [§12.4](../12-consumer-hobby-prototype-connectors.md). Durability is a mating-cycle figure only — not sealing, vibration, or ruggedness. <https://www.usb.org/document-library/usb-type-cr-cable-and-connector-specification-release-25>
 
 [^rpi4]: Raspberry Pi 4 USB-C case study (engineering-press coverage, labeled as such; the technical analysis originated with engineer Tyler Ward and was confirmed by Raspberry Pi co-creator Eben Upton): Hackaday, *Exploring the Raspberry Pi 4 USB-C Issue In-Depth* — one 5.1 kΩ resistor shared between CC1/CC2 instead of one per pin; e-marked cables read the port as an audio adapter accessory and withhold power. <https://hackaday.com/2019/07/16/exploring-the-raspberry-pi-4-usb-c-issue-in-depth/>; The Register — the flaw was corrected in a subsequent board revision. <https://www.theregister.com/2020/02/21/pi_4_fixed/>
+
+[^pdoptional]: Renesas, *USB Power Delivery: The Technology — USB PD Power*, distinguishes standard fixed-voltage rules, optional fixed outputs, and programmable supplies. A requested 12 V requires compatible advertised source capabilities and sink support. <https://www.renesas.com/en/support/engineer-school/usb-power-delivery-02>

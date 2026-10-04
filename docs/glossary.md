@@ -14,9 +14,9 @@ Here are the connector terms both the [Hobby](hobby/index.md) and [Professional 
 
 **AS39029** — the SAE specification (formerly M39029) for the removable crimp contacts used in MIL-DTL-38999 and related mil circulars. See [Contact sizes and current](07-mil-dtl-38999.md).
 
-**Authorized / franchised distributor** — a distributor selling under agreement with the manufacturer: factory traceability, manufacturer warranty, and PCN/EOL notices flow. The default channel for released hardware. See [Lifecycle & Procurement](lifecycle-and-procurement.md).
+**Authorized / franchised distributor** — a distributor selling under agreement with the manufacturer: confirm the order's provenance records, warranty terms, and PCN/EOL subscription arrangements rather than assuming all are automatic. The default channel for released hardware. See [Lifecycle & Procurement](lifecycle-and-procurement.md).
 
-**Backshell** — the rear accessory that provides strain relief, shield termination, sealing, and cable exit angle. Not optional. See [Connector Anatomy](05-connector-anatomy.md).
+**Backshell** — a rear accessory that may provide strain relief, shield termination, environmental protection, or cable-exit control. Its functions depend on the assembly; some connectors have integral rear wire seals or molded strain relief. Specify the required functions, not a universal accessory rule. See [Connector Anatomy](05-connector-anatomy.md).
 
 **Blind mate** — mating a connector the operator can't see; needs lead-in, float, and pin-length stagger. See [Mating sequence and blind mate](05-connector-anatomy.md).
 
@@ -38,7 +38,7 @@ Here are the connector terms both the [Hobby](hobby/index.md) and [Professional 
 
 **Contact size** — the numbered physical contact size (22D, 20, 16, 12, 8…); smaller number = larger contact = more current and larger wire. See [Contact sizes and current](07-mil-dtl-38999.md).
 
-**COTS** — commercial off-the-shelf; purchasable as a standard catalog item rather than qualified/QPL hardware. See [Production reality](04-connector-selection-workflow.md).
+**COTS** — commercial off-the-shelf; available as a standard catalog product. Catalog availability and military qualification are separate attributes: a catalog item can also be QPL-qualified. See [Production reality](04-connector-selection-workflow.md).
 
 **Creepage / clearance** — creepage is the shortest path along a surface between two conductors; clearance is the shortest through-air gap. Both drive voltage rating. See [Electrical requirements](04-connector-selection-workflow.md).
 
@@ -46,11 +46,11 @@ Here are the connector terms both the [Hobby](hobby/index.md) and [Professional 
 
 **Current rating** — a screening number tied to test conditions, never universal permission: the real limit depends on the exact contact, wire gauge, loaded positions, ambient temperature, and allowable temperature rise. See the derating-curve entry, [Power vs Signal](hobby/power-vs-signal.md), and [Selection Workflow §2](04-connector-selection-workflow.md).
 
-**Derating curve** — the manufacturer plot of allowable current vs. loaded-contact count and temperature; the number you actually design to. See [How to read a derating curve](04-connector-selection-workflow.md).
+**Derating curve** — manufacturer data giving permissible current under stated thermal, wire, and loading conditions. Axes vary; current versus ambient temperature is common, with loaded-contact count or pattern as a curve parameter. Read the legend and conditions before applying it. See [Selection Workflow](04-connector-selection-workflow.md).
 
-**Dry circuit** — a circuit whose voltage and current are too low to break down the films that grow on contact surfaces, so the contact must be reliable without electrical help — noble (gold-class) plating, adequate force, and wipe. Most measurement and low-voltage signal lines qualify. See [Low-Level Signal Contacts](low-level-signal-contacts.md).
+**Dry circuit** — a circuit whose electrical stress does not appreciably alter contact surface films. Reliability depends on the complete contact system; stable tin contacts can serve dry circuits, and gold alone is not a guarantee. LLCR test limits are measurement conditions, not a universal application classification. See [Low-Level Signal Contacts](low-level-signal-contacts.md).
 
-**Dust cap** — the cover that protects an unmated connector from dirt, water, and pin damage; belongs on the BOM. See [Connector Anatomy](05-connector-anatomy.md).
+**Dust cap** — an unmated-contact cover for contamination or damage protection. Water sealing requires a cap and connector assembly with the appropriate documented rating; a dust cover alone does not establish it. See [Connector Anatomy](05-connector-anatomy.md).
 
 **DWV / hi-pot** — dielectric withstanding voltage; the survivable overvoltage test, *not* the continuous working voltage. See [Reading Datasheets](06-reading-datasheets.md) and the [Qualification Plan Template](tools/connector-qualification-template.md).
 
@@ -68,7 +68,7 @@ Here are the connector terms both the [Hobby](hobby/index.md) and [Professional 
 
 **HCP / RADSOK** — high-current power contact technologies (RADSOK = Amphenol's hyperboloid contact) for loads standard contacts can't carry. See [Quick-Reference A3](appendix/quick-reference-tables.md).
 
-**Hermetic** — a gas-tight connector (often glass-sealed, solder-terminated) for pressure boundaries; distinct from merely IP-rated. See [Solder-cup quality](05-connector-anatomy.md).
+**Hermetic** — a gas-leak-tight feedthrough specified and tested to a leak-rate requirement, commonly using glass-to-metal or ceramic-to-metal seals. Solder cups are a termination option; the wire solder joint is not the hermetic barrier. Hermeticity, IP ingress protection, and pressure rating are different requirements. See [Connector Anatomy](05-connector-anatomy.md).
 
 **Housing** — the insulating body that holds the contacts. In most families it is ordered *separately* from the contacts, and its gender is independent of theirs. See [Buying the Right Mating Parts](hobby/buying-mating-parts.md).
 
@@ -86,7 +86,7 @@ Here are the connector terms both the [Hobby](hobby/index.md) and [Professional 
 
 **IP rating** — ingress-protection code (IEC 60529); applies to the tested, correctly-mated assembly, not automatically the system. See [Quick-Reference A1](appendix/quick-reference-tables.md).
 
-**IP69K** — the high-pressure/high-temperature washdown rating from ISO 20653 (not IEC 60529, which has the IPx9 equivalent). See [Quick-Reference A1](appendix/quick-reference-tables.md).
+**IP69 / IPX9 / IP6K9K** — record the exact code and standard. IEC 60529 IP69 includes dust protection 6 and water protection 9; IPX9 makes no solid-ingress claim. ISO 20653 uses K-coded classes, including IP6K9K. “IP69K” shorthand must not obscure the stated test basis. Jet resistance does not by itself establish immersion resistance. See [Quick-Reference A1](appendix/quick-reference-tables.md).
 
 **Jam nut / flange mount** — the two panel-mount styles: single rear nut (compact, can rotate) vs. perimeter bolts (rigid, better gasket control). See [Jam nut vs. flange](05-connector-anatomy.md).
 
@@ -154,15 +154,15 @@ Here are the connector terms both the [Hobby](hobby/index.md) and [Professional 
 
 **Temperature rise** — the heating above ambient a contact system is allowed at its rated current; the hidden variable behind every current rating and derating curve. See [How to read a derating curve](04-connector-selection-workflow.md).
 
-**TPA** — Terminal Position Assurance; a secondary lock confirming every contact is fully seated before the connector can mate. See [Major Connector Categories](02-major-connector-categories.md).
+**TPA** — Terminal Position Assurance; a secondary feature intended to confirm seating and/or reinforce contact retention. Whether it blocks mating when incomplete is product-specific. See [Major Connector Categories](02-major-connector-categories.md).
 
-**Traceability / CoC** — the documented chain from factory to your dock (certificates of conformance, lot records) that authorized distribution provides by default and broker purchases must prove per lot. See [Lifecycle & Procurement](lifecycle-and-procurement.md).
+**Traceability / CoC** — the documented chain from factory to your dock (certificates of conformance, lot records) required by the procurement specification. Confirm which records the authorized channel supplies; independent purchases need a documented lot-specific provenance assessment. See [Lifecycle & Procurement](lifecycle-and-procurement.md).
 
 **Voltage rating** — a class figure tied to insulation, spacing, and test conditions; working voltage and withstand voltage (DWV) differ, and AC/DC/altitude assumptions matter. Verify the datasheet. See [Reading Datasheets](06-reading-datasheets.md).
 
-**Wedgelock** — the separate wedge (orange on gray DEUTSCH DT plugs, green on receptacles) that locks contacts into their cavities as the secondary retention; a DT-family connector without it has no retention system. Usually a separate line item. See [DEUTSCH Deep Dive](deutsch.md).
+**Wedgelock** — a separate secondary contact-retention part used on DT/DTM/DTP housings. Primary locking fingers still retain contacts without it, but the specified assembly is incomplete and must not be released without the required wedge. See [DEUTSCH Deep Dive](deutsch.md).
 
-**Wetting current** — the relay/switch-world concept of the minimum load a film-forming contact needs to stay reliable; below it, tin-class contacts drift intermittent. Gold-class contacts effectively have none in clean service — the reason they own dry-circuit duty. See [Low-Level Signal Contacts](low-level-signal-contacts.md).
+**Wetting current** — a term used for the load needed by some contact systems to achieve reliable operation under specified conditions, especially switching contacts. Do not infer a universal minimum current for separable tin connectors: tin can serve dry circuits when fretting is controlled. Apply only the exact product's guidance. See [Low-Level Signal Contacts](low-level-signal-contacts.md).
 
 **Wire gauge (AWG / mm²)** — conductor size. Every contact supports a defined gauge range, and both the electrical load and the crimp quality depend on staying inside it. See [Crimping](hobby/crimping.md).
 

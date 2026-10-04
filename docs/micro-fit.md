@@ -40,7 +40,7 @@ Micro-Fit sits in the middle of a family ladder, the ladder's members look alike
 |---|---|---|---|
 | **Nano-Fit** | 2.5 mm | up to ~8 A class[^fitladder] | The small one — Micro-Fit's lighter, newer sibling |
 | **Micro-Fit 3.0** | 3.00 mm | ≤ 8.5 A, terminal-dependent (10.0 A RMF terminal offered)[^microfit] | This page |
-| **Mini-Fit Jr.** | 4.2 mm | up to ~13 A class, terminal-dependent[^fitladder] | **The ATX connector** — the 24-pin on every desktop PSU is a Mini-Fit Jr.[^atx] |
+| **Mini-Fit Jr.** | 4.2 mm | up to ~13 A class, terminal-dependent[^fitladder] | **Common ATX main-power interface** — standard 24-pin ATX connectors use the Mini-Fit Jr. interface class; proprietary desktop and modular PSU-side connections vary[^atx] |
 | **Mega-Fit** | 5.7 mm | up to ~23 A per circuit[^fitladder] | The big one — heavy internal power |
 
 Two practical consequences. First, the marketplace sells "Molex connector" the way it sells "JST connector" — as a vibe, not a series — so an eyeballed 4.2 mm housing bought for a 3.0 mm header is a routine failure ([the kit decoder](hobby/connector-kits.md) applies in full). Second, the ATX row cuts the other way: if you've ever de-pinned a PC power supply, you already own the skills — same latch logic, same crimp anatomy, one size down.
@@ -81,7 +81,7 @@ Design consequences worth writing down:
 
 **Belongs:** internal, protected, latching power and signal harnessing — the [internal PCB harnessing path](decision-paths/internal-pcb-harnessing.md) is its decision home, [§9's internal-harness scenario](09-decision-examples.md) its worked context, and the [§12 upgrade table](12-consumer-hobby-prototype-connectors.md) its hobby on-ramp.
 
-**Doesn't:** anything sealed, external, or vibration-exposed without an enclosure doing the protecting. Micro-Fit has no wire seals, no interfacial seal, and no environmental story[^microfit] — the moment the interface leaves the box, the answer changes family: [sealed automotive](deutsch.md) (a DEUTSCH DTM is nearly the same size class, sealed), the [budget path](decision-paths/rugged-on-a-budget.md), or a [rugged circular](07-mil-dtl-38999.md) as consequence rises. The [hobby boundary page](hobby/when-hobby-is-not-enough.md) and [§12](12-consumer-hobby-prototype-connectors.md) draw the same line from the other side.
+**Needs another solution:** an exposed interface requiring sealing that the selected Micro-Fit assembly does not provide. An enclosure may provide ingress protection, but it does not eliminate vibration: verify the exact connector's vibration qualification, cable restraint, and mounting against the application. For exposed sealed wiring, compare [DEUTSCH](deutsch.md), the [budget path](decision-paths/rugged-on-a-budget.md), or a [rugged circular](07-mil-dtl-38999.md).
 
 ## The mistakes that actually happen
 

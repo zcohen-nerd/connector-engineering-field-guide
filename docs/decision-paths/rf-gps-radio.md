@@ -30,10 +30,10 @@ If the frequency, power, or environment is high enough to be risky — precision
 
 ## Families to start with
 
-- **SMA** — small threaded workhorse for many antenna/GPS/board-edge RF lines. *(Watch for **RP-SMA**, a reverse-polarity variant common on consumer Wi-Fi gear — it does not mate with standard SMA. Confirm which one you have.)*
+- **SMA** — small threaded workhorse for many antenna/GPS/board-edge RF lines. *(Watch for **RP-SMA**, a reverse-polarity variant common on consumer Wi-Fi gear — the shell threads can engage with standard SMA while the center contacts are incompatible: two sockets leave an open circuit, or two pins can collide. Check shell gender and center-contact gender separately; never force the pair.)*
 - **TNC** — a threaded, more vibration-tolerant cousin of the BNC.
 - **N-type** — larger, rugged, weatherproof-capable; common on radios and base-station/antenna lines.
-- **BNC** — quick bayonet; common for test, video, and legacy RF. Exists in **both 50 Ω and 75 Ω** variants that look alike but are not interchangeable.
+- **BNC** — quick bayonet; common for test, video, and legacy RF. Exists in **both 50 Ω and 75 Ω** variants. Many physically intermate, but mixing them introduces an impedance discontinuity; verify the exact parts and the system impedance.
 - **MCX / MMCX** — snap-on miniatures for tight spaces (e.g. GPS modules).
 - **U.FL / IPEX-style (MHF-class)** — the tiny snap-on board micro-coax on dev boards, GPS/LoRa/Wi-Fi modules, and drone gear (50 Ω, GHz-class, ultra-fine ~0.8 mm cable). These are board-assembly parts, not service ports: removal wants the extraction tool, and mating-cycle ratings are low — check the spec before planning repeated disconnects, and bring the signal to a panel via a U.FL-to-SMA bulkhead pigtail instead of cycling the board connector. Naming chaos alert: "U.FL" is Hirose's genuine series, while "IPEX"/"IPX"/"MHF" listings may or may not be the same geometry and generation — verify the mate.
 - **SMP / SMPM** — board-to-board / blind-mate miniatures for dense, high-frequency assemblies.

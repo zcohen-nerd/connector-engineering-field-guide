@@ -77,7 +77,7 @@ A full fiber deep-dive is **out of scope for v1** of this guide; treat this as a
 
 The category table lists RF/coax for completeness; like fiber, RF connectors are their own discipline, and this guide keeps them at orientation level:
 
-- **Impedance is a system property:** the connector, cable, and terminations form a controlled-impedance line — 50 Ω dominates RF/microwave, GPS, and comms; 75 Ω dominates video/broadcast. The two don't mix, and visually similar connectors (BNC exists in both) are not interchangeable.
+- **Impedance is a system property:** the connector, cable, and terminations form a controlled-impedance line — 50 Ω dominates RF/microwave, GPS, and comms; 75 Ω dominates video/broadcast. A 50 Ω/75 Ω mismatch degrades impedance continuity. Many standard 50 Ω and 75 Ω BNC variants physically intermate, but that does not make the assembled transmission line electrically matched; verify the exact interfaces.
 - **Families have frequency ceilings:** as a rough ordering, SMA-class connectors reach higher frequencies than N/TNC, which reach higher than BNC — but the exact ceiling is a datasheet parameter for the specific connector and cable, not a family constant.
 - **Mating torque is a specification, not a feel:** threaded RF interfaces (SMA and kin) specify a mating torque — use the torque wrench; over- or under-torquing degrades the match and damages mating interfaces.
 - **Protect high-cycle test ports:** use a sacrificial adapter (a "connector saver") on ports that see many mate cycles, so the wear lands on the cheap replaceable part.

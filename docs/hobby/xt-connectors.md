@@ -59,7 +59,7 @@ XT-class connectors are useful for hobby DC power, but they are not automaticall
 - **Sizing by digits.** "60 means 60 A continuous" is exactly wrong — per AMASS, 60 is the *momentary* figure and 30 A is the continuous rating.[^amasscat] Size from the calculation and the table above (genuine parts) or your actual part's documentation.
 - **Undersized wire.** The temperature-rise data above shows the wire gauge changing the thermal outcome threefold at identical current.[^xt60e]
 - **Clone roulette** — a loose clone-to-genuine mate heats at exactly the moment of max current, and the AMASS figures don't transfer.
-- **Unplugging under load** — battery DC arcs; plan a switch/de-energize step, and consider the XT90S anti-spark variant for high-capacity packs (verify the exact part's provision).
+- **Unplugging under load** — battery DC arcs; plan a switch/de-energize step. An XT90S-type anti-spark/precharge feature limits connection inrush under its specified conditions; it does not authorize disconnecting load current or establish a load-break rating.
 - **No fuse.** A battery can deliver enormous fault current; fuse near the source ([power vs signal](power-vs-signal.md)).
 - **Exposed energized contacts** on the live half — male pins on the battery side are a short circuit waiting for a wrench.
 

@@ -23,7 +23,7 @@ Use this path when you need a lot of reliable contacts in very little space and 
 ## Avoid this when
 
 - The connector will be **mated/demated in dirty, wet, or field-service conditions** — Micro-D is an internal/protected family, not a dirty field-service one ([§3](../03-connector-standards-and-families.md)).
-- You need **real current** — per-contact capability in this class is low; go to a larger family or dedicated power contacts ([high-current DC path](high-current-dc-power.md)).
+- The required **current exceeds the exact assembly's derated capability** — go to larger contacts or a dedicated power path ([high-current DC path](high-current-dc-power.md)). Low-power circuits can be suitable within verified limits.
 - A cheaper, bigger connector would do — the density buys cost, delicacy, and assembly complexity you shouldn't pay for without a reason.
 
 ## Families to start with
@@ -63,7 +63,7 @@ See [What People Forget](../what-people-forget.md).
 ## Common traps
 
 - Treating Micro-D as a rugged *external* connector because it is "mil-spec" — the spec covers a compact high-reliability family, not dirty field service ([§3](../03-connector-standards-and-families.md)).
-- Running **power** through a density-optimized signal connector.
+- Assigning power without checking per-contact current, temperature, wire, voltage drop, and fault duty.
 - Ignoring **assembly complexity** until production — delicate, fine-pitch hardware punishes improvised processes.
 - Choosing it where a standard D-sub or a small rectangular family would do the job for less.
 

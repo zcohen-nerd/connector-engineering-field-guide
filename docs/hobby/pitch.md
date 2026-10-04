@@ -33,7 +33,7 @@ Example: for a 4-position connector, measure center-to-center from contact 1 to 
 Practical tips:
 
 - Measure the **contacts or cavities**, not the housing edges.
-- On a header, measuring **pin 1 outside-edge to pin N outside-edge** also works: that equals the center-to-center distance because the pin widths cancel (half a pin on each end).
+- On equal-width pins, measure corresponding edges (left edge to left edge, or right to right). Their widths cancel. If you measure the two **outermost** edges instead, subtract one pin width before dividing: **pitch = (outside span − pin width) / (N − 1)**. For four 0.64 mm-wide pins at 2.54 mm pitch, the outside span is 8.26 mm, so (8.26 − 0.64) / 3 = 2.54 mm.
 - If you can't get calipers on the mating face, measure the solder tails on the board side.
 - Cross-check the *total* row length against the candidate family's drawing — drawings dimension exactly this.
 

@@ -65,7 +65,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 ## Servo connectors
 
 - **Marketplace names:** servo plug, JR/Futaba-style, 3-pin Dupont.
-- **What it is:** servo leads are three-conductor signal / power / ground harnesses in 0.1-inch-class housings with one de-facto pin order — **positive always on the center pin** — while keying tabs and wire colors vary by vendor. Center-positive prevents a direct +/− swap under reversal, but a backwards plug still swaps signal and ground and can damage the servo or controller. Verify the order at both ends against documentation before powering: vintage-Airtronics leads and miswired no-name leads add still more polarity risk.
+- **What it is:** servo leads are three-conductor signal / power / ground harnesses in 0.1-inch-class housings with a common modern convention — **positive on the center pin** — while keying tabs and wire colors vary by vendor. Center-positive prevents a direct +/− swap under reversal, but a backwards plug still swaps signal and ground and can damage the servo or controller. Verify the order at both ends against documentation before powering: vintage-Airtronics leads and miswired no-name leads add still more polarity risk.
 - **Watch for:** friction fit only — vibration protection is on you; check the servo's stall current against the lead and wire gauge, not just "it's a servo plug."
 - **Full page:** [Servo Connectors](servo-connectors.md) — the center-positive pin order, JR vs Futaba housings, the old-Airtronics trap, and the stall-current math.
 

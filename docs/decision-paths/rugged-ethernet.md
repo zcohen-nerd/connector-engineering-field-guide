@@ -46,6 +46,8 @@ See the [M12 deep dive](../08-m12.md) for the D-coded vs. X-coded distinction.
 - **Sealing** of the complete mated assembly, and **latch protection**.
 - The overall **connector/cable-assembly rating**, not just the connector in isolation.
 
+If PoE is used, also verify device roles, power class, pair/current requirements, cable heating/bundling, and connector suitability for the required energized service. A data-rate rating alone does not qualify a PoE power path; use the equipment and exact connector/cable documentation.
+
 ## Parts people forget
 
 - **Shielded cable** matched to the connector, and the **shell/shield bond**.

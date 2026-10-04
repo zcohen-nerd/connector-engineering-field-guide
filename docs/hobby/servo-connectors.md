@@ -16,7 +16,7 @@ The three-pin servo lead may be the most-manufactured connector interface in hob
 
 ## 1. The system: three pins, 0.1-inch pitch, one partial safeguard
 
-A servo lead is a 3-position, 0.1-inch (2.54 mm) pitch, single-row crimp housing: three sockets that slide over standard square posts — receiver pin banks, flight-controller rails, bare headers. Friction fit, no latch. The order is **signal / positive / negative, with positive always on the center pin**, and the color convention follows one rule: **red is the center positive, the darkest wire is negative, and the lightest wire is signal**.[^svorder]
+A servo lead is a 3-position, 0.1-inch (2.54 mm) pitch, single-row crimp housing: three sockets that slide over standard square posts — receiver pin banks, flight-controller rails, bare headers. Friction fit, no latch. The order is **signal / positive / negative, with positive on the center pin in the common modern convention**, and the color convention follows one rule: **red is the center positive, the darkest wire is negative, and the lightest wire is signal**.[^svorder]
 
 | Ecosystem | − (outer) | + (center) | Signal (outer) | Housing style |
 |---|---|---|---|---|
@@ -39,9 +39,9 @@ In modern production the two are electrically identical with the same pin order.
 
 Marketplace decoder: "servo plug," "S connector," "JR-style," "Futaba-style," "universal," and "3-pin Dupont" all point at this same interface — with all the [listing-title skepticism](bad-listing-examples.md) that implies.
 
-![Line diagram of the servo connector system: face view showing signal/positive/negative pin order with center positive, universal-JR vs Futaba J housing profiles with the index tab, and a bare 0.1-inch header row showing a correct and an off-by-one plug position](/img/diagrams/hobby-servo-connector.svg)
+![Line diagram of the servo connector system: face view showing the common center-positive convention and a reversal-damage warning, universal-JR vs Futaba J housing profiles with the index tab, and a bare 0.1-inch header row showing a correct and an off-by-one plug position](/img/diagrams/hobby-servo-connector.svg)
 
-*The system in one card: + holds the center under reversal, but signal and ground still swap; the J housing is a universal plus a tab — and a bare header row will happily accept a shifted or reversed plug.*
+*The common convention in one card: + holds the center under reversal, but signal and ground still swap and damage is possible; the J housing is a universal plus a tab — and a bare header row will happily accept a shifted or reversed plug.*
 
 ## 3. The ghost in the drawer: old Airtronics
 

@@ -46,12 +46,16 @@ Use these in week-end conversations; they're diagnostic, not gotcha:
 - "Who crimps this, with what tool, inspected to what standard?" ([§4 production reality](04-connector-selection-workflow.md))
 - "Show me the trap on this page you'd most likely have fallen into." ([Red Flags §11](11-red-flags.md))
 
+## Review the evidence, not just the answer
+
+Use the [exercise review rubric](13-hands-on-exercises.md#review-rubric). Ask the intern to trace one current path, one signal reference, one shield bond, and one plausible wrong-port connection through the drawings. Then ask what evidence would change the family choice. Distinguish an architecture-review pass with owned open items from a hardware-release pass with exact parts and completed evidence.
+
 ## Common intern failure modes this guide preempts
 
 - **Choosing by catalog photo** → the [Identification Workflow](connector-identification.md) and the hobby track's [listing traps](hobby/bad-listing-examples.md).
 - **Treating example values as ratings** → [Source Notes](appendix/source-notes.md), relentlessly.
 - **A perfect connector nobody can build** → [§4's production-reality step](04-connector-selection-workflow.md).
-- **Undocumented interfaces** → every exercise ends in a template for a reason; "done" means documented ([Examples](examples/index.md) show the target).
+- **Undocumented interfaces** → every exercise ends in a template for a reason; “ready for review” means documented; “ready for release” also requires the exact configuration and evidence. The [Examples](examples/index.md) teach structure and still contain open fields.
 
 :::note
 

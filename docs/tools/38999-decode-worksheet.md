@@ -12,18 +12,18 @@ The [MIL-DTL-38999 deep dive](../07-mil-dtl-38999.md) explains the reasoning and
 
 :::warning[Read this before decoding]
 
-D38999 part-number schemas **vary by manufacturer** (Amphenol, Glenair, Souriau, ITT Cannon, TE, Eaton). Finish letters, available arrangements, and accessory codes are not identical across vendors. Always decode against the *specific* manufacturer's catalog/decoder, and verify against the QPL when qualification matters. "Mil-spec style," "MIL-compatible," or "built to a military standard" does not automatically mean the exact part is qualified. A conforming part number from two vendors is not automatically interchangeable — match series, shell size, insert arrangement, contact type, finish, and keying.
+A **military D38999 PIN has standardized fields** defined by the applicable specification and slash sheet; those fields do not change meaning with the supplier. Manufacturers also sell proprietary series, options, and accessory numbers with their own schemas. Identify which system you are decoding, then cross-check the military PIN against the controlling documents and the manufacturer's catalog. Physical mating, specification conformance, and qualification/source approval are separate checks. When qualification matters, verify the exact manufacturer, item, and status in the applicable QPD/QPL or program-approved source.
 
 :::
 
 ## The worksheet
 
-Example column decoded per the manufacturer catalog cited in [§7.8](../07-mil-dtl-38999.md)[^amphenolcat] — your letters may mean something else in your vendor's schema. Fill in the last two columns from the catalog you are actually buying against, and record the catalog document + revision at the bottom.
+Example column decoded per the manufacturer catalog cited in [§7.8](../07-mil-dtl-38999.md)[^amphenolcat] — these military fields have standardized meanings; proprietary vendor part numbers require their own decoder. Fill in the last two columns from the catalog you are actually buying against, and record the catalog document + revision at the bottom.
 
 | Field | Example: `D38999/26WE26PN` | Meaning in the example's decoder | **Your part number** | **Meaning per your catalog** |
 |---|---|---|---|---|
-| Base spec + shell style | `D38999/26` | Series III; `/26` = straight plug in this decoder family | | |
-| Finish / material class | `W` | Corrosion-resistant olive-drab cadmium-plated aluminum (finish letters vary by manufacturer) | | |
+| Base spec + shell style | `D38999/26` | Series III; `/26` = straight plug per the military slash sheet | | |
+| Finish / material class | `W` | Corrosion-resistant olive-drab cadmium-plated aluminum (military class W) | | |
 | Shell-size letter | `E` | Maps through the catalog to shell size 17 | | |
 | Insert arrangement | `26` | Read **with** the shell size: full designation **17-26** | | |
 | Contact type | `P` | P = pin, S = socket | | |

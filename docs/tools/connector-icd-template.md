@@ -22,13 +22,19 @@ This is the blank version of [Exercise 7](../13-hands-on-exercises.md). The goal
 - Connector P/N:
 - Mating connector P/N:
 - Contact P/Ns:
-- Backshell P/N:
-- Dust cap P/N:
+- Backshell P/N or integral/not applicable, with required functions and evidence:
+- Cap/cover P/N and documented protection (dust, handling, or environmental sealing):
 - Keying / polarization:
 - Approved alternates (P/N, manufacturer, approval basis — see [Lifecycle & Procurement §5](../lifecycle-and-procurement.md)):
 - Vendor mixing within the mated pair (allowed/prohibited, verification basis):
 
 ## Pinout
+
+- Direction reference (e.g. into/out of the controller):
+- Drawing for **each mating face**, labeled connector identity and pin/socket contacts:
+- Pin 1, key/index orientation, and view direction (mating face or wire side):
+- Cross-mating review reference, including alternate keys and electrical consequences:
+- Reserved positions, installed contacts, and sealing-plug treatment:
 
 | Pin | Signal | Source / load | Notes |
 | --- | --- | --- | --- |
@@ -41,7 +47,12 @@ This is the blank version of [Exercise 7](../13-hands-on-exercises.md). The goal
 - Current per contact:
 - Rating source (datasheet + revision) and derating basis (curve, loaded contacts, ambient, allowable temperature rise):
 - Contact size / wire gauge:
-- Shielding — type (braid/foil/drain), termination strategy (one end / both ends / 360° backshell), and EMC rationale:
+- Signal limits per net: nominal/maximum voltage, input thresholds, output source/sink capability, off-state behavior, and tolerance:
+- Reference/common net for each signal; normal and fault return paths:
+- Protocol, rate, impedance/pair assignment, termination, and common-mode range:
+- Isolation boundaries and working/transient/fault requirements:
+- Shielding — type (braid/foil/drain), bond point and method at **each end**, shell/chassis/FE/PE relationships, and EMC rationale:
+- Controlled schematic/bonding diagram reference:
 
 ## Power / energized-work safety (for power-carrying interfaces)
 
@@ -58,7 +69,7 @@ This is the blank version of [Exercise 7](../13-hands-on-exercises.md). The goal
 ## Environmental assumptions
 
 - Internal or external:
-- Sealing target:
+- Sealing target by boundary (mating face, rear entry, panel joint) and state (mated, unmated, capped):
 - Vibration / shock:
 - Mating cycles:
 
@@ -66,6 +77,7 @@ This is the blank version of [Exercise 7](../13-hands-on-exercises.md). The goal
 
 - Torque / assembly notes:
 - Cable requirements:
+- Requirement IDs, test methods/revisions, parameters, acceptance limits, and evidence location:
 - Test / inspection requirements (build acceptance: [harness inspection checklist](harness-inspection-checklist.md) · design qualification: [qualification plan template](connector-qualification-template.md)):
 - Workmanship / acceptance standard (e.g. IPC/WHMA-A-620 or program/customer equivalent):
 
@@ -115,7 +127,7 @@ An ICD entry for a 4-pin A-coded M12 sensor interface. Family-level electrical, 
 | 3 | L− (0 V) | Source | Blue |
 | 4 | Signal | Per device | Black |
 
-Pin functions follow the device datasheet; colours per the common A-coded convention.
+Pin functions follow the device datasheet; colours per the common A-coded convention. The source/load labels refer to the sensor's external supply. Add the two labeled mating-face drawings and define each signal's type, direction, thresholds, and reference before release; this table alone is not a complete ICD.
 
 ### Electrical limits
 
@@ -152,7 +164,7 @@ Pin functions follow the device datasheet; colours per the common A-coded conven
 - IEC 61076-2-101 listing (coding, ≤ 4 A / ≤ 250 V class) — **verified**, cited in Sources below; record the edition/date you check
 - Turck torque example (0.8–1.0 N·m) — **verified example**, manufacturer-specific; replace with your vendor's figure
 - Vendor P/N, cable OD, revision fields — **example-only** *(illustrative)*; qualified listing: not applicable for this commercial sensor interface
-- Derating curve checked: not applicable at sensor current — record it for anything approaching the contact rating
+- Derating basis: open until exact parts, wire, loading, and ambient are selected; record the evidence even if the load is well below the applicable limit
 
 ## Sources
 

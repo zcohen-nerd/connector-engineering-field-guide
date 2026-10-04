@@ -12,6 +12,8 @@ sidebar_label: Engineering Guide Home
 
 :::note[v1.0 — Source-Verified Release]
 
+“Source-Verified Release” is the historical v1.0 release name, not a claim that every source interpretation or example is complete. Deferred items remain unverified; see the [content correction record](appendix/source-notes.md#content-corrections-2026-10-04).
+
 The source-verification milestone shipped with v1.0, and the guide is **continuously reviewed** after it — the [Source Notes](appendix/source-notes.md) dashboard is the standing record. Corrections are welcome—bring sources. This is an educational engineering reference, so verify ratings, qualifications, tooling, and environmental limits against current datasheets, governing standards, qualified-products listings, and your program or customer requirements.
 
 :::

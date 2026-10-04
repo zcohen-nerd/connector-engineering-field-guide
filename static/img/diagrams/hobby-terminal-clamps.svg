@@ -2,7 +2,7 @@
   <!-- Terminal clamp mechanisms in cross-section: rising clamp, direct screw,
        spring cage, plus a ferruled stranded wire end. Schematic only. -->
   <rect x="0.5" y="0.5" width="759" height="329" rx="10" fill="#ffffff" stroke="#d0d7de"/>
-  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">Three clamp mechanisms — and the ferrule that makes stranded wire clampable</text>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">Clamp mechanisms — conductor preparation depends on the exact terminal</text>
 
   <!-- 1. Rising clamp -->
   <rect x="52" y="70" width="120" height="130" rx="8" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
@@ -25,7 +25,7 @@
   <line x1="289" y1="128" x2="296" y2="141" stroke="#0b7e96" stroke-width="2"/>
   <text x="300" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">direct screw</text>
   <text x="300" y="240" text-anchor="middle" font-size="12" fill="#3b4453">screw tip bears on strands —</text>
-  <text x="300" y="254" text-anchor="middle" font-size="12" fill="#3b4453">where ferrules earn their keep</text>
+  <text x="300" y="254" text-anchor="middle" font-size="12" fill="#3b4453">use approved wire preparation</text>
 
   <!-- 3. Spring cage -->
   <rect x="428" y="70" width="120" height="130" rx="8" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
@@ -43,7 +43,7 @@
   <line x1="674" y1="124" x2="674" y2="140" stroke="#102040" stroke-width="1"/>
   <text x="652" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">the ferrule</text>
   <text x="652" y="240" text-anchor="middle" font-size="12" fill="#3b4453">strands crimped into one</text>
-  <text x="652" y="254" text-anchor="middle" font-size="12" fill="#3b4453">solid, square end</text>
+  <text x="652" y="254" text-anchor="middle" font-size="12" fill="#3b4453">end — if the terminal permits</text>
 
   <text x="380" y="290" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">never a soldered end under a clamp — solder cold-flows and the joint loosens into heat</text>
   <text x="380" y="316" text-anchor="middle" font-size="12" font-style="italic" fill="#6f8bb4">Schematic — gauge range, strip length, and torque come from the exact block's datasheet.</text>

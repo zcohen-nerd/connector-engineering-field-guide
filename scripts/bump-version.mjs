@@ -63,7 +63,7 @@ const SITES = [
   {
     file: 'README.md',
     locate: /^\*\*Status:\*\* (.+?)(?: ·.*)?$/m,
-    render: (d, n) => null, // handled specially to preserve the trailing badge
+    render: () => null, // handled specially to preserve the trailing badge
     extract: (m) => ({status: m[1].trim()}),
   },
   {

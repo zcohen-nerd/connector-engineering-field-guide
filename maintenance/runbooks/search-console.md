@@ -15,9 +15,11 @@ Domain property is not possible; the apex `zcohen-nerd.github.io` is not owned).
 2. Choose the **HTML tag** method. Copy the `content` token.
 3. In `docusaurus.config.ts`, uncomment the `google-site-verification` line in
    `headTags` and paste the token:
+
    ```ts
    {tagName: 'meta', attributes: {name: 'google-site-verification', content: '<token>'}},
    ```
+
 4. `npm run build`, deploy, then click **Verify** in GSC.
 5. Repeat for **Bing** (`msvalidate.01`) — or use BWT's "Import from GSC".
 
@@ -60,7 +62,7 @@ Record here as the "before" snapshot:
 
 | date | queries file | pages file | indexed | notes |
 | --- | --- | --- | --- | --- |
-| _fill in_ | | | | first baseline |
+| *fill in* | | | | first baseline |
 
 ## 5. Monthly review (~15 min)
 

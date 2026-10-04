@@ -131,6 +131,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 ![Two flat-flex cables with exposed contact fingers in front of their matching zero-insertion-force board connectors](/img/photos/zif-connector-ffc.jpg)
 
 *The cable end is the contact: exposed fingers slide into the board connector before its small latch clamps them. The two pictured cable constructions also show why conductor count and contact orientation must be checked, not assumed. Photo: [Zeroping](https://commons.wikimedia.org/wiki/File:ZIF_connector_and_FFC.jpg), CC0 1.0, via Wikimedia Commons.*
+
 - **Boards that mount rigidly to each other** may not need a cable at all — see the [board-to-board path](../decision-paths/board-to-board.md).
 
 ## GX and SP-style "aviation / waterproof" circulars

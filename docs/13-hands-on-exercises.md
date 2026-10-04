@@ -93,5 +93,4 @@ Apply this rubric to every deliverable. Mark each row **pass**, **revise**, or *
 
 For Exercises 1 and 4–7, an architecture-review pass may retain named open items with owners and closure evidence specified. A release-review pass requires those items closed. For Exercise 8, include that closure evidence in each corrective action.
 
-
 ---

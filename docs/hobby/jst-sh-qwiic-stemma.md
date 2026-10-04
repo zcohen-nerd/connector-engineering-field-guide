@@ -47,6 +47,10 @@ Adafruit runs *two* connector conventions with confusingly similar names, and th
 - **"Any 4-pin 1 mm JST will do."** A bare SH pigtail is not automatically wired to the Qwiic/STEMMA QT convention.
 - **Fragility** — the housings and cables are small; strain relief is your problem.
 
+## Bus limits still apply
+
+A compatible SH cable does not guarantee a working I2C bus. Check the board ecosystem's voltage levels, total cable/device capacitance, parallel pull-ups, rise time at the selected clock rate, and power budget. Multiple boards can add pull-ups in parallel; long cable runs add capacitance. Follow the controller and device specifications, and do not assume hot-plug support from the connector shape.
+
 ## Source status
 
 SH series figures: official JST datasheet.[^jst-sh] Qwiic/STEMMA QT conventions: the vendors' own documentation.[^qwiic][^stemmaqt] Grove connector facts are sourced to Seeed's documentation (see the Grove section above). See [Hobby Source Notes](hobby-source-notes.md).

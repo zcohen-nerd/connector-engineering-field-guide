@@ -17,7 +17,7 @@ Drilling a hole in a sealed box is easy. Getting power or signals through that h
 
 ## Avoid this when
 
-- There is real pressure or submersion beyond an IP rating — you need a **hermetic or potted penetrator**, not a standard panel connector.
+- Pressure or sustained submersion exceeds the selected assembly's evidence — investigate a pressure-rated connector or penetrator with a documented depth, pressure differential, duration, medium, and mating state. Hermetic, potted, and elastomer-sealed subsea designs are different solutions; an IP label alone does not establish their pressure capability. [SubConn's pressure-rated elastomer-sealed products](https://www.macartney.com/connectivity/subconn/) illustrate why submersion does not universally require a hermetic construction.
 
 ## Families to start with
 
@@ -37,6 +37,8 @@ See [Decision Examples](../09-decision-examples.md).
 - `38999 jam nut receptacle sealed panel mount`
 - `M12 panel mount sealed receptacle`
 - `hermetic connector feedthrough`
+
+For a pressure or leak-tight boundary, also specify differential pressure/depth, duration, medium, temperature range, allowable leakage and its measurement method, and whether mating occurs wet, dry, or under pressure. Termination style is a separate choice.
 
 ## Specs to check
 

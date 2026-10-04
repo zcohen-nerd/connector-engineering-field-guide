@@ -17,7 +17,7 @@ A catalog rating is not a permission slip. Current, voltage, temperature, sealin
 
 ## A1. IP rating reference
 
-IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure washdown rating IP69K comes from ISO 20653 (a DIN-style lineage, formerly DIN 40050-9), not IEC 60529[^iso20653] — IEC 60529 added a close equivalent, IPx9, in its 2013 edition. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system — confirm whether the rating applies mated, unmated, capped, panel-mounted, torqued, strain-relieved, or with specific wire seals/cavity plugs installed. Note also that the immersion tests (IPx7/IPx8) and the jet tests (IPx5/IPx6/IPx9) are independent — passing immersion does not imply jet protection, which is why washdown parts are often dual-rated (e.g. "IP67/IP69K").
+IP codes are commonly referenced from IEC 60529.[^iec60529] Distinguish IEC 60529's water-protection class 9 from ISO 20653's K-coded designations (including IP6K9K), often shortened in product literature to “IP69K.”[^iso20653] IEC 60529 added its high-pressure/high-temperature jet test in the 2013 amendment. The tests and notation must be identified rather than treated as interchangeable. Verify the exact standard cited by the manufacturer, the specific depth/duration for any IP68 claim, and remember that an IP rating applies to the tested assembly/configuration, not automatically to the entire system — confirm whether the rating applies mated, unmated, capped, panel-mounted, torqued, strain-relieved, or with specific wire seals/cavity plugs installed. Note also that the immersion tests (IPx7/IPx8) and the jet tests (IPx5/IPx6/IPx9) are independent — passing immersion does not imply jet protection, which is why washdown parts are often dual-rated (e.g. "IP67/IP69K").
 
 | IP | Solid ingress | Liquid ingress | Typical application |
 |---|---|---|---|
@@ -25,20 +25,20 @@ IP codes are commonly referenced from IEC 60529.[^iec60529] The high-pressure wa
 | IP65 | Dust-tight | Low-pressure jets, any direction | Outdoor enclosures, wash-down areas |
 | IP67 | Dust-tight | ~1 m immersion, ~30 min (per standard test) | Many industrial field connectors |
 | IP68 | Dust-tight | Manufacturer-stated depth/duration | Subsea, submerged sensors |
-| IP69K / IPx9 | Dust-tight | High-pressure, high-temp jets. "K" is per ISO 20653, not IEC 60529 | Washdown, food processing, vehicles, agriculture |
+| IP69 (IEC 60529) | Dust-tight: first digit 6 | High-pressure/high-temperature water-jet test: second digit 9 | Washdown where the exact IEC rating is specified |
+| IPX9 (IEC 60529) | Not specified by X | Water-jet protection 9; X makes no dust claim | Verify solid-ingress protection separately |
+| IP6K9K (ISO 20653) | Dust-tight class 6K | High-pressure/high-temperature jet class 9K | Road-vehicle applications; record the exact code and standard |
 
-## A2. 38999 contact sizes — example test values (verify per contact P/N)
+## A2. 38999 contact sizes — construction and conditions first
 
-| Size | Matching wire (AWG) | Spec test current (example) | Notes |
-|---|---|---|---|
-| 22D | 22 | 3 A | High-density signal |
-| 20 | 20 | 5 A | General-purpose signal / light power |
-| 16 | 16 | 10 A | Moderate power |
-| 12 | 12 | 17 A | Higher-current power |
-| 8 / larger | per catalog | power contacts | High current; coax/twinax in size 8 |
-| 23 (HD) | per catalog | lower than 22D | High-density variants; signal only — verify by exact P/N |
+| Contact size | Typical investigation |
+|---|---|
+| 22D / 20 | Signal and light-power circuits; verify exact contact limits |
+| 16 / 12 | Larger power paths; check loaded-contact and temperature conditions |
+| 8 and larger | Power or special coax/twinax contacts, depending on the insert |
+| 23 (HD) | High-density variants; use the exact contact specification |
 
-*Test currents from a manufacturer contact-performance spec — a different, lower parameter than the contact's free-air current-carrying rating (e.g. size 16 ≈ 13 A carrying vs. 10 A test), and not a universal continuous rating. Size against the actual contact datasheet and derating curve. Full context in the [38999 deep dive §7.5](../07-mil-dtl-38999.md#75-contact-sizes-and-current).*[^glenaircontacts]
+*Glenair's size-16 entries distinguish 13 A crimp and 10 A hermetic current ratings; its H/N/Y resistance table concerns hermetic contacts. Do not reinterpret that difference as a universal test-current/free-air-rating rule. Test wire size is not a termination wire range. Use the exact contact's drawing and application derating data. Full context in [38999 §7.5](../07-mil-dtl-38999.md#75-contact-sizes-and-current).*[^glenaircontacts]
 
 ## A3. Family selection quick guide
 
@@ -85,13 +85,13 @@ When this guide conflicts with a manufacturer datasheet, applicable standard, cu
 
 ## Sources
 
-[^glenaircontacts]: Glenair, *MIL-DTL-38999 Contact Performance Specifications* — Class H/N/Y contact-resistance **test currents**: size 12 → 17 A, 16 → 10 A, 20 → 5 A, 22D → 3 A (per MIL-C-39029 / AS39029) — test currents, not guaranteed continuous ratings. The spec's separate current-rating (max amps, crimp) column is higher, e.g. size 16 → 13 A, size 12 → 23 A. <https://www.glenair.com/mil-dtl-38999/pdf/contact-performance-spec.pdf>
+[^glenaircontacts]: Glenair, *MIL-DTL-38999 Contact Performance Specifications* — the current-rating table distinguishes crimp and hermetic construction (size 16: 13 A and 10 A respectively); the separate contact-resistance table is labeled H/N/Y. These tables do not establish an application's ampacity, and the test wire sizes are not crimp-barrel wire ranges. <https://www.glenair.com/mil-dtl-38999/pdf/contact-performance-spec.pdf>
 
 [^radsok]: Amphenol Aerospace, *High-Power 38999 / RADSOK* — RADSOK high-current contacts are rated roughly 70–250 A per contact (≈240–1000 A per connector) and are used to add dedicated power paths on the MIL-DTL-38999 platform. Contact size alone does not set safe current; use the manufacturer derating data, and do not parallel contacts unless the manufacturer/application supports it and the design is reviewed. <https://www.amphenol-aerospace.com/products/high-power-38999>
 
 [^iec60529]: IEC 60529, *Degrees of protection provided by enclosures (IP Code)* — the international IP-rating standard: second numeral 7 = temporary immersion (tested at 1 m for 30 min), 8 = continuous immersion to a manufacturer-stated depth/duration. An IPx9 close-range high-pressure/high-temperature water-jet test was added in the 2013 edition. <https://webstore.iec.ch/en/publication/2452>
 
-[^iso20653]: ISO 20653:2013, *Road vehicles — Degrees of protection (IP code)* (formerly DIN 40050-9) — origin of the IP69K high-pressure/high-temperature washdown rating; the "K" designation comes from this standard, not IEC 60529. <https://www.iso.org/standard/58048.html>
+[^iso20653]: ISO 20653:2013, *Road vehicles — Degrees of protection (IP code)* — a cited edition of the vehicle IP standard with K-coded designations; record the actual standard, edition, code, and test configuration stated for the selected product. The manufacturer may use “IP69K” shorthand; do not silently equate it with IEC IPX9 or infer dust protection from X. <https://www.iso.org/standard/58048.html>
 
 [^microfitcyc]: Molex, *Micro-Fit 3.0 Connector System Product Family* — durability typically 30 cycles (up to ~250 with factory-lubricated RMF terminals). <https://www.content.molex.com/dxdam/literature/987650-5984.pdf>
 

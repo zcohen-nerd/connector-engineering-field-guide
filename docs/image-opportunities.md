@@ -10,6 +10,10 @@ sidebar_label: Image Opportunities
 
 These are deliberate gaps, not a request to fill every page. Each item would be more accurate and useful as original photography or original line art than as a visually similar borrowed image.
 
+## Technical review of diagrams
+
+Treat SVG labels, alt text, and captions as technical claims. When a related paragraph changes, review all three against the same source and configuration. Mark schematics as not to scale; responsive images cannot promise physical “actual size.” Check revised labels for clipping at the normal display width.
+
 ## MIL-DTL-26482 bayonet pair
 
 **Page / section:** [MIL-DTL-26482](mil-dtl-26482.md), §1 and §5  

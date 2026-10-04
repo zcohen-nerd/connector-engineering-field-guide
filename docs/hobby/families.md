@@ -65,7 +65,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 ## Servo connectors
 
 - **Marketplace names:** servo plug, JR/Futaba-style, 3-pin Dupont.
-- **What it is:** servo leads are three-conductor signal / power / ground harnesses in 0.1-inch-class housings with one de-facto pin order — **positive always on the center pin** — while keying tabs and wire colors vary by vendor. Center-positive prevents a direct +/− swap under reversal, but a backwards plug still swaps signal and ground and can damage the servo or controller. Verify the order at both ends against documentation before powering: vintage-Airtronics leads and miswired no-name leads add still more polarity risk.
+- **What it is:** servo leads are three-conductor signal / power / ground harnesses in 0.1-inch-class housings with a common modern convention — **positive on the center pin** — while keying tabs and wire colors vary by vendor. Center-positive prevents a direct +/− swap under reversal, but a backwards plug still swaps signal and ground and can damage the servo or controller. Verify the order at both ends against documentation before powering: vintage-Airtronics leads and miswired no-name leads add still more polarity risk.
 - **Watch for:** friction fit only — vibration protection is on you; check the servo's stall current against the lead and wire gauge, not just "it's a servo plug."
 - **Full page:** [Servo Connectors](servo-connectors.md) — the center-positive pin order, JR vs Futaba housings, the old-Airtronics trap, and the stall-current math.
 
@@ -85,7 +85,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 - **Marketplace names:** Powerpole, Anderson connectors, PP15/45, "Anderson-style."
 - **What it is:** a **genderless** single-pole DC power system — one PP15/45 housing accepts 15/30/45 A contacts, and poles dovetail into whatever multi-pole blocks you need. The ham-radio, robotics, and DC-distribution standard.
 - **Watch for:** housing color is identification only (every color mates with every color), so **your assembly convention is the only polarity protection** — build every pair one way and pin it; unsealed; not load-break; clones get the contact spring wrong.
-- **Full page:** [Anderson Powerpole](anderson-powerpole.md) — the PP15/45 datasheet numbers, the family ladder to 350 A-class, the ARES "Red Right, Tongue Top" standard, and why it's the wrong answer for signal.
+- **Full page:** [Anderson Powerpole](anderson-powerpole.md) — the PP15/45 datasheet numbers, the family ladder to 350 A-class, the ARES "Red Right, Tongue Top" standard, and how to evaluate it for signal duty against exact-product evidence and circuit requirements.
 
 ## Screw terminals and spring terminals
 
@@ -131,6 +131,7 @@ The inline wire-to-wire connector on LED strings, pixels, and prewired harnesses
 ![Two flat-flex cables with exposed contact fingers in front of their matching zero-insertion-force board connectors](/img/photos/zif-connector-ffc.jpg)
 
 *The cable end is the contact: exposed fingers slide into the board connector before its small latch clamps them. The two pictured cable constructions also show why conductor count and contact orientation must be checked, not assumed. Photo: [Zeroping](https://commons.wikimedia.org/wiki/File:ZIF_connector_and_FFC.jpg), CC0 1.0, via Wikimedia Commons.*
+
 - **Boards that mount rigidly to each other** may not need a cable at all — see the [board-to-board path](../decision-paths/board-to-board.md).
 
 ## GX and SP-style "aviation / waterproof" circulars

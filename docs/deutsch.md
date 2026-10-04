@@ -8,9 +8,9 @@ sidebar_label: DEUTSCH Deep Dive
 
 # DEUTSCH Deep Dive
 
-If you spend any time around off-road equipment, farm machinery, trucks, marine wiring, or field robots, you'll run into DEUTSCH. TE Connectivity owns the brand now, but the reason people keep reaching for it hasn't changed: sealed housings, rear-release crimp contacts, real secondary locks, and all the seals, plugs, boots, and tools needed to build the thing properly. Small teams can actually afford and hand-tool it, too. For most readers here, DEUTSCH is the first serious step above hobby connectors and the last stop before mil circulars.
+If you spend any time around off-road equipment, farm machinery, trucks, marine wiring, or field robots, you'll run into DEUTSCH. TE Connectivity owns the brand now, but the reason people keep reaching for it hasn't changed: sealed housings, serviceable crimp contacts, real secondary locks, and all the seals, plugs, boots, and tools needed to build the thing properly. Small teams can actually afford and hand-tool it, too. For most readers here, DEUTSCH is the first serious step above hobby connectors and the last stop before mil circulars.
 
-![A round Deutsch HD-style 9-pin J1939 diagnostic plug with threaded coupling on a black cable](/img/photos/deutsch-j1939-plug.jpg)
+![A round Deutsch HD-style 9-pin J1939 diagnostic plug on a black cable](/img/photos/deutsch-j1939-plug.jpg)
 
 *The sealed-DEUTSCH look on a real vehicle: an HD10-family 9-pin J1939 diagnostic plug — crimp contacts, wire seals, thumb-coupled shell. Photo: [Florian Schäffer](https://commons.wikimedia.org/wiki/File:J1939-Stecker.jpg), CC BY-SA 3.0, via Wikimedia Commons.*
 
@@ -34,7 +34,7 @@ None of that is optional. Wire-to-wire DEUTSCH housings generally ship as bare s
 
 ## 2. The family map — every series and size
 
-The industrial DEUTSCH range is basically one contact philosophy — rear-insert, rear-release crimp contacts behind silicone seals — packaged in different sizes and shapes. The figures below are cited family-level guides. For an actual shell, pull the series datasheet.[^dtfam][^dtte][^dthd][^hd30][^hd10][^drc]
+The industrial DEUTSCH range includes several contact-retention systems. DT/DTM/DTP contacts insert and withdraw from the wire side, but release is actuated from the mating face after removing the wedgelock. Other series use different procedures; rearward withdrawal does not mean rear-release tooling. The figures below are cited family-level guides. For an actual shell, pull the series datasheet.[^dtfam][^dtte][^dthd][^hd30][^hd10][^drc]
 
 | Series | Format | Cavities / shells | Contact sizes | Continuous current class | Typical role |
 |---|---|---|---|---|---|
@@ -46,11 +46,22 @@ The industrial DEUTSCH range is basically one contact philosophy — rear-insert
 | **HD30** | Heavy-duty circular, **metal shell**, quarter-turn coupling | Shell sizes 18 & 24; arrangements from 2 to 47 cavities | 4–20 | ~7.5–100 A | Heavy-equipment trunk harnesses, bulkheads |
 | **HDP20** | Same inserts as HD30 in a **thermoplastic shell** | Shell sizes 18 & 24; 2–47 cavities | 4–20 | ~7.5–100 A | Cost/weight-reduced HD30 duty |
 | **DRC** | High-density sealed rectangular, inline/flange/PCB | Arrangements 24–80 cavities | 20 (12/16 options) | ~7.5 A (size 20) | ECU and controller interfaces |
-| **Autosport (AS / ASL / ASDD / ASX / ASHD)** | Miniature high-performance circulars, threaded coupling | Up to 128 ways; ASX reaches a #2 shell | Down to size 24 (~3 A, 24–30 AWG) on ASX | Per catalog | Motorsport / lightweight vehicles — a different cost class |
+| **Autosport (AS / ASL / ASDD / ASX / ASHD)** | Miniature high-performance circulars; bayonet variants — verify exact series | Up to 128 ways; ASX reaches a #2 shell | Down to size 24 (~3 A, 24–30 AWG) on ASX | Per catalog | Motorsport / lightweight vehicles — a different cost class |
 
 Two boundary notes. Below this range, if the interface is protected and dry, a sealed family may be overkill — see [Internal PCB harnessing](decision-paths/internal-pcb-harnessing.md). Above it, DEUTSCH the *company* also builds MIL-DTL-38999 and other qualified mil circulars; those are a different ecosystem entirely and are covered in the [38999 deep dive](07-mil-dtl-38999.md), not here.
 
 **Choosing within the family** usually follows current and count: DTM for small-signal sensor runs, DT as the default, DTP when a branch needs ~25 A contacts, DTHD for single heavy conductors, HD30/HDP20 when one connector must carry a whole harness trunk or pass a bulkhead, DRC when an ECU-style block of dozens of size-20 lines terminates in one place, HD10 mostly when matching legacy equipment or providing a J1939 diagnostic port. Autosport is the graduation path when mass and envelope justify motorsport pricing — at that point also compare [Micro-D](decision-paths/micro-d.md) and [38999](07-mil-dtl-38999.md) before committing.
+
+### DT/DTM/DTP contact removal
+
+With the circuit de-energized and the connector unmated, follow the exact housing's service instructions:
+
+1. Remove the secondary wedgelock from the mating face using the specified method.
+2. From that face, release the contact's locking finger with the approved tool.
+3. Withdraw the contact and wire from the rear without forcing the finger or seal.
+4. Inspect the parts, reinstall the contact until the primary latch engages, perform the specified seating check, and reinstall the wedgelock before service.
+
+Provide access to **both the mating face and wire side**. Do not insert a 38999-style rear-release sleeve into a DT housing. This sequence is specific to DT/DTM/DTP; select tools and instructions by exact series and housing.[^dtservice]
 
 ## 3. Contact sizes and current across the system
 
@@ -97,9 +108,9 @@ DT-family sealing is a **system claim**: TE rates the DT system to IP68 and IP6K
 
 - **Wire OD is a spec, not a suggestion.** The grommet seals only over its insulation-diameter range. Thin-insulation wire (common on bench spools) under-fills the seal and leaks; verify the seal range per cavity, and use the family's reduced-diameter-seal or enhanced-seal housing variants where offered.
 - **Every unused cavity gets a sealing plug.** Same rule as every sealed family in this guide — see [What People Forget](what-people-forget.md).
-- **The wedgelock is part of the connector.** On wire-to-wire DT/DTM/DTP, the wedge (the classic orange piece on gray DT plugs) is a separate loose part per half — e.g. W-prefix part numbers like W2S/W2P for 2-way plugs/receptacles — that locks the contacts in their cavities as the secondary retention. No wedge, no retention system.[^dtds]
+- **The wedgelock is part of the connector.** On wire-to-wire DT/DTM/DTP, the wedge (the classic orange piece on gray DT plugs) is a separate loose part per half — e.g. W-prefix part numbers like W2S/W2P for 2-way plugs/receptacles — that locks the contacts in their cavities as the secondary retention. The primary locking finger still exists without the wedge, but the specified secondary retention is incomplete; do not release the assembly for service.[^dtds]
 - **Temperature class is thermoplastic-and-silicone.** Family literature works in a −55 °C to +125 °C class window; verify per series and per contact/current point.[^drc][^dtds]
-- **Cycle life is field-service class, not mil class.** DEUTSCH industrial literature evaluates durability at figures like **100 mating cycles** (DRC), versus the ≥500 typical of mil circulars — fine for a service disconnect, wrong for a daily-mate interface.[^drc] Verify the figure for your series; if the interface mates often, revisit [M12](08-m12.md) or a [mil circular](07-mil-dtl-38999.md).
+- **Cycle life is field-service class, not mil class.** DEUTSCH industrial literature evaluates durability at figures like **100 mating cycles** (DRC), versus the ≥500 typical of mil circulars — fine for a service disconnect, wrong for a daily-mate interface.[^drc] Compare the exact parts and test conditions against the required life. M12, mil circulars, and industrial DEUTSCH do not form a universal cycle-life ranking.
 
 ![Exploded line diagram of a DT plug: socket contacts, rear silicone grommet, housing, and orange wedgelock, with the mating receptacle](/img/diagrams/deutsch-dt-exploded.svg)
 
@@ -181,3 +192,5 @@ Every figure on this page is a family-level orientation value quoted from public
 [^autosport]: TE Connectivity, *DEUTSCH Autosport Interconnection Solutions* catalog — AS series in four shell styles and five keyway orientations with arrangements up to 128 ways; variants include ASL (MicroLITE), ASDD (double density), ASX (Micro XtraLITE — #2 shell, size 24 contacts, ~3 A, 24–30 AWG), and ASHD (heavy duty, battery/starter/ERS applications). <https://cdn.wirecare.com/assets/pdfs/pages/customer-service/catalog-deutsch-autosport.pdf>
 
 [^atseries]: Amphenol Sine Systems AT / ATM / ATP / AHD series — marketed as intermateable, interchangeable equivalents of DEUTSCH DT / DTM / DTP / HD respectively; verify contact, seal, and tooling compatibility for any mixed-vendor interface against both manufacturers' documentation. <https://www.amphenol-sine.com/atm-series>, <https://www.chiefenterprises.com/chief-blog/are-amp-and-deutsch-connectors-interchangeable/>
+
+[^dtservice]: TE/DEUTSCH, *Industrial Product Catalog*, DT/DTM/DTP assembly and removal instructions, printed pp. 10–11 (manufacturer-authored, distributor-hosted copy). Remove the mating-face wedge, release the locking finger, then withdraw the contact rearward. <https://asset.conrad.com/media10/add/160267/c1/-/en/000737864IN01/information-737864-te-connectivity-1011-026-0205-rundstecker-halteclip-serie-rundsteckverbinder-dt-1-st.pdf>

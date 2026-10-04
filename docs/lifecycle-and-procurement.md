@@ -65,7 +65,7 @@ When an EOL lands anyway, the resolution ladder is the standard one — confirm 
 
 The distribution world has three tiers, and the differences are contractual, not cosmetic:
 
-- **Authorized / franchised distributors** sell under agreement with the manufacturer: parts arrive with full **traceability** to the factory, the manufacturer's warranty applies, and PCN/EOL notices flow ([§2](#2-pcn-and-eol-notices)). This is the default channel for released hardware — the hobby track has been saying the [same thing](hobby/buying-mating-parts.md) about genuine parts all along.
+- **Authorized / franchised distributors** sell under agreement with the manufacturer: this supports provenance and access to manufacturer support, but the actual **traceability**, warranty terms, and PCN/EOL delivery arrangements must be confirmed for the order and account ([§2](#2-pcn-and-eol-notices)). Specify required certificates, lot records, and notice subscriptions in procurement requirements. This is the default channel for released hardware — the hobby track has been saying the [same thing](hobby/buying-mating-parts.md) about genuine parts all along.
 - **Independent distributors / brokers** buy and sell outside that agreement. They serve a real function — sourcing obsolete and allocated parts — and the serious ones operate under counterfeit-avoidance controls (the AS6081 class). But traceability is now something to *verify per lot*, not something the channel guarantees.
 - **Marketplace and unknown-provenance sellers** — for released hardware, this tier is not a procurement channel at all.
 

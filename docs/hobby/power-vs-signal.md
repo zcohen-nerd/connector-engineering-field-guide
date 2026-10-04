@@ -16,7 +16,7 @@ The most damaging hobby connector mistake isn't a bad crimp — it's pulling **p
 - **Voltage is not the whole story** — current and the heat it makes in contact resistance are what melt housings. A 5 V rail can be far more demanding than a 24 V sensor line.
 - **Wire gauge must match both the load and the connector/contact.** Thick wire crimped into a tiny contact fails; thin wire on a big load overheats before the connector does.
 - **Polarity and keying matter more on power.** A swapped signal line is a debugging session; swapped battery leads are smoke. Prefer keyed, polarized power connectors.
-- **Fusing matters.** A battery can deliver enormous fault current; a fuse or polyfuse near the source protects the wiring and connectors downstream.
+- **Fusing matters.** A battery can deliver enormous fault current; select source-side protection with suitable voltage, fault-current capability, and clearing behavior for the downstream wire and contacts.
 - **Removable power connectors need strain relief** — a tug on a power lead should land on the housing/boot, never the crimp.
 - **Don't pull power through tiny dev-board signal connectors** (Qwiic/SH-class, breadboard jumpers) unless the ecosystem explicitly designed for that current — check, don't assume.
 
@@ -44,14 +44,17 @@ Power connectors are also **not load-break devices**: don't unplug things under 
 
 :::
 
+A fuse or resettable protector needs more than an ampere value: check maximum system voltage, time/current behavior, available fault current, and the device's interrupting or maximum-fault capability. Coordinate it with the wire, contacts, and load. A PPTC resettable protector is not automatically interchangeable with a fuse; follow its application limits.
+
 ## The other direction: tiny signals through big contacts
 
-The mistake also runs in reverse. A beefy power connector with spare poles looks like a free ride for a sensor line or data pair — and it isn't:
+A spare pole in a power connector still needs a signal-duty check.
 
-- **Power contacts are usually tin (or silver) plated.** At sensor levels — millivolts, microamps — the signal can't break through the oxide films those platings grow, so the connection works when freshly plugged and drifts flaky over the following months. Gold-plated signal contacts exist precisely to avoid this.
-- **Re-plugging "fixes" it**, which is what makes it maddening: the wipe of mating scrapes a clean spot, the drift restarts, and the fault never shows up on the bench.
-- **Signal ≠ small power.** A 500 mA accessory feed through a power connector is fine. An I2C bus, analog sensor, or encoder line through one is a different physics problem.
+- **A current rating does not establish low-level reliability.** Check contact resistance under low-level test conditions and after relevant environmental exposures.
+- **Tin can work in dry circuits.** Contact force, wipe, lubrication where specified, and motion control matter. Gold resists oxidation but is not a guarantee against contamination or wear.
+- **Re-plugging can mask a fault.** The mating wipe can temporarily clear debris; inspect and measure before disturbing a suspect interface where the diagnostic procedure permits.
+- **Signal requirements go beyond current.** Check shielding, pair geometry, common-mode range, and the signal error budget, as well as retention and polarization.
 
-Route data and sense lines through a proper signal connector — keyed, latched, gold-to-gold. The engineering track's [Low-Level Signals and Contact Design](../low-level-signal-contacts.md) explains the whole mechanism (dry circuits, wetting current, fretting) when you want the why.
+Use a contact system supported by manufacturer evidence or application qualification. Missing public low-level data means ask and verify, not assume failure or success. The engineering track's [Low-Level Signals and Contact Design](../low-level-signal-contacts.md) explains the mechanisms.
 
 Related: [JST-SM and LED strings](jst-sm-led-connectors.md) (power injection) · [When Hobby Connectors Are Not Enough](when-hobby-is-not-enough.md).

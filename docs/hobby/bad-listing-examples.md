@@ -20,11 +20,11 @@ The fastest way to learn the [identification method](identify-unknown-connector.
 
 ## Example 2 — "2.54mm JST kit"
 
-**Why it's suspicious:** 2.54 mm is the [0.1-inch header/Dupont ecosystem](dupont-headers.md); JST's common series run 2.5, 2.0, 1.5, 1.25, and 1.0 mm. A listing mixing the two is telling you it doesn't know what it's selling.
+**Why it's incomplete:** 2.54 mm appears in the [0.1-inch header/Dupont ecosystem](dupont-headers.md), but JST also makes genuine 2.54 mm connectors such as its [RE series](https://www.jst-mfg.com/product/pdf/eng/eRE.pdf). The title alone cannot establish the family, manufacturer, or mating compatibility. Require the series, housing/contact part numbers, and drawings.
 
 **Corrected:**
 
-> Likely generic 0.1-inch Dupont-style housings/contacts, not an official JST series. Verify housing/contact fit and use only for bench/prototype wiring unless the exact parts are sourced.
+> Unidentified 2.54 mm-pitch connector kit. Manufacturer, series, housing/contact part numbers, and mating compatibility unverified; compare the samples with the claimed manufacturer's drawings before assigning an identity or rating.
 
 ## Example 3 — "Waterproof LED connector"
 

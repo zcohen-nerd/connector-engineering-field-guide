@@ -45,7 +45,7 @@ See [Decision Examples](../09-decision-examples.md).
 
 - **Access level** — who opens it, and how often.
 - **Mating cycles** for the expected service life.
-- **Contact plating vs. those cycles** — debug lines are low-level signals, so this is gold territory; on a high-cycle port, thin gold flash wears through mid-life ([low-level signal contacts](../low-level-signal-contacts.md)).
+- **Contact suitability and cycles** — verify low-level performance for the exact contact system and duty rather than assuming signal use requires gold. If using gold, check plating thickness against the expected mating cycles; thin gold flash wears through on high-cycle ports ([low-level signal contacts](../low-level-signal-contacts.md)).
 - **ESD** strategy and **pin protection**.
 - **Sealing** if the port is exposed, and **distinct keying** from operational ports.
 

@@ -26,6 +26,10 @@ Like the [Selection Packet](connector-selection-packet.md), this example teaches
 
 :::
 
+## Release status
+
+This is an architecture study. Exact receptacle/cordset part numbers, complete pin-view drawings, load and environmental limits, wrong-port checks, and acceptance/qualification evidence remain to be selected and reviewed. A documented family choice is not a released cable or interface.
+
 ## Scenario
 
 A small automated assembly-and-test cell on a factory floor: a machine frame carrying part-presence sensors (inductive proximity and photoelectric), one IO-Link distance sensor on the test station, and a machine-vision camera on the inspection station whose Ethernet run goes back to the cell controller. The cell sits near a washdown area — the frame sees splash and hose mist, not submersion — and it lives on casters: it gets rolled out for maintenance, which means cables get unplugged and replugged by whoever is on shift, not by the people who built the cell.

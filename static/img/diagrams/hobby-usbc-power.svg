@@ -6,7 +6,7 @@
   <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#102040">USB-C power — the board must ask, the source advertises, PD negotiates</text>
 
   <!-- Panel 1: sink-side Rd -->
-  <text x="135" y="66" text-anchor="middle" font-size="12" fill="#3b4453">to be powered, a sink presents:</text>
+  <text x="135" y="66" text-anchor="middle" font-size="12" fill="#3b4453">simple sink-only receptacle:</text>
   <rect x="95" y="76" width="80" height="22" rx="11" fill="#e8edf4" stroke="#102040" stroke-width="2"/>
   <text x="135" y="91" text-anchor="middle" font-size="11" fill="#3b4453">USB-C port</text>
   <line x1="115" y1="98" x2="115" y2="126" stroke="#102040" stroke-width="1.5"/>
@@ -25,8 +25,8 @@
   <line x1="130" y1="165" x2="140" y2="165" stroke="#102040" stroke-width="2"/>
   <line x1="133" y1="170" x2="137" y2="170" stroke="#102040" stroke-width="2"/>
   <text x="135" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b7e96">one 5.1 k&#937; per CC pin</text>
-  <text x="135" y="212" text-anchor="middle" font-size="12" fill="#3b4453">none = 0 V from C-to-C;</text>
-  <text x="135" y="226" text-anchor="middle" font-size="12" fill="#3b4453">shared = the Pi 4 bug</text>
+  <text x="135" y="212" text-anchor="middle" font-size="12" fill="#3b4453">Rd may be inside the controller;</text>
+  <text x="135" y="226" text-anchor="middle" font-size="12" fill="#3b4453">do not duplicate internal Rd</text>
 
   <!-- Panel 2: source-side Rp advertisement -->
   <text x="380" y="66" text-anchor="middle" font-size="12" fill="#3b4453">the source's Rp advertises:</text>

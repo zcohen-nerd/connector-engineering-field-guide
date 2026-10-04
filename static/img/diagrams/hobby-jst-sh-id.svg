@@ -31,7 +31,7 @@
 
   <!-- true-size hint -->
   <rect x="110" y="232" width="24" height="9" fill="#f4f7fb" stroke="#102040" stroke-width="1"/>
-  <text x="144" y="240" font-size="11" fill="#3d6094">&#8592; actual size of a 4-pin SH (drawing above is ~8&#215;)</text>
+  <text x="144" y="240" font-size="11" fill="#3d6094">&#8592; small reference sketch — neither view is to scale</text>
 
   <text x="205" y="272" text-anchor="middle" font-size="13" font-weight="bold" fill="#102040">Genuinely tiny, side-entry, friction fit</text>
 

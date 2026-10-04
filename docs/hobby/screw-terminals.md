@@ -19,13 +19,14 @@ Terminal blocks are the connector nobody thinks of as a connector — which is e
 | **Rising clamp / wire protector** | Screw lifts a pressure plate; the screw never touches the wire | Quality PCB blocks, DIN-rail blocks | The style to prefer — the plate spreads force and won't chew strands |
 | **Direct/plate screw** | Screw tip bears on the conductor | Cheap PCB blocks, barrier strips | Screw rotation can birdcage stranded wire; ferrules earn their keep here |
 | **Barrier strip** | Screw + captive wire or ring/spade lug | Older equipment, audio, mains-adjacent wiring | Really a lug interface — crimp rings/spades beat bare wire under a screw head |
-| **Push-in / cage-clamp spring** | Spring presses the conductor against a busbar | Modern DIN-rail and PCB blocks | Vibration-tolerant, torque-free — but stranded wire wants a ferrule to push in |
+| **Push-in spring** | Conductor insertion opens the spring for permitted wire preparations | Modern DIN-rail and PCB blocks | Direct insertion may require solid wire or an approved ferrule; use the actuator for fine-stranded wire where specified |
+| **Actuated spring / cage clamp** | A lever or tool opens the spring before insertion | DIN-rail and PCB blocks, field splices | Many accept bare fine-stranded wire directly; check the exact terminal |
 | **Lever (Wago-style)** | Operator-actuated spring | Field splices, lighting, power distribution | The one clamp class with deep genuine-part documentation — the full story, both size classes and both rating systems, in [§3 below](#3-lever-connectors-for-real-power-work) |
 | **Pluggable two-part** | Any of the above, in a header-and-plug pair | Motor drivers, industrial PCBs | The unplug-to-service upgrade — and home of the pitch trap below |
 
 ![Line diagram comparing three terminal clamp mechanisms in cross-section — rising clamp, direct screw, and spring cage — plus a ferruled stranded wire](/img/diagrams/hobby-terminal-clamps.svg)
 
-*Three ways to squeeze a wire, and the ferrule that gives stranded wire a solid, clampable end. The mechanism decides whether the screw touches your conductor.*
+*Three ways to squeeze a wire, plus a ferrule for terminals that permit that preparation. The mechanism decides whether the screw touches your conductor.*
 
 ## 2. The numbers nobody reads
 
@@ -51,21 +52,21 @@ Four things to internalize:
 
 - **The 6 mm² line exists.** Most people only know the 4 mm² connectors; the 221-6xx family is the same mechanism scaled to 10 AWG and a 41 A IEC class — the difference between a lighting splice and actual power distribution.
 - **The IEC and UL numbers differ on the identical part.** 32 A / 450 V and 20 A / 600 V describe the *same connector* under two certification regimes (EN 60664-based IEC characterization vs. the UL 486C listing). Design to the rating system your jurisdiction and inspection actually use — and check which system a listing is quoting before comparing parts.
-- **Fine-stranded without ferrules is the lever's superpower.** The lever clamp is specified for fine-stranded conductors directly — the practical selection line between levers and push-in spring connectors, which want solid wire or a ferruled end.
+- **The cited WAGO 221 accepts bare fine-stranded conductors.** Other actuated spring terminals can too. Direct push-in capability and ferrule acceptance depend on the exact terminal, conductor size, and preparation.
 - **Carriers make it an installation.** WAGO's mounting-carrier and strain-relief accessories fix 221s in an enclosure — the difference between a loose splice and a serviceable distribution point. A lever connector is still not a junction box: the moment it's mains, enclosure and local code govern.
 
 And once more for the back: these figures are for **genuine WAGO 221s** — marketplace "Wago-style" levers inherit none of them.
 
-## 4. Ferrules — the missing part of every stranded-wire clamp
+## 4. Ferrules — useful where the terminal permits them
 
-A ferrule (bootlace ferrule, per the DIN 46228 style system) is a crimped tin-plated sleeve that turns a bundle of strands into one solid, square-shouldered pin. That's what a clamp is designed to grip. Ferrules stop strand splay and whiskering, survive re-termination, and give spring/push-in blocks something to actually push against. Two disciplines:
+A ferrule (bootlace ferrule, per the DIN 46228 style system) is a crimped sleeve that contains the wire strands. It can ease insertion and limit strand splay, but it is not required or permitted by every clamp. Verify ferrule acceptance, conductor range, sleeve length, crimp profile, and full insertion against the exact terminal's instructions. Ferrules can reduce the accepted conductor range or interfere with insertion when the collar or sleeve is wrong.[^ferrules] Two further disciplines:
 
 - **Crimp them properly** — a ferrule crimper with the right die, the same crimp seriousness as [everything else](crimping.md).
 - **Don't trust the color.** Ferrule color-coding exists in *competing* systems (the French and German codes assign different colors to the same sizes) — read the printed size, not the sleeve color.
 
 ![A ferrule crimper beside assorted wire ferrules and a cable with ferrule-terminated conductors](/img/photos/ferrules-and-crimper.jpg)
 
-*The ferrule kit and its crimper — the stranded wire's ticket into any clamp. Photo: [Simon A. Eugster](https://commons.wikimedia.org/wiki/File:Wire_ferrules_with_and_without_insulation.jpg), CC BY-SA 3.0, via Wikimedia Commons.*
+*The ferrule kit and its crimper — one wire preparation to verify against the exact terminal. Photo: [Simon A. Eugster](https://commons.wikimedia.org/wiki/File:Wire_ferrules_with_and_without_insulation.jpg), CC BY-SA 3.0, via Wikimedia Commons.*
 
 ## 5. The rule: never tin stranded wire before clamping
 
@@ -78,8 +79,8 @@ Soldering the end of a stranded wire and putting it under a screw feels tidy, bu
 ## 6. Traps
 
 - **Tinned wire under a clamp** — see above; the tidy-looking one is the fire risk.
-- **Two conductors into one clamp point.** Same disease as [doubling wires into one crimp](crimping.md): clamps are specified for one prepared conductor unless the block's documentation says otherwise. Where two stranded wires genuinely must land together and the terminal's size range allows it, **twin ferrules** (one sleeve made for two wires) turn them into a single qualified end — the purpose-made answer, versus hoping the screw catches both.
-- **Stray strands.** One whisker outside the clamp is a short waiting for a neighbor. Twist, ferrule, inspect.
+- **Two conductors into one clamp point.** Same disease as [doubling wires into one crimp](crimping.md): clamps are specified for one prepared conductor unless the block's documentation says otherwise. Use a **twin ferrule** only when the terminal manufacturer permits that two-conductor preparation, wire sizes, and crimp geometry. Physical fit and combined cross-sectional area alone do not qualify it; otherwise use separate terminal positions or an approved splice.
+- **Stray strands.** One whisker outside the clamp is a short waiting for a neighbor. Prepare as specified and inspect; do not add a ferrule by default.
 - **Terminal blocks are not strain relief.** The clamp holds the conductor electrically; the *cable* needs its own anchor before the block, always.
 - **The 5.0 vs 5.08 pluggable mismatch** — measure across all positions ÷ (N−1), per the [pitch page](pitch.md).
 - **"12 A" clone blocks.** Marketplace terminal strips carry ratings with nothing behind them — the same [kit skepticism](connector-kits.md) applies to green blocks as to connectors.
@@ -103,3 +104,5 @@ Lever-class figures — both size classes, both rating systems — are cited to 
 [^screw-maintenance]: Phoenix Contact, *Terminal Blocks* — its Reakdyn screw-locking principle is described as maintenance-free and vibration-resistant, demonstrating why re-tightening requirements cannot be generalized across all screw terminals. Follow the exact terminal's installation and maintenance documentation. <https://www.phoenixcontact.com/en-us/products/terminal-blocks>
 
 [^tinned-wire]: Phoenix Contact, *The Problems with Tinning Wires* — explains how compressed tin/solder can fracture and how differential thermal expansion can leave a tinned conductor loose in a screw-style terminal block; recommends ferrules and the proper screw specification as the alternative. <https://assets.phoenixcontact.com/file/a819277e-2077-48d0-a5c2-0e7183fef5d9/media/original?The_problems_with_tinning_wires_U004008A.pdf=>
+
+[^ferrules]: WAGO, *Practical Tips: Ferrules* — conductor preparation, ferrule length/geometry, and product-specific limitations; bare conductors are the basis of many terminal approvals. <https://www.wago.com/global/industries/building-technology/electrical-installers/helpful-tips/ferrules>

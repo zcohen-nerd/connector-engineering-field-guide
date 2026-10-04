@@ -14,6 +14,8 @@ This is the blank version of [Exercise 6](../13-hands-on-exercises.md). Fill it 
 
 - Connector A:
 - Connector B:
+- Endpoint drawings: each mating face labeled with connector identity, pin/socket contacts, pin 1, key orientation, and view direction:
+- Referenced ICD / schematic P/N and revision:
 
 ## Conductor schedule
 
@@ -26,15 +28,21 @@ This is the blank version of [Exercise 6](../13-hands-on-exercises.md). Fill it 
 
 - Cable jacket:
 - Labels:
-- Length tolerance:
+- Nominal cable and breakout lengths, measurement datums, and tolerances:
+- Measurement state (straightened/slack, connector reference faces, included boots):
+- Pair IDs with both conductor members and allowed untwist at each termination:
+- Spare conductors and unused cavities (insulated, terminated, or plugged):
 - Notes:
 
 ## Test requirements
 
-- Continuity:
+- Continuity (per-net maximum resistance and test method):
+- Unintended shorts (all isolated net pairs and each net to shield/shell/chassis, limits and method):
 - Pinout verification:
 - Shield / drain verification:
-- Pull-test requirement:
+- Contact seating/secondary-lock inspection procedure:
+- Controlled retention or destructive crimp pull-test requirement, sample basis, force/rate, and governing source:
+- Test requirement IDs, instrument limits, and result-record location:
 - Crimp spec / strip length reference (from the contact application spec):
 - Workmanship / acceptance standard (e.g. IPC/WHMA-A-620 class, or the program/customer equivalent):
 - Additional test requirements:
@@ -44,6 +52,9 @@ This is the blank version of [Exercise 6](../13-hands-on-exercises.md). Fill it 
 - Shield required: yes / no
 - Shield type: braid / foil / drain / combination
 - Shield termination: one end / both ends / 360° backshell / capacitive / other
+- Bond at End A (location, method, hardware, insulation/isolation):
+- Bond at End B (location, method, hardware, insulation/isolation):
+- Signal common / chassis / FE / PE connections or isolation, schematic reference:
 - Connector shell bonded to chassis: yes / no / not applicable
 - EMC requirement or rationale (noise problem, frequency range of concern):
 - Test / verification method:
@@ -81,12 +92,13 @@ Wire colours follow the common A-coded 4-pin convention; confirm pin functions a
 
 - Cable jacket: PUR, Ø ≈ 5–6 mm *(illustrative — must fall inside the gland/clamp range for a field-wireable connector)*
 - Labels: both ends, per drawing
-- Length tolerance: ±25 mm *(illustrative)*
+- Nominal length and end-face datums: TBD; ±25 mm tolerance is illustrative and unusable without those definitions
 - Notes: A-coded is rated ≤ 4 A per contact and ≤ 250 V (IEC 61076-2-101);[^iec101] IP67 applies only when mated and correctly torqued[^m12seal]
 
 ### Test requirements
 
-- Continuity: pin 1→1, 2→2, 3→3, 4→4
+- Continuity: pin 1→1, 2→2, 3→3, 4→4; resistance limit and method TBD
+- Unintended shorts: all other pin pairings and pins to any shell/shield; limits and method TBD
 - Pinout verification: against the schedule above
 - Shield / drain verification: n/a (unshielded); add if a shielded variant is used
 - Workmanship / acceptance: IPC/WHMA-A-620 or the program/customer equivalent — molded cordset, incoming inspection *(illustrative)*

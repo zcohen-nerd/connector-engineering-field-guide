@@ -49,9 +49,9 @@ It depends on contact size, number of loaded contacts, ambient temperature, wire
 
 ### How to read a derating curve
 
-A contact-current derating curve plots the **allowable current per contact** (often as a percent of the single-contact rating) against the **number of energized contacts**, at a stated ambient temperature. To use it: find your loaded-contact count on the x-axis, read the allowable percentage (or current) for your ambient, apply it to every current-carrying contact, and keep a design margin below that.
+Read the axes, legend, and test conditions first. Many curves plot **current against ambient temperature**, with wire gauge, contact population, and loading pattern defining separate curves or fixed test conditions; other charts vary energized-contact count. Match your configuration to the documented conditions, read the applicable limit, and apply the program's design margin. Do not assume loaded-contact count is the x-axis.
 
-*Illustrative only — use the manufacturer's actual curve:* a contact good for its full rating with a single pin energized might be derated to roughly 70–80% in a fully-loaded insert, and lower again at elevated ambient.
+Record the selected curve, axes, loaded-contact pattern, wire gauge, ambient temperature, read-off current, and chosen margin. If no curve covers the configuration, obtain manufacturer guidance or qualification data rather than applying a generic percentage. [Weidmüller's derating explainer](https://www.weidmueller.com/int/products/connectivity/pcb_terminals_and_connectors/derating_curve.jsp) shows a temperature/current presentation.
 
 **Why fully-loaded is worse:** every energized contact dissipates I²R heat, and closely packed contacts warm each other (mutual heating), so the whole insert runs hotter and each contact must carry *less* to stay within its temperature limit. The falloff steepens as the loaded-contact count and ambient rise — which is exactly why "current rating is not one number."
 

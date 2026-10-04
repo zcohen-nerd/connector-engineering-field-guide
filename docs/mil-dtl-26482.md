@@ -45,18 +45,18 @@ A **bayonet-coupling rugged circular** connector family. The coupling is a fast 
 
 ## 5. Series and termination traps
 
-The biggest 26482 trap is treating "Series 1" and "Series 2" as interchangeable. They are not.[^m26482series]
+Separate **mating compatibility** from **contact, tooling, and accessory interchangeability**. Certain Series 1 and Series 2 configurations physically intermate, while their rear hardware and retention systems differ. Check exact parts, arrangements, keys, and the required qualification.[^m26482series]
 
 | | Series 1 | Series 2 |
 |---|---|---|
 | Termination | Solder, or **front-release** crimp variants; older/fixed-contact designs | **Rear-release** crimp, rear-insertable/removable contacts |
 | Field maintenance | Contacts often factory-set; less field-serviceable | Contacts crimped and rear-inserted with standard tooling; repairable from the rear |
 | Temperature class | Generally the lower classes | Generally reaches higher temperature classes |
-| Contacts & tooling | **Not shared with Series 2** | **Not shared with Series 1** |
+| Contacts & tooling | Select by exact contact and release system | Select by exact contact and release system; do not infer interchange from mating compatibility |
 
 :::warning
 
-**Series 1 and Series 2 do not share contacts, crimp dies, or extraction tools.** Front-release and rear-release retention are different architectures. Order the contacts and tooling for the *exact* series you're using, and never assume a "26482 contact" fits your shell. Verify series, contact type, release method, temperature class, and tooling against the datasheet.[^m26482series]
+**Select contacts, dies/positioners, and extraction tools by exact part number and release method.** Front-release and rear-release retention require different service procedures. Some tooling or standardized contacts may overlap across particular product lines; neither universal sharing nor universal incompatibility follows from the family name.[^m26482series]
 
 :::
 
@@ -71,7 +71,7 @@ The biggest 26482 trap is treating "Series 1" and "Series 2" as interchangeable.
 ## 7. Common beginner mistakes
 
 - Assuming **"26482" means sealed** in every condition. Verify environmental class, mated/unmated condition, backshell, grommet, and cable clamp.
-- Assuming **26482 and 38999 accessories/contacts interchange** — they do not.
+- Assuming **26482 and 38999 accessories, contacts, or tools interchange** from the family names alone — verify exact part numbers and application specifications.
 - Assuming **contacts are included**.
 - Mixing **Series 1 and Series 2** contacts/tooling (see above).
 - Reaching for a **bayonet in severe vibration** without confirming the specific connector's retention suitability.
@@ -91,4 +91,4 @@ The values here are **family-level orientation**, not ratings for any exact part
 
 [^m26482]: *MIL-DTL-26482 Series 2* catalog (Aero-Electric / Amphenol) — quick-disconnect 3-point bayonet coupling, ≥ 500 mating cycles, 600 V (Service Class I) / 1000 V (Service Class II), crimp contacts in sizes 20/16/12. <https://www.aero-electric.com/PDF/MIL-DTL-26482%20Series%202.pdf>
 
-[^m26482series]: MIL-DTL-26482 Series 1 vs Series 2 — Series 1 is associated with solder or front-release crimp / older fixed-contact designs; Series 2 uses rear-release, rear-insertable/removable crimp contacts with standard crimp tooling. The two series **do not share contacts, crimp dies, or extraction tools**, and Series 2 generally supports higher temperature classes. ConnectorSupplier / Bishop & Associates, "What are MIL-DTL-26482 connectors?" <https://connectorsupplier.com/what-are-mil-dtl-26482-connectors/>
+[^m26482series]: Amphenol Aerospace, *Connector Reference Guide, Volume 1*, describes Series 2 mating compatibility with PT/Series 1 interfaces while distinguishing construction. This does not authorize arbitrary contact, accessory, or tooling substitution; exact product drawings and application specifications govern. <https://www.amphenol-aerospace.com/blog/amphenol-connector-reference-guide-volume-1>

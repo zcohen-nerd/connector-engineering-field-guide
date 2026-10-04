@@ -34,7 +34,7 @@ But “automotive sealed” is not one universal rating. Verify the exact family
 
 ## Families to start with
 
-- **Deutsch DT / DTM / DTP** — genderless wedgelock housings, hand-crimpable, ubiquitous in off-road and automotive. Rough split: **DTM** for small signal, **DT** for mid-range, **DTP** for power. Full family detail — every series and size, contact lines, tooling, part-number decode — in the [DEUTSCH Deep Dive](../deutsch.md).
+- **Deutsch DT / DTM / DTP** — distinct plug/receptacle housings with wedgelocks, hand-crimpable, ubiquitous in off-road and automotive. Rough split: **DTM** for small signal, **DT** for mid-range, **DTP** for power. Full family detail — every series and size, contact lines, tooling, part-number decode — in the [DEUTSCH Deep Dive](../deutsch.md).
 - **TE AMP Superseal 1.5 / AMPSEAL** — compact sealed inline connectors; AMPSEAL covers higher pin counts.
 - **Molex MX150 / MX150L** — sealed signal-to-power system for industrial/automotive use.
 - **Aptiv (Delphi) Metri-Pack** — long-standing automotive terminal system in sealed and unsealed variants, sized by terminal series (150/280/480/630…).
@@ -102,6 +102,6 @@ A sealed automotive family is *not* a substitute for MIL-DTL-38999 where qualifi
 - A source-controlled **pinout** with cavity assignments, **contact P/Ns**, **seal plugs**, and **wedgelocks** all called out.
 - A [cable drawing](../tools/cable-drawing-template.md), an [ICD entry](../tools/connector-icd-template.md), and a **crimp/assembly note** with the tool and inspection criteria.
 
-The fully worked version of this — requirements through review checklist — is the [Connector Selection Packet](../examples/connector-selection-packet.md).
+An illustrative packet structure — requirements through review checklist, with release fields still open — is the [Connector Selection Packet](../examples/connector-selection-packet.md).
 
 Related: [Sealed automotive families (§3.2)](../03-connector-standards-and-families.md#32-sealed-automotive-connector-families) · [Consumer/hobby vs. production](../12-consumer-hobby-prototype-connectors.md) · [Selection Workflow](../04-connector-selection-workflow.md) · [Practical Checklist](../10-selection-checklist.md).

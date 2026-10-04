@@ -52,7 +52,7 @@ For a step-by-step walkthrough of the most common scenarios, see the [Decision P
 - **Reject / why:** USB connector — wrong ecosystem, not rugged.
 - **Mistakes to avoid:** No termination plan; pigtail shields; can't T-tap a single drop.
 
-*See also: the [Connector Selection Packet](examples/connector-selection-packet.md) — a fully worked CAN + power module interface.*
+*See also: the [Connector Selection Packet](examples/connector-selection-packet.md) — an illustrative CAN + power module architecture and packet structure.*
 
 ## Ethernet in a rugged enclosure
 

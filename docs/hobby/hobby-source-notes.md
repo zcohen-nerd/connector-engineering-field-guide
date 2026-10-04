@@ -10,6 +10,8 @@ sidebar_label: Hobby Source Notes
 
 The hobby track follows the same transparency rules as the rest of the site (see the main [Source Notes dashboard](../appendix/source-notes.md) and the [source hierarchy](../06-reading-datasheets.md)): claims are sourced, marked as judgment, or explicitly flagged as needing a source. Clone and marketplace parts make this discipline *more* important in hobby work, not less.
 
+The [October 2026 correction record](../appendix/source-notes.md#content-corrections-2026-10-04) distinguishes claim verification from source presence. The corrections include servo reversal, barrel dimensions, ferrule applicability, USB-C port roles, genuine 2.54 mm JST families, and low-level contact guidance. Historical deferrals below remain evidence gaps; they are not verified claims.
+
 ## Verified / source-backed
 
 Only what is actually backed by sources present in this repo:
@@ -60,7 +62,7 @@ Typical hobby usage, not design ratings. Anywhere these appear they carry a *ver
 - LED connector current assumptions and power-injection sizing
 - Every marketplace kit claim (series, pitch, "waterproof," "high current")
 
-## Needs source before hobby v1.0
+## Open sourcing work and historical v1.0 dispositions
 
 Source targets tracked to closure. Rows marked **Closed** are done — the citations now exist in the repo at the locations named; everything else remains honestly open.
 
@@ -98,6 +100,8 @@ The editorial roadmap is split into what is already published and what still nee
 - **Anderson Powerpole** — PP15/45 configuration-specific housing, plating, cycle, and current figures documented; PP75/PP180 ladder remains partly distributor-sourced.
 
 ### Planned deep pages and depth work
+
+Prioritize one completed reference interface and the existing exercise review rubric before adding more family pages. That reference must close exact parts, numbered drawings, current/thermal assumptions, return/shield paths, mating risks, and verification evidence. The current examples remain architecture studies.
 
 1. **Grove ecosystem** — a dedicated page covering the 2.0 mm connector and port-type pinout variation.
 2. **JST-RCY** — the red 2-pin battery-pair family and its lookalikes.

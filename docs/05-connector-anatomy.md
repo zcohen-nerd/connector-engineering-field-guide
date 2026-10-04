@@ -49,7 +49,7 @@ Pin/socket gender is *electrical*. Plug/receptacle is *mechanical*. Do not assum
 |---|---|---|---|
 | Gold (thicker, e.g. 50 µin class[^goldplate]) | Low-current signals, mil-spec, dry circuits | Excellent oxidation resistance, low contact resistance | Cost; wears at very high cycle counts |
 | Gold flash (thin) | Commercial, moderate signal | Lower cost; suitable for some commercial signal applications | Thin flash wears through with cycling; not equivalent to thicker gold for high-cycle or harsh-service dry-circuit applications |
-| Tin / tin-lead | Power / internal harness contacts | Inexpensive, good for larger current | Common for power/internal use but more vulnerable to fretting and oxidation in low-level/dry circuits. **Pure tin** can raise tin-whisker concerns in some applications; **tin-lead** and other finishes have different tradeoffs and may be restricted by environmental/regulatory requirements. Verify plating requirements for the program. |
+| Tin / tin-lead | Power / internal harness contacts | Inexpensive, good for larger current | Can serve dry circuits when fretting is controlled; force, wipe, lubrication where specified, and mechanical stability determine suitability. **Pure tin** can raise tin-whisker concerns in some applications; **tin-lead** and other finishes have different tradeoffs and may be restricted by environmental/regulatory requirements. Verify plating requirements for the program. |
 | Silver | High-current power, RF | Excellent conductivity | Can tarnish or form sulfide films that increase contact resistance depending on environment, contact force, and wiping action |
 | Nickel | Base layer, high-temp | Diffusion barrier, heat resistant | Higher contact resistance than gold; hard |
 
@@ -65,9 +65,9 @@ When the load is millivolts and milliamps rather than amps, plating stops being 
 | PCB through-hole / SMT | Solder tail to board | Board-mount headers, edge connectors | Board-integrated; reflow/hand solder; no field repair |
 | Screw / cage clamp | Mechanical wire capture | Terminal blocks, panel wiring | Field-reworkable, no tooling; retention depends on the system (see [§12.3](12-consumer-hobby-prototype-connectors.md)) |
 
-**One conductor per crimp barrel.** A crimp is qualified as a system — contact, wire size, insulation range, tooling — for *one* conductor, and it works by compressing that qualified fill into a gas-tight joint. Doubling two wires into one barrel is a field improvisation the qualified data doesn't cover: the fill is wrong, the joint never forms gas-tight, one wire is typically left loose, and a wire seal sized for one insulation OD is defeated. Some manufacturers qualify and publish specific dual-wire combinations for specific terminals — that documentation, on the drawing, is the only thing that makes two wires legitimate. Otherwise a branch is designed as a **splice or a multi-wire-rated terminal**, not improvised at the contact ([the hobby crimping page](hobby/crimping.md) carries the mechanism and sources; [Red Flags §11](11-red-flags.md) carries the consequence).
+**One conductor per crimp barrel.** A crimp is qualified as a system — contact, wire size, insulation range, tooling — for *one* conductor, and it works by compressing that qualified fill into a gas-tight joint. Doubling two wires into one barrel is a field improvisation the qualified data doesn't cover: compression and retention are unverified, one conductor can remain loose, and a wire seal intended for one insulation OD may not seal the pair. Some manufacturers qualify and publish specific dual-wire combinations for specific terminals — that documentation, on the drawing, is the only thing that makes two wires legitimate. Otherwise a branch is designed as a **splice or a multi-wire-rated terminal**, not improvised at the contact ([the hobby crimping page](hobby/crimping.md) carries the mechanism and sources; [Red Flags §11](11-red-flags.md) carries the consequence).
 
-**Front-release vs. rear-release** describes how a removable crimp contact is retained in the insert and which side the tool works from. *Rear-release* contacts (the common [MIL-DTL-38999](07-mil-dtl-38999.md) arrangement) are held by a retention clip in the insert; the insertion/extraction tool enters from the **rear** (wire side), and the contact is installed and removed rearward — convenient for field repair without disturbing the mating face. *Front-release* contacts are unlatched by a tool entering the **mating face**, though the contact is still withdrawn out the rear. Match the tool to the retention type: the wrong tool, or working from the wrong end, bends the retention fingers, damages the insert, or leaves a contact unretained.
+**Front-release vs. rear-release** describes how a removable crimp contact is retained in the insert and which side the tool works from. *Rear-release* contacts (the common [MIL-DTL-38999](07-mil-dtl-38999.md) arrangement) are held by a retention clip in the insert; the insertion/extraction tool enters from the **rear** (wire side), and the contact is inserted from the rear and withdrawn toward the rear — convenient for field repair without disturbing the mating face. *Front-release* contacts are unlatched by a tool entering the **mating face**, though the contact is still withdrawn out the rear. Match the tool to the retention type: the wrong tool, or working from the wrong end, bends the retention fingers, damages the insert, or leaves a contact unretained.
 
 ## 5.3 Jam nut vs. flange mount
 
@@ -78,13 +78,13 @@ When the load is millivolts and milliamps rather than amps, plating stops being 
 
 Solder cups are often dismissed as "skill-dependent," but here's the actual decision content:
 
-- **When solder cups are correct:** very low volume, lab/prototype rugged assemblies, hermetic connectors (where solder is part of the seal), or arrangements where crimp tooling cost can't be justified.
-- **What a good cup joint looks like:** wire fully bottomed in the cup, solder wetted to a concave fillet, no wicking up the stranding past the strip length, no cold/grainy surface, insulation clearance correct.
+- **When solder cups are correct:** very low volume, lab/prototype rugged assemblies, hermetic connectors with solder-cup terminations (the specified glass-to-metal or ceramic-to-metal feedthrough forms the hermetic barrier; the wire solder joint does not), or arrangements where crimp tooling cost can't be justified.
+- **What a good cup joint looks like:** wire fully bottomed in the cup, solder wetted to a concave fillet, no wicking up the stranding past the strip length, wetting and fillet shape acceptable for the specified solder alloy and workmanship criteria (a matte lead-free joint is not automatically defective), insulation clearance correct.
 - **Common defects:** cold joints from insufficient heat; solder wicking that stiffens the wire and moves the flex point to a stress riser; overheating that deforms the insert and shifts contact position; flux residue degrading insulation resistance.
 
 :::warning
 
-Solder cups have no built-in strain relief. The backshell cable clamp is doing all the mechanical work — a solder-cup assembly without a proper clamp will fatigue and crack at the cup.
+Solder cups do not provide cable strain relief. A suitable backshell clamp or other specified cable restraint must keep cable loads and repeated bending away from the soldered termination.
 
 :::
 
@@ -100,6 +100,10 @@ In sealed circular connectors, each contact cavity has a wire seal (grommet) siz
 
 - **Ground-first / power-last sequencing:** some connector families and contact systems support mating sequence through staggered (longer/shorter) contacts or specialized inserts, so that ground/chassis contacts mate first and break last, and power mates last (or signal before power, depending on architecture). This prevents the electronics from being powered before a ground reference exists, which can cause latch-up, ground bounce, or resets. Use it where the design requires it, but verify that staggered or sequenced contacts are actually available for your exact connector family, shell, and arrangement — it is not universal.
 - **Blind mate:** when a module plugs into a chassis without the operator seeing the connector, you need a lead-in chamfer, connector float (radial compliance so the connector self-aligns), and pin-length stagger so misalignment damages nothing. Flange mounts with float are preferred over jam nuts here.
+
+### Check each sealing boundary
+
+Record the mating interface, rear wire or cable entry, and panel/enclosure penetration separately, in both mated and unmated states. Integral rear grommets can seal wires without an environmental backshell; molded cordsets and glands use other constructions. A dust cover is not necessarily a water-sealing cap, and an exposed receptacle face is not automatically an open path through the enclosure. Verify the complete assembly's tested configuration.
 
 ## 5.7 EMI, shielding, and bonding
 

@@ -41,7 +41,9 @@ Per the crimp design package §4 says the drawing should carry:
 
 From the [§7.9 mistakes table](../07-mil-dtl-38999.md) and [What People Forget](../what-people-forget.md):
 
-- [ ] **Backshell** present, correct P/N, assembled per its instructions — strain relief, rear seal, shield termination all depend on it
+- [ ] **Required rear hardware** present and correct — verify strain relief and shield termination, and inspect integral rear wire seals separately from any backshell/gland
+- [ ] **Contact seating** verified at each cavity using the manufacturer's approved seating check; no forced or displaced contacts
+- [ ] **Secondary locks / TPA / wedgelocks** installed and fully engaged per the exact housing instructions
 - [ ] **Strain relief** engaged on the cable, not on individual conductors
 - [ ] **Shield termination** matches the drawing's stated strategy (360° / pigtail / isolated — as documented, not as improvised)
 - [ ] **Unused cavities** carry sealing plugs where the drawing requires them
@@ -56,9 +58,12 @@ From the [§7.9 mistakes table](../07-mil-dtl-38999.md) and [What People Forget]
 - [ ] **Labels / identification** present and matching the rev-controlled labeling scheme ([§10](../10-selection-checklist.md))
 - [ ] Overall length and breakout dimensions within drawing tolerance
 
+A gentle seating check confirms latch engagement; it is not a quantified retention test or proof of crimp strength. Perform controlled retention tests only at the specified force and procedure, and destructive crimp pull tests on the designated samples. Do not destructively test a deliverable harness by default.
+
 ## 5. Electrical verification
 
 - [ ] **Continuity / pinout** verified against the ICD or wiring schedule — per the drawing's stated verification method ([cable drawing template](cable-drawing-template.md))
+- [ ] **No unintended shorts** between all electrically isolated nets, and between nets and shield/shell/chassis; allowed bonds explicitly excluded, method and limits defined, connected electronics protected
 - [ ] **Shield / drain continuity** verified where the drawing requires it
 - [ ] **Insulation resistance / hipot** performed *only if and as the program/drawing requires* — record the requirement source, parameters, and result; this checklist asserts no test values
 

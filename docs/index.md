@@ -14,6 +14,8 @@ Two guides, one site. Pick the one that matches what you're building. They cross
 
 :::note[v1.0 — Source-Verified Release]
 
+“Source-Verified Release” is the historical v1.0 release name, not a claim that every source interpretation or example is complete. Deferred items remain unverified; see the [content correction record](appendix/source-notes.md#content-corrections-2026-10-04).
+
 The source-verification milestone shipped with v1.0; the guide is continuously reviewed after it. [Source Notes](appendix/source-notes.md) is the standing record of what is verified, what is engineering judgment, and what you still owe your own hardware. Corrections — with sources — are welcome.
 
 :::

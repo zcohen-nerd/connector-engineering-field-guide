@@ -58,7 +58,7 @@
   <text x="380" y="299" text-anchor="middle" font-size="12" font-weight="bold" fill="#0b7e96">re-measure the baseline set</text>
 
   <rect x="505" y="276" width="210" height="38" rx="6" fill="#cdeef6" stroke="#0b7e96" stroke-width="2"/>
-  <text x="610" y="299" text-anchor="middle" font-size="12" font-weight="bold" fill="#0b7e96">re-measure — IR first</text>
+  <text x="610" y="299" text-anchor="middle" font-size="12" font-weight="bold" fill="#0b7e96">re-measure per approved order</text>
 
   <!-- converge arrows -->
   <line x1="150" y1="314" x2="322" y2="352" stroke="#102040" stroke-width="2" marker-end="url(#qualArr)"/>

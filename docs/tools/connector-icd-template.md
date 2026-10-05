@@ -36,6 +36,10 @@ This is the blank version of [Exercise 7](../engineering/guide/13-hands-on-exerc
 - Cross-mating review reference, including alternate keys and electrical consequences:
 - Reserved positions, installed contacts, and sealing-plug treatment:
 
+![The same fictional keyed four-contact connector from its mating face and wire-entry side, with mirrored positions but unchanged contact numbers.](/img/diagrams/connector-pinout-views.svg)
+
+*One connector viewed from opposite ends, with the key held at the top. The numbering is fictional; check each mating half against its own manufacturer drawing rather than copying this layout.*
+
 | Pin | Signal | Source / load | Notes |
 | --- | --- | --- | --- |
 | TBD | TBD | TBD | TBD |

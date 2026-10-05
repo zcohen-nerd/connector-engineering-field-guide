@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="690" viewBox="0 0 720 690" role="img" aria-labelledby="barrel-title barrel-desc" font-family="Arial, Helvetica, sans-serif" fill="#102040">
+  <title id="barrel-title">Barrel plugs: the center contact must match</title>
+  <desc id="barrel-desc">Three enlarged sectional sketches of a barrel connector's central socket and jack pin. A documented matching nominal 2.1 mm pair makes contact. A 2.5 mm inner-diameter plug on a 2.1 mm-class jack may insert but leave unreliable contact. A 2.1 mm inner-diameter plug is normally blocked by a 2.5 mm-class jack pin. Only the center interface is shown; outer sleeve, insulation and retention details are omitted. Nominal classes are not exact pin dimensions.</desc>
+  <rect x="1" y="1" width="718" height="688" rx="10" fill="#fff" stroke="#d0d7de"/>
+  <text x="28" y="36" font-size="23" font-weight="bold">Barrel plugs: the center contact must match</text>
+  <text x="28" y="64" font-size="16" fill="#3b4453">Enlarged central socket / jack-pin sections • outer sleeve omitted</text>
+  <rect x="20" y="86" width="680" height="154" rx="8" fill="#f5f8fa" stroke="#d0d7de"/>
+  <text x="36" y="113" font-size="18" font-weight="bold">Matched documented pair</text>
+  <path d="M 72 174 H 307 V 182 H 87 V 204 H 307 V 212 H 72 Z" fill="#0b7e96" stroke="#102040" stroke-width="1.5"/>
+  <path d="M 351 185 H 133 L 125 190 V 196 L 133 201 H 351 Z" fill="#102040"/>
+  <path d="M 165 182 L 172 185 L 179 182 M 225 204 L 232 201 L 239 204" stroke="#0b7e96" stroke-width="3" fill="none"/>
+  <text x="76" y="141" font-size="15" >Plug: 2.1 mm ID</text>
+  <text x="393" y="141" font-size="15" >Jack: 2.1 mm class</text>
+  <text x="393" y="182" font-size="16" >Contacts meet in this example.</text>
+  <text x="393" y="209" font-size="16" >Verify both mating drawings.</text>
+  <rect x="20" y="256" width="680" height="154" rx="8" fill="#f5f8fa" stroke="#d0d7de"/>
+  <text x="36" y="283" font-size="18" font-weight="bold">Larger socket on a smaller pin</text>
+  <path d="M 72 335 H 307 V 343 H 87 V 383 H 307 V 391 H 72 Z" fill="#0b7e96" stroke="#102040" stroke-width="1.5"/>
+  <path d="M 351 355 H 133 L 125 360 V 366 L 133 371 H 351 Z" fill="#102040"/>
+  <text x="76" y="311" font-size="15" >Plug: 2.5 mm ID</text>
+  <text x="393" y="311" font-size="15" >Jack: 2.1 mm class</text>
+  <text x="393" y="352" font-size="16" >May insert; contact can be</text>
+  <text x="393" y="379" font-size="16" >loose or intermittent.</text>
+  <path d="M 205 351 V 345 M 200 351 H 210 M 200 345 H 210" stroke="#102040" stroke-width="1.5"/>
+  <rect x="20" y="426" width="680" height="154" rx="8" fill="#f5f8fa" stroke="#d0d7de"/>
+  <text x="36" y="453" font-size="18" font-weight="bold">Smaller socket blocked by a larger pin</text>
+  <path d="M 72 514 H 255 V 522 H 87 V 544 H 255 V 552 H 72 Z" fill="#0b7e96" stroke="#102040" stroke-width="1.5"/>
+  <path d="M 351 518 H 299 L 291 523 V 543 L 299 548 H 351 Z" fill="#102040"/>
+  <text x="76" y="481" font-size="15" >Plug: 2.1 mm ID</text>
+  <text x="393" y="481" font-size="15" >Jack: 2.5 mm class</text>
+  <text x="393" y="522" font-size="16" >Normally will not fit.</text>
+  <text x="393" y="549" font-size="16" font-weight="bold">Do not force.</text>
+  <path d="M 282 573 H 246 M 254 565 L 246 573 L 254 581" fill="none" stroke="#102040" stroke-width="2"/>
+  <text x="28" y="633" font-size="16" >A shared 5.5 mm outer-diameter label does not establish compatibility.</text>
+  <text x="28" y="661" font-size="15" fill="#3b4453">Schematic, not to scale. Size classes are not exact pin dimensions.</text>
+</svg>

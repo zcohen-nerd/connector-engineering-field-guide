@@ -48,6 +48,10 @@ For a pressure or leak-tight boundary, also specify differential pressure/depth,
 - **Internal termination** — how the circuit continues inside the box.
 - **Wire seal** sizing and **unused-cavity plugs**.
 
+![Separate generic sectional sketches identify the mating seal, rear-entry seal, and panel gasket, followed by an unmated face and possible environmental cap.](/img/diagrams/connector-sealing-boundaries.svg)
+
+*These are separate boundaries to review, not evidence of an IP rating. Verify rear entries on both halves and the complete assembly’s tested mated, unmated, or capped configuration. An exposed face does not by itself establish a leak path through the enclosure.*
+
 ## Parts people forget
 
 - The **panel gasket / O-ring**.

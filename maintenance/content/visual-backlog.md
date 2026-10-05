@@ -1,8 +1,8 @@
-# Hobby Track — Visual Backlog
+# Diagram Backlog — Hobby and Engineering Tracks
 
-> Line-art backlog for the hobby track. For the site-wide **photograph** wishlist (where real photos beat SVGs, with sourcing status), see [photo-backlog.md](photo-backlog.md).
+> Line-art backlog for both tracks. For the site-wide **photograph** wishlist (where real photos beat SVGs, with sourcing status), see [photo-backlog.md](photo-backlog.md).
 
-Prioritized visuals for the hobby track (and one shared item). Style: match the existing simple line-art SVGs under `static/img/diagrams/` (white card, `#d0d7de` border, `#102040` navy line work, Arial). Added in v0.9; items 1–2 shipped in the same pass.
+Prioritized visuals for both tracks. Style: match the existing simple line-art SVGs under `static/img/diagrams/` (white card, `#d0d7de` border, `#102040` navy line work, Arial). Added in v0.9; items 1–2 shipped in the same pass.
 
 | # | Visual | Status | Notes |
 |---|---|---|---|
@@ -17,6 +17,9 @@ Prioritized visuals for the hobby track (and one shared item). Style: match the 
 | 8 | Contact-interface film sketch (shared item, engineering track) | **Done (2026-08)** — `contact-interface-films.svg` | Two contact cross-sections: tin with oxide film + fretting debris vs. gold metal-to-metal a-spots, with the never-mate-gold-to-tin footer; embedded in `docs/engineering/topics/low-level-signal-contacts.md` §1 |
 | 9 | Qualification-sequence flow sketch (engineering track) | **Done (2026-08)** — `qualification-sequence.svg` | Config+FAI → baseline electricals → parallel example groups → re-measure → evidence record, with the "shape only — the governing spec's tables set the real sequences" footer; embedded in `docs/tools/connector-qualification-template.md` §5 |
 | 10 | Lifecycle-state flow sketch (engineering track) | **Done (2026-08)** — `lifecycle-states.svg` | Active → NRND → EOL/LTB → obsolete with the forced decision under each state, the customers-of-record callout, and a time axis; embedded in `docs/engineering/topics/lifecycle-and-procurement.md` §1 |
+| 11 | Pinout viewing orientation (shared templates) | **Done (2026-10-05)** — `connector-pinout-views.svg` | Fictional keyed connector seen from mating face and wire-entry side; embedded in the ICD and cable-drawing templates |
+| 12 | Three sealing boundaries (engineering track) | **Done (2026-10-05)** — `connector-sealing-boundaries.svg` | Separate mating, rear-entry, and panel seals plus an unmated/capped check; embedded in Connector Anatomy and the sealed-enclosure decision path |
+| 13 | Barrel-plug mismatch cutaways (hobby track) | **Done (2026-10-05)** — `hobby-barrel-fit.svg` | Enlarged center-contact sections for a documented match and both 2.1/2.5 mm nominal-class mismatch directions; embedded in Barrel Jacks |
 
 ## Images pass (2026-07)
 

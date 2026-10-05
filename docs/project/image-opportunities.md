@@ -28,6 +28,16 @@ Treat SVG labels, alt text, and captions as technical claims. When a related par
 
 The original-photo opportunities below remain open; these schematics do not replace hardware identification or workmanship photographs.
 
+## Added photographs (2026-10-05)
+
+- **PH-style board header:** licensed right-angle header photo on [JST-PH](../hobby/jst-ph.md#how-to-identify-it). The battery-pigtail/board-port pair remains open.
+- **Housings, contacts, and tooling:** licensed Molex disk-drive power flat-lay on [Buying Mating Parts](../hobby/buying-mating-parts.md#real-housings-contacts-and-tooling). A board header and contacts on carrier strip remain open.
+- **Braid and foil layers:** licensed cut-cable photo in the [shielding guide](../engineering/topics/shielding-and-grounding.md#6-foil-braid-drain-wire-and-shield-coverage). It does not replace the real 360°/pigtail comparison below.
+- **Thermal damage:** licensed ferrule macro on [Red Flags](../engineering/guide/11-red-flags.md#what-thermal-damage-looks-like). Bent-pin, thread-damage, corrosion, and open-barrel inspection sets remain open.
+- **Micro-D scale comparison:** existing licensed Micro-D/DE-9 photo reused on [Standards and Families](../engineering/guide/03-connector-standards-and-families.md#31-at-a-glance-family-comparison).
+
+Provenance, license, use, and modifications are recorded in [Image Attributions](../shared/image-attributions.md).
+
 ## MIL-DTL-26482 bayonet pair
 
 **Page / section:** [MIL-DTL-26482](../engineering/families/mil-dtl-26482.md), §1 and §5  

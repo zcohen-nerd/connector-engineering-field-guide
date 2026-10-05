@@ -59,6 +59,10 @@ Two specific clarifications worth internalizing:
 
 *The D-sub everyone has met: a DE-9 female, positions numbered. Polarized trapezoid shell, rack-and-panel — and non-environmental in standard form. Photo: [FireEmerald](https://commons.wikimedia.org/wiki/File:D-SUB_DE-9_FEMALE_SOLDER_CONNECTOR_NUMBERED.JPG), CC BY-SA 4.0, via Wikimedia Commons.*
 
+![A Micro-D connector beside a larger DE-9 connector, showing their different shell and contact sizes.](/img/photos/micro-d-and-de9-comparison.jpg)
+
+*Micro-D beside DE-9: the compact interface is easier to recognize with a familiar D-sub alongside it. The comparison does not establish a particular part's rating or qualification. Photo: [Andree.sk](https://commons.wikimedia.org/wiki/File:Micro-D_and_Mini-D_connectors.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons. Existing site asset reused without new changes.*
+
 ## 3.2 Sealed automotive connector families
 
 Between hobby connectors (JST, Dupont) and mil-spec circulars (38999) sits a cost-effective, sealed, crimp-based ecosystem built for vehicles — often the right answer for makers and robotics teams going rugged on a budget. These are wire-to-wire / panel crimp systems; verify the exact series datasheet.

@@ -23,6 +23,12 @@ You've identified the connector. Now you need the *other half* — and this is w
 - **Buy samples first, then spares.** Confirm mating on real parts before the bulk order, and keep spare mating pairs — the connector you can't re-buy mid-project is the one that breaks.
 - **Record what you bought** — supplier, series, part numbers for housing/contacts. Future-you re-ordering "that white connector" will be grateful.
 
+## Real housings, contacts, and tooling
+
+![White mating connector housings, loose male and female crimp terminals, prepared wires, and a hand crimp tool arranged on a bench.](/img/photos/molex-housings-contacts-tool.jpg)
+
+*Separate housings, terminals, and tooling in a Molex disk-drive power connector system. The loose contacts make the separate-purchase rule visible; these are not Micro-Fit or JST parts. Match your own family's drawings and tool instructions. Photo: [Inaxeon](https://commons.wikimedia.org/wiki/File:Molexddpcsfamily.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons. Resized and JPEG re-encoded; metadata stripped.*
+
 :::caution
 
 "JST-compatible," "for JST," and "JST-style" mean *not genuine JST* — which can be fine for a prototype, as long as you chose it on purpose and tested the mate. See [JST Is Not One Connector](jst-is-not-one-connector.md).

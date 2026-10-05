@@ -20,6 +20,9 @@ Prioritized visuals for both tracks. Style: match the existing simple line-art S
 | 11 | Pinout viewing orientation (shared templates) | **Done (2026-10-05)** — `connector-pinout-views.svg` | Fictional keyed connector seen from mating face and wire-entry side; embedded in the ICD and cable-drawing templates |
 | 12 | Three sealing boundaries (engineering track) | **Done (2026-10-05)** — `connector-sealing-boundaries.svg` | Separate mating, rear-entry, and panel seals plus an unmated/capped check; embedded in Connector Anatomy and the sealed-enclosure decision path |
 | 13 | Barrel-plug mismatch cutaways (hobby track) | **Done (2026-10-05)** — `hobby-barrel-fit.svg` | Enlarged center-contact sections for a documented match and both 2.1/2.5 mm nominal-class mismatch directions; embedded in Barrel Jacks |
+| 14 | Shield termination comparison (engineering track) | **Done (2026-10-05)** — `shield-termination-comparison.svg` | Local 360° braid bond versus a pigtail; embedded in Connector Anatomy |
+| 15 | DT/DTM/DTP contact-removal sequence | **Done (2026-10-05)** — `deutsch-contact-removal.svg` | Face release, rear withdrawal, and rear-seal restraint; embedded in the DEUTSCH deep dive |
+| 16 | Power return / signal reference / shield-chassis roles | **Done (2026-10-05)** — `return-reference-shield.svg` | Independent functional sketches; embedded in the ICD template and selection packet |
 
 ## Images pass (2026-07)
 

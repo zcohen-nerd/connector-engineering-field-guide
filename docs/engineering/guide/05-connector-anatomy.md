@@ -123,9 +123,15 @@ Connector shielding is a *system* property: it depends on maintaining a continuo
 
 *The rear hardware has two jobs: bond the shield 360° into the shell, and carry cable load through the clamp and backshell so the contacts never see it.*
 
+![A circumferential braid-to-backshell bond and a pigtail-to-lug bond are compared at one enclosure entry, with a 360-degree end-view inset.](/img/diagrams/shield-termination-comparison.svg)
+
+*Local termination geometry, not a rule about which cable ends to bond. The circumferential connection avoids the pigtail’s narrow inductive path; shell joints, finishes, and the enclosure bond still require verification. Glenair describes the same high-frequency limitations of pigtails and the benefit of circumferential termination.[^shieldgeometry]*
+
 **Why a pigtail is bad:** it turns the shield connection into a small series **inductor**, and inductive impedance rises with frequency (Z ≈ 2πfL). The standard EMC rule of thumb is ~10 nH *per centimeter* of pigtail (see e.g. Ott, *Electromagnetic Compatibility Engineering*) — so even a 1 cm pigtail is ≈ 2 Ω at 30 MHz and tens of ohms by a few hundred MHz, and real pigtails are usually longer. That impedance lets shield current develop a voltage and re-radiate — the mechanism behind the guide's repeated "pigtails are inductive / pigtails radiate" caution.
 
 ## Sources
+
+[^shieldgeometry]: Glenair, *StarShield — Zero Length Shield Termination*, manufacturer explanation of pigtail/drain-wire transfer impedance, exposed conductor length, and 360° shield-to-backshell connections. The diagram is an original generic comparison, not a StarShield assembly drawing. <https://www.glenair.com/starshield/>
 
 [^goldplate]: The "50 µin class" figure is the common mil-contact standard: Glenair's MIL-DTL-38999 contact materials specification lists pin/socket contacts as 50 microinches minimum gold per ASTM B488 over 50–100 µin nickel per QQ-N-290; Glenair's MIL-DTL-83513 Micro-D materials spec states the same 50 µin minimum gold over nickel underplate. <https://www.glenair.com/mil-dtl-38999/pdf/contact-performance-spec.pdf>
 

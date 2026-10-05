@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="650" viewBox="0 0 720 650" role="img" aria-labelledby="shield-bond-title shield-bond-desc" font-family="Arial, Helvetica, sans-serif" fill="#102040">
+  <title id="shield-bond-title">Compare shield terminations</title>
+  <desc id="shield-bond-desc">Two generic local shield-to-enclosure bonds. The first keeps cable braid connected around its circumference through a band or spring, conductive backshell and shell, and enclosure bond; an end-view inset shows the circumferential contact. The second gathers the shield into a pigtail or drain wire to a lug, leaving an inductive narrow connection. This compares local termination geometry, not a universal choice of one-end or both-end bonding.</desc>
+  <rect x="1" y="1" width="718" height="648" rx="10" fill="#fff" stroke="#d0d7de"/>
+  <text x="28" y="36" font-size="24" font-weight="bold">Compare shield terminations</text>
+  <text x="28" y="64" font-size="16" fill="#3b4453">Same local bonding task • different connection geometry</text>
+  <rect x="20" y="86" width="680" height="232" rx="8" fill="#f5f8fa" stroke="#d0d7de"/>
+  <rect x="20" y="334" width="680" height="232" rx="8" fill="#f5f8fa" stroke="#d0d7de"/>
+  <text x="36" y="115" font-size="20" font-weight="bold">360° circumferential bond</text>
+  <path d="M 286 158 H 470 V 254 H 286 Z" fill="#e9edf1" stroke="#102040" stroke-width="3"/>
+  <rect x="470" y="148" width="17" height="116" fill="#d0d7de" stroke="#102040" stroke-width="2"/>
+  <path d="M 44 180 H 164 V 232 H 44" fill="#e9edf1" stroke="#102040" stroke-width="2"/>
+  <path d="M 70 188 H 286 M 70 224 H 286" stroke="#0b7e96" stroke-width="6"/>
+  <path d="M 70 199 H 434 M 70 213 H 434" stroke="#102040" stroke-width="2"/>
+  <text x="72" y="265" font-size="15" >Cable braid</text>
+  <text x="322" y="279" font-size="15" >Backshell / shell</text>
+  <text x="494" y="257" font-size="15" >Enclosure</text>
+  <ellipse cx="276" cy="206" rx="12" ry="32" fill="none" stroke="#0b7e96" stroke-width="8"/>
+  <path d="M 276 176 V 158 H 470" stroke="#0b7e96" stroke-width="5" fill="none"/>
+  <path d="M 220 147 H 257 L 273 174" fill="none" stroke="#102040" stroke-width="1.5"/>
+  <circle cx="615" cy="200" r="37" fill="#fff" stroke="#102040" stroke-width="2"/>
+  <circle cx="615" cy="200" r="27" fill="none" stroke="#0b7e96" stroke-width="7"/>
+  <circle cx="606" cy="193" r="4" fill="#102040"/><circle cx="624" cy="193" r="4" fill="#102040"/><circle cx="615" cy="210" r="4" fill="#102040"/>
+  <text x="88" y="147" font-size="15" >Band / spring</text>
+  <text x="615" y="151" font-size="15" text-anchor="middle">End-view inset</text>
+  <text x="36" y="303" font-size="16" >Broad bond around the braid; continuity must continue into the enclosure.</text>
+  <text x="36" y="363" font-size="20" font-weight="bold">Pigtail / drain-wire bond</text>
+  <path d="M 286 406 H 470 V 502 H 286 Z" fill="#e9edf1" stroke="#102040" stroke-width="3"/>
+  <rect x="470" y="396" width="17" height="116" fill="#d0d7de" stroke="#102040" stroke-width="2"/>
+  <path d="M 44 428 H 164 V 480 H 44" fill="#e9edf1" stroke="#102040" stroke-width="2"/>
+  <path d="M 70 436 H 230 M 70 472 H 230" stroke="#0b7e96" stroke-width="6"/>
+  <path d="M 70 447 H 434 M 70 461 H 434" stroke="#102040" stroke-width="2"/>
+  <text x="72" y="513" font-size="15" >Cable braid</text>
+  <text x="322" y="527" font-size="15" >Backshell / shell</text>
+  <text x="494" y="505" font-size="15" >Enclosure</text>
+  <path d="M 230 436 V 392 H 416 V 406" fill="none" stroke="#0b7e96" stroke-width="4"/>
+  <circle cx="416" cy="406" r="7" fill="#fff" stroke="#0b7e96" stroke-width="3"/>
+  <text x="264" y="382" font-size="15" >Pigtail / drain wire</text>
+  <text x="522" y="421" font-size="16" font-weight="bold">Narrow bond</text>
+  <text x="522" y="447" font-size="16" >adds series</text>
+  <text x="522" y="473" font-size="16" >inductance.</text>
+  <text x="36" y="551" font-size="16" >Inductive impedance rises with frequency: |ZL| = 2πfL (lumped model).</text>
+  <text x="28" y="601" font-size="16" >Choose bond locations and methods for the system’s EMC requirements.</text>
+  <text x="28" y="628" font-size="15" fill="#3b4453">Schematic, not to scale. This is not a one-end / both-end bonding rule.</text>
+</svg>

@@ -58,10 +58,14 @@ With the circuit de-energized and the connector unmated, follow the exact housin
 
 1. Remove the secondary wedgelock from the mating face using the specified method.
 2. From that face, release the contact's locking finger with the approved tool.
-3. Withdraw the contact and wire from the rear without forcing the finger or seal.
+3. Hold the rear seal in place while withdrawing the contact and wire from the rear, without forcing the finger or seal.[^dtremoval]
 4. Inspect the parts, reinstall the contact until the primary latch engages, perform the specified seating check, and reinstall the wedgelock before service.
 
 Provide access to **both the mating face and wire side**. Do not insert a 38999-style rear-release sleeve into a DT housing. This sequence is specific to DT/DTM/DTP; select tools and instructions by exact series and housing.[^dtservice]
+
+![Three conceptual cavity sections show mating-face wedgelock removal, front-actuated release of the primary locking finger, and rearward contact withdrawal while holding the rear seal in place.](/img/diagrams/deutsch-contact-removal.svg)
+
+*The orange shape represents the removed wedgelock; teal identifies the released finger and rear seal. The dashed finger is its retained position. These are original conceptual sections, not housing or tool drawings. TE’s removal instructions distinguish pin and socket wedgelock methods and require the rear seal to be held in place during withdrawal. Match the exact housing, contact, and tool instructions.[^dtremoval]*
 
 ## 3. Contact sizes and current across the system
 
@@ -194,3 +198,5 @@ Every figure on this page is a family-level orientation value quoted from public
 [^atseries]: Amphenol Sine Systems AT / ATM / ATP / AHD series — marketed as intermateable, interchangeable equivalents of DEUTSCH DT / DTM / DTP / HD respectively; verify contact, seal, and tooling compatibility for any mixed-vendor interface against both manufacturers' documentation. <https://www.amphenol-sine.com/atm-series>, <https://www.chiefenterprises.com/chief-blog/are-amp-and-deutsch-connectors-interchangeable/>
 
 [^dtservice]: TE/DEUTSCH, *Industrial Product Catalog*, DT/DTM/DTP assembly and removal instructions, printed pp. 10–11 (manufacturer-authored, distributor-hosted copy). Remove the mating-face wedge, release the locking finger, then withdraw the contact rearward. <https://asset.conrad.com/media10/add/160267/c1/-/en/000737864IN01/information-737864-te-connectivity-1011-026-0205-rundstecker-halteclip-serie-rundsteckverbinder-dt-1-st.pdf>
+
+[^dtremoval]: TE Connectivity, *DEUTSCH Removal Tool DT-RT1 for Front-Release Connectors*, instruction sheet 408-151008 Rev B (22 January 2015), §§1.1–1.2: wedgelock methods for socket/pin housings, face-actuated locking-finger release, and rear-seal restraint during withdrawal. Manufacturer-authored, distributor-hosted copy; confirm current instructions and tool applicability for the exact assembly. <https://www.deutschconnector.com/downloads/DT-RT1%20Instructions.pdf>

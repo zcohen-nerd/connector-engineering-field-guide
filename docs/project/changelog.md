@@ -11,6 +11,10 @@ All notable changes to this project will be documented in this file.
 
 ### Teaching diagrams
 
+- Added a 360° shield-termination versus pigtail comparison to Connector Anatomy, scoped to local bond geometry rather than a universal cable-end bonding rule.
+- Added a DT/DTM/DTP contact-removal sequence to the DEUTSCH deep dive, showing mating-face release, rearward withdrawal, and rear-seal restraint.
+- Added a power-return / signal-reference / shield-chassis role map to the ICD template and selection packet, without prescribing a grounding topology.
+
 - Added a fictional keyed connector viewed from the mating face and wire-entry side to the interface-control and cable-drawing templates, showing mirrored positions without renumbering contacts.
 - Added separate mating, rear-entry, and panel sealing sketches to Connector Anatomy and the sealed-enclosure decision path, with an explicit unmated/capped configuration check.
 - Added central-contact cutaways to the barrel-jack guide showing a matched pair and both directions of a 2.1/2.5 mm nominal-size mismatch.

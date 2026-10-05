@@ -114,6 +114,10 @@ For this illustration, choose **CAN**, with a module-side isolated field-I/O dom
 | Cable shield | Chassis-entry shield clamp | Module-entry shield clamp | Proposed chassis bonds at both ends; no shield-drain contact in J2 |
 | Enclosure bond | Machine/chassis bond network | Dedicated enclosure bond | Do not use SIGNAL_RTN or the shield as a protective bonding conductor |
 
+![Independent functional sketches distinguish a load-current power return, a driver/receiver signal reference, and a local cable-shield bond to an enclosure.](/img/diagrams/return-reference-shield.svg)
+
+*Role map only: these are independent sketches, not this packet’s wiring schematic. The table above defines the proposed isolated topology and external shield clamps; no additional bonds are implied. Chassis bonding and signal reference serve different functions, as illustrated in TI’s separate chassis/signal-ground discussion.[^returnroles]*
+
 The plastic signal connector does not provide a metal backshell shielding path. The proposed external shield clamps and enclosure bonds need their own drawing and service procedure. Verify equipotential bonding, possible shield currents, and EMC performance; a CAN bit rate alone is not a shielding rationale. Define isolation working voltage, transient/fault withstand, and the field-side power arrangement before selecting components.
 
 **Release remains blocked** until the schematic identifies every intentional common-to-chassis connection and demonstrates normal and fault return paths, including external-I/O backfeed. Pin 6 must not become a second module power return when J1 is disconnected.
@@ -195,3 +199,5 @@ Run the full [design review checklist](../tools/design-review-checklist.md) befo
 ---
 
 Templates for each artifact above live under [Tools & Templates](../tools/index.md). For the family-selection reasoning behind the choice, start at [rugged-on-a-budget](../decision-paths/rugged-on-a-budget.md).
+
+[^returnroles]: Texas Instruments, *System Design Guidelines for the TM4C129x Family of Tiva C Series Microcontrollers*, SPMA056 (October 2013), §3.3.6 and Figure 13 (printed p. 15), with connector-shield examples in §§4.1.3 and 4.3.4. These illustrate chassis-bonding functions; they do not establish this packet’s grounding, isolation, or fault-protection design. <https://www.ti.com/lit/an/spma056/spma056.pdf>

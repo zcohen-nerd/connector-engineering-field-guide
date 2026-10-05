@@ -19,6 +19,9 @@ Treat SVG labels, alt text, and captions as technical claims. When a related par
 - **Pinout viewing orientation:** fictional numbered contacts viewed from opposite ends, embedded in the [ICD template](../tools/connector-icd-template.md#pinout) and [cable-drawing template](../tools/cable-drawing-template.md#cable-endpoints).
 - **Three sealing boundaries:** separate mating, rear-entry, and panel seals, with an unmated/capped check, embedded in [Connector Anatomy](../engineering/guide/05-connector-anatomy.md#check-each-sealing-boundary) and the [sealed-enclosure decision path](../decision-paths/sealed-enclosure-feedthrough.md#specs-to-check).
 - **Barrel-plug mismatch cutaways:** the central socket/pin interface in a matched pair and both mismatch directions, embedded in [Barrel Jacks](../hobby/barrel-jacks.md#1-the-size-system-two-diameters-both-mandatory).
+- **Shield termination comparison:** a circumferential bond versus a pigtail, embedded in [Connector Anatomy](../engineering/guide/05-connector-anatomy.md#57-emi-shielding-and-bonding).
+- **DEUTSCH contact removal:** face-actuated release followed by rearward withdrawal, embedded in the [DEUTSCH service procedure](../engineering/families/deutsch.md#dtdtmdtp-contact-removal).
+- **Return/reference/shield roles:** separate functional sketches, embedded in the [ICD template](../tools/connector-icd-template.md#electrical-limits) and [selection packet](../examples/connector-selection-packet.md#5-pinout).
 
 The original-photo opportunities below remain open; these schematics do not replace hardware identification or workmanship photographs.
 

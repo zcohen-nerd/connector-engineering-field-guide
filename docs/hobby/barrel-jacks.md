@@ -38,7 +38,7 @@ These are nominal size classes; actual pin dimensions, spring contacts, and tole
 
 ![Enlarged central contact sections compare a documented matching barrel pair, a larger plug socket on a smaller jack pin, and a smaller socket blocked by a larger pin.](/img/diagrams/hobby-barrel-fit.svg)
 
-*Teal outlines show the plug’s central socket contact; navy shows the jack pin. Only the center-contact interface is shown; outer sleeves and insulation are omitted. These are nominal size classes, not exact pin dimensions or scale drawings. Confirm center-pin geometry, socket contacts, tolerances, and insertion length in the exact mating drawings.*
+*Teal shapes show the plug’s central socket contact; navy shows the jack pin. Only the center-contact interface is shown; outer sleeves and insulation are omitted. These are nominal size classes, not exact pin dimensions or scale drawings. Confirm center-pin geometry, socket contacts, tolerances, and insertion length in the exact mating drawings.*
 
 ## 2. The polarity symbol — decode it, then meter it anyway
 

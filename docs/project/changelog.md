@@ -9,6 +9,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Sourced teaching photographs
+
+- Added four licensed Commons photos: a PH-style board header, loose Molex housings/contacts/tooling, exposed braid/foil cable construction, and a heat-damaged ferrule. Captions distinguish physical examples from compatibility, performance, and acceptance evidence.
+- Reused the Micro-D/DE-9 comparison on Standards and Families. Recorded sources, licenses, resizing and metadata changes in Image Attributions; updated the photo backlog and public image-opportunity tracker without closing the remaining bench-photo gaps.
+
 ### Shielding guide
 
 - Added a dedicated [Cable Shielding, Grounding, and Bonding](../engineering/topics/shielding-and-grounding.md) guide covering noise mechanisms, one-end/both-end/hybrid bonds, cable construction, connector boundaries, worked decisions, troubleshooting, and released drawing requirements.

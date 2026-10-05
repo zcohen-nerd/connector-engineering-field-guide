@@ -41,6 +41,12 @@ Most connector failures aren't exotic. They're ordinary decisions that looked ha
 | Broker purchase without traceability verification | Counterfeit exposure concentrates in scarce/obsolete parts ([lifecycle](../topics/lifecycle-and-procurement.md)) |
 | Mixing manufacturers in one mated pair unverified | Outside QPL-class families, no drawing arbitrates the mate ([lifecycle](../topics/lifecycle-and-procurement.md)) |
 
+## What thermal damage looks like
+
+![A removed wire ferrule has a deformed metal sleeve, a screw impression, blackened areas, and discolored wire insulation.](/img/photos/heat-damaged-wire-ferrule.jpg)
+
+*Heat-damaged ferrule and adjacent insulation from a screw-terminal connection. The visible damage is a reason to investigate the full connection; appearance alone does not establish whether load, torque, preparation, or another fault caused it. This is not an open-barrel crimp acceptance example. Photo: [Phiarc](https://commons.wikimedia.org/wiki/File:Burnt_wire_ferrule.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons. Resized and JPEG re-encoded; metadata stripped.*
+
 Many of these reduce to an item that fell off the BOM or the drawing — see [What People Forget](what-people-forget.md).
 
 ---

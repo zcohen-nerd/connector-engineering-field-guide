@@ -130,6 +130,10 @@ Belden describes foil, braid, and overall versus pair screening.[^belden] **Cons
 
 Use flex-rated cable where it moves. A shield that performs electrically when new but cracks, frets, or loosens in service is not a successful assembly. Cable OD, bend radius, environmental sealing, strain relief, and shielding hardware must fit the same selected cable.
 
+![A cut USB cable exposes woven braid, a metallic foil layer, insulated conductors, and a bare conductor beside the intact plug.](/img/photos/braid-foil-usb-cable.jpg)
+
+*Real braid/foil cable construction. This cut specimen illustrates layers, not an approved shield termination, a generic USB pinout, or an attenuation rating. Photo: [Anordal](https://commons.wikimedia.org/wiki/File:Braid_and_foil_shielded_usb_cable.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons. JPEG re-encoded; metadata stripped; original dimensions retained.*
+
 ## 7. Carry the shield through the connector boundary
 
 For an interface intended to have a circumferential enclosure bond, inspect the whole path:

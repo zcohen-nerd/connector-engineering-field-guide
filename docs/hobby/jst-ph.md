@@ -28,6 +28,10 @@ Small 1S LiPo battery pigtails, dev-board battery ports (many Adafruit-style boa
 
 *ID marks: 2.0 mm pitch, low shroud, friction fit — visibly smaller than XH.*
 
+![A white two-position right-angle PH-style board header with its mating face and through-hole tails visible.](/img/photos/jst-ph-right-angle-header.jpg)
+
+*A two-position right-angle PH-style board header. This board-side view complements the ID sketch; it does not establish your battery lead's polarity or mating housing. Photo: [oomlout](https://commons.wikimedia.org/wiki/File:JSTS-02-X-02PI-RA.jpg), [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/), via Wikimedia Commons. Resized and JPEG re-encoded; metadata stripped.*
+
 ## What to buy
 
 **Pre-crimped PH leads are the sane default** — the contacts are tiny and hand-crimping them is genuinely hard ([crimping](crimping.md)). Otherwise: housing + PH contacts + board header as separate genuine line items ([buying mating parts](buying-mating-parts.md)).

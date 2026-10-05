@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="820" viewBox="0 0 720 820" role="img" aria-labelledby="dt-removal-title dt-removal-desc" font-family="Arial, Helvetica, sans-serif" fill="#102040">
+  <title id="dt-removal-title">DT/DTM/DTP: face release, rear withdrawal</title>
+  <desc id="dt-removal-desc">Three conceptual cavity sections show removal of the mating-face secondary wedgelock, release of the primary locking finger using the specified tool from the mating face, then withdrawal of the contact and wire through the rear while keeping the finger released and holding the rear seal in place. De-energize and unmate first. Use exact housing and contact service instructions; inspect, reseat and reinstall the wedgelock before service.</desc>
+  <rect x="1" y="1" width="718" height="818" rx="10" fill="#fff" stroke="#d0d7de"/>
+  <text x="28" y="36" font-size="23" font-weight="bold">DT/DTM/DTP: face release, rear withdrawal</text>
+  <text x="28" y="64" font-size="16" fill="#3b4453">De-energize and unmate first • use the exact housing’s service instructions</text>
+  <rect x="20" y="86" width="680" height="195" rx="8" fill="#f5f8fa" stroke="#d0d7de"/>
+  <text x="36" y="116" font-size="19" font-weight="bold">1  Remove the secondary wedgelock</text>
+  <text x="240" y="146" font-size="15" >Mating face</text>
+  <text x="500" y="146" font-size="15" >Wire side</text>
+  <path d="M 235 160 H 447 V 186 M 235 246 H 447 V 220" fill="none" stroke="#102040" stroke-width="3"/>
+  <rect x="430" y="168" width="17" height="70" rx="3" fill="#0b7e96"/>
+  <rect x="430" y="193" width="17" height="20" fill="#f5f8fa"/>
+  <path d="M 260 197 H 345 V 190 H 360 V 197 H 402 V 209 H 360 V 216 H 345 V 209 H 260 Z" fill="#102040"/>
+  <path d="M 402 203 H 660" stroke="#102040" stroke-width="6"/>
+  <path d="M 320 160 L 367 188 V 200" fill="none" stroke="#102040" stroke-width="4"/>
+  <rect x="140" y="173" width="24" height="60" rx="3" fill="#c96f12" stroke="#102040" stroke-width="2"/>
+  <rect x="226" y="173" width="12" height="60" rx="3" fill="none" stroke="#c96f12" stroke-width="2" stroke-dasharray="4 3"/>
+  <path d="M 215 203 H 175 M 183 196 L 175 203 L 183 210" fill="none" stroke="#c96f12" stroke-width="2"/>
+  <text x="36" y="247" font-size="15" >Wedgelock shown removed</text>
+  <text x="36" y="267" font-size="16" >Removal method differs for pin and socket housings; protect the seals.</text>
+  <rect x="20" y="296" width="680" height="195" rx="8" fill="#f5f8fa" stroke="#d0d7de"/>
+  <text x="36" y="326" font-size="19" font-weight="bold">2  Release the primary locking finger</text>
+  <text x="240" y="356" font-size="15" >Mating face</text>
+  <text x="500" y="356" font-size="15" >Wire side</text>
+  <path d="M 235 370 H 447 V 396 M 235 456 H 447 V 430" fill="none" stroke="#102040" stroke-width="3"/>
+  <rect x="430" y="378" width="17" height="70" rx="3" fill="#0b7e96"/>
+  <rect x="430" y="403" width="17" height="20" fill="#f5f8fa"/>
+  <path d="M 260 407 H 345 V 400 H 360 V 407 H 402 V 419 H 360 V 426 H 345 V 419 H 260 Z" fill="#102040"/>
+  <path d="M 402 413 H 660" stroke="#102040" stroke-width="6"/>
+  <path d="M 320 370 L 367 382" fill="none" stroke="#0b7e96" stroke-width="4"/>
+  <path d="M 320 370 L 367 398 V 410" fill="none" stroke="#102040" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="78" y="376" width="66" height="18" rx="4" fill="#e9edf1" stroke="#102040" stroke-width="2"/>
+  <path d="M 144 385 H 355 L 367 382" fill="none" stroke="#102040" stroke-width="4"/>
+  <path d="M 165 354 H 212 M 204 347 L 212 354 L 204 361" fill="none" stroke="#0b7e96" stroke-width="2"/>
+  <path d="M 389 408 V 383 M 382 391 L 389 383 L 396 391" fill="none" stroke="#0b7e96" stroke-width="2"/>
+  <text x="63" y="444" font-size="15" >Specified tool enters from the face</text>
+  <text x="36" y="477" font-size="16" >Move the finger away gently; avoid damaging the locking finger.</text>
+  <rect x="20" y="506" width="680" height="195" rx="8" fill="#f5f8fa" stroke="#d0d7de"/>
+  <text x="36" y="536" font-size="19" font-weight="bold">3  Withdraw the contact and wire rearward</text>
+  <text x="240" y="566" font-size="15" >Mating face</text>
+  <text x="500" y="566" font-size="15" >Wire side</text>
+  <path d="M 235 580 H 447 V 606 M 235 666 H 447 V 640" fill="none" stroke="#102040" stroke-width="3"/>
+  <rect x="430" y="588" width="17" height="70" rx="3" fill="#0b7e96"/>
+  <rect x="430" y="613" width="17" height="20" fill="#f5f8fa"/>
+  <path d="M 490 617 H 575 V 610 H 590 V 617 H 632 V 629 H 590 V 636 H 575 V 629 H 490 Z" fill="#102040"/>
+  <path d="M 632 623 H 660" stroke="#102040" stroke-width="6"/>
+  <path d="M 320 580 L 367 592" fill="none" stroke="#0b7e96" stroke-width="4"/>
+  <path d="M 320 580 L 367 608 V 620" fill="none" stroke="#102040" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="78" y="586" width="66" height="18" rx="4" fill="#e9edf1" stroke="#102040" stroke-width="2"/>
+  <path d="M 144 595 H 355 L 367 592" fill="none" stroke="#102040" stroke-width="4"/>
+  <path d="M 495 666 H 584 M 576 659 L 584 666 L 576 673" fill="none" stroke="#0b7e96" stroke-width="2"/>
+  <path d="M 490 596 H 467 L 438 595" fill="none" stroke="#102040" stroke-width="1.5"/>
+  <text x="490" y="590" font-size="15" >Hold rear seal in place</text>
+  <text x="36" y="687" font-size="16" >Keep the finger released while withdrawing; stop if the contact binds.</text>
+  <text x="28" y="761" font-size="16" >Inspect → reseat until latched → seating check → reinstall the wedgelock.</text>
+  <text x="28" y="793" font-size="15" fill="#3b4453">Conceptual cavity sections, not to scale; tool angle and geometry vary.</text>
+</svg>

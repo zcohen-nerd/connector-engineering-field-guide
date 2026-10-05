@@ -58,6 +58,10 @@ This is the blank version of [Exercise 7](../engineering/guide/13-hands-on-exerc
 - Shielding — type (braid/foil/drain), bond point and method at **each end**, shell/chassis/FE/PE relationships, and EMC rationale:
 - Controlled schematic/bonding diagram reference:
 
+![Independent functional sketches distinguish a load-current power return, a driver/receiver signal reference, and a local cable-shield bond to an enclosure.](/img/diagrams/return-reference-shield.svg)
+
+*Define each function and its permitted currents before choosing net names or bonds. These sketches do not prescribe isolation or a universal grounding topology. Some interfaces, including coax, intentionally use the shield as a signal return; document that combination explicitly. Protective earth and fault-current paths require their own design.*
+
 ## Power / energized-work safety (for power-carrying interfaces)
 
 - Load-break / hot-plug rating: yes / no / explicitly prohibited / not specified

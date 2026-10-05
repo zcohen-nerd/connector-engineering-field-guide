@@ -105,6 +105,10 @@ In sealed circular connectors, each contact cavity has a wire seal (grommet) siz
 
 Record the mating interface, rear wire or cable entry, and panel/enclosure penetration separately, in both mated and unmated states. Integral rear grommets can seal wires without an environmental backshell; molded cordsets and glands use other constructions. A dust cover is not necessarily a water-sealing cap, and an exposed receptacle face is not automatically an open path through the enclosure. Verify the complete assembly's tested configuration.
 
+![Separate generic sectional sketches identify the mating seal, rear-entry seal, and panel gasket, followed by an unmated face and possible environmental cap.](/img/diagrams/connector-sealing-boundaries.svg)
+
+*These are separate boundaries to review, not evidence of an IP rating. Verify rear entries on both halves and the complete assembly’s tested mated, unmated, or capped configuration. An exposed face does not by itself establish a leak path through the enclosure.*
+
 ## 5.7 EMI, shielding, and bonding
 
 Connector shielding is a *system* property: it depends on maintaining a continuous, low-impedance path from cable shield → backshell → shell → mating shell → chassis. The pieces:

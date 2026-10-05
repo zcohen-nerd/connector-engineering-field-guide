@@ -9,6 +9,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Teaching diagrams
+
+- Added a fictional keyed connector viewed from the mating face and wire-entry side to the interface-control and cable-drawing templates, showing mirrored positions without renumbering contacts.
+- Added separate mating, rear-entry, and panel sealing sketches to Connector Anatomy and the sealed-enclosure decision path, with an explicit unmated/capped configuration check.
+- Added central-contact cutaways to the barrel-jack guide showing a matched pair and both directions of a 2.1/2.5 mm nominal-size mismatch.
+
 ### Repository organization
 
 - Grouped professional chapters, connector-family deep dives, engineering topics, and shared references into dedicated directories. Updated relative links, sidebar IDs, and version tooling while preserving all published page URLs.

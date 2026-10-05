@@ -36,6 +36,10 @@ Measure **both** numbers — the same discipline as [pitch](pitch.md) — and co
 
 These are nominal size classes; actual pin dimensions, spring contacts, and tolerances come from the drawings. "It fits" is not identification.
 
+![Enlarged central contact sections compare a documented matching barrel pair, a larger plug socket on a smaller jack pin, and a smaller socket blocked by a larger pin.](/img/diagrams/hobby-barrel-fit.svg)
+
+*Teal outlines show the plug’s central socket contact; navy shows the jack pin. Only the center-contact interface is shown; outer sleeves and insulation are omitted. These are nominal size classes, not exact pin dimensions or scale drawings. Confirm center-pin geometry, socket contacts, tolerances, and insertion length in the exact mating drawings.*
+
 ## 2. The polarity symbol — decode it, then meter it anyway
 
 That little glyph on the wall adapter is the whole polarity contract:

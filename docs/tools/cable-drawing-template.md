@@ -17,6 +17,10 @@ This is the blank version of [Exercise 6](../engineering/guide/13-hands-on-exerc
 - Endpoint drawings: each mating face labeled with connector identity, pin/socket contacts, pin 1, key orientation, and view direction:
 - Referenced ICD / schematic P/N and revision:
 
+![The same fictional keyed four-contact connector from its mating face and wire-entry side, with mirrored positions but unchanged contact numbers.](/img/diagrams/connector-pinout-views.svg)
+
+*One connector viewed from opposite ends, with the key held at the top. The numbering is fictional; check each mating half against its own manufacturer drawing rather than copying this layout.*
+
 ## Conductor schedule
 
 | Wire | Color | Gauge | Twisted pair | Shield / drain treatment | End A | End B | Notes |

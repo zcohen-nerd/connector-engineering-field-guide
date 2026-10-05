@@ -14,6 +14,14 @@ These are deliberate gaps, not a request to fill every page. Each item would be 
 
 Treat SVG labels, alt text, and captions as technical claims. When a related paragraph changes, review all three against the same source and configuration. Mark schematics as not to scale; responsive images cannot promise physical “actual size.” Check revised labels for clipping at the normal display width.
 
+## Added diagrams (2026-10-05)
+
+- **Pinout viewing orientation:** fictional numbered contacts viewed from opposite ends, embedded in the [ICD template](../tools/connector-icd-template.md#pinout) and [cable-drawing template](../tools/cable-drawing-template.md#cable-endpoints).
+- **Three sealing boundaries:** separate mating, rear-entry, and panel seals, with an unmated/capped check, embedded in [Connector Anatomy](../engineering/guide/05-connector-anatomy.md#check-each-sealing-boundary) and the [sealed-enclosure decision path](../decision-paths/sealed-enclosure-feedthrough.md#specs-to-check).
+- **Barrel-plug mismatch cutaways:** the central socket/pin interface in a matched pair and both mismatch directions, embedded in [Barrel Jacks](../hobby/barrel-jacks.md#1-the-size-system-two-diameters-both-mandatory).
+
+The original-photo opportunities below remain open; these schematics do not replace hardware identification or workmanship photographs.
+
 ## MIL-DTL-26482 bayonet pair
 
 **Page / section:** [MIL-DTL-26482](../engineering/families/mil-dtl-26482.md), §1 and §5  

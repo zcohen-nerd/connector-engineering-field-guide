@@ -97,6 +97,7 @@ Breadboards, Arduino/Raspberry Pi/ESP32 wiring, 3D printers, LEDs, RC power, con
 - [Decision paths](../decision-paths/index.md) — scenario-based starting points
 - [MIL-DTL-38999 deep dive](families/07-mil-dtl-38999.md) and [MIL-DTL-26482 mini deep dive](families/mil-dtl-26482.md)
 - [M12 deep dive](families/08-m12.md), [DEUTSCH deep dive](families/deutsch.md), and [Micro-Fit 3.0 deep dive](families/micro-fit.md)
+- [Cable Shielding, Grounding, and Bonding](topics/shielding-and-grounding.md) — when to shield, which ends to bond, and connector continuity
 - [Low-Level Signals and Contact Design](topics/low-level-signal-contacts.md) — dry circuits, gold vs. tin, fretting
 - [Lifecycle and Procurement Integrity](topics/lifecycle-and-procurement.md) — PCN/EOL, obsolescence, counterfeit avoidance, alternates
 - [Practical checklist](guide/10-selection-checklist.md)

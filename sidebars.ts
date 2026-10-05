@@ -94,6 +94,7 @@ const sidebars: SidebarsConfig = {
         'engineering/guide/03-connector-standards-and-families',
         'engineering/guide/04-connector-selection-workflow',
         'engineering/guide/05-connector-anatomy',
+        'engineering/topics/shielding-and-grounding',
         'engineering/guide/06-reading-datasheets',
         'engineering/topics/low-level-signal-contacts',
         'engineering/families/07-mil-dtl-38999',

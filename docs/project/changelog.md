@@ -9,6 +9,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Shielding guide
+
+- Added a dedicated [Cable Shielding, Grounding, and Bonding](../engineering/topics/shielding-and-grounding.md) guide covering noise mechanisms, one-end/both-end/hybrid bonds, cable construction, connector boundaries, worked decisions, troubleshooting, and released drawing requirements.
+- Added two original shielding diagrams and reused the termination/return-role diagrams. Linked the guide from engineering navigation, Connector Anatomy, and the motor/Ethernet paths.
+- Recorded scoped manufacturer sources, synchronized the preceding service/bonding diagram records, and added the new page to accessibility and responsive smoke coverage.
+
 ### Teaching diagrams
 
 - Added a 360° shield-termination versus pigtail comparison to Connector Anatomy, scoped to local bond geometry rather than a universal cable-end bonding rule.

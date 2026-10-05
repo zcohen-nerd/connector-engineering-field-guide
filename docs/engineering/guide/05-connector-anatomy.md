@@ -111,6 +111,8 @@ Record the mating interface, rear wire or cable entry, and panel/enclosure penet
 
 ## 5.7 EMI, shielding, and bonding
 
+For when to use a screen, which cable ends to bond, and worked decisions, see [Cable Shielding, Grounding, and Bonding](../topics/shielding-and-grounding.md). The summary below focuses on connector hardware.
+
 Connector shielding is a *system* property: it depends on maintaining a continuous, low-impedance path from cable shield → backshell → shell → mating shell → chassis. The pieces:
 
 - **Cable-shield termination:** a 360° circumferential termination (an EMI backshell with a conductive band or spring) keeps shield impedance low across frequency. A **pigtail** — the shield gathered into a short wire to a pin or lug — is the common failure.

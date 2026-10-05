@@ -65,6 +65,8 @@ The pin counts, currents, and voltage classes below only get you oriented. The n
 - **Keying between identical-looking connectors** on multi-axis machines — power vs. feedback are usually different inserts, but two adjacent axes are not.
 - **Mated sealing rating and unmated caps** for washdown environments.
 
+For when to shield, which cable ends to bond, and how to carry the screen through the connector, see [Cable Shielding, Grounding, and Bonding](../engineering/topics/shielding-and-grounding.md). The equipment's installation instructions determine the released arrangement.
+
 ## Parts people forget
 
 - **The feedback cable entirely** — the power cable gets ordered, the encoder cable gets discovered at commissioning.

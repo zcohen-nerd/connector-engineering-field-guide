@@ -48,6 +48,8 @@ See the [M12 deep dive](../engineering/families/08-m12.md) for the D-coded vs. X
 
 If PoE is used, also verify device roles, power class, pair/current requirements, cable heating/bundling, and connector suitability for the required energized service. A data-rate rating alone does not qualify a PoE power path; use the equipment and exact connector/cable documentation.
 
+For when to shield, which cable ends to bond, and how to carry the screen through the connector, see [Cable Shielding, Grounding, and Bonding](../engineering/topics/shielding-and-grounding.md). The equipment's installation instructions determine the released arrangement.
+
 ## Parts people forget
 
 - **Shielded cable** matched to the connector, and the **shell/shield bond**.

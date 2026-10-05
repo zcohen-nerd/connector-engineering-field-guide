@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="760" viewBox="0 0 720 760" role="img" aria-labelledby="noise-title noise-desc">
+  <title id="noise-title">Different noise paths need different controls</title>
+  <desc id="noise-desc">Three conceptual sketches: capacitive coupling from a changing voltage intercepted by a bonded shield; magnetic pickup in a large loop compared with conductors kept close; and load current through shared return impedance affecting a sensitive circuit. These are mechanism sketches, not complete circuits or predicted attenuation.</desc>
+  <defs>
+    <marker id="noise-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#b44932"/></marker>
+  </defs>
+  <rect x="1" y="1" width="718" height="758" rx="10" fill="#fff" stroke="#d0d7de"/>
+  <g font-family="Arial, sans-serif" fill="#102040">
+    <text x="28" y="38" font-size="24" font-weight="bold">Find the coupling path first</text>
+    <text x="28" y="64" font-size="16" fill="#3b4453">A screen, a smaller loop, and a better return solve different problems.</text>
+    <rect x="24" y="84" width="672" height="194" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="42" y="112" font-size="19" font-weight="bold">1. Electric-field / capacitive coupling</text>
+    <text x="42" y="141" font-size="16" fill="#b44932">Changing voltage on nearby wiring</text>
+    <path d="M65 155H530" stroke="#b44932" stroke-width="3"/>
+    <path d="M155 166V187" stroke="#b44932" stroke-width="2" marker-end="url(#noise-arrow)"/>
+    <path d="M285 166V187" stroke="#b44932" stroke-width="2" marker-end="url(#noise-arrow)"/>
+    <path d="M415 166V187" stroke="#b44932" stroke-width="2" marker-end="url(#noise-arrow)"/>
+    <path d="M65 195H535V215H630 M65 237H535" fill="none" stroke="#0b7e96" stroke-width="4"/>
+    <path d="M65 209H510 M65 224H510" stroke="#102040" stroke-width="3"/>
+    <rect x="546" y="194" width="108" height="44" rx="5" fill="#fff" stroke="#0b7e96" stroke-width="2"/>
+    <text x="600" y="220" font-size="16" text-anchor="middle">Bond point</text>
+    <text x="42" y="263" font-size="16">A bonded screen provides a path for coupled current.</text>
+    <rect x="24" y="292" width="672" height="206" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="42" y="320" font-size="19" font-weight="bold">2. Magnetic-field / inductive coupling</text>
+    <text x="82" y="349" font-size="16">Large circuit loop</text>
+    <text x="408" y="349" font-size="16">Conductors kept close</text>
+    <rect x="83" y="371" width="202" height="60" fill="#e8eef5"/>
+    <rect x="411" y="394" width="202" height="15" fill="#e8eef5"/>
+    <path d="M83 371H285V431H83Z M411 394H613V409H411Z" fill="none" stroke="#102040" stroke-width="3"/>
+    <g stroke="#b44932" stroke-width="2">
+      <path d="M124 390L136 402 M136 390L124 402 M178 406L190 418 M190 406L178 418 M231 390L243 402 M243 390L231 402 M450 396L460 406 M460 396L450 406 M502 396L512 406 M512 396L502 406 M554 396L564 406 M564 396L554 406"/>
+    </g>
+    <text x="42" y="460" font-size="16">Changing flux links loop area; pairing and routing matter.</text>
+    <text x="42" y="484" font-size="16">Thin foil is a poor low-frequency magnetic shield.</text>
+    <rect x="24" y="512" width="672" height="176" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="42" y="540" font-size="19" font-weight="bold">3. Shared-return / common-impedance coupling</text>
+    <rect x="48" y="560" width="173" height="42" rx="5" fill="#fff" stroke="#102040" stroke-width="2"/>
+    <rect x="48" y="621" width="173" height="42" rx="5" fill="#fff" stroke="#102040" stroke-width="2"/>
+    <text x="134" y="586" font-size="16" text-anchor="middle">Switching load</text>
+    <text x="134" y="647" font-size="16" text-anchor="middle">Sensitive circuit</text>
+    <path d="M221 581H281V613H344 M221 642H281V613 M344 613L354 601L374 625L394 601L414 625L434 601L444 613H501" fill="none" stroke="#102040" stroke-width="3"/>
+    <circle cx="281" cy="613" r="5" fill="#102040"/>
+    <rect x="501" y="591" width="153" height="44" rx="5" fill="#fff" stroke="#102040" stroke-width="2"/>
+    <text x="577" y="618" font-size="16" text-anchor="middle">Return reference</text>
+    <text x="357" y="583" font-size="16">Shared impedance</text>
+    <text x="300" y="666" font-size="16">A screen cannot remove this voltage drop.</text>
+    <text x="28" y="720" font-size="16">Conceptual mechanisms; complete supply/return circuits omitted.</text>
+    <text x="28" y="744" font-size="16">No attenuation predicted. Not to scale. Navy: circuit; teal: shield.</text>
+  </g>
+</svg>

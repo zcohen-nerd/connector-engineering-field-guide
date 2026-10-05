@@ -23,6 +23,9 @@ Treat SVG labels, alt text, and captions as technical claims. When a related par
 - **DEUTSCH contact removal:** face-actuated release followed by rearward withdrawal, embedded in the [DEUTSCH service procedure](../engineering/families/deutsch.md#dtdtmdtp-contact-removal).
 - **Return/reference/shield roles:** separate functional sketches, embedded in the [ICD template](../tools/connector-icd-template.md#electrical-limits) and [selection packet](../examples/connector-selection-packet.md#5-pinout).
 
+- **Shielding noise paths:** capacitive, inductive and shared-return mechanisms, embedded in the [shielding guide](../engineering/topics/shielding-and-grounding.md#2-what-shielding-helps-and-what-it-does-not-fix).
+- **Shield endpoint bonds:** one direct, both direct and direct-plus-capacitive alternatives, embedded in the [shielding guide](../engineering/topics/shielding-and-grounding.md#4-one-end-both-ends-or-a-hybrid-bond).
+
 The original-photo opportunities below remain open; these schematics do not replace hardware identification or workmanship photographs.
 
 ## MIL-DTL-26482 bayonet pair

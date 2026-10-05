@@ -27,7 +27,15 @@ jobs:
           import sharp from 'sharp';
           const sources = [{"file":"jst-ph-right-angle-header.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/5/5a/JSTS-02-X-02PI-RA.jpg","sha1":"51988bc15de51dbc1116687b6b69fdc0b6397ef3"},{"file":"braid-foil-usb-cable.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/c/c3/Braid_and_foil_shielded_usb_cable.jpg","sha1":"0778e7c818cdfb6203c066ca4806d759d74bbbdf"},{"file":"molex-housings-contacts-tool.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/5/5e/Molexddpcsfamily.jpg","sha1":"0007e4a2f1732115f32bb1c92acf3c77eba786a2"},{"file":"heat-damaged-wire-ferrule.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Burnt_wire_ferrule.jpg","sha1":"ef0d681c9cb01f55fda9355f3c035ebe329a52da"}];
           for (const asset of sources) {
-            const response = await fetch(asset.url, {headers: {'User-Agent': 'ConnectorFieldGuide/1.0 (licensed Commons photo import)'}});
+            await new Promise(resolve => setTimeout(resolve, 5000));
+          let response;
+          for (let attempt = 0; attempt < 4; attempt++) {
+            response = await fetch(asset.url, {headers: {'User-Agent': 'ConnectorFieldGuide/1.0 (licensed Commons photo import)'}});
+            if (response.status !== 429) break;
+            await response.arrayBuffer();
+            const seconds = Math.max(15, Math.min(60, Number(response.headers.get('retry-after')) || 15));
+            await new Promise(resolve => setTimeout(resolve, seconds * 1000));
+          }
             if (!response.ok) throw new Error(asset.file + ': HTTP ' + response.status);
             const bytes = Buffer.from(await response.arrayBuffer());
             if (createHash('sha1').update(bytes).digest('hex') !== asset.sha1) throw new Error(asset.file + ': source checksum mismatch');

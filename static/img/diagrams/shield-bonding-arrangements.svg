@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="730" viewBox="0 0 720 730" role="img" aria-labelledby="bond-title bond-desc">
+  <title id="bond-title">Three cable-shield bonding arrangements</title>
+  <desc id="bond-desc">One direct shield bond with the opposite end insulated; direct shield bonds at both ends; and one direct bond with a capacitor in series at the opposite end. Signal conductors are separate from the shield. Equipment A and B do not identify a universal preferred end. Signal-reference and protective-earth connections are omitted.</desc>
+  <rect x="1" y="1" width="718" height="728" rx="10" fill="#fff" stroke="#d0d7de"/>
+  <g font-family="Arial, sans-serif" fill="#102040">
+    <text x="28" y="38" font-size="24" font-weight="bold">Where is the shield bonded?</text>
+    <text x="28" y="64" font-size="16" fill="#3b4453">Conceptual alternatives. The interface design chooses the end(s).</text>
+    <rect x="24" y="84" width="672" height="176" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="42" y="112" font-size="19" font-weight="bold">1. One direct bond</text>
+    <rect x="65" y="145" width="135" height="62" rx="5" fill="#fff" stroke="#102040" stroke-width="2"/>
+    <rect x="520" y="145" width="135" height="62" rx="5" fill="#fff" stroke="#102040" stroke-width="2"/>
+    <text x="132" y="181" font-size="16" text-anchor="middle">Equipment A</text>
+    <text x="587" y="181" font-size="16" text-anchor="middle">Equipment B</text>
+    <path d="M200 170H520 M200 189H520" fill="none" stroke="#102040" stroke-width="3"/>
+    <path d="M215 156H505 M215 203H505 M215 156V132H132V145" fill="none" stroke="#0b7e96" stroke-width="4"/>
+    <circle cx="505" cy="156" r="5" fill="#fff" stroke="#0b7e96" stroke-width="2"/>
+    <circle cx="505" cy="203" r="5" fill="#fff" stroke="#0b7e96" stroke-width="2"/>
+    <text x="42" y="241" font-size="16">Specified bond at A; shield at B deliberately insulated.</text>
+    <rect x="24" y="274" width="672" height="176" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="42" y="302" font-size="19" font-weight="bold">2. Direct bonds at both ends</text>
+    <rect x="65" y="335" width="135" height="62" rx="5" fill="#fff" stroke="#102040" stroke-width="2"/>
+    <rect x="520" y="335" width="135" height="62" rx="5" fill="#fff" stroke="#102040" stroke-width="2"/>
+    <text x="132" y="371" font-size="16" text-anchor="middle">Equipment A</text>
+    <text x="587" y="371" font-size="16" text-anchor="middle">Equipment B</text>
+    <path d="M200 360H520 M200 379H520" fill="none" stroke="#102040" stroke-width="3"/>
+    <path d="M215 346H505 M215 393H505 M215 346V322H132V335 M505 346V322H587V335" fill="none" stroke="#0b7e96" stroke-width="4"/>
+    <text x="42" y="431" font-size="16">Shield bonds to the designated structures at A and B.</text>
+    <rect x="24" y="464" width="672" height="176" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="42" y="492" font-size="19" font-weight="bold">3. One direct + one capacitive bond</text>
+    <rect x="65" y="525" width="135" height="62" rx="5" fill="#fff" stroke="#102040" stroke-width="2"/>
+    <rect x="520" y="525" width="135" height="62" rx="5" fill="#fff" stroke="#102040" stroke-width="2"/>
+    <text x="132" y="561" font-size="16" text-anchor="middle">Equipment A</text>
+    <text x="587" y="561" font-size="16" text-anchor="middle">Equipment B</text>
+    <path d="M200 550H520 M200 569H520" fill="none" stroke="#102040" stroke-width="3"/>
+    <path d="M215 536H505 M215 583H505 M215 536V512H132V525 M505 536V512H549 M563 512H587V525 M549 502V522 M563 502V522" fill="none" stroke="#0b7e96" stroke-width="4"/>
+    <text x="42" y="621" font-size="16">The capacitor forms a designed RF connection at B.</text>
+    <path d="M28 665H58" stroke="#0b7e96" stroke-width="4"/>
+    <text x="68" y="670" font-size="16">Shield / shield bond</text>
+    <path d="M330 665H360" stroke="#102040" stroke-width="3"/>
+    <text x="370" y="670" font-size="16">Signal conductors</text>
+    <text x="28" y="698" font-size="16">Reference and PE paths omitted. Not to scale.</text>
+    <text x="28" y="720" font-size="15" font-weight="bold">A capacitor never replaces a required protective-earth connection.</text>
+  </g>
+</svg>

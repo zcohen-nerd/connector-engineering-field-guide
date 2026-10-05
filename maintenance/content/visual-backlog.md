@@ -23,6 +23,8 @@ Prioritized visuals for both tracks. Style: match the existing simple line-art S
 | 14 | Shield termination comparison (engineering track) | **Done (2026-10-05)** — `shield-termination-comparison.svg` | Local 360° braid bond versus a pigtail; embedded in Connector Anatomy |
 | 15 | DT/DTM/DTP contact-removal sequence | **Done (2026-10-05)** — `deutsch-contact-removal.svg` | Face release, rear withdrawal, and rear-seal restraint; embedded in the DEUTSCH deep dive |
 | 16 | Power return / signal reference / shield-chassis roles | **Done (2026-10-05)** — `return-reference-shield.svg` | Independent functional sketches; embedded in the ICD template and selection packet |
+| 17 | Shielding noise paths | **Done (2026-10-05)** — `shielding-noise-paths.svg` | Conceptual capacitive, inductive and shared-impedance mechanisms; embedded in the dedicated shielding guide |
+| 18 | Shield endpoint bonds | **Done (2026-10-05)** — `shield-bonding-arrangements.svg` | One direct, both direct and direct-plus-capacitive alternatives; embedded in the dedicated shielding guide |
 
 ## Images pass (2026-07)
 

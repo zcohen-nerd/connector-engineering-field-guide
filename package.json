@@ -99,6 +99,12 @@
     "katex": "^0.18.2",
     "gaxios": {
       "uuid": "^11.1.1"
+    },
+    "markdownlint": {
+      "re2js": "2.8.7"
+    },
+    "linkinator": {
+      "glob": "^14.0.2"
     }
   }
 }
